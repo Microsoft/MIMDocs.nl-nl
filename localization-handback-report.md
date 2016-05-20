@@ -1,11 +1,26 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 0
+ Total Files | 1
 
 ## File List
+ Source File | Status | Details 
+ ----------- | ------ | ------- 
+ [MIMDocs\DeployUse\certificate-manager-for-non-administrators.md](https://github.com/Microsoft/MIMDocs-pr/blob/875ed6b96929822ac166a4a262cc8547a4ea3b2a/MIMDocs/DeployUse/certificate-manager-for-non-administrators.md) | InSyncHandedBackSuccess | [Details](#50c0edd60abfa6550cb5a873d32a842e8c0998116)
 
 ## Item Details
+##### <a name='50c0edd60abfa6550cb5a873d32a842e8c0998116'></a> Source: [MIMDocs\DeployUse\certificate-manager-for-non-administrators.md](https://github.com/Microsoft/MIMDocs-pr/blob/875ed6b96929822ac166a4a262cc8547a4ea3b2a/MIMDocs/DeployUse/certificate-manager-for-non-administrators.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [MIMDocs\DeployUse\certificate-manager-for-non-administrators.md](https://github.com/Microsoft/MIMDocs-pr.nl-nl/blob/f221e0eaf30390c64d2b28db79b485e345bf4cae/MIMDocs/DeployUse/certificate-manager-for-non-administrators.md)
+* Handoff File: [certificate-manager-for-non-administrators.2d024c7e4e9ca80f8293c9ea15d5d5fe93a207d7.nl-nl.xlf](https://github.com/Microsoft/EM.handoff/blob/c5c3f4a1bd2056ce9a100ee3192987f417d187e2/ol-handoff/Microsoft/MIMDocs-pr.nl-nl/master/certificate-manager-for-non-administrators.2d024c7e4e9ca80f8293c9ea15d5d5fe93a207d7.nl-nl.xlf)
+* Handoff Datetime: 2016-04-27 19:52:38
+* Handoff Reason: Include
+* Archive File: [certificate-manager-for-non-administrators.2d024c7e4e9ca80f8293c9ea15d5d5fe93a207d7.nl-nl.xlf](https://github.com/Microsoft/EM.handoff/blob/df866b9b87ed439bc8c065bdefe71d13368bdbc4/ol-handoff/Microsoft/MIMDocs-pr.nl-nl/master/archive/certificate-manager-for-non-administrators.2d024c7e4e9ca80f8293c9ea15d5d5fe93a207d7.nl-nl.xlf)
+* Archive Datetime: 2016-04-28 12:25:51
+* Handback File: [certificate-manager-for-non-administrators.2d024c7e4e9ca80f8293c9ea15d5d5fe93a207d7.nl-nl.xlf](https://github.com/Microsoft/EM.handback/blob/984bfeaf372a1420890b0580c64116748ac19f63/ol-handback/Microsoft/MIMDocs-pr.nl-nl/master/certificate-manager-for-non-administrators.2d024c7e4e9ca80f8293c9ea15d5d5fe93a207d7.nl-nl.xlf)
+* Handback Datetime: 2016-05-20 20:11:57
+* [Back to Top](#report-top)
+
 
 ## Error Details
 

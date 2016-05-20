@@ -1,6 +1,6 @@
 {
   "LastProcessedCommit": "96983a2b77f97a26ab028492dea2acf5e1784f20",
-  "LastTranslatedCommit": null,
+  "LastTranslatedCommit": "f221e0eaf30390c64d2b28db79b485e345bf4cae",
   "Items": {
     "50c0edd60abfa6550cb5a873d32a842e8c099811": {
       "FileHash": "50c0edd60abfa6550cb5a873d32a842e8c099811",
@@ -19,14 +19,14 @@
       "HandoffPriority": "",
       "HandoffException": null,
       "HandoffFailureTimes": 0,
-      "TargetFileCommit": null,
-      "TargetFilePath": null,
-      "HandbackFilePath": null,
-      "HandbackFileCommit": null,
-      "HandbackDateTime": "0001-01-01T00:00:00",
+      "TargetFileCommit": "f221e0eaf30390c64d2b28db79b485e345bf4cae",
+      "TargetFilePath": "MIMDocs\\DeployUse\\certificate-manager-for-non-administrators.md",
+      "HandbackFilePath": "ol-handback\\Microsoft\\MIMDocs-pr.nl-nl\\master\\certificate-manager-for-non-administrators.2d024c7e4e9ca80f8293c9ea15d5d5fe93a207d7.nl-nl.xlf",
+      "HandbackFileCommit": "984bfeaf372a1420890b0580c64116748ac19f63",
+      "HandbackDateTime": "2016-05-20T20:11:57.9295773Z",
       "HandbackException": null,
       "HandbackFailureTimes": 0,
-      "UpdatedDateTime": "0001-01-01T00:00:00",
+      "UpdatedDateTime": "2016-05-20T20:11:57.9295773Z",
       "ArchiveFilePath": "ol-handoff\\Microsoft\\MIMDocs-pr.nl-nl\\master\\archive\\certificate-manager-for-non-administrators.2d024c7e4e9ca80f8293c9ea15d5d5fe93a207d7.nl-nl.xlf",
       "ArchiveFileCommit": "df866b9b87ed439bc8c065bdefe71d13368bdbc4",
       "ArchiveFileDateTime": "2016-04-28T12:25:51.5045887Z",
