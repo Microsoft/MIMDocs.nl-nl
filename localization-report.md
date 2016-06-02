@@ -1157,8 +1157,8 @@
 * Handoff File: [microsoft-identity-manager-2016-upgrade-from-fim-2010-r2.436268391a37f93654c5a63fc781f1eae0c91603.nl-nl.xlf](https://github.com/Microsoft/EM.handoff/blob/62f699e9e45f28a2e3662f9541029d2f48d0a946/ol-handoff/Microsoft/MIMDocs-pr.nl-nl/master/microsoft-identity-manager-2016-upgrade-from-fim-2010-r2.436268391a37f93654c5a63fc781f1eae0c91603.nl-nl.xlf)
 * Handoff Datetime: 2016-05-16 15:37:46
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [microsoft-identity-manager-2016-upgrade-from-fim-2010-r2.436268391a37f93654c5a63fc781f1eae0c91603.nl-nl.xlf](https://github.com/Microsoft/EM.handoff/blob/62bb897d6e60443e95c12dee19663f4e47529747/ol-handoff/Microsoft/MIMDocs-pr.nl-nl/master/archive/microsoft-identity-manager-2016-upgrade-from-fim-2010-r2.436268391a37f93654c5a63fc781f1eae0c91603.nl-nl.xlf)
+* Archive Datetime: 2016-06-02 00:41:09
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Current Target File: [MIMDocs\DeployUse\microsoft-identity-manager-2016-upgrade-from-fim-2010-r2.md](https://github.com/Microsoft/MIMDocs-pr.nl-nl/blob/a2b8a79301eb1346859ba1ba80ad52b9bb024ab7/MIMDocs/DeployUse/microsoft-identity-manager-2016-upgrade-from-fim-2010-r2.md)
@@ -1232,8 +1232,8 @@
 * Handoff File: [preparing-domain.9b77cd90d5739c58d60a5f1157edad1db6f26bb3.nl-nl.xlf](https://github.com/Microsoft/EM.handoff/blob/df710b79069f607f230b745a5e0275e1adb7b353/ol-handoff/Microsoft/MIMDocs-pr.nl-nl/master/preparing-domain.9b77cd90d5739c58d60a5f1157edad1db6f26bb3.nl-nl.xlf)
 * Handoff Datetime: 2016-05-19 17:08:04
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [preparing-domain.9b77cd90d5739c58d60a5f1157edad1db6f26bb3.nl-nl.xlf](https://github.com/Microsoft/EM.handoff/blob/62bb897d6e60443e95c12dee19663f4e47529747/ol-handoff/Microsoft/MIMDocs-pr.nl-nl/master/archive/preparing-domain.9b77cd90d5739c58d60a5f1157edad1db6f26bb3.nl-nl.xlf)
+* Archive Datetime: 2016-06-02 00:41:09
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Current Target File: [MIMDocs\DeployUse\preparing-domain.md](https://github.com/Microsoft/MIMDocs-pr.nl-nl/blob/a2b8a79301eb1346859ba1ba80ad52b9bb024ab7/MIMDocs/DeployUse/preparing-domain.md)
@@ -1355,8 +1355,8 @@
 * Handoff File: [index.a54b2324d63a6d513b6900195023b9a8089553b4.nl-nl.xlf](https://github.com/Microsoft/EM.handoff/blob/3f23bb4a691a1a6882189a1fd291fb03a914859c/ol-handoff/Microsoft/MIMDocs-pr.nl-nl/master/index.a54b2324d63a6d513b6900195023b9a8089553b4.nl-nl.xlf)
 * Handoff Datetime: 2016-05-17 20:04:58
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [index.a54b2324d63a6d513b6900195023b9a8089553b4.nl-nl.xlf](https://github.com/Microsoft/EM.handoff/blob/62bb897d6e60443e95c12dee19663f4e47529747/ol-handoff/Microsoft/MIMDocs-pr.nl-nl/master/archive/index.a54b2324d63a6d513b6900195023b9a8089553b4.nl-nl.xlf)
+* Archive Datetime: 2016-06-02 00:41:09
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Current Target File: [MIMDocs\index.md](https://github.com/Microsoft/MIMDocs-pr.nl-nl/blob/a2b8a79301eb1346859ba1ba80ad52b9bb024ab7/MIMDocs/index.md)
@@ -3072,8 +3072,8 @@
 * Handoff File: [capacity-planning-guide.a5b5577289101cd375376319cbd1fa3f32f4d38f.nl-nl.xlf](https://github.com/Microsoft/EM.handoff/blob/62f699e9e45f28a2e3662f9541029d2f48d0a946/ol-handoff/Microsoft/MIMDocs-pr.nl-nl/master/capacity-planning-guide.a5b5577289101cd375376319cbd1fa3f32f4d38f.nl-nl.xlf)
 * Handoff Datetime: 2016-05-16 15:37:46
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [capacity-planning-guide.a5b5577289101cd375376319cbd1fa3f32f4d38f.nl-nl.xlf](https://github.com/Microsoft/EM.handoff/blob/62bb897d6e60443e95c12dee19663f4e47529747/ol-handoff/Microsoft/MIMDocs-pr.nl-nl/master/archive/capacity-planning-guide.a5b5577289101cd375376319cbd1fa3f32f4d38f.nl-nl.xlf)
+* Archive Datetime: 2016-06-02 00:41:09
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Current Target File: [MIMDocs\PlanDesign\capacity-planning-guide.md](https://github.com/Microsoft/MIMDocs-pr.nl-nl/blob/fbb64fe2fda7fb63432a10a4fe8e2d920ce06d1c/MIMDocs/PlanDesign/capacity-planning-guide.md)
@@ -3713,8 +3713,8 @@
 * Handoff File: [identity-manager-hybrid-reporting-azure.50c26252fc76f6c50be4c477e24cfaf05cf3c4c7.nl-nl.xlf](https://github.com/Microsoft/EM.handoff/blob/62f699e9e45f28a2e3662f9541029d2f48d0a946/ol-handoff/Microsoft/MIMDocs-pr.nl-nl/master/identity-manager-hybrid-reporting-azure.50c26252fc76f6c50be4c477e24cfaf05cf3c4c7.nl-nl.xlf)
 * Handoff Datetime: 2016-05-16 15:37:46
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [identity-manager-hybrid-reporting-azure.50c26252fc76f6c50be4c477e24cfaf05cf3c4c7.nl-nl.xlf](https://github.com/Microsoft/EM.handoff/blob/62bb897d6e60443e95c12dee19663f4e47529747/ol-handoff/Microsoft/MIMDocs-pr.nl-nl/master/archive/identity-manager-hybrid-reporting-azure.50c26252fc76f6c50be4c477e24cfaf05cf3c4c7.nl-nl.xlf)
+* Archive Datetime: 2016-06-02 00:41:09
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Current Target File: [MIMDocs\Understand\identity-manager-hybrid-reporting-azure.md](https://github.com/Microsoft/MIMDocs-pr.nl-nl/blob/a2b8a79301eb1346859ba1ba80ad52b9bb024ab7/MIMDocs/Understand/identity-manager-hybrid-reporting-azure.md)
