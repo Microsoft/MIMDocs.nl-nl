@@ -30,9 +30,13 @@ ms.suite: ems
 >[! div class = stapsgewijs]  
 [Windows Server 2012 R2 »](prepare-server-ws2012r2.md)
 
+Microsoft Identity Manager (MIM) werkt samen met uw Active Directory-domein (AD). U moet AD al hebben geïnstalleerd en ervoor zorgen dat uw omgeving een domeincontroller bevat voor een domein dat u kunt beheren.
+
+In dit artikel wordt uitgelegd welke stappen u moet doorlopen om uw domein voor te bereiden op een samenwerking met MIM.
+
 ## Maak gebruikersaccounts en groepen
 
-Voor MIM is vereist dat Active Directory is al geïnstalleerd. Zorg ervoor dat uw omgeving een domeincontroller bevat voor een domein dat u kunt beheren.
+Alle onderdelen van uw MIM-implementatie hebben een eigen identiteit in het domein nodig. Dit geldt onder andere voor MIM-onderdelen als Service en Sync, evenals SharePoint en SQL.
 
 > [!NOTE]
 > In deze stapsgewijze instructies wordt gebruikgemaakt van voorbeeldnamen en -waarden van een bedrijf met de naam Contoso. Vervang deze door uw eigen namen en waarden. Bijvoorbeeld:
@@ -40,7 +44,7 @@ Voor MIM is vereist dat Active Directory is al geïnstalleerd. Zorg ervoor dat u
 > - Domeinnaam: **contoso**
 > - Wachtwoord: **Pass@word1**
 
-1. Meld u als domeinbeheerder aan bij de domeincontroller (*bv. Contoso\Administrator*).
+1. Meld u als domeinbeheerder (*bijvoorbeeld Contoso\Administrator*) aan bij de domeincontroller.
 
 2. Maak de volgende gebruikersaccounts voor MIM-services. Start PowerShell en typ het volgende PowerShell-script voor het bijwerken van het domein.
 
@@ -95,6 +99,6 @@ Voor MIM is vereist dat Active Directory is al geïnstalleerd. Zorg ervoor dat u
 [Windows Server 2012 R2 »](prepare-server-ws2012r2.md)
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=May16_HO3-->
 
 

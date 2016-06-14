@@ -6,7 +6,7 @@ description: Informatie over het uitvoeren van een upgrade van uw FIM 2010 R2-on
 keywords:
 author: kgremban
 manager: stevenpo
-ms.date: 04/28/2016
+ms.date: 05/13/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -25,16 +25,22 @@ ms.suite: ems
 
 ---
 
-# Upgrade uitvoeren van Forefront Identity Manager 2010 R2 naar Microsoft Identity Manager 2016
-In deze sectie wordt het uitvoeren van een upgrade van een bestaand FIM 2010 R2-testsysteem naar MIM 2016 beschreven. Voor het uitvoeren van de upgrade worden dezelfde installatieprogramma’s gebruikt als voor een nieuwe implementatie.
+# Upgrade uitvoeren in Forefront Identity Manager 2010 R2
 
-In deze sectie wordt ervan uitgegaan dat u over een bestaande FIM 2010 R2-oplossing beschikt die is geïmplementeerd in een testomgeving. Op uw servers wordt Windows Server 2012, Windows Server 2012 R2 of Windows Server 2008 R2 uitgevoerd, wat de gebruikelijke besturingssystemen zijn voor FIM 2010 R2-servers, en alle lokale en omgevingsvereisten (SQL Server, Exchange Server, SharePoint Services, enz.) zijn geconfigureerd voor FIM 2010 R2.
+Als u een omgeving met Forefront Identity Manager (FIM) 2010 R2 hebt en u Microsoft Identity Manager (MIM) 2016 wilt uitproberen, kunt u deze handleiding gebruiken. Deze upgrade bestaat uit drie fasen:
 
-1.  MIM-synchronisatieservice (synchronisatie) wordt eerst geïnstalleerd en uitgevoerd op een server die is lid van het AD-domein en vervangt het FIM 2010 R2-exemplaar van synchronisatie.
+1.  Installeer de MIM-synchronisatieservice (Sync) op een server die deel uitmaakt van het AD-domein (Active Directory). Hiermee vervangt u het FIM 2010 R2-exemplaar van de synchronisatieservice.
 
-2.  Vervolgens worden de MIM-service en -portal, eventueel met de SSPR-registratieportal en de SSPR-serviceportal, en zonder de functieset Privileged Access Management geïnstalleerd.
+2.  MIM-service en -portal installeren Op dit moment kunt u er ook voor kiezen om de registratie- en serviceportal voor de selfservice voor wachtwoordherstel (SSPR) te installeren en de functieset voor Privileged Access Management uit te sluiten.
 
-3.  MIM-invoegtoepassingen -uitbreidingen, zoals de geïntegreerde client voor Windows-aanmelding in SSPR, kunnen vervolgens op een afzonderlijke clientcomputer wordt geïmplementeerd.
+3.  Implementeer de MIM-invoegtoepassingen en -extensies op een afzonderlijke clientcomputer. Dit is inclusief de geïntegreerde SSRP-client voor de Windows-aanmelding.
+
+
+In deze gids wordt verondersteld dat u het volgende al hebt ingesteld.
+- FIM 2010 R2 is geïmplementeerd in een testomgeving
+- Servers met Windows Server 2012, Windows Server 2012 R2 of Windows Server 2008 R2
+- Lokale en milieuvereisten (SQL Server, Exchange Server, SharePoint Services enzovoort) die zijn geconfigureerd voor FIM 2010 R2.
+
 
 ## Voorbereiding
 
@@ -58,7 +64,7 @@ In deze sectie wordt ervan uitgegaan dat u over een bestaande FIM 2010 R2-oploss
 
 5.  Klik op **Volgende** om door te gaan als u de licentievoorwaarden accepteert.
 
-6.  Voer het wachtwoord in voor het serviceaccount dat door synchronisatie wordt gebruikt en klik op **Volgende**.
+6.  Voer het wachtwoord in voor het serviceaccount dat door de synchronisatie wordt gebruikt en klik op **Volgende**.
 
     ![Afbeelding van MIM-synchronisatieserviceaccount configureren](media/MIM-UpgFIM3.png)
 
@@ -76,7 +82,7 @@ In deze sectie wordt ervan uitgegaan dat u over een bestaande FIM 2010 R2-oploss
 
 11. Tijdens het uitvoeren van de upgrade wordt een waarschuwing met betrekking tot de upgrade van de synchronisatiedatabase weergegeven. Aangeraden wordt een back-up te maken van de database voordat u de upgrade uitvoert.
 
-12. Wanneer het uitvoeren van de upgrade is voltooid, klikt u op **Voltooien**.
+12. Zodra de upgrade is uitgevoerd, klikt u op **Voltooien**
 
     ![Afbeelding van voltooide installatie van MIM-synchronisatie](media/MIM-UpgSP1.png)
 
@@ -122,7 +128,7 @@ In deze sectie wordt ervan uitgegaan dat u over een bestaande FIM 2010 R2-oploss
 
     ![Afbeelding van Servicecertificaat configureren](media/MIM-UpgSP7.png)
 
-    1.  Als de optie voor het lokale certificaatarchief is geselecteerd, klikt u op de knop **Certificaat selecteren** en selecteert u een certificaat in de lijst in het pop-upvenster. Klik op **OK** en vervolgens op **Volgende**..
+    1.  Als de optie voor het lokale certificaatarchief is geselecteerd, klikt u op de knop **Certificaat selecteren** en selecteert u een certificaat in de lijst in het pop-upvenster. Klik achtereenvolgens op **OK** en **Volgende**.
 
         ![Afbeelding pop-upvenster Certificaat selecteren](media/MIM-UpgSP8.PNG)
 
@@ -144,9 +150,9 @@ In deze sectie wordt ervan uitgegaan dat u over een bestaande FIM 2010 R2-oploss
 
 2. Configureer de mogelijkheid voor clients en eindgebruikers om de service en de portal te gebruiken.
 
-    1.  Controleer of u **poorten 5725 en 5726 in de firewall wilt openstellen**.
+    1.  Controleer of u **poort 5725 en 5726 in de firewall wilt openen**.
 
-    2.  Controleer of u wilt **Geverifieerde gebruikers toegang wilt verlenen tot de MIM-portalsite**.
+    2.  Controleer of u **Geverifieerde gebruikers toegang wilt verlenen tot de MIM-portalsite**.
 
     3.  Klik op **Volgende**.
 
@@ -201,6 +207,6 @@ In deze sectie wordt ervan uitgegaan dat u over een bestaande FIM 2010 R2-oploss
 Opmerking: Als de FIM-invoegtoepassingen en -extensies momenteel zijn geïmplementeerd op de computers van gebruikers voor SSPR, configureert u de nieuwe MFA-telefoonpoorten voor wachtwoordherstel pas nadat de upgrade voor alle FIM-invoegtoepassingen en -uitbreidingen voor MIM 2016 is uitgevoerd.  Omdat de FIM 2010 en FIM 2010 R2-invoegtoepassingen en -extensies de nieuwe poorten niet herkennen, wordt hierdoor een fout veroorzaakt en kan een gebruiker wachtwoordherstel niet voltooien.
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=May16_HO3-->
 
 

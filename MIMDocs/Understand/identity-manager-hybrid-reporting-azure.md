@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Hybride rapportage van Identity Manager in Azure | Microsoft Identity Manager
+title: Rapporten voor hybride-identiteitsbeheer | Microsoft Identity Manager
 description: Met hybride rapportage van Azure Active Directory maakt u aangepaste rapporten waarin zowel cloud- als on-premises gebeurtenissen worden opgenomen.
 keywords:
 author: kgremban
 manager: stevenpo
-ms.date: 04/28/2016
+ms.date: 05/13/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -25,8 +25,8 @@ ms.suite: ems
 
 ---
 
-# Hybride rapportage van Identity Manager in Azure
-Met Azure Active Directory (AD) kunt u één rapport maken waarin u identiteitsbeheeractiviteiten kunt weergeven die on-premises of in de cloud hebben plaatsgevonden. Door deze rapportagemogelijkheid beschikt u over een geconsolideerde locatie waaruit u identiteit- en toegangsgegevens kunt beheren, en tegelijkertijd de totale kosten kunt verlagen.
+# Rapporten voor hybride-identiteitsbeheer in Azure
+Met Azure Active Directory (AD) kunt u één rapport maken waarin u identiteitsbeheeractiviteiten kunt bewaken die on-premises of in de cloud plaatsvinden. Met deze functie kunt u al uw identiteits- en toegangsgegevens op één locatie beheren en zodoende tijd besparen en de totale kosten reduceren.
 
 ## Wat is hybride rapportage van Azure AD?
 Hybride rapportage helpt IT-professionals met het oplossen van algemene rapportage-vraagstukken op het gebied van identiteitsbeheer.
@@ -39,7 +39,7 @@ Hybride rapportage helpt IT-professionals met het oplossen van algemene rapporta
 
 ## Hoe werkt dit?
 
-Als u de on-premises gegevens wilt verzamelen, moet u eerst een rapportageagent installeren op uw Identity Manager-server. De rapportageagent moet worden gedownload vanaf de configuratiepagina van de map in de [klassieke Azure Portal](https://manage.windowsazure.com/).
+Als u de on-premises gegevens wilt verzamelen, moet u eerst een rapportageagent installeren op uw Identity Manager-server. De rapportageagent moet worden gedownload vanaf de configuratiepagina van de map in de [klassieke Azure-portal](https://manage.windowsazure.com/).
 
 Het proces voor hybride rapportage verloopt als volgt:
 1. Nadat de rapportageagent is geïnstalleerd, worden de activiteitsgegevens van Identity Manager verzonden naar het Windows-gebeurtenislogboek.
@@ -52,6 +52,6 @@ Het proces voor hybride rapportage verloopt als volgt:
 - Meer informatie over [werken met hybride rapportage van Identity Manager](/microsoft-identity-manager/deploy-use/working-with-identity-manager-hybrid-reporting)
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=May16_HO3-->
 
 
