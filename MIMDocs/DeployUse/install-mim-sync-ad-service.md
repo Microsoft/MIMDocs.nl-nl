@@ -27,8 +27,7 @@ ms.suite: ems
 
 # MIM 2016 installeren: Active Directory en de MIM-service synchroniseren
 
->[!div class=stapsgewijs]
-[« MIM-service en -portal](install-mim-service-portal.md)
+>[!div class="step-by-step"] [« MIM-service en -portal](install-mim-service-portal.md)
 
 > [!NOTE]
 > In deze stapsgewijze instructies wordt gebruikgemaakt van voorbeeldnamen en -waarden van een bedrijf met de naam Contoso. Vervang deze door uw eigen namen en waarden. Bijvoorbeeld:
@@ -43,14 +42,13 @@ De MIM-beheeragent (MA) is een connector voor MIM Sync met de MIM-service. Als u
 
 Wanneer u een MIM-beheeragent configureert, moet u een gebruikersaccount opgeven. In dit document wordt **MIMMA** gebruikt als de naam voor dit account.
 
-> [!NOTE]
-> Het account dat u voor de MIM-beheeragent gebruikt, moet hetzelfde account zijn als het account dat u tijdens de installatie van de MIM-service hebt opgegeven.
+> [!NOTE] Het account dat u voor de MIM-beheeragent gebruikt, moet hetzelfde account zijn als het account dat u tijdens de installatie van de MIM-service hebt opgegeven.
 
 ###De MIM-beheeragent maken
 
 1.  Open Synchronization Service Manager.
 
-2.  Klik in het menu **Acties** op **Maken** om de wizard voor het maken van de beheeragent te openen..
+2.  Klik in het menu **Acties** op **Maken** om de wizard voor het maken van de beheeragent te openen.
 
 3.  Geef op de pagina **Beheeragent maken** de volgende instellingen op en klik vervolgens op **Volgende**.
 
@@ -86,7 +84,7 @@ Wanneer u een MIM-beheeragent configureert, moet u een gebruikersaccount opgeven
 
     -   Groep
 
-6.  Controleer op de pagina **Geselecteerde kenmerken** of alle vermelde kenmerken zijn geselecteerd en klik vervolgens op **Volgende**.
+6.  Controleer op de pagina **Geselecteerde kenmerken** of alle vermelde kenmerken zijn geselecteerd en klik op **Volgende**.
 
 7.  Klik op de pagina **Connectorfilter configureren** op **Volgende**.
 
@@ -99,69 +97,69 @@ Wanneer u een MIM-beheeragent configureert, moet u een gebruikersaccount opgeven
 
 9.  Pas op de pagina **Kenmerkstroom configureren** de volgende kenmerkstroomtoewijzingen toe en klik vervolgens op **Volgende**
 
-    | **Stroomrichting** | **Kenmerk van de gegevensbron** | **Metaverse-kenmerk** |
+    | **Kenmerk van de gegevensbron** | **Stroomrichting** | **Metaverse-kenmerk** |
     |-|-|-|
-    |Importeren|Importeren|accountName|
-    |Importeren|Importeren|bedrijf|
-    |Importeren|Importeren|displayName|
-    |Importeren|Importeren|employeeID|
-    |Importeren|Importeren|employeeType|
-    |Importeren|Importeren|firstName|
-    |Importeren|Importeren|lastName|
-    |Importeren|Importeren|Manager|
-    |Importeren|Importeren|objectSid|
-    |Exporteren|Exporteren|accountName|
-    |Exporteren|Exporteren|bedrijf|
-    |Exporteren|Exporteren|displayName|
-    |Exporteren|Exporteren|domein|
-    |Exporteren|Exporteren|employeeID|
-    |Exporteren|Exporteren|employeeType|
-    |Exporteren|Exporteren|firstName|
-    |Exporteren|Exporteren|lastName|
-    |Exporteren|Exporteren|manager|
-    |Exporteren|Exporteren|objectSid|
+    | AccountName | Exporteren | accountName |
+    | DisplayName | Exporteren | displayName |
+    | Domein | Exporteren | domein |
+    | Werknemer-id | Exporteren | employeeID |
+    | EmployeeType | Exporteren | employeeType |
+    | E-mail | Exporteren | E-mail |
+    | FirstName | Exporteren | firstName |
+    | LastName | Exporteren | lastName |
+    | ObjectSID | Exporteren | objectSid |
 
 10.  Selecteer **Persoon** als het gegevensbronobjecttype.
 
-    -   Select **Person** as the Metaverse object type.
+    -   Selecteer **Persoon** in de lijst Metaverse-objecttype.
 
-    -   Select **Direct** as the Mapping Type.
+    -   Selecteer **Direct** als het toewijzingstype.
 
-    -   For each row in the previous table, complete the following steps:
+    -   Voer voor elke rij in de voorgaande tabel de volgende stappen uit:
 
-        -   Select the **Flow direction** shown for that row in the table.
+        -   Selecteer de **gegevensstroomrichting** die wordt weergegeven voor die rij in de tabel.
 
-        -   Select the **Data source attribute** shown for that row in the table.
+        -   Selecteer het **kenmerk van de gegevensbron** dat wordt weergegeven voor die rij in de tabel.
 
-        -   Select the **Metaverse attribute** shown for that row in the table.
+        -   Selecteer het **metaverse-kenmerk** dat wordt weergegeven voor die rij in de tabel.
 
-        -   To apply the flow mapping, click **New**.
+        -   Als u stroomtoewijzing wilt toepassen, klikt u op **Nieuw**.
 
-    -   Select **Group** as the data source type and as the metaverse object type.
+    -   Selecteer **Groep** als het gegevensbrontype en als het type metaverse-object.
 
-    -   Select **Direct** as the Mapping Type.
+    -   Selecteer **Direct** als het toewijzingstype.
 
-    -   For each row in the following table, complete these steps:
+    -   Voer voor elke rij in de volgende tabel de volgende stappen uit:
 
-        -   Select the **Flow direction** shown for that row in the table.
+        -   Selecteer de **gegevensstroomrichting** die wordt weergegeven voor die rij in de tabel.
 
-        -   Select the **Data source attribute** shown for that row in the table.
+        -   Selecteer het **kenmerk van de gegevensbron** dat wordt weergegeven voor die rij in de tabel.
 
-        -   Select the **Metaverse attribute** shown for that row in the table.
+        -   Selecteer het **metaverse-kenmerk** dat wordt weergegeven voor die rij in de tabel.
 
-        -   To apply the flow mapping, click **New**.
+        -   Als u stroomtoewijzing wilt toepassen, klikt u op **Nieuw**.
 
-    | Flow Direction | Data Source Attribute | Metaverse Attribute |
+    | **Kenmerk van de gegevensbron** | **Stroomrichting** | **Metaverse-kenmerk** |
     |-|-|-|
-    | Export | AccountName | accountName |
-    | Export | DisplayName | displayName |
-    | Export | Domain | domain |
-    | Export | Scope | scope |
-    | Export | Type | type |
-    | Export | Member | member |
-    | Export | MembershipLocked | membershipLocked |
-    | Export | MembershipAddWorkflow | membershipAddWorkflow |
-    | Export | Manager | manager |
+    | AccountName | Exporteren | accountName |
+    | DisplayName | Exporteren | displayName |
+    | Domein | Exporteren | domein |
+    | E-mail | Exporteren | E-mail |
+    | MailNickName | Exporteren | mailNickName |
+    | Lid | Exporteren | lid |
+    | ObjectSID | Exporteren | objectSid |
+    | Bereik | Exporteren | bereik |
+    | Type | Exporteren | Type |
+    | MembershipAddWorkflow | Exporteren | membershipAddWorkflow |
+    | MembershipLocked | Exporteren | membershipLocked |
+    | DisplayName | Importeren | displayName |
+    | Bereik | Importeren | bereik |
+    | Type | Importeren | Type |
+    | Lid | Importeren | lid |
+    | AccountName | Importeren | accountName |
+    | DisplayedOwner | Importeren | displayedOwner |
+    | MailNickName | Importeren | mailNickName |
+
 
 11.  Klik op de pagina **Ongedaan maken van de inrichting configureren** op **Volgende**
 
@@ -170,7 +168,7 @@ Wanneer u een MIM-beheeragent configureert, moet u een gebruikersaccount opgeven
 ## De AD-beheeragent maken
 De Active Directory-beheeragent is een connector voor AD-domeinservices. Als u deze connector wilt maken, gebruikt u de wizard voor het maken van beheeragents.
 
-1. Klik in het menu **Acties** op **Maken** om de wizard voor het maken van de beheeragent te openen..
+1. Klik in het menu **Acties** op **Maken** om de wizard voor het maken van de beheeragent te openen.
 
 2. Geef op de pagina **Beheeragent maken** de volgende instellingen op en klik vervolgens op **Volgende**:
 
@@ -198,7 +196,7 @@ De Active Directory-beheeragent is een connector voor AD-domeinservices. Als u d
 
 6. Geef op de pagina **Objecttypen selecteren** de volgende instellingen op en klik vervolgens op **Volgende**
 
-    - Selecteer in de lijst **Objecttypen** de optie **Gebruiker** en **Groep**.
+    - Selecteer in de lijst **Objecttypen** de optie **gebruiker** en **groep**.
 
 7. Geef op de pagina **Kenmerken selecteren** de volgende instellingen op en klik vervolgens op **Volgende**:
 
@@ -383,11 +381,11 @@ Hanteer de volgende stappen om elk van de vier uitvoeringsprofielen uit te voere
 
 2. Selecteer in de lijst **Beheeragents** de optie **MIMMA**.
 
-3. Klik in het menu **Acties** op **Uitvoeren** om het dialoogvenster Beheeragent uitvoeren te openen..
+3. Klik in het menu **Acties** op **Uitvoeren** om het dialoogvenster Beheeragent uitvoeren te openen.
 
 4. Voer voor elk uitvoeringsprofiel dat hierboven wordt vermeld de volgende stappen uit:
 
-    - Klik in het menu **Acties** op **Uitvoeren** om het dialoogvenster Beheeragent uitvoeren te openen..
+    - Klik in het menu **Acties** op **Uitvoeren** om het dialoogvenster Beheeragent uitvoeren te openen.
 
     - Selecteer in de lijst **Uitvoeringsprofielen** het uitvoeringsprofiel dat u wilt uitvoeren.
 
@@ -407,11 +405,11 @@ Als u de Active Directory-connector wilt initialiseren, moet u hiervoor een voll
 
 2. Selecteer in de lijst **Beheeragents** de optie **ADMA**.
 
-3. Klik in het menu **Acties** op **Uitvoeren** om het dialoogvenster Beheeragent uitvoeren te openen..
+3. Klik in het menu **Acties** op **Uitvoeren** om het dialoogvenster Beheeragent uitvoeren te openen.
 
 4. Voer voor elk uitvoeringsprofiel dat hierboven wordt vermeld de volgende stappen uit:
 
-    - Klik in het menu **Acties** op **Uitvoeren** om het dialoogvenster Beheeragent uitvoeren te openen..
+    - Klik in het menu **Acties** op **Uitvoeren** om het dialoogvenster Beheeragent uitvoeren te openen.
 
     - Selecteer in de lijst **Uitvoeringsprofielen** het uitvoeringsprofiel dat u wilt uitvoeren.
 
@@ -439,10 +437,9 @@ Hanteer de volgende stappen om elk van de drie uitvoeringsprofielen uit te voere
     - Selecteer in de lijst **Uitvoeringsprofielen** het uitvoeringsprofiel dat u wilt uitvoeren.
     - Klik op **OK** om het uitvoeringsprofiel te starten.
 
->[!div class=stapsgewijs]
-[« MIM-service en -portal](install-mim-service-portal.md)
+>[!div class="step-by-step"] [« MIM-service en -portal](install-mim-service-portal.md)
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO1-->
 
 
