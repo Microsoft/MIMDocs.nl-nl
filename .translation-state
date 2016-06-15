@@ -1,6 +1,6 @@
 {
   "LastProcessedCommit": "f136c2516810ec3b143052ba243358da1bb19ff9",
-  "LastTranslatedCommit": "de46ed2cc43640535b4521d41f3e86b95fa22da2",
+  "LastTranslatedCommit": "ad0a9de3e481f9f5d04db08d87c09990e6c2ed1b",
   "Items": {
     "50c0edd60abfa6550cb5a873d32a842e8c099811": {
       "FileHash": "50c0edd60abfa6550cb5a873d32a842e8c099811",
@@ -2870,14 +2870,14 @@
       "HandoffPriority": "",
       "HandoffException": null,
       "HandoffFailureTimes": 0,
-      "TargetFileCommit": null,
-      "TargetFilePath": null,
-      "HandbackFilePath": null,
-      "HandbackFileCommit": null,
-      "HandbackDateTime": "0001-01-01T00:00:00",
+      "TargetFileCommit": "ad0a9de3e481f9f5d04db08d87c09990e6c2ed1b",
+      "TargetFilePath": "MIMDocs\\index.md",
+      "HandbackFilePath": "ol-handback\\Microsoft\\MIMDocs-pr.nl-nl\\master\\index.a54b2324d63a6d513b6900195023b9a8089553b4.nl-nl.xlf",
+      "HandbackFileCommit": "7432f88414aaab25dbf9b6b181030ada16164ffe",
+      "HandbackDateTime": "2016-06-15T17:38:54.7343202Z",
       "HandbackException": null,
       "HandbackFailureTimes": 0,
-      "UpdatedDateTime": "0001-01-01T00:00:00",
+      "UpdatedDateTime": "2016-06-15T17:38:54.7343202Z",
       "ArchiveFilePath": "ol-handoff\\Microsoft\\MIMDocs-pr.nl-nl\\master\\archive\\index.a54b2324d63a6d513b6900195023b9a8089553b4.nl-nl.xlf",
       "ArchiveFileCommit": "47c6c2ea62ec1fb269c2e0e45178b8506be1d7c4",
       "ArchiveFileDateTime": "2016-06-09T00:24:12.6510795Z",
