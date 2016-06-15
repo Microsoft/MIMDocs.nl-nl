@@ -6,7 +6,7 @@ description: Met de informatie in deze handleiding leert u de variabelen te begr
 keywords:
 author: kgremban
 manager: stevenpo
-ms.date: 04/28/2016
+ms.date: 05/13/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -27,7 +27,9 @@ ms.suite: ems
 
 # Handleiding voor capaciteitsplanning
 
-Als u klaar bent om Microsoft Identity Manager (MIM) te implementeren, gebruikt u deze handleiding en testomgevingen om uw implementatie te ontwerpen. Dit artikel begeleidt u bij veel voorkomende factoren die u in aanmerking moet nemen. Omdat elke implementatie echter uniek is, is het testen van uw scenario's in een testomgeving nog steeds de beste manier om te bepalen wat de juiste servers, hardware of topologieën voor uw behoeften zijn.
+Met Microsoft Identity Manager (MIM) kunt u gebruikersaccounts maken, bijwerken en verwijderen binnen uw organisatie. Dit biedt eindgebruikers ook de mogelijkheid om de selfservicefuncties van hun eigen account te beheren. Zelfs in een kleine omgeving kunnen al deze acties behoorlijk wat tijd vergen.
+
+Voordat u aan de slag gaat met MIM kunt u deze handleiding, samen met testomgevingen, gebruiken om inzicht te krijgen in het bereik van uw implementatie. Dit artikel begeleidt u bij veel voorkomende factoren die u in aanmerking moet nemen. Omdat elke implementatie echter uniek is, is het testen van uw scenario's in een testomgeving nog steeds de beste manier om te bepalen wat de juiste servers, hardware of topologieën voor uw behoeften zijn.
 
 Als u nog niet bekend bent met MIM 2016 en de bijbehorende onderdelen, kunt u het beste informatie over [Microsoft Identity Manager 2016](/microsoft-identity-manager/understand-explore/microsoft-identity-manager-2016) lezen voor u doorgaat.
 
@@ -98,6 +100,6 @@ MIM-beleidsconfiguratie omvat tevens het nemen van beslissingen over het inricht
 - De downloadbare [handleiding voor planningscapaciteit van Forefront Identity Manager (FIM) 2010 ](http://go.microsoft.com/fwlink/?LinkId=200180) biedt meer informatie over een testbuild en prestatietestresultaten.
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=May16_HO3-->
 
 
