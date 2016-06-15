@@ -1,11 +1,26 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 0
+ Total Files | 1
 
 ## File List
+ Source File | Status | Details 
+ ----------- | ------ | ------- 
+ [MIMDocs\PlanDesign\capacity-planning-guide.md](https://github.com/Microsoft/MIMDocs-pr/blob/0ea8b3d9032a01bd6a6b1faad8ea27d2cb889fc6/MIMDocs/PlanDesign/capacity-planning-guide.md) | InSyncHandedBackSuccess | [Details](#323a875aba14a238aa7cb3a0e6df192729ce53d6220)
 
 ## Item Details
+##### <a name='323a875aba14a238aa7cb3a0e6df192729ce53d6220'></a> Source: [MIMDocs\PlanDesign\capacity-planning-guide.md](https://github.com/Microsoft/MIMDocs-pr/blob/0ea8b3d9032a01bd6a6b1faad8ea27d2cb889fc6/MIMDocs/PlanDesign/capacity-planning-guide.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [MIMDocs\PlanDesign\capacity-planning-guide.md](https://github.com/Microsoft/MIMDocs-pr.nl-nl/blob/5598c6d99f0811d9631f8cf54fd0cde4ef563ea7/MIMDocs/PlanDesign/capacity-planning-guide.md)
+* Handoff File: [capacity-planning-guide.a5b5577289101cd375376319cbd1fa3f32f4d38f.nl-nl.xlf](https://github.com/Microsoft/EM.handoff/blob/62f699e9e45f28a2e3662f9541029d2f48d0a946/ol-handoff/Microsoft/MIMDocs-pr.nl-nl/master/capacity-planning-guide.a5b5577289101cd375376319cbd1fa3f32f4d38f.nl-nl.xlf)
+* Handoff Datetime: 2016-05-16 15:37:46
+* Handoff Reason: Include
+* Archive File: [capacity-planning-guide.a5b5577289101cd375376319cbd1fa3f32f4d38f.nl-nl.xlf](https://github.com/Microsoft/EM.handoff/blob/62bb897d6e60443e95c12dee19663f4e47529747/ol-handoff/Microsoft/MIMDocs-pr.nl-nl/master/archive/capacity-planning-guide.a5b5577289101cd375376319cbd1fa3f32f4d38f.nl-nl.xlf)
+* Archive Datetime: 2016-06-02 00:41:09
+* Handback File: [capacity-planning-guide.a5b5577289101cd375376319cbd1fa3f32f4d38f.nl-nl.xlf](https://github.com/Microsoft/EM.handback/blob/e3b8fd92afd1ecd7141dcace42c8cf4386827d7d/ol-handback/Microsoft/MIMDocs-pr.nl-nl/master/capacity-planning-guide.a5b5577289101cd375376319cbd1fa3f32f4d38f.nl-nl.xlf)
+* Handback Datetime: 2016-06-15 09:49:16
+* [Back to Top](#report-top)
+
 
 ## Error Details
 

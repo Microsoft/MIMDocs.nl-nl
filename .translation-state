@@ -1,6 +1,6 @@
 {
   "LastProcessedCommit": "f136c2516810ec3b143052ba243358da1bb19ff9",
-  "LastTranslatedCommit": "571aa5ea3fa9888245dae0d7e3a7f6be5a7a8e81",
+  "LastTranslatedCommit": "5598c6d99f0811d9631f8cf54fd0cde4ef563ea7",
   "Items": {
     "50c0edd60abfa6550cb5a873d32a842e8c099811": {
       "FileHash": "50c0edd60abfa6550cb5a873d32a842e8c099811",
@@ -2700,14 +2700,14 @@
       "HandoffPriority": "",
       "HandoffException": null,
       "HandoffFailureTimes": 0,
-      "TargetFileCommit": null,
-      "TargetFilePath": null,
-      "HandbackFilePath": null,
-      "HandbackFileCommit": null,
-      "HandbackDateTime": "0001-01-01T00:00:00",
+      "TargetFileCommit": "5598c6d99f0811d9631f8cf54fd0cde4ef563ea7",
+      "TargetFilePath": "MIMDocs\\PlanDesign\\capacity-planning-guide.md",
+      "HandbackFilePath": "ol-handback\\Microsoft\\MIMDocs-pr.nl-nl\\master\\capacity-planning-guide.a5b5577289101cd375376319cbd1fa3f32f4d38f.nl-nl.xlf",
+      "HandbackFileCommit": "e3b8fd92afd1ecd7141dcace42c8cf4386827d7d",
+      "HandbackDateTime": "2016-06-15T09:49:16.4811089Z",
       "HandbackException": null,
       "HandbackFailureTimes": 0,
-      "UpdatedDateTime": "0001-01-01T00:00:00",
+      "UpdatedDateTime": "2016-06-15T09:49:16.4811089Z",
       "ArchiveFilePath": "ol-handoff\\Microsoft\\MIMDocs-pr.nl-nl\\master\\archive\\capacity-planning-guide.a5b5577289101cd375376319cbd1fa3f32f4d38f.nl-nl.xlf",
       "ArchiveFileCommit": "62bb897d6e60443e95c12dee19663f4e47529747",
       "ArchiveFileDateTime": "2016-06-02T00:41:09.8782769Z",
