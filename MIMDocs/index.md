@@ -21,7 +21,7 @@ ms.assetid: 90d66a75-a7ec-4fa1-911c-cce683908838
     <section id="hero-content">
       <h1>Documentatie voor Microsoft Identity Manager</h1>
       <h2>Microsoft Identity Manager (MIM) beschikt over functies voor on-premises identiteits- &amp; toegangsbeheer, zoals identiteitssynchronisatie, detectie van identiteitsdiefstal en meer</h2>
-      <h3>Nog onbekend met MIM? <a href="http://www.microsoft.com/en-us/server-cloud/products/microsoft-identity-manager/" target="\_blank">Ga naar de productpagina &rarr;</a></h3>     
+      <h3>Nog onbekend met MIM? <a href="http://go.microsoft.com/fwlink/?LinkId=816853" target="\_blank">Ga naar de productpagina &rarr;</a></h3>     
     </section>
     <aside class="alert section-border">
       <p>Gereed om te beginnen?</p>
@@ -140,6 +140,6 @@ ms.assetid: 90d66a75-a7ec-4fa1-911c-cce683908838
 </article>
 
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO4-->
 
 
