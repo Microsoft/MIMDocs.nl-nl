@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Een server voor identiteitsbeheer instellen: Windows Server 2012 R2 | Microsoft Identity Manager
-description: Lees welke stappen moeten worden uitgevoerd en wat de minimale vereisten zijn voor het voorbereiden van Windows Server 2012 RS zodat dit kan samenwerken met MIM 2016.
+title: "Een server voor identiteitsbeheer instellen: Windows Server 2012 R2 | Microsoft Identity Manager"
+description: "Lees welke stappen moeten worden uitgevoerd en wat de minimale vereisten zijn voor het voorbereiden van Windows Server 2012 RS zodat dit kan samenwerken met MIM 2016."
 keywords:
 author: kgremban
 manager: stevenpo

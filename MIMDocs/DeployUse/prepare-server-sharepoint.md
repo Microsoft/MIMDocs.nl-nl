@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Een server voor identiteitsbeheer instellen: SharePoint | Microsoft Identity Manager
-description: Installeer en configureer SharePoint Foundation zodat deze de MIM-portalpagina kan hosten.
+title: "Een server voor identiteitsbeheer instellen: SharePoint | Microsoft Identity Manager"
+description: "Installeer en configureer SharePoint Foundation zodat deze de MIM-portalpagina kan hosten."
 keywords:
 author: kgremban
 manager: stevenpo

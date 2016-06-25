@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: MIM 2016 installeren: Active Directory en de MIM-service synchroniseren | Microsoft Identity Manager
-description: Gebruik beheeragents en de MIM-synchronisatieservice om Active Directory en de MIM-databases te synchroniseren.
+title: "MIM 2016 installeren: Active Directory en de MIM-service synchroniseren | Microsoft Identity Manager"
+description: "Gebruik beheeragents en de MIM-synchronisatieservice om Active Directory en de MIM-databases te synchroniseren."
 keywords:
 author: kgremban
 manager: stevenpo
