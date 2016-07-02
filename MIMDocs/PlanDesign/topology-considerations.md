@@ -1,9 +1,7 @@
 ---
-# required metadata
-
 title: Aandachtspunten voor topologie voor het implementeren van MIM | Microsoft Identity Manager
 description: Krijg inzicht in de MIM 2016-onderdelen en profiteer van tips voor het implementeren ervan in uw omgeving.
-keywords:
+keywords: 
 author: kgremban
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 735dc357-dfba-4f68-a5b3-d66d6c018803
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: mwahl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: c023d147d0fcc1525fefbe866c952e217f7bee6b
+ms.openlocfilehash: e33a08d77a0b5c422cdbc8c19516b55df980a2c6
+
 
 ---
 
@@ -71,6 +65,7 @@ De computers met SQL Server die als host fungeren voor de MIM-synchronisatieserv
 - De downloadbare [handleiding voor planningscapaciteit van Forefront Identity Manager (FIM) 2010 ](http://go.microsoft.com/fwlink/?LinkId=200180) biedt meer informatie over een testbuild en prestatietestresultaten.
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jun16_HO4-->
 
 

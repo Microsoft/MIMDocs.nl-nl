@@ -1,9 +1,7 @@
 ---
-# required metadata
-
 title: Upgrade uitvoeren in Forefront Identity Manager 2010 R2 | Microsoft Identity Manager
 description: Informatie over het uitvoeren van een upgrade van uw FIM 2010 R2-onderdelen en het installeren van onderdelen die nieuw zijn in MIM 2016.
-keywords:
+keywords: 
 author: kgremban
 manager: stevenpo
 ms.date: 05/13/2016
@@ -12,16 +10,12 @@ ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 9471ccc1-bafe-46ee-b169-1464262380e1
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: mwahl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 7e61e201b277a2e8ec9fee785e9e34fca3b1cb29
+ms.openlocfilehash: 24a7bf5bfb0a7450becd08be6743ed7ab1755559
+
 
 ---
 
@@ -207,6 +201,7 @@ In deze gids wordt verondersteld dat u het volgende al hebt ingesteld.
 Opmerking: Als de FIM-invoegtoepassingen en -extensies momenteel zijn geïmplementeerd op de computers van gebruikers voor SSPR, configureert u de nieuwe MFA-telefoonpoorten voor wachtwoordherstel pas nadat de upgrade voor alle FIM-invoegtoepassingen en -uitbreidingen voor MIM 2016 is uitgevoerd.  Omdat de FIM 2010 en FIM 2010 R2-invoegtoepassingen en -extensies de nieuwe poorten niet herkennen, wordt hierdoor een fout veroorzaakt en kan een gebruiker wachtwoordherstel niet voltooien.
 
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 
