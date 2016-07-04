@@ -9,8 +9,8 @@
 [ Archive Failed Files ](#archive-failed-list)| 0
 [ Archive Success Files ](#archive-success-list)| 18
 [ Handback Failed Files ](#handback-failed-list)| 0
-[ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 18
-[ In Sync Handback Files ](#insync-handback-success-list)| 11
+[ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 17
+[ In Sync Handback Files ](#insync-handback-success-list)| 12
 [ Ignored Files ](#ignored-list)| 158
 
 ## <a name='handoff-failed-list'></a> Handoff Failed File List
@@ -160,7 +160,6 @@
  [MIMDocs\DeployUse\working-with-identity-manager-hybrid-reporting.md](https://github.com/Microsoft/MIMDocs-pr/blob/f9b01ac2cee2b96f64a9fda917f4f4146ca2eeda/MIMDocs/DeployUse/working-with-identity-manager-hybrid-reporting.md) | OutofSyncHandedBackSuccess | [Details](#e2d0bd6120628d4fd2a14718fc205cde976c778573)
  [MIMDocs\DeployUse\working-with-mim-certificate-manager.md](https://github.com/Microsoft/MIMDocs-pr/blob/f9b01ac2cee2b96f64a9fda917f4f4146ca2eeda/MIMDocs/DeployUse/working-with-mim-certificate-manager.md) | OutofSyncHandedBackSuccess | [Details](#3e0e6cea0b268836bb6347e81694deec93320ce374)
  [MIMDocs\DeployUse\working-with-self-service-password-reset.md](https://github.com/Microsoft/MIMDocs-pr/blob/f9b01ac2cee2b96f64a9fda917f4f4146ca2eeda/MIMDocs/DeployUse/working-with-self-service-password-reset.md) | OutofSyncHandedBackSuccess | [Details](#3a4350e54383dc1098c778090bb29b435082045f75)
- [MIMDocs\index.md](https://github.com/Microsoft/MIMDocs-pr/blob/0bbdacbfc5b912221257a9425db13804d6dd6a25/MIMDocs/index.md) | OutofSyncHandedBackSuccess | [Details](#f589140e0feac52474256e7ab29b9d3a7a36c5ec81)
  [MIMDocs\PlanDesign\TOC.md](https://github.com/Microsoft/MIMDocs-pr/blob/8d151e15ea35fbaf14e8b55697f3fad9858d2aed/MIMDocs/PlanDesign/TOC.md) | OutofSyncHandedBackSuccess | [Details](#fccf9b584e84cdd7c72dadded4a0e1126789d7c2248)
  [MIMDocs\toc.md](https://github.com/Microsoft/MIMDocs-pr/blob/8d151e15ea35fbaf14e8b55697f3fad9858d2aed/MIMDocs/toc.md) | OutofSyncHandedBackSuccess | [Details](#511bb7e106b832056f9743419fe24c066366090a288)
  [MIMDocs\Understand\microsoft-identity-manager-2016.md](https://github.com/Microsoft/MIMDocs-pr/blob/9e5f51d5ca731b3564b8262db0f4cddeb850231a/MIMDocs/Understand/microsoft-identity-manager-2016.md) | OutofSyncHandedBackSuccess | [Details](#5247cce895344ac6148b735fe550eb16c39103c7300)
@@ -174,6 +173,7 @@
  [MIMDocs\DeployUse\microsoft-identity-manager-deploy.md](https://github.com/Microsoft/MIMDocs-pr/blob/ca7fdef81eb8a68aff46df528e1989f019f5d2a4/MIMDocs/DeployUse/microsoft-identity-manager-deploy.md) | InSyncHandedBackSuccess | [Details](#a56ead9777f1dad1aa0d214a506cf1242f51e16766)
  [MIMDocs\DeployUse\preparing-domain.md](https://github.com/Microsoft/MIMDocs-pr/blob/b2578d50f855486183ae182330bacb688011c273/MIMDocs/DeployUse/preparing-domain.md) | InSyncHandedBackSuccess | [Details](#b84a6c7c7b53a122eefc3846ba93b92b34edb6ce71)
  [MIMDocs\GetStarted\TOC.md](https://github.com/Microsoft/MIMDocs-pr/blob/9c9ada27ad1efe6b4b5154677de163afcbd1c850/MIMDocs/GetStarted/TOC.md) | InSyncHandedBackSuccess | [Details](#260aec3bd3dd61ecfd8abbeb1a01aa9d7126baa880)
+ [MIMDocs\index.md](https://github.com/Microsoft/MIMDocs-pr/blob/0bbdacbfc5b912221257a9425db13804d6dd6a25/MIMDocs/index.md) | InSyncHandedBackSuccess | [Details](#f589140e0feac52474256e7ab29b9d3a7a36c5ec81)
  [MIMDocs\microsoft-identity-manager-2016-release-notes.md](https://github.com/Microsoft/MIMDocs-pr/blob/62108908497d1dcf69579ba144545346b6a42266/MIMDocs/microsoft-identity-manager-2016-release-notes.md) | InSyncHandedBackSuccess | [Details](#12f245624e644b12825239e378a26752f7a86846197)
  [MIMDocs\PlanDesign\capacity-planning-guide.md](https://github.com/Microsoft/MIMDocs-pr/blob/0ea8b3d9032a01bd6a6b1faad8ea27d2cb889fc6/MIMDocs/PlanDesign/capacity-planning-guide.md) | InSyncHandedBackSuccess | [Details](#323a875aba14a238aa7cb3a0e6df192729ce53d6241)
  [MIMDocs\PlanDesign\microsoft-identity-manager-2016-supported-platforms.md](https://github.com/Microsoft/MIMDocs-pr/blob/a59e7471a8aaafc6752c9be34d52fd3509104dec/MIMDocs/PlanDesign/microsoft-identity-manager-2016-supported-platforms.md) | InSyncHandedBackSuccess | [Details](#bb3e3abfdc12d78108676d4a9f029531d9df17fd247)
@@ -1374,7 +1374,7 @@
 * [Back to Top](#report-top)
 
 ##### <a name='f589140e0feac52474256e7ab29b9d3a7a36c5ec81'></a> Source: [MIMDocs\index.md](https://github.com/Microsoft/MIMDocs-pr/blob/0bbdacbfc5b912221257a9425db13804d6dd6a25/MIMDocs/index.md)
-* Status: OutofSyncHandedBackSuccess
+* Status: InSyncHandedBackSuccess
 * Target File: [MIMDocs\index.md](https://github.com/Microsoft/MIMDocs-pr.nl-nl/blob/17a4663a89d5263ed6a37387ae851da105dfab92/MIMDocs/index.md)
 * Handoff File: [index.a54b2324d63a6d513b6900195023b9a8089553b4.nl-nl.xlf](https://github.com/Microsoft/EM.handoff/blob/72919aab4c4f0fdbfb0fce2c96fec8426e5661f5/ol-handoff/Microsoft/MIMDocs-pr.nl-nl/master/index.a54b2324d63a6d513b6900195023b9a8089553b4.nl-nl.xlf)
 * Handoff Datetime: 2016-06-27 09:20:58
@@ -1382,7 +1382,8 @@
 * Archive File: [index.a54b2324d63a6d513b6900195023b9a8089553b4.nl-nl.xlf](https://github.com/Microsoft/EM.handoff/blob/a06c2fe0710469c9753a57adece806a713f82245/ol-handoff/Microsoft/MIMDocs-pr.nl-nl/master/archive/index.a54b2324d63a6d513b6900195023b9a8089553b4.nl-nl.xlf)
 * Archive Datetime: 2016-07-01 23:31:32
 * Handback File: [index.a54b2324d63a6d513b6900195023b9a8089553b4.nl-nl.xlf](https://github.com/Microsoft/EM.handback/blob/dd56c7ea68f660e62b9591bfa7995798b1914337/ol-handback/Microsoft/MIMDocs-pr.nl-nl/master/index.a54b2324d63a6d513b6900195023b9a8089553b4.nl-nl.xlf)
-* Handback Datetime: 2016-06-25 16:45:20
+* Handback Datetime: 2016-07-04 09:39:55
+* Handback Error: [handback_transform_failed](#f589140e0feac52474256e7ab29b9d3a7a36c5ec81handback_transform_failed)
 * [Back to Top](#report-top)
 
 ##### <a name='755db60abb7859af5065e2c5ddfbfc6cfb7aeeda82'></a> Source: [MIMDocs\md.style](https://github.com/Microsoft/MIMDocs-pr/blob/05fd3b508874f87d4407f21f0739974327505e72/MIMDocs/md.style)
@@ -4117,6 +4118,12 @@
 * Error Message: Handback file: C:\ol\master\EM.handback\e189a7\ol-handback\Microsoft\MIMDocs-pr.nl-nl\master\install-mim-sync-ad-service.2a07d4547ca2bf0ca43e7ed04fa3bf20de000a33.nl-nl.xlf failed.
 * Retriable: False
 * Error Details: {"internal_error_code":"handback_transform_failed","internal_error_message":"Handback file: C:\\ol\\master\\EM.handback\\e189a7\\ol-handback\\Microsoft\\MIMDocs-pr.nl-nl\\master\\install-mim-sync-ad-service.2a07d4547ca2bf0ca43e7ed04fa3bf20de000a33.nl-nl.xlf failed.","internal_error_retriable":false,"exception_message":"Fail to transform from xliff to markdown with invalid metadata: Invalid yaml header when parsing:\n# required metadata\n\ntitle: MIM 2016 installeren: Active Directory en de MIM-service synchroniseren | Microsoft Identity Manager\ndescription: Gebruik beheeragents en de MIM-synchronisatieservice om Active Directory en de MIM-databases te synchroniseren.\nkeywords:\nauthor: kgremban\nmanager: stevenpo\nms.date: 04/28/2016\nms.topic: get-started-article\nms.prod: identity-manager-2015\nms.service: microsoft-identity-manager\nms.technology: security\nms.assetid: 5e532b67-64a6-4af6-a806-980a6c11a82d\n\n# optional metadata\n\n#ROBOTS:\n#audience:\n#ms.devlang:\nms.reviewer: mwahl\nms.suite: ems\n#ms.tgt_pltfrm:\n#ms.custom:\nError message: (Line: 3, Col: 28, Idx: 48) - (Line: 3, Col: 28, Idx: 48): Mapping values are not allowed in this context.","exception_type":"System.IO.InvalidDataException","stack_trace":"   at Microsoft.OpenLocalization.Transformer.TransformerClient.XliffToMarkdown(Stream xliffStream, Stream skeletonStream, Stream targetStream) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization.Transformer.Core\\TransformerClient.cs:line 119\r\n   at Microsoft.OpenLocalization.Helper.XliffTransformUtil.XliffToMarkdown(String skeletonFile, String xliffFile, String mdfile, Boolean useJavascriptTransformer) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Helper\\XliffTransformUtil.cs:line 92\r\n   at Microsoft.OpenLocalization.Localization.LocalizationCore.<>c__DisplayClass5_0.<GetHandbackFiles>b__0(String file) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Localization\\HandbackCore.cs:line 406","extended_information":null}
+
+##### <a name='f589140e0feac52474256e7ab29b9d3a7a36c5ec81handback_transform_failed'></a> Source: [MIMDocs\index.md](#f589140e0feac52474256e7ab29b9d3a7a36c5ec81)
+* Error Code: handback_transform_failed
+* Error Message: Handback file: C:\ol\master\EM.handback\e189a7\ol-handback\Microsoft\MIMDocs-pr.nl-nl\master\index.a54b2324d63a6d513b6900195023b9a8089553b4.nl-nl.xlf failed.
+* Retriable: False
+* Error Details: {"internal_error_code":"handback_transform_failed","internal_error_message":"Handback file: C:\\ol\\master\\EM.handback\\e189a7\\ol-handback\\Microsoft\\MIMDocs-pr.nl-nl\\master\\index.a54b2324d63a6d513b6900195023b9a8089553b4.nl-nl.xlf failed.","internal_error_retriable":false,"exception_message":"Fail to transform from xliff to markdown with invalid metadata: Invalid yaml header when parsing:\nasset_id: 90d66a75-a7ec-4fa1-911c-cce683908838\nlayout: HubPage\n\ntitle: Documentatie voor Microsoft Identity Manager\ndescription: Technische documentatie voor Microsoft Intune: beheer van mobiele apparaten en toepassingen\nkeywords: intune documentation, MDM documentation, Mobile Device Management Documentation, Mobile Device and Application Management Documentation\nauthor: msstevenpo\nmanager: stevenpo\nms.date: 04/28/2016\nms.topic: hubpage\nms.prod: microsoft-identity-manager\nms.service: microsoft-identity-manager\nms.technology: security\nms.suite: ems\nms.assetid: 90d66a75-a7ec-4fa1-911c-cce683908838\nError message: (Line: 5, Col: 59, Idx: 174) - (Line: 5, Col: 59, Idx: 174): Mapping values are not allowed in this context.","exception_type":"System.IO.InvalidDataException","stack_trace":"   at Microsoft.OpenLocalization.Transformer.TransformerClient.XliffToMarkdown(Stream xliffStream, Stream skeletonStream, Stream targetStream) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization.Transformer.Core\\TransformerClient.cs:line 119\r\n   at Microsoft.OpenLocalization.Helper.XliffTransformUtil.XliffToMarkdown(String skeletonFile, String xliffFile, String mdfile, Boolean useJavascriptTransformer) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Helper\\XliffTransformUtil.cs:line 92\r\n   at Microsoft.OpenLocalization.Localization.LocalizationCore.<>c__DisplayClass5_0.<GetHandbackFiles>b__0(String file) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Localization\\HandbackCore.cs:line 406","extended_information":null}
 
 
 Generated by OpenLocalization.
