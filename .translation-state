@@ -1,6 +1,6 @@
 {
   "LastProcessedCommit": "e0261b00d5df35458d2b1bfc54e9481c5778bfdd",
-  "LastTranslatedCommit": "c01f5aa5f0ca1601fec37b2c3103f4f85c4f5040",
+  "LastTranslatedCommit": "bf00c0d2ecfc75dd770b257061bb80060f90aff1",
   "Items": {
     "50c0edd60abfa6550cb5a873d32a842e8c099811": {
       "FileHash": "50c0edd60abfa6550cb5a873d32a842e8c099811",
@@ -2921,7 +2921,7 @@
       "TargetFilePath": "MIMDocs\\DeployUse\\install-mim-sync-ad-service.md",
       "HandbackFilePath": "ol-handback\\Microsoft\\MIMDocs-pr.nl-nl\\master\\install-mim-sync-ad-service.2a07d4547ca2bf0ca43e7ed04fa3bf20de000a33.nl-nl.xlf",
       "HandbackFileCommit": "dd56c7ea68f660e62b9591bfa7995798b1914337",
-      "HandbackDateTime": "2016-07-13T08:59:47.9123465Z",
+      "HandbackDateTime": "2016-07-13T09:24:18.1329801Z",
       "HandbackException": {
         "internal_error_code": "handback_transform_failed",
         "internal_error_message": "Handback file: C:\\ol\\master\\EM.handback\\e189a7\\ol-handback\\Microsoft\\MIMDocs-pr.nl-nl\\master\\install-mim-sync-ad-service.2a07d4547ca2bf0ca43e7ed04fa3bf20de000a33.nl-nl.xlf failed.",
@@ -2931,7 +2931,7 @@
         "stack_trace": "   at Microsoft.OpenLocalization.Transformer.TransformerClient.XliffToMarkdown(Stream xliffStream, Stream skeletonStream, Stream targetStream) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization.Transformer.Core\\TransformerClient.cs:line 119\r\n   at Microsoft.OpenLocalization.Helper.XliffTransformUtil.XliffToMarkdown(String skeletonFile, String xliffFile, String mdfile, Boolean useJavascriptTransformer) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Helper\\XliffTransformUtil.cs:line 92\r\n   at Microsoft.OpenLocalization.Localization.LocalizationCore.<>c__DisplayClass5_0.<GetHandbackFiles>b__0(String file) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Localization\\HandbackCore.cs:line 406",
         "extended_information": null
       },
-      "HandbackFailureTimes": 3,
+      "HandbackFailureTimes": 4,
       "UpdatedDateTime": "2016-06-25T16:45:20.877174Z",
       "ArchiveFilePath": "ol-handoff\\Microsoft\\MIMDocs-pr.nl-nl\\master\\archive\\install-mim-sync-ad-service.2a07d4547ca2bf0ca43e7ed04fa3bf20de000a33.nl-nl.xlf",
       "ArchiveFileCommit": "a06c2fe0710469c9753a57adece806a713f82245",
@@ -3769,7 +3769,7 @@
       "TargetFilePath": "MIMDocs\\index.md",
       "HandbackFilePath": "ol-handback\\Microsoft\\MIMDocs-pr.nl-nl\\master\\index.a54b2324d63a6d513b6900195023b9a8089553b4.nl-nl.xlf",
       "HandbackFileCommit": "dd56c7ea68f660e62b9591bfa7995798b1914337",
-      "HandbackDateTime": "2016-07-13T08:59:47.9123465Z",
+      "HandbackDateTime": "2016-07-13T09:24:18.1329801Z",
       "HandbackException": {
         "internal_error_code": "handback_transform_failed",
         "internal_error_message": "Handback file: C:\\ol\\master\\EM.handback\\e189a7\\ol-handback\\Microsoft\\MIMDocs-pr.nl-nl\\master\\index.a54b2324d63a6d513b6900195023b9a8089553b4.nl-nl.xlf failed.",
@@ -3779,7 +3779,7 @@
         "stack_trace": "   at Microsoft.OpenLocalization.Transformer.TransformerClient.XliffToMarkdown(Stream xliffStream, Stream skeletonStream, Stream targetStream) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization.Transformer.Core\\TransformerClient.cs:line 119\r\n   at Microsoft.OpenLocalization.Helper.XliffTransformUtil.XliffToMarkdown(String skeletonFile, String xliffFile, String mdfile, Boolean useJavascriptTransformer) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Helper\\XliffTransformUtil.cs:line 92\r\n   at Microsoft.OpenLocalization.Localization.LocalizationCore.<>c__DisplayClass5_0.<GetHandbackFiles>b__0(String file) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Localization\\HandbackCore.cs:line 406",
         "extended_information": null
       },
-      "HandbackFailureTimes": 3,
+      "HandbackFailureTimes": 4,
       "UpdatedDateTime": "2016-06-25T16:45:20.877174Z",
       "ArchiveFilePath": "ol-handoff\\Microsoft\\MIMDocs-pr.nl-nl\\master\\archive\\index.a54b2324d63a6d513b6900195023b9a8089553b4.nl-nl.xlf",
       "ArchiveFileCommit": "a06c2fe0710469c9753a57adece806a713f82245",
