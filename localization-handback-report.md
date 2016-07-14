@@ -1,39 +1,11 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 2
+ Total Files | 0
 
 ## File List
- Source File | Status | Details 
- ----------- | ------ | ------- 
- [MIMDocs\PlanDesign\capacity-planning-guide.md](https://github.com/Microsoft/MIMDocs-pr/blob/0ea8b3d9032a01bd6a6b1faad8ea27d2cb889fc6/MIMDocs/PlanDesign/capacity-planning-guide.md) | InSyncHandedBackSuccess | [Details](#323a875aba14a238aa7cb3a0e6df192729ce53d6240)
- [MIMDocs\PlanDesign\microsoft-identity-manager-2016-supported-platforms.md](https://github.com/Microsoft/MIMDocs-pr/blob/a59e7471a8aaafc6752c9be34d52fd3509104dec/MIMDocs/PlanDesign/microsoft-identity-manager-2016-supported-platforms.md) | InSyncHandedBackSuccess | [Details](#bb3e3abfdc12d78108676d4a9f029531d9df17fd246)
 
 ## Item Details
-##### <a name='323a875aba14a238aa7cb3a0e6df192729ce53d6240'></a> Source: [MIMDocs\PlanDesign\capacity-planning-guide.md](https://github.com/Microsoft/MIMDocs-pr/blob/0ea8b3d9032a01bd6a6b1faad8ea27d2cb889fc6/MIMDocs/PlanDesign/capacity-planning-guide.md)
-* Status: InSyncHandedBackSuccess
-* Target File: [MIMDocs\PlanDesign\capacity-planning-guide.md](https://github.com/Microsoft/MIMDocs-pr.nl-nl/blob/f461e89fdb14969ceb4475695d3b7a379bb4819b/MIMDocs/PlanDesign/capacity-planning-guide.md)
-* Handoff File: [capacity-planning-guide.a5b5577289101cd375376319cbd1fa3f32f4d38f.nl-nl.xlf](https://github.com/Microsoft/EM.handoff/blob/72919aab4c4f0fdbfb0fce2c96fec8426e5661f5/ol-handoff/Microsoft/MIMDocs-pr.nl-nl/master/capacity-planning-guide.a5b5577289101cd375376319cbd1fa3f32f4d38f.nl-nl.xlf)
-* Handoff Datetime: 2016-06-27 09:20:58
-* Handoff Reason: Include
-* Archive File: [capacity-planning-guide.a5b5577289101cd375376319cbd1fa3f32f4d38f.nl-nl.xlf](https://github.com/Microsoft/EM.handoff/blob/a06c2fe0710469c9753a57adece806a713f82245/ol-handoff/Microsoft/MIMDocs-pr.nl-nl/master/archive/capacity-planning-guide.a5b5577289101cd375376319cbd1fa3f32f4d38f.nl-nl.xlf)
-* Archive Datetime: 2016-07-01 23:31:32
-* Handback File: [capacity-planning-guide.a5b5577289101cd375376319cbd1fa3f32f4d38f.nl-nl.xlf](https://github.com/Microsoft/EM.handback/blob/7254558c6488c74e76a112c3a1c1166f77ba9878/ol-handback/Microsoft/MIMDocs-pr.nl-nl/master/capacity-planning-guide.a5b5577289101cd375376319cbd1fa3f32f4d38f.nl-nl.xlf)
-* Handback Datetime: 2016-07-14 05:21:33
-* [Back to Top](#report-top)
-
-##### <a name='bb3e3abfdc12d78108676d4a9f029531d9df17fd246'></a> Source: [MIMDocs\PlanDesign\microsoft-identity-manager-2016-supported-platforms.md](https://github.com/Microsoft/MIMDocs-pr/blob/a59e7471a8aaafc6752c9be34d52fd3509104dec/MIMDocs/PlanDesign/microsoft-identity-manager-2016-supported-platforms.md)
-* Status: InSyncHandedBackSuccess
-* Target File: [MIMDocs\PlanDesign\microsoft-identity-manager-2016-supported-platforms.md](https://github.com/Microsoft/MIMDocs-pr.nl-nl/blob/f461e89fdb14969ceb4475695d3b7a379bb4819b/MIMDocs/PlanDesign/microsoft-identity-manager-2016-supported-platforms.md)
-* Handoff File: [microsoft-identity-manager-2016-supported-platforms.4b048f6545582058fc7c39478e8dcee91c096f40.nl-nl.xlf](https://github.com/Microsoft/EM.handoff/blob/72919aab4c4f0fdbfb0fce2c96fec8426e5661f5/ol-handoff/Microsoft/MIMDocs-pr.nl-nl/master/microsoft-identity-manager-2016-supported-platforms.4b048f6545582058fc7c39478e8dcee91c096f40.nl-nl.xlf)
-* Handoff Datetime: 2016-06-27 09:20:58
-* Handoff Reason: Include
-* Archive File: [microsoft-identity-manager-2016-supported-platforms.4b048f6545582058fc7c39478e8dcee91c096f40.nl-nl.xlf](https://github.com/Microsoft/EM.handoff/blob/a06c2fe0710469c9753a57adece806a713f82245/ol-handoff/Microsoft/MIMDocs-pr.nl-nl/master/archive/microsoft-identity-manager-2016-supported-platforms.4b048f6545582058fc7c39478e8dcee91c096f40.nl-nl.xlf)
-* Archive Datetime: 2016-07-01 23:31:32
-* Handback File: [microsoft-identity-manager-2016-supported-platforms.4b048f6545582058fc7c39478e8dcee91c096f40.nl-nl.xlf](https://github.com/Microsoft/EM.handback/blob/7254558c6488c74e76a112c3a1c1166f77ba9878/ol-handback/Microsoft/MIMDocs-pr.nl-nl/master/microsoft-identity-manager-2016-supported-platforms.4b048f6545582058fc7c39478e8dcee91c096f40.nl-nl.xlf)
-* Handback Datetime: 2016-07-14 05:21:33
-* [Back to Top](#report-top)
-
 
 ## Error Details
 
