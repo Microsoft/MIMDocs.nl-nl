@@ -1,11 +1,26 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 0
+ Total Files | 1
 
 ## File List
+ Source File | Status | Details 
+ ----------- | ------ | ------- 
+ [MIMDocs\index.md](https://github.com/Microsoft/MIMDocs-pr/blob/6b6e324c2c2400145573c00c964c69d01ecf7e39/MIMDocs/index.md) | HandedBackFailed | [Details](#e3e755779dfa60f0f5b2af0d4aae25de6b07afa680)
 
 ## Item Details
+##### <a name='e3e755779dfa60f0f5b2af0d4aae25de6b07afa680'></a> Source: [MIMDocs\index.md](https://github.com/Microsoft/MIMDocs-pr/blob/6b6e324c2c2400145573c00c964c69d01ecf7e39/MIMDocs/index.md)
+* Status: HandedBackFailed
+* Target File: 
+* Handoff File: [index.a54b2324d63a6d513b6900195023b9a8089553b4.nl-nl.xlf](https://github.com/Microsoft/EM.handoff/blob/f7650ffd30ec8bf3241af6c0b395b134aed2279d/ol-handoff/Microsoft/MIMDocs-pr.nl-nl/master/index.a54b2324d63a6d513b6900195023b9a8089553b4.nl-nl.xlf)
+* Handoff Datetime: 2016-07-11 20:28:32
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* [Back to Top](#report-top)
+
 
 ## Error Details
 
