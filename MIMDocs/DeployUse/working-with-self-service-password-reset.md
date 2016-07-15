@@ -1,9 +1,7 @@
 ---
-# required metadata
-
 title: Werken met de selfservice voor wachtwoordherstel | Microsoft Identity Manager
-description: Ontdek wat er nieuw is bij de selfservice voor wachtwoordherstel in MIM 2016, zoals de werking van SSPR met meervoudige verificatie. 
-keywords:
+description: Ontdek wat er nieuw is bij de selfservice voor wachtwoordherstel in MIM 2016, zoals de werking van SSPR met meervoudige verificatie.
+keywords: 
 author: kgremban
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: mwahl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: f9b01ac2cee2b96f64a9fda917f4f4146ca2eeda
+ms.openlocfilehash: 3a4350e54383dc1098c778090bb29b435082045f
+
 
 ---
 
@@ -73,7 +67,7 @@ In de volgende sectie stelt u de Azure MFA-provider in Microsoft Azure Active Di
 
 2.  Klik in de hoek linksonder op **Nieuw**.
 
-3.  Klik op **App-services &gt; Active Directory &gt; Provider voor meervoudige verificatie &gt; Snelle invoer**.
+3.  Klik op **App-services &gt; Active Directory &gt; Provider voor Multi-Factor Authentication&gt; Snelle invoer**.
 
 ![Afbeelding voor snelle invoer voor MFA-provider in Azure Portal](media/MIM-SSPR-Azureportal.png)
 
@@ -93,7 +87,7 @@ In de volgende sectie stelt u de Azure MFA-provider in Microsoft Azure Active Di
 
 9. Klik in het venster **Microsoft Azure Multi-Factor Authentication** dat wordt geopend op **SDK** onder **Downloads** in het menu aan de linkerkant.
 
-10. Klik op de koppeling **Downloaden** in de kolom met ZIP-bestanden voor het bestand met de programmeertaal **SDK voor ASP.net 2.0 C#**.
+10. Klik op de koppeling **Downloaden** in de kolom met ZIP-bestanden voor het bestand met de programmeertaal **SDK voor ASP.net 2.0 C**.
 
     ![Afbeelding voor het downloaden van het ZIP-bestand voor Azure MFA](media/MIM-SSPR-Azure-MFA.png)
 
@@ -107,9 +101,9 @@ In de volgende sectie stelt u de Azure MFA-provider in Microsoft Azure Active Di
 
 3. Navigeer in Windows Verkenner naar de map **\pf\certs** van het ZIP-bestand dat in de vorige sectie is gedownload en kopieer het bestand **cert_key.p12** naar de nieuwe map.
 
-4.  Open in het ZIP-bestand voor de SDK, in de map **\pf**, het bestand **pf_auth.cs**.
+4.  Open het bestand **pf_auth.cs** in de map **\pf** van het ZIP-bestand voor de SDK.
 
-5.  Ga naar de volgende drie parameters: `LICENSE_KEY, GROUP_KEY, CERT_PASSWORD`.
+5.  Zoek de volgende drie parameters op: `LICENSE_KEY, GROUP_KEY, CERT_PASSWORD`.
 
     ![Afbeelding van de code in pf_auth.cs](media/MIM-SSPR-pFile.png)
 
@@ -137,7 +131,7 @@ In de volgende sectie stelt u de Azure MFA-provider in Microsoft Azure Active Di
 
 3.  Klik op het tabblad **Activiteiten** en schuif vervolgens omlaag naar **Activiteit toevoegen**.
 
-4.  Selecteer **Telefoonpoort** of **Poort voor verificatie met een eenmalig wachtwoord via sms**, klik op **Selecteren** en vervolgens op **OK**.
+4.  Selecteer **Telefoonpoort** of **SMS-gate voor OTP (eenmalig wachtwoord)**, klik op **Selecteren** en vervolgens op **OK**.
 
 Gebruikers in uw organisatie kunnen zich nu registreren voor het opnieuw instellen van het wachtwoord.  Bij de registratie voeren de gebruikers hun zakelijke telefoonnummer of mobiele telefoonnummer in zodat ze kunnen worden gebeld (of naar hen sms-berichten kunnen worden verzonden).
 
@@ -211,6 +205,7 @@ Wanneer de MIM-invoegtoepassingen en -uitbreidingen worden geïnstalleerd op een
     ![Afbeelding voor het opnieuw instellen van het wachtwoord in de MIM-aanmeldassistent](media/MIM-SSPR-PR1.JPG)
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jun16_HO4-->
 
 

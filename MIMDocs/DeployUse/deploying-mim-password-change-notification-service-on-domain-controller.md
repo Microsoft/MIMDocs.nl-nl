@@ -1,9 +1,7 @@
 ---
-# required metadata
-
 title: Meldingsservice voor wachtwoordwijzigingen implementeren | Microsoft Identity Manager
 description: Lees welke stappen u moet uitvoeren voor het installeren en configureren van de MIM-meldingsservice voor wachtwoordwijzigingen op uw domeincontroller.
-keywords:
+keywords: 
 author: kgremban
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 97edae12-6f86-4f9f-8620-a95a096e482a
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: mwahl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 875ed6b96929822ac166a4a262cc8547a4ea3b2a
+ms.openlocfilehash: 85e83b85f047ca2c2648b42ec68b832caae645ee
+
 
 ---
 
@@ -66,6 +60,7 @@ De meldingsservice voor wachtwoordwijzigingen (Password Change Notification Serv
 Als u als domeinadministrator opnieuw verbinding hebt gemaakt met de DC-server, gaat u naar *C:\Program Files\Microsoft Password Change Notification.* Voer *pcnscfg.exe* uit.
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jun16_HO4-->
 
 

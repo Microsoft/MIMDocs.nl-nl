@@ -1,9 +1,7 @@
 ---
-# required metadata
-
 title: Werken met MIM Certificate Manager | Microsoft Identity Manager
-description: Lees hoe u de Certificate Manager-app kunt implementeren zodat de gebruikers hun eigen toegangsrechten kunnen beheren. 
-keywords:
+description: Lees hoe u de Certificate Manager-app kunt implementeren zodat de gebruikers hun eigen toegangsrechten kunnen beheren.
+keywords: 
 author: kgremban
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 66060045-d0be-4874-914b-5926fd924ede
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: mwahl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: f9b01ac2cee2b96f64a9fda917f4f4146ca2eeda
+ms.openlocfilehash: 3e0e6cea0b268836bb6347e81694deec93320ce3
+
 
 ---
 
@@ -43,13 +37,13 @@ U maakt een certificaatsjabloon voor de CM-app op dezelfde manier als u normaal 
 
 2.  Open MMC.
 
-3.  Klik op **Bestand &gt; Module toevoegen/verwijderen**.;
+3.  Klik op **Bestand &gt; Module toevoegen/verwijderen**.
 
-4.  Klik in de lijst Beschikbare modules op **Certificaatsjablonen** en vervolgens op **Toevoegen**.
+4.  Klik in de lijst met beschikbare modules op **Certificaatsjablonen** en vervolgens op **Toevoegen**.
 
 5.  In MMC wordt nu **Certificaatsjablonen** weergegeven onder **Consolebasis**. Dubbelklik erop om alle beschikbare certificaatsjablonen weer te geven.
 
-6.  Klik met de rechtermuisknop op het sjabloon **Smartcardaanmelding** en klik op **Sjabloon dupliceren**.
+6.  Klik met de rechtermuisknop op de sjabloon **Smartcardaanmelding** en klik op **Sjabloon dupliceren**.
 
 7.  Selecteer op het tabblad Compatibiliteit onder Certificeringsinstantie de optie Windows Server 2008 en onder Ontvanger van certificaat de optie Windows 8.1/Windows Server 2012 R2.
     Deze stap is cruciaal omdat u op deze manier over een certificaatsjabloon met versie 3 (of hoger) beschikt, en alleen versie 3 kan worden gebruikt met de app voor de certificaatbeheerder. De versie wordt ingesteld bij de eerste keer dat u de certificaatsjabloon maakt en opslaat. Als u de certificaatsjabloon niet op deze manier hebt gemaakt, kunt u de sjabloon niet aanpassen zodat deze de juiste versie krijgt en moet u een nieuwe sjabloon maken voordat u verdergaat.
@@ -92,13 +86,13 @@ Wanneer u een profielsjabloon maakt, moet u deze instellen op Virtuele smartcard
 
 7.  Schuif helemaal naar beneden en klik op **Instellingen wijzigen**.
 
-8.  Schakel de selectievakjes naast **Virtuele smartcard maken/verwijderen** en **Beheersleutel spreiden** in.
+8.  Schakel de selectievakjes naast **Virtuele smartcard maken/verwijderen** en **Beheersleutel diversifiëren** in.
 
 9. Selecteer onder **Beleid voor gebruikerspincode** de optie **Door de gebruiker opgegeven**.
 
 10. Klik in het linkerdeelvenster op **Beleid vernieuwen &gt; Algemene instellingen wijzigen**. Selecteer **Kaart opnieuw gebruiken bij het vernieuwen** en klik op **OK**.
 
-11. U moet gegevensverzamelingsitems voor elk beleid uitschakelen door op het beleid in het linkerdeelvenster te klikken, het selectievakje naast **Voorbeeldgegevensitem** in te schakelen en vervolgens op **Gegevensverzamelingsitems verwijderen** te klikken. Klik vervolgens op **OK**..
+11. U moet gegevensverzamelingsitems voor elk beleid uitschakelen door op het beleid in het linkerdeelvenster te klikken, het selectievakje naast **Voorbeeldgegevensitem** in te schakelen en vervolgens op **Gegevensverzamelingsitems verwijderen** te klikken. Klik vervolgens op **OK**.
 
 ## De CM-app voor de implementatie voorbereiden
 
@@ -261,6 +255,7 @@ Wanneer u een profielsjabloon maakt, moet u deze instellen op Virtuele smartcard
 Wanneer u de CM-app instelt, moet u in het Downloadcentrum het bestand MIMDMModernApp_&lt;versie&gt;_AnyCPU_Test.zip downloaden en alle inhoud daarvan uitpakken. Het appx-bestand is het installatieprogramma. U kunt de app implementeren zoals u normaal gesproken met [System Center Configuration Manager](https://technet.microsoft.com/library/dn613840.aspx) of [Intune](https://technet.microsoft.com/library/dn613839.aspx) Windows Store-apps implementeert. Hierbij wordt de app gesideload zodat gebruikers de bedrijfsportal moeten gebruiken om toegang te krijgen tot de app of de app wordt rechtstreeks naar de computers van de gebruikers gepusht.
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jun16_HO4-->
 
 

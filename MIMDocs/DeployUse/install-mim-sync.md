@@ -1,9 +1,7 @@
 ---
-# required metadata
-
 title: MIM 2016&#58; MIM-synchronisatieservice installeren | Microsoft Identity Manager
 description: Ga aan de slag met de MIM 2016-onderdelen en installeer en configureer de synchronisatieservice.
-keywords:
+keywords: 
 author: kgremban
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,22 +10,18 @@ ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 2585e9c5-ce34-46c7-bdcf-8c08773901dc
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: mwahl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: c023d147d0fcc1525fefbe866c952e217f7bee6b
+ms.openlocfilehash: 8a99b3a291d2b145f453732a72244c43f9c535d6
+
 
 ---
 
 # MIM 2016: MIM-synchronisatieservice installeren
 
->[!div class=stapsgewijs]
+>[!div class="step-by-step"]
 [« Exchange Server](prepare-server-exchange.md)
 [MIM-service en -portal »](install-mim-service-portal.md)
 
@@ -55,15 +49,15 @@ Stel eerst het installatiepakket in voordat u de Microsoft Identity Manager 2016
 
 4. Lees de licentievoorwaarden en klik op **Volgende** om deze te accepteren.
 
-5. Klik op het scherm **Aangepaste installatie** op **Volgende**.
+5. Klik in het scherm **Aangepaste installatie** op **Volgende**.
 
     ![Afbeelding van Aangepaste installatie](media/MIM-Install2.png)
 
 6.  Selecteer het volgende in het configuratiescherm voor de synchronisatiedatabase:
 
-    1.  De SQL-server bevindt zich op: **deze computer**.
+    1.  SQL Server bevindt zich op: **Deze computer**.
 
-    2.  Het SQL Server-exemplaar is: **het standaardexemplaar**.
+    2.  Het SQL Server-exemplaar is: **Het standaardexemplaar**.
 
     ![Afbeelding voor de databaseverbinding](media/MIM-Install3.png)
 
@@ -103,15 +97,16 @@ Stel eerst het installatiepakket in voordat u de Microsoft Identity Manager 2016
 
         ![Afbeelding voor het bericht over de back-up voor de versleutelingssleutel voor MIM Sync](media/MIM-Install7.png)
 
-    4. Wanneer de installatie door het installatieprogramma is voltooid, klikt u op **Voltooien**.
+    4. Wanneer de installatie is voltooid met het installatieprogramma, klikt u op **Voltooien**.
 
     5. U moet zich afmelden en weer aanmelden om de wijzigingen voor een groepslidmaatschap door te voeren. Klik op **Ja** om u af te melden.
 
->[!div class=stapsgewijs]  
+>[!div class="step-by-step"]  
 [« Exchange Server](prepare-server-exchange.md)
 [MIM-service en -portal »](install-mim-service-portal.md)
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jun16_HO4-->
 
 

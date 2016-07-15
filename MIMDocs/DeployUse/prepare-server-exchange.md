@@ -1,9 +1,7 @@
 ---
-# required metadata
-
 title: Een server voor identiteitsbeheer instellen&#58; Exchange | Microsoft Identity Manager
 description: Implementeer Exchange Server als optionele stap zodat met MIM 2016 e-mailberichten kunnen worden verzonden en postvakken kunnen worden gemaakt.
-keywords:
+keywords: 
 author: kgremban
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,22 +10,18 @@ ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 34a8c16e-3bed-4e16-939b-b9fe17dd834b
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: mwahl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: c023d147d0fcc1525fefbe866c952e217f7bee6b
+ms.openlocfilehash: b69ea20f375869d4ad08987a08aba05913fd1db1
+
 
 ---
 
 # Een server voor identiteitsbeheer instellen: Exchange
 
->[! div class = stapsgewijs]
+>[!div class="step-by-step"]
 [« SharePoint](prepare-server-sharepoint.md)
 [MIM-synchronisatieservice »](install-mim-sync.md)
 
@@ -44,11 +38,12 @@ Als u MIM wilt configureren voor het verzenden en ontvangen van e-mailberichten 
 
 3. Download en installeer de [evaluatieversie voor 180 dagen van MS Exchange Server 2013](http://www.microsoft.com/en-us/evalcenter/evaluate-exchange-server-2013)
 
->[! div class = stapsgewijs]  
+>[!div class="step-by-step"]  
 [« SharePoint](prepare-server-sharepoint.md)
 [MIM-synchronisatieservice »](install-mim-sync.md)
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jun16_HO4-->
 
 

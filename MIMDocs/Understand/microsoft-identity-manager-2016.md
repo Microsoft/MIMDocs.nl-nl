@@ -1,27 +1,21 @@
 ---
-# required metadata
-
 title: Microsoft Identity Manager 2016 | Microsoft Identity Manager
 description: Lees hoe MIM 2016 bijdraagt aan een veiliger, gebruiksvriendelijker identiteitsbeheer in de cloud en on-premises.
-keywords:
+keywords: 
 author: kgremban
-manager: stevenpo
-ms.date: 04/28/2016
+manager: femila
+ms.date: 06/27/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: ccdd8a9f-02da-440a-81a8-354800dcd2a8
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: mwahl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 9e5f51d5ca731b3564b8262db0f4cddeb850231a
+ms.openlocfilehash: 5247cce895344ac6148b735fe550eb16c39103c7
+
 
 ---
 
@@ -36,21 +30,10 @@ Microsoft Identity Manager 2016 werkt samen met Azure zodat u de volledige omgev
 ## Beschermde identiteitsbeheer
 Met Privileged Identity Management regelt en beheert u de beheerderstoegang door middel van tijdelijke, taakgebaseerde toegang tot gevoelige resources. Dit betekent dat u aan gebruikers alleen de machtiging kunt toekennen die strikt noodzakelijk is. Hierdoor wordt de kans verkleind dat bij een cyberaanval de volledige beheerderstoegang wordt overgenomen. Daarnaast extraheert en isoleert u met Privileged Identity Management beheerdersaccounts uit bestaande Active Directory-forests.
 
-## Ondersteunde platformen
-
-MIM biedt ondersteuning voor een bijgewerkte lijst van producten en platformen, zoals de meest recente Microsoft-platformen en Office/serverstacks, Windows-clientbesturingssystemen, Windows-serverbesturingssystemen, SharePoint, SQL en Outlook, en met name:
-
--   Windows 8.1 met Internet Explorer 8 en hoger
-
--   Windows Server 2012 R2
-
--   SQL 2014
-
--   Outlook 2013
-
--   System Center Service Manager 2012 en 2012 R2
+MIM ondersteunt een on-premises Privileged Identity Management-oplossing voor het beheer van actief bestuur. Aan de slag gaan met [Privileged Access Management gebruiken](/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services).
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jun16_HO5-->
 
 

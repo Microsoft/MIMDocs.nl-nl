@@ -1,9 +1,7 @@
 ---
-# required metadata
-
 title: Werken met hybride rapportage van Identity Manager | Microsoft Identity Manager
 description: Informatie over het combineren van on-premises en cloudgegevens in hybride rapporten in Azure en het beheren en weergeven van deze rapporten.
-keywords:
+keywords: 
 author: kgremban
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 68df2817-2040-407d-b6d2-f46b9a9a3dbb
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: mwahl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: f9b01ac2cee2b96f64a9fda917f4f4146ca2eeda
+ms.openlocfilehash: e2d0bd6120628d4fd2a14718fc205cde976c7785
+
 
 ---
 
@@ -89,7 +83,7 @@ Nadat de rapportageagent is geïnstalleerd worden de gegevens van de Microsoft I
 
 3.  Selecteer de tenantmap in de lijst met beschikbare mappen voor uw abonnement.
 
-4.  Klik op **Rapporten** en vervolgens op **Activiteit wachtwoord opnieuw instellen**.
+4.  Klik op **Rapporten** en vervolgens op **Activiteit voor wachtwoordherstel**.
 
 5.  Zorg ervoor dat u **Identity Manager** selecteert in de bronvervolgkeuzelijst.
 
@@ -108,6 +102,7 @@ Gebeurtenissen die worden gegenereerd door Microsoft Identity Manager, worden ge
 |Informatie|4137|Extensie van MIM-gebeurtenis 4121, indien er te veel gegevens zijn voor één gebeurtenis. De koptekst in deze gebeurtenis heeft de volgende notatie: `"Request: <GUID> , message <xxx> out of <xxx>`|
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jun16_HO4-->
 
 

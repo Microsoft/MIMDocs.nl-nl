@@ -1,9 +1,7 @@
 ---
-# required metadata
-
 title: MIM 2016&#58; MIM-service en -portal installeren | Microsoft Identity Manager
 description: Lees welke stappen u moet uitvoeren voor het configureren en installeren van de MIM-service en -portal voor Microsoft Identity Manager 2016
-keywords:
+keywords: 
 author: kgremban
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,22 +10,18 @@ ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: b0b39631-66df-4c5f-80c9-a1774346f816
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: mwahl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: c023d147d0fcc1525fefbe866c952e217f7bee6b
+ms.openlocfilehash: eb2af412d9638035de591197fa191e990ade0ca1
+
 
 ---
 
 # MIM 2016 installeren: de MIM-service en -portal
 
->[!div class=stapsgewijs]
+>[!div class="step-by-step"]
 [« MIM-synchronisatieservice](install-mim-sync.md)
 [Databases synchroniseren »](install-mim-sync-ad-service.md)
 
@@ -49,7 +43,7 @@ Als u in de laatste stap geen MIM-installatiepakket hebt ingesteld, gaat u terug
 
 3. Lees de gebruiksrechtovereenkomst en klik op **Volgende** als u akkoord gaat met de licentievoorwaarden.
 
-4. Klik in het scherm **Programma voor de verbetering van de gebruikerservaring voor MIM** op **Volgende**.
+4. Klik in het scherm **Programma voor kwaliteitsverbetering voor MIM** op **Volgende**.
 
 5. Wanneer u voor deze implementatie onderdeelfuncties selecteert, moet u de functies voor de MIM-service (behalve voor MIM-rapportage) en MIM-portal opnemen. U kunt ook het MIM-portal voor het opnieuw instellen van het wachtwoord en de MIM-meldingsservice voor wachtwoordwijzigingen selecteren.
 
@@ -121,17 +115,17 @@ Nadat de installatie is voltooid, controleert u of de MIM-portal actief is.
 
 3. Gebruikers in staat stellen om hun eigen vermelding in MIM te bekijken.
 
-    1.  Ga met Internet Explorer naar het **MIM-portal** en klik op **Beheerbeleidsregels**.
+    1.  Ga in Internet Explorer naar de **MIM-portal** en klik op **Beheerbeleidsregels**.
 
     2.  Zoek naar de beheerbeleidsregel **Gebruikersbeheer: gebruikers kunnen hun eigen kenmerken lezen**.
 
     3.  Selecteer deze beheerbeleidsregel en schakel het selectievakje **Beleid is uitgeschakeld** uit.
 
-    4.  Klik op **OK** en vervolgens op **Verzenden**..
+    4.  Klik op **OK** en vervolgens op **Verzenden**.
 
 4.  Controleer of de firewall binnenkomende verbindingen voor TCP-poort 5725 en 5726 toestaat.
 
-    1.  Start **Systeembeheer » Windows-firewall** met **Geavanceerde beveiliging**.
+    1.  Start **Systeembeheer » Windows Firewall** met **Geavanceerde beveiliging**.
 
     2.  Klik op **Regels voor binnenkomende verbindingen**.
 
@@ -152,11 +146,12 @@ Nadat de installatie is voltooid, controleert u of de MIM-portal actief is.
 > [!NOTE]
 > Optioneel: op dit moment kunt u MIM-invoegtoepassingen en -uitbreidingen installeren.
 
->[!div class=stapsgewijs]  
+>[!div class="step-by-step"]  
 [« MIM-synchronisatieservice](install-mim-sync.md)
 [Databases synchroniseren »](install-mim-sync-ad-service.md)
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jun16_HO4-->
 
 
