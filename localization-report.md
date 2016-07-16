@@ -1220,7 +1220,7 @@
 * Archive File: [prepare-server-sql2014.908ce04c42d7be500304a71be06bc4b1acfdd6b7.nl-nl.xlf](https://github.com/Microsoft/EM.handoff/blob/a06c2fe0710469c9753a57adece806a713f82245/ol-handoff/Microsoft/MIMDocs-pr.nl-nl/master/archive/prepare-server-sql2014.908ce04c42d7be500304a71be06bc4b1acfdd6b7.nl-nl.xlf)
 * Archive Datetime: 2016-07-01 23:31:32
 * Handback File: [prepare-server-sql2014.908ce04c42d7be500304a71be06bc4b1acfdd6b7.nl-nl.xlf](https://github.com/Microsoft/EM.handback/blob/dd56c7ea68f660e62b9591bfa7995798b1914337/ol-handback/Microsoft/MIMDocs-pr.nl-nl/master/prepare-server-sql2014.908ce04c42d7be500304a71be06bc4b1acfdd6b7.nl-nl.xlf)
-* Handback Datetime: 2016-07-16 00:39:57
+* Handback Datetime: 2016-07-16 01:13:27
 * Handback Error: [handback_transform_failed](#2c0ff0bdbba4bcf979def8d5c7aa381947d6cc8768handback_transform_failed)
 * [Back to Top](#report-top)
 
@@ -1233,7 +1233,7 @@
 * Archive File: [prepare-server-ws2012r2.da656f0c9d903e4ab85b248548bd985fcaa0c74a.nl-nl.xlf](https://github.com/Microsoft/EM.handoff/blob/a06c2fe0710469c9753a57adece806a713f82245/ol-handoff/Microsoft/MIMDocs-pr.nl-nl/master/archive/prepare-server-ws2012r2.da656f0c9d903e4ab85b248548bd985fcaa0c74a.nl-nl.xlf)
 * Archive Datetime: 2016-07-01 23:31:32
 * Handback File: [prepare-server-ws2012r2.da656f0c9d903e4ab85b248548bd985fcaa0c74a.nl-nl.xlf](https://github.com/Microsoft/EM.handback/blob/dd56c7ea68f660e62b9591bfa7995798b1914337/ol-handback/Microsoft/MIMDocs-pr.nl-nl/master/prepare-server-ws2012r2.da656f0c9d903e4ab85b248548bd985fcaa0c74a.nl-nl.xlf)
-* Handback Datetime: 2016-07-16 00:39:57
+* Handback Datetime: 2016-07-16 01:13:27
 * Handback Error: [handback_transform_failed](#cd4ac84af4e5416512cf546a5d23b342ebe13c3969handback_transform_failed)
 * [Back to Top](#report-top)
 
