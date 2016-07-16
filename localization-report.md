@@ -8,10 +8,10 @@
 [ Handoff Success Files ](#handoff-success-list)| 99
 [ Archive Failed Files ](#archive-failed-list)| 0
 [ Archive Success Files ](#archive-success-list)| 0
-[ Handback Failed Files ](#handback-failed-list)| 6
+[ Handback Failed Files ](#handback-failed-list)| 5
 [ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 14
 [ In Sync Handback Files ](#insync-handback-success-list)| 28
-[ Ignored Files ](#ignored-list)| 157
+[ Ignored Files ](#ignored-list)| 158
 
 ## <a name='handoff-failed-list'></a> Handoff Failed File List
 
@@ -127,7 +127,6 @@
  ----------- | ------ | ------- 
  [MIMDocs\DeployUse\install-mim-sync-ad-service.md](https://github.com/Microsoft/MIMDocs-pr/blob/a63ee7c239fd47bf78f6ff60ca516a612753539d/MIMDocs/DeployUse/install-mim-sync-ad-service.md) | HandedBackFailed | [Details](#a095f58b7f95000db9fe385e53d09c62fb109dc010)
  [MIMDocs\DeployUse\prepare-server-sharepoint.md](https://github.com/Microsoft/MIMDocs-pr/blob/9e5f51d5ca731b3564b8262db0f4cddeb850231a/MIMDocs/DeployUse/prepare-server-sharepoint.md) | HandedBackFailed | [Details](#b144f28b41eb8e02afa44495c0019ccc8102200567)
- [MIMDocs\index.md](https://github.com/Microsoft/MIMDocs-pr/blob/6b6e324c2c2400145573c00c964c69d01ecf7e39/MIMDocs/index.md) | HandedBackFailed | [Details](#e3e755779dfa60f0f5b2af0d4aae25de6b07afa680)
  [MIMDocs\pam\step-1-prepare-corp-domain.md](https://github.com/Microsoft/MIMDocs-pr/blob/9e5f51d5ca731b3564b8262db0f4cddeb850231a/MIMDocs/pam/step-1-prepare-corp-domain.md) | HandedBackFailed | [Details](#7d6888ad4d694ad0ed746598563de32d7c363936230)
  [MIMDocs\pam\step-2-prepare-priv-domain-controller.md](https://github.com/Microsoft/MIMDocs-pr/blob/9e5f51d5ca731b3564b8262db0f4cddeb850231a/MIMDocs/pam/step-2-prepare-priv-domain-controller.md) | HandedBackFailed | [Details](#62d80222ea85fe5066cfa396b5e5a10bced4d3cd231)
  [MIMDocs\pam\step-4-install-mim-components-on-pam-server.md](https://github.com/Microsoft/MIMDocs-pr/blob/9e5f51d5ca731b3564b8262db0f4cddeb850231a/MIMDocs/pam/step-4-install-mim-components-on-pam-server.md) | HandedBackFailed | [Details](#4e0298099dad9b11812d533e23101fb995fe33d5233)
@@ -197,6 +196,7 @@
  [MIMDocs\GetStarted\docfx.json](https://github.com/Microsoft/MIMDocs-pr/blob/7ed9d23662455d08442de01193153ce1b4d89008/MIMDocs/GetStarted/docfx.json) | Ignored | [Details](#e49c9fcfca51a89feed10090d42d8a94a1630fb976)
  [MIMDocs\GetStarted\md.style](https://github.com/Microsoft/MIMDocs-pr/blob/7ed9d23662455d08442de01193153ce1b4d89008/MIMDocs/GetStarted/md.style) | Ignored | [Details](#755db60abb7859af5065e2c5ddfbfc6cfb7aeeda77)
  [MIMDocs\GetStarted\media\150x150.png](https://github.com/Microsoft/MIMDocs-pr/blob/7ed9d23662455d08442de01193153ce1b4d89008/MIMDocs/GetStarted/media/150x150.png) | Ignored | [Details](#84421bf7f4ba657e685239fb27f4798a46485f7178)
+ [MIMDocs\index.md](https://github.com/Microsoft/MIMDocs-pr/blob/7ed9d23662455d08442de01193153ce1b4d89008/MIMDocs/index.md) | Ignored | [Details](#479e4d5a1b21ea51b871257458618aca2407d35d80)
  [MIMDocs\md.style](https://github.com/Microsoft/MIMDocs-pr/blob/7ed9d23662455d08442de01193153ce1b4d89008/MIMDocs/md.style) | Ignored | [Details](#755db60abb7859af5065e2c5ddfbfc6cfb7aeeda81)
  [MIMDocs\media\150x150.png](https://github.com/Microsoft/MIMDocs-pr/blob/7ed9d23662455d08442de01193153ce1b4d89008/MIMDocs/media/150x150.png) | Ignored | [Details](#84421bf7f4ba657e685239fb27f4798a46485f7182)
  [MIMDocs\media\AzureWebsiteIcons-enroll.png](https://github.com/Microsoft/MIMDocs-pr/blob/7ed9d23662455d08442de01193153ce1b4d89008/MIMDocs/media/AzureWebsiteIcons-enroll.png) | Ignored | [Details](#5e9287dcfe1e1fad1a9320d535b75ce74b5275ed83)
@@ -1220,7 +1220,7 @@
 * Archive File: [prepare-server-sql2014.908ce04c42d7be500304a71be06bc4b1acfdd6b7.nl-nl.xlf](https://github.com/Microsoft/EM.handoff/blob/a06c2fe0710469c9753a57adece806a713f82245/ol-handoff/Microsoft/MIMDocs-pr.nl-nl/master/archive/prepare-server-sql2014.908ce04c42d7be500304a71be06bc4b1acfdd6b7.nl-nl.xlf)
 * Archive Datetime: 2016-07-01 23:31:32
 * Handback File: [prepare-server-sql2014.908ce04c42d7be500304a71be06bc4b1acfdd6b7.nl-nl.xlf](https://github.com/Microsoft/EM.handback/blob/dd56c7ea68f660e62b9591bfa7995798b1914337/ol-handback/Microsoft/MIMDocs-pr.nl-nl/master/prepare-server-sql2014.908ce04c42d7be500304a71be06bc4b1acfdd6b7.nl-nl.xlf)
-* Handback Datetime: 2016-07-16 00:09:01
+* Handback Datetime: 2016-07-16 00:39:57
 * Handback Error: [handback_transform_failed](#2c0ff0bdbba4bcf979def8d5c7aa381947d6cc8768handback_transform_failed)
 * [Back to Top](#report-top)
 
@@ -1233,7 +1233,7 @@
 * Archive File: [prepare-server-ws2012r2.da656f0c9d903e4ab85b248548bd985fcaa0c74a.nl-nl.xlf](https://github.com/Microsoft/EM.handoff/blob/a06c2fe0710469c9753a57adece806a713f82245/ol-handoff/Microsoft/MIMDocs-pr.nl-nl/master/archive/prepare-server-ws2012r2.da656f0c9d903e4ab85b248548bd985fcaa0c74a.nl-nl.xlf)
 * Archive Datetime: 2016-07-01 23:31:32
 * Handback File: [prepare-server-ws2012r2.da656f0c9d903e4ab85b248548bd985fcaa0c74a.nl-nl.xlf](https://github.com/Microsoft/EM.handback/blob/dd56c7ea68f660e62b9591bfa7995798b1914337/ol-handback/Microsoft/MIMDocs-pr.nl-nl/master/prepare-server-ws2012r2.da656f0c9d903e4ab85b248548bd985fcaa0c74a.nl-nl.xlf)
-* Handback Datetime: 2016-07-16 00:09:01
+* Handback Datetime: 2016-07-16 00:39:57
 * Handback Error: [handback_transform_failed](#cd4ac84af4e5416512cf546a5d23b342ebe13c3969handback_transform_failed)
 * [Back to Top](#report-top)
 
@@ -1357,12 +1357,12 @@
 * Handback Datetime: 2016-07-13 08:51:41
 * [Back to Top](#report-top)
 
-##### <a name='e3e755779dfa60f0f5b2af0d4aae25de6b07afa680'></a> Source: [MIMDocs\index.md](https://github.com/Microsoft/MIMDocs-pr/blob/6b6e324c2c2400145573c00c964c69d01ecf7e39/MIMDocs/index.md)
-* Status: HandedBackFailed
+##### <a name='479e4d5a1b21ea51b871257458618aca2407d35d80'></a> Source: [MIMDocs\index.md](https://github.com/Microsoft/MIMDocs-pr/blob/7ed9d23662455d08442de01193153ce1b4d89008/MIMDocs/index.md)
+* Status: Ignored
 * Target File: 
-* Handoff File: [index.a54b2324d63a6d513b6900195023b9a8089553b4.nl-nl.xlf](https://github.com/Microsoft/EM.handoff/blob/f7650ffd30ec8bf3241af6c0b395b134aed2279d/ol-handoff/Microsoft/MIMDocs-pr.nl-nl/master/index.a54b2324d63a6d513b6900195023b9a8089553b4.nl-nl.xlf)
-* Handoff Datetime: 2016-07-11 20:28:32
-* Handoff Reason: Include
+* Handoff File: 
+* Handoff Datetime: 0001-01-01 00:00:00
+* Handoff Reason: Ignored
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
