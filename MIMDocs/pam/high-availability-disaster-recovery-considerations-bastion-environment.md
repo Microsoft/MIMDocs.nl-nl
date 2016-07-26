@@ -1,10 +1,10 @@
 ---
-title: Overwegingen voor hoge beschikbaarheid en herstel na noodgevallen voor de bastionomgeving | Microsoft Identity Manager
-description: 
+title: Herstel na noodgevallen in PAM | Microsoft Identity Manager
+description: Meer informatie over het configureren van Privileged Access Management voor een hoge beschikbaarheid en herstel na noodgevallen.
 keywords: 
 author: kgremban
 manager: femila
-ms.date: 06/17/2016
+ms.date: 07/15/2016
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.service: microsoft-identity-manager
@@ -13,8 +13,8 @@ ms.assetid: 03e521cd-cbf0-49f8-9797-dbc284c63018
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9e5f51d5ca731b3564b8262db0f4cddeb850231a
-ms.openlocfilehash: 1d9e005bfb3e26f9a2b818667f14acd3e5239523
+ms.sourcegitcommit: ae4c40c73dd9d5860f42e00765a7e34e8ca397a9
+ms.openlocfilehash: 9164e48bf10fa27ff6c87ba3816b586a940dda69
 
 
 ---
@@ -161,7 +161,7 @@ Een standaard productie-implementatie van Privileged Access Management bevat ten
 
 De procedure voor het toevoegen van een extra domeincontroller kan worden gevonden in [Een replica van een Windows Server 2012-domeincontroller installeren in een bestaand domein (niveau 200)](https://technet.microsoft.com/library/jj574134.aspx).  
 
->[!NOTE] 
+>[!NOTE]
 > Lees de waarschuwingen in [Gevirtualiseerde domeincontrollers implementeren en configureren](https://technet.microsoft.com/library/jj574223.aspx) wanneer de domeincontroller moet worden gehost op een virtualisatieplatform zoals Hyper-V.
 
 #### Herstel
@@ -199,7 +199,7 @@ Raadpleeg de documentatie van Windows Server voor [Hardwarevereisten en opslagmo
 
 Voor de productie-implementatie op meerdere servers kunt u netwerktaakverdeling gebruiken om de verwerkingsbelasting te verdelen.  U moet ook beschikken over één alias (bijvoorbeeld: A of CNAME-records) zodat de gebruiker een algemene naam te zien krijgt.
 
->[!IMPORTANT] 
+>[!IMPORTANT]
 > Als u een andere technologie voor taakverdeling dan de netwerktaakverdelingsfunctie van Windows Server 2012 R2 gebruikt, moet u ervoor zorgen dat er met uw oplossing een sessie naar dezelfde server wordt omgeleid en niet naar een willekeurige server.
 
 Elke MIM-implementatie met meerdere servers heeft elke MIM-service een externe hostnaam, een servicenaam en een servicepartitienaam.  De standaardwaarde van de servicenaam is de naam van de computer en de standaardwaarde van de externe hostnaam en servicepartitienaam worden geconfigureerd tijdens de installatie van de MIM-service in het scherm waarin u wordt gevraagd om het serveradres van de MIM-service. Deze drie namen worden opgeslagen in het bestand %ProgramFiles%\Microsoft Forefront Identity Manager\Service\Microsoft.ResourceManagementService.exe.config als kenmerken `externalHostName`, `serviceName` en `servicePartitionName` van het `resourceManagementService`-configuratieknooppunt.  
@@ -224,6 +224,6 @@ Als het functionele forestniveau van de bastionomgeving Windows Server 2012 R2 i
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO3-->
 
 

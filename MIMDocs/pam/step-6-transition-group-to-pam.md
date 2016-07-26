@@ -1,10 +1,10 @@
 ---
-title: "Stap 6 – Een groep overzetten naar Privileged Access Management | Microsoft Identity Manager"
-description: 
+title: PAM implementeren - Stap 6 - Groep verplaatsen | Microsoft Identity Manager
+description: Een groep migreren naar het PRIV-forest, zodat de groep kan worden beheerd met Privilege Access Management.
 keywords: 
-author: 
+author: kgremban
 manager: femila
-ms.date: 06/16/2016
+ms.date: 07/15/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -12,16 +12,18 @@ ms.technology: active-directory-domain-services
 ms.assetid: 7b689eff-3a10-4f51-97b2-cb1b4827b63c
 ms.reviewer: mwahl
 ms.suite: ems
-ms.sourcegitcommit: 01470689e862b47625346d5d5bc6bc7def11da9c
-ms.openlocfilehash: b21e2fed4588572fd1b793c4942860871ae9a51c
+translationtype: Human Translation
+ms.sourcegitcommit: ae4c40c73dd9d5860f42e00765a7e34e8ca397a9
+ms.openlocfilehash: 603e5e28f0eee0f648ef7e00ef137f5a08b2ba34
 
 
 ---
 
 # Stap 6 – Een groep overzetten naar Privileged Access Management
 
->[!div class="step-by-step"] [« Stap 5 ](step-5-establish-trust-between-priv-corp-forests.md)
-[Stap 7 »](step-7-elevate-user-access.md)
+>[!div class="step-by-step"]
+[«Stap 5 ](step-5-establish-trust-between-priv-corp-forests.md)
+[stap 7 »](step-7-elevate-user-access.md)
 
 U moet PowerShell-cmdlets gebruiken om bevoorrechte accounts in het PRIV-forest te maken. Met deze cmdlets worden de volgende functies uitgevoerd:
 
@@ -82,11 +84,12 @@ De cmdlets moet eenmaal voor elke groep worden uitgevoerd en eenmaal voor elk li
 
 Als u wilt demonstreren dat forest-overschrijdende toegangsrechten geldig zijn voor het beheerdersaccount van de gebruiker, gaat u door met de volgende stap.
 
->[!div class="step-by-step"] [« Stap 5 ](step-5-establish-trust-between-priv-corp-forests.md)
-[Stap 7 »](step-7-elevate-user-access.md)
+>[!div class="step-by-step"]
+[«Stap 5 ](step-5-establish-trust-between-priv-corp-forests.md)
+[stap 7 »](step-7-elevate-user-access.md)
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jul16_HO3-->
 
 

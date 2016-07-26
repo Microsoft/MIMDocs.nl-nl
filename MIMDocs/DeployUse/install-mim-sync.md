@@ -1,10 +1,10 @@
 ---
-title: MIM 2016&#58; MIM-synchronisatieservice installeren | Microsoft Identity Manager
+title: MIM-synchronisatieservice installeren | Microsoft Identity Manager
 description: Ga aan de slag met de MIM 2016-onderdelen en installeer en configureer de synchronisatieservice.
 keywords: 
 author: kgremban
-manager: stevenpo
-ms.date: 04/28/2016
+manager: femila
+ms.date: 07/21/2016
 ms.topic: get-started-article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -13,8 +13,8 @@ ms.assetid: 2585e9c5-ce34-46c7-bdcf-8c08773901dc
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c023d147d0fcc1525fefbe866c952e217f7bee6b
-ms.openlocfilehash: 8a99b3a291d2b145f453732a72244c43f9c535d6
+ms.sourcegitcommit: b3ab1b9376c9b613739d87c812f4b16a4e17e6de
+ms.openlocfilehash: 2dfc89d32ef3b615201f1eb57ed3b8f5daed513e
 
 
 ---
@@ -107,6 +107,6 @@ Stel eerst het installatiepakket in voordat u de Microsoft Identity Manager 2016
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

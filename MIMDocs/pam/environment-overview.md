@@ -1,10 +1,10 @@
 ---
-title: Overzicht van de omgeving | Microsoft Identity Manager
-description: 
+title: Overzicht van de PAM-omgeving | Microsoft Identity Manager
+description: "Zoeken naar het vereiste aantal en de configuratie van virtuele machines die in Privileged Access Management kunnen worden geïmplementeerd"
 keywords: 
 author: kgremban
 manager: femila
-ms.date: 06/14/2016
+ms.date: 07/15/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -12,15 +12,16 @@ ms.technology: active-directory-domain-services
 ms.assetid: 479db14c-1bfb-4d7c-a344-cd718a01f328
 ms.reviewer: mwahl
 ms.suite: ems
-ms.sourcegitcommit: b8af77d2354428da19d91d5f02b490012835f544
-ms.openlocfilehash: a01cb2e1df52f3157b3d84a4eab837cececfbe1b
+translationtype: Human Translation
+ms.sourcegitcommit: ae4c40c73dd9d5860f42e00765a7e34e8ca397a9
+ms.openlocfilehash: 3057618c609ed251efe1f6cc6b2d3694ac61eafd
 
 
 ---
 
 # Overzicht van de omgeving
 
-PAM werkt met virtuele machines met aparte stations die via een gedeeld netwerk met elkaar zijn verbonden. Deze virtuele machines kunnen worden gehost met Windows 8.1, Windows Server 2012 R2 of andere besturingssystemen.
+Privileged Access Management (PAM) werkt met virtuele machines (VM's) met aparte stations die via een gedeeld netwerk met elkaar zijn verbonden. Deze virtuele machines kunnen worden gehost met Windows 8.1, Windows Server 2012 R2 of andere besturingssystemen.
 
 ![PAM-servers: relaties en ondersteunde platformen - diagram](media/pam-test-lab-architecture.png)
 
@@ -33,6 +34,6 @@ De stations waar de schijfinstallatiekopieën van de virtuele machines worden op
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jul16_HO3-->
 
 

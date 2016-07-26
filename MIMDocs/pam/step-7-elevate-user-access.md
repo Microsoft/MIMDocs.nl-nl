@@ -1,10 +1,10 @@
 ---
-title: Stap 7 - De toegangsrechten van een gebruiker uitbreiden | Microsoft Identity Manager
-description: 
+title: PAM implementeren - Stap 7 - Gebruikerstoegang | Microsoft Identity Manager
+description: Als laatste stap moet u tijdelijke bevoorrechte gebruikerstoegang opgeven om aan te tonen dat de Privileged Access Management-implementatie is gelukt.
 keywords: 
 author: kgremban
 manager: femila
-ms.date: 06/16/2016
+ms.date: 07/15/2016
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.service: microsoft-identity-manager
@@ -13,8 +13,8 @@ ms.assetid: 5325fce2-ae35-45b0-9c1a-ad8b592fcd07
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9e5f51d5ca731b3564b8262db0f4cddeb850231a
-ms.openlocfilehash: ee47c69788a98075372ca62943e0c4b101c5354f
+ms.sourcegitcommit: ae4c40c73dd9d5860f42e00765a7e34e8ca397a9
+ms.openlocfilehash: b4b3f4c0605fabc7166e8ff8309078f80461301e
 
 
 ---
@@ -46,7 +46,7 @@ Zonder verhoogde bevoegdheden heeft Jen geen toegang tot de bevoorrechte resourc
 2. Typ het wachtwoord voor het account PRIV.Jen als u hierom wordt gevraagd. Er wordt een nieuw opdrachtpromptvenster weergegeven.
 3. Typ de volgende opdrachten wanneer het PowerShell-venster wordt weergegeven.
 
-    > [!NOTE] 
+    > [!NOTE]
     > Nadat u deze opdrachten uitgevoerd, zijn de volgende stappen tijdgebonden.
 
     ```
@@ -92,7 +92,7 @@ U kunt de activering uitvoeren door bevoorrechte toegang aan te vragen via de PA
 7. Sluit de dialoogvensters van **Internetopties**.
 8. Klik op het linkertabblad op **Activeren**. Selecteer de **PAM-rol** en klik vervolgens op **Activeren**.
 
-> [!Note] 
+> [!Note]
 > In deze omgeving kunt u ook ontdekken hoe u toepassingen kunt ontwikkelen die gebruikmaken van de PAM REST API, zoals is beschreven in het [referentiemateriaal voor de Privileged Access Management REST API](/microsoft-identity-manager/reference/privileged-access-management-rest-api-reference.md).
 
 ## Samenvatting
@@ -103,6 +103,6 @@ Nadat u de stappen in dit overzicht hebt voltooid, hebt u een scenario voor Priv
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO3-->
 
 

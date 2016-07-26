@@ -1,4 +1,4 @@
-# [Begrijpen en verkennen](/microsoft-identity-manager/understand-explore/microsoft-identity-manager-2016)
+# [Meer informatie en verkennen](/microsoft-identity-manager/understand-explore/microsoft-identity-manager-2016)
 # [Plannen en ontwerpen](/microsoft-identity-manager/plan-design/microsoft-identity-manager-2016-supported-platforms)
 # [Implementeren en gebruiken](/microsoft-identity-manager/deploy-use/microsoft-identity-manager-deploy)
 # [Privileged Access Management gebruiken](privileged-identity-management-for-active-directory-domain-services.md)
@@ -11,7 +11,7 @@
 ### [Rollen definiëren](defining-roles-for-pam.md)
 ### [Hoge beschikbaarheid en herstel na noodgevallen](high-availability-disaster-recovery-considerations-bastion-environment.md)
 ### [Hardware- en softwarevereisten](hardware-software-requirements.md)
-## [MIM implementeren voor Privileged Access Management](configuring-mim-environment-for-pam.md)
+## [MIM configureren voor Privileged Access Management](configuring-mim-environment-for-pam.md)
 ### [Stap 1 - CORP-domein](step-1-prepare-corp-domain.md)
 ### [Stap 2 - PRIV-domeincontroller](step-2-prepare-priv-domain-controller.md)
 ### [Stap 3 - PAM-server](step-3-prepare-pam-server.md)
@@ -23,6 +23,6 @@
 # [Referentie voor ontwikkelaars](/microsoft-identity-manager/reference/microsoft-identity-manager-2016-developer-reference)
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jul16_HO3-->
 
 

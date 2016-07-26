@@ -1,10 +1,10 @@
 ---
-title: Azure MFA gebruiken voor activering | Microsoft Identity Manager
-description: 
+title: Azure MFA gebruiken om PAM te activeren | Microsoft Identity Manager
+description: Azure MFA instellen als een tweede beveiligingslaag wanneer uw gebruikers rollen in Privileged Access Management activeren.
 keywords: 
 author: kgremban
 manager: femila
-ms.date: 06/17/2016
+ms.date: 07/15/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -13,8 +13,8 @@ ms.assetid: 5134a112-f73f-41d0-a5a5-a89f285e1f73
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9e5f51d5ca731b3564b8262db0f4cddeb850231a
-ms.openlocfilehash: d6f6927eec479c705fd9ef7f33fafdeec05857e0
+ms.sourcegitcommit: ae4c40c73dd9d5860f42e00765a7e34e8ca397a9
+ms.openlocfilehash: 518a7e165946049745c8eea15ecb61866d6f9c04
 
 
 ---
@@ -70,7 +70,7 @@ Vervolgens gaat u een bestand genereren met de verificatiegegevens die nodig zij
 
 7.  Kopieer het betreffende ZIP-bestand naar elk systeem waarop de MIM-service is geïnstalleerd. 
 
->[!NOTE] 
+>[!NOTE]
 > Het ZIP-bestand bevat sleutelmateriaal dat wordt gebruikt bij de verificatie voor de Azure MFA-service.
 
 ## De MIM-service voor Azure MFA configureren
@@ -99,7 +99,7 @@ Vervolgens gaat u een bestand genereren met de verificatiegegevens die nodig zij
 
 11.  Sla het bestand **MfaSettings.xml** in de map `C:\\Program Files\\Microsoft Forefront Identity Manager\\2010\\Service` van de MIM-service op om het bestand te overschrijven. 
 
-> [!NOTE] 
+> [!NOTE]
 > Controleer aan het einde van het proces of het bestand **MfaSettings.xml** of kopieën hiervan, of het ZIP-bestand niet openbaar leesbaar zijn.
 
 ## PAM-gebruikers configureren voor Azure MFA
@@ -151,6 +151,6 @@ U kunt ook een rapport van Azure MFA weergeven of downloaden voor meer informati
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO3-->
 
 
