@@ -12,18 +12,19 @@ ms.technology: active-directory-domain-services
 ms.assetid: cf3796f7-bc68-4cf7-b887-c5b14e855297
 ms.reviewer: mwahl
 ms.suite: ems
-experimental: true
 experiment_id: kgremban_images
 translationtype: Human Translation
 ms.sourcegitcommit: e695dd47e4bd31c4004c7d0d9ec76498d52fb56a
-ms.openlocfilehash: b46c2b50873023d504fb7b440a1d4e40e8fa3ac7
+ms.openlocfilehash: 82c97351f66558c3270821f786560ef4b3e0c473
 
 ---
 
 # Privileged Access Management voor Active Directory Domain Services
-Privileged Access Management (PAM) is een oplossing waarmee organisaties bevoorrechte toegang in een bestaande Active Directory-omgeving kunnen beperken.
+Met Privileged Access Management (PAM) kunnen organisaties bevoorrechte toegang in een bestaande Active Directory-omgeving beperken.
 
-Met Privileged Access Management kunnen twee doelen worden behaald:
+![PAM-stappen: voorbereiden, beveiligen, werken, bewaken - diagram](media/MIM_PIM_SetupProcess.png)
+
+Privileged Access Management is gericht op een cyclus van het voorbereiden, het beveiligen en het controleren van uw omgeving zodat twee doelen kunnen worden behaald:
 
 - De controle terugkrijgen over een aangetaste Active Directory-omgeving door een afzonderlijke bastionomgeving te behouden waarvan bekend is dat deze niet is beïnvloed door aanvallen.  
 - Het gebruik van bevoorrechte accounts isoleren om het risico te verminderen dat deze referenties worden gestolen.
@@ -43,7 +44,6 @@ PAM borduurt voort op het principe van Just-In-Time-beheer; [Just Enough Adminis
 
 De installatie en het gebruik van PAM bestaat uit vier stappen.
 
-![PAM-stappen: voorbereiden, beveiligen, werken, bewaken - diagram](media/MIM_PIM_SetupProcess.png)
 
 1.  **Voorbereiden**: identificeer welke groepen in uw bestaande forest aanzienlijke bevoegdheden hebben. Maak deze groepen opnieuw zonder leden in het bastionforest.
 
