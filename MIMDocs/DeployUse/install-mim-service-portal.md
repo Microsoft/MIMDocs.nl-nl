@@ -4,7 +4,7 @@ description: Lees welke stappen u moet uitvoeren voor het configureren en instal
 keywords: 
 author: kgremban
 manager: femila
-ms.date: 07/21/2016
+ms.date: 08/11/2016
 ms.topic: get-started-article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -13,8 +13,8 @@ ms.assetid: b0b39631-66df-4c5f-80c9-a1774346f816
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b3ab1b9376c9b613739d87c812f4b16a4e17e6de
-ms.openlocfilehash: c18ea7b0390ca11c213ed66bfd1476454cf86951
+ms.sourcegitcommit: 739797502e09c2b92e35767e2c943308cd1de5c9
+ms.openlocfilehash: 438754773057043b8560562bab0ae260fb3a4bc2
 
 
 ---
@@ -93,7 +93,7 @@ Als u in de laatste stap geen MIM-installatiepakket hebt ingesteld, gaat u terug
 
 1.  Stel de serviceaccountnaam voor SSPR-registratie in op *Contoso\MIMSSPRService* en het bijbehorende wachtwoord op *Pass@word1*.
 
-2.  Geef *CORPIDM* op als de hostnaam voor de MIM-wachtwoordregistratie en stel de poort in op **8080**. Schakel de optie **Poort in de firewall openen** in.
+2.  Geef *CORPIDM* op als de hostnaam voor de MIM-portal voor wachtwoordherstel en stel de poort in op **8088**. Schakel de optie **Poort in de firewall openen** in.
 
     ![Afbeelding voor het invoeren van de configuratiegegevens die worden gebruikt door IIS](media/MIM-Install15.png)
 
@@ -152,6 +152,6 @@ Nadat de installatie is voltooid, controleert u of de MIM-portal actief is.
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO2-->
 
 
