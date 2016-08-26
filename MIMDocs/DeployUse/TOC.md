@@ -1,4 +1,4 @@
-# [Begrijpen en verkennen](/microsoft-identity-manager/understand-explore/microsoft-identity-manager-2016)
+# [Meer informatie en verkennen](/microsoft-identity-manager/understand-explore/microsoft-identity-manager-2016)
 # [Plannen en ontwerpen](/microsoft-identity-manager/plan-design/microsoft-identity-manager-2016-supported-platforms)
 # [Implementeren en gebruiken](microsoft-identity-manager-deploy.md)
 ## [Eerste keer implementeren](microsoft-identity-manager-deploy.md)
@@ -21,6 +21,6 @@
 # [Referentie voor ontwikkelaars](/microsoft-identity-manager/reference/microsoft-identity-manager-2016-developer-reference)
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jul16_HO3-->
 
 

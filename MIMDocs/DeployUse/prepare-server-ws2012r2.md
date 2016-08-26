@@ -1,33 +1,27 @@
 ---
-# required metadata
-
-title: "Een server voor identiteitsbeheer instellen: Windows Server 2012 R2 | Microsoft Identity Manager"
-description: "Lees welke stappen moeten worden uitgevoerd en wat de minimale vereisten zijn voor het voorbereiden van Windows Server 2012 RS zodat dit kan samenwerken met MIM 2016."
-keywords:
+title: Windows Server configureren | Microsoft Identity Manager
+description: Lees welke stappen moeten worden uitgevoerd en wat de minimale vereisten zijn voor het voorbereiden van Windows Server 2012 RS zodat dit kan samenwerken met MIM 2016.
+keywords: 
 author: kgremban
-manager: stevenpo
-ms.date: 04/28/2016
+manager: femila
+ms.date: 08/11/2016
 ms.topic: get-started-article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 51507d0a-2aeb-4cfd-a642-7c71e666d6cd
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: mwahl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 739797502e09c2b92e35767e2c943308cd1de5c9
+ms.openlocfilehash: bdf1f4b7c5762095f4986506f9e17369dadea011
+
 
 ---
 
 # Een server voor identiteitsbeheer instellen: Windows Server 2012 R2
 
->[!div class=stapsgewijs]
+>[!div class="step-by-step"]
 [« Een domein voorbereiden](preparing-domain.md)
 [SQL Server 2014 »](prepare-server-sql2014.md)
 
@@ -61,7 +55,7 @@ Begin met een Windows Server 2012 R2-computer, met minimaal 8 GB aan RAM-geheuge
 
     ![Afbeelding voor de PowerShell-functies](media/MIM-DeployWS2.png)
 
-7. Typ in PowerShell de volgende opdrachten: U moet mogelijk een andere locatie opgeven voor de bronbestanden voor de **.NET Framework** 3.5-onderdelen. Deze onderdelen zijn meestal niet aanwezig wanneer Windows Server wordt geïnstalleerd, maar zijn beschikbaar in de map SxS (side-by-side), die onderdeel uitmaakt van de map Bronnen op de installatieschijf voor het besturingssysteem, bijvoorbeeld: *d:\Bronnen\SxS\*.
+7. Typ in PowerShell de volgende opdrachten: U moet mogelijk een andere locatie opgeven voor de bronbestanden voor de **.NET Framework** 3.5-onderdelen. Deze onderdelen zijn meestal niet aanwezig wanneer Windows Server wordt geïnstalleerd, maar zijn beschikbaar in de map SxS (side-by-side), die deel uitmaakt van de map Bronnen op de installatieschijf voor het besturingssysteem, bijvoorbeeld: *d:\Sources\SxS\*.
 
     ```
     import-module ServerManager
@@ -80,7 +74,7 @@ Stel het beveiligingsbeleid van de server zo in dat de zojuist gemaakte accounts
 
     ![Afbeelding voor Lokaal beveiligingsbeleid](media/MIM-DeployWS3.png)
 
-4. Klik op **Gebruiker of groep toevoegen** en typ `contoso\mimsync; contoso\mimma; contoso\MIMService; contoso\SharePoint; contoso\SqlServer; contoso\mimsspr` in het tekstvak, klik op **Namen controleren** en klik op **OK**.
+4. Klik op **Gebruiker of groep toevoegen** en typ `contoso\MIMSync; contoso\MIMMA; contoso\MIMService; contoso\SharePoint; contoso\SqlServer; contoso\MIMSSPR` in het tekstvak, klik op **Namen controleren** en klik op **OK**.
 
 5. Klik op **OK** om het venster **Aanmelden als service > Eigenschappen** te sluiten.
 
@@ -111,11 +105,12 @@ Stel het beveiligingsbeleid van de server zo in dat de zojuist gemaakte accounts
     iisreset /START
     ```
 
->[!div class=stapsgewijs]  
+>[!div class="step-by-step"]  
 [« Een domein voorbereiden](preparing-domain.md)
 [SQL Server 2014 »](prepare-server-sql2014.md)
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Aug16_HO2-->
 
 

@@ -1,33 +1,27 @@
 ---
-# required metadata
-
-title: "Een server voor identiteitsbeheer instellen: SharePoint | Microsoft Identity Manager"
-description: "Installeer en configureer SharePoint Foundation zodat deze de MIM-portalpagina kan hosten."
-keywords:
+title: SharePoint configureren | Microsoft Identity Manager
+description: Installeer en configureer SharePoint Foundation zodat deze de MIM-portalpagina kan hosten.
+keywords: 
 author: kgremban
-manager: stevenpo
-ms.date: 04/28/2016
+manager: femila
+ms.date: 07/21/2016
 ms.topic: get-started-article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: c01487f2-3de6-4fc4-8c3a-7d62f7c2496c
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: mwahl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: b3ab1b9376c9b613739d87c812f4b16a4e17e6de
+ms.openlocfilehash: 9885579d9fb72dd4e73ec5a8a359b35c49d10440
+
 
 ---
 
 # Een server voor identiteitsbeheer instellen: SharePoint
 
->[!div class=stapsgewijs]
+>[!div class="step-by-step"]
 [« SQL Server 2014](prepare-server-sql2014.md)
 [Exchange Server »](prepare-server-exchange.md)
 
@@ -98,7 +92,8 @@ Voer de stappen uit die in de **wizard Configuratie van SharePoint-producten** w
     -ApplicationPoolAccount $dbManagedAccount -AuthenticationMethod "Kerberos" -Port 82 -URL http://corpidm.contoso.local
     ```
 
-    > [!NOTE] Er wordt een waarschuwing weergegeven waarin wordt vermeld dat de klassieke Windows-verificatiemethode wordt gebruikt en het kan enkele minuten duren voordat de laatste opdracht een waarde retourneert. Wanneer het script is voltooid, wordt in de uitvoer de URL van de nieuwe portal vermeld. Houd het venster **SharePoint 2013-beheershell** geopend zodat u deze later kunt raadplegen.
+    > [!NOTE]
+    > Er wordt een waarschuwing weergegeven waarin wordt vermeld dat de klassieke Windows-verificatiemethode wordt gebruikt en het kan enkele minuten duren voordat de laatste opdracht een waarde retourneert. Wanneer het script is voltooid, wordt in de uitvoer de URL van de nieuwe portal vermeld. Houd het venster **SharePoint 2013-beheershell** geopend zodat u deze later kunt raadplegen.
 
 2. Start de SharePoint 2013-beheershell en voer het volgende PowerShell-script uit om een **SharePoint Foundation 2013-siteverzameling** te maken.
 
@@ -112,7 +107,8 @@ Voer de stappen uit die in de **wizard Configuratie van SharePoint-producten** w
   $s.CompatibilityLevel
   ```
 
-  > [!NOTE] Controleer of het resultaat van het *compatibiliteitsniveau* de variabele 14 is. Als het resultaat 15 is, is de siteverzameling niet gemaakt voor de 2010-ervaringsversie. Verwijder de siteverzameling en maak deze opnieuw.
+  > [!NOTE]
+  > Controleer of het resultaat van het *compatibiliteitsniveau* de variabele 14 is. Als het resultaat 15 is, is de siteverzameling niet gemaakt voor de 2010-ervaringsversie. Verwijder de siteverzameling en maak deze opnieuw.
 
 3. Schakel **Weergavestatus aan serverzijde voor SharePoint** en de SharePoint-taak Statusanalysetaak (elk uur, Microsoft SharePoint Foundation-timer, alle servers) uit door de volgende PowerShell-opdrachten in de **SharePoint 2013-beheershell** uit te voeren:
 
@@ -135,11 +131,12 @@ Voer de stappen uit die in de **wizard Configuratie van SharePoint-producten** w
 
 7. Open het programma **Systeembeheer**, ga naar **Services** en vervolgens naar de SharePoint-beheerservice en start deze op als deze nog niet wordt uitgevoerd.
 
->[!div class=stapsgewijs]  
+>[!div class="step-by-step"]  
 [« SQL Server 2014](prepare-server-sql2014.md)
 [Exchange Server »](prepare-server-exchange.md)
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jul16_HO3-->
 
 

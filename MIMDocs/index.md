@@ -1,26 +1,29 @@
 ---
 asset_id: 90d66a75-a7ec-4fa1-911c-cce683908838
 layout: HubPage
-
-title: "Documentatie voor Microsoft Identity Manager"
-description: "Technische documentatie voor Microsoft Intune: beheer van mobiele apparaten en toepassingen"
-keywords: intune documentation, MDM documentation, Mobile Device Management Documentation, Mobile Device and Application Management Documentation
-author: msstevenpo
-manager: stevenpo
-ms.date: 04/28/2016
+title: Documentatie voor Identity Manager | Microsoft Docs
+description: 'Technische documentatie voor Microsoft Identity Manager: on-premises Identity & Access Management'
+keywords: documentatie voor identity manager, microsoft identity manager, MIM
+author: kgremban
+manager: femila
+ms.date: 07/21/2016
 ms.topic: hubpage
 ms.prod: microsoft-identity-manager
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.suite: ems
 ms.assetid: 90d66a75-a7ec-4fa1-911c-cce683908838
+translationtype: Human Translation
+ms.sourcegitcommit: 455a24d3008a2ef54e1229100e7150a1090c9b2e
+ms.openlocfilehash: 0ccbac817271b01e38bfb3e84fa5fc7ece787299
+
 
 ---
-# Documentatie voor Microsoft-identiteitsbeheer
+# Documentatie voor identiteitsbeheer
 <article id="main">
     <section id="hero-content">
-      <h1>Documentatie voor Microsoft Identity Manager</h1>
-      <h2>Microsoft Identity Manager (MIM) beschikt over functies voor on-premises identiteits- &amp; toegangsbeheer, zoals identiteitssynchronisatie, detectie van identiteitsdiefstal en meer</h2>
+      <h1>Documentatie voor Identity Manager</h1>
+      <h2>Meer informatie over het instellen van on-premises identiteitsbeheer met Microsoft Identity Manager. In deze zelfstudies ziet u hoe u identiteitssynchronisatie kunt configureren en identiteitsdiefstal kunt voorkomen.</h2>
       <h3>Nog onbekend met MIM? <a href="http://go.microsoft.com/fwlink/?LinkId=816853" target="\_blank">Ga naar de productpagina &rarr;</a></h3>     
     </section>
     <aside class="alert section-border">
@@ -41,6 +44,7 @@ ms.assetid: 90d66a75-a7ec-4fa1-911c-cce683908838
         </ul>
         <ul class="column column-half">
           <li><a href="/microsoft-identity-manager/deploy-use/microsoft-identity-manager-deploy">MIM-software implementeren op een nieuwe server</a></li>
+          <li><a href="/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services">Meer informatie over Privileged Access Management</a></li>
         </ul>
       </div>
     </section>
@@ -140,6 +144,7 @@ ms.assetid: 90d66a75-a7ec-4fa1-911c-cce683908838
 </article>
 
 
-<!--HONumber=Jun16_HO4-->
+
+<!--HONumber=Jul16_HO3-->
 
 

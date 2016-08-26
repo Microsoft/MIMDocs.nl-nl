@@ -1,10 +1,10 @@
 ---
-title: Laagmodel voor het partitioneren van beheerdersbevoegdheden | Microsoft Identity Manager
-description: 
+title: Het laagmodel van de PAM-omgeving | Microsoft Identity Manager
+description: Meer informatie over het laagmodel dat uw systeem scheidt op basis van de kwetsbaarheid voor risico's.
 keywords: 
 author: kgremban
 manager: femila
-ms.date: 06/14/2016
+ms.date: 07/15/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -13,8 +13,8 @@ ms.assetid: c6e3cd02-1e32-4194-a8ed-3a0b3d022a43
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9e5f51d5ca731b3564b8262db0f4cddeb850231a
-ms.openlocfilehash: 509c05bbda5f0a0b936518fb023000771c45d4f7
+ms.sourcegitcommit: ae4c40c73dd9d5860f42e00765a7e34e8ca397a9
+ms.openlocfilehash: 1a750bedee2aac667c84113d2d08daa20428c260
 
 
 ---
@@ -44,7 +44,7 @@ Aanmeldingsbeperkingen moeten worden geïmplementeerd om ervoor te zorgen dat ma
 - Domeinbeheerders (laag 0) kunnen zich niet aanmelden bij bedrijfsservers (laag 1) en standaardwerkstations van gebruikers (laag 2).
 - Serverbeheerders (laag 1) kunnen zich niet aanmelden niet bij standaardwerkstations van gebruikers (laag 2).
 
->[!NOTE] 
+>[!NOTE]
 > Serverbeheerders moeten niet worden opgenomen in de domeinbeheerdersgroep. Personeelsleden die verantwoordelijk zijn voor het beheren van domeincontrollers en bedrijfsservers, moeten afzonderlijke accounts krijgen.
 
 Aanmeldingsbeperkingen kunnen worden afgedwongen met:
@@ -62,6 +62,6 @@ In het volgende artikel [Planning a bastion environment](planning-bastion-enviro
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO3-->
 
 
