@@ -1,10 +1,10 @@
 ---
-title: Hardware- en softwarevereisten | Microsoft Identity Manager
-description: 
+title: Softwarevereisten voor PAM | Microsoft Identity Manager
+description: De hardware- en softwarevereisten voor een correcte implementatie van Privileged Access Management
 keywords: 
 author: kgremban
 manager: femila
-ms.date: 06/17/2016
+ms.date: 07/15/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -12,13 +12,18 @@ ms.technology: active-directory-domain-services
 ms.assetid: 82a9085c-9667-4b3b-8079-657eab1d1e58
 ms.reviewer: mwahl
 ms.suite: ems
-ms.sourcegitcommit: a6bdf1b947ee3ebc4c9e89e74b2912697ebf1f60
-ms.openlocfilehash: 77e7174e94ea8032c4e57155db489f493ce18177
+translationtype: Human Translation
+ms.sourcegitcommit: ae4c40c73dd9d5860f42e00765a7e34e8ca397a9
+ms.openlocfilehash: 75a748f7035cfb10e833e4fdbfdc208b5245d3ea
 
 
 ---
 
-Er zijn geen hardwarevereisten buiten die van de onderliggende softwareplatformen; voldoende geheugen of schijfruimte en netwerkverbinding is vereist. In dit artikel worden minimale vereisten vermeld voor een standaardimplementatie. Het is niet bedoeld ter illustratie van de prestaties, schaalbaarheid of hoge beschikbaarheid, en vertegenwoordigt geen aanbevolen implementatietopologie voor grote ondernemingen of productieomgevingen.
+# Hardware- en softwarevereisten
+
+Privileged Access Management heeft geen hardwarevereisten naast de vereisten van de onderliggende softwareplatforms. Zorg ervoor dat u voldoende geheugen of schijfruimte vrij hebt en beschikt over een netwerkverbinding.
+
+In dit artikel worden minimale vereisten vermeld voor een standaardimplementatie. Het is niet bedoeld ter illustratie van de prestaties, schaalbaarheid of hoge beschikbaarheid, en vertegenwoordigt geen aanbevolen implementatietopologie voor grote ondernemingen of productieomgevingen.
 
 ## Installeren vanuit softwarepakketten
 
@@ -70,6 +75,6 @@ Voor PAMSRV:
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jul16_HO3-->
 
 

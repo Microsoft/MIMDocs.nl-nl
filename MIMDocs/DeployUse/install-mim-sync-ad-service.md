@@ -1,33 +1,28 @@
 ---
-# required metadata
-
-title: "MIM 2016 installeren: Active Directory en de MIM-service synchroniseren | Microsoft Identity Manager"
-description: "Gebruik beheeragents en de MIM-synchronisatieservice om Active Directory en de MIM-databases te synchroniseren."
-keywords:
+title: AD en MIM-service synchroniseren | Microsoft Identity Manager
+description: Gebruik beheeragents en de MIM-synchronisatieservice om Active Directory en de MIM-databases te synchroniseren.
+keywords: 
 author: kgremban
-manager: stevenpo
-ms.date: 04/28/2016
+manager: femila
+ms.date: 07/21/2016
 ms.topic: get-started-article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 5e532b67-64a6-4af6-a806-980a6c11a82d
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: mwahl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: b3ab1b9376c9b613739d87c812f4b16a4e17e6de
+ms.openlocfilehash: f17f256653936ffd06da9fae87dccfbf1c12a553
+
 
 ---
 
 # MIM 2016 installeren: Active Directory en de MIM-service synchroniseren
 
->[!div class="step-by-step"] [« MIM-service en -portal](install-mim-service-portal.md)
+>[!div class="step-by-step"]
+[« MIM-service en -portal](install-mim-service-portal.md)
 
 > [!NOTE]
 > In deze stapsgewijze instructies wordt gebruikgemaakt van voorbeeldnamen en -waarden van een bedrijf met de naam Contoso. Vervang deze door uw eigen namen en waarden. Bijvoorbeeld:
@@ -42,7 +37,8 @@ De MIM-beheeragent (MA) is een connector voor MIM Sync met de MIM-service. Als u
 
 Wanneer u een MIM-beheeragent configureert, moet u een gebruikersaccount opgeven. In dit document wordt **MIMMA** gebruikt als de naam voor dit account.
 
-> [!NOTE] Het account dat u voor de MIM-beheeragent gebruikt, moet hetzelfde account zijn als het account dat u tijdens de installatie van de MIM-service hebt opgegeven.
+> [!NOTE]
+> Het account dat u voor de MIM-beheeragent gebruikt, moet hetzelfde account zijn als het account dat u tijdens de installatie van de MIM-service hebt opgegeven.
 
 ###De MIM-beheeragent maken
 
@@ -320,7 +316,7 @@ U kunt als volgt de synchronisatieregel voor binnenkomende gegevens van de AD-ge
 
     -   Resourcetype voor de metaverse: persoon
     -   Extern systeem: ADMA
-    -   Resourcetype voor het externe systeem: persoon
+    -   Resourcetype voor het externe systeem: gebruiker
 
 6. Geef op het tabblad **Relatie** de volgende gegevens op en klik vervolgens op **Volgende**:
 
@@ -332,10 +328,10 @@ U kunt als volgt de synchronisatieregel voor binnenkomende gegevens van de AD-ge
 
     | Stroomregel | Bron | Bestemming |
     |-|-|-|
-    |Regel 1|samAccountName|f|
+    |Regel 1|samAccountName|accountName|
     |Regel 2|displayName|displayName|
-    |Regel 3|EmployeeType|EmployeeType|
-    |Regel 4|givenName|givenName|
+    |Regel 3|EmployeeType|employeeType|
+    |Regel 4|givenName|firstName|
     |Regel 5|sn|lastName|
     |Regel 6|Manager|manager|
     |Regel 7|objectSID|ObjectSID|
@@ -437,9 +433,11 @@ Hanteer de volgende stappen om elk van de drie uitvoeringsprofielen uit te voere
     - Selecteer in de lijst **Uitvoeringsprofielen** het uitvoeringsprofiel dat u wilt uitvoeren.
     - Klik op **OK** om het uitvoeringsprofiel te starten.
 
->[!div class="step-by-step"] [« MIM-service en -portal](install-mim-service-portal.md)
+>[!div class="step-by-step"]
+[« MIM-service en -portal](install-mim-service-portal.md)
 
 
-<!--HONumber=Jun16_HO1-->
+
+<!--HONumber=Jul16_HO3-->
 
 

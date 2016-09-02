@@ -1,10 +1,10 @@
 ---
-title: MIM 2016&#58; MIM-synchronisatieservice installeren | Microsoft Identity Manager
+title: MIM-synchronisatieservice installeren | Microsoft Identity Manager
 description: Ga aan de slag met de MIM 2016-onderdelen en installeer en configureer de synchronisatieservice.
 keywords: 
 author: kgremban
-manager: stevenpo
-ms.date: 04/28/2016
+manager: femila
+ms.date: 08/11/2016
 ms.topic: get-started-article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -13,8 +13,8 @@ ms.assetid: 2585e9c5-ce34-46c7-bdcf-8c08773901dc
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c023d147d0fcc1525fefbe866c952e217f7bee6b
-ms.openlocfilehash: 8a99b3a291d2b145f453732a72244c43f9c535d6
+ms.sourcegitcommit: 739797502e09c2b92e35767e2c943308cd1de5c9
+ms.openlocfilehash: ba399da1431ea1d2d1633d0469e054ffd89f1d34
 
 
 ---
@@ -53,7 +53,7 @@ Stel eerst het installatiepakket in voordat u de Microsoft Identity Manager 2016
 
     ![Afbeelding van Aangepaste installatie](media/MIM-Install2.png)
 
-6.  Selecteer het volgende in het configuratiescherm voor de synchronisatiedatabase:
+6.  Selecteer het volgende in het configuratiescherm voor de Sync-servicedatabase:
 
     1.  SQL Server bevindt zich op: **Deze computer**.
 
@@ -71,7 +71,7 @@ Stel eerst het installatiepakket in voordat u de Microsoft Identity Manager 2016
 
     ![Afbeelding voor het serviceaccount](media/MIM-Install4.png)
 
-8.  Geef de betreffende beveiligingsgroepen op voor het MIM Sync-installatieprogramma:
+8.  Geef de betreffende beveiligingsgroepen op voor het installatieprogramma van de MIM Sync-service:
 
     1. Beheerder = *contoso\MIMSyncAdmins*
 
@@ -87,11 +87,11 @@ Stel eerst het installatiepakket in voordat u de Microsoft Identity Manager 2016
 
 9. Schakel in het scherm voor de beveiligingsinstellingen de optie **Firewallregels voor binnenkomende RPC-communicatie inschakelen** in en klik op **Volgende**.
 
-10. Klik op **Installeren** om de installatie van MIM Sync te starten.
+10. Klik op **Installeren** om de installatie van de MIM Sync-service te starten.
 
     1. Er kan een waarschuwing voor het MIM Sync-serviceaccount worden weergegeven. Klik op **OK**.
 
-    2. MIM Sync wordt geïnstalleerd.
+    2. MIM Sync-service wordt geïnstalleerd.
 
     3. Er wordt een bericht weergegeven over het maken van een back-up voor de versleutelingssleutel: klik op **OK**, selecteer vervolgens een map waarin de back-up voor de versleutelingssleutel moet worden opgeslagen.
 
@@ -107,6 +107,6 @@ Stel eerst het installatiepakket in voordat u de Microsoft Identity Manager 2016
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO2-->
 
 

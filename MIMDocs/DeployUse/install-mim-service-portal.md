@@ -1,10 +1,10 @@
 ---
-title: MIM 2016&#58; MIM-service en -portal installeren | Microsoft Identity Manager
+title: De MIM-service en -portal installeren | Microsoft Identity Manager
 description: Lees welke stappen u moet uitvoeren voor het configureren en installeren van de MIM-service en -portal voor Microsoft Identity Manager 2016
 keywords: 
 author: kgremban
-manager: stevenpo
-ms.date: 04/28/2016
+manager: femila
+ms.date: 08/11/2016
 ms.topic: get-started-article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -13,8 +13,8 @@ ms.assetid: b0b39631-66df-4c5f-80c9-a1774346f816
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c023d147d0fcc1525fefbe866c952e217f7bee6b
-ms.openlocfilehash: eb2af412d9638035de591197fa191e990ade0ca1
+ms.sourcegitcommit: 739797502e09c2b92e35767e2c943308cd1de5c9
+ms.openlocfilehash: 438754773057043b8560562bab0ae260fb3a4bc2
 
 
 ---
@@ -93,7 +93,7 @@ Als u in de laatste stap geen MIM-installatiepakket hebt ingesteld, gaat u terug
 
 1.  Stel de serviceaccountnaam voor SSPR-registratie in op *Contoso\MIMSSPRService* en het bijbehorende wachtwoord op *Pass@word1*.
 
-2.  Geef *CORPIDM* op als de hostnaam voor de MIM-wachtwoordregistratie en stel de poort in op **8080**. Schakel de optie **Poort in de firewall openen** in.
+2.  Geef *CORPIDM* op als de hostnaam voor de MIM-portal voor wachtwoordherstel en stel de poort in op **8088**. Schakel de optie **Poort in de firewall openen** in.
 
     ![Afbeelding voor het invoeren van de configuratiegegevens die worden gebruikt door IIS](media/MIM-Install15.png)
 
@@ -152,6 +152,6 @@ Nadat de installatie is voltooid, controleert u of de MIM-portal actief is.
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO2-->
 
 

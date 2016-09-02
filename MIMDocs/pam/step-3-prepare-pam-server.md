@@ -1,10 +1,10 @@
 ---
-title: "Stap 3 – Een PAM-server voorbereiden | Microsoft Identity Manager"
-description: 
+title: PAM implementeren - Stap 3 - PAM-server | Microsoft Identity Manager
+description: Een PAM-server voorbereiden die fungeert als host voor SQL en SharePoint van uw Privileged Access Management-implementatie.
 keywords: 
-author: 
+author: kgremban
 manager: femila
-ms.date: 06/17/2016
+ms.date: 07/15/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -14,8 +14,8 @@ ROBOTS: noindex,nofollow
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9e5f51d5ca731b3564b8262db0f4cddeb850231a
-ms.openlocfilehash: ec65078cea33b73aa9482e831a1870df477c6581
+ms.sourcegitcommit: ae4c40c73dd9d5860f42e00765a7e34e8ca397a9
+ms.openlocfilehash: 1a21399df9528f689b811400a660543853d88472
 
 
 ---
@@ -118,7 +118,7 @@ Als SQL Server nog niet aanwezig is in de bastionomgeving, installeert u SQL Ser
 
 Gebruik het installatieprogramma van SharePoint Foundation 2013 met Service Pack 1 om de vereiste software van SharePoint te installeren op PAMSRV.
 
-> [!NOTE] 
+> [!NOTE]
 > Voor het installatieprogramma is een internetverbinding vereist zodat de vereiste onderdelen kunnen worden gedownload. Nadat de vereiste onderdelen zijn geïnstalleerd, wordt de server opnieuw opgestart.
 
 1. Klik met de rechtermuisknop op PowerShell en selecteer **Als administrator uitvoeren**.  
@@ -158,7 +158,7 @@ Nadat de wizard is voltooid, gebruikt u PowerShell om een SharePoint Foundation 
 
 2. Er wordt een waarschuwing weergegeven waarin wordt aangegeven dat de klassieke Windows-verificatiemethode wordt gebruikt en dat het enkele minuten kan duren voordat de laatste opdracht een waarde retourneert.  Nadat het script is voltooid, wordt in de uitvoer de URL van de nieuwe portal aangegeven.
 
-> [!NOTE] 
+> [!NOTE]
 > Houd het venster SharePoint 2013-beheershell geopend zodat u dit in de volgende stap kunt gebruiken.
 
 ## Een SharePoint-siteverzameling maken
@@ -212,6 +212,6 @@ In step 4 begint u met het installeren van de MIM-onderdelen op de PAM-server.
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO3-->
 
 
