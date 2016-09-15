@@ -157,7 +157,7 @@ In deze sectie gaat u de voorbeeldwebtoepassing voor de MIM PAM REST API install
   </httpProtocol>
   ```
 
-5.  Configureer de voorbeeldwebtoepassing. Bewerk het bestand **C:\Program Files\Microsoft Forefront Identity Manager\2010\Privileged Access Management Portal\js\utils.js** met een teksteditor zoals Kladblok. Stel de waarde van **pamRespApiUrl** in op *api-http://pamsrv.priv.contoso.local:8086-pamresources/*.
+5.  Configureer de voorbeeldwebtoepassing. Bewerk het bestand **C:\Program Files\Microsoft Forefront Identity Manager\2010\Privileged Access Management Portal\js\utils.js** met een teksteditor zoals Kladblok. Stel de waarde van **pamRespApiUrl** in op api *http://pamsrv.priv.contoso.local:8086/api/pamresources/*.
 
 6.  Start IIS opnieuw met de volgende opdracht om deze wijzigingen door te voeren.
 
