@@ -4,7 +4,7 @@ description: Lees de beschrijving van alle stappen voor het implementeren van Mi
 keywords: 
 author: kgremban
 manager: femila
-ms.date: 08/11/2016
+ms.date: 09/07/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -13,8 +13,8 @@ ms.assetid: fa0af422-b5e9-4599-9d9b-cb6c18ea07f9
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 406269e3c8dc3137c2dcd625c50c6cf4eb126d86
-ms.openlocfilehash: 74d7bfd1e0c89c880b2b6a06756f84ad63d3a8cc
+ms.sourcegitcommit: 40dbec941eb2f0b1a01de0f47d44e01717aaca21
+ms.openlocfilehash: 77dae279f9078c55abf342a8956aaf77c62773d5
 
 
 ---
@@ -25,7 +25,7 @@ In de artikelen in deze sectie vindt u stapsgewijze instructies voor het impleme
 > [!NOTE]
 > De implementatietopologie die in deze sectie wordt beschreven, is alleen bedoeld voor de voorbereidende fase waarin u kennis kunt opdoen over MIM.  De [handleiding voor capaciteitsplanning](/microsoft-identity-manager/plan-design/capacity-planning-guide) bevat meer informatie over topologieën voor productie-implementaties.  Het wordt aanbevolen om die documentatie door te nemen voordat u MIM implementeert en in gebruik neemt.
 
-Het scenario voor Privileged Access Management wordt anders geïmplementeerd dan andere MIM-scenario's, aangezien hiervoor een speciale bastionomgeving met forest is vereist.  Zie [Getting Started with Privileged Access Management](/microsoft-identity-manager/pam/privileged-access-management-get-started) (Engelstalig) voor meer informatie over het implementeren van MIM voor Privileged Identity Management.
+Het scenario voor Privileged Access Management wordt anders geïmplementeerd dan andere MIM-scenario's, aangezien hiervoor een speciale bastionomgeving met forest is vereist.  Zie [De MIM-omgeving voor Privileged Access Management configureren](/microsoft-identity-manager/pam/configuring-mim-environment-for-pam) voor meer informatie over het implementeren van MIM voor Privileged Identity Management.
 
 De procedure voor het implementeren van MIM 2016 lijkt sterk op die van diens voorganger FIM 2010 R2. Zie [Forefront Identity Manager 2010 R2 Deployment Guide](https://technet.microsoft.com/library/jj134310) (Engelstalig) als u de FIM-documentatie wilt raadplegen.
 
@@ -48,6 +48,6 @@ Nadat u het domein en de server hebt ingesteld, kunt u nu de MIM-onderdelen inst
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Sep16_HO2-->
 
 
