@@ -4,7 +4,7 @@ description:
 keywords: 
 author: kgremban
 manager: femila
-ms.date: 06/14/2016
+ms.date: 09/16/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -13,8 +13,8 @@ ms.assetid: bfc7cb64-60c7-4e35-b36a-bbe73b99444b
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b8af77d2354428da19d91d5f02b490012835f544
-ms.openlocfilehash: 0ed48d43825e1a876c4d96cafcb6c17cac26610f
+ms.sourcegitcommit: 9eefdf21d0cab3f7c488a66cbb3984d40498f4ef
+ms.openlocfilehash: fc4161f98d4367a2124e6253fe11dd1f2712d614
 
 
 ---
@@ -43,7 +43,7 @@ Volgens het [lagenmodel](tier-model-for-partitioning-administrative-privileges.m
 
 Het productieforest *CORP* moet het beheerforest *PRIV* vertrouwen, maar niet andersom. Dit kan een domeinvertrouwen of een forestvertrouwensrelatie zijn. Het beheersforestdomein hoeft de beheerde domeinen en forests niet te vertrouwen om de Active Directory te beheren. Voor aanvullende toepassingen is mogelijk wel een wederzijdse vertrouwensrelatie, beveiligingsvalidatie en test vereist.
 
-Selectieve verificatie moet worden gebruikt om ervoor te zorgen dat accounts in het beheerforest alleen de juiste productiehosts gebruiken. Voor het onderhoud van domeincontrollers en het delegeren van rechten in Active Directory, is doorgaans het toekennen van het recht 'Allowed to logon' (Aanmelden toegestaan) vereist voor domeincontrollers in aangewezen beheerdersaccounts in laag 0 van het beheerforest. Zie [Configuring Selective Authentication Settings](http://technet.microsoft.com/library/cc755844.aspx) (Selectieve verificatie-instellingen configureren) voor meer informatie.
+Selectieve verificatie moet worden gebruikt om ervoor te zorgen dat accounts in het beheerforest alleen de juiste productiehosts gebruiken. Voor het onderhoud van domeincontrollers en het delegeren van rechten in Active Directory, is doorgaans het toekennen van het recht 'Allowed to logon' (Aanmelden toegestaan) vereist voor domeincontrollers in aangewezen beheerdersaccounts in laag 0 van het beheerforest. Zie [Configuring Selective Authentication Settings](http://technet.microsoft.com/library/cc816580.aspx) (Selectieve verificatie-instellingen configureren) voor meer informatie.
 
 ## Logische scheiding behouden
 
@@ -149,7 +149,7 @@ MIM gebruikt PowerShell-cmdlets om vertrouwensrelatie tot stand te brengen tusse
 
 Als de bestaande Active Directory-topologie verandert, kunnen de cmdlets `Test-PAMTrust`, `Test-PAMDomainConfiguration`, `Remove-PAMTrust` en `Remove-PAMDomainConfiguration` worden gebruikt voor het bijwerken van de vertrouwensrelaties.
 
-### Vertrouwensrelatie instellen voor elke forest
+## Vertrouwensrelatie instellen voor elke forest
 
 De cmdlet `New-PAMTrust` moet voor elk bestaand forest één keer worden uitgevoerd. Deze wordt aangeroepen op de computer van de MIM-service in het beheerdomein. De parameters voor deze opdracht zijn de domeinnaam van het bovenste domein van het bestaande forest en de referenties van een beheerder van dat domein.
 
@@ -159,11 +159,11 @@ New-PAMTrust -SourceForest "contoso.local" -Credentials (get-credential)
 
 Nadat de vertrouwensrelatie is ingesteld, configureert u vervolgens elk domein voor beheer vanuit de bastionomgeving, zoals beschreven in het volgende gedeelte.
 
-### Beheer voor elk domein inschakelen
+## Beheer voor elk domein inschakelen
 
 Er zijn zeven vereisten voor het inschakelen van beheer voor een bestaand domein.
 
-#### 1. Een beveiligingsgroep op het lokale domein
+### 1. Een beveiligingsgroep op het lokale domein
 
 In het bestaande domein moet een groep bestaan waarvan de naam de NetBIOS-domeinnaam is, gevolgd door drie dollartekens, bijvoorbeeld *CONTOSO$$$*. Het groepsbereik moet *domeingebonden* zijn en het groepstype *Beveiliging*. Dit is nodig om groepen te kunnen maken in het toegewezen beheerforest met dezelfde beveiligings-id als groepen in dit domein. Meld u op een werkstation dat lid is van het bestaande domein aan als beheerder van het bestaande domein en maak deze groep met de volgende PowerShell-opdracht:
 
@@ -171,7 +171,7 @@ In het bestaande domein moet een groep bestaan waarvan de naam de NetBIOS-domein
 New-ADGroup -name 'CONTOSO$$$' -GroupCategory Security -GroupScope DomainLocal -SamAccountName 'CONTOSO$$$'
 ```
 
-#### 2. Geslaagde en mislukte controle
+### 2. Geslaagde en mislukte controle
 
 De instellingen voor groepsbeleid op de domeincontroller voor controle moet geslaagde en mislukte controle voor toegang tot Accountbeheer controleren en Active directory-service controleren omvatten. U doet dit met de console Groepsbeleidbeheer op een werkstation dat lid is van het bestaande domein en aangemeld als beheerder van het bestaande domein:
 
@@ -201,7 +201,7 @@ De instellingen voor groepsbeleid op de domeincontroller voor controle moet gesl
 
 Het bericht Het bijwerken van het computerbeleid is voltooid. wordt na enkele minuten weergegeven.
 
-#### 3. Verbindingen met de lokale certificeringsinstantie toestaan
+### 3. Verbindingen met de lokale certificeringsinstantie toestaan
 
 De domeincontrollers moeten RPC via TCP/IP-verbindingen toestaan voor de lokale certificeringsautoriteit (LSA) van de bastionomgeving. Bij oudere versies van Windows Server moet TCP/IP-ondersteuning in LSA zijn ingeschakeld in het register:
 
@@ -209,7 +209,7 @@ De domeincontrollers moeten RPC via TCP/IP-verbindingen toestaan voor de lokale 
 New-ItemProperty -Path HKLM:SYSTEM\\CurrentControlSet\\Control\\Lsa -Name TcpipClientSupport -PropertyType DWORD -Value 1
 ```
 
-#### 4. De PAM-domeinconfiguratie maken
+### 4. De PAM-domeinconfiguratie maken
 
 De cmdlet `New-PAMDomainConfiguration` wordt uitgevoerd op de computer van de MIM-service in het beheerdomein. De parameters voor deze opdracht zijn de domeinnaam van het bestaande domein en de referenties van een beheerder van dat domein.
 
@@ -217,7 +217,7 @@ De cmdlet `New-PAMDomainConfiguration` wordt uitgevoerd op de computer van de MI
  New-PAMDomainConfiguration -SourceDomain "contoso" -Credentials (get-credential)
 ```
 
-#### 5. Leesmachtiging verlenen aan accounts
+### 5. Leesmachtiging verlenen aan accounts
 
 De accounts in het bastionforest die worden gebruikt voor het opzetten van rollen (beheerders die de cmdlets `New-PAMUser` en `New-PAMGroup` gebruiken) en het account dat wordt gebruikt door de MIM-controleservice, hebben leesmachtigingen nodig in dat domein.
 
@@ -239,11 +239,11 @@ Met de volgende stappen schakelt u leestoegang in voor de gebruiker *PRIV\Admini
 
 18. Sluit Active Directory - gebruikers en computers.
 
-#### 6. Een noodaccount
+### 6. Een noodaccount
 
 Als het Privileged Access Management-project als doel heeft het verminderen van het aantal accounts met domeinbeheerdersbevoegdheden die permanent zijn toegewezen aan het domein, moet het domein een *nood*account bevatten, voor het geval er later een probleem ontstaat met de vertrouwensrelatie. In elk domein moeten accounts voor noodtoegang tot het productieforest bestaan. Deze accounts moeten alleen kunnen aanmelden op domeincontrollers. Voor organisaties met meerdere sites zijn mogelijk extra accounts vereist voor redundantie.
 
-#### 7. Machtigingen bijwerken in de bastionomgeving
+### 7. Machtigingen bijwerken in de bastionomgeving
 
 Controleer de machtigingen op het object *AdminSDHolder* in de systeemcontainer in dat domein. Het object *AdminSDHolder* heeft een unieke toegangsbeheerlijst (ACL), die wordt gebruikt voor het beheren van machtigingen van beveiligings-principals die lid zijn van de ingebouwde Active Directory-groepen met bevoorrechte rol. Let op of er in de standaardmachtigingen wijzigingen zijn doorgevoerd die gevolgen hebben voor gebruikers met beheerdersbevoegdheden in het domein. Deze machtigingen zijn niet van toepassing op gebruikers waarvan het account zich in de bastionomgeving bevindt.
 
@@ -253,6 +253,6 @@ De volgende stap is het definiëren van de PAM-rollen. Hierdoor koppelt u de geb
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Sep16_HO3-->
 
 
