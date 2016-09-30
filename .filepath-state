@@ -60,6 +60,9 @@
     "MIMDocs\\GetStarted\\TOC.md",
     "MIMDocs\\Troubleshoot\\TOC.md"
   ],
+  "479e4d5a1b21ea51b871257458618aca2407d35d": [
+    "MIMDocs\\index.md"
+  ],
   "e3e755779dfa60f0f5b2af0d4aae25de6b07afa6": [
     "MIMDocs\\index.md"
   ],
@@ -76,9 +79,6 @@
     "MIMDocs\\PlanDesign\\microsoft-identity-manager-2016-supported-platforms.md"
   ],
   "4cb419fa58037307e1352dd813e5f9b1767cfac5": [
-    "MIMDocs\\PlanDesign\\TOC.md"
-  ],
-  "fccf9b584e84cdd7c72dadded4a0e1126789d7c2": [
     "MIMDocs\\PlanDesign\\TOC.md"
   ],
   "e33a08d77a0b5c422cdbc8c19516b55df980a2c6": [
@@ -149,6 +149,9 @@
   ],
   "b21e2fed4588572fd1b793c4942860871ae9a51c": [
     "MIMDocs\\pam\\step-6-transition-group-to-pam.md"
+  ],
+  "1f4627bfd1616c2fd5b6a6115ea892801c381dc0": [
+    "MIMDocs\\pam\\step-7-elevate-user-access.md"
   ],
   "ee47c69788a98075372ca62943e0c4b101c5354f": [
     "MIMDocs\\pam\\step-7-elevate-user-access.md"
