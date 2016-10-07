@@ -20,9 +20,19 @@
 ### [Stap 6 - Bevoorrechte accounts maken](step-6-transition-group-to-pam.md)
 ### [Stap 7 - De toegangsrechten van een gebruiker uitbreiden](step-7-elevate-user-access.md)
 ### [Azure MFA instellen](use-azure-mfa-for-activation.md)
+## [PAM configureren met behulp van scripts](sp1-pam-configure-using-scripts.md)
+### [Stap 1 Het privédomein configureren](sp1-step1-configuring-priv-domain.md)
+### [Stap 2 Het CORP-domein configureren](sp1-step2-configuring-corp-domain.md)
+### [Stap 3 SQL configureren](sp1-step3-installing-configuring-sql.md)
+### [Stap 4 SharePoint configureren](sp1-step4-configuring-sharepoiint.md)
+### [Stap 5 PAM installeren/configureren](sp1-step5-configuring-pam.md)
+### [Stap 6 De PAM-vertrouwensrelatie installeren](sp1-step6-setup-pam-trust.md)
+### [Stap 7 SID-geschiedenis/filtering instellen](sp1-step7-setup-sidhistory-sidfiltering.md)
+### [Stap 8 Verificatie van PAM-implementatie](sp1-step8-pam-deployment-verification.md)
+### [Bijlage](sp1-pam-deployment-addendum.md)
 # [Referentie voor ontwikkelaars](/microsoft-identity-manager/reference/microsoft-identity-manager-2016-developer-reference)
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Sep16_HO4-->
 
 
