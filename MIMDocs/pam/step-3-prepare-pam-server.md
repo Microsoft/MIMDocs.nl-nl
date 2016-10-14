@@ -51,7 +51,7 @@ Voeg de functies van de webserver (IIS) en de toepassingsserver, de onderdelen v
 
 1.  Meld u aan als een PRIV-domeinbeheerder (PRIV\Administrator) en start PowerShell.
 
-2.  Typ de volgende opdrachten: U moet mogelijk een andere locatie opgeven voor de bronbestanden voor de .NET Framework 3.5-onderdelen. Deze onderdelen zijn meestal niet aanwezig wanneer Windows Server wordt geïnstalleerd, maar zijn beschikbaar in de map SxS (side-by-side), die deel uitmaakt van de map Bronnen op de installatieschijf voor het besturingssysteem, bijvoorbeeld: d:\Sources\SxS\.
+2.  Typ de volgende opdrachten: U moet mogelijk een andere locatie opgeven voor de bronbestanden voor de .NET Framework 3.5-onderdelen. Deze onderdelen zijn meestal niet aanwezig wanneer Windows Server wordt geïnstalleerd, maar zijn beschikbaar in de map SxS (side-by-side), die deel uitmaakt van de map Bronnen op de installatieschijf voor het besturingssysteem, bijvoorbeeld: *d:\Sources\SxS.
 
     ```
     import-module ServerManager
@@ -212,6 +212,6 @@ In step 4 begint u met het installeren van de MIM-onderdelen op de PAM-server.
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Oct16_HO2-->
 
 
