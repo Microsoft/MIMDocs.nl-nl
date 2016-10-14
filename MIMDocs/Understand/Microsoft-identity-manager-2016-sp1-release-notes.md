@@ -69,7 +69,8 @@ Informatie over bijgewerkte platformondersteuning vindt u in het document met de
 
 Klanten die een upgrade naar Microsoft Identity Manager 2016 Service Pack 1 willen uitvoeren, moeten de onderstaande instructies volgen voor alle services die van toepassing zijn op hun implementatie.
 
->[!Note] Klanten met Forefront Identity Manager 2010 R2 SP1 of eerder moeten eerst hun omgeving bijwerken naar Microsoft Identity Manager 2016, uitgebracht in augustus 2015, en vervolgens de onderstaande stappen volgen.
+>[!Note]
+>Klanten met Forefront Identity Manager 2010 R2 SP1 of eerder moeten eerst hun omgeving bijwerken naar Microsoft Identity Manager 2016, uitgebracht in augustus 2015, en vervolgens de onderstaande stappen volgen.
 
 Voordat u begint
 

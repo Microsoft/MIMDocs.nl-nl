@@ -24,7 +24,7 @@
 ### [Stap 1 Het privédomein configureren](sp1-step1-configuring-priv-domain.md)
 ### [Stap 2 Het CORP-domein configureren](sp1-step2-configuring-corp-domain.md)
 ### [Stap 3 SQL configureren](sp1-step3-installing-configuring-sql.md)
-### [Stap 4 SharePoint configureren](sp1-step4-configuring-sharepoiint.md)
+### [Stap 4 SharePoint configureren](sp1-step4-configuring-sharepoint.md)
 ### [Stap 5 PAM installeren/configureren](sp1-step5-configuring-pam.md)
 ### [Stap 6 De PAM-vertrouwensrelatie installeren](sp1-step6-setup-pam-trust.md)
 ### [Stap 7 SID-geschiedenis/filtering instellen](sp1-step7-setup-sidhistory-sidfiltering.md)
