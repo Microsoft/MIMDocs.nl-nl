@@ -13,8 +13,8 @@ ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: 
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c7c5266f3d1c51e933855031f4128cbcb967d6e2
-ms.openlocfilehash: 43a176ed2f1375eb98851064c460515ec09de132
+ms.sourcegitcommit: 99b1ff9f622ddd357866b2a3f9f4cc8e0fc88005
+ms.openlocfilehash: 82500ff42e24f5b155bfdd336566a2cd3d87fe7e
 
 
 ---
@@ -30,10 +30,13 @@ Belangrijke veronderstellingen:
 4. De omgeving heeft drie toegewezen (fysieke of virtuele) machines die onafhankelijk van elkaar CORPDC, PRIVDC en PAMSERVER uitvoeren.
 5. Voor de validatieoptie wordt ervan uitgegaan dat er een toegewezen clientcomputer voor het uitvoeren van deze stap is.
 
->[!NOTE] Als u een probleem ondervindt met het uitvoeren van het script, kunt u de logboeken bekijken. Alle scriptlogboeken worden opgeslagen in %AppData%\MIMPAMInstall. Comprimeer de map in een zipbestand en verstuur het via e-mail naar mim2016@microsoft.com, samen met details van de uitvoering en de fout.
+>[!NOTE]
+>Als u een probleem ondervindt met het uitvoeren van het script, kunt u de logboeken bekijken. Alle scriptlogboeken worden opgeslagen in %AppData%\MIMPAMInstall. Comprimeer de map in een zipbestand en verstuur het via e-mail naar mim2016@microsoft.com, samen met details van de uitvoering en de fout.
+
+Klaar om te beginnen met de PAM-implementatiescripts? Ga naar [PAM configureren met behulp van scripts](/microsoft-identity-manager/pam/sp1-pam-configure-using-scripts).
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 
