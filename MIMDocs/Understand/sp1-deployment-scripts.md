@@ -3,6 +3,7 @@ title: MIM2016 SP1 PAM-implementatiescripts
 description: Het CORP-domein voorbereiden met bestaande of nieuwe identiteiten die worden beheerd door Privileged Identity Manager via scripts
 keywords: 
 author: barclayn
+ms.author: barclayn
 manager: MBaldwin
 ms.date: 09/26/2016
 ms.topic: article
