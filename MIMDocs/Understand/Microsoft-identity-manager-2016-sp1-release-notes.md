@@ -6,7 +6,6 @@ author: barclayn
 manager: mbaldwin
 ms.date: 09/28/2016
 ms.topic: article
-ms.prod: identity-manager-2016
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: ccdd8a9f-02da-440a-81a8-354800dcd2a8
@@ -18,7 +17,7 @@ ms.openlocfilehash: b791b18fa3775295e9c199086aa11a0d6c6a55e7
 
 
 ---
-# Nieuw in Microsoft Identity Manager 2016 Service Pack 1 #
+# <a name="whats-new-for-microsoft-identity-manager-2016-service-pack-1"></a>Nieuw in Microsoft Identity Manager 2016 Service Pack 1 #
 
 Als onderdeel van de standaardreleasecyclus voor de service en het bijwerken van Microsoft Identity Manager hebben we [Microsoft Identity Manager (MIM) 2016 servicepack 1 (SP1)](https://msdn.microsoft.com/subscriptions/downloads/?fileid=70212#searchTerm=&Languages=en&PageSize=10&PageIndex=0&FileId=70212) uitgebracht. Dit document geeft een overzicht van de updates, verbeteringen, functies en wijzigingen die zijn opgenomen in deze release.
 
@@ -28,9 +27,9 @@ We stellen uw feedback op prijs. Als u feedback of opmerkingen voor het productt
 
 
 
-## Updates in dit servicepack #
+## <a name="updates-in-this-service-pack"></a>Updates in dit servicepack #
 
-### MIM
+### <a name="mim"></a>MIM
 
 - **Compatibiliteit van MIM-portal met meerdere browsers voor selfservice voor eindgebruikers:** met dit servicepack introduceren we ondersteuning voor de meest belangrijke browsers. Gebruikers hebben nu toegang tot en kunnen communiceren met de MIM-portal voor selfservice groeps- en profielbeheer vanuit Edge, Chrome en Safari.
 
@@ -38,7 +37,7 @@ We stellen uw feedback op prijs. Als u feedback of opmerkingen voor het productt
 
 - **Validatie van bestandsindeling van afbeeldingen:** MIM kan de bestandsindeling van afbeeldingen controleren wanneer deze naar de portal worden geüpload.
 
-### Privileged Access Management (PAM) gebruiken
+### <a name="privileged-access-managementpam"></a>Privileged Access Management (PAM) gebruiken
 
 - **PAM PRIV (bastionhost) forestondersteuning voor het Windows Server 2016-functionaliteitsniveau:** de MIM PAM-service kan worden geconfigureerd in een omgeving met domeincontrollers die worden uitgevoerd op het functionele Active Directory Domain Services-forestniveau van Windows Server 2016. Als dit is geconfigureerd, wordt voor een Kerberos-ticket van een gebruiker een tijdslimiet ingesteld voor de resterende tijd van de activatie van de rol.
 
@@ -55,17 +54,17 @@ We stellen uw feedback op prijs. Als u feedback of opmerkingen voor het productt
     Deze cmdlets worden automatisch uitgevoerd als onderdeel van de implementatiescripts.
 
 
-## Platformondersteuning
+## <a name="platform-support"></a>Platformondersteuning
 Informatie over bijgewerkte platformondersteuning vindt u in het document met de naam [Ondersteunde platformen voor MIM 2016](/microsoft-identity-manager/plan-design/microsoft-identity-manager-2016-supported-platforms).  Nieuwe ondersteunde platformen in dit servicepack, waaronder SQL Server 2016 en SharePoint 2016
 
-## In deze release zijn problemen met de algemene beschikbaarheid van MIM 2016 opgelost
+## <a name="issues-fixed-in-this-release-from-mim-2016-general-availability"></a>In deze release zijn problemen met de algemene beschikbaarheid van MIM 2016 opgelost
 
-### PAM
+### <a name="pam"></a>PAM
 - Nieuwe PAMGroup heeft geen MIM-objecten voor lokale domeingroepen gemaakt in het PRIV-forest
 - Nieuwe PAMDomainConfiguration mislukt met een netdom-foutbericht
 - PAM-controleservice heeft waarschuwingen voor groepen in het PRIV-forest vastgelegd
 
-## Bijwerken naar Service Pack 1
+## <a name="how-to-upgrade-to-service-pack-1"></a>Bijwerken naar Service Pack 1
 
 Klanten die een upgrade naar Microsoft Identity Manager 2016 Service Pack 1 willen uitvoeren, moeten de onderstaande instructies volgen voor alle services die van toepassing zijn op hun implementatie.
 
