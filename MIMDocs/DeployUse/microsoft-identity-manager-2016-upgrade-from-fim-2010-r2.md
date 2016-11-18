@@ -1,25 +1,25 @@
 ---
-title: Een upgrade uitvoeren voor FIM 2010 R2 | Microsoft Identity Manager
+title: Een upgrade uitvoeren voor FIM 2010 R2 | Microsoft Docs
 description: Informatie over het uitvoeren van een upgrade van uw FIM 2010 R2-onderdelen en het installeren van onderdelen die nieuw zijn in MIM 2016.
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 07/21/2016
 ms.topic: article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 9471ccc1-bafe-46ee-b169-1464262380e1
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b3ab1b9376c9b613739d87c812f4b16a4e17e6de
-ms.openlocfilehash: c77a41b47baa81f003e52f79d338a7810fa817b5
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: ef272ffe665aa5753fa2bf02d26f2ce73efa025b
 
 
 ---
 
-# Upgrade uitvoeren in Forefront Identity Manager 2010 R2
+# <a name="upgrade-from-forefront-identity-manager-2010-r2"></a>Upgrade uitvoeren in Forefront Identity Manager 2010 R2
 
 Als u een omgeving met Forefront Identity Manager (FIM) 2010 R2 hebt en u Microsoft Identity Manager (MIM) 2016 wilt uitproberen, kunt u deze handleiding gebruiken. Deze upgrade bestaat uit drie fasen:
 
@@ -36,7 +36,7 @@ In deze gids wordt verondersteld dat u het volgende al hebt ingesteld.
 - Lokale en milieuvereisten (SQL Server, Exchange Server, SharePoint Services enzovoort) die zijn geconfigureerd voor FIM 2010 R2.
 
 
-## Voorbereiding
+## <a name="preparation"></a>Voorbereiding
 
 1.  Maak een back-up van uw FIM-servicedatabase, FIM-synchronisatiedatabase, FIM-synchronisatie en -serviceconfiguratie en -software.
 
@@ -44,7 +44,7 @@ In deze gids wordt verondersteld dat u het volgende al hebt ingesteld.
 
 3.  Download de MIM-software of pak deze uit.
 
-## De upgrade van de synchronisatieservice uitvoeren
+## <a name="upgrade-the-synchronization-service"></a>De upgrade van de synchronisatieservice uitvoeren
 
 1.  Meld u aan als beheerder op een server waarop FIM 2010 R2-synchronisatieservice (synchronisatie) is geïmplementeerd.
 
@@ -82,7 +82,7 @@ In deze gids wordt verondersteld dat u het volgende al hebt ingesteld.
 
 13. Controleer of de **Synchronisatieservice** opnieuw is opgestart.
 
-## Een upgrade uitvoeren voor de Service en de Portal
+## <a name="upgrade-the-service-and-portal"></a>Een upgrade uitvoeren voor de Service en de Portal
 
 1.  Meld u aan als beheerder op een server waarop de FIM 2010 R2-service en -portal zijn geïmplementeerd.
 
@@ -138,7 +138,7 @@ In deze gids wordt verondersteld dat u het volgende al hebt ingesteld.
 
 14. Als u de MIM-portal installeert, moet u de URL opgeven van de SharePoint-siteverzameling waarin de FIM-portal momenteel wordt gehost. Klik op **Volgende**.
 
-## De MIM-portal voor wachtwoordregistratie installeren
+## <a name="install-the-mim-password-registration-portal"></a>De MIM-portal voor wachtwoordregistratie installeren
 
 1. Als u de MIM-portal voor wachtwoordregistratie installeert, moet u de aangevraagde URL voor de portal voor wachtwoordregistratie opgeven. Klik op **Volgende**.
 
@@ -168,7 +168,7 @@ In deze gids wordt verondersteld dat u het volgende al hebt ingesteld.
 
     2.  Bepaal of deze portal toegankelijk is voor extranet- en intranetgebruikers, of alleen voor intranetgebruikers, zoals eerder was geconfigureerd voor wachtwoord opnieuw instellen voor FIM.
 
-## De MIM-portal voor wachtwoord opnieuw instellen installeren
+## <a name="install-the-mim-password-reset-portal"></a>De MIM-portal voor wachtwoord opnieuw instellen installeren
 
 1. Als u de MIM-portal voor wachtwoord opnieuw instellen installeert, moet u de toegangsdetails en -referenties opgeven voor MIM-wachtwoord opnieuw instellen.
 
@@ -188,7 +188,7 @@ In deze gids wordt verondersteld dat u het volgende al hebt ingesteld.
 
     2.  Geef op of deze portal toegankelijk is voor extranet- en intranetgebruikers, of alleen intranetgebruikers.
 
-## Installatie en upgrade voltooien
+## <a name="finish-installation-and-upgrade"></a>Installatie en upgrade voltooien
 
 1. Als alle configuratiedefinities zijn voltooid, wordt een installatiepagina weergegeven. Klik op **Installeren** om de installatie en upgrade van de MIM-service en -portal te starten.
 
@@ -202,6 +202,6 @@ Opmerking: Als de FIM-invoegtoepassingen en -extensies momenteel zijn geïmpleme
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

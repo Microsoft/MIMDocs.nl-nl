@@ -3,23 +3,27 @@ title: Stap 8 Verificatie van PAM-implementatie
 description: Het CORP-domein voorbereiden met bestaande of nieuwe identiteiten die worden beheerd door Privileged Identity Manager via scripts
 keywords: 
 author: barclayn
+ms.author: barclayn
 manager: MBaldwin
-ms.date: 10/04/2016
+ms.date: 10/25/2016
 ms.topic: article
-ms.prod: microsoft-identity-manager
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: 
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 99b1ff9f622ddd357866b2a3f9f4cc8e0fc88005
-ms.openlocfilehash: 9a617d8a5fbe8bcdac40cdf3250e5efedb7a0b84
+ms.sourcegitcommit: 365989693f844f117f76ee2b69db85df82f06f35
+ms.openlocfilehash: 7709b4df5bb196aba6abf056830bc73e024174ef
 
 
 ---
 
-# Stap 8 Verificatie van PAM-implementatie
+# <a name="step-8-pam-deployment-verification"></a>Stap 8 Verificatie van PAM-implementatie
+
+>[!div class="step-by-step"]
+[« Stap 7](sp1-step7-setup-sidhistory-sidfiltering.md)
+[Bijlage »](sp1-pam-deployment-addendum.md)
 
 Het implementatiepakket wordt geleverd met verificatiescripts die een PAM-scenario kunnen uitvoeren om te controleren of de PAM-implementatie naar behoren werkt.
 Om deze controlestap te kunnen gebruiken, wijzigt u in PAMDeploymentConfig.xml de sectie <PamValidation/>.
@@ -79,6 +83,6 @@ Typ in het PowerShell-venster het volgende:
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Nov16_HO2-->
 
 

@@ -1,25 +1,25 @@
 ---
-title: Ondersteunde connectors | Microsoft Identity Manager
+title: Ondersteunde connectors | Microsoft Docs
 description: Met connectors kunt u de gegevensoverdracht tussen MIM en uw adreslijsten beheren.
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 08/11/2016
 ms.topic: article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 8bc2f6d2-9f53-4db6-aee6-a937ae468163
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 309011c81959971e696d70aa4ec5e1610cc8a2f0
-ms.openlocfilehash: f0842781e3730dae5548ce02a3cb247376d12dc8
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: 5841f549cc7f9369943cc5b31c27005f89afcccb
 
 
 ---
 
-# Verbinding maken met uw adreslijsten
+# <a name="connect-to-your-directories"></a>Verbinding maken met uw adreslijsten
 
 Connectors koppelen specifieke verbonden gegevensbronnen aan Microsoft Identity Manager (MIM). Met een connector worden gegevens van een verbonden gegevensbron naar MIM verplaatst. Wanneer gegevens in MIM worden gewijzigd, kunnen met de connector de gegevens ook worden geëxporteerd naar de gekoppelde gegevensbron om deze te synchroniseren met MIM. Over het algemeen is er ten minste één connector beschikbaar voor elke gekoppelde adreslijst.
 
@@ -27,7 +27,7 @@ In Forefront Identity Manager heetten connectors beheeragents. Deze term wordt n
 
 Dit artikel gaat over de connectors die worden meegeleverd met MIM. Met de connector voor Extensible Connectivity 2.0 kunt u echter verbinding maken met nog meer gegevensbronnen. Sommige partners hebben hun eigen connectors op deze manier gemaakt. Een volledige lijst is beschikbaar in de wiki [FIM 2010: Management Agents from Partners](http://social.technet.microsoft.com/wiki/contents/articles/1589.fim-2010-management-agents-from-partners.aspx) (FIM 2010: beheeragents van partners).
 
-## Ondersteunde connectors in MIM 2016
+## <a name="supported-connectors-in-mim-2016"></a>Ondersteunde connectors in MIM 2016
 
 | Naam | Ondersteunde versies van de gekoppelde gegevensbron |
 | ---- | ----------------------------------------------- |
@@ -35,7 +35,7 @@ Dit artikel gaat over de connectors die worden meegeleverd met MIM. Met de conne
 | Active Directory Lightweight Directory Services (ADLDS) | Active Directory Lightweight Directory Services (ADLDS) |
 | Active Directory Global Address List (GAL) | Active Directory Global Address List (GAL) – Exchange 2000, 2003, 2007, 2010, 2013 |
 | Extensible Connectivity 2.0 | Een willekeurige gegevensbron op basis van oproep of op basis van bestanden |
-| MIM-service | Microsoft Identity Manager 2016 |
+| MIM-service | Microsoft Docs 2016 |
 | IBM DB2 Universal Database | IBM DB2 versie 9.1, 9.5 of 9.7; IBM DB2 OLEDB v9.5 FP5 of v9.7 FP1 |
 | IBM Directory Server | IBM Tivoli Directory Server 6.x |
 | Novell eDirectory | Novell eDirectory versie 8.7.3, 8.8.5 en 8.8.6 |
@@ -54,12 +54,12 @@ Dit artikel gaat over de connectors die worden meegeleverd met MIM. Met de conne
 | Tekstbestand met vast breedte | Tekstbestanden met vast breedte |
 | LDAP Data Interchange Format (LDIF) | LDAP Data Interchange Format (LDIF) |
 
-## Verwante onderwerpen
+## <a name="related-topics"></a>Verwante onderwerpen
 
 [Beheeragents in FIM 2010 R2](https://technet.microsoft.com/library/jj133885.aspx)
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Nov16_HO2-->
 
 

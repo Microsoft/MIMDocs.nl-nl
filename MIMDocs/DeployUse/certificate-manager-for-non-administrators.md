@@ -1,28 +1,28 @@
 ---
-title: Self-service voor smartcard vernieuwen | Microsoft Identity Manager
+title: Selfservice voor smartcard vernieuwen | Microsoft Docs
 description: Informatie over het registreren van smartcards voor gebruikers die geen beheerdersrechten hebben voor hun computers, zodat ze de certificaatbeheerder kunnen gebruiken.
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 07/21/2016
 ms.topic: article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: bfabc562-a2f0-4cff-ac31-36927f41e102
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b3ab1b9376c9b613739d87c812f4b16a4e17e6de
-ms.openlocfilehash: 2fddede481b5ba677d0d463be4b14cda4b463865
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: 76d72211e1dbddb2647729c796ac19eb82a3b2c6
 
 
 ---
 
-# Smartcards voor niet-beheerders registreren
+# <a name="enroll-smart-cards-for-nonadministrators"></a>Smartcards voor niet-beheerders registreren
 Gebruikers die geen lokale beheerder zijn van hun computer, kunnen standaard geen smartcard registreren op hun eigen computer. Dit probleem kunt u met de volgende procedure omzeilen.
 
-## Vernieuwen van smartcard inschakelen voor niet-beheerders in MIM 2016 Certificate Manager
+## <a name="enabling-smart-card-renewal-for-nonadmins-in-mim-2016-certificate-manager"></a>Vernieuwen van smartcard inschakelen voor niet-beheerders in MIM 2016 Certificate Manager
 
 1.  **Pak het APPX-bestand uit**
 
@@ -96,6 +96,6 @@ Gebruikers die geen lokale beheerder zijn van hun computer, kunnen standaard gee
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

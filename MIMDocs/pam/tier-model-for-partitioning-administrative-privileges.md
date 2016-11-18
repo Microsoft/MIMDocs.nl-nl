@@ -1,35 +1,35 @@
 ---
-title: Het laagmodel van de PAM-omgeving | Microsoft Identity Manager
-description: Meer informatie over het laagmodel dat uw systeem scheidt op basis van de kwetsbaarheid voor risico's.
+title: Het laagmodel van de PAM-omgeving | Microsoft Docs
+description: Meer informatie over het laagmodel dat uw systeem scheidt op basis van de kwetsbaarheid voor risico&quot;s.
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 07/15/2016
 ms.topic: article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: c6e3cd02-1e32-4194-a8ed-3a0b3d022a43
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ae4c40c73dd9d5860f42e00765a7e34e8ca397a9
-ms.openlocfilehash: 1a750bedee2aac667c84113d2d08daa20428c260
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: 659a9d8ff53372300c0e52432116c7c295d59a4b
 
 
 ---
 
-# Laagmodel voor het partitioneren van beheerdersbevoegdheden
+# <a name="tier-model-for-partitioning-administrative-privileges"></a>Laagmodel voor het partitioneren van beheerdersbevoegdheden
 
 In moderne omgeving liggen bedreigingen overal op de loer en is het niet de vraag of, maar wanneer een aanvaller toegang krijgt tot uw systeem. Dat betekent dat interne beveiliging even belangrijk is als een krachtig perimeternetwerk. In dit artikel wordt een beveiligingsmodel beschreven dat is bedoeld om u te beschermen tegen onrechtmatige uitbreiding van toegangsrechten door activiteiten met hoge bevoegdheden af te schermen van zones met hoge risico's. Dit model biedt een goede gebruikerservaring en voldoet ook aan best practices en beveiligingsprincipes.
 
-## Onrechtmatige uitbreiding van toegangsrechten in Active Directory-forests
+## <a name="elevation-of-privilege-in-active-directory-forests"></a>Onrechtmatige uitbreiding van toegangsrechten in Active Directory-forests
 
 Gebruikers, services of toepassingsaccounts waaraan permanente beheerdersbevoegdheden voor forests van Windows Server Active Directory (AD) worden verleend, vormen een aanzienlijke risico voor de missie en zakelijke activiteiten van de organisatie. Aanvallers richten zich vaak op deze accounts omdat als een aanvaller hiermee bevoegdheden kan krijgen om verbinding te maken met andere servers of toepassingen in het domein.
 
 Met het laagmodel worden scheiding ingesteld tussen beheerders op basis van de resources die ze beheren. Beheerders die werkstations van gebruikers beheren, worden afgescheiden van beheerders die toepassingen of bedrijfsentiteiten beheren. Meer informatie over dit model vindt u in het [referentiemateriaal over het beveiligen van bevoegde toegang](http://aka.ms/tiermodel).
 
-## Weergave van referenties beperken met aanmeldingsbeperkingen
+## <a name="restricting-credential-exposure-with-logon-restrictions"></a>Weergave van referenties beperken met aanmeldingsbeperkingen
 
 Het verminderen van het risico op diefstal van referenties voor beheerdersaccounts omvat doorgaans een hervorming van administratieve procedures om de kwetsbaarheid voor aanvallen te verminderen. Ten eerste wordt organisaties aangeraden:
 
@@ -62,6 +62,6 @@ In het volgende artikel [Planning a bastion environment](planning-bastion-enviro
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

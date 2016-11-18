@@ -1,25 +1,25 @@
 ---
-title: AD en MIM-service synchroniseren | Microsoft Identity Manager
+title: AD en MIM-service synchroniseren | Microsoft Docs
 description: Gebruik beheeragents en de MIM-synchronisatieservice om Active Directory en de MIM-databases te synchroniseren.
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 07/21/2016
 ms.topic: get-started-article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 5e532b67-64a6-4af6-a806-980a6c11a82d
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b3ab1b9376c9b613739d87c812f4b16a4e17e6de
-ms.openlocfilehash: f17f256653936ffd06da9fae87dccfbf1c12a553
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: 59e050c8ccd811586e2da8476f842b853d37f2f1
 
 
 ---
 
-# MIM 2016 installeren: Active Directory en de MIM-service synchroniseren
+# <a name="install-mim-2016-synchronize-active-directory-and-mim-service"></a>MIM 2016 installeren: Active Directory en de MIM-service synchroniseren
 
 >[!div class="step-by-step"]
 [« MIM-service en -portal](install-mim-service-portal.md)
@@ -28,11 +28,11 @@ ms.openlocfilehash: f17f256653936ffd06da9fae87dccfbf1c12a553
 > In deze stapsgewijze instructies wordt gebruikgemaakt van voorbeeldnamen en -waarden van een bedrijf met de naam Contoso. Vervang deze door uw eigen namen en waarden. Bijvoorbeeld:
 > - Naam van de domeincontroller: **mimservername**
 > - Domeinnaam: **contoso**
-> - Wachtwoord: **Pass@word1**
+> - Wachtwoord - **Pass@word1**
 
 Er zijn voor de MIM-synchronisatieservice (Sync) standaard geen connectoren geconfigureerd.  Normaal gesproken wordt eerst met MIM Sync de database voor de MIM-service gevuld met bestaande Active Directory-accounts. U gebruikt hiervoor de MIM-synchronisatieservice.
 
-## De MIM-beheeragent maken
+## <a name="create-the-mim-management-agent"></a>De MIM-beheeragent maken
 De MIM-beheeragent (MA) is een connector voor MIM Sync met de MIM-service. Als u deze connector wilt maken, gebruikt u de wizard voor het maken van beheeragents.
 
 Wanneer u een MIM-beheeragent configureert, moet u een gebruikersaccount opgeven. In dit document wordt **MIMMA** gebruikt als de naam voor dit account.
@@ -40,15 +40,15 @@ Wanneer u een MIM-beheeragent configureert, moet u een gebruikersaccount opgeven
 > [!NOTE]
 > Het account dat u voor de MIM-beheeragent gebruikt, moet hetzelfde account zijn als het account dat u tijdens de installatie van de MIM-service hebt opgegeven.
 
-###De MIM-beheeragent maken
+###<a name="to-create-the-mim-ma"></a>De MIM-beheeragent maken
 
 1.  Open Synchronization Service Manager.
 
-2.  Klik in het menu **Acties** op **Maken** om de wizard voor het maken van de beheeragent te openen.
+2.  Ga naar de pagina **Beheeracties** en klik in het menu **Acties** op **Maken** om de wizard voor het maken van de beheeragent te openen.
 
 3.  Geef op de pagina **Beheeragent maken** de volgende instellingen op en klik vervolgens op **Volgende**.
 
-    -   Beheeragent voor: beheeragent voor de MIM-service
+    -   Beheeragent voor: beheeragent voor de FIM-service
 
     -   Naam: MIMMA
 
@@ -56,7 +56,7 @@ Wanneer u een MIM-beheeragent configureert, moet u een gebruikersaccount opgeven
 
     -   Server: localhost
 
-    -   Database: MIMService
+    -   Database: FIMService
 
     -   Basisadres van de MIM-service: http://localhost:5725
 
@@ -70,17 +70,17 @@ Wanneer u een MIM-beheeragent configureert, moet u een gebruikersaccount opgeven
 
 5.  Controleer op de pagina **Geselecteerde objecttypen** of de objecttypen zijn geselecteerd die hieronder worden vermeld en klik vervolgens op **Volgende**
 
-    -   ExpectedRuleEntry
-
     -   DetectedRuleEntry
 
-    -   SynchronizationRule
-
-    -   Persoon
+    -   ExpectedRuleEntry
 
     -   Groep
 
-6.  Controleer op de pagina **Geselecteerde kenmerken** of alle vermelde kenmerken zijn geselecteerd en klik op **Volgende**.
+    -   Persoon
+
+    -   SynchronizationRule
+
+6.  Controleer bij **Alles weergeven** op de pagina **Geselecteerde kenmerken** of alle vermelde kenmerken zijn geselecteerd en klik op **Volgende**.
 
 7.  Klik op de pagina **Connectorfilter configureren** op **Volgende**.
 
@@ -90,28 +90,18 @@ Wanneer u een MIM-beheeragent configureert, moet u een gebruikersaccount opgeven
     - Klik op **Toewijzing toevoegen** om het dialoogvenster Toewijzing te openen.
     - Selecteer **Persoon** in de lijst **Metaverseobjecttype**.
     - Klik op **OK** om het dialoogvenster Toewijzing te sluiten.
+    - Selecteer **Groep** in de lijst **Gegevensbronobjecttype**.
+    - Klik op **Toewijzing toevoegen** om het dialoogvenster Toewijzing te openen.
+    - Selecteer **Groep** in de lijst **Metaverse-objecttype**.
+    - Klik op **OK** om het dialoogvenster Toewijzing te sluiten.
 
-9.  Pas op de pagina **Kenmerkstroom configureren** de volgende kenmerkstroomtoewijzingen toe en klik vervolgens op **Volgende**
+9.  Maak op de pagina **Kenmerkstroom configureren** de hieronder weergegeven kenmerkstroomtoewijzingen en klik vervolgens op **Volgende**
 
-    | **Kenmerk van de gegevensbron** | **Stroomrichting** | **Metaverse-kenmerk** |
-    |-|-|-|
-    | AccountName | Exporteren | accountName |
-    | DisplayName | Exporteren | displayName |
-    | Domein | Exporteren | domein |
-    | Werknemer-id | Exporteren | employeeID |
-    | EmployeeType | Exporteren | employeeType |
-    | E-mail | Exporteren | E-mail |
-    | FirstName | Exporteren | firstName |
-    | LastName | Exporteren | lastName |
-    | ObjectSID | Exporteren | objectSid |
-
-10.  Selecteer **Persoon** als het gegevensbronobjecttype.
-
-    -   Selecteer **Persoon** in de lijst Metaverse-objecttype.
+    -   Selecteer **Persoon** als het gegevensbronobject- en metaverse-objecttype.
 
     -   Selecteer **Direct** als het toewijzingstype.
 
-    -   Voer voor elke rij in de voorgaande tabel de volgende stappen uit:
+    -   Voer voor elke rij in de volgende tabel de volgende stappen uit:
 
         -   Selecteer de **gegevensstroomrichting** die wordt weergegeven voor die rij in de tabel.
 
@@ -121,7 +111,19 @@ Wanneer u een MIM-beheeragent configureert, moet u een gebruikersaccount opgeven
 
         -   Als u stroomtoewijzing wilt toepassen, klikt u op **Nieuw**.
 
-    -   Selecteer **Groep** als het gegevensbrontype en als het type metaverse-object.
+    | **Kenmerk van de gegevensbron** | **Stroomrichting** | **Metaverse-kenmerk** |
+    |-|-|-|
+    | AccountName | Exporteren | accountName |
+    | DisplayName | Exporteren | displayName |
+    | Domein | Exporteren | domein |
+    | E-mail | Exporteren | E-mail |
+    | Werknemer-id | Exporteren | employeeID |
+    | EmployeeType | Exporteren | employeeType |
+    | FirstName | Exporteren | firstName |
+    | LastName | Exporteren | lastName |
+    | ObjectSID | Exporteren | objectSid |
+
+    -   Selecteer **Groep** als het gegevensbron- en metaverse-objecttype.
 
     -   Selecteer **Direct** als het toewijzingstype.
 
@@ -148,20 +150,19 @@ Wanneer u een MIM-beheeragent configureert, moet u een gebruikersaccount opgeven
     | Type | Exporteren | Type |
     | MembershipAddWorkflow | Exporteren | membershipAddWorkflow |
     | MembershipLocked | Exporteren | membershipLocked |
-    | DisplayName | Importeren | displayName |
-    | Bereik | Importeren | bereik |
-    | Type | Importeren | Type |
-    | Lid | Importeren | lid |
     | AccountName | Importeren | accountName |
     | DisplayedOwner | Importeren | displayedOwner |
+    | DisplayName | Importeren | displayName |
     | MailNickName | Importeren | mailNickName |
+    | Lid | Importeren | lid |
+    | Bereik | Importeren | bereik |
+    | Type | Importeren | Type |
 
+10.  Klik op de pagina **Ongedaan maken van de inrichting configureren** op **Volgende**
 
-11.  Klik op de pagina **Ongedaan maken van de inrichting configureren** op **Volgende**
+11.  Als u de beheeragent op de pagina **Uitbreidingen configureren** wilt maken, klikt u op **Voltooien**.
 
-12.  Als u de beheeragent op de pagina **Uitbreidingen configureren** wilt maken, klikt u op **Voltooien**.
-
-## De AD-beheeragent maken
+## <a name="create-the-ad-management-agent"></a>De AD-beheeragent maken
 De Active Directory-beheeragent is een connector voor AD-domeinservices. Als u deze connector wilt maken, gebruikt u de wizard voor het maken van beheeragents.
 
 1. Klik in het menu **Acties** op **Maken** om de wizard voor het maken van de beheeragent te openen.
@@ -194,11 +195,7 @@ De Active Directory-beheeragent is een connector voor AD-domeinservices. Als u d
 
     - Selecteer in de lijst **Objecttypen** de optie **gebruiker** en **groep**.
 
-7. Geef op de pagina **Kenmerken selecteren** de volgende instellingen op en klik vervolgens op **Volgende**:
-
-    - Selecteer **Alles weergeven**.
-
-8. Selecteer in de lijst **Kenmerken** de volgende kenmerken:
+7. Selecteer op de pagina **Kenmerken selecteren** de optie **Alles weergeven**, selecteer de volgende kenmerken en klik op **Volgende**:
 
     -   bedrijf
     -   displayName
@@ -206,8 +203,8 @@ De Active Directory-beheeragent is een connector voor AD-domeinservices. Als u d
     -   employeeType
     -   givenName
     -   groupType
-    -   manager
     -   managedBy
+    -   manager
     -   lid
     -   objectSid
     -   sAMAccountName
@@ -216,22 +213,22 @@ De Active Directory-beheeragent is een connector voor AD-domeinservices. Als u d
     -   unicodePwd
     -   userAccountControl
 
-9. Klik op de pagina **Connectorfilter configureren** op **Volgende**.
+8. Klik op de pagina **Connectorfilter configureren** op **Volgende**.
 
-10. Klik op de pagina **Regels voor samenvoegen en projectie configureren** op **Volgende**.
+9. Klik op de pagina **Regels voor samenvoegen en projectie configureren** op **Volgende**.
 
-11. Klik op de pagina **Kenmerkstroom configureren** op **Volgende**.
+10. Klik op de pagina **Kenmerkstroom configureren** op **Volgende**.
 
-12. Klik op de pagina **Ongedaan maken van de inrichting configureren** op **Volgende**.
+11. Klik op de pagina **Ongedaan maken van de inrichting configureren** op **Volgende**.
 
-13. Klik op de pagina **Uitbreidingen configureren** op **Voltooien**.
+12. Klik op de pagina **Uitbreidingen configureren** op **Voltooien**.
 
 
-## Uitvoeringsprofielen maken
+## <a name="create-run-profiles"></a>Uitvoeringsprofielen maken
 
 Uitvoeringsprofielen maken voor de ADMA- en MIMMA-connectoren.
 
-### Uitvoeringsprofielen maken voor de ADMA-connector
+### <a name="create-run-profiles-for-the-adma-connector"></a>Uitvoeringsprofielen maken voor de ADMA-connector
 
 In de volgende tabel worden de vijf uitvoeringsprofielen weergegeven die u voor de ADMA-connector kunt maken:
 
@@ -263,7 +260,7 @@ Uitvoeringsprofielen maken voor de ADMA-connector:
 
 5. Klik op **OK** om het dialoogvenster Uitvoeringsprofielen configureren te sluiten.
 
-### Uitvoeringsprofielen maken voor de MIMMA-connector
+### <a name="create-run-profiles-for-the-mimma-connector"></a>Uitvoeringsprofielen maken voor de MIMMA-connector
 
 In de volgende tabel worden de vijf overeenkomstige uitvoeringsprofielen weergegeven voor de MIMMA-connector:
 
@@ -295,7 +292,7 @@ U kunt als volgt uitvoeringsprofielen maken voor de MIMMA-connector:
 
 5. Klik op **OK** om het dialoogvenster Uitvoeringsprofielen configureren te sluiten.
 
-## De MIM-service configureren
+## <a name="configure-the-mim-service"></a>De MIM-service configureren
 
 U maakt met de MIM-portal de synchronisatieregel voor binnenkomende gegevens van de AD-gebruiker voor de MIM-service.
 
@@ -322,7 +319,7 @@ U kunt als volgt de synchronisatieregel voor binnenkomende gegevens van de AD-ge
 
     -   Als u de Relatiecriteria wilt configureren, selecteert u **ObjectSID** in de lijst MetaverseObject:person(Attribute) en de lijst ConnectedSystemObject:person(Attribute).
 
-    -   Selecteer **Resource maken in MIM**.
+    -   Selecteer **Resource maken in FIM**.
 
 7. Geef op de pagina **Binnenkomende kenmerkstroom** de volgende gegevens op en klik vervolgens op **Volgende**:
 
@@ -349,10 +346,10 @@ U kunt als volgt de synchronisatieregel voor binnenkomende gegevens van de AD-ge
 
 8. Klik op het tabblad **Overzicht** op **Verzenden**.
 
-## De testomgeving initialiseren
+## <a name="initialize-the-testing-environment"></a>De testomgeving initialiseren
 Er zijn vier stappen die u moet uitvoeren voordat u de MIM-configuratie met AD-gegevens kunt testen:
 
-### De inrichting inschakelen
+### <a name="enable-provisioning"></a>De inrichting inschakelen
 
 1. Open Synchronization Service Manager.
 
@@ -362,7 +359,7 @@ Er zijn vier stappen die u moet uitvoeren voordat u de MIM-configuratie met AD-g
 
 4. Klik op **OK** om het dialoogvenster Opties te sluiten.
 
-### De MIMMA initialiseren
+### <a name="initialize-the-mimma"></a>De MIMMA initialiseren
 
 Voer een volledige synchronisatiecyclus uit voor deze connector. De volledige cyclus bestaat uit de volgende uitvoeringsprofielen:
 
@@ -387,13 +384,13 @@ Hanteer de volgende stappen om elk van de vier uitvoeringsprofielen uit te voere
 
     - Klik op **OK** om het uitvoeringsprofiel te starten.
 
-#### De kenmerkstroomvolgorde configureren
+#### <a name="configure-attribute-flow-precedence"></a>De kenmerkstroomvolgorde configureren
 
 Tijdens de initialisatie van de MIM-connector zijn de geconfigureerde synchronisatieregels overgebracht naar de metaverse.
 
 Stel de kenmerkstroomvolgorde in van de kenmerken die door deze connector worden bijgedragen zodat de kenmerken die zich al in AD bevinden naar de metaverse en later ook naar de database van de MIM-service kunnen stromen.
 
-### De ADMA initialiseren
+### <a name="initialize-the-adma"></a>De ADMA initialiseren
 
 Als u de Active Directory-connector wilt initialiseren, moet u hiervoor een volledige import en een volledige synchronisatie uitvoeren. Bij de volledige import worden de bestaande objecten uit Active Directory naar het connectorgebied overgebracht. Bij de volledige synchronisatie worden de synchronisatieregels bijgewerkt zodat deze overeenkomen met die van de MIM-connector.
 
@@ -411,7 +408,7 @@ Als u de Active Directory-connector wilt initialiseren, moet u hiervoor een voll
 
     - Klik op **OK** om het uitvoeringsprofiel te starten.
 
-### De database voor de MIM-service vullen
+### <a name="populate-the-mim-service-database"></a>De database voor de MIM-service vullen
 
 Als u de database voor de MIM-service wilt vullen met de objecten, moet u een synchronisatiecyclus uitvoeren voor de MIMMA-connector. De cyclus bestaat uit:
 
@@ -438,6 +435,6 @@ Hanteer de volgende stappen om elk van de drie uitvoeringsprofielen uit te voere
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 
