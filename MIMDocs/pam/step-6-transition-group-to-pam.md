@@ -1,25 +1,25 @@
 ---
-title: PAM implementeren - Stap 6 - Groep verplaatsen | Microsoft Identity Manager
+title: PAM implementeren - Stap 6 - Groep verplaatsen | Microsoft Docs
 description: Een groep migreren naar het PRIV-forest, zodat de groep kan worden beheerd met Privilege Access Management.
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 07/15/2016
 ms.topic: article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 7b689eff-3a10-4f51-97b2-cb1b4827b63c
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ae4c40c73dd9d5860f42e00765a7e34e8ca397a9
-ms.openlocfilehash: 603e5e28f0eee0f648ef7e00ef137f5a08b2ba34
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: 9e70bdd3c586a16a9a55c91bd0e099a500950a64
 
 
 ---
 
-# Stap 6 – Een groep overzetten naar Privileged Access Management
+# <a name="step-6-transition-a-group-to-privileged-access-management"></a>Stap 6 – Een groep overzetten naar Privileged Access Management
 
 >[!div class="step-by-step"]
 [«Stap 5 ](step-5-establish-trust-between-priv-corp-forests.md)
@@ -45,7 +45,7 @@ De cmdlets moet eenmaal voor elke groep worden uitgevoerd en eenmaal voor elk li
 
 3.  Maak voor demonstratiedoeleinden een overeenkomend gebruikersaccount in PRIV voor een gebruikersaccount in een bestaand forest.
 
-    Typ in PowerShell de volgende opdrachten.  Als u niet de naam *Jen* hebt gebruikt om eerder de gebruiker in contoso.local te maken, wijzigt u waar nodig de parameters van de opdracht. Het wachtwoord Pass@word1 is slechts een voorbeeld en moet worden gewijzigd in een unieke wachtwoordwaarde.
+    Typ in PowerShell de volgende opdrachten.  Als u niet de naam *Jen* hebt gebruikt om eerder de gebruiker in contoso.local te maken, wijzigt u waar nodig de parameters van de opdracht. Het wachtwoord 'Pass@word1' is slechts een voorbeeld en moet worden gewijzigd in een unieke wachtwoordwaarde.
 
     ```
     $sj = New-PAMUser –SourceDomain CONTOSO.local –SourceAccountName Jen
@@ -90,6 +90,6 @@ Als u wilt demonstreren dat forest-overschrijdende toegangsrechten geldig zijn v
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

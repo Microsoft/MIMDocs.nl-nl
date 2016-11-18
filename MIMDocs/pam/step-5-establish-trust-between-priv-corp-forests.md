@@ -1,25 +1,25 @@
 ---
-title: PAM implementeren - Stap 5 - Forest-koppeling | Microsoft Identity Manager
+title: PAM implementeren - Stap 5 - Forest-koppeling | Microsoft Docs
 description: Vertrouwensrelatie tussen de PRIV- en CORP-forests instellen zodat bevoegde gebruikers in PRIV nog steeds toegang hebben tot resources in CORP.
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 07/15/2016
 ms.topic: article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: eef248c4-b3b6-4b28-9dd0-ae2f0b552425
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ae4c40c73dd9d5860f42e00765a7e34e8ca397a9
-ms.openlocfilehash: 3a7039f5d7c950cd0d4c8ab713a7beacc5c45526
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: 16208efe08c5a2c0f63ee121c64c45cad5a73909
 
 
 ---
 
-# Stap 5 –Een vertrouwensrelatie tussen het PRIV- en CORP-forest instellen
+# <a name="step-5-establish-trust-between-priv-and-corp-forests"></a>Stap 5 –Een vertrouwensrelatie tussen het PRIV- en CORP-forest instellen
 
 >[!div class="step-by-step"]
 [« Stap 4](step-4-install-mim-components-on-pam-server.md)
@@ -28,7 +28,7 @@ ms.openlocfilehash: 3a7039f5d7c950cd0d4c8ab713a7beacc5c45526
 
 Voor elk CORP-domein, zoals contoso.local, moet voor de PRIV- en CONTOSO-domeincontrollers een vertrouwensrelatie zijn ingesteld. Hiermee hebben gebruikers in het PRIV-domein toegang tot resources op het CORP-domein.
 
-## Elke domeincontroller verbinden met het bijbehorende equivalent
+## <a name="connect-each-domain-controller-to-its-counterpart"></a>Elke domeincontroller verbinden met het bijbehorende equivalent
 
 Voordat een vertrouwensrelatie tot stand kan worden gebracht, moet elke domeincontroller worden geconfigureerd voor DNS-naamomzetting voor het bijbehorende equivalent op basis van het IP-adres van de domeincontroller/DNS-server.
 
@@ -46,7 +46,7 @@ Voordat een vertrouwensrelatie tot stand kan worden gebracht, moet elke domeinco
 
     ![bestandsstructuur voor priv-sleutel - schermafbeelding](./media/PAM_GS_DNS_Manager.png)
 
-## Vertrouwensrelatie op PAMSRV instellen
+## <a name="establish-trust-on-pamsrv"></a>Vertrouwensrelatie op PAMSRV instellen
 
 Op PAMSRV moet u een eenzijdige vertrouwensrelatie met elk domein, zoals CORPDC, instellen zodat de CORP-domeincontrollers het PRIV-forest vertrouwen.
 
@@ -68,7 +68,7 @@ Op PAMSRV moet u een eenzijdige vertrouwensrelatie met elk domein, zoals CORPDC,
     New-PAMDomainConfiguration -SourceDomain "contoso" -Credentials $ca
     ```
 
-## Forests leestoegang tot Active Directory geven
+## <a name="give-forests-read-access-to-active-directory"></a>Forests leestoegang tot Active Directory geven
 
 Voor elk bestaand forest moet u voor PRIV-beheerders en de controleservice leestoegang tot AD inschakelen.
 
@@ -91,7 +91,7 @@ Voor elk bestaand forest moet u voor PRIV-beheerders en de controleservice leest
 
     Ook moet **Filteren op SID's is niet ingeschakeld voor deze vertrouwensrelatie** worden weergegeven in de uitvoer. Zie [Disable SID filter quarantining](http://technet.microsoft.com/library/cc772816.aspx) (In quarantaine plaatsen voor SID-filters uitschakelen) voor meer informatie.
 
-## De services voor controle en onderdelen starten
+## <a name="start-the-monitoring-and-component-services"></a>De services voor controle en onderdelen starten
 
 1.  Meld u aan bij PAMSRV als een PRIV-domeinbeheerder (PRIV\Administrator).
 
@@ -112,6 +112,6 @@ In de volgende stap gaat u een groep naar PAM verplaatsen.
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

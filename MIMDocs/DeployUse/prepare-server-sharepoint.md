@@ -1,25 +1,25 @@
 ---
-title: SharePoint configureren | Microsoft Identity Manager
+title: SharePoint configureren | Microsoft Docs
 description: Installeer en configureer SharePoint Foundation zodat deze de MIM-portalpagina kan hosten.
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 07/21/2016
 ms.topic: get-started-article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: c01487f2-3de6-4fc4-8c3a-7d62f7c2496c
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b3ab1b9376c9b613739d87c812f4b16a4e17e6de
-ms.openlocfilehash: 9885579d9fb72dd4e73ec5a8a359b35c49d10440
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: f67bb8260f0f1e6ef491a5de7e7ef95009651cf2
 
 
 ---
 
-# Een server voor identiteitsbeheer instellen: SharePoint
+# <a name="set-up-an-identity-management-server-sharepoint"></a>Een server voor identiteitsbeheer instellen: SharePoint
 
 >[!div class="step-by-step"]
 [« SQL Server 2014](prepare-server-sql2014.md)
@@ -29,10 +29,10 @@ ms.openlocfilehash: 9885579d9fb72dd4e73ec5a8a359b35c49d10440
 > In deze stapsgewijze instructies wordt gebruikgemaakt van voorbeeldnamen en -waarden van een bedrijf met de naam Contoso. Vervang deze door uw eigen namen en waarden. Bijvoorbeeld:
 > - Naam van de domeincontroller: **mimservername**
 > - Domeinnaam: **contoso**
-> - Wachtwoord: **Pass@word1**
+> - Wachtwoord - **Pass@word1**
 
 
-## Installeer **SharePoint Foundation 2013 met SP1**
+## <a name="install-sharepoint-foundation-2013-with-sp1"></a>Installeer **SharePoint Foundation 2013 met SP1**
 
 > [!NOTE]
 > Voor het installatieprogramma is een internetverbinding vereist zodat de vereiste onderdelen hiervoor kunnen worden gedownload. Als de computer zich op een virtueel netwerk bevindt dat geen verbinding met internet heeft, voegt u een extra netwerkinterface toe aan de computer zodat deze verbinding met internet kan maken. Dit kan worden uitgeschakeld nadat de installatie is voltooid.
@@ -59,7 +59,7 @@ Volg onderstaande stappen voor het installeren van SharePoint Foundation 2013 SP
 
 4.  Wanneer de installatie is voltooid, voert u de wizard uit.
 
-## De wizard voor het configureren van SharePoint uitvoeren
+## <a name="run-the-wizard-to-configure-sharepoint"></a>De wizard voor het configureren van SharePoint uitvoeren
 
 Voer de stappen uit die in de **wizard Configuratie van SharePoint-producten** worden vermeld, zodat SharePoint zo wordt geconfigureerd dat het met MIM kan samenwerken.
 
@@ -79,7 +79,7 @@ Voer de stappen uit die in de **wizard Configuratie van SharePoint-producten** w
 
 8. Klik in het venster **Een siteverzameling maken** op **Overslaan**.  Klik vervolgens op **Voltooien**.
 
-## SharePoint voorbereiden om de MIM-portal te hosten
+## <a name="prepare-sharepoint-to-host-the-mim-portal"></a>SharePoint voorbereiden om de MIM-portal te hosten
 
 > [!NOTE]
 > In eerste instantie wordt SSL niet geconfigureerd. Configureer SSL of een vergelijkbaar protocol voordat u toegang tot deze portal inschakelt.
@@ -137,6 +137,6 @@ Voer de stappen uit die in de **wizard Configuratie van SharePoint-producten** w
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

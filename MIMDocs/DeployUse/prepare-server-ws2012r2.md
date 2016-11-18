@@ -1,25 +1,25 @@
 ---
-title: Windows Server configureren | Microsoft Identity Manager
+title: Windows Server configureren | Microsoft Docs
 description: Lees welke stappen moeten worden uitgevoerd en wat de minimale vereisten zijn voor het voorbereiden van Windows Server 2012 RS zodat dit kan samenwerken met MIM 2016.
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 08/11/2016
 ms.topic: get-started-article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 51507d0a-2aeb-4cfd-a642-7c71e666d6cd
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 739797502e09c2b92e35767e2c943308cd1de5c9
-ms.openlocfilehash: bdf1f4b7c5762095f4986506f9e17369dadea011
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: 06d2365808858dc09d04ab37eafa9d6e3212cbcf
 
 
 ---
 
-# Een server voor identiteitsbeheer instellen: Windows Server 2012 R2
+# <a name="set-up-an-identity-management-server-windows-server-2012-r2"></a>Een server voor identiteitsbeheer instellen: Windows Server 2012 R2
 
 >[!div class="step-by-step"]
 [« Een domein voorbereiden](preparing-domain.md)
@@ -29,9 +29,9 @@ ms.openlocfilehash: bdf1f4b7c5762095f4986506f9e17369dadea011
 > In deze stapsgewijze instructies wordt gebruikgemaakt van voorbeeldnamen en -waarden van een bedrijf met de naam Contoso. Vervang deze door uw eigen namen en waarden. Bijvoorbeeld:
 > - Naam van de domeincontroller: **mimservername**
 > - Domeinnaam: **contoso**
-> - Wachtwoord: **Pass@word1**
+> - Wachtwoord - **Pass@word1**
 
-## Windows Server 2012 R2 aan uw domein koppelen
+## <a name="join-windows-server-2012-r2-to-your-domain"></a>Windows Server 2012 R2 aan uw domein koppelen
 
 Begin met een Windows Server 2012 R2-computer, met minimaal 8 GB aan RAM-geheugen. Geef bij de installatie de editie Windows Server 2012 R2 Standard x64 (server met een GUI) op.
 
@@ -62,7 +62,7 @@ Begin met een Windows Server 2012 R2-computer, met minimaal 8 GB aan RAM-geheuge
     Install-WindowsFeature Web-WebServer, Net-Framework-Features,rsat-ad-powershell,Web-Mgmt-Tools,Application-Server,Windows-Identity-Foundation,Server-Media-Foundation,Xps-Viewer –includeallsubfeature -restart -source d:\sources\SxS
     ```
 
-## Het beveiligingsbeleid van de server configureren
+## <a name="configure-the-server-security-policy"></a>Het beveiligingsbeleid van de server configureren
 
 Stel het beveiligingsbeleid van de server zo in dat de zojuist gemaakte accounts als services kunnen worden uitgevoerd.
 
@@ -93,7 +93,7 @@ Stel het beveiligingsbeleid van de server zo in dat de zojuist gemaakte accounts
 12. Sluit het venster Lokaal beveiligingsbeleid.
 
 
-## De Windows-verificatiemodus voor IIS wijzigen
+## <a name="change-the-iis-windows-authentication-mode"></a>De Windows-verificatiemodus voor IIS wijzigen
 
 1.  Open een PowerShell-venster.
 
@@ -111,6 +111,6 @@ Stel het beveiligingsbeleid van de server zo in dat de zojuist gemaakte accounts
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Nov16_HO2-->
 
 

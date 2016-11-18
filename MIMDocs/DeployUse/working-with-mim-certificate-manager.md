@@ -1,25 +1,25 @@
 ---
-title: MIM Certificate Manager | Microsoft Identity Manager
+title: MIM Certificate Manager | Microsoft Docs
 description: Lees hoe u de Certificate Manager-app kunt implementeren zodat de gebruikers hun eigen toegangsrechten kunnen beheren.
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 07/21/2016
 ms.topic: article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 66060045-d0be-4874-914b-5926fd924ede
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b3ab1b9376c9b613739d87c812f4b16a4e17e6de
-ms.openlocfilehash: 1aea9543af4dd7f3eab4f01eab52d8c11b36191d
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: a2be6b5640dde5e2908dce36ea13d920a6643874
 
 
 ---
 
-# Werken met MIM Certificate Manager
+# <a name="working-with-the-mim-certificate-manager"></a>Werken met MIM Certificate Manager
 Wanneer MIM 2016 en Certificate Manager eenmaal actief en werkend zijn, kunt u de Windows Store-app voor MIM Certificate Manager implementeren zodat gebruikers eenvoudig hun fysieke en virtuele smartcards, en softwarecertificaten kunnen beheren. U kunt via de volgende stappen de MIM CM-app implementeren:
 
 1.  Maak een certificaatsjabloon.
@@ -30,7 +30,7 @@ Wanneer MIM 2016 en Certificate Manager eenmaal actief en werkend zijn, kunt u d
 
 4.  Implementeer de app via SCCM of Intune.
 
-## Een certificaatsjabloon maken
+## <a name="create-a-certificate-template"></a>Een certificaatsjabloon maken
 U maakt een certificaatsjabloon voor de CM-app op dezelfde manier als u normaal gesproken doet, alleen moet u ervoor zorgen dat de certificaatsjabloon versie 3 of hoger heeft.
 
 1.  Meld u aan bij de server waarop AD CS (de certificaatserver) wordt uitgevoerd.
@@ -69,7 +69,7 @@ U maakt een certificaatsjabloon voor de CM-app op dezelfde manier als u normaal 
 
 16. Selecteer in de lijst de nieuwe sjabloon die u hebt gemaakt en klik op **OK**.
 
-## Een profielsjabloon maken
+## <a name="create-a-profile-template"></a>Een profielsjabloon maken
 Wanneer u een profielsjabloon maakt, moet u deze instellen op Virtuele smartcard maken/verwijderen en op Gegevensverzameling verwijderen. De CM-app kan geen verzamelde gegevens verwerken, dus is het belangrijk dat u deze optie als volgt uitschakelt.
 
 1.  Meld u bij de CM-portal aan als gebruiker met beheerdersbevoegdheden.
@@ -94,7 +94,7 @@ Wanneer u een profielsjabloon maakt, moet u deze instellen op Virtuele smartcard
 
 11. U moet gegevensverzamelingsitems voor elk beleid uitschakelen door op het beleid in het linkerdeelvenster te klikken, het selectievakje naast **Voorbeeldgegevensitem** in te schakelen en vervolgens op **Gegevensverzamelingsitems verwijderen** te klikken. Klik vervolgens op **OK**.
 
-## De CM-app voor de implementatie voorbereiden
+## <a name="prepare-the-cm-app-for-deployment"></a>De CM-app voor de implementatie voorbereiden
 
 1.  Voer in het opdrachtpromptvenster de volgende opdracht uit om de app uit te pakken en de inhoud in een nieuwe submap met de naam appx te plaatsen en om een kopie te maken zodat u het oorspronkelijke bestand niet wijzigt.
 
@@ -148,7 +148,7 @@ Wanneer u een profielsjabloon maakt, moet u deze instellen op Virtuele smartcard
 
     -   Open de toepassing voor virtuele smartcards. Zo kunt u de waarden die nodig zijn voor de volgende stap gemakkelijker vinden.
 
-    -   Als u de toepassing als een client aan de AD FS-server wilt toevoegen en CM op de server wilt configureren, opent u Windows PowerShell op de AD FS-server en voert u de volgende opdracht uit: `ConfigureMimCMClientAndRelyingParty.ps1 –redirectUri <redirectUriString> -serverFQDN <MimCmServerFQDN>`
+    -   Als u de toepassing als een client aan de AD FS-server wilt toevoegen en CM op de server wilt configureren, opent u Windows PowerShell op de AD FS-server en voert u de opdracht `ConfigureMimCMClientAndRelyingParty.ps1 –redirectUri <redirectUriString> -serverFQDN <MimCmServerFQDN>` uit.
 
         Hieronder ziet u het script ConfigureMimCMClientAndRelyingParty.ps1:
 
@@ -249,13 +249,13 @@ Wanneer u een profielsjabloon maakt, moet u deze instellen op Virtuele smartcard
 
     -   De serverFQDN is alleen de volledige computernaam van de MIMCM-server.
 
-    -   Voor ondersteuning bij het script **ConfigureMIimCMClientAndRelyingParty.ps1** voert u de volgende opdracht uit: `get-help  -detailed ConfigureMimCMClientAndRelyingParty.ps1`
+    -   Voor ondersteuning bij het script **ConfigureMIimCMClientAndRelyingParty.ps1** voert u de opdracht `get-help  -detailed ConfigureMimCMClientAndRelyingParty.ps1` uit.
 
-## De app implementeren
+## <a name="deploy-the-app"></a>De app implementeren
 Wanneer u de CM-app instelt, moet u in het Downloadcentrum het bestand MIMDMModernApp_&lt;versie&gt;_AnyCPU_Test.zip downloaden en alle inhoud daarvan uitpakken. Het appx-bestand is het installatieprogramma. U kunt de app implementeren zoals u normaal gesproken met [System Center Configuration Manager](https://technet.microsoft.com/library/dn613840.aspx) of [Intune](https://technet.microsoft.com/library/dn613839.aspx) Windows Store-apps implementeert. Hierbij wordt de app gesideload zodat gebruikers de bedrijfsportal moeten gebruiken om toegang te krijgen tot de app of de app wordt rechtstreeks naar de computers van de gebruikers gepusht.
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 
