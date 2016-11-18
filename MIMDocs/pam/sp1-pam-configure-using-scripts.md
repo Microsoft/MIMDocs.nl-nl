@@ -3,23 +3,23 @@ title: PAM configureren met behulp van scripts
 description: Het CORP-domein voorbereiden met bestaande of nieuwe identiteiten die worden beheerd door Privileged Identity Manager via scripts
 keywords: 
 author: barclayn
+ms.author: barclayn
 manager: MBaldwin
-ms.date: 09/26/2016
+ms.date: 10/04/2016
 ms.topic: article
-ms.prod: microsoft-identity-manager
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: 
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 96c734ade75f5c206858387cf45106761bc0a881
-ms.openlocfilehash: a1e4e5561bf8d38c56c3d27249d94f4bf7103b8c
+ms.sourcegitcommit: 365989693f844f117f76ee2b69db85df82f06f35
+ms.openlocfilehash: 3aca2fb513280f118e760bdbc2ba471151c41b17
 
 
 ---
 
-# PAM configureren met behulp van scripts
+# <a name="configure-pam-using-scripts"></a>PAM configureren met behulp van scripts
 
 Als u ervoor kiest SQL en SharePoint op afzonderlijke servers te installeren, moeten deze worden geconfigureerd volgens onderstaande instructies. Als SQL, SharePoint en de PAM-onderdelen zijn geïnstalleerd op dezelfde computer, moeten de onderstaande stappen worden uitgevoerd vanaf deze computer.
 
@@ -39,11 +39,11 @@ stappen:
 5. Kopieer dezelfde PAMDeploymentConfig.xml naar de map %SYSTEMDRIVE%\PAM op alle computers, CORPDC-, PRIVDC-, PAM-Server-, SQL Server-, en SharePoint-servers.
 
 
-## Werkblad voor implementatie
+## <a name="deployment-worksheet"></a>Werkblad voor implementatie
 
 Voordat u verdergaat, moet u de PAMDeploymentConfig.xml bijwerken en het bijgewerkte exemplaar op alle computers plaatsen.
 
-### Setup
+### <a name="setup"></a>Setup
 
 |Machine   | Uitvoeren als   |Opdrachten   |
 |---|---|---|
@@ -55,7 +55,7 @@ Voordat u verdergaat, moet u de PAMDeploymentConfig.xml bijwerken en het bijgewe
 | PAMServer  | Lokale administrator (MIM Admin na toevoeging aan het domein)  | .\PAMDeployment.ps1 Selecteer menuoptie 5 (MIM PAM Setup)   |
 |  PAMServer |MIMAdmin   | .\PAMDeployment.ps1 Selecteer menuoptie 6 (PAM Trust Setup) .\PAMDeployment.ps1 Selecteer menuoptie 6 (PAM Trust Setup) |
 
-### Validatie
+### <a name="validation"></a>Validatie
 
 |  Machine | Uitvoeren als   | Opdrachten   |
 |---|---|---|
@@ -66,7 +66,11 @@ Voordat u verdergaat, moet u de PAMDeploymentConfig.xml bijwerken en het bijgewe
 |  CORP-client | <PRIV>\PRIV.pamRequestor-gebruiker en in het geval van PRIVOnly: <CORP>\pamrequestor   | Importmodule .\PAMValidation.psm1; Testen-PAMValidationScenarioNoApprovalRequest  |
 
 
+>[!div class="step-by-step"]
+[Start »](sp1-step1-configuring-priv-domain.md)
 
-<!--HONumber=Sep16_HO4-->
+
+
+<!--HONumber=Nov16_HO2-->
 
 

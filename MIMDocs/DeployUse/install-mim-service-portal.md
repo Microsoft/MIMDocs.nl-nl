@@ -1,25 +1,25 @@
 ---
-title: De MIM-service en -portal installeren | Microsoft Identity Manager
+title: De MIM-service en -portal installeren | Microsoft Docs
 description: Lees welke stappen u moet uitvoeren voor het configureren en installeren van de MIM-service en -portal voor Microsoft Identity Manager 2016
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 08/11/2016
 ms.topic: get-started-article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: b0b39631-66df-4c5f-80c9-a1774346f816
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 739797502e09c2b92e35767e2c943308cd1de5c9
-ms.openlocfilehash: 438754773057043b8560562bab0ae260fb3a4bc2
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: 4d0f08d84c39c982d43b2a0e0ba2f694aed508da
 
 
 ---
 
-# MIM 2016 installeren: de MIM-service en -portal
+# <a name="install-mim-2016-mim-service-and-portal"></a>MIM 2016 installeren: de MIM-service en -portal
 
 >[!div class="step-by-step"]
 [« MIM-synchronisatieservice](install-mim-sync.md)
@@ -29,13 +29,13 @@ ms.openlocfilehash: 438754773057043b8560562bab0ae260fb3a4bc2
 > In deze stapsgewijze instructies wordt gebruikgemaakt van voorbeeldnamen en -waarden van een bedrijf met de naam Contoso. Vervang deze door uw eigen namen en waarden. Bijvoorbeeld:
 > - Naam van de domeincontroller: **mimservername**
 > - Domeinnaam: **contoso**
-> - Wachtwoord: **Pass@word1**
+> - Wachtwoord - **Pass@word1**
 > - Serviceaccountnaam: **MIMService**
 
 Als u in de laatste stap geen MIM-installatiepakket hebt ingesteld, gaat u terug en installeert u de Microsoft Identity Manager 2016-onderdelen voordat u verdergaat.
 
 
-## De MIM-service en -portal configureren voor de installatie
+## <a name="configure-mim-service-and-portal-for-installation"></a>De MIM-service en -portal configureren voor de installatie
 
 1. Voer het **installatieprogramma voor de MIM-service en -portal** uit in de uitgepakte submap **Service en portal**.
 
@@ -77,7 +77,7 @@ Als u in de laatste stap geen MIM-installatiepakket hebt ingesteld, gaat u terug
 
 16. Schakel het selectievakje in om de poorten 5725 en 5726 in de firewall te openen en schakel het selectievakje in om alle geverifieerde gebruikers toegang te verlenen tot de MIM-portal.
 
-## De MIM-portal voor wachtwoordregistratie configureren
+## <a name="configure-mim-password-registration-portal"></a>De MIM-portal voor wachtwoordregistratie configureren
 
 1.  Stel de serviceaccountnaam voor SSPR-registratie in op *contoso\MIMSSPR* en het bijbehorende wachtwoord op *Pass@word1*.
 
@@ -89,7 +89,7 @@ Als u in de laatste stap geen MIM-installatiepakket hebt ingesteld, gaat u terug
 
 4. Geef in het volgende configuratiescherm voor de MIM-portal voor wachtwoordregistratie *http://CorpIDM.contoso.local* op als serveradres van de MIM-service voor de MIM-portal voor wachtwoordregistratie.
 
-## Het MIM-portal voor het opnieuw instellen van het wachtwoord configureren
+## <a name="configure-mim-password-reset-portal"></a>Het MIM-portal voor het opnieuw instellen van het wachtwoord configureren
 
 1.  Stel de serviceaccountnaam voor SSPR-registratie in op *Contoso\MIMSSPRService* en het bijbehorende wachtwoord op *Pass@word1*.
 
@@ -101,7 +101,7 @@ Als u in de laatste stap geen MIM-installatiepakket hebt ingesteld, gaat u terug
 
 4. Geef in het volgende configuratiescherm voor de MIM-portal voor wachtwoordregistratie *CorpIDname  http://CorpIDname.domain.local* op als het serveradres van de MIM-service voor de portal voor het opnieuw instellen van het wachtwoord.
 
-## De MIM-service en -portal installeren
+## <a name="install-mim-service-and-portal"></a>De MIM-service en -portal installeren
 
 Wanneer alle definities voorafgaand aan de installatie gereed zijn, klikt u op **Installeren** om met de installatie van de geselecteerde onderdelen voor de **service en portal** te beginnen.
 
@@ -152,6 +152,6 @@ Nadat de installatie is voltooid, controleert u of de MIM-portal actief is.
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Nov16_HO2-->
 
 

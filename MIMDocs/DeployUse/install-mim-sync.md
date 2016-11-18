@@ -1,25 +1,25 @@
 ---
-title: MIM-synchronisatieservice installeren | Microsoft Identity Manager
+title: MIM-synchronisatieservice installeren | Microsoft Docs
 description: Ga aan de slag met de MIM 2016-onderdelen en installeer en configureer de synchronisatieservice.
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 08/11/2016
 ms.topic: get-started-article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 2585e9c5-ce34-46c7-bdcf-8c08773901dc
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 739797502e09c2b92e35767e2c943308cd1de5c9
-ms.openlocfilehash: ba399da1431ea1d2d1633d0469e054ffd89f1d34
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: dc1f7ff40ed5f657c24e7293ff76241c3a7082f1
 
 
 ---
 
-# MIM 2016: MIM-synchronisatieservice installeren
+# <a name="install-mim-2016-mim-synchronization-service"></a>MIM 2016: MIM-synchronisatieservice installeren
 
 >[!div class="step-by-step"]
 [« Exchange Server](prepare-server-exchange.md)
@@ -29,7 +29,7 @@ ms.openlocfilehash: ba399da1431ea1d2d1633d0469e054ffd89f1d34
 > In deze stapsgewijze instructies wordt gebruikgemaakt van voorbeeldnamen en -waarden van een bedrijf met de naam Contoso. Vervang deze door uw eigen namen en waarden. Bijvoorbeeld:
 > - Naam van de domeincontroller: **mimservername**
 > - Domeinnaam: **contoso**
-> - Wachtwoord: **Pass@word1**
+> - Wachtwoord - **Pass@word1**
 
 Stel eerst het installatiepakket in voordat u de Microsoft Identity Manager 2016-onderdelen installeert.
 
@@ -37,7 +37,7 @@ Stel eerst het installatiepakket in voordat u de Microsoft Identity Manager 2016
 
 2. Pak het MIM-installatiepakket uit of plaats de dvd met de MIM-installatiekopie.
 
-## De MIM 2016-synchronisatieservice installeren
+## <a name="install-mim-2016-synchronization-service"></a>De MIM 2016-synchronisatieservice installeren
 
 1. Navigeer in de uitgepakte MIM-installatiemap naar de map **Synchronisatieservice**.
 
@@ -107,6 +107,6 @@ Stel eerst het installatiepakket in voordat u de Microsoft Identity Manager 2016
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Nov16_HO2-->
 
 
