@@ -1,11 +1,11 @@
 ---
 title: Stap 3 SQL configureren
-description: Het CORP-domein voorbereiden met bestaande of nieuwe identiteiten die worden beheerd door Privileged Identity Manager via scripts
+description: Dit artikel is stap 3 van de serie artikelen over het configureren van Privileged Identity Manager met behulp van scripts. In het artikel worden de configuratiestappen voor de SQL-server besproken.
 keywords: 
 author: barclayn
 ms.author: barclayn
 manager: MBaldwin
-ms.date: 10/25/2016
+ms.date: 01/10/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
@@ -13,8 +13,8 @@ ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: 
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 365989693f844f117f76ee2b69db85df82f06f35
-ms.openlocfilehash: 375a34e5255c90559fc0ffb3a80fc7c92ebd27a2
+ms.sourcegitcommit: f08b0197341351bd5f33552f26b96132b1356239
+ms.openlocfilehash: 93ae9f198d73d21ae966fe3c3b22e47435bd5608
 
 
 ---
@@ -46,6 +46,6 @@ Wanneer u erom wordt gevraagd, voert u het wachtwoord voor de MIMAdmin-serviceac
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO2-->
 
 

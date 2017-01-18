@@ -1,6 +1,6 @@
 ---
 title: Microsoft Identity Manager 2016 | Microsoft Docs
-description: Lees hoe MIM 2016 bijdraagt aan een veiliger, gebruiksvriendelijker identiteitsbeheer in de cloud en on-premises.
+description: MIM omvat de mogelijkheden voor toegangsbeheer van FIM 2010 en zorgt ervoor dat u gebruikers, referenties, beleidsregels en toegang in uw organisatie kunt beheren.
 keywords: 
 author: kgremban
 ms.author: kgremban
@@ -13,8 +13,8 @@ ms.assetid: ccdd8a9f-02da-440a-81a8-354800dcd2a8
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
-ms.openlocfilehash: 74d93047ad30d81546940fc4ece3d892fe6df2f8
+ms.sourcegitcommit: f08b0197341351bd5f33552f26b96132b1356239
+ms.openlocfilehash: d38a3613b92c0bce0b27a4bd147177a1cccf47d8
 
 
 ---
@@ -37,6 +37,6 @@ Microsoft Identity Manager is nog nauw verwant aan diens voorganger Forefront Id
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO2-->
 
 
