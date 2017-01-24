@@ -1,4 +1,4 @@
-# [Meer informatie en verkennen](/microsoft-identity-manager/understand-explore/microsoft-identity-manager-2016)
+# [Begrijpen en verkennen](/microsoft-identity-manager/understand-explore/microsoft-identity-manager-2016)
 # [Plannen en ontwerpen](/microsoft-identity-manager/plan-design/microsoft-identity-manager-2016-supported-platforms)
 # [Implementeren en gebruiken](/microsoft-identity-manager/deploy-use/microsoft-identity-manager-deploy)
 # [Privileged Access Management gebruiken](privileged-identity-management-for-active-directory-domain-services.md)
@@ -18,7 +18,7 @@
 ### [Stap 4 - MIM installeren op de PAM server](step-4-install-mim-components-on-pam-server.md)
 ### [Stap 5 - Een vertrouwensrelatie tussen het PRIV en CORP instellen](step-5-establish-trust-between-priv-corp-forests.md)
 ### [Stap 6 - Bevoorrechte accounts maken](step-6-transition-group-to-pam.md)
-### [Stap 7 - De toegangsrechten van een gebruiker uitbreiden](step-7-elevate-user-access.md)
+### [Stap 7 – De toegangsrechten van een gebruiker uitbreiden](step-7-elevate-user-access.md)
 ### [Azure MFA instellen](use-azure-mfa-for-activation.md)
 ## [PAM configureren met behulp van scripts](sp1-pam-configure-using-scripts.md)
 ### [Stap 1 Het privédomein configureren](sp1-step1-configuring-priv-domain.md)
@@ -33,6 +33,6 @@
 # [Referentie voor ontwikkelaars](/microsoft-identity-manager/reference/microsoft-identity-manager-2016-developer-reference)
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Jan17_HO1-->
 
 
