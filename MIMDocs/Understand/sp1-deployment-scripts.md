@@ -1,11 +1,11 @@
 ---
 title: MIM2016 SP1 PAM-implementatiescripts
-description: Het CORP-domein voorbereiden met bestaande of nieuwe identiteiten die worden beheerd door Privileged Identity Manager via scripts
+description: Deze pagina is onderdeel van de serie artikelen over het configureren van Privileged Identity Manager met behulp van scripts. De pagina bevat een lijst met aannames met betrekking tot de omgeving.
 keywords: 
 author: barclayn
 ms.author: barclayn
 manager: MBaldwin
-ms.date: 09/26/2016
+ms.date: 01/10/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
@@ -13,8 +13,8 @@ ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: 
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 99b1ff9f622ddd357866b2a3f9f4cc8e0fc88005
-ms.openlocfilehash: 82500ff42e24f5b155bfdd336566a2cd3d87fe7e
+ms.sourcegitcommit: f08b0197341351bd5f33552f26b96132b1356239
+ms.openlocfilehash: 10d06ae573e378797467ab1eb91e977d59b821d1
 
 
 ---
@@ -37,6 +37,6 @@ Klaar om te beginnen met de PAM-implementatiescripts? Ga naar [PAM configureren 
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Jan17_HO2-->
 
 
