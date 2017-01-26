@@ -1,5 +1,5 @@
 ---
-title: Opmerkingen bij de release van MIM 2016 | Microsoft Docs
+title: Opmerkingen bij de release voor Microsoft Identity Manager 2016 | Microsoft Docs
 description: Informatie over de laatste MIM-releases.
 keywords: 
 author: kgremban
@@ -14,8 +14,8 @@ ms.assetid: 297e25a5-668b-45a4-b2de-7767ebc59100
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
-ms.openlocfilehash: 22982f6bf5d925d7c0ca0d83157bd93f8808783a
+ms.sourcegitcommit: 54d03fbd03f6c44298139324ea2dc7d945f008bc
+ms.openlocfilehash: bc2dfd7ff8dcc6da85ad4e5c32a10f1741fe0c14
 
 
 ---
@@ -25,6 +25,6 @@ Er zijn op dit moment geen releaseopmerkingen.
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

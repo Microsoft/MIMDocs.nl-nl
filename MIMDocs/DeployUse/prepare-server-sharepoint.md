@@ -1,11 +1,11 @@
 ---
-title: SharePoint configureren | Microsoft Docs
+title: SharePoint configureren voor Microsoft Identity Manager 2016 | Microsoft Docs
 description: Installeer en configureer SharePoint Foundation zodat deze de MIM-portalpagina kan hosten.
 keywords: 
 author: kgremban
 ms.author: kgremban
 manager: femila
-ms.date: 12/01/2016
+ms.date: 01/23/2017
 ms.topic: get-started-article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -13,8 +13,8 @@ ms.assetid: c01487f2-3de6-4fc4-8c3a-7d62f7c2496c
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c26816322bf6d281ae32f7fee69ed9f8e002e7c7
-ms.openlocfilehash: 94c0f931ad9a1e8f8f9196288107e4f75c72a211
+ms.sourcegitcommit: 3623bffb099a83d0eba47ba25e9777c3d590e529
+ms.openlocfilehash: 2af432036033f8914d00228cd3d2d1af84f13054
 
 
 ---
@@ -107,7 +107,7 @@ Voer de stappen uit die in de **wizard Configuratie van SharePoint-producten** w
   ```
 
   > [!NOTE]
-  > Controleer of het resultaat van het *compatibiliteitsniveau* de variabele 14 is. Als het resultaat 15 is, is de siteverzameling niet gemaakt voor de 2010-ervaringsversie. Verwijder de siteverzameling en maak deze opnieuw.
+  > Controleer of het resultaat van het *compatibiliteitsniveau* de variabele&14; is. Als het resultaat 15 is, is de siteverzameling niet gemaakt voor de 2010-ervaringsversie. Verwijder de siteverzameling en maak deze opnieuw.
 
 3. Schakel **Weergavestatus aan serverzijde voor SharePoint** en de SharePoint-taak Statusanalysetaak (elk uur, Microsoft SharePoint Foundation-timer, alle servers) uit door de volgende PowerShell-opdrachten in de **SharePoint 2013-beheershell** uit te voeren:
 
@@ -136,6 +136,6 @@ Voer de stappen uit die in de **wizard Configuratie van SharePoint-producten** w
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Jan17_HO4-->
 
 
