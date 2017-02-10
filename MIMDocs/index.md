@@ -1,152 +1,132 @@
 ---
-asset_id: 90d66a75-a7ec-4fa1-911c-cce683908838
-layout: HubPage
-title: Documentatie voor Identity Manager | Microsoft Docs
-description: 'Technische documentatie voor Microsoft Identity Manager: on-premises Identity & Access Management'
-keywords: documentatie voor identity manager, microsoft identity manager, MIM
-author: kgremban
-manager: femila
-ms.date: 10/25/2016
-ms.topic: hubpage
-ms.prod: microsoft-identity-manager
-ms.service: microsoft-identity-manager
-ms.technology: security
-ms.suite: ems
-ms.assetid: 90d66a75-a7ec-4fa1-911c-cce683908838
+layout: LandingPage
+title: Documentatie voor Microsoft Identity Manager | Microsoft Docs
+description: Meer informatie over het gebruik van Microsoft Identity Manager.
 translationtype: Human Translation
-ms.sourcegitcommit: 584efc6cc60eebe69fb32e7a0bdff25f568eee7f
-ms.openlocfilehash: b857664f1065f975e6d7e95508928b679548b52c
-
+ms.sourcegitcommit: d6b2c0db8fa071d3cec9ea680667b9e9b7f75267
+ms.openlocfilehash: 921e34c6625d798909e6ded0ea611c731141a052
 
 ---
-# Documentatie voor identiteitsbeheer
-<article id="main">
-    <section id="hero-content">
-      <h1>Documentatie voor Identity Manager</h1>
-      <h2>Meer informatie over het instellen van on-premises identiteitsbeheer met Microsoft Identity Manager. In deze zelfstudies ziet u hoe u identiteitssynchronisatie kunt configureren en identiteitsdiefstal kunt voorkomen.</h2>
-      <h3>Nog onbekend met MIM? <a href="http://go.microsoft.com/fwlink/?LinkId=816853" target="\_blank">Ga naar de productpagina &rarr;</a></h3>     
-    </section>
-    <aside class="alert section-border">
-      <p>Klaar om te beginnen?</p>
-      <ol class="action-list">
-        <li><a href="https://www.microsoft.com/evalcenter/evaluate-microsoft-identity-manager-2016" target="\_blank" class="button-bordered button-translucent">Gratis proefversie starten</a></li>
-      </ol>
-    </aside>
-    <section id="featured" class="container">
-      <h2 class="section-heading"><span class="icon icon-warning"></span> Aanbevolen inhoud</h2>
-      <div class="features row">
-        <ul class="column column-half">
-          <li><mark><b>NIEUW</b></mark><a href="/microsoft-identity-manager/understand-explore/microsoft-identity-manager-2016-sp1-release-notes">Microsoft Identity Manager 2016 Service Pack 1</a></li>
-          <li><a href="/microsoft-identity-manager/deploy-use/microsoft-identity-manager-deploy">MIM-software implementeren op een nieuwe server</a></li>
-        </ul>
-        <ul class="column column-half">
-          <li><a href="/microsoft-identity-manager/reference/privileged-access-management-rest-api-reference">REST API-verwijzing voor Privileged Identity Management</a></li>
-          <li><a href="/microsoft-identity-manager/understand-explore/microsoft-identity-manager-2016">MIM 2016-overzicht</a></li>
-        </ul>
-      </div>
-    </section>
-    <div id="journeys">
-      <section class="container">
-        <ul class="journeys-list">
-          <li class="journey-step">
-            <header class="journey-step-header row">
-              <a href="/microsoft-identity-manager/understand-explore/microsoft-identity-manager-2016">
-                <div class="title column-third">
-                  <span class="step-number">1</span>
-                  <p>Begrijpen en verkennen</p>
+# <a name="microsoft-identity-manager-documentation"></a>Documentatie voor Microsoft Identity Manager
+
+Microsoft Identity Manager 2016 verbindt de Identity & Access Management-oplossingen van Microsoft via naadloze overbrugging van meerdere on-premises verificatiearchieven zoals Active Directory, LDAP, Oracle en andere toepassingen met Azure Active Directory. Zo kunt u profiteren van een consistente ervaring voor on-premises LOB-toepassingen en SaaS-oplossingen.
+
+<ul class="panelContent cardsFTitle">
+    <li>
+        <a href="/microsoft-identity-manager/understand-explore/microsoft-identity-manager-2016-sp1-release-notes">
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="/media/common/i_whats-new.svg" alt="" />
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>Wat is er nieuw in Microsoft Identity Manager 2016 Service Pack 1</h3>
+                    </div>
                 </div>
-                <p class="description column-two-thirds">Meer informatie over de geavanceerde concepten, functies en mogelijkheden van Microsoft Identity Manager.
-                </p>
-              </a>
-            </header>
-            <section class="journey-step-elements content">
-              <ul class="row">
-                <li class="column-third">
-                  <a href="/microsoft-identity-manager/understand-explore/microsoft-identity-manager-2016">
-                    <h3>Wat is MIM 2016?</h3>
-                    <p>Meer informatie over hoe MIM 2016 mogelijkheden voor on-premises en hybride Identity &amp; Access Management biedt.</p>
-                  </a>
-                </li>
-                <li class="column-third">
-                  <a href="/microsoft-identity-manager/understand-explore/identity-manager-hybrid-reporting-azure">
-                    <h3>Hybride rapportage in Azure</h3>
-                    <p>Maak één rapport van de gebeurtenissen die zich on-premises en in de cloud voordoen.</p>
-                  </a>
-                </li>
-                <li class="column-third">
-                  <a href="/microsoft-identity-manager/plan-design/microsoft-identity-manager-2016-supported-platforms">
-                    <h3>Ondersteunde platforms</h3>
-                    <p>De lijst met platformen, servers en toepassingen die door MIM worden ondersteund.</p>
-                  </a>
-                </li>
-              </ul>
-            </section>
-          </li>
-          <li class="journey-step">
-            <header class="journey-step-header row">
-              <a href="/microsoft-identity-manager/deploy-use/microsoft-identity-manager-deploy">
-                <div class="title column-third">
-                  <span class="step-number">2</span>
-                  <p>Implementeren en gebruiken</p>
+            </div>
+        </div>
+        </a>
+    </li>
+    <li>
+        <a href="/microsoft-identity-manager/understand-explore/microsoft-identity-manager-2016">
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="/media/common/i_learn-about.svg" alt="" />
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>Meer informatie over Microsoft Identity Manager</h3>
+                    </div>
                 </div>
-                <p class="description column-two-thirds">MIM implementeren en gebruiken.
-                </p>
-              </a>
-            </header>
-            <section class="journey-step-elements content">
-              <ul class="row">
-                <li class="column-third">
-                  <a href="/microsoft-identity-manager/deploy-use/microsoft-identity-manager-deploy">
-                    <h3>Eerste implementatie</h3>
-                    <p>Implementeer MIM op een schone server waarop FIM of MIM niet eerder is geïmplementeerd.</p>
-                  </a>
-                </li>
-                <li class="column-third">
-                  <a href="/microsoft-identity-manager/deploy-use/microsoft-identity-manager-2016-upgrade-from-fim-2010-R2">
-                    <h3>Bijwerken van FIM 2010 R2</h3>
-                    <p>Een bestaand FIM 2010 R2-testsysteem naar MIM 2016 upgraden.</p>
-                  </a>
-                </li>
-                <li class="column-third">
-                  <a href="/microsoft-identity-manager/deploy-use/deploying-mim-password-change-notification-service-on-domain-controller">
-                    <h3>Meldingsservice voor wachtwoordwijzigingen</h3>
-                    <p>Installeer PCNS op elke domeincontrollerserver om wachtwoordsynchronisatie in te schakelen.</p>
-                  </a>
-                </li>
-              </ul>
-            </section>
-          </li>
-        </ul>
-      </section>
-    </div>
-    <div class="section-border">
-      <section class="resources container">
-        <h2 class="section-heading"><span class="icon icon-options"></span> Referentie voor ontwikkelaars</h2>
-        <div class="resource-list row">
-          <ul class="column-half">
-            <li><a href="/microsoft-identity-manager/reference/privileged-access-management-rest-api-reference">REST API-verwijzing voor Privileged Access Management</a></li>
-          </ul>
-          <ul class="column-half">
-            <li><a href="/microsoft-identity-manager/reference/certificate-management-rest-api-reference">REST API-verwijzing voor Certificate Management</a></li>
-          </ul>
+            </div>
         </div>
-        <div class="resource-list row">
-          <ul class="column-half">
-            <li><a href="https://technet.microsoft.com/library/mt604080.aspx">Privileged Access Management-cmdlets</a></li>
-          </ul>
+        </a>
+    </li>
+    <li>
+        <a href="/microsoft-identity-manager/deploy-use/microsoft-identity-manager-deploy"> 
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="/media/common/deploy.svg" alt="" />
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>Microsoft Identity Manager 2016 implementeren</h3>
+                    </div>
+                </div>
+            </div>
         </div>
-      </section>
-    </div>
-    <aside class="alert alert-social">
-      <p>Het MIM-ondersteuningsnieuws bijhouden</p>
-      <ol class="action-list">
-        <li><a href="https://blogs.technet.microsoft.com/iamsupport/" target="\_blank" class="button-bordered button-translucent">officiële ondersteuningsblog</a></li>
-      </ol>
-    </aside>
-</article>
+        </a>
+    </li>
+</ul>
+
+---
+
+<h2>Verwijzing</h2>
+<ul class="panelContent cardsFTitle">
+    <li>
+        <a href="/microsoft-identity-manager/reference/privileged-access-management-rest-api-reference">
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="/media/common/i_reference.svg" alt="" />
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>REST API-verwijzing voor Privileged Access Management</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </a>
+    </li>
+    <li>
+        <a href="https://blogs.technet.microsoft.com/iamsupport/">
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="/media/common/i_blog.svg" alt="" />
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>Blog van het ondersteuningsteam voor Identity & Access Management</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </a>
+    </li>
+</ul>
+
+<h2>Oplossingen</h2>
+<ul class="panelContent cardsW">
+    <li>
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardText">
+                        <p><a href="/enterprise-mobility-security/solutions/manage-access-at-scale">Toegang op schaal beheren</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+</ul>
 
 
 
-<!--HONumber=Oct16_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 
