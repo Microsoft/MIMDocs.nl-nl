@@ -19,6 +19,7 @@
 ### [Stap 5 - Een vertrouwensrelatie tussen het PRIV en CORP instellen](step-5-establish-trust-between-priv-corp-forests.md)
 ### [Stap 6 - Bevoorrechte accounts maken](step-6-transition-group-to-pam.md)
 ### [Stap 7 – De toegangsrechten van een gebruiker uitbreiden](step-7-elevate-user-access.md)
+### [MIM PAM implementeren met Windows Server 2016](deploy-pam-with-windows-server-2016.md)
 ### [Azure MFA instellen](use-azure-mfa-for-activation.md)
 ## [PAM configureren met behulp van scripts](sp1-pam-configure-using-scripts.md)
 ### [Stap 1 Het privédomein configureren](sp1-step1-configuring-priv-domain.md)
@@ -33,6 +34,6 @@
 # [Referentie voor ontwikkelaars](/microsoft-identity-manager/reference/microsoft-identity-manager-2016-developer-reference)
 
 
-<!--HONumber=Jan17_HO1-->
+<!--HONumber=Feb17_HO3-->
 
 

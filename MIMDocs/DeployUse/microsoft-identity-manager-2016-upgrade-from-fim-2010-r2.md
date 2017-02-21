@@ -2,10 +2,10 @@
 title: Upgraden van FIM 2010 R2 naar Microsoft Identity Manager 2016 | Microsoft Docs
 description: Informatie over het uitvoeren van een upgrade van uw FIM 2010 R2-onderdelen en het installeren van onderdelen die nieuw zijn in MIM 2016.
 keywords: 
-author: kgremban
-ms.author: kgremban
+author: fimguy
+ms.author: billmath
 manager: femila
-ms.date: 01/23/2017
+ms.date: 02/13/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -13,8 +13,8 @@ ms.assetid: 9471ccc1-bafe-46ee-b169-1464262380e1
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 3623bffb099a83d0eba47ba25e9777c3d590e529
-ms.openlocfilehash: 16966d970365c13a3530020234208e72c0e8823f
+ms.sourcegitcommit: 2d3092d7d41090e4e03b971fb62ca896cc8db282
+ms.openlocfilehash: 20e733f17d6ed590844c526888b649eb6bf5f322
 
 
 ---
@@ -200,8 +200,10 @@ In deze gids wordt verondersteld dat u het volgende al hebt ingesteld.
 
 Opmerking: Als de FIM-invoegtoepassingen en -extensies momenteel zijn geïmplementeerd op de computers van gebruikers voor SSPR, configureert u de nieuwe MFA-telefoonpoorten voor wachtwoordherstel pas nadat de upgrade voor alle FIM-invoegtoepassingen en -uitbreidingen voor MIM 2016 is uitgevoerd.  Omdat de FIM 2010 en FIM 2010 R2-invoegtoepassingen en -extensies de nieuwe poorten niet herkennen, wordt hierdoor een fout veroorzaakt en kan een gebruiker wachtwoordherstel niet voltooien.
 
+Zie [Microsoft Identity Manager 2016 Service Pack 1 update package](https://blogs.technet.microsoft.com/iamsupport/2016/11/08/microsoft-identity-manager-2016-service-pack-1-update-package/) (Upgradepakket voor Microsoft Identity Manager 2016 SP1) voor richtlijnen voor de update naar Microsoft Identity Manager 2016 SP1
 
 
-<!--HONumber=Jan17_HO4-->
+
+<!--HONumber=Feb17_HO2-->
 
 
