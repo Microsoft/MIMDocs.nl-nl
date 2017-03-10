@@ -1,11 +1,11 @@
 ---
-title: Selfservice voor smartcard vernieuwen | Microsoft Docs
+title: Microsoft Identity Manager-selfservice voor verlenging van smartcard zonder Administrator-toegang | Microsoft Docs
 description: Informatie over het registreren van smartcards voor gebruikers die geen beheerdersrechten hebben voor hun computers, zodat ze de certificaatbeheerder kunnen gebruiken.
 keywords: 
 author: kgremban
 ms.author: kgremban
 manager: femila
-ms.date: 07/21/2016
+ms.date: 01/23/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -13,16 +13,16 @@ ms.assetid: bfabc562-a2f0-4cff-ac31-36927f41e102
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
-ms.openlocfilehash: 76d72211e1dbddb2647729c796ac19eb82a3b2c6
+ms.sourcegitcommit: 54d03fbd03f6c44298139324ea2dc7d945f008bc
+ms.openlocfilehash: 89e095cff66984140cdcef3617dd0ccc3d3714d8
 
 
 ---
 
-# <a name="enroll-smart-cards-for-nonadministrators"></a>Smartcards voor niet-beheerders registreren
+# <a name="enroll-smart-cards-for-non-administrators"></a>Smartcards voor niet-beheerders registreren
 Gebruikers die geen lokale beheerder zijn van hun computer, kunnen standaard geen smartcard registreren op hun eigen computer. Dit probleem kunt u met de volgende procedure omzeilen.
 
-## <a name="enabling-smart-card-renewal-for-nonadmins-in-mim-2016-certificate-manager"></a>Vernieuwen van smartcard inschakelen voor niet-beheerders in MIM 2016 Certificate Manager
+## <a name="enabling-smart-card-renewal-for-non-admins-in-mim-2016-certificate-manager"></a>Vernieuwen van smartcard inschakelen voor niet-beheerders in MIM 2016 Certificate Manager
 
 1.  **Pak het APPX-bestand uit**
 
@@ -76,7 +76,7 @@ Gebruikers die geen lokale beheerder zijn van hun computer, kunnen standaard gee
 
     4.  Wanneer de algemene instellingen van de profielsjabloon worden weergegeven, schuift u helemaal naar beneden en klikt u onder **Smartcards configureren** op **Instellingen wijzigen**.
 
-    5.  Voer onder **Beginwaarde van de beheersleutel (hex)** de standaard beheersleutel in: 010203040506070801020304050607080102030405060708
+    5.  Voer onder **Beginwaarde van de beheersleutel (hex)** de standaard beheersleutel in:&01020;3040506070801020304050607080102030405060708
 
     6.  Schuif naar beneden en klik op **OK**.
 
@@ -96,6 +96,6 @@ Gebruikers die geen lokale beheerder zijn van hun computer, kunnen standaard gee
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Feb17_HO1-->
 
 
