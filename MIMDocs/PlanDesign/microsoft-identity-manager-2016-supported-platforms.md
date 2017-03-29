@@ -15,6 +15,7 @@ ms.suite: ems
 translationtype: Human Translation
 ms.sourcegitcommit: 2f2ae09ab8bc28b83b66073985b3574517a220b7
 ms.openlocfilehash: bed26316673d777f3d1934011668686b3e9def1d
+ms.lasthandoff: 01/13/2017
 
 
 ---
@@ -34,13 +35,13 @@ In deze tabel worden de ondersteunde platformen en versies voor elk onderdeel va
 | | Aanvullend verbonden systeem (optioneel) | Active Directory Domain Services<br/>Active Directory<br/>Lightweight Directory Services<br/>SQL Server 2000 of hoger<br/>SharePoint Server 2013<br/> SharePoint Server 2016 * <br/> Andere producten van derden |
 | **MIM-service** (met uitzondering van het scenario voor PAM) | Windows Server | Windows Server 2008 R2 SP1<br/>Windows Server 2012<br/>Windows Server 2012 R2 <br/> Windows Server 2016 * |
 | | MIM-servicedatabases | SQL Server 2008 R2 SP3<br/>SQL Server 2012 SP2<br/>SQL Server 2014 SP1 <br/> SQL Server 2016 * |
-| | Exchange voor goedkeuring van de MIM-service en e-mailberichten voor groepsbeheer (optioneel) | Exchange Server 2007 SP3 (met geïnstalleerde Exchange Management Console)<br/>Exchange Server 2010 SP3<br/>Exchange Server 2013 SP1 <br/> Exchange Server 2016 * <br/> Exchange Online * |
+| | Exchange voor goedkeuring van de MIM-service en e-mailberichten voor groepsbeheer (optioneel) | Exchange Server 2007 SP3 (met geïnstalleerde Exchange Management Console)<br/>Exchange Server 2010 SP3<br/>Exchange Server 2013 SP1 <br/> Exchange Server 2016 *<br/> Exchange Online* |
 | **MIM-service en -portal** (alleen voor het scenario voor PAM)| Windows Server | Windows Server 2012<br/>Windows Server 2012 R2 <br/> Windows Server 2016 * |
 | | Active Directory voor PAM-forest in bastionomgeving | Windows Server 2012 R2 <br/> Windows Server 2016 * |
-| | Active Directory voor bestaande forests | Windows Server 2008 <br/> Windows Server 2008 R2 * <br/> Windows Server 2012 * <br/> Windows Server 2012 R2 * <br/> Windows Server 2016 * |
+| | Active Directory voor bestaande forests | Windows Server 2008 <br/> Windows Server 2008 R2 *<br/> Windows Server 2012* <br/> Windows Server 2012 R2 *<br/> Windows Server 2016* |
 | | MIM-servicedatabases | SQL Server 2008 R2 SP3<br/>SQL Server 2012 SP2<br/>SQL Server 2014 SP1 <br/> SQL Server 2016 * |
 | | SharePoint | SharePoint Foundation 2010<br/>SharePoint Foundation 2013 SP1 <br/> SharePoint 2016 * |
-| | Mailserver voor goedkeuring van de MIM-service en e-mailberichten voor groepsbeheer (optioneel) | Exchange Server 2007 SP3 (met geïnstalleerde Exchange Management Console)<br/>Exchange Server 2010 SP3<br/>Exchange Server 2013 SP1 <br/> Exchange Server 2016 * <br/> Exchange Online * |
+| | Mailserver voor goedkeuring van de MIM-service en e-mailberichten voor groepsbeheer (optioneel) | Exchange Server 2007 SP3 (met geïnstalleerde Exchange Management Console)<br/>Exchange Server 2010 SP3<br/>Exchange Server 2013 SP1 <br/> Exchange Server 2016 *<br/> Exchange Online* |
 | | Browser | Alle belangrijke browsers |
 | **MIM-servicerapportages** | Windows Server | Windows Server 2012 <br/> Windows Server 2016 * |
 | | Datawarehouse | System Center 2012 Service Manager SP1 |
@@ -59,9 +60,4 @@ In deze tabel worden de ondersteunde platformen en versies voor elk onderdeel va
 | | BHOLD-database | SQL Server 2008 R2 SP3<br/>SQL Server 2012 SP2 <br/> SQL Server 2014 * |
 | | E-mailserver (optioneel) | Exchange Server 2007 SP3<br/>Exchange Server 2010 SP3<br/>Exchange Server 2013 SP1 |
 | | Webbrowser | Internet Explorer 7, 8, 9, 10 of 11 met Silverlight |
-
-
-
-<!--HONumber=Jan17_HO2-->
-
 
