@@ -11,9 +11,9 @@ ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 
 translationtype: Human Translation
-ms.sourcegitcommit: 90a0f144b7674bbfaf13138dfd926dbfc3c74f28
-ms.openlocfilehash: ddd707210d5cd6b618709a477d40e7771d73cfa1
-ms.lasthandoff: 03/27/2017
+ms.sourcegitcommit: 1ff73d0bdfcbcb4ab79d0d81feca9abdc33f9213
+ms.openlocfilehash: 1e2fb9a9ae508ab601ebad1dec7acc21dc44d13e
+ms.lasthandoff: 04/04/2017
 
 
 
@@ -27,7 +27,7 @@ Zodra u dit hebt geïnstalleerd, wordt de volgende nieuwe regel weergegeven in M
 *    Regel 8: ``<dynamicLogging mode="true" loggingLevel="Verbose" />``
 *    Regel 266: ``</system.diagnostics> ``
 
-![De nieuwe dynamische vermeldingen in het logboek worden weergegeven in de gemarkeerde secties](/media/mim-service-dynamic-logging/screen01.png)
+![De nieuwe dynamische vermeldingen in het logboek worden weergegeven in de gemarkeerde secties](media/mim-service-dynamic-logging/screen01.png)
 
 De dynamische logboekregistratieniveaus kunt u [hier](https://msdn.microsoft.com/library/ms733025(v=vs.110).aspx#Anchor_3) vinden
 
@@ -36,11 +36,11 @@ De dynamische logboekregistratieniveaus kunt u [hier](https://msdn.microsoft.com
 
 Configuratie van dynamische logboekregistratie bevindt zich op regel 266: Microsoft.ResourceManagement.Service.exe.config
 
-![In de gemarkeerde secties worden de regels met de verschillende gebieden voor logboekregistratie weergegeven](/media/mim-service-dynamic-logging/screen02.png)
+![In de gemarkeerde secties worden de regels met de verschillende gebieden voor logboekregistratie weergegeven](media/mim-service-dynamic-logging/screen02.png)
 
 De standaardlocatie voor logboekregistratie is **C:\Program Files\Microsoft Forefront Identity Manager\2010\Service**. Voor het FIM-serviceaccount is een schrijfmachtiging naar deze locatie vereist voor het genereren van het dynamische logboek.
 
-![Maplocatie van de logboeken](/media/mim-service-dynamic-logging/screen03.png)
+![Maplocatie van de logboeken](media/mim-service-dynamic-logging/screen03.png)
 
  >[!NOTE]
  In geval van onverwachte fouten (syntaxisfouten in het configuratiebestand Microsoft.ResourceManagement.Service.exe.config of andere fouten) wordt het bijbehorende foutbericht geschreven naar het bestand Microsoft.ResourceManagement.Service.exe_Emergency.log onder het volgende pad %TMP% of %TEMP% of %USERPROFILE% (de eerste die bestaat).  
@@ -50,5 +50,5 @@ De standaardlocatie voor logboekregistratie is **C:\Program Files\Microsoft Fore
 
 U kunt de [viewer voor servicetraceringen](https://msdn.microsoft.com//library/aa751795(v=vs.110).aspx) gebruiken om de tracering weer te geven
 
- ![Schermafbeelding van viewer voor servicetraceringen](/media/mim-service-dynamic-logging/screen04.png)
+ ![Schermafbeelding van viewer voor servicetraceringen](media/mim-service-dynamic-logging/screen04.png)
 
