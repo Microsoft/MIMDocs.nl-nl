@@ -1,5 +1,5 @@
-# [Begrijpen en verkennen](/microsoft-identity-manager/understand-explore/microsoft-identity-manager-2016)
-## [Inleiding tot Microsoft Identity Manager](/microsoft-identity-manager/understand-explore/microsoft-identity-manager-2016.md)
+# Begrijpen en verkennen
+## [Introductie van Microsoft Identity Manager 2016](understand-explore/microsoft-identity-manager-2016.md)
 ## [Voorinstallatie en topologieconfiguratie](https://technet.microsoft.com/library/ff602886)
 ## Fundamentele voorzieningen
 ### Synchronisatieservice
@@ -13,33 +13,34 @@
 #### [Inleiding tot uitgaande synchronisatie op basis van synchronisatiebeleid](https://technet.microsoft.com/library/jj150433)
 ### Certificaatbeheer
 ### BHOLD
-### [Privileged Access Management](/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services.md)
-#### [Meer informatie over onderdelen van Privileged Access Management](/microsoft-identity-manager/pam/principles-of-operation.md)
+### [Privileged Access Management](pam/privileged-identity-management-for-active-directory-domain-services.md)
+#### [Meer informatie over onderdelen van Privileged Access Management](pam/principles-of-operation.md)
 ### Rapporten
 ### Connectors
-#### [Versiegeschiedenis van connector](/azure/active-directory/connect/active-directory-aadconnectsync-connector-version-history.md)
+#### [Versiegeschiedenis van connector](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect-version-history)
 ### [Meldingsservice voor wachtwoordwijzigingen](https://technet.microsoft.com/en-us/library/839a9291-a78f-4959-8e6a-3bf68bf62700)
-# [Plannen en ontwerpen](/microsoft-identity-manager/plan-design/microsoft-identity-manager-2016-supported-platforms)
-## [Ondersteunde platforms voor Microsoft Identity Manager 2016](/microsoft-identity-manager/PlanDesign/microsoft-identity-manager-2016-supported-platforms.md)
-## [Handleiding voor capaciteitsplanning](/microsoft-identity-manager/PlanDesign/capacity-planning-guide.md)
-## [Aandachtspunten voor topologie](/microsoft-identity-manager/PlanDesign/topology-considerations.md)
+# Plannen en ontwerpen
+## [Ondersteunde platforms voor Microsoft Identity Manager 2016](plan-design/microsoft-identity-manager-2016-supported-platforms.md)
+## [Handleiding voor capaciteitsplanning](plan-design/capacity-planning-guide.md)
+## [Aandachtspunten voor topologie](plan-design/topology-considerations.md)
 ## Synchronisatieservice
-### [Verbinding maken met uw adreslijsten](/microsoft-identity-manager/plan-design/supported-management-agents.md)
+### [Verbinding maken met uw adreslijsten](plan-design/supported-management-agents.md)
 ## Service en portal
 ### [Best practices](https://technet.microsoft.com/library/ff608274)
 ### [Back-up en herstelhandleiding voor FIM 2010](https://technet.microsoft.com/library/fim-2010-backup-and-restore-guide)
-### [Bedrijfsbeleidsregels ontwerpen]
-##  [Privileged Access Management](/microsoft-identity-manager/pam/environment-overview.md)
-### [Laagmodel](/microsoft-identity-manager/pam/tier-model-for-partitioning-administrative-privileges.md)
-### [Een bastionomgeving plannen](/microsoft-identity-manager/pam/planning-bastion-environment.md)
-### [Rollen definiëren](/microsoft-identity-manager/pam/defining-roles-for-pam.md)
-### [Hoge beschikbaarheid en herstel na noodgevallen](/microsoft-identity-manager/pam/high-availability-disaster-recovery-considerations-bastion-environment.md)
-### [Hardware- en softwarevereisten](/microsoft-identity-manager/pam/hardware-software-requirements.md)
+### Bedrijfsbeleidsregels ontwerpen
+##  [Privileged Access Management](pam/environment-overview.md)
+### [Laagmodel](pam/tier-model-for-partitioning-administrative-privileges.md)
+### [Een bastionomgeving plannen](pam/planning-bastion-environment.md)
+### [Rollen definiëren](pam/defining-roles-for-pam.md)
+### [Hoge beschikbaarheid en herstel na noodgevallen](pam/high-availability-disaster-recovery-considerations-bastion-environment.md)
+### [Hardware- en softwarevereisten](pam/hardware-software-requirements.md)
 ## [Selfservice voor opnieuw instellen van wachtwoord](https://technet.microsoft.com/library/jj134278)
 ## [Rapportage](https://technet.microsoft.com/library/jj133851)
-# [Implementeren en gebruiken](/microsoft-identity-manager/deploy-use/microsoft-identity-manager-deploy)
+# Implementeren en gebruiken
+## [Stappen die nodig zijn voor het implementeren van MIM 2016](deploy-use/microsoft-identity-manager-deploy.md)
 ## Identity Manager implementeren
-## [Upgrade uitvoeren in Forefront Identity Manager 2012 R2](/microsoft-identity-manager/deploy-use/microsoft-identity-manager-2016-upgrade-from-fim-2010-r2.md)
+## [Upgrade uitvoeren in Forefront Identity Manager 2012 R2](deploy-use/microsoft-identity-manager-2016-upgrade-from-fim-2010-r2.md)
 ## Service en portal
 ### [Kerberos-instellingen in FIM 2010](https://technet.microsoft.com/library/jj134299)
 ### [Algemene gebruikers- en groepsconfiguratie in FIM 2010 R2](https://technet.microsoft.com/library/jj150431)
@@ -52,17 +53,17 @@
 ### [Meer informatie over het configureren en aanpassen van de FIM-portal](https://technet.microsoft.com/library/ff393653)
 ### [Meer informatie over aangepast resource- en kenmerkbeheer](https://technet.microsoft.com/library/ff519007)
 ### [Meer informatie over verwachte statusdetectie](https://technet.microsoft.com/library/ff608269)
-## [Selfservice voor opnieuw instellen van wachtwoord](/microsoft-identity-manager/deploy-use/working-with-self-service-password-reset.md)
+## [Selfservice voor opnieuw instellen van wachtwoord](deploy-use/working-with-self-service-password-reset.md)
 ### [Informatie over opnieuw instellen van wachtwoord](https://technet.microsoft.com/library/gg214071)
 ### [Wachtwoordregistratie en opnieuw instellen van de portal aanpassen](https://technet.microsoft.com/library/hh877809)
 ### [Wachtwoord opnieuw instellen implementeren met Forefront Identity Manager 2010](https://technet.microsoft.com/video/video/password-reset-deployment-with-forefront-identity-manager-fim-2010)
 ### [Kerberos en selfservice voor opnieuw instellen van wachtwoord](https://technet.microsoft.com/library/jj134304)
 ### [Forefront Identity Manager 2010 R2 beheren - selfservice voor opnieuw instellen van wachtwoord](https://technet.microsoft.com/library/jj134290)
 ## Meldingsservice voor wachtwoordwijzigingen
-### [De MIM-meldingsservice voor wachtwoordwijzigingen op een domeincontroller implementeren](/microsoft-identity-manager/deploy-use/deploying-mim-password-change-notification-service-on-domain-controller.md)
+### [De MIM-meldingsservice voor wachtwoordwijzigingen op een domeincontroller implementeren](deploy-use/deploying-mim-password-change-notification-service-on-domain-controller.md)
 ### [Download van melding voor wachtwoordwijzigingen](https://www.microsoft.com/download/details.aspx?id=19495)
 ## Rapporten
-###[Hybride rapportage van Identity Manager](/microsoft-identity-manager/deploy-use/working-with-identity-manager-hybrid-reporting.md)
+###[Hybride rapportage van Identity Manager](deploy-use/working-with-identity-manager-hybrid-reporting.md)
 ###[Rapportage van System Center Service Manager integreren](https://technet.microsoft.com/library/jj133845)
 ## Synchronisatieservice
 ### [Scenario - instructiehandleidingen (GalSync, wachtwoordbeheer)](https://technet.microsoft.com/library/cc720550)
@@ -72,12 +73,12 @@
 
 ### Implementatiehandleiding voor opnieuw instellen van wachtwoord
 ## Certificaatbeheerder
-### [Smartcards voor niet-beheerders registreren](/microsoft-identity-manager/deploy-use/certificate-manager-for-non-administrators.md)
-### [Softwarecertificaten maken met de certificaatbeheerder](/microsoft-identity-manager/deploy-use/certificate-manager-for-software-certificates.md)
+### [Smartcards voor niet-beheerders registreren](deploy-use/certificate-manager-for-non-administrators.md)
+### [Softwarecertificaten maken met de certificaatbeheerder](deploy-use/certificate-manager-for-software-certificates.md)
 ## Privileged Access Management
-### [De MIM-omgeving voor Privileged Access Management configureren](/microsoft-identity-manager/pam/configuring-mim-environment-for-pam.md)
-### [PAM configureren met behulp van scripts](/microsoft-identity-manager/pam/sp1-pam-configure-using-scripts.md)
-### [Azure MFA gebruiken voor activering](/microsoft-identity-manager/pam/use-azure-mfa-for-activation.md)
+### [De MIM-omgeving voor Privileged Access Management configureren](pam/configuring-mim-environment-for-pam.md)
+### [PAM configureren met behulp van scripts](pam/sp1-pam-configure-using-scripts.md)
+### [Azure MFA gebruiken voor activering](pam/use-azure-mfa-for-activation.md)
 # Infrastructuur beheren
 ## [Best Practices Analyzer voor Identity Manager](https://technet.microsoft.com/library/jj203402)
 ## Synchronisatieservice
@@ -94,13 +95,13 @@
 ## BHOLD
 ## Service en portal
 ### [Kerberos](https://technet.microsoft.com/library/jj134299)
-### [Dynamische logboekregistratie](/microsoft-identity-manager/infrastructure/mim-service-dynamic-logging.md)
+### [Dynamische logboekregistratie](infrastructure/mim-service-dynamic-logging.md)
 ### [Prestatiehandleiding exporteren](https://technet.microsoft.com/library/hh322883)
 ## Privileged Access Management (Windows en Microsoft Active Directory beveiligen met beheer van bevoegde toegang)
 ## [Rapportage](https://technet.microsoft.com/library/jj133848)
 ### [Rapportage van aangepaste rapporten en uitbreidbaarheid](https://technet.microsoft.com/library/jj133861)
 ## Connectors
-## problemen oplossen
+## Probleemoplossing
 ### Synchronisatieservice
 ### Certificaatbeheer
 ### Service en portal
@@ -118,21 +119,21 @@
 ### [Voorbeeld: regeluitbreiding maken via meerdere bronnen](https://msdn.microsoft.com/en-us/library/ms696018)
 ### [Hints en tips voor het bouwen van regeluitbreidingen](https://technet.microsoft.com/library/cc708673)
 ## Certificaatbeheer
-### [Referentie voor REST API van certificaatbeheer](/microsoft-identity-manager/reference/certificate-management-rest-api-reference.md)
+### [Referentie voor REST API van certificaatbeheer](reference/certificate-management-rest-api-reference.md)
 ### [API-overzicht CM-melding](https://msdn.microsoft.com/library/bb468066)
 ### [API-overzicht CM-inrichting](https://msdn.microsoft.com/library/bb468046)
 ### [API-overzicht CM SQL](https://msdn.microsoft.com/library/bb468093)
 ### [Overzicht van aanpasbare CM-interfaces](https://msdn.microsoft.com/library/bb468076)
 ## [BHOLD](https://msdn.microsoft.com/library/jj853041)
 ## Privileged Access Management (Windows en Microsoft Active Directory beveiligen met beheer van bevoegde toegang)
-### [Naslagmateriaal voor REST API-van Privileged Access Management](/microsoft-identity-manager/reference/privileged-access-management-rest-api-reference.md)
+### [Naslagmateriaal voor REST API-van Privileged Access Management](reference/privileged-access-management-rest-api-reference.md)
 ## Rapporten
 ## Connectors
-### [Technische documentatie voor algemene LDAP-connector](/azure/active-directory/connect/active-directory-aadconnectsync-connector-genericldap.md)
-### [Algemene SQL-connector](/azure/active-directory/connect/active-directory-aadconnectsync-connector-genericsql.md)
+### [Technische documentatie voor algemene LDAP-connector](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnectsync-connector-genericldap)
+### [Algemene SQL-connector](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnectsync-connector-genericsql)
 ### [Connector voor webservices](https://www.microsoft.com/download/details.aspx?id=29943)
-### [Technische documentatie voor Windows PowerShell-connector](/azure/active-directory/connect/active-directory-aadconnectsync-connector-powershell.md)
-### [Technische documentatie voor Lotus Domino-connector](/azure/active-directory/connect/active-directory-aadconnectsync-connector-domino.md)
+### [Technische documentatie voor Windows PowerShell-connector](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnectsync-connector-powershell)
+### [Technische documentatie voor Lotus Domino-connector](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnectsync-connector-domino)
 ## Service
 ## Technische documentatie
 ### [Functiereferentie voor FIM 2010](https://technet.microsoft.com/library/ff800820)
