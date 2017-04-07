@@ -16,11 +16,12 @@ ms.suite: ems
 translationtype: Human Translation
 ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
 ms.openlocfilehash: 618b834452aa07a9f31582994fe32129a49f4249
+ms.lasthandoff: 11/10/2016
 
 
 ---
 
-# <a name="step-3-prepare-a-pam-server"></a>Stap 3 – Een PAM-server voorbereiden
+# <a name="step-3--prepare-a-pam-server"></a>Stap 3 – Een PAM-server voorbereiden
 
 >[!div class="step-by-step"]
 [« Stap 2](step-2-prepare-priv-domain-controller.md)
@@ -80,7 +81,7 @@ Configureer het beveiligingsbeleid van de server zodanig dat de zojuist gemaakte
 12. Sluit het venster Lokaal beveiligingsbeleid.  
 
 13. Open Configuratiescherm en schakel over naar **Gebruikersaccounts**.  
-14. Klik op **Andere gebruikers toegang tot deze computer geven **.  
+14. Klik op **Andere gebruikers toegang tot deze computer geven**.  
 15. Klik op **Toevoegen**, voer de gebruiker *MIMADMIN* in het domein *PRIV* in en klik in het volgende scherm van de wizard op **Deze gebruiker toevoegen als beheerder**.  
 16. Klik op **Toevoegen**, voer de gebruiker *SharePoint* in het domein *PRIV* in en klik in het volgende scherm van de wizard op **Deze gebruiker toevoegen als beheerder**.  
 17. Sluit Configuratiescherm.  
@@ -209,9 +210,4 @@ In step 4 begint u met het installeren van de MIM-onderdelen op de PAM-server.
 >[!div class="step-by-step"]
 [« Stap 2](step-2-prepare-priv-domain-controller.md)
 [Stap 4 »](step-4-install-mim-components-on-pam-server.md)
-
-
-
-<!--HONumber=Nov16_HO2-->
-
 
