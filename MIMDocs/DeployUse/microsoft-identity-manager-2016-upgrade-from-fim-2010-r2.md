@@ -15,6 +15,7 @@ ms.suite: ems
 translationtype: Human Translation
 ms.sourcegitcommit: 2d3092d7d41090e4e03b971fb62ca896cc8db282
 ms.openlocfilehash: 20e733f17d6ed590844c526888b649eb6bf5f322
+ms.lasthandoff: 02/13/2017
 
 
 ---
@@ -50,7 +51,7 @@ In deze gids wordt verondersteld dat u het volgende al hebt ingesteld.
 
 2.  Zorg ervoor dat u een back-up maakt van uw database voordat u deze procedure start.
 
-3.  Open de console **Services**, zoek de **Forefront Identity Manager-synchronisatieservice ** en stop deze.
+3.  Open de console **Services**, zoek de **Forefront Identity Manager-synchronisatieservice** en stop deze.
 
     ![Afbeelding van de console Services](media/MIM-UpgFIM1.PNG)
 
@@ -86,7 +87,7 @@ In deze gids wordt verondersteld dat u het volgende al hebt ingesteld.
 
 1.  Meld u aan als beheerder op een server waarop de FIM 2010 R2-service en -portal zijn geïmplementeerd.
 
-2.  Open de console **Services**, zoek de **Forefront Identity Manager-service ** en stop deze service.
+2.  Open de console **Services**, zoek de **Forefront Identity Manager-service** en stop deze service.
 
     ![Afbeelding van de console Services](media/MIM-UpgFIM9.PNG)
 
@@ -201,9 +202,4 @@ In deze gids wordt verondersteld dat u het volgende al hebt ingesteld.
 Opmerking: Als de FIM-invoegtoepassingen en -extensies momenteel zijn geïmplementeerd op de computers van gebruikers voor SSPR, configureert u de nieuwe MFA-telefoonpoorten voor wachtwoordherstel pas nadat de upgrade voor alle FIM-invoegtoepassingen en -uitbreidingen voor MIM 2016 is uitgevoerd.  Omdat de FIM 2010 en FIM 2010 R2-invoegtoepassingen en -extensies de nieuwe poorten niet herkennen, wordt hierdoor een fout veroorzaakt en kan een gebruiker wachtwoordherstel niet voltooien.
 
 Zie [Microsoft Identity Manager 2016 Service Pack 1 update package](https://blogs.technet.microsoft.com/iamsupport/2016/11/08/microsoft-identity-manager-2016-service-pack-1-update-package/) (Upgradepakket voor Microsoft Identity Manager 2016 SP1) voor richtlijnen voor de update naar Microsoft Identity Manager 2016 SP1
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 
