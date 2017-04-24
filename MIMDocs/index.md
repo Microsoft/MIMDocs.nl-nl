@@ -3,9 +3,9 @@ layout: LandingPage
 title: Documentatie voor Microsoft Identity Manager | Microsoft Docs
 description: Meer informatie over het gebruik van Microsoft Identity Manager.
 translationtype: Human Translation
-ms.sourcegitcommit: 1ff73d0bdfcbcb4ab79d0d81feca9abdc33f9213
-ms.openlocfilehash: 244b4e1ba3c51edfcbc78e2dfe9472792184b472
-ms.lasthandoff: 04/04/2017
+ms.sourcegitcommit: 89c49c8d979247b3b888570eabfb57398038934c
+ms.openlocfilehash: 090dd1377ba5afe5162d327569f4af6163e72a18
+ms.lasthandoff: 04/21/2017
 
 ---
 # <a name="microsoft-identity-manager-documentation"></a>Documentatie voor Microsoft Identity Manager
@@ -32,7 +32,7 @@ Microsoft Identity Manager 2016 verbindt de Identity & Access Management-oplossi
         </a>
     </li>
     <li>
-        <a href="/microsoft-identity-manager/understand-explore/microsoft-identity-manager-2016">
+-        <a href="/microsoft-identity-manager/understand-explore/microsoft-identity-manager-2016">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -42,8 +42,7 @@ Microsoft Identity Manager 2016 verbindt de Identity & Access Management-oplossi
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Meer informatie over Microsoft Identity Manager</h3>
-                    </div>
+                        <h3>Meer informatie over Microsoft Identity Manager</h3>                    </div>
                 </div>
             </div>
         </div>
@@ -88,6 +87,24 @@ Algemene ondersteuning voor Forefront Identity Manager (FIM) wordt beëindigd op
                     </div>
                     <div class="cardText">
                         <h3>REST API-verwijzing voor Privileged Access Management</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </a>
+    </li>
+        <li>
+        <a href="/microsoft-identity-manager/reference/certificate-management-rest-api-reference">
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="/media/common/i_reference.svg" alt="" />
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>REST API-verwijzing voor Certificate Management</h3>
                     </div>
                 </div>
             </div>
