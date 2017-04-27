@@ -15,6 +15,7 @@ ms.suite: ems
 translationtype: Human Translation
 ms.sourcegitcommit: 3623bffb099a83d0eba47ba25e9777c3d590e529
 ms.openlocfilehash: 2af432036033f8914d00228cd3d2d1af84f13054
+ms.lasthandoff: 01/24/2017
 
 
 ---
@@ -107,7 +108,7 @@ Voer de stappen uit die in de **wizard Configuratie van SharePoint-producten** w
   ```
 
   > [!NOTE]
-  > Controleer of het resultaat van het *compatibiliteitsniveau* de variabele&14; is. Als het resultaat 15 is, is de siteverzameling niet gemaakt voor de 2010-ervaringsversie. Verwijder de siteverzameling en maak deze opnieuw.
+  > Controleer of het resultaat van het *compatibiliteitsniveau* de variabele 14 is. Als het resultaat 15 is, is de siteverzameling niet gemaakt voor de 2010-ervaringsversie. Verwijder de siteverzameling en maak deze opnieuw.
 
 3. Schakel **Weergavestatus aan serverzijde voor SharePoint** en de SharePoint-taak Statusanalysetaak (elk uur, Microsoft SharePoint Foundation-timer, alle servers) uit door de volgende PowerShell-opdrachten in de **SharePoint 2013-beheershell** uit te voeren:
 
@@ -133,9 +134,4 @@ Voer de stappen uit die in de **wizard Configuratie van SharePoint-producten** w
 >[!div class="step-by-step"]  
 [« SQL Server 2014](prepare-server-sql2014.md)
 [Exchange Server »](prepare-server-exchange.md)
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 
