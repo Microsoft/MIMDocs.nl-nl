@@ -13,9 +13,9 @@ ms.assetid: 4978f60d-044d-4e84-8d93-65801fce1144
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e8783220723ba9e0e84b4824c79793be6516ab4a
-ms.openlocfilehash: 11f10cefa08b2bb13164ddfd7df39b914c87189a
-ms.lasthandoff: 03/28/2017
+ms.sourcegitcommit: f1faed3a09023e288a68a8950dae43725f19eb3e
+ms.openlocfilehash: 33c84afa4d6fd2ed7bde33de39dd151f83f07fd4
+ms.lasthandoff: 04/12/2017
 
 
 ---
@@ -30,18 +30,18 @@ In deze tabel worden de ondersteunde platformen en versies voor elk onderdeel va
 | **MIM-synchronisatie** | Windows Server | Windows Server 2008 R2 SP1<br/>Windows Server 2012<br/>Windows Server 2012 R2<br/>Windows Server 2016 * |
 | | MIM-synchronisatiedatabase | SQL Server 2008 R2 SP3<br/>SQL Server 2012 SP2<br/>SQL Server 2014 SP1 <br/> SQL Server 2016 * |
 | | Active Directory voor gebruikers inrichten, PCNS en GAL Sync (optioneel)|Windows Server 2008 R2 SP1<br/>Windows Server 2012<br/>Windows Server 2012 R2 <br/> Windows Server 2016 * |
-| | Exchange voor postvakinrichting en GAL Sync (optioneel)|Exchange Server 2007 SP3<br/>Exchange Server 2010 SP3<br/>Exchange Server 2013 SP1<br/>Exchange Server 2016* |
+| | Exchange voor postvakinrichting en GAL Sync (optioneel)|Exchange Server 2010 SP3<br/>Exchange Server 2013 SP1<br/>Exchange Server 2016* |
 | | Ontwikkelomgeving (optioneel) | Visual Studio 2012<br/>Visual Studio 2013 <br/> Visual Studio 2015 <br/> Visual Studio 2017* |
 | | Aanvullend verbonden systeem (optioneel) | Active Directory Domain Services<br/>Active Directory<br/>Lightweight Directory Services<br/>SQL Server 2000 of hoger<br/>SharePoint Server 2013<br/> SharePoint Server 2016 * <br/> Andere producten van derden |
 | **MIM-service** (met uitzondering van het scenario voor PAM) | Windows Server | Windows Server 2008 R2 SP1<br/>Windows Server 2012<br/>Windows Server 2012 R2 <br/> Windows Server 2016 * |
 | | MIM-servicedatabases | SQL Server 2008 R2 SP3<br/>SQL Server 2012 SP2<br/>SQL Server 2014 SP1 <br/> SQL Server 2016 * |
-| | Exchange voor goedkeuring van de MIM-service en e-mailberichten voor groepsbeheer (optioneel) | Exchange Server 2007 SP3 (met geïnstalleerde Exchange Management Console)<br/>Exchange Server 2010 SP3<br/>Exchange Server 2013 SP1 <br/> Exchange Server 2016 * <br/> Exchange Online * (alleen meldingen) |
+| | Exchange voor goedkeuring van de MIM-service en e-mailberichten voor groepsbeheer (optioneel) | Exchange Server 2010 SP3<br/>Exchange Server 2013 SP1 <br/> Exchange Server 2016 * <br/> Exchange Online * (alleen meldingen) |
 | **MIM-service en -portal** (alleen voor het scenario voor PAM)| Windows Server | Windows Server 2012<br/>Windows Server 2012 R2 <br/> Windows Server 2016 * |
 | | Active Directory voor PAM-forest in bastionomgeving | Windows Server 2012 R2 <br/> Windows Server 2016 * |
 | | Active Directory voor bestaande forests | Windows Server 2008 <br/> Windows Server 2008 R2 * <br/> Windows Server 2012 * <br/> Windows Server 2012 R2 * <br/> Windows Server 2016 * |
 | | MIM-servicedatabases | SQL Server 2008 R2 SP3<br/>SQL Server 2012 SP2<br/>SQL Server 2014 SP1 <br/> SQL Server 2016 * |
 | | SharePoint | SharePoint Foundation 2010<br/>SharePoint Foundation 2013 SP1 <br/> SharePoint 2016 * |
-| | Mailserver voor goedkeuring van de MIM-service en e-mailberichten voor groepsbeheer (optioneel) | Exchange Server 2007 SP3 (met geïnstalleerde Exchange Management Console)<br/>Exchange Server 2010 SP3<br/>Exchange Server 2013 SP1 <br/> Exchange Server 2016 * <br/> Exchange Online * (alleen meldingen) |
+| | Mailserver voor goedkeuring van de MIM-service en e-mailberichten voor groepsbeheer (optioneel) | Exchange Server 2010 SP3<br/>Exchange Server 2013 SP1 <br/> Exchange Server 2016 * <br/> Exchange Online * (alleen meldingen) |
 | | Browser | Alle belangrijke browsers |
 | **MIM-servicerapportages** | Windows Server | Windows Server 2012 <br/> Windows Server 2016 * |
 | | Datawarehouse | System Center 2012 Service Manager <br/> System Center 2012 R2 Service Manager </br> System Center 2016 Service Manager * (met 4.4.1459)<br/> [Compatibiliteit van de versie van SQL Server voor System Center 2016](https://technet.microsoft.com/en-us/system-center-docs/system-requirements/sql-server-version-compatibility)
@@ -58,6 +58,6 @@ In deze tabel worden de ondersteunde platformen en versies voor elk onderdeel va
 | **MIM Certificate Management** (client en bulkclient) | Windows | Windows 7 |
 | **MIM BHOLD-suite** | Windows Server | Windows Server 2008 R2 SP1<br/>Windows Server 2012 R2 <br/> Windows Server 2016 * |
 | | BHOLD-database | SQL Server 2008 R2 SP3<br/>SQL Server 2012 SP2 <br/> SQL Server 2014 * <br/> SQL Server 2016 * |
-| | E-mailserver (optioneel) | Exchange Server 2007 SP3<br/>Exchange Server 2010 SP3<br/>Exchange Server 2013 SP1 <br/> Exchange Server 2016 * |
+| | E-mailserver (optioneel) | Exchange Server 2010 SP3<br/>Exchange Server 2013 SP1 <br/> Exchange Server 2016 * |
 | | Webbrowser | Internet Explorer 7, 8, 9, 10 of 11 met Silverlight |
 

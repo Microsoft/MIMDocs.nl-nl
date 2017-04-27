@@ -15,6 +15,7 @@ ms.suite: ems
 translationtype: Human Translation
 ms.sourcegitcommit: 54d03fbd03f6c44298139324ea2dc7d945f008bc
 ms.openlocfilehash: 89e095cff66984140cdcef3617dd0ccc3d3714d8
+ms.lasthandoff: 02/07/2017
 
 
 ---
@@ -76,7 +77,7 @@ Gebruikers die geen lokale beheerder zijn van hun computer, kunnen standaard gee
 
     4.  Wanneer de algemene instellingen van de profielsjabloon worden weergegeven, schuift u helemaal naar beneden en klikt u onder **Smartcards configureren** op **Instellingen wijzigen**.
 
-    5.  Voer onder **Beginwaarde van de beheersleutel (hex)** de standaard beheersleutel in:&01020;3040506070801020304050607080102030405060708
+    5.  Voer onder **Beginwaarde van de beheersleutel (hex)** de standaard beheersleutel in: 010203040506070801020304050607080102030405060708
 
     6.  Schuif naar beneden en klik op **OK**.
 
@@ -93,9 +94,4 @@ Gebruikers die geen lokale beheerder zijn van hun computer, kunnen standaard gee
 7.  **Installeer de CM-app in het niet-beheerdersaccount**
 
 8.  **Start de CM-app en registratie voor een virtuele smartcard**
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 
