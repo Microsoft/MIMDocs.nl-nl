@@ -52,7 +52,7 @@ Voeg de functies van de webserver (IIS) en de toepassingsserver, de onderdelen v
 
 1.  Meld u aan als een PRIV-domeinbeheerder (PRIV\Administrator) en start PowerShell.
 
-2.  Typ de volgende opdrachten: U moet mogelijk een andere locatie opgeven voor de bronbestanden voor de .NET Framework 3.5-onderdelen. Deze onderdelen zijn meestal niet aanwezig wanneer Windows Server wordt geïnstalleerd, maar zijn beschikbaar in de map SxS (side-by-side), die deel uitmaakt van de map Bronnen op de installatieschijf voor het besturingssysteem, bijvoorbeeld: *d:\Sources\SxS.
+2.  Typ de volgende opdrachten: U moet mogelijk een andere locatie opgeven voor de bronbestanden voor de .NET Framework 3.5-onderdelen. Deze onderdelen zijn meestal niet aanwezig wanneer Windows Server wordt geïnstalleerd, maar zijn beschikbaar in de map SxS (side-by-side), die deel uitmaakt van de map Bronnen op de installatieschijf voor het besturingssysteem, bijvoorbeeld: d:\Sources\SxS\.
 
     ```
     import-module ServerManager
@@ -81,7 +81,7 @@ Configureer het beveiligingsbeleid van de server zodanig dat de zojuist gemaakte
 12. Sluit het venster Lokaal beveiligingsbeleid.  
 
 13. Open Configuratiescherm en schakel over naar **Gebruikersaccounts**.  
-14. Klik op **Andere gebruikers toegang tot deze computer geven**.  
+14. Klik op **Andere gebruikers toegang tot deze computer geven** .  
 15. Klik op **Toevoegen**, voer de gebruiker *MIMADMIN* in het domein *PRIV* in en klik in het volgende scherm van de wizard op **Deze gebruiker toevoegen als beheerder**.  
 16. Klik op **Toevoegen**, voer de gebruiker *SharePoint* in het domein *PRIV* in en klik in het volgende scherm van de wizard op **Deze gebruiker toevoegen als beheerder**.  
 17. Sluit Configuratiescherm.  
