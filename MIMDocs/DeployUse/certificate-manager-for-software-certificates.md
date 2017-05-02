@@ -2,10 +2,10 @@
 title: Certificaten aanvragen in Certificate Manager met sjablonen | Microsoft Docs
 description: Informatie over het gebruik van de certificaatbeheerder voor het maken en vernieuwen van softwarecertificaten met profielsjablonen.
 keywords: 
-author: kgremban
-ms.author: kgremban
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 01/23/2017
+ms.date: 03/23/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -15,6 +15,7 @@ ms.suite: ems
 translationtype: Human Translation
 ms.sourcegitcommit: 54d03fbd03f6c44298139324ea2dc7d945f008bc
 ms.openlocfilehash: 23cfb1134d1cbf2cf838354cb7d915084803cd41
+ms.lasthandoff: 01/24/2017
 
 
 ---
@@ -38,7 +39,7 @@ U hoeft geen beheerder te zijn of over een virtuele smartcard te beschikken om s
 
     1.  Typ op het tabblad **Algemeen** in het veld met de weergavenaam **Gearchiveerde certificaatsjabloon**.
 
-    2.  b.  Op het tabblad **Afhandeling van aanvragen**
+    2.  b.    Op het tabblad **Afhandeling van aanvragen**
 
         1.  Stel bij **Doel** de waarde in op Handtekening en versleuteling.
 
@@ -95,9 +96,4 @@ U hoeft geen beheerder te zijn of over een virtuele smartcard te beschikken om s
 10. Als u gearchiveerde certificaten opnieuw uitgegeven wilt, schakelt u de selectievakjes links naast **Gearchiveerde certificaten opnieuw verlenen** in en klikt u op **OK**.
 
 11. Als u de CM virtuele smartcard gebruikt, moet u gegevensverzamelingsitems uitschakelen omdat de smartcard niet werkt met wanneer gegevensverzameling is ingeschakeld. Schakel gegevensverzameling voor elk beleid uit door op het beleid in het linkerdeelvenster te klikken, het selectievakje naast **Voorbeeldgegevensitem** uit te schakelen en vervolgens op **Gegevensverzamelingsitems verwijderen** te klikken. Klik vervolgens op **OK**.
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

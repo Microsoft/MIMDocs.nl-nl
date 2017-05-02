@@ -2,10 +2,10 @@
 title: Microsoft Identity Manager-selfservice voor verlenging van smartcard zonder Administrator-toegang | Microsoft Docs
 description: Informatie over het registreren van smartcards voor gebruikers die geen beheerdersrechten hebben voor hun computers, zodat ze de certificaatbeheerder kunnen gebruiken.
 keywords: 
-author: kgremban
-ms.author: kgremban
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 01/23/2017
+ms.date: 03/23/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
