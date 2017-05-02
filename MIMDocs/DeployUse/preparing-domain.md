@@ -2,10 +2,10 @@
 title: Een domein instellen voor Microsoft Identity Manager 2016 | Microsoft Docs
 description: Maak een Active Directory-domeincontroller voordat u MIM 2016 installeert
 keywords: 
-author: kgremban
-ms.author: kgremban
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 01/23/2017
+ms.date: 03/23/2017
 ms.topic: get-started-article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -15,6 +15,7 @@ ms.suite: ems
 translationtype: Human Translation
 ms.sourcegitcommit: 3623bffb099a83d0eba47ba25e9777c3d590e529
 ms.openlocfilehash: e16bcc36fe4bccb621ba4d649aa0b015f2adbcdd
+ms.lasthandoff: 01/24/2017
 
 
 ---
@@ -91,9 +92,4 @@ Alle onderdelen van uw MIM-implementatie hebben een eigen identiteit in het dome
 
 >[!div class="step-by-step"]
 [Windows Server 2012 R2 »](prepare-server-ws2012r2.md)
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

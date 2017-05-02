@@ -2,10 +2,10 @@
 title: Privileged Access Management voor Active Directory Domain Services | Microsoft Docs
 description: Meer informatie over Privileged Access Management en hoe u hiermee uw Active Directory-omgeving kunt beheren en beveiligen.
 keywords: 
-author: kgremban
-ms.author: kgremban
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 01/10/2017
+ms.date: 03/10/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
@@ -17,6 +17,7 @@ experiment_id: kgremban_images
 translationtype: Human Translation
 ms.sourcegitcommit: f0947f186b5206d06a67140706ada33a5bc0e016
 ms.openlocfilehash: cea5a2fc162870c1125b35b75376881eb15cd2e9
+ms.lasthandoff: 01/11/2017
 
 ---
 
@@ -95,9 +96,4 @@ Ervan uitgaande dat de aanvraag wordt goedgekeurd, communiceert de actiewerkstro
 > Daarentegen wordt een verlopen koppeling in real-time geëvalueerd door de Security Accounts Manager (SAM). Hoewel de toevoeging van een groepslid moet worden gerepliceerd door de domeincontroller die de toegangsaanvraag ontvangt, wordt het verwijderen van een groepslid direct geëvalueerd op een domeincontroller.
 
 Deze werkstroom is specifiek bedoeld voor deze beheerdersaccounts. Beheerders (of zelfs scripts) die alleen incidenteel toegang nodig hebben voor bevoorrechte groepen, kunnen die toegang nauwkeurig aanvragen. De aanvraag en wijzigingen in Active Directory worden in het logboek vastgelegd met MIM. U kunt ze weergeven in Logboeken of de gegevens verzenden naar de bewakingsoplossingen van de onderneming zoals System Center 2012 - Operations Manager Audit Collection Services (ACS) of andere hulpprogramma's van derden.
-
-
-
-<!--HONumber=Jan17_HO2-->
-
 

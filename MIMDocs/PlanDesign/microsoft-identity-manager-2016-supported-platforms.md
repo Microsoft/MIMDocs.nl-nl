@@ -2,8 +2,8 @@
 title: Ondersteunde softwareplatformen | Microsoft Docs
 description: De producten en versies zoeken die compatibel met elk van de MIM 2016-onderdelen zijn
 keywords: 
-author: kgremban
-ms.author: kgremban
+author: billmath
+ms.author: billmath
 manager: femila
 ms.date: 03/28/2017
 ms.topic: article
