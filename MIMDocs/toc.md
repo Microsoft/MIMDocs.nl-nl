@@ -112,3 +112,5 @@
 #### [PAM-aanvragen in behandeling ophalen](/microsoft-identity-manager/reference/privileged-access-management-get-pending-requests)
 #### [Een PAM-aanvraag in behandeling goedkeuren of weigeren](/microsoft-identity-manager/reference/privileged-access-management-approve-reject-pending-request)
 #### [Gegevens van PAM-sessie ophalen](/microsoft-identity-manager/reference/privileged-access-management-get-session-info)
+## [Technische documentatie]
+### [XML-referentie van weergaveconfiguratie voor resourcebeheer](/microsoft-identity-manager/reference/rcd-configuration-xml-reference)
