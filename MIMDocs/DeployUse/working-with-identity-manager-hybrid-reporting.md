@@ -13,8 +13,9 @@ ms.assetid: 68df2817-2040-407d-b6d2-f46b9a9a3dbb
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 3623bffb099a83d0eba47ba25e9777c3d590e529
-ms.openlocfilehash: 9e64f930a8fe8422c7f6c8d98e558961ae8b88f2
+ms.sourcegitcommit: 3144ee195675df5dc120896cc801a7124ee12214
+ms.openlocfilehash: 6b3fda2cb78ec885d986462dcf0edb8843811095
+ms.lasthandoff: 04/27/2017
 
 
 ---
@@ -26,7 +27,7 @@ De eerste drie MIM-rapporten (Microsoft Identity Manager) die beschikbaar zijn i
 
 -   In Activiteit voor wachtwoord opnieuw instellen wordt elke instantie weergegeven waarbij een gebruiker de bewerking voor het opnieuw instellen van het wachtwoord heeft uitgevoerd met behulp van de SSPR en worden de poorten of **methoden** vermeld die worden gebruikt voor verificatie.
 
-    ![Afbeelding hybride rapportage van Azure - Activiteit wachtwoord opnieuw instellen](media/MIM-Hybrid-passwordreset.jpg)
+    ![Afbeelding hybride rapportage van Azure - Activiteit wachtwoord opnieuw instellen](media/MIM-Hybrid-passwordreset2.jpg)
 
 -   In Registratie voor wachtwoord opnieuw instellen wordt elke instantie weergegeven waarbij een gebruiker zich registreert voor de SSPR en de **methoden** die worden gebruikt om te verifiëren, bijvoorbeeld een mobieletelefoonnummer of vragen en antwoorden.
     Houd er rekening mee dat voor Registratie van wachtwoord opnieuw instellen geen onderscheid wordt gemaakt tussen de SMS-gate en de MFA-gate; beide worden beschouwd als **Mobiele telefoon**.
@@ -40,13 +41,13 @@ De eerste drie MIM-rapporten (Microsoft Identity Manager) die beschikbaar zijn i
 
 ## <a name="prerequisites"></a>Vereisten
 
-1.  Installeer Microsoft Identity Manager 2016, inclusief de MIM-service.
+1.  Installeer Microsoft Identity Manager 2016 RTM /of SP1 MIM-service.
 
 2.  Zorg ervoor dat uw adreslijst een Azure AD Premium-tenant met een gelicentieerde beheerder bevat.
 
 3.  Zorg ervoor dat u beschikt over een uitgaande internetverbinding vanaf de Microsoft Identity Manager-server naar Azure.
 
-## <a name="install-microsoft-identity-manager-reporting-in-azure-ad"></a>Microsoft Identity Manager-rapportage in Azure AD installeren
+## <a name="install-microsoft-identity-manager-reporting-agent-in-azure-ad"></a>Installeer de Microsoft Identity Manager-rapportageagent in Azure AD
 Nadat de rapportageagent is geïnstalleerd worden de gegevens van de Microsoft Identity Manager-activiteit uit MIM geëxporteerd naar het Windows-gebeurtenislogboek. De MIM-reportageagent verwerkt de gebeurtenissen en uploadt deze naar Azure. In Azure worden de gebeurtenissen geparseerd, ontsleuteld en gefilterd voor de vereiste rapporten.
 
 1.  Installeer Microsoft Identity Manager 2016.
@@ -61,10 +62,8 @@ Nadat de rapportageagent is geïnstalleerd worden de gegevens van de Microsoft I
 
 3.  Installeer de Microsoft Identity Manager-rapportageagent:
 
-    1.  Maak een map op de computer.
-
-    2.  Pak de bestanden `MIMHybridReportingAgent.msi` en `tenant.cert` uit naar de map.
-
+    1.  Download [MIMHReportingAgentSetup.exe](http://download.microsoft.com/download/7/3/1/731D81E1-8C1D-4382-B8EB-E7E7367C0BF2/MIMHReportingAgentSetup.exe) naar de server van de Microsoft Identity Manager-service.
+    2.  Voer `MIMHReportingAgentSetup.exe` uit 
     3.  Voer het installatieprogramma van de agent uit.
 
     4.  Zorg ervoor dat de MIM-reportageagentservice wordt uitgevoerd
@@ -77,21 +76,21 @@ Nadat de rapportageagent is geïnstalleerd worden de gegevens van de Microsoft I
 
 ## <a name="view-hybrid-reports-in-the-azure-classic-portal"></a>Hybride-rapporten weergeven in de klassieke Azure Portal
 
-1.  Meld u met uw globale beheerdersaccount voor de tenant aan bij de [klassieke Azure Portal](https://manage.windowsazure.com/).
+1.  Meld u met uw globale beheerdersaccount voor de tenant aan bij [Azure Portal](https://portal.azure.com/).
 
-2.  Klik op het pictogram **Active Directory**.
+2.  Klik op het pictogram **Azure Active Directory**.
 
 3.  Selecteer de tenantmap in de lijst met beschikbare mappen voor uw abonnement.
 
-4.  Klik op **Rapporten** en vervolgens op **Activiteit voor wachtwoordherstel**.
+4.  Klik op **Auditlogboeken**.
 
-5.  Zorg ervoor dat u **Identity Manager** selecteert in de bronvervolgkeuzelijst.
+5.  Zorg ervoor dat u **MIM-service** selecteert in het vervolgkeuzemenu Categorie.
 
 > [!WARNING]
-> Het kan even duren voordat Microsoft Identity Manager-gegevens worden weergeven in Azure AD.
+> Het kan even duren voordat Microsoft Identity Manager-controlegegevens worden weergeven in Azure AD.
 
 ## <a name="stop-creating-hybrid-reports"></a>Stoppen met het maken van hybride rapporten
-Als u wilt stoppen met het uploaden van rapportagegegevens van Microsoft Identity Manager naar Azure Active Directory, verwijdert u de agent voor hybride rapportage. Gebruik het Windows-hulpprogramma **Programma's installeren of verwijderen** om hybride rapportage van Microsoft Identity Manager te verwijderen.
+Als u wilt stoppen met het uploaden van controlegegevens van Microsoft Identity Manager naar Azure Active Directory, verwijdert u de agent voor hybride rapportage. Gebruik het Windows-hulpprogramma **Programma's installeren of verwijderen** om hybride rapportage van Microsoft Identity Manager te verwijderen.
 
 ## <a name="windows-events-used-for-hybrid-reporting"></a>Windows-gebeurtenissen die worden gebruikt voor hybride rapportage
 Gebeurtenissen die worden gegenereerd door Microsoft Identity Manager, worden geregistreerd in het Windows-gebeurtenislogboek en zijn zichtbaar in Logboeken bij Logboeken voor toepassingen en services-&gt; **Logboek Identity Manager-aanvragen**. Elke MIM-aanvraag wordt geëxporteerd als een gebeurtenis in het Windows-gebeurtenislogboek in JSON-structuur. Dit kan worden geëxporteerd naar uw SIEM.
@@ -100,9 +99,4 @@ Gebeurtenissen die worden gegenereerd door Microsoft Identity Manager, worden ge
 |--------------|------|-----------------|
 |Informatie|4121|MIM-gebeurtenisgegevens met alle aanvraaggegevens.|
 |Informatie|4137|Extensie van MIM-gebeurtenis 4121, indien er te veel gegevens zijn voor één gebeurtenis. De koptekst in deze gebeurtenis heeft de volgende notatie: `"Request: <GUID> , message <xxx> out of <xxx>`|
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 
