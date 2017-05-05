@@ -2,10 +2,10 @@
 title: PAM implementeren - Stap 2 - PRIV DC | Microsoft Docs
 description: "De PRIV-domeincontroller voorbereiden voor de bastionomgeving waarin Privileged Access Management wordt geïsoleerd."
 keywords: 
-author: kgremban
-ms.author: kgremban
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 07/15/2016
+ms.date: 03/15/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
@@ -13,13 +13,14 @@ ms.assetid: 0e9993a0-b8ae-40e2-8228-040256adb7e2
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
-ms.openlocfilehash: f84229908f31242b6d2f7636a7c67ca669de45b3
+ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
+ms.openlocfilehash: edc15b41d4248887f4a93217f68d8125f6500585
+ms.lasthandoff: 05/02/2017
 
 
 ---
 
-# <a name="step-2-prepare-the-first-priv-domain-controller"></a>Stap 2: de eerste PRIV-domeincontroller voorbereiden
+# <a name="step-2---prepare-the-first-priv-domain-controller"></a>Stap 2: de eerste PRIV-domeincontroller voorbereiden
 
 >[!div class="step-by-step"]
 [« Stap 1](step-1-prepare-corp-domain.md)
@@ -269,12 +270,12 @@ Voer de volgende stappen uit op PRIVDC als een domeinbeheerder.
 15. Selecteer in de lijst met machtigingen **Wachtwoord wijzigen** en **Wachtwoord opnieuw instellen**. Klik vervolgens op **Volgende** en daarna op **Voltooien**.  
 16. Sluit Active Directory - gebruikers en computers.
 
-17. Open een opdrachtprompt.  
-18. Controleer de toegangsbeheerlijst van het object Admin SD-houder in de PRIV-domeinen. Bijvoorbeeld, als uw domein 'priv.contoso.local' is, typt u de opdracht  
+17.    Open een opdrachtprompt.  
+18.    Controleer de toegangsbeheerlijst van het object Admin SD-houder in de PRIV-domeinen. Bijvoorbeeld, als uw domein 'priv.contoso.local' is, typt u de opdracht  
   ```
   dsacls "cn=adminsdholder,cn=system,dc=priv,dc=contoso,dc=local"
   ```
-19. Werk de toegangsbeheerlijst indien nodig bij om ervoor te zorgen dat MIM-service en MIM-onderdeelservice lidmaatschappen van groepen kunnen bijwerken die zijn beveiligd door deze ACL.  Typ de opdracht:  
+19.    Werk de toegangsbeheerlijst indien nodig bij om ervoor te zorgen dat MIM-service en MIM-onderdeelservice lidmaatschappen van groepen kunnen bijwerken die zijn beveiligd door deze ACL.  Typ de opdracht:  
   ```
   dsacls "cn=adminsdholder,cn=system,dc=priv,dc=contoso,dc=local" /G priv\mimservice:WP;"member"  
   dsacls "cn=adminsdholder,cn=system,dc=priv,dc=contoso,dc=local" /G priv\mimcomponent:WP;"member"
@@ -304,9 +305,4 @@ In de volgende stap bereidt u een PAM-server voor.
 >[!div class="step-by-step"]
 [« Stap 1](step-1-prepare-corp-domain.md)
 [Stap 3 »](step-3-prepare-pam-server.md)
-
-
-
-<!--HONumber=Nov16_HO2-->
-
 

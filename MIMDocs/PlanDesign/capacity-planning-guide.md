@@ -2,10 +2,10 @@
 title: Handleiding voor capaciteitsplanning | Microsoft Docs
 description: Met de informatie in deze handleiding leert u de variabelen te begrijpen die u in aanmerking moet nemen voordat u MIM 2016 implementeert, inclusief de belastingsniveaus en beleidsbeslissingen.
 keywords: 
-author: kgremban
-ms.author: kgremban
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 07/21/2016
+ms.date: 03/21/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -13,8 +13,9 @@ ms.assetid: 3ac5b990-1678-4996-996d-cbd84b8426b4
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
-ms.openlocfilehash: 33e7d901dcd9d8cf1bcaddcfa521625060bb3dbc
+ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
+ms.openlocfilehash: e33c5bb284d15a5e94118e621b968fcad5b65e2d
+ms.lasthandoff: 05/02/2017
 
 
 ---
@@ -92,9 +93,4 @@ MIM-beleidsconfiguratie omvat tevens het nemen van beslissingen over het inricht
 ## <a name="see-also"></a>Zie tevens
 - [Aandachtspunten voor topologie voor een MIM-implementatie](topology-considerations.md)
 - De downloadbare [handleiding voor planningscapaciteit van Forefront Identity Manager (FIM) 2010 ](http://go.microsoft.com/fwlink/?LinkId=200180) biedt meer informatie over een testbuild en prestatietestresultaten.
-
-
-
-<!--HONumber=Nov16_HO2-->
-
 

@@ -2,10 +2,10 @@
 title: Herstel na noodgevallen in PAM | Microsoft Docs
 description: Meer informatie over het configureren van Privileged Access Management voor een hoge beschikbaarheid en herstel na noodgevallen.
 keywords: 
-author: kgremban
-ms.author: kgremban
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 07/15/2016
+ms.date: 03/15/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
@@ -13,8 +13,9 @@ ms.assetid: 03e521cd-cbf0-49f8-9797-dbc284c63018
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
-ms.openlocfilehash: a61d0bf5aaa263aff28a253e54e721f168ce337c
+ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
+ms.openlocfilehash: 2fab9af837ed11b1f2f7f32c9ced6d79c8cc9d00
+ms.lasthandoff: 05/02/2017
 
 
 ---
@@ -221,9 +222,4 @@ De Privileged Access Management-onderdelen moeten worden geïnstalleerd op elke 
 Zorg ervoor dat de MIM-service wordt uitgevoerd op ten minste één server na het herstel van een storing.  Zorg ervoor dat de MIM PAM-bewakingsservice ook op die server wordt uitgevoerd met behulp van `net start "PAM Monitoring service"`.
 
 Als het functionele forestniveau van de bastionomgeving Windows Server 2012 R2 is, moet u ervoor zorgen dat de MIM PAM-onderdeelservice ook wordt uitgevoerd op die server met de opdracht `net start "PAM Component service"`.
-
-
-
-<!--HONumber=Nov16_HO2-->
-
 

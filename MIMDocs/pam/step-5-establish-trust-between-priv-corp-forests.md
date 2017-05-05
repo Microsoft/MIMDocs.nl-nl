@@ -2,10 +2,10 @@
 title: PAM implementeren - Stap 5 - Forest-koppeling | Microsoft Docs
 description: Vertrouwensrelatie tussen de PRIV- en CORP-forests instellen zodat bevoegde gebruikers in PRIV nog steeds toegang hebben tot resources in CORP.
 keywords: 
-author: kgremban
-ms.author: kgremban
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 07/15/2016
+ms.date: 03/15/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
@@ -13,13 +13,14 @@ ms.assetid: eef248c4-b3b6-4b28-9dd0-ae2f0b552425
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
-ms.openlocfilehash: 16208efe08c5a2c0f63ee121c64c45cad5a73909
+ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
+ms.openlocfilehash: 1239ca2c0c6d376420723da01d7aa42821f5980f
+ms.lasthandoff: 05/02/2017
 
 
 ---
 
-# <a name="step-5-establish-trust-between-priv-and-corp-forests"></a>Stap 5 –Een vertrouwensrelatie tussen het PRIV- en CORP-forest instellen
+# <a name="step-5--establish-trust-between-priv-and-corp-forests"></a>Stap 5 –Een vertrouwensrelatie tussen het PRIV- en CORP-forest instellen
 
 >[!div class="step-by-step"]
 [« Stap 4](step-4-install-mim-components-on-pam-server.md)
@@ -109,9 +110,4 @@ In de volgende stap gaat u een groep naar PAM verplaatsen.
 >[!div class="step-by-step"]
 [« Stap 4](step-4-install-mim-components-on-pam-server.md)
 [Stap 6 »](step-6-transition-group-to-pam.md)
-
-
-
-<!--HONumber=Nov16_HO2-->
-
 
