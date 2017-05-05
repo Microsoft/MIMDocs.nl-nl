@@ -2,10 +2,10 @@
 title: Overzicht van de PAM-omgeving | Microsoft Docs
 description: "Zoeken naar het vereiste aantal en de configuratie van virtuele machines die in Privileged Access Management kunnen worden geïmplementeerd"
 keywords: 
-author: kgremban
-ms.author: kgremban
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 07/15/2016
+ms.date: 03/15/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
@@ -13,8 +13,9 @@ ms.assetid: 479db14c-1bfb-4d7c-a344-cd718a01f328
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
-ms.openlocfilehash: 750ba152813b4c03c913453c42e0e503e90b883b
+ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
+ms.openlocfilehash: 3e6c5a70c6b9ed140a56135676bbd14a84504317
+ms.lasthandoff: 05/02/2017
 
 
 ---
@@ -31,9 +32,4 @@ De stations waar de schijfinstallatiekopieën van de virtuele machines worden op
 
 > [!NOTE]
 > De huidige MIM Customer Technical Preview (CTP) is niet compatibel met de database of de mapinhoud van de vorige CTP. Als u eerder MIM voor PAM of andere scenario's hebt geëvalueerd, maakt u een back-up en archief van de virtuele machines die zijn gebruikt voor die test en start u de implementatie met de nieuwe installatiekopieën van virtuele machines die nog niet eerder zijn gebruikt voor MIM-scenario's.
-
-
-
-<!--HONumber=Nov16_HO2-->
-
 
