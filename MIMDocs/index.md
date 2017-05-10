@@ -2,10 +2,11 @@
 layout: LandingPage
 title: Documentatie voor Microsoft Identity Manager | Microsoft Docs
 description: Meer informatie over het gebruik van Microsoft Identity Manager.
-translationtype: Human Translation
-ms.sourcegitcommit: 2b336fead118a1517287a50e6d300bb09f535bf0
-ms.openlocfilehash: 96a5ae76e5e44ae1bed16e96b22d4efc6bfdc305
-ms.lasthandoff: 05/01/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3797f5789bb4e48836eb21776dafd5a2e0e11613
+ms.openlocfilehash: c49fbae1892bfa0207a1615d11e600fe21d638c8
+ms.contentlocale: nl-nl
+ms.lasthandoff: 05/09/2017
 
 ---
 # <a name="microsoft-identity-manager-documentation"></a>Documentatie voor Microsoft Identity Manager
@@ -14,7 +15,7 @@ Microsoft Identity Manager 2016 verbindt de Identity & Access Management-oplossi
 
 <ul class="panelContent cardsFTitle">
     <li>
-        <a href="/microsoft-identity-manager/understand-explore/microsoft-identity-manager-2016-sp1-release-notes">
+        <a href="/microsoft-identity-manager/microsoft-identity-manager-2016-sp1-release-notes">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -32,7 +33,7 @@ Microsoft Identity Manager 2016 verbindt de Identity & Access Management-oplossi
         </a>
     </li>
     <li>
-        <a href="/microsoft-identity-manager/understand-explore/microsoft-identity-manager-2016">
+        <a href="/microsoft-identity-manager/microsoft-identity-manager-2016">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -49,7 +50,7 @@ Microsoft Identity Manager 2016 verbindt de Identity & Access Management-oplossi
         </a>
     </li>
     <li>
-        <a href="/microsoft-identity-manager/deploy-use/microsoft-identity-manager-deploy">
+        <a href="/microsoft-identity-manager/microsoft-identity-manager-deploy">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -71,7 +72,7 @@ Microsoft Identity Manager 2016 verbindt de Identity & Access Management-oplossi
 ---
 <br>
 >[!Warning]
-Algemene ondersteuning voor Forefront Identity Manager (FIM) wordt beëindigd op 10-10-2017. [Voer een upgrade uit](DeployUse/microsoft-identity-manager-2016-upgrade-from-fim-2010-r2.md) naar Microsoft Identity Manager 2016. Meer informatie: </br>  - Informatie over de levenscyclus van FIM is [hier](https://support.microsoft.com/lifecycle/search?alpha=Microsoft%20Forefront%20Identity%20Manager%202010%20R2%20Service%20Pack%201,Microsoft%20Identity%20Manager%202016,Microsoft%20Forefront%20Identity%20Manager%202010) beschikbaar </br> - Lees voor informatie over openbare releases van identiteitsproducten de post met de titel [Microsoft Identity Software: Public Release Build Versions](https://blogs.technet.microsoft.com/iamsupport/idmbuildversions/) (Microsoft Identity-software: openbare releaseversies)
+Algemene ondersteuning voor Forefront Identity Manager (FIM) wordt beëindigd op 10-10-2017. [Voer een upgrade uit](microsoft-identity-manager-2016-upgrade-from-fim-2010-r2.md) naar Microsoft Identity Manager 2016. Meer informatie: </br>  - Informatie over de levenscyclus van FIM is [hier](https://support.microsoft.com/lifecycle/search?alpha=Microsoft%20Forefront%20Identity%20Manager%202010%20R2%20Service%20Pack%201,Microsoft%20Identity%20Manager%202016,Microsoft%20Forefront%20Identity%20Manager%202010) beschikbaar </br> - Lees voor informatie over openbare releases van identiteitsproducten de post met de titel [Microsoft Identity Software: Public Release Build Versions](https://blogs.technet.microsoft.com/iamsupport/idmbuildversions/) (Microsoft Identity-software: openbare releaseversies)
 
 <h2>Verwijzing</h2>
 <ul class="panelContent cardsFTitle">
