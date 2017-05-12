@@ -5,15 +5,16 @@ keywords:
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
-ms.date: 03/24/2017
+ms.date: 05/08/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 
-translationtype: Human Translation
-ms.sourcegitcommit: 77ecdb91ccfdb1afec830e9662163ab9a7ef250c
-ms.openlocfilehash: dc68c4dcf2ae2d347e10930613bd32ca02031f8b
-ms.lasthandoff: 03/24/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3797f5789bb4e48836eb21776dafd5a2e0e11613
+ms.openlocfilehash: fbdebd59249667a0e60d3a248f183bcb6a75085a
+ms.contentlocale: nl-nl
+ms.lasthandoff: 05/09/2017
 
 
 ---
@@ -40,9 +41,9 @@ Er zijn minimaal twee virtuele machines nodig voor de testomgeving:
 Als u nog geen CORP-domein in uw testomgeving hebt, is een extra domeincontroller voor dit domein vereist. U kunt voor de CORP-domeincontroller met Windows Server 2016 of Windows Server 2012 R2 gebruiken.
 
 
-Voer de installatie uit, zoals beschreven in de [introductiehandleiding](/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services.md), **behalve in de hieronder beschreven gevallen**:
+Voer de installatie uit, zoals beschreven in de [introductiehandleiding](privileged-identity-management-for-active-directory-domain-services.md), **behalve in de hieronder beschreven gevallen**:
 
--   Als u een nieuw CORP-domein maakt aan de hand van de instructies in [Stap 1: de CORP-domeincontroller voorbereiden](/microsoft-identity-manager/pam/step-1-prepare-corp-domain.md), kunt u desgewenst het CORP-domein zo configureren dat het zich op het functionele niveau van Windows Server 2016 bevindt. **Als u deze optie kiest, moet u de volgende aanpassingen doen**:
+-   Als u een nieuw CORP-domein maakt aan de hand van de instructies in [Stap 1: de CORP-domeincontroller voorbereiden](step-1-prepare-corp-domain.md), kunt u desgewenst het CORP-domein zo configureren dat het zich op het functionele niveau van Windows Server 2016 bevindt. **Als u deze optie kiest, moet u de volgende aanpassingen doen**:
 
     -   Als u Windows Server 2016-media gebruikt, heet de installatieoptie Windows Server 2016 (Server met Bureaubladervaring).
 
@@ -56,7 +57,7 @@ Voer de installatie uit, zoals beschreven in de [introductiehandleiding](/micros
 
 -   Als u Windows Server 2012 R2 gebruikt als het besturingssysteem voor CORPDC, moet u de hotfixes 2919442 en 2919355 installeren [en 3155495 bijwerken](http://support.microsoft.com/kb/3156418) op CORPDC.
 
--   Volg de instructies in [Stap 2: PRIV-domeincontroller voorbereiden](/microsoft-identity-manager/pam/step-2-prepare-priv-domain-controller.md), met uitzondering van de volgende aanpassingen:
+-   Volg de instructies in [Stap 2: PRIV-domeincontroller voorbereiden](step-2-prepare-priv-domain-controller.md), met uitzondering van de volgende aanpassingen:
 
     -   Installeren met behulp van Windows Server 2016-media. De installatieoptie heet Windows Server 2016 (Server met Bureaubladervaring).
 
@@ -115,19 +116,19 @@ Voer de installatie uit, zoals beschreven in de [introductiehandleiding](/micros
     ```
 
 
--   Volg de instructies in [Stap 3: een PAM-server voorbereiden](/microsoft-identity-manager/pam/step-3-prepare-pam-server.md), met de volgende aanpassingen.
+-   Volg de instructies in [Stap 3: een PAM-server voorbereiden](step-3-prepare-pam-server.md), met de volgende aanpassingen.
 
     -   Als u op Windows Server 2016 installeert, moet u er rekening mee houden dat de rol ApplicationServer niet beschikbaar is.
 
     -   Als u MIM op Windows Server 2016 installeert, **kunt u SharePoint 2013 niet installeren**.
 
--   Volg de instructies in [Stap 4: MIM-onderdelen installeren op een PAM-server en -werkstation](/microsoft-identity-manager/pam/step-4-install-mim-components-on-pam-server.md), met de volgende aanpassingen.
+-   Volg de instructies in [Stap 4: MIM-onderdelen installeren op een PAM-server en -werkstation](step-4-install-mim-components-on-pam-server.md), met de volgende aanpassingen.
 
     -   De gebruiker die de MIM-service en PAM-onderdelen installeert, **moet schrijftoegang hebben tot het PRIV-domein in AD**, aangezien met de MIM-installatie een nieuwe organisatie-eenheid van AD, genaamd PAM-objecten, wordt gemaakt.
 
     -   Als SharePoint niet is geïnstalleerd, moet u de MIM-portal niet installeren.
 
--   Volg de instructies in [Stap 5: een vertrouwensrelatie instellen](/microsoft-identity-manager/pam/step-5-establish-trust-between-priv-corp-forests.md) met de volgende aanpassingen:
+-   Volg de instructies in [Stap 5: een vertrouwensrelatie instellen](step-5-establish-trust-between-priv-corp-forests.md) met de volgende aanpassingen:
 
     -   Bij het instellen van een eenzijdige vertrouwensrelatie, moet u alleen de eerste twee PowerShell-opdrachten uitvoeren (get-credential en New-PAMTrust). **Voer de opdracht New-PAMDomainConfiguration niet uit**.
 
@@ -147,7 +148,7 @@ Voer de installatie uit, zoals beschreven in de [introductiehandleiding](/micros
 
 ## <a name="more-information"></a>Meer informatie
 
-- [Privileged Access Management voor Active Directory Domain Services](/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services.md)
-- [De MIM-omgeving voor Privileged Access Management configureren](/microsoft-identity-manager/pam/configuring-mim-environment-for-pam.md)
-- [PAM configureren met behulp van scripts](/microsoft-identity-manager/pam/sp1-pam-configure-using-scripts.md)
+- [Privileged Access Management voor Active Directory Domain Services](privileged-identity-management-for-active-directory-domain-services.md)
+- [De MIM-omgeving voor Privileged Access Management configureren](configuring-mim-environment-for-pam.md)
+- [PAM configureren met behulp van scripts](sp1-pam-configure-using-scripts.md)
 
