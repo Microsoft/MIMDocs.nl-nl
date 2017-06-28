@@ -34,7 +34,7 @@ We stellen uw feedback op prijs. Feedback of opmerkingen voor het productteam ku
 
 ### <a name="mim"></a>MIM
 
-- **Compatibiliteit van MIM-portal met meerdere browsers voor selfservice voor eindgebruikers:** met dit servicepack introduceren we ondersteuning voor de meest belangrijke browsers. Gebruikers hebben nu toegang tot en kunnen communiceren met de MIM-portal voor selfservice groeps- en profielbeheer vanuit Edge, Chrome en Safari.
+- **Compatibiliteit van MIM-portal met meerdere browsers voor selfservice voor eindgebruikers:** met dit servicepack introduceren we ondersteuning voor de meest belangrijke browsers. Gebruikers hebben nu toegang tot en kunnen communiceren met de MIM-portal voor selfservice groeps- en profielbeheer vanuit Microsoft Edge, Chrome en Safari.
 
 - **MIM-service-ondersteuning voor Exchange Online:** de MIM-service biedt ondersteuning voor het versturen en ontvangen van e-mailberichten voor goedkeuringen en meldingen. Vóór SP1 MIM werd alleen Exchange Server of SMTP ondersteund. De MIM-service kan met Service Pack 1 aanvragen en e-mailmeldingen verzenden en ontvangen met een Office365 Exchange online-account.
 
