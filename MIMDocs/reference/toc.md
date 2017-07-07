@@ -40,8 +40,3 @@
 #### [PAM-aanvragen in behandeling ophalen](privileged-access-management-get-pending-requests.md)
 #### [Een PAM-aanvraag in behandeling goedkeuren of weigeren](privileged-access-management-approve-reject-pending-request.md)
 #### [Gegevens van PAM-sessie ophalen](privileged-access-management-get-session-info.md)
-
-
-<!--HONumber=Jan17_HO3-->
-
-
