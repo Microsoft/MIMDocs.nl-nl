@@ -1,116 +1,232 @@
+
 # [Begrijpen en verkennen](microsoft-identity-manager-2016.md)
+
 ## [Wat is MIM 2016?](microsoft-identity-manager-2016.md)
+
 ## [Nieuw in Service Pack 1](Microsoft-identity-manager-2016-sp1-release-notes.md)
+
 ### [MIM2016 SP1 PAM-implementatiescripts](sp1-deployment-scripts.md)
+
 ## [Hybride rapportage in Azure](identity-manager-hybrid-reporting-azure.md)
+
 # [Plannen en ontwerpen](microsoft-identity-manager-2016-supported-platforms.md)
+
 ## [Ondersteunde platforms](microsoft-identity-manager-2016-supported-platforms.md)
+
 ## [Verbinding maken met uw adreslijsten](supported-management-agents.md)
+
 ## [Capaciteitsplanning](capacity-planning-guide.md)
+
 ## [Implementatietopologie](topology-considerations.md)
+
 # [Implementeren en gebruiken](microsoft-identity-manager-deploy.md)
+
 ## [Eerste implementatie](microsoft-identity-manager-deploy.md)
+
 ### [Domeininstelling](preparing-domain.md)
+
 ### [Installatie van de server: Windows Server](prepare-server-ws2012r2.md)
+
 ### [Installatie van de server: SQL](prepare-server-sql2014.md)
+
 ### [Installatie van de server: SharePoint](prepare-server-sharepoint.md)
+
 ### [Installatie van de server: Exchange](prepare-server-exchange.md)
+
 ### [MIM installeren: synchronisatie](install-mim-sync.md)
+
 ### [MIM installeren: service en portal](install-mim-service-portal.md)
+
 ### [MIM installeren: databases synchroniseren](install-mim-sync-ad-service.md)
+
 ## [Upgrade uitvoeren in Forefront Identity Manager 2010 R2](microsoft-identity-manager-2016-upgrade-from-fim-2010-R2.md)
+
 ## [Meldingsservice voor wachtwoordwijzigingen](deploying-mim-password-change-notification-service-on-domain-controller.md)
+
 ## [Hybride rapportage van Identity Manager](working-with-identity-manager-hybrid-reporting.md)
+
 ## [Selfservice voor wachtwoordherstel](working-with-self-service-password-reset.md)
+
 ## [MIM Certificate Manager](working-with-mim-certificate-manager.md)
+
 ### [Smartcards inschrijven](certificate-manager-for-non-administrators.md)
+
 ### [Softwarecertificaten maken](certificate-manager-for-software-certificates.md)
+
 # [Privileged Access Management gebruiken](./pam/privileged-identity-management-for-active-directory-domain-services.md)
+
 ## [Meer informatie over PAM](./pam/privileged-identity-management-for-active-directory-domain-services.md)
+
 ### [Inzicht in de onderdelen](./pam/principles-of-operation.md)
+
 ## [De PAM-implementatie plannen](./pam/environment-overview.md)
+
 ### [Overzicht van de omgeving](./pam/environment-overview.md)
+
 ### [Laagmodel](./pam/tier-model-for-partitioning-administrative-privileges.md)
+
 ### [Een bastionomgeving plannen](./pam/planning-bastion-environment.md)
+
 ### [Rollen definiëren](./pam/defining-roles-for-pam.md)
+
 ### [Hoge beschikbaarheid en herstel na noodgevallen](./pam/high-availability-disaster-recovery-considerations-bastion-environment.md)
+
 ### [Hardware- en softwarevereisten](./pam/hardware-software-requirements.md)
+
 ## [MIM configureren voor Privileged Access Management](./pam/configuring-mim-environment-for-pam.md)
+
 ### [Stap 1 - CORP-domein](./pam/step-1-prepare-corp-domain.md)
+
 ### [Stap 2 - PRIV-domeincontroller](./pam/step-2-prepare-priv-domain-controller.md)
+
 ### [Stap 3 - PAM-server](./pam/step-3-prepare-pam-server.md)
+
 ### [Stap 4 - MIM installeren op de PAM server](./pam/step-4-install-mim-components-on-pam-server.md)
+
 ### [Stap 5 - Een vertrouwensrelatie tussen het PRIV en CORP instellen](./pam/step-5-establish-trust-between-priv-corp-forests.md)
+
 ### [Stap 6 - Bevoorrechte accounts maken](./pam/step-6-transition-group-to-pam.md)
+
 ### [Stap 7 – De toegangsrechten van een gebruiker uitbreiden](./pam/step-7-elevate-user-access.md)
+
 ### [MIM PAM implementeren met Windows Server 2016](./pam/deploy-pam-with-windows-server-2016.md)
+
 ### [Azure MFA instellen](./pam/use-azure-mfa-for-activation.md)
+
 ## [PAM configureren met behulp van scripts](./pam/sp1-pam-configure-using-scripts.md)
+
 ### [Stap 1 Het privédomein configureren](./pam/sp1-step1-configuring-priv-domain.md)
+
 ### [Stap 2 Het CORP-domein configureren](./pam/sp1-step2-configuring-corp-domain.md)
+
 ### [Stap 3 SQL configureren](./pam/sp1-step3-installing-configuring-sql.md)
+
 ### [Stap 4 SharePoint configureren](./pam/sp1-step4-configuring-sharepoint.md)
+
 ### [Stap 5 PAM installeren/configureren](./pam/sp1-step5-configuring-pam.md)
+
 ### [Stap 6 De PAM-vertrouwensrelatie installeren](./pam/sp1-step6-setup-pam-trust.md)
+
 ### [Stap 7 SID-geschiedenis/filtering instellen](./pam/sp1-step7-setup-sidhistory-sidfiltering.md)
+
 ### [Stap 8 Verificatie van PAM-implementatie](./pam/sp1-step8-pam-deployment-verification.md)
+
 ### [Bijlage](./pam/sp1-pam-deployment-addendum.md)
+
 # Infrastructuur beheren
+
 ## [Best Practices Analyzer voor Identity Manager](https://technet.microsoft.com/library/jj203402)
+
 ## [Meldingsservice voor wachtwoordwijzigingen](https://technet.microsoft.com/library/e27c0bc6-c808-4fdb-9e59-58feeb419308)
+
 ## Certificaatbeheer
+
 ### [CLMUtil-opdrachtregelprogramma](https://technet.microsoft.com/library/cc720647)
+
 ### [Configuratieprofielsjablonen](https://technet.microsoft.com/library/cc708656)
+
 ### [De website voor certificaatbeheer gebruiken](https://technet.microsoft.com/library/cc720560)
+
 ### [Smartcardtoepassingen beheren](https://technet.microsoft.com/library/cc708681)
+
 ### [Back-up en herstel](https://technet.microsoft.com/library/dd883245)
+
 ## Selfservice voor wachtwoordherstel
+
 ### [Programmatische gebruikersregistratie](https://technet.microsoft.com/library/jj134294)
+
 ### [Aanpassingen](https://technet.microsoft.com/library/jj134312)
+
 ## Service en portal
+
 ### [Kerberos](https://technet.microsoft.com/library/jj134299)
+
 ### [Dynamische logboekregistratie](./infrastructure/mim-service-dynamic-logging.md)
+
 ### [Prestatiehandleiding exporteren](https://technet.microsoft.com/library/hh322883)
+
 ## Rapporten
+
 ### [Rapportage van aangepaste rapporten en uitbreidbaarheid](https://technet.microsoft.com/library/jj133861)
+
 ## [Microsoft Identity-software: buildversies van openbare versie](https://blogs.technet.microsoft.com/iamsupport/idmbuildversions/)
+
 # [Referentie voor ontwikkelaars](./reference/microsoft-identity-manager-2016-developer-reference.md)
+
 ## [Microsoft Identity Manager 2016-naslaginformatie voor ontwikkelaars](./reference/microsoft-identity-manager-2016-developer-reference.md)
+
 ### [Naslaginformatie voor REST API van Certificate Management](./reference/certificate-management-rest-api-reference.md)
+
 #### [Servicegegevens voor REST API van CM](./reference/certificate-management-rest-api-service-details.md)
+
 #### [Overzicht met voorbeeld van inschrijving](./reference/sample-enrollment-walkthrough.md)
+
 #### [Profielsjablonen ophalen](./reference/get-profile-templates.md)
+
 #### [Bewerkingen voor beleid](./reference/policy-operations.md)
+
 ##### [Werkstroombeleid ophalen](./reference/get-workflow-policy.md)
+
 ##### [Smartcardbeleid ophalen](./reference/get-smartcard-policy.md)
+
 #### [Bewerkingen voor aanvraag](./reference/request-operations.md)
+
 ##### [Aanvraag maken](./reference/create-request.md)
+
 ##### [Aanvraag ophalen](./reference/get-request.md)
+
 ##### [Een aanvraag annuleren, afbreken of voltooien](./reference/cancel-abandon-complete-request.md)
+
 #### [Bewerkingen voor certificaataanvraag](./reference/certificate-request-operations.md)
+
 ##### [Algemene opties voor certificaataanvraag ophalen](./reference/get-certificate-request-generation-options.md)
+
 ##### [Certificaatantwoorden ophalen](./reference/get-certificate-responses.md)
+
 #### [Bewerkingen voor smartcard](./reference/smartcard-operations.md)
+
 ##### [Smartcard toewijzen aan een aanvraag](./reference/assign-smartcard-to-request.md)
+
 ##### [Smartcardgegevens ophalen](./reference/get-smartcard-data.md)
+
 ##### [Verificatieantwoord voor smartcard ophalen](./reference/get-smartcard-authentication-response.md)
+
 ##### [Gediversifieerde beheersleutel voor smartcard ophalen](./reference/get-smartcard-diversified-admin-key.md)
+
 ##### [Voorgestelde pincode voor smartcard ophalen](./reference/get-smartcard-proposed-pin.md)
+
 ##### [Smartcardstatus bijwerken](./reference/update-smartcard-status.md)
+
 #### [Bewerkingen voor profiel](./reference/profile-operations.md)
+
 ##### [Profielgegevens ophalen](./reference/get-profile-data.md)
+
 ##### [Bewerkingen voor profielstatus ophalen](./reference/get-profile-state-operations.md)
+
 #### [Bewerkingen voor certificaat](./reference/certificate-operations.md)
+
 ##### [Smartcard- of profielcertificaten ophalen](./reference/get-smartcard-profile-certificates.md)
+
 ##### [Gebruikerscertificaten ophalen](./reference/get-user-certificates.md)
+
 ### [Naslagmateriaal voor REST API-van Privileged Access Management](./reference/privileged-access-management-rest-api-reference.md)
+
 #### [Servicegegevens voor REST API van PAM](./reference/privileged-access-management-rest-api-service-details.md)
+
 #### [PAM-rollen ophalen](./reference/privileged-access-management-get-roles.md)
+
 #### [PAM-aanvraag maken](./reference/privileged-access-management-create-request.md)
+
 #### [PAM-aanvragen ophalen](./reference/privileged-access-management-get-requests.md)
+
 #### [PAM-aanvraag sluiten](./reference/privileged-access-management-close-request.md)
+
 #### [PAM-aanvragen in behandeling ophalen](./reference/privileged-access-management-get-pending-requests.md)
+
 #### [Een PAM-aanvraag in behandeling goedkeuren of weigeren](./reference/privileged-access-management-approve-reject-pending-request.md)
+
 #### [Gegevens van PAM-sessie ophalen](./reference/privileged-access-management-get-session-info.md)
+
 ## [Technische documentatie]
+
 ### [XML-referentie van weergaveconfiguratie voor resourcebeheer](./reference/rcd-configuration-xml-reference.md)

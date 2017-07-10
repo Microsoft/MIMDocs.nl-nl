@@ -1,34 +1,68 @@
+
 # [Begrijpen en verkennen](/microsoft-identity-manager/understand-explore/microsoft-identity-manager-2016)
+
 # [Plannen en ontwerpen](/microsoft-identity-manager/plan-design/microsoft-identity-manager-2016-supported-platforms)
+
 # [Implementeren en gebruiken](/microsoft-identity-manager/deploy-use/microsoft-identity-manager-deploy)
+
 # [Privileged Access Management gebruiken](privileged-identity-management-for-active-directory-domain-services.md)
+
 ## [Meer informatie over PAM](privileged-identity-management-for-active-directory-domain-services.md)
+
 ### [Inzicht in de onderdelen](principles-of-operation.md)
+
 ## [De PAM-implementatie plannen](environment-overview.md)
+
 ### [Overzicht van de omgeving](environment-overview.md)
+
 ### [Laagmodel](tier-model-for-partitioning-administrative-privileges.md)
+
 ### [Een bastionomgeving plannen](planning-bastion-environment.md)
+
 ### [Rollen definiëren](defining-roles-for-pam.md)
+
 ### [Hoge beschikbaarheid en herstel na noodgevallen](high-availability-disaster-recovery-considerations-bastion-environment.md)
+
 ### [Hardware- en softwarevereisten](hardware-software-requirements.md)
+
 ## [MIM configureren voor Privileged Access Management](configuring-mim-environment-for-pam.md)
+
 ### [Stap 1 - CORP-domein](step-1-prepare-corp-domain.md)
+
 ### [Stap 2 - PRIV-domeincontroller](step-2-prepare-priv-domain-controller.md)
+
 ### [Stap 3 - PAM-server](step-3-prepare-pam-server.md)
+
 ### [Stap 4 - MIM installeren op de PAM server](step-4-install-mim-components-on-pam-server.md)
+
 ### [Stap 5 - Een vertrouwensrelatie tussen het PRIV en CORP instellen](step-5-establish-trust-between-priv-corp-forests.md)
+
 ### [Stap 6 - Bevoorrechte accounts maken](step-6-transition-group-to-pam.md)
+
 ### [Stap 7 – De toegangsrechten van een gebruiker uitbreiden](step-7-elevate-user-access.md)
+
 ### [MIM PAM implementeren met Windows Server 2016](deploy-pam-with-windows-server-2016.md)
+
 ### [Azure MFA instellen](use-azure-mfa-for-activation.md)
+
 ## [PAM configureren met behulp van scripts](sp1-pam-configure-using-scripts.md)
+
 ### [Stap 1 Het privédomein configureren](sp1-step1-configuring-priv-domain.md)
+
 ### [Stap 2 Het CORP-domein configureren](sp1-step2-configuring-corp-domain.md)
+
 ### [Stap 3 SQL configureren](sp1-step3-installing-configuring-sql.md)
+
 ### [Stap 4 SharePoint configureren](sp1-step4-configuring-sharepoint.md)
+
 ### [Stap 5 PAM installeren/configureren](sp1-step5-configuring-pam.md)
+
 ### [Stap 6 De PAM-vertrouwensrelatie installeren](sp1-step6-setup-pam-trust.md)
+
 ### [Stap 7 SID-geschiedenis/filtering instellen](sp1-step7-setup-sidhistory-sidfiltering.md)
+
 ### [Stap 8 Verificatie van PAM-implementatie](sp1-step8-pam-deployment-verification.md)
+
 ### [Bijlage](sp1-pam-deployment-addendum.md)
+
 # [Referentie voor ontwikkelaars](/microsoft-identity-manager/reference/microsoft-identity-manager-2016-developer-reference)
