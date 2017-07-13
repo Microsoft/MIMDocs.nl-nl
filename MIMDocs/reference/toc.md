@@ -1,84 +1,42 @@
-
 # [Begrijpen en verkennen](/microsoft-identity-manager/understand-explore/microsoft-identity-manager-2016)
-
 # [Plannen en ontwerpen](/microsoft-identity-manager/plan-design/microsoft-identity-manager-2016-supported-platforms)
-
 # [Implementeren en gebruiken](/microsoft-identity-manager/deploy-use/microsoft-identity-manager-deploy)
-
 # [Privileged Access Management gebruiken](/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services)
-
 # [Referentie voor ontwikkelaars](microsoft-identity-manager-2016-developer-reference.md)
-
 ## [Microsoft Identity Manager 2016-naslaginformatie voor ontwikkelaars](microsoft-identity-manager-2016-developer-reference.md)
-
 ### [Naslaginformatie voor REST API van Certificate Management](certificate-management-rest-api-reference.md)
-
 #### [Servicegegevens voor REST API van CM](certificate-management-rest-api-service-details.md)
-
 #### [Overzicht met voorbeeld van inschrijving](sample-enrollment-walkthrough.md)
-
 #### [Profielsjablonen ophalen](get-profile-templates.md)
-
 #### [Bewerkingen voor beleid](policy-operations.md)
-
 ##### [Werkstroombeleid ophalen](get-workflow-policy.md)
-
 ##### [Smartcardbeleid ophalen](get-smartcard-policy.md)
-
 #### [Bewerkingen voor aanvraag](request-operations.md)
-
 ##### [Aanvraag maken](create-request.md)
-
 ##### [Aanvraag ophalen](get-request.md)
-
 ##### [Een aanvraag annuleren, afbreken of voltooien](cancel-abandon-complete-request.md)
-
 #### [Bewerkingen voor certificaataanvraag](certificate-request-operations.md)
-
 ##### [Algemene opties voor certificaataanvraag ophalen](get-certificate-request-generation-options.md)
-
 ##### [Certificaatantwoorden ophalen](get-certificate-responses.md)
-
 #### [Bewerkingen voor smartcard](smartcard-operations.md)
-
 ##### [Smartcard toewijzen aan een aanvraag](assign-smartcard-to-request.md)
-
 ##### [Smartcardgegevens ophalen](get-smartcard-data.md)
-
 ##### [Verificatieantwoord voor smartcard ophalen](get-smartcard-authentication-response.md)
-
 ##### [Gediversifieerde beheersleutel voor smartcard ophalen](get-smartcard-diversified-admin-key.md)
-
 ##### [Voorgestelde pincode voor smartcard ophalen](get-smartcard-proposed-pin.md)
-
 ##### [Smartcardstatus bijwerken](update-smartcard-status.md)
-
 #### [Bewerkingen voor profiel](profile-operations.md)
-
 ##### [Profielgegevens ophalen](get-profile-data.md)
-
 ##### [Bewerkingen voor profielstatus ophalen](get-profile-state-operations.md)
-
 #### [Bewerkingen voor certificaat](certificate-operations.md)
-
 ##### [Smartcard- of profielcertificaten ophalen](get-smartcard-profile-certificates.md)
-
 ##### [Gebruikerscertificaten ophalen](get-user-certificates.md)
-
 ### [Naslagmateriaal voor REST API-van Privileged Access Management](privileged-access-management-rest-api-reference.md)
-
 #### [Servicegegevens voor REST API van PAM](privileged-access-management-rest-api-service-details.md)
-
 #### [PAM-rollen ophalen](privileged-access-management-get-roles.md)
-
 #### [PAM-aanvraag maken](privileged-access-management-create-request.md)
-
 #### [PAM-aanvragen ophalen](privileged-access-management-get-requests.md)
-
 #### [PAM-aanvraag sluiten](privileged-access-management-close-request.md)
-
 #### [PAM-aanvragen in behandeling ophalen](privileged-access-management-get-pending-requests.md)
-
 #### [Een PAM-aanvraag in behandeling goedkeuren of weigeren](privileged-access-management-approve-reject-pending-request.md)
-
 #### [Gegevens van PAM-sessie ophalen](privileged-access-management-get-session-info.md)
