@@ -12,18 +12,21 @@ ms.technology: security
 ms.assetid: bfabc562-a2f0-4cff-ac31-36927f41e102
 ms.reviewer: mwahl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 54d03fbd03f6c44298139324ea2dc7d945f008bc
-ms.openlocfilehash: 89e095cff66984140cdcef3617dd0ccc3d3714d8
-ms.lasthandoff: 02/07/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 7f16c3a054f0a2c59f118ba33bf64fca10034690
+ms.openlocfilehash: f8de75a0027371b7ff88b90d3097adc63c02d933
+ms.contentlocale: nl-nl
+ms.lasthandoff: 07/10/2017
 
 
 ---
 
-# <a name="enroll-smart-cards-for-non-administrators"></a>Smartcards voor niet-beheerders registreren
+# Smartcards voor niet-beheerders registreren
+<a id="enroll-smart-cards-for-non-administrators" class="xliff"></a>
 Gebruikers die geen lokale beheerder zijn van hun computer, kunnen standaard geen smartcard registreren op hun eigen computer. Dit probleem kunt u met de volgende procedure omzeilen.
 
-## <a name="enabling-smart-card-renewal-for-non-admins-in-mim-2016-certificate-manager"></a>Vernieuwen van smartcard inschakelen voor niet-beheerders in MIM 2016 Certificate Manager
+## Vernieuwen van smartcard inschakelen voor niet-beheerders in MIM 2016 Certificate Manager
+<a id="enabling-smart-card-renewal-for-non-admins-in-mim-2016-certificate-manager" class="xliff"></a>
 
 1.  **Pak het APPX-bestand uit**
 

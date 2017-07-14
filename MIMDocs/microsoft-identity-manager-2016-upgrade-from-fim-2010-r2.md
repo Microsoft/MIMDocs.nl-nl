@@ -12,15 +12,17 @@ ms.technology: security
 ms.assetid: 9471ccc1-bafe-46ee-b169-1464262380e1
 ms.reviewer: mwahl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 2d3092d7d41090e4e03b971fb62ca896cc8db282
+ms.translationtype: MT
+ms.sourcegitcommit: 7f16c3a054f0a2c59f118ba33bf64fca10034690
 ms.openlocfilehash: 20e733f17d6ed590844c526888b649eb6bf5f322
-ms.lasthandoff: 02/13/2017
+ms.contentlocale: nl-nl
+ms.lasthandoff: 07/10/2017
 
 
 ---
 
-# <a name="upgrade-from-forefront-identity-manager-2010-r2"></a>Upgrade uitvoeren in Forefront Identity Manager 2010 R2
+# Upgrade uitvoeren in Forefront Identity Manager 2010 R2
+<a id="upgrade-from-forefront-identity-manager-2010-r2" class="xliff"></a>
 
 Als u een omgeving met Forefront Identity Manager (FIM) 2010 R2 hebt en u Microsoft Identity Manager (MIM) 2016 wilt uitproberen, kunt u deze handleiding gebruiken. Deze upgrade bestaat uit drie fasen:
 
@@ -37,7 +39,8 @@ In deze gids wordt verondersteld dat u het volgende al hebt ingesteld.
 - Lokale en milieuvereisten (SQL Server, Exchange Server, SharePoint Services enzovoort) die zijn geconfigureerd voor FIM 2010 R2.
 
 
-## <a name="preparation"></a>Voorbereiding
+## Voorbereiding
+<a id="preparation" class="xliff"></a>
 
 1.  Maak een back-up van uw FIM-servicedatabase, FIM-synchronisatiedatabase, FIM-synchronisatie en -serviceconfiguratie en -software.
 
@@ -45,13 +48,14 @@ In deze gids wordt verondersteld dat u het volgende al hebt ingesteld.
 
 3.  Download de MIM-software of pak deze uit.
 
-## <a name="upgrade-the-synchronization-service"></a>De upgrade van de synchronisatieservice uitvoeren
+## De upgrade van de synchronisatieservice uitvoeren
+<a id="upgrade-the-synchronization-service" class="xliff"></a>
 
 1.  Meld u aan als beheerder op een server waarop FIM 2010 R2-synchronisatieservice (synchronisatie) is geïmplementeerd.
 
 2.  Zorg ervoor dat u een back-up maakt van uw database voordat u deze procedure start.
 
-3.  Open de console **Services**, zoek de **Forefront Identity Manager-synchronisatieservice** en stop deze.
+3.  Open de console **Services**, zoek de **Forefront Identity Manager-synchronisatieservice**  en stop deze.
 
     ![Afbeelding van de console Services](media/MIM-UpgFIM1.PNG)
 
@@ -83,11 +87,12 @@ In deze gids wordt verondersteld dat u het volgende al hebt ingesteld.
 
 13. Controleer of de **Synchronisatieservice** opnieuw is opgestart.
 
-## <a name="upgrade-the-service-and-portal"></a>Een upgrade uitvoeren voor de Service en de Portal
+## Een upgrade uitvoeren voor de Service en de Portal
+<a id="upgrade-the-service-and-portal" class="xliff"></a>
 
 1.  Meld u aan als beheerder op een server waarop de FIM 2010 R2-service en -portal zijn geïmplementeerd.
 
-2.  Open de console **Services**, zoek de **Forefront Identity Manager-service** en stop deze service.
+2.  Open de console **Services**, zoek de **Forefront Identity Manager-service**  en stop deze service.
 
     ![Afbeelding van de console Services](media/MIM-UpgFIM9.PNG)
 
@@ -139,7 +144,8 @@ In deze gids wordt verondersteld dat u het volgende al hebt ingesteld.
 
 14. Als u de MIM-portal installeert, moet u de URL opgeven van de SharePoint-siteverzameling waarin de FIM-portal momenteel wordt gehost. Klik op **Volgende**.
 
-## <a name="install-the-mim-password-registration-portal"></a>De MIM-portal voor wachtwoordregistratie installeren
+## De MIM-portal voor wachtwoordregistratie installeren
+<a id="install-the-mim-password-registration-portal" class="xliff"></a>
 
 1. Als u de MIM-portal voor wachtwoordregistratie installeert, moet u de aangevraagde URL voor de portal voor wachtwoordregistratie opgeven. Klik op **Volgende**.
 
@@ -169,7 +175,8 @@ In deze gids wordt verondersteld dat u het volgende al hebt ingesteld.
 
     2.  Bepaal of deze portal toegankelijk is voor extranet- en intranetgebruikers, of alleen voor intranetgebruikers, zoals eerder was geconfigureerd voor wachtwoord opnieuw instellen voor FIM.
 
-## <a name="install-the-mim-password-reset-portal"></a>De MIM-portal voor wachtwoord opnieuw instellen installeren
+## De MIM-portal voor wachtwoord opnieuw instellen installeren
+<a id="install-the-mim-password-reset-portal" class="xliff"></a>
 
 1. Als u de MIM-portal voor wachtwoord opnieuw instellen installeert, moet u de toegangsdetails en -referenties opgeven voor MIM-wachtwoord opnieuw instellen.
 
@@ -189,7 +196,8 @@ In deze gids wordt verondersteld dat u het volgende al hebt ingesteld.
 
     2.  Geef op of deze portal toegankelijk is voor extranet- en intranetgebruikers, of alleen intranetgebruikers.
 
-## <a name="finish-installation-and-upgrade"></a>Installatie en upgrade voltooien
+## Installatie en upgrade voltooien
+<a id="finish-installation-and-upgrade" class="xliff"></a>
 
 1. Als alle configuratiedefinities zijn voltooid, wordt een installatiepagina weergegeven. Klik op **Installeren** om de installatie en upgrade van de MIM-service en -portal te starten.
 

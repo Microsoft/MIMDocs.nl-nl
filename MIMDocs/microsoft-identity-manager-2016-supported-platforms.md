@@ -2,25 +2,28 @@
 title: Ondersteunde softwareplatformen | Microsoft Docs
 description: De producten en versies zoeken die compatibel met elk van de MIM 2016-onderdelen zijn
 keywords: 
-author: billmath
-ms.author: billmath
+author: fimguy
+ms.author: fimguy
 manager: femila
-ms.date: 03/28/2017
+ms.date: 06/06/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 4978f60d-044d-4e84-8d93-65801fce1144
 ms.reviewer: mwahl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: f1faed3a09023e288a68a8950dae43725f19eb3e
-ms.openlocfilehash: 33c84afa4d6fd2ed7bde33de39dd151f83f07fd4
-ms.lasthandoff: 04/12/2017
+ms.custom: mim
+ms.translationtype: MT
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.openlocfilehash: e8f1d72930cd5998b5d9957e8b8f5dbd958f8342
+ms.contentlocale: nl-nl
+ms.lasthandoff: 07/10/2017
 
 
 ---
 
-# <a name="supported-platforms-for-mim-2016"></a>Ondersteunde platformen voor MIM 2016
+# Ondersteunde platformen voor MIM 2016
+<a id="supported-platforms-for-mim-2016" class="xliff"></a>
 
 In deze tabel worden de ondersteunde platformen en versies voor elk onderdeel van Microsoft Identity Manager 2016 beschreven. De versies die zijn gemarkeerd met een * worden alleen ondersteund in MIM 2016 Service Pack 1.
 
@@ -33,18 +36,15 @@ In deze tabel worden de ondersteunde platformen en versies voor elk onderdeel va
 | | Exchange voor postvakinrichting en GAL Sync (optioneel)|Exchange Server 2010 SP3<br/>Exchange Server 2013 SP1<br/>Exchange Server 2016* |
 | | Ontwikkelomgeving (optioneel) | Visual Studio 2012<br/>Visual Studio 2013 <br/> Visual Studio 2015 <br/> Visual Studio 2017* |
 | | Aanvullend verbonden systeem (optioneel) | Active Directory Domain Services<br/>Active Directory<br/>Lightweight Directory Services<br/>SQL Server 2000 of hoger<br/>SharePoint Server 2013<br/> SharePoint Server 2016 * <br/> Andere producten van derden |
-| **MIM-service** (met uitzondering van het scenario voor PAM) | Windows Server | Windows Server 2008 R2 SP1<br/>Windows Server 2012<br/>Windows Server 2012 R2 <br/> Windows Server 2016 * |
-| | MIM-servicedatabases | SQL Server 2008 R2 SP3<br/>SQL Server 2012 SP2<br/>SQL Server 2014 SP1 <br/> SQL Server 2016 * |
-| | Exchange voor goedkeuring van de MIM-service en e-mailberichten voor groepsbeheer (optioneel) | Exchange Server 2010 SP3<br/>Exchange Server 2013 SP1 <br/> Exchange Server 2016 * <br/> Exchange Online * (alleen meldingen) |
-| **MIM-service en -portal** (alleen voor het scenario voor PAM)| Windows Server | Windows Server 2012<br/>Windows Server 2012 R2 <br/> Windows Server 2016 * |
+| **MIM-service en -portal** | Windows Server | Windows Server 2012<br/>Windows Server 2012 R2 <br/> Windows Server 2016 * |
 | | Active Directory voor PAM-forest in bastionomgeving | Windows Server 2012 R2 <br/> Windows Server 2016 * |
 | | Active Directory voor bestaande forests | Windows Server 2008 <br/> Windows Server 2008 R2 * <br/> Windows Server 2012 * <br/> Windows Server 2012 R2 * <br/> Windows Server 2016 * |
 | | MIM-servicedatabases | SQL Server 2008 R2 SP3<br/>SQL Server 2012 SP2<br/>SQL Server 2014 SP1 <br/> SQL Server 2016 * |
 | | SharePoint | SharePoint Foundation 2010<br/>SharePoint Foundation 2013 SP1 <br/> SharePoint 2016 * |
 | | Mailserver voor goedkeuring van de MIM-service en e-mailberichten voor groepsbeheer (optioneel) | Exchange Server 2010 SP3<br/>Exchange Server 2013 SP1 <br/> Exchange Server 2016 * <br/> Exchange Online * (alleen meldingen) |
-| | Browser | Alle belangrijke browsers |
+| | Browser | Alle belangrijke browsers * |
 | **MIM-servicerapportages** | Windows Server | Windows Server 2012 <br/> Windows Server 2016 * |
-| | Datawarehouse | System Center 2012 Service Manager <br/> System Center 2012 R2 Service Manager </br> System Center 2016 Service Manager * (met 4.4.1459)<br/> [Compatibiliteit van de versie van SQL Server voor System Center 2016](https://technet.microsoft.com/en-us/system-center-docs/system-requirements/sql-server-version-compatibility)
+| | Datawarehouse | System Center 2012 Service Manager <br/> System Center 2012 R2 Service Manager </br> System Center 2016 Service Manager * (met 4.4.1459)<br/> [Compatibiliteit van de versie van SQL Server voor System Center 2016](https://docs.microsoft.com/system-center/scsm/upgrade-to-sm-2016)
  |
 | **MIM-portals voor wachtwoord opnieuw instellen en wachtwoordregistratie** | Windows Server | Windows Server 2008 R2 SP1<br/>Windows Server 2012<br/>Windows Server 2012 R2 <br/> Windows Server 2016 * |
 | | Webbrowser | Alle belangrijke browsers |

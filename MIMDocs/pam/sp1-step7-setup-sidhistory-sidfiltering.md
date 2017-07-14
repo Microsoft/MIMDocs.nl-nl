@@ -12,14 +12,17 @@ ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: 
 ms.suite: ems
-translationtype: Human Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f08b0197341351bd5f33552f26b96132b1356239
 ms.openlocfilehash: e608593f40759e3bc995daa56c4575510a71e987
+ms.contentlocale: nl-nl
+ms.lasthandoff: 07/10/2017
 
 
 ---
 
-# <a name="step-7-set-up-sid-historysid-filtering"></a>Stap 7 SID-geschiedenis/filtering instellen
+# Stap 7 SID-geschiedenis/filtering instellen
+<a id="step-7-set-up-sid-historysid-filtering" class="xliff"></a>
 
 >[!div class="step-by-step"]
 [« Stap 6](sp1-step6-setup-pam-trust.md)
@@ -42,9 +45,4 @@ SID-geschiedenis wordt ingeschakeld voor deze vertrouwensrelatie of SID-geschied
 >[!div class="step-by-step"]
 [« Stap 6](sp1-step6-setup-pam-trust.md)
 [Stap 8 »](sp1-step8-pam-deployment-verification.md)
-
-
-
-<!--HONumber=Jan17_HO2-->
-
 

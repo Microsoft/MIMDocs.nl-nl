@@ -12,15 +12,17 @@ ms.technology: active-directory-domain-services
 ms.assetid: 5325fce2-ae35-45b0-9c1a-ad8b592fcd07
 ms.reviewer: mwahl
 ms.suite: ems
-translationtype: Human Translation
+ms.translationtype: MT
 ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
 ms.openlocfilehash: 89d9b38177b91f64e746fea583684abcecc9d7ff
-ms.lasthandoff: 05/02/2017
+ms.contentlocale: nl-nl
+ms.lasthandoff: 07/10/2017
 
 
 ---
 
-# <a name="step-7--elevate-a-users-access"></a>Stap 7 – De toegangsrechten van een gebruiker uitbreiden
+# Stap 7 – De toegangsrechten van een gebruiker uitbreiden
+<a id="step-7--elevate-a-users-access" class="xliff"></a>
 
 >[!div class="step-by-step"]
 [« Stap 6 ](step-6-transition-group-to-pam.md)
@@ -28,7 +30,8 @@ ms.lasthandoff: 05/02/2017
 
 In deze stap wordt gedemonstreerd dat een gebruiker via MIM toegang tot een functie kan aanvragen.
 
-## <a name="verify-that-jen-cannot-access-the-privileged-resource"></a>Controleren of Jen geen toegang heeft tot de bevoorrechte resource
+## Controleren of Jen geen toegang heeft tot de bevoorrechte resource
+<a id="verify-that-jen-cannot-access-the-privileged-resource" class="xliff"></a>
 Zonder verhoogde bevoegdheden heeft Jen geen toegang tot de bevoorrechte resource in het CORP-forest.
 
 1. Meld u af bij CORPWKSTN om alle geopende verbindingen in de cache te verwijderen.
@@ -37,7 +40,8 @@ Zonder verhoogde bevoegdheden heeft Jen geen toegang tot de bevoorrechte resourc
 4. Typ de opdracht `dir \\corpwkstn\corpfs`. Als het goed is, wordt het foutbericht **De toegang is geweigerd** weergegeven.
 5. Houd het opdrachtpromptvenster geopend.
 
-## <a name="request-privileged-access-from-mim"></a>Bevoorrechte toegang aanvragen bij MIM
+## Bevoorrechte toegang aanvragen bij MIM
+<a id="request-privileged-access-from-mim" class="xliff"></a>
 1. Typ op CORPWKSTN de volgende opdracht terwijl u nog steeds als CONTOSO\Jen bent aangemeld.
 
     ```
@@ -66,7 +70,8 @@ Zonder verhoogde bevoegdheden heeft Jen geen toegang tot de bevoorrechte resourc
 
 6. Typ het wachtwoord voor het account PRIV.Jen. Er wordt een nieuw opdrachtpromptvenster weergegeven.
 
-## <a name="validate-the-elevated-access"></a>Valideer de uitgebreide toegangsrechten.
+## Valideer de uitgebreide toegangsrechten.
+<a id="validate-the-elevated-access" class="xliff"></a>
 Typ de volgende opdrachten in het nieuwe venster dat wordt geopend.
 
 ```
@@ -76,7 +81,8 @@ dir \\corpwkstn\corpfs
 
 Als de opdracht dir mislukt met het foutbericht **De toegang is geweigerd**, moet u de vertrouwensrelatie opnieuw controleren.
 
-## <a name="activate-the-privileged-role"></a>De bevoorrechte rol activeren
+## De bevoorrechte rol activeren
+<a id="activate-the-privileged-role" class="xliff"></a>
 U kunt de activering uitvoeren door bevoorrechte toegang aan te vragen via de PAM-voorbeeldportal.
 
 1. Controleer of u op CORPWKSTN bent aangemeld als CORP\Jen.
@@ -96,7 +102,8 @@ U kunt de activering uitvoeren door bevoorrechte toegang aan te vragen via de PA
 > [!Note]
 > In deze omgeving kunt u ook ontdekken hoe u toepassingen kunt ontwikkelen die gebruikmaken van de PAM REST API, zoals is beschreven in het [referentiemateriaal voor de Privileged Access Management REST API](/microsoft-identity-manager/reference/privileged-access-management-rest-api-reference).
 
-## <a name="summary"></a>Samenvatting
+## Samenvatting
+<a id="summary" class="xliff"></a>
 Nadat u de stappen in dit overzicht hebt voltooid, hebt u een scenario voor Privileged Access Management gedemonstreerd waarin gebruikersbevoegdheden tijdelijk worden uitgebreid zodat de gebruiker toegang heeft tot beveiligde resources met een afzonderlijk bevoorrecht account. Zodra de sessie voor uitbreiding van de toegangsrechten is verlopen, is de beveiligde resource niet meer toegankelijk met het bevoorrechte account. De beslissing over welke beveiligingsgroepen de bevoorrechte rollen vertegenwoordigen, wordt gecoördineerd door de PAM-beheerder. Nadat de toegangsrechten zijn gemigreerd naar het Privileged Access Management-systeem, kan er geen toegang meer worden verkregen met het oorspronkelijke gebruikersaccount, maar moeten gebruikers zich aanmelden met een speciaal bevoorrecht account dat alleen op aanvraag beschikbaar wordt gesteld. Als gevolg hiervan zijn groepslidmaatschappen voor maximaal bevoorrechte accounts slechts tijdelijk van kracht.
 
 >[!div class="step-by-step"]

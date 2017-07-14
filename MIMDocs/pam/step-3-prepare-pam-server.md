@@ -13,21 +13,24 @@ ms.assetid: 68ec2145-6faa-485e-b79f-2b0c4ce9eff7
 ROBOTS: noindex,nofollow
 ms.reviewer: mwahl
 ms.suite: ems
-translationtype: Human Translation
+ms.translationtype: MT
 ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
 ms.openlocfilehash: 9a262a256062688542040827653a7df8d82e1044
-ms.lasthandoff: 05/02/2017
+ms.contentlocale: nl-nl
+ms.lasthandoff: 07/10/2017
 
 
 ---
 
-# <a name="step-3--prepare-a-pam-server"></a>Stap 3 – Een PAM-server voorbereiden
+# Stap 3 – Een PAM-server voorbereiden
+<a id="step-3--prepare-a-pam-server" class="xliff"></a>
 
 >[!div class="step-by-step"]
 [« Stap 2](step-2-prepare-priv-domain-controller.md)
 [Stap 4 »](step-4-install-mim-components-on-pam-server.md)
 
-## <a name="install-windows-server-2012-r2"></a>Windows Server 2012 R2 installeren
+## Windows Server 2012 R2 installeren
+<a id="install-windows-server-2012-r2" class="xliff"></a>
 Installeer op een derde virtuele machine Windows Server 2012 R2, meer specifiek Windows Server 2012 R2 Standard (server met een GUI) x64, om *PAMSRV* te maken. Omdat SQL Server en SharePoint 2013 worden geïnstalleerd op deze computer, is er ten minst 8 GB aan RAM-geheugen vereist.
 
 1. Selecteer **Windows Server 2012 R2 Standard (server met een GUI) x64**.
@@ -47,7 +50,8 @@ Installeer op een derde virtuele machine Windows Server 2012 R2, meer specifiek 
 7.  Nadat de server opnieuw is opgestart, meldt u zich aan als beheerder, opent u Configuratiescherm en voegt u PAMSRV toe aan het PRIV-domein (priv.contoso.local).  U moet hiervoor de gebruikersnaam en referenties opgeven van een PRIV-domeinbeheerder (PRIV\Administrator). Nadat het welkomstbericht wordt weergegeven, sluit u het dialoogvenster en start u deze server opnieuw op.
 
 
-### <a name="add-the-web-server-iis-and-application-server-roles"></a>De functies van de webserver (IIS) en de toepassingsserver toevoegen
+### De functies van de webserver (IIS) en de toepassingsserver toevoegen
+<a id="add-the-web-server-iis-and-application-server-roles" class="xliff"></a>
 Voeg de functies van de webserver (IIS) en de toepassingsserver, de onderdelen van .NET Framework 3.5, de Active Directory-module voor Windows PowerShell en andere functies toe die zijn vereist voor SharePoint.
 
 1.  Meld u aan als een PRIV-domeinbeheerder (PRIV\Administrator) en start PowerShell.
@@ -62,7 +66,8 @@ Voeg de functies van de webserver (IIS) en de toepassingsserver, de onderdelen v
     Xps-Viewer –includeallsubfeature -restart -source d:\sources\SxS
     ```
 
-### <a name="configure-the-server-security-policy"></a>Het beveiligingsbeleid van de server configureren
+### Het beveiligingsbeleid van de server configureren
+<a id="configure-the-server-security-policy" class="xliff"></a>
 Configureer het beveiligingsbeleid van de server zodanig dat de zojuist gemaakte accounts als services kunnen worden uitgevoerd.
 
 1.  Start het programma **Lokaal beveiligingsbeleid**.   
@@ -86,7 +91,8 @@ Configureer het beveiligingsbeleid van de server zodanig dat de zojuist gemaakte
 16. Klik op **Toevoegen**, voer de gebruiker *SharePoint* in het domein *PRIV* in en klik in het volgende scherm van de wizard op **Deze gebruiker toevoegen als beheerder**.  
 17. Sluit Configuratiescherm.  
 
-### <a name="change-the-iis-configuration"></a>IIS-configuratie wijzigen
+### IIS-configuratie wijzigen
+<a id="change-the-iis-configuration" class="xliff"></a>
 Er zijn twee manieren waarop u de IIS-configuratie kunt wijzigen zodat toepassingen kunnen gebruikmaken van de Windows-verificatiemodus. Zorg dat u bent aangemeld als MIMAdmin en gebruik vervolgens een van deze opties.
 
 Als u PowerShell wilt gebruiken:
@@ -104,7 +110,8 @@ Als u een teksteditor wilt gebruiken zoals Kladblok:
 3. Wijzig de waarde van **overrideModeDefault** in *Allow*.  
 4. Sla het bestand op en start IIS opnieuw met de PowerShell-opdracht `iisreset /START`.
 
-## <a name="install-sql-server"></a>SQL Server installeren
+## SQL Server installeren
+<a id="install-sql-server" class="xliff"></a>
 Als SQL Server nog niet aanwezig is in de bastionomgeving, installeert u SQL Server 2012 (Service Pack 1 of hoger) of SQL Server 2014. In de volgende stappen wordt ervan uitgegaan dat u SQL Server 2014 gebruikt.
 
 1. Zorg dat u bent aangemeld als MIMAdmin.
@@ -115,7 +122,8 @@ Als SQL Server nog niet aanwezig is in de bastionomgeving, installeert u SQL Ser
     .\setup.exe /Q /IACCEPTSQLSERVERLICENSETERMS /ACTION=install /FEATURES=SQL,SSMS /INSTANCENAME=MSSQLSERVER /SQLSVCACCOUNT="PRIV\SqlServer" /SQLSVCPASSWORD="Pass@word1" /AGTSVCSTARTUPTYPE=Automatic /AGTSVCACCOUNT="NT AUTHORITY\Network Service" /SQLSYSADMINACCOUNTS="PRIV\MIMAdmin"
     ```
 
-## <a name="install-sharepoint-foundation-2013"></a>SharePoint Foundation 2013 installeren
+## SharePoint Foundation 2013 installeren
+<a id="install-sharepoint-foundation-2013" class="xliff"></a>
 
 Gebruik het installatieprogramma van SharePoint Foundation 2013 met Service Pack 1 om de vereiste software van SharePoint te installeren op PAMSRV.
 
@@ -134,7 +142,8 @@ Nadat de vereiste onderdelen voor SharePoint zijn geïnstalleerd, installeert u 
 4.  Selecteer het type voor de **volledige server**.  
 5.  Voer de wizard uit nadat de installatie is voltooid.  
 
-### <a name="configure-sharepoint"></a>SharePoint configureren
+### SharePoint configureren
+<a id="configure-sharepoint" class="xliff"></a>
 Voer de wizard Configuratie van SharePoint-producten uit.
 
 1.  Schakel op het tabblad Verbinding met een serverfarm over naar **Een nieuwe serverfarm maken**.  
@@ -147,7 +156,8 @@ Voer de wizard Configuratie van SharePoint-producten uit.
 8.  Geef aan dat u het bestaande beheerde account (PRIV\SharePoint) wilt gebruiken, schakel de optionele services uit en klik op **Volgende**.  
 9. Klik in het venster Een siteverzameling maken op **Overslaan** en **Voltooien**.  
 
-## <a name="create-a-sharepoint-foundation-2013-web-application"></a>Een SharePoint Foundation 2013-webtoepassing maken
+## Een SharePoint Foundation 2013-webtoepassing maken
+<a id="create-a-sharepoint-foundation-2013-web-application" class="xliff"></a>
 Nadat de wizard is voltooid, gebruikt u PowerShell om een SharePoint Foundation 2013-webtoepassing te maken waarmee de MIM-portal wordt gehost. Omdat dit overzicht alleen is bedoeld voor demonstratiedoeleinden, wordt SSL niet ingeschakeld.
 
 1.  Klik met de rechtermuisknop op de SharePoint 2013-beheershell, selecteer **Als administrator uitvoeren** en voer het volgende PowerShell-script uit:
@@ -162,7 +172,8 @@ Nadat de wizard is voltooid, gebruikt u PowerShell om een SharePoint Foundation 
 > [!NOTE]
 > Houd het venster SharePoint 2013-beheershell geopend zodat u dit in de volgende stap kunt gebruiken.
 
-## <a name="create-a-sharepoint-site-collection"></a>Een SharePoint-siteverzameling maken
+## Een SharePoint-siteverzameling maken
+<a id="create-a-sharepoint-site-collection" class="xliff"></a>
 Vervolgens moet u een SharePoint-siteverzameling maken die is gekoppeld aan deze webtoepassing waarmee de MIM-portal wordt gehost.
 
 1.  Start **SharePoint 2013-beheershell**als het venster nog niet is geopend en voer het volgende PowerShell-script uit.
@@ -187,13 +198,15 @@ Vervolgens moet u een SharePoint-siteverzameling maken die is gekoppeld aan deze
     Get-SPTimerJob hourly-all-sptimerservice-health-analysis-job | disable-SPTimerJob
     ```
 
-## <a name="change-update-settings"></a>Instellingen voor updates wijzigen
+## Instellingen voor updates wijzigen
+<a id="change-update-settings" class="xliff"></a>
 
 1. Open Configuratiescherm, navigeer naar **Windows Update** en klik op **instellingen wijzigen**.  
 2. Wijzig de instellingen om updates te ontvangen van Windows Update en andere Microsoft Update-producten.  
 3. Controleren of er nieuwe updates beschikbaar zijn en zorg dat de beschikbare belangrijke updates zijn geïnstalleerd voordat u doorgaat.
 
-## <a name="set-the-website-as-the-local-intranet"></a>De website instellen als het lokale intranet
+## De website instellen als het lokale intranet
+<a id="set-the-website-as-the-local-intranet" class="xliff"></a>
 
 1. Start Internet Explorer en open een nieuw tabblad in de webbrowser.
 2. Navigeer naar http://pamsrv.priv.contoso.local:82/ en meld u aan als PRIV\MIMAdmin.  Er wordt een lege SharePoint-site met de naam MIM-portal weergegeven.  
@@ -201,7 +214,8 @@ Vervolgens moet u een SharePoint-siteverzameling maken die is gekoppeld aan deze
 
 Als het aanmelden mislukt, moeten de Kerberos-SPN-namen die eerder zijn gemaakt in [stap 2](step-2-prepare-priv-domain-controller.md), mogelijk worden bijgewerkt.
 
-## <a name="start-the-sharepoint-administration-service"></a>De SharePoint-beheerservice starten
+## De SharePoint-beheerservice starten
+<a id="start-the-sharepoint-administration-service" class="xliff"></a>
 
 Gebruik **Services** (in Systeembeheer) om de **SharePoint-beheerservice** te starten als de service nog niet actief is.
 

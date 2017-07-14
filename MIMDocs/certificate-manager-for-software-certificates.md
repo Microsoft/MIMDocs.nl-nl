@@ -12,18 +12,21 @@ ms.technology: security
 ms.assetid: fed5ada9-d80f-4825-aad7-4172ac5d71d3
 ms.reviewer: mwahl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 54d03fbd03f6c44298139324ea2dc7d945f008bc
-ms.openlocfilehash: 23cfb1134d1cbf2cf838354cb7d915084803cd41
-ms.lasthandoff: 01/24/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 7f16c3a054f0a2c59f118ba33bf64fca10034690
+ms.openlocfilehash: 274039a6866c5c0fda807e4326220ecf785ca3bb
+ms.contentlocale: nl-nl
+ms.lasthandoff: 07/10/2017
 
 
 ---
 
-# <a name="create-software-certificates-with-certificate-manager"></a>Softwarecertificaten maken met de certificaatbeheerder
+# Softwarecertificaten maken met de certificaatbeheerder
+<a id="create-software-certificates-with-certificate-manager" class="xliff"></a>
 U hoeft geen beheerder te zijn of over een virtuele smartcard te beschikken om softwarecertificaten te registreren en verlengen. Op een bepaald moment wordt u wel gevraagd toestemming te geven voor het bewerken van het certificaat. Dit is normaal.
 
-## <a name="create-a-software-certificate-profile-template-in-mim-2016-certificate-manager"></a>Een profielsjabloon van een softwarecertificaat maken in MIM 2016 Certificate Manager
+## Een profielsjabloon van een softwarecertificaat maken in MIM 2016 Certificate Manager
+<a id="create-a-software-certificate-profile-template-in-mim-2016-certificate-manager" class="xliff"></a>
 
 1.  Maak een sjabloon voor het certificaat dat u wilt aanvragen voor de virtuele smartcard. Open MMC.
 
@@ -39,7 +42,7 @@ U hoeft geen beheerder te zijn of over een virtuele smartcard te beschikken om s
 
     1.  Typ op het tabblad **Algemeen** in het veld met de weergavenaam **Gearchiveerde certificaatsjabloon**.
 
-    2.  b.    Op het tabblad **Afhandeling van aanvragen**
+    2.  b.  Op het tabblad **Afhandeling van aanvragen**
 
         1.  Stel bij **Doel** de waarde in op Handtekening en versleuteling.
 
@@ -73,7 +76,8 @@ U hoeft geen beheerder te zijn of over een virtuele smartcard te beschikken om s
 
     10. Selecteer in de lijst de nieuwe sjabloon die u zojuist hebt gemaakt (**Gearchiveerde certificaatsjabloon**) en klik vervolgens op **OK**.
 
-## <a name="create-the-profile-template"></a>Het profielsjabloon maken
+## Het profielsjabloon maken
+<a id="create-the-profile-template" class="xliff"></a>
 
 1.  Meld u bij de CM-portal aan als gebruiker met beheerdersbevoegdheden.
 

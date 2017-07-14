@@ -12,14 +12,17 @@ ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: 
 ms.suite: ems
-translationtype: Human Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f08b0197341351bd5f33552f26b96132b1356239
 ms.openlocfilehash: bd73f43a096d58e1f7250e28b59e33f4411e88a3
+ms.contentlocale: nl-nl
+ms.lasthandoff: 07/10/2017
 
 
 ---
 
-# <a name="configure-pam-using-scripts"></a>PAM configureren met behulp van scripts
+# PAM configureren met behulp van scripts
+<a id="configure-pam-using-scripts" class="xliff"></a>
 
 Als u ervoor kiest om SQL en SharePoint op afzonderlijke servers te installeren, moet u de servers configureren met de onderstaande instructies. Als SQL, SharePoint en de PAM-onderdelen zijn geïnstalleerd op dezelfde computer, moeten de onderstaande stappen worden uitgevoerd vanaf deze computer.
 
@@ -39,11 +42,13 @@ stappen:
 5. Kopieer dezelfde PAMDeploymentConfig.xml naar de map %SYSTEMDRIVE%\PAM op alle computers, CORPDC-, PRIVDC-, PAM-Server-, SQL Server-, en SharePoint-servers.
 
 
-## <a name="deployment-worksheet"></a>Werkblad voor implementatie
+## Werkblad voor implementatie
+<a id="deployment-worksheet" class="xliff"></a>
 
 Voordat u verdergaat, moet u de PAMDeploymentConfig.xml bijwerken en het bijgewerkte exemplaar op alle computers plaatsen.
 
-### <a name="setup"></a>Setup
+### Setup
+<a id="setup" class="xliff"></a>
 
 |Machine   | Uitvoeren als   |Opdrachten   |
 |---|---|---|
@@ -55,7 +60,8 @@ Voordat u verdergaat, moet u de PAMDeploymentConfig.xml bijwerken en het bijgewe
 | PAMServer  | Lokale administrator (MIM Admin na toevoeging aan het domein)  | .\PAMDeployment.ps1 Selecteer menuoptie 5 (MIM PAM Setup)   |
 |  PAMServer |MIMAdmin   | .\PAMDeployment.ps1 Selecteer menuoptie 6 (PAM Trust Setup) .\PAMDeployment.ps1 Selecteer menuoptie 6 (PAM Trust Setup) |
 
-### <a name="validation"></a>Validatie
+### Validatie
+<a id="validation" class="xliff"></a>
 
 |  Machine | Uitvoeren als   | Opdrachten   |
 |---|---|---|
@@ -68,9 +74,4 @@ Voordat u verdergaat, moet u de PAMDeploymentConfig.xml bijwerken en het bijgewe
 
 >[!div class="step-by-step"]
 [Start »](sp1-step1-configuring-priv-domain.md)
-
-
-
-<!--HONumber=Jan17_HO2-->
-
 

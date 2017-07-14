@@ -12,15 +12,17 @@ ms.technology: security
 ms.assetid: 8bc2f6d2-9f53-4db6-aee6-a937ae468163
 ms.reviewer: mwahl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
+ms.translationtype: MT
+ms.sourcegitcommit: 7f16c3a054f0a2c59f118ba33bf64fca10034690
 ms.openlocfilehash: b26fe7bc56ab8229054afb1409c3652e81464a3d
-ms.lasthandoff: 05/02/2017
+ms.contentlocale: nl-nl
+ms.lasthandoff: 07/10/2017
 
 
 ---
 
-# <a name="connect-to-your-directories"></a>Verbinding maken met uw adreslijsten
+# Verbinding maken met uw adreslijsten
+<a id="connect-to-your-directories" class="xliff"></a>
 
 Connectors koppelen specifieke verbonden gegevensbronnen aan Microsoft Identity Manager (MIM). Met een connector worden gegevens van een verbonden gegevensbron naar MIM verplaatst. Wanneer gegevens in MIM worden gewijzigd, kunnen met de connector de gegevens ook worden geëxporteerd naar de gekoppelde gegevensbron om deze te synchroniseren met MIM. Over het algemeen is er ten minste één connector beschikbaar voor elke gekoppelde adreslijst.
 
@@ -28,7 +30,8 @@ In Forefront Identity Manager heetten connectors beheeragents. Deze term wordt n
 
 Dit artikel gaat over de connectors die worden meegeleverd met MIM. Met de connector voor Extensible Connectivity 2.0 kunt u echter verbinding maken met nog meer gegevensbronnen. Sommige partners hebben hun eigen connectors op deze manier gemaakt. Een volledige lijst is beschikbaar in de wiki [FIM 2010: Management Agents from Partners](http://social.technet.microsoft.com/wiki/contents/articles/1589.fim-2010-management-agents-from-partners.aspx) (FIM 2010: beheeragents van partners).
 
-## <a name="supported-connectors-in-mim-2016"></a>Ondersteunde connectors in MIM 2016
+## Ondersteunde connectors in MIM 2016
+<a id="supported-connectors-in-mim-2016" class="xliff"></a>
 
 | Naam | Ondersteunde versies van de gekoppelde gegevensbron |
 | ---- | ----------------------------------------------- |
@@ -55,7 +58,8 @@ Dit artikel gaat over de connectors die worden meegeleverd met MIM. Met de conne
 | Tekstbestand met vast breedte | Tekstbestanden met vast breedte |
 | LDAP Data Interchange Format (LDIF) | LDAP Data Interchange Format (LDIF) |
 
-## <a name="related-topics"></a>Verwante onderwerpen
+## Verwante onderwerpen
+<a id="related-topics" class="xliff"></a>
 
 [Beheeragents in FIM 2010 R2](https://technet.microsoft.com/library/jj133885.aspx)
 

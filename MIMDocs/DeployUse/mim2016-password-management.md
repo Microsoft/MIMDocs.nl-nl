@@ -11,17 +11,18 @@ ms.prod: identity-manager-2016
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 
-ms.translationtype: Human Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 1ef7b9816d265d17ef68fc54e010e655535dcdc8
 ms.openlocfilehash: 0a5a3f28af58dd59ab805f2836ffeb88f3508ae0
 ms.contentlocale: nl-nl
-ms.lasthandoff: 05/11/2017
+ms.lasthandoff: 07/10/2017
 
 
 ---
 
 
-# <a name="microsoft-identity-manager-2016-password-management"></a>Wachtwoordbeheer voor Microsoft Identity Manager 2016
+# Wachtwoordbeheer voor Microsoft Identity Manager 2016
+<a id="microsoft-identity-manager-2016-password-management" class="xliff"></a>
 
 Wachtwoorden beheren voor meerdere gebruikersaccounts is een van de uitdagingen van het beheren van een bedrijfsomgeving met meerdere gegevensbronnen. Microsoft Identity Manager 2016 (MIM) biedt twee oplossingen voor wachtwoordbeheer:
 
@@ -43,7 +44,8 @@ Wachtwoordsynchronisatie en op gebruikers gebaseerd beheer voor het wijzigen van
 
 -   Wachtwoordbeheer uitvoeren in real-time, onafhankelijk van MIM-bewerkingen.
 
-## <a name="password-extensions"></a>Wachtwoordextensies
+## Wachtwoordextensies
+<a id="password-extensions" class="xliff"></a>
 
 Beheeragents voor adreslijstservers ondersteunen standaard wijzigingen en instelbewerkingen voor wachtwoorden. Voor op bestanden gebaseerde beheeragents, databasebeheeragents en beheeragents voor uitbreidbare connectiviteit die standaard geen wijzigingen en instelbewerkingen voor wachtwoorden ondersteunen, kunt u een DLL-bestand (Dynamic-Link Library ) voor .NET-wachtwoordextensie maken.
 De .NET-DLL voor wachtwoordextensie wordt aangeroepen als er een wachtwoord moet worden gewijzigd of ingesteld voor een van deze beheeragents. De instellingen voor wachtwoordextensie worden in Synchronization Service Manager voor deze beheeragents geconfigureerd. Zie FIM Developer Reference (referentiemateriaal voor FIM-ontwikkelaars) voor meer informatie over het configureren van wachtwoordextensies.
@@ -60,7 +62,8 @@ De .NET-DLL voor wachtwoordextensie wordt aangeroepen als er een wachtwoord moet
 |                                                                           | Microsoft SQL Server                                                                               |
 |                                                                           | Oracle Database                                                                                    |
 
-## <a name="password-synchronization"></a>Wachtwoordsynchronisatie
+## Wachtwoordsynchronisatie
+<a id="password-synchronization" class="xliff"></a>
 
 
 Wachtwoordsynchronisatie werkt met de PCNS voor een Active Directory-domein. Hierbij worden wachtwoordwijzigingen die afkomstig zijn van Active Directory automatisch doorgegeven naar andere verbonden gegevensbronnen. Hiervoor wordt MIM uitgevoerd als een RPC-server (server voor externe procedureaanroepen) die meldingen voor wachtwoordwijzigingen van een Active Directorydomeincontroller detecteert. Als de aanvraag voor een wachtwoordwijziging is ontvangen en geverifieerd, wordt deze door MIM verwerkt en doorgegeven aan de desbetreffende beheeragents.
@@ -86,7 +89,8 @@ Bij de wachtwoordsynchronisatie zijn de volgende onderdelen betrokken:
 -   **DLL voor wachtwoordextensie**: De DLL voor wachtwoordextensie biedt een manier om het instellen of wijzigen van wachtwoorden te implementeren door middel van een uitbreiding van regels voor een database, uitbreidbare connectiviteit of een op bestanden gebaseerde beheeragent.
     Hiervoor wordt een alleen-exporteren, versleuteld kenmerk gemaakt met de naam export_password, dat niet feitelijk in de verbonden adreslijst aanwezig is, maar toegankelijk is en kan worden ingesteld in inrichtingsregelextensies of dat tijdens het stromen van exportkenmerken kan worden gebruikt. Zie [FIM Developer Reference](https://msdn.microsoft.com/library/windows/desktop/ee652263(v=vs.100).aspx) (Referentiemateriaal voor FIM-ontwikkelaars) voor meer informatie over het configureren van wachtwoordextensies.
 
-## <a name="preparing-for-password-synchronization"></a>Voorbereiding voor wachtwoordsynchronisatie
+## Voorbereiding voor wachtwoordsynchronisatie
+<a id="preparing-for-password-synchronization" class="xliff"></a>
 
 Voordat u wachtwoordsynchronisatie instelt voor uw MIM- en Active Directory-omgeving, dient u het volgende te controleren:
 
@@ -110,7 +114,8 @@ Wachtwoordsynchronisatie instellen:
 
 Zie Using Password Synchronization (Wachtwoordsynchronisatie gebruiken) voor meer informatie over het instellen van wachtwoordsynchronisatie.
 
-## <a name="password-synchronization-process"></a>Het wachtwoordsynchronisatieproces
+## Het wachtwoordsynchronisatieproces
+<a id="password-synchronization-process" class="xliff"></a>
 
 Het proces van het synchroniseren van een aanvraag voor een wachtwoordwijziging vanuit een Active Directory-domeincontroller naar overige verbonden gegevensbronnen wordt in het volgende diagram weergegeven:
 
@@ -126,7 +131,8 @@ Het proces van het synchroniseren van een aanvraag voor een wachtwoordwijziging 
 
 6.  Met behulp van de gegevens uit de join-tabel bepaalt MIM de beheeragents die de wachtwoordwijzigingen ontvangen, en pusht de wachtwoordwijzigingen ernaartoe.
 
-## <a name="password-synchronization-security"></a>Beveiliging wachtwoordsynchronisatie
+## Beveiliging wachtwoordsynchronisatie
+<a id="password-synchronization-security" class="xliff"></a>
 
 De volgende problemen met de beveiliging van de wachtwoordsynchronisatie zijn in behandeling genomen:
 
@@ -140,7 +146,8 @@ De volgende problemen met de beveiliging van de wachtwoordsynchronisatie zijn in
 
 -   Beveiligde wachtrijen met wachtwoorden: wachtwoorden die in de PCNS-wachtrijen met wachtwoorden zijn opgeslagen, blijven versleuteld totdat ze worden bezorgd.
 
-## <a name="password-synchronization-error-recovery-scenarios"></a>Scenario's voor wachtwoordherstel bij fouten tijdens de synchronisatie
+## Scenario's voor wachtwoordherstel bij fouten tijdens de synchronisatie
+<a id="password-synchronization-error-recovery-scenarios" class="xliff"></a>
 
 In het ideale geval wordt een door de gebruiker gewijzigd wachtwoord foutloos gesynchroniseerd. De volgende scenario's beschrijven hoe MIM herstelt na algemene synchronisatiefouten:
 
@@ -162,7 +169,8 @@ Sommige fouten zijn dermate ernstig dat de bewerking ook na zeer veel nieuwe pog
 | 6927  | Fout       | De instelbewerking voor wachtwoordsynchronisatie is mislukt omdat het wachtwoord niet voldoet aan het wachtwoordbeleid van het doelsysteem.                                      |
 | 6928  | Fout       | De instelbewerking voor wachtwoordsynchronisatie is mislukt omdat de wachtwoordextensie voor de doelbeheeragent niet is geconfigureerd voor het ondersteunen van instelbewerkingen voor wachtwoorden. |
 
-## <a name="user-based-password-change-management"></a>Op gebruikers gebaseerd beheer voor wachtwoordwijzigingen
+## Op gebruikers gebaseerd beheer voor wachtwoordwijzigingen
+<a id="user-based-password-change-management" class="xliff"></a>
 
 MIM biedt twee webtoepassingen die gebruikmaken van Windows Management Instrumentation (WMI) voor het opnieuw instellen van wachtwoorden. Net als met wachtwoordsynchronisatie, activeert u wachtwoordbeheer als u de beheeragent configureert in Management Agent Designer. Zie MIM Developer Reference (Referentiemateriaal voor MIM-ontwikkelaars) voor informatie over wachtwoordbeheer.
 

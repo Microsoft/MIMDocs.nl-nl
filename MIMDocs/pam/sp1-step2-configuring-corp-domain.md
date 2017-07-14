@@ -12,14 +12,17 @@ ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: 
 ms.suite: ems
-translationtype: Human Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f08b0197341351bd5f33552f26b96132b1356239
 ms.openlocfilehash: 8480350f85b3543a32d4db3dbc6a388afcb16352
+ms.contentlocale: nl-nl
+ms.lasthandoff: 07/10/2017
 
 
 ---
 
-# <a name="step-2-configuring-the-corp-domain"></a>Stap 2 Het CORP-domein configureren
+# Stap 2 Het CORP-domein configureren
+<a id="step-2-configuring-the-corp-domain" class="xliff"></a>
 
 >[!div class="step-by-step"]
 [« Stap 1](sp1-step1-configuring-priv-domain.md)
@@ -36,9 +39,4 @@ Zodra de SIDs.txt wordt gekopieerd naar de CORPDC **niet vereist voor PRIVOnly-i
 >[!div class="step-by-step"]
 [« Stap 1](sp1-step1-configuring-priv-domain.md)
 [Stap 3 »](sp1-step3-installing-configuring-sql.md)
-
-
-
-<!--HONumber=Jan17_HO2-->
-
 

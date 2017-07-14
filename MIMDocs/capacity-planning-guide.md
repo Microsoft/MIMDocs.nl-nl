@@ -12,16 +12,17 @@ ms.technology: security
 ms.assetid: 3ac5b990-1678-4996-996d-cbd84b8426b4
 ms.reviewer: mwahl
 ms.suite: ems
-ms.translationtype: Human Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 3797f5789bb4e48836eb21776dafd5a2e0e11613
 ms.openlocfilehash: 1eadf7cff67d65c35f784adad94b5032d2792824
 ms.contentlocale: nl-nl
-ms.lasthandoff: 05/09/2017
+ms.lasthandoff: 07/10/2017
 
 
 ---
 
-# <a name="capacity-planning-guide"></a>Handleiding voor capaciteitsplanning
+# Handleiding voor capaciteitsplanning
+<a id="capacity-planning-guide" class="xliff"></a>
 
 Met Microsoft Identity Manager (MIM) kunt u gebruikersaccounts maken, bijwerken en verwijderen binnen uw organisatie. Dit biedt eindgebruikers ook de mogelijkheid om de selfservicefuncties van hun eigen account te beheren. Zelfs in een kleine omgeving kunnen al deze acties behoorlijk wat tijd vergen.
 
@@ -29,7 +30,8 @@ Voordat u aan de slag gaat met MIM kunt u deze handleiding, samen met testomgevi
 
 Als u nog niet bekend bent met MIM 2016 en de bijbehorende onderdelen, kunt u het beste informatie over [Microsoft Identity Manager 2016](microsoft-identity-manager-2016.md) lezen voor u doorgaat.
 
-## <a name="overview"></a>Overzicht
+## Overzicht
+<a id="overview" class="xliff"></a>
 Er zijn een verschillende variabelen die de algehele capaciteit en prestaties van uw Microsoft Identity Manager-implementatie kunnen beïnvloeden. De manieren waarop u de MIM-onderdelen (topologie) fysiek implementeert en de hardware waarop deze onderdelen worden uitgevoerd, zijn belangrijke factoren bij het bepalen van de prestaties en capaciteit die u van uw implementatie MIM kunt verwachten. Het aantal en de complexiteit van de MIM-beleidsconfiguratieobjecten zijn mogelijk minder duidelijk, maar ze vormen nog steeds een belangrijke factor waarmee u rekening moet houden bij het plannen van capaciteit. Uiteindelijk zijn de verwachte schaal van de implementatie, evenals de verwachte belasting, doorgaans duidelijkere factoren die invloed hebben op prestaties en capaciteit.
 
 De belangrijkste factoren die van invloed zijn op de capaciteit en de prestaties die kunnen worden verwacht een MIM 2016-implementatie, worden in de volgende tabel beschreven.
@@ -43,7 +45,8 @@ De belangrijkste factoren die van invloed zijn op de capaciteit en de prestaties
 | Werklast | De frequentie van gebruik. Hoe vaak verwacht u bijvoorbeeld dat nieuwe groepen of gebruikers worden gemaakt, wachtwoorden opnieuw worden ingesteld of de portal wordt bezocht in een bepaalde periode. Houd er rekening mee dat de belasting in de loop van een uur, dag, week of jaar kan verschillen. Afhankelijk van het onderdeel kunt u kiezen voor een ontwerp voor piekbelasting of gemiddelde belasting. |
 
 
-## <a name="hosting-microsoft-identity-manager-components"></a>Microsoft Identity Manager-onderdelen hosten
+## Microsoft Identity Manager-onderdelen hosten
+<a id="hosting-microsoft-identity-manager-components" class="xliff"></a>
 
 De onderdelen van Microsoft Identity Manager hoeven zich niet op dezelfde computer bevinden. Nadenken over deze onderdelen en de fysieke of virtuele machines die als host optreden, vormt een belangrijk onderdeel van de capaciteitsplanning.
 
@@ -54,7 +57,8 @@ Denk ook na over de externe factoren in uw configuratie. Bijvoorbeeld:
 - Als u een SAN gebruikt als configuratie van de MIM 2016-servicedatabase, moet u ook rekening houden met de andere programma’s die de SAN delen. Deze toepassingen kunnen invloed hebben op prestaties van de database als ze gebruikmaken van de gedeelde schijfresources op de SAN.
 
 
-## <a name="users-and-groups"></a>Gebruikers en groepen
+## Gebruikers en groepen
+<a id="users-and-groups" class="xliff"></a>
 Het aantal gebruikers en groepen in uw omgeving is een typisch onderwerp dat u in aanmerking moet nemen wanneer u nadenkt over het schalen van een implementatie. Er zijn echter enkele andere gerelateerde overwegingen waarmee u in uw planning tevens rekening moet houden.
 
 - Kunnen gebruikers groepen maken? Als dit het geval is, moet u inschatten hoe het maken van nieuwe groepen door gebruikers de groei van groepen in uw omgeving beïnvloedt.
@@ -62,7 +66,8 @@ Het aantal gebruikers en groepen in uw omgeving is een typisch onderwerp dat u i
 - Worden er dynamische groepen geïmplementeerd? Bereken hoeveel en welke typen dynamische groepen in uw omgeving worden verwacht.
 
 
-## <a name="expected-load-levels"></a>Verwachte belastingsniveaus
+## Verwachte belastingsniveaus
+<a id="expected-load-levels" class="xliff"></a>
 U moet ook rekening houden met het type belasting dat op de MIM-onderdelen wordt geplaatst. Deze informatie kan waarschijnlijk worden geschat door te kijken naar huidige programma’s in uw omgeving. U moet onder andere rekening houden met de volgende relevante vragen:
 
 - Hoe vaak verwacht u een aanvraag om lid te worden van een groep of deze te verlaten?
@@ -76,7 +81,8 @@ U moet ook rekening houden met het type belasting dat op de MIM-onderdelen wordt
 - Verwacht u grote verschillen in de belastingsniveaus, variërend van een normale belasting tot piekbelasting? Zo worden er na een vakantie doorgaans veel wachtwoorden opnieuw ingesteld. Zorg ervoor dat u uw systeemonderhoud en synchronisatieplanningen buiten de verwachte gebruikspieken plant. Als u nadenkt over capaciteitsplanning, moet u rekening houden met perioden van piekbelasting.
 
 
-## <a name="policy-configuration-objects"></a>Beleidsconfiguratieobjecten
+## Beleidsconfiguratieobjecten
+<a id="policy-configuration-objects" class="xliff"></a>
 
 Microsoft Identity Manager-beleidsconfiguratieobjecten omvatten MPR’s, sets, werkstromen en synchronisatieregels voor een bepaalde implementatie. MIM-implementaties zijn uniek voor elke klant omdat de beleidsconfiguratie verandert, afhankelijk van de behoeften van elke implementatie. Belangrijke prestatieoverwegingen voor MIM-beleidsconfiguratieobjecten zijn onder andere:
 
@@ -91,7 +97,8 @@ MIM-beleidsconfiguratie omvat tevens het nemen van beslissingen over het inricht
 - Gebruikt u inrichting zonder code? Zo ja, dan is dit van invloed op het aantal verwachte regelvermeldingen en de bijbehorende aanvragen en werkstromen in het systeem.
 
 
-## <a name="see-also"></a>Zie tevens
+## Zie tevens
+<a id="see-also" class="xliff"></a>
 - [Aandachtspunten voor topologie voor een MIM-implementatie](topology-considerations.md)
 - De downloadbare [handleiding voor planningscapaciteit van Forefront Identity Manager (FIM) 2010 ](http://go.microsoft.com/fwlink/?LinkId=200180) biedt meer informatie over een testbuild en prestatietestresultaten.
 
