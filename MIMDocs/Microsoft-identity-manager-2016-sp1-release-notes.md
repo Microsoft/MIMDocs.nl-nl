@@ -12,15 +12,16 @@ ms.technology: security
 ms.assetid: ccdd8a9f-02da-440a-81a8-354800dcd2a8
 ms.reviewer: mwahl
 ms.suite: ems
-ms.translationtype: Human Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 3797f5789bb4e48836eb21776dafd5a2e0e11613
 ms.openlocfilehash: 69d44af5eaef3665f3a55ea91f48d3658cd5e65c
 ms.contentlocale: nl-nl
-ms.lasthandoff: 05/09/2017
+ms.lasthandoff: 07/10/2017
 
 
 ---
-# <a name="whats-new-for-microsoft-identity-manager-2016-service-pack-1"></a>Nieuw in Microsoft Identity Manager 2016 Service Pack 1 #
+# Nieuw in Microsoft Identity Manager 2016 Service Pack 1
+<a id="whats-new-for-microsoft-identity-manager-2016-service-pack-1" class="xliff"></a> #
 
 Als onderdeel van de standaardreleasecyclus voor de service en het bijwerken van Microsoft Identity Manager hebben we [Microsoft Identity Manager (MIM) 2016 servicepack 1 (SP1)](https://msdn.microsoft.com/subscriptions/downloads/?fileid=70212#searchTerm=&Languages=en&PageSize=10&PageIndex=0&FileId=70212) uitgebracht. Dit document geeft een overzicht van de updates, verbeteringen, functies en wijzigingen die zijn opgenomen in deze release.
 
@@ -30,9 +31,11 @@ We stellen uw feedback op prijs. Feedback of opmerkingen voor het productteam ku
 
 
 
-## <a name="updates-in-this-service-pack"></a>Updates in dit servicepack #
+## Updates in dit servicepack
+<a id="updates-in-this-service-pack" class="xliff"></a> #
 
-### <a name="mim"></a>MIM
+### MIM
+<a id="mim" class="xliff"></a>
 
 - **Compatibiliteit van MIM-portal met meerdere browsers voor selfservice voor eindgebruikers:** met dit servicepack introduceren we ondersteuning voor de meest belangrijke browsers. Gebruikers hebben nu toegang tot en kunnen communiceren met de MIM-portal voor selfservice groeps- en profielbeheer vanuit Microsoft Edge, Chrome en Safari.
 
@@ -40,7 +43,8 @@ We stellen uw feedback op prijs. Feedback of opmerkingen voor het productteam ku
 
 - **Validatie van bestandsindeling van afbeeldingen:** MIM kan de bestandsindeling van afbeeldingen controleren wanneer deze naar de portal worden geüpload.
 
-### <a name="privileged-access-managementpam"></a>Privileged Access Management (PAM) gebruiken
+### Privileged Access Management (PAM) gebruiken
+<a id="privileged-access-managementpam" class="xliff"></a>
 
 - **PAM PRIV (bastionhost) forestondersteuning voor het Windows Server 2016-functionaliteitsniveau:** de MIM PAM-service kan worden geconfigureerd in een omgeving met domeincontrollers die worden uitgevoerd op het functionele Active Directory Domain Services-forestniveau van Windows Server 2016. Als dit is geconfigureerd, wordt voor een Kerberos-ticket van een gebruiker een tijdslimiet ingesteld voor de resterende tijd van de activatie van de rol.
 
@@ -57,17 +61,21 @@ We stellen uw feedback op prijs. Feedback of opmerkingen voor het productteam ku
     Deze cmdlets worden automatisch uitgevoerd als onderdeel van de implementatiescripts.
 
 
-## <a name="platform-support"></a>Platformondersteuning
+## Platformondersteuning
+<a id="platform-support" class="xliff"></a>
 Informatie over bijgewerkte platformondersteuning vindt u in het document met de naam [Ondersteunde platformen voor MIM 2016](microsoft-identity-manager-2016-supported-platforms.md).  Nieuwe ondersteunde platformen in dit servicepack, waaronder SQL Server 2016 en SharePoint 2016
 
-## <a name="issues-fixed-in-this-release-from-mim-2016-general-availability"></a>In deze release zijn problemen met de algemene beschikbaarheid van MIM 2016 opgelost
+## In deze release zijn problemen met de algemene beschikbaarheid van MIM 2016 opgelost
+<a id="issues-fixed-in-this-release-from-mim-2016-general-availability" class="xliff"></a>
 
-### <a name="pam"></a>PAM
+### PAM
+<a id="pam" class="xliff"></a>
 - Nieuwe PAMGroup heeft geen MIM-objecten voor lokale domeingroepen gemaakt in het PRIV-forest
 - Nieuwe PAMDomainConfiguration mislukt met een netdom-foutbericht
 - PAM-controleservice heeft waarschuwingen voor groepen in het PRIV-forest vastgelegd
 
-## <a name="how-to-upgrade-to-service-pack-1"></a>Bijwerken naar Service Pack 1
+## Bijwerken naar Service Pack 1
+<a id="how-to-upgrade-to-service-pack-1" class="xliff"></a>
 
 Klanten die een upgrade naar Microsoft Identity Manager 2016 Service Pack 1 willen uitvoeren, moeten de onderstaande instructies volgen voor alle services die van toepassing zijn op hun implementatie.
 

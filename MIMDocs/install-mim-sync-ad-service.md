@@ -12,15 +12,17 @@ ms.technology: security
 ms.assetid: 5e532b67-64a6-4af6-a806-980a6c11a82d
 ms.reviewer: mwahl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 54d03fbd03f6c44298139324ea2dc7d945f008bc
-ms.openlocfilehash: f84fbbdc8de5cfffc8570c52f8298cc69273c3ee
-ms.lasthandoff: 01/24/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 7f16c3a054f0a2c59f118ba33bf64fca10034690
+ms.openlocfilehash: 4ad41fc9679be702ab17fb5bef5d3efab5ff5adc
+ms.contentlocale: nl-nl
+ms.lasthandoff: 07/10/2017
 
 
 ---
 
-# <a name="install-mim-2016-synchronize-active-directory-and-mim-service"></a>MIM 2016 installeren: Active Directory en de MIM-service synchroniseren
+# MIM 2016 installeren: Active Directory en de MIM-service synchroniseren
+<a id="install-mim-2016-synchronize-active-directory-and-mim-service" class="xliff"></a>
 
 >[!div class="step-by-step"]
 [« MIM-service en -portal](install-mim-service-portal.md)
@@ -33,7 +35,8 @@ ms.lasthandoff: 01/24/2017
 
 Er zijn voor de MIM-synchronisatieservice (Sync) standaard geen connectoren geconfigureerd.  Normaal gesproken wordt eerst met MIM Sync de database voor de MIM-service gevuld met bestaande Active Directory-accounts. U gebruikt hiervoor de MIM-synchronisatieservice.
 
-## <a name="create-the-mim-management-agent"></a>De MIM-beheeragent maken
+## De MIM-beheeragent maken
+<a id="create-the-mim-management-agent" class="xliff"></a>
 De MIM-beheeragent (MA) is een connector voor MIM Sync met de MIM-service. Als u deze connector wilt maken, gebruikt u de wizard voor het maken van beheeragents.
 
 Wanneer u een MIM-beheeragent configureert, moet u een gebruikersaccount opgeven. In dit document wordt **MIMMA** gebruikt als de naam voor dit account.
@@ -41,7 +44,8 @@ Wanneer u een MIM-beheeragent configureert, moet u een gebruikersaccount opgeven
 > [!NOTE]
 > Het account dat u voor de MIM-beheeragent gebruikt, moet hetzelfde account zijn als het account dat u tijdens de installatie van de MIM-service hebt opgegeven.
 
-###<a name="to-create-the-mim-ma"></a>De MIM-beheeragent maken
+###De MIM-beheeragent maken
+<a id="to-create-the-mim-ma" class="xliff"></a>
 
 1.  Open Synchronization Service Manager.
 
@@ -163,7 +167,8 @@ Wanneer u een MIM-beheeragent configureert, moet u een gebruikersaccount opgeven
 
 11.  Als u de beheeragent op de pagina **Uitbreidingen configureren** wilt maken, klikt u op **Voltooien**.
 
-## <a name="create-the-ad-management-agent"></a>De AD-beheeragent maken
+## De AD-beheeragent maken
+<a id="create-the-ad-management-agent" class="xliff"></a>
 De Active Directory-beheeragent is een connector voor AD-domeinservices. Als u deze connector wilt maken, gebruikt u de wizard voor het maken van beheeragents.
 
 1. Klik in het menu **Acties** op **Maken** om de wizard voor het maken van de beheeragent te openen.
@@ -225,11 +230,13 @@ De Active Directory-beheeragent is een connector voor AD-domeinservices. Als u d
 12. Klik op de pagina **Uitbreidingen configureren** op **Voltooien**.
 
 
-## <a name="create-run-profiles"></a>Uitvoeringsprofielen maken
+## Uitvoeringsprofielen maken
+<a id="create-run-profiles" class="xliff"></a>
 
 Uitvoeringsprofielen maken voor de ADMA- en MIMMA-connectoren.
 
-### <a name="create-run-profiles-for-the-adma-connector"></a>Uitvoeringsprofielen maken voor de ADMA-connector
+### Uitvoeringsprofielen maken voor de ADMA-connector
+<a id="create-run-profiles-for-the-adma-connector" class="xliff"></a>
 
 In de volgende tabel worden de vijf uitvoeringsprofielen weergegeven die u voor de ADMA-connector kunt maken:
 
@@ -261,7 +268,8 @@ Uitvoeringsprofielen maken voor de ADMA-connector:
 
 5. Klik op **OK** om het dialoogvenster Uitvoeringsprofielen configureren te sluiten.
 
-### <a name="create-run-profiles-for-the-mimma-connector"></a>Uitvoeringsprofielen maken voor de MIMMA-connector
+### Uitvoeringsprofielen maken voor de MIMMA-connector
+<a id="create-run-profiles-for-the-mimma-connector" class="xliff"></a>
 
 In de volgende tabel worden de vijf overeenkomstige uitvoeringsprofielen weergegeven voor de MIMMA-connector:
 
@@ -293,7 +301,8 @@ U kunt als volgt uitvoeringsprofielen maken voor de MIMMA-connector:
 
 5. Klik op **OK** om het dialoogvenster Uitvoeringsprofielen configureren te sluiten.
 
-## <a name="configure-the-mim-service"></a>De MIM-service configureren
+## De MIM-service configureren
+<a id="configure-the-mim-service" class="xliff"></a>
 
 U maakt met de MIM-portal de synchronisatieregel voor binnenkomende gegevens van de AD-gebruiker voor de MIM-service.
 
@@ -347,10 +356,12 @@ U kunt als volgt de synchronisatieregel voor binnenkomende gegevens van de AD-ge
 
 8. Klik op het tabblad **Overzicht** op **Verzenden**.
 
-## <a name="initialize-the-testing-environment"></a>De testomgeving initialiseren
+## De testomgeving initialiseren
+<a id="initialize-the-testing-environment" class="xliff"></a>
 Er zijn vier stappen die u moet uitvoeren voordat u de MIM-configuratie met AD-gegevens kunt testen:
 
-### <a name="enable-provisioning"></a>De inrichting inschakelen
+### De inrichting inschakelen
+<a id="enable-provisioning" class="xliff"></a>
 
 1. Open Synchronization Service Manager.
 
@@ -360,7 +371,8 @@ Er zijn vier stappen die u moet uitvoeren voordat u de MIM-configuratie met AD-g
 
 4. Klik op **OK** om het dialoogvenster Opties te sluiten.
 
-### <a name="initialize-the-mimma"></a>De MIMMA initialiseren
+### De MIMMA initialiseren
+<a id="initialize-the-mimma" class="xliff"></a>
 
 Voer een volledige synchronisatiecyclus uit voor deze connector. De volledige cyclus bestaat uit de volgende uitvoeringsprofielen:
 
@@ -385,13 +397,15 @@ Hanteer de volgende stappen om elk van de vier uitvoeringsprofielen uit te voere
 
     - Klik op **OK** om het uitvoeringsprofiel te starten.
 
-#### <a name="configure-attribute-flow-precedence"></a>De kenmerkstroomvolgorde configureren
+#### De kenmerkstroomvolgorde configureren
+<a id="configure-attribute-flow-precedence" class="xliff"></a>
 
 Tijdens de initialisatie van de MIM-connector zijn de geconfigureerde synchronisatieregels overgebracht naar de metaverse.
 
 Stel de kenmerkstroomvolgorde in van de kenmerken die door deze connector worden bijgedragen zodat de kenmerken die zich al in AD bevinden naar de metaverse en later ook naar de database van de MIM-service kunnen stromen.
 
-### <a name="initialize-the-adma"></a>De ADMA initialiseren
+### De ADMA initialiseren
+<a id="initialize-the-adma" class="xliff"></a>
 
 Als u de Active Directory-connector wilt initialiseren, moet u hiervoor een volledige import en een volledige synchronisatie uitvoeren. Bij de volledige import worden de bestaande objecten uit Active Directory naar het connectorgebied overgebracht. Bij de volledige synchronisatie worden de synchronisatieregels bijgewerkt zodat deze overeenkomen met die van de MIM-connector.
 
@@ -409,7 +423,8 @@ Als u de Active Directory-connector wilt initialiseren, moet u hiervoor een voll
 
     - Klik op **OK** om het uitvoeringsprofiel te starten.
 
-### <a name="populate-the-mim-service-database"></a>De database voor de MIM-service vullen
+### De database voor de MIM-service vullen
+<a id="populate-the-mim-service-database" class="xliff"></a>
 
 Als u de database voor de MIM-service wilt vullen met de objecten, moet u een synchronisatiecyclus uitvoeren voor de MIMMA-connector. De cyclus bestaat uit:
 

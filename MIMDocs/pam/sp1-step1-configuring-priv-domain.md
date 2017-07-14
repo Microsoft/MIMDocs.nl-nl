@@ -12,13 +12,16 @@ ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: 
 ms.suite: ems
-translationtype: Human Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f08b0197341351bd5f33552f26b96132b1356239
 ms.openlocfilehash: 24e91ed2f51206b03bec505fc0d28d25128d2c94
+ms.contentlocale: nl-nl
+ms.lasthandoff: 07/10/2017
 
 
 ---
-# <a name="step-1-configuring-the-priv-domain"></a>Stap 1 Het privédomein configureren
+# Stap 1 Het privédomein configureren
+<a id="step-1-configuring-the-priv-domain" class="xliff"></a>
 
 >[!div class="step-by-step"]
 [Stap 2 »](sp1-step2-configuring-corp-domain.md)
@@ -43,9 +46,4 @@ Nadat het script is voltooid, wordt u gevraagd om de computer opnieuw op te star
 
 >[!div class="step-by-step"]
 [Stap 2 »](sp1-step2-configuring-corp-domain.md)
-
-
-
-<!--HONumber=Jan17_HO2-->
-
 

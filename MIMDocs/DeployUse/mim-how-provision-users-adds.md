@@ -10,11 +10,11 @@ ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 
-ms.translationtype: Human Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 1ef7b9816d265d17ef68fc54e010e655535dcdc8
 ms.openlocfilehash: 5ab70bac8cbd874153fa56cf7b181144c394ec04
 ms.contentlocale: nl-nl
-ms.lasthandoff: 05/11/2017
+ms.lasthandoff: 07/10/2017
 
 
 
@@ -23,7 +23,8 @@ ms.lasthandoff: 05/11/2017
 
 
 
-# <a name="how-do-i-provision-users-to-ad-ds"></a>Hoe kan ik gebruikers inrichten voor AD DS?
+# Hoe kan ik gebruikers inrichten voor AD DS?
+<a id="how-do-i-provision-users-to-ad-ds" class="xliff"></a>
 
 Van toepassing op: Microsoft Identity Manager 2016 SP1 (MIM)
 
@@ -31,17 +32,20 @@ Een basisvereiste voor een identiteitsbeheersysteem is de mogelijkheid resources
 
 Deze handleiding beschrijft de belangrijkste bouwstenen die betrokken zijn bij het inrichten van gebruikers vanuit Microsoft® Identity Manager (MIM) 2016 voor Active Directory® Domain Services (AD DS). Daarnaast leest u hier hoe u kunt controleren of uw scenario werkt zoals verwacht, welke mogelijkheden er zijn voor het beheren van Active Directory-gebruikers met MIM 2016, en vindt u aanvullende informatiebronnen.
 
-## <a name="before-you-begin"></a>Voordat u begint
+## Voordat u begint
+<a id="before-you-begin" class="xliff"></a>
 
 
 In deze sectie vindt u informatie over de reikwijdte van dit document. In het algemeen zijn gebruikshandleidingen bedoeld voor lezers die al enige basiservaring hebben met het synchroniseren van objecten met MIM, zoals behandeld in de aanverwante [handleidingen Aan de slag](http://go.microsoft.com/FWLink/p/?LinkId=190486).
 
-### <a name="audience"></a>Doelgroep
+### Doelgroep
+<a id="audience" class="xliff"></a>
 
 
 Deze handleiding is bedoeld voor IT-professionals die al een basiskennis hebben van de werking van het MIM-synchronisatieproces en die praktische ervaring en conceptuele kennis over specifieke scenario's willen opdoen.
 
-### <a name="prerequisite-knowledge"></a>Vereiste voorkennis
+### Vereiste voorkennis
+<a id="prerequisite-knowledge" class="xliff"></a>
 
 
 In dit document wordt ervan uitgegaan dat u een exemplaar van MIM kunt uitvoeren en dat u ervaring hebt met het configureren van eenvoudige synchronisatiescenario's, zoals beschreven in de volgende documenten:
@@ -52,32 +56,37 @@ In dit document wordt ervan uitgegaan dat u een exemplaar van MIM kunt uitvoeren
 
 De inhoud van dit document dient als een uitbreiding op deze inleidende documenten.
 
-### <a name="scope"></a>Bereik
+### Bereik
+<a id="scope" class="xliff"></a>
 
 
 Het scenario dat in dit document wordt beschreven is vereenvoudigd om tegemoet te komen aan de vereisten van een technische basisomgeving. Het document is erop gericht de lezer kennis bij te brengen over de hier besproken concepten en technologieën.
 
 Aan de hand hiervan kunt u een oplossing ontwikkelen waarbij u groepen in AD DS gaat beheren met behulp van MIM.
 
-### <a name="time-requirements"></a>Tijdvereisten
+### Tijdvereisten
+<a id="time-requirements" class="xliff"></a>
 
 
 Het kost 90 tot 120 minuten om de procedures in dit document te voltooien.
 
 Bij deze schatting wordt ervan uitgegaan dat de testomgeving reeds is geconfigureerd en opgesteld.
 
-### <a name="getting-support"></a>Ondersteuning
+### Ondersteuning
+<a id="getting-support" class="xliff"></a>
 
 
 Als u vragen hebt over de inhoud van dit document, of als u algemene feedback wilt geven en bespreken, kunt u een bericht sturen naar het [Forefront Identity Manager 2010 forum](http://go.microsoft.com/FWLink/p/?LinkId=189654) (forum van Forefront Identity Manager 2010).
 
-## <a name="scenario-description"></a>Scenariobeschrijving
+## Scenariobeschrijving
+<a id="scenario-description" class="xliff"></a>
 
 
 Het fictieve bedrijf Fabrikam is van plan MIM te gebruiken voor het beheer van de gebruikersaccounts in AD DS van de organisatie. Als onderdeel van dit proces moet Fabrikam gebruikers inrichten voor AD DS. Voor het testen van de initiële opstelling heeft Fabrikam een technische basisomgeving opgezet, bestaande uit MIM en AD DS.
 In deze omgeving test Fabrikam een scenario dat bestaat uit een gebruiker die handmatig in de MIM-portal is aangemaakt. In dit scenario wordt de gebruiker als ingeschakelde gebruiker voorzien van een vooraf gedefinieerd wachtwoord voor AD DS.
 
-## <a name="scenario-design"></a>Scenario-ontwerp
+## Scenario-ontwerp
+<a id="scenario-design" class="xliff"></a>
 
 
 Voor het gebruik van deze handleiding hebt u drie architectuurcomponenten nodig:
@@ -97,7 +106,8 @@ U kunt alle componenten op één computer uitvoeren.
 >[!NOTE]
 Zie de [FIM Installation Guide](http://go.microsoft.com/FWLink/p/?LinkId=165845) (FIM-installatiehandleiding) voor meer informatie over het instellen van MIM.
 
-## <a name="scenario-components-list"></a>Lijst met componenten voor het scenario
+## Lijst met componenten voor het scenario
+<a id="scenario-components-list" class="xliff"></a>
 
 
 In de volgende lijst vindt u de componenten die onderdeel uitmaken van het scenario in deze handleiding.
@@ -115,7 +125,8 @@ In de volgende lijst vindt u de componenten die onderdeel uitmaken van het scena
 
 
 
-## <a name="scenario-steps"></a>Scenariostappen
+## Scenariostappen
+<a id="scenario-steps" class="xliff"></a>
 
 
 Het scenario dat in deze handleiding wordt beschreven, bestaat uit de bouwstenen die in de volgende afbeelding worden getoond.
@@ -123,19 +134,22 @@ Het scenario dat in deze handleiding wordt beschreven, bestaat uit de bouwstenen
 ![Scenariostappen](media/how-provision-users-adds/image013.png)
 
 
-## <a name="configuring-the-external-systems"></a>Externe systemen configureren
+## Externe systemen configureren
+<a id="configuring-the-external-systems" class="xliff"></a>
 
 
 In deze sectie vindt u instructies voor de resources die u moet maken en die buiten de MIM-omgeving aanwezig zijn.
 
-### <a name="step-1-create-the-ou"></a>Stap 1: de OE maken
+### Stap 1: de OE maken
+<a id="step-1-create-the-ou" class="xliff"></a>
 
 
 De OE dient als container voor de ingerichte voorbeeldgebruiker. Zie [Create a New Organizational Unit](http://go.microsoft.com/FWLink/p/?LinkId=189655) (Een nieuwe organisatie-eenheid maken) voor meer informatie.
 
 Maak in de AD DS een OE met de naam MIMObjects.
 
-### <a name="step-2-create-the-active-directory-user-accounts"></a>Stap 2: Active Directory-gebruikersaccounts maken
+### Stap 2: Active Directory-gebruikersaccounts maken
+<a id="step-2-create-the-active-directory-user-accounts" class="xliff"></a>
 
 Voor het scenario in deze handleiding hebt u twee Active Directory-gebruikersaccounts nodig:
 
@@ -146,12 +160,14 @@ Voor het scenario in deze handleiding hebt u twee Active Directory-gebruikersacc
 In beide gevallen volstaan normale gebruikersaccounts. Verderop in dit document vindt u meer informatie over de specifieke vereisten voor beide accounts. Zie [Create a New User Account](http://go.microsoft.com/FWLink/p/?LinkId=189656) (Een nieuw gebruikersaccount maken) voor meer informatie over het maken van gebruikers.
 
 
-## <a name="configuring-the-fim-synchronization-service"></a>De FIM-synchronisatieservice configureren
+## De FIM-synchronisatieservice configureren
+<a id="configuring-the-fim-synchronization-service" class="xliff"></a>
 
 
 Voor de configuratiestappen in dit document, moet u FIM Synchronization Service Manager starten.
 
-### <a name="creating-the-management-agents"></a>De beheeragents maken
+### De beheeragents maken
+<a id="creating-the-management-agents" class="xliff"></a>
 
 Voor het scenario in deze handleiding moet u twee beheeragents maken:
 
@@ -159,7 +175,8 @@ Voor het scenario in deze handleiding moet u twee beheeragents maken:
 
 -   **Fabrikam FIMMA**: beheeragent voor de FIM-servicebeheeragent.
 
-### <a name="step-3-create-the-fabrikam-adma-management-agent"></a>Stap 3: de Fabrikam ADMA-beheeragent maken
+### Stap 3: de Fabrikam ADMA-beheeragent maken
+<a id="step-3-create-the-fabrikam-adma-management-agent" class="xliff"></a>
 
 Als u een beheeragent configureert voor AD DS, moet u een account opgeven dat wordt gebruikt door de beheeragent in de gegevensuitwisseling met AD DS. Gebruik een normaal gebruikersaccount. Maar als u gegevens importeert vanuit AD DS, moet het account rechten hebben om wijzigingen vanuit het DirSync-besturingselement te peilen. Als u de beheeragent gegevens naar AD DS wilt laten exporteren, moet u het account voldoende rechten geven op de doel-OE's. Zie [Configuring the ADMA Account](http://go.microsoft.com/FWLink/p/?LinkId=189657) (Het ADMA-account configureren) voor meer informatie.
 
@@ -190,7 +207,8 @@ Zie de volgende onderwerpen in de Help voor meer informatie:
 >[!Note]
 Zorg dat u een importkenmerkstroomregel hebt geconfigureerd voor het kenmerk ExpectedRulesList.
 
-### <a name="step-4-create-the-fabrikam-fimma-management-agent"></a>Stap 4: de Fabrikam FIMMA-beheeragent maken
+### Stap 4: de Fabrikam FIMMA-beheeragent maken
+<a id="step-4-create-the-fabrikam-fimma-management-agent" class="xliff"></a>
 
 Als u een FIM-servicebeheeragent configureert, moet u een account opgeven dat wordt gebruikt door de beheeragent in de gegevensuitwisseling met de FIM-service.
 
@@ -221,7 +239,8 @@ Zie de volgende onderwerpen in de Help voor meer informatie:
 >[!NOTE]
  Zorg dat u een importkenmerkstroomregel hebt geconfigureerd voor het kenmerk ExpectedRulesList.
 
-### <a name="step-5-create-the-run-profiles"></a>Stap 5: de uitvoerprofielen maken
+### Stap 5: de uitvoerprofielen maken
+<a id="step-5-create-the-run-profiles" class="xliff"></a>
 
 In de volgende tabel worden de uitvoerprofielen vermeld die u moet maken voor het scenario in deze handleiding.
 
@@ -241,7 +260,8 @@ Zie Create a Management Agent Run Profile (Een uitvoerprofiel voor beheeragenten
  Controleer of het inrichten in uw omgeving is ingeschakeld. Voer hiertoe het volgende script uit: Using Windows PowerShell to Enable Provisioning (Windows PowerShell gebruiken om inrichten in te schakelen) (http://go.microsoft.com/FWLink/p/?LinkId=189660).
 
 
-## <a name="configuring-the-fim-service"></a>De FIM-service configureren
+## De FIM-service configureren
+<a id="configuring-the-fim-service" class="xliff"></a>
 
 
 Voor het scenario in deze handleiding moet u een inrichtingsbeleid voor inrichten configureren, zoals in de volgende afbeelding wordt getoond.
@@ -252,7 +272,8 @@ Het doel van dit inrichtingsbeleid is om groepen binnen het bereik te brengen va
 
 Als u de FIM-service wilt configureren, gaat u in Windows Internet Explorer® naar http://localhost/identitymanagement. Als u het inrichtingsbeleid wilt maken, gaat u op de pagina van de MIM-portal naar de gerelateerde pagina's van de sectie Beheer. Verifieer de configuratie door het script uit te voeren in [Using Windows PowerShell to document your provisioning policy configuration](http://go.microsoft.com/FWLink/p/?LinkId=189661) (Windows PowerShell gebruiken om de configuratie voor het inrichtingsbeleid te documenteren).
 
-### <a name="step-6-create-the-synchronization-rule"></a>Stap 6: de synchronisatieregel maken
+### Stap 6: de synchronisatieregel maken
+<a id="step-6-create-the-synchronization-rule" class="xliff"></a>
 
 In de volgende tabellen wordt de configuratie getoond van de vereiste inrichtingssynchronisatieregel van Fabrikam. Maak de synchronisatieregel aan de hand van de gegevens in de volgende tabellen.
 
@@ -303,7 +324,8 @@ In de volgende tabellen wordt de configuratie getoond van de vereiste inrichting
  >[!NOTE]
  Belangrijk: Verifieer dat u Alleen initiële stroom hebt geselecteerd voor de kenmerkstroom met de DN als doel.                                                                          
 
-### <a name="step-7-create-the-workflow"></a>Stap 7: De werkstroom maken
+### Stap 7: De werkstroom maken
+<a id="step-7-create-the-workflow" class="xliff"></a>
 
 Het doel van de AD-inrichtingswerkstroom is om de inrichtingssynchronisatieregel van Fabrikam aan een resource toe te voegen. In de volgende tabellen wordt de configuratie vermeld.  Maak een werkstroom aan de hand van de gegevens in de onderstaande tabellen.
 
@@ -322,7 +344,8 @@ Het doel van de AD-inrichtingswerkstroom is om de inrichtingssynchronisatieregel
 
 
 
-### <a name="step-8-create-the-mpr"></a>Stap 8: de MPR maken
+### Stap 8: de MPR maken
+<a id="step-8-create-the-mpr" class="xliff"></a>
 
 De vereiste MPR is van het type Setovergang en wordt getriggerd wanneer een resource lid wordt van de set Alle contractanten. In de volgende tabellen wordt de configuratie vermeld.  Maak een MPR aan de hand van de gegevens in de onderstaande tabellen.
 
@@ -347,7 +370,8 @@ De vereiste MPR is van het type Setovergang en wordt getriggerd wanneer een reso
 
 
 
-## <a name="initializing-your-environment"></a>De omgeving initialiseren
+## De omgeving initialiseren
+<a id="initializing-your-environment" class="xliff"></a>
 
 
 De doelstelling van de initialisatiefase is als volgt:
@@ -356,7 +380,8 @@ De doelstelling van de initialisatiefase is als volgt:
 
 -   Breng de Active Directory-structuur over naar het Active Directory-connectorgebied.
 
-### <a name="step-9-run-the-run-profiles"></a>Stap 9: de uitvoerprofielen uitvoeren
+### Stap 9: de uitvoerprofielen uitvoeren
+<a id="step-9-run-the-run-profiles" class="xliff"></a>
 
 In de volgende tabellen worden de uitvoerprofielen vermeld die onderdeel zijn van de initialisatiefase.  Voer de uitvoerprofielen uit aan de hand van de onderstaande tabel.
 
@@ -375,7 +400,8 @@ In de volgende tabellen worden de uitvoerprofielen vermeld die onderdeel zijn va
 >[!NOTE]
 Controleer of de regel voor uitgaande synchronisatie is geprojecteerd in de metaverse.
 
-## <a name="testing-the-configuration"></a>De configuratie testen
+## De configuratie testen
+<a id="testing-the-configuration" class="xliff"></a>
 
 
 Het doel van deze sectie is het testen van de feitelijke configuratie. Voor het testen van de configuratie dient u het volgende te doen:
@@ -388,7 +414,8 @@ Het doel van deze sectie is het testen van de feitelijke configuratie. Voor het 
 
 4.  Controleer of de gebruiker aanwezig is in AD DS.
 
-### <a name="step-10-create-a-sample-user-in-mim"></a>Stap 10: een voorbeeldgebruiker maken in MIM
+### Stap 10: een voorbeeldgebruiker maken in MIM
+<a id="step-10-create-a-sample-user-in-mim" class="xliff"></a>
 
 
 In de volgende tabel worden de eigenschappen van de voorbeeldgebruiker vermeld. Maak een voorbeeldgebruiker aan de hand van de gegevens in de onderstaande tabel.
@@ -404,7 +431,8 @@ In de volgende tabel worden de eigenschappen van de voorbeeldgebruiker vermeld. 
 
 
 
-### <a name="verify-the-provisioning-requisites-of-the-sample-user"></a>De vereisten controleren voor het inrichten van de voorbeeldgebruiker
+### De vereisten controleren voor het inrichten van de voorbeeldgebruiker
+<a id="verify-the-provisioning-requisites-of-the-sample-user" class="xliff"></a>
 
 
 Als u de voorbeeldgebruiker wilt inrichten voor AD DS, moet aan twee voorwaarden worden voldaan:
@@ -413,14 +441,16 @@ Als u de voorbeeldgebruiker wilt inrichten voor AD DS, moet aan twee voorwaarden
 
 2.  De gebruiker van de set moet binnen het bereik zijn van de regel voor uitgaande synchronisatie.
 
-### <a name="step-11-verify-the-user-is-a-member-of-all-contractors"></a>Stap 11: controleren of de gebruiker lid is van Alle contractanten
+### Stap 11: controleren of de gebruiker lid is van Alle contractanten
+<a id="step-11-verify-the-user-is-a-member-of-all-contractors" class="xliff"></a>
 
 Als u wilt controleren of de gebruiker lid is van de set Alle contractanten, opent u de set en klikt u op Leden weergeven.
 
 ![Controleren of de gebruiker lid is van alle contractanten](media/how-provision-users-adds/image022.jpg)
 
 
-### <a name="step-12-verify-the-user-is-in-the-scope-of-the-outbound-synchronization-rule"></a>Stap 12: controleren of de gebruiker binnen het bereik is van de regel voor uitgaande synchronisatie
+### Stap 12: controleren of de gebruiker binnen het bereik is van de regel voor uitgaande synchronisatie
+<a id="step-12-verify-the-user-is-in-the-scope-of-the-outbound-synchronization-rule" class="xliff"></a>
 
 Als u wilt controleren of de gebruiker binnen het bereik is van de regel voor uitgaande synchronisatie, opent u de eigenschappenpagina van de gebruiker en controleert u het kenmerk Lijst met verwachte regels op het tabblad Inrichten. Het kenmerk Lijst met verwachte regels moet de AD-gebruiker vermelden
 
@@ -432,7 +462,8 @@ Op dit punt in het proces is de status van de synchronisatieregel In wachtrij. D
 
 
 
-### <a name="step-13-synchronize-the-sample-group"></a>Stap 13: de voorbeeldgroep synchroniseren
+### Stap 13: de voorbeeldgroep synchroniseren
+<a id="step-13-synchronize-the-sample-group" class="xliff"></a>
 
 
 Voordat u met de eerste synchronisatiecyclus voor een testobject begint, dient u de verwachte toestand van het object te volgen na het uitvoeren van een uitvoerprofiel in een testschema. Het testschema moet naast de algemene toestand van het object (gemaakt, bijgewerkt of verwijderd) ook de kenmerkwaarden bevatten die u verwacht.
@@ -504,13 +535,15 @@ Voer het uitvoerprofiel uit volgens de instructies in deze sectie.
 >[!IMPORTANT]
 Elk uitvoerprofiel moet zonder fouten worden voltooid.
 
-### <a name="step-14-verify-the-provisioned-user-in-ad-ds"></a>Stap 14: de ingerichte gebruiker in AD DS inrichten
+### Stap 14: de ingerichte gebruiker in AD DS inrichten
+<a id="step-14-verify-the-provisioned-user-in-ad-ds" class="xliff"></a>
 
 Open de OE FIMObjects om te controleren dat de voorbeeldgebruiker is ingericht voor AD DS. Julia Steen moet zich in de OE FIMObjects bevinden.
 
 ![de gebruiker verifiëren in de OE FIMObjects](media/how-provision-users-adds/image033.jpg)
 
-<a name="summary"></a>Samenvatting
+Samenvatting
+<a id="summary" class="xliff"></a>
 =======
 
 Het doel van dit document is u een inleiding te geven tot de belangrijkste bouwstenen voor het synchroniseren van een gebruiker in MIM met AD DS. Voor de initiële test moet u beginnen met het minimaal aantal vereiste kenmerken om een taak te voltooien. U voegt meer kenmerken aan het scenario toe als de algemene stappen werken zoals verwacht. Door de complexiteit tot een minimum te beperken, wordt het oplossen van problemen vereenvoudigd.
@@ -523,10 +556,12 @@ Zie [A Method to Remove Orphaned ExpectedRuleEntry Objects from Your Environment
 In een typisch synchronisatiescenario met AD DS als synchronisatiedoel, is MIM niet gezaghebbend voor alle kenmerken van een object. Als u bijvoorbeeld gebruikersobjecten in AD DS beheert door middel van FIM, moeten ten minste het domein en de objectSID-kenmerken worden bijgedragen door de AD DS-beheeragent.
 De accountnaam, het domein en de objectSID-kenmerken zijn vereist als u een gebruiker in staat wil stellen zich aan te melden bij de FIM-portal. Als u deze kenmerken vanuit AD DS wilt invullen, is er een aanvullende regel voor inkomende synchronisatie voor het AD DS-connectorgebied vereist. Als u objecten met meerdere bronnen voor kenmerkwaarden beheert, moet u ervoor zorgen dat de prioriteit van de kenmerkstroom correct wordt geconfigureerd. Als de prioriteit van de kenmerkstroom niet correct wordt geconfigureerd, blokkeert de synchronisatie-engine het invullen van kenmerkwaarden. In het artikel [Prioriteit kenmerkstroom](http://go.microsoft.com/FWLink/p/?LinkId=189675) vindt u meer informatie over prioriteit van de kenmerkstroom.
 
-<a name="see-also"></a>Zie ook
+Zie ook
+<a id="see-also" class="xliff"></a>
 =========
 
-<a name="other-resources"></a>Andere resources
+Andere resources
+<a id="other-resources" class="xliff"></a>
 ---------------
 
 [Using FIM to Enable or Disable Accounts in Active Directory](http://go.microsoft.com/FWLink/p/?LinkId=189670) (FIM gebruiken voor het in- of uitschakelen van accounts in Active Directory)

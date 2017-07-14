@@ -12,15 +12,17 @@ ms.technology: security
 ms.assetid: 51507d0a-2aeb-4cfd-a642-7c71e666d6cd
 ms.reviewer: mwahl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 3623bffb099a83d0eba47ba25e9777c3d590e529
-ms.openlocfilehash: 1cb0d6cd310372ecaeff47c9cc4461ebc43b3390
-ms.lasthandoff: 01/24/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 7f16c3a054f0a2c59f118ba33bf64fca10034690
+ms.openlocfilehash: a0241964edb21ca4bf938ae84693b9947f6e2efb
+ms.contentlocale: nl-nl
+ms.lasthandoff: 07/10/2017
 
 
 ---
 
-# <a name="set-up-an-identity-management-server-windows-server-2012-r2"></a>Een server voor identiteitsbeheer instellen: Windows Server 2012 R2
+# Een server voor identiteitsbeheer instellen: Windows Server 2012 R2
+<a id="set-up-an-identity-management-server-windows-server-2012-r2" class="xliff"></a>
 
 >[!div class="step-by-step"]
 [« Een domein voorbereiden](preparing-domain.md)
@@ -32,7 +34,8 @@ ms.lasthandoff: 01/24/2017
 > - Domeinnaam: **contoso**
 > - Wachtwoord - **Pass@word1**
 
-## <a name="join-windows-server-2012-r2-to-your-domain"></a>Windows Server 2012 R2 aan uw domein koppelen
+## Windows Server 2012 R2 aan uw domein koppelen
+<a id="join-windows-server-2012-r2-to-your-domain" class="xliff"></a>
 
 Begin met een Windows Server 2012 R2-computer, met minimaal 8 GB aan RAM-geheugen. Geef bij de installatie de editie Windows Server 2012 R2 Standard x64 (server met een GUI) op.
 
@@ -63,7 +66,8 @@ Begin met een Windows Server 2012 R2-computer, met minimaal 8 GB aan RAM-geheuge
     Install-WindowsFeature Web-WebServer, Net-Framework-Features,rsat-ad-powershell,Web-Mgmt-Tools,Application-Server,Windows-Identity-Foundation,Server-Media-Foundation,Xps-Viewer –includeallsubfeature -restart -source d:\sources\SxS
     ```
 
-## <a name="configure-the-server-security-policy"></a>Het beveiligingsbeleid van de server configureren
+## Het beveiligingsbeleid van de server configureren
+<a id="configure-the-server-security-policy" class="xliff"></a>
 
 Stel het beveiligingsbeleid van de server zo in dat de zojuist gemaakte accounts als services kunnen worden uitgevoerd.
 
@@ -94,7 +98,8 @@ Stel het beveiligingsbeleid van de server zo in dat de zojuist gemaakte accounts
 12. Sluit het venster Lokaal beveiligingsbeleid.
 
 
-## <a name="change-the-iis-windows-authentication-mode"></a>De Windows-verificatiemodus voor IIS wijzigen
+## De Windows-verificatiemodus voor IIS wijzigen
+<a id="change-the-iis-windows-authentication-mode" class="xliff"></a>
 
 1.  Open een PowerShell-venster.
 

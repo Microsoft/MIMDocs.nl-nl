@@ -12,15 +12,17 @@ ms.technology: active-directory-domain-services
 ms.assetid: 0e9993a0-b8ae-40e2-8228-040256adb7e2
 ms.reviewer: mwahl
 ms.suite: ems
-translationtype: Human Translation
+ms.translationtype: MT
 ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
 ms.openlocfilehash: edc15b41d4248887f4a93217f68d8125f6500585
-ms.lasthandoff: 05/02/2017
+ms.contentlocale: nl-nl
+ms.lasthandoff: 07/10/2017
 
 
 ---
 
-# <a name="step-2---prepare-the-first-priv-domain-controller"></a>Stap 2: de eerste PRIV-domeincontroller voorbereiden
+# Stap 2: de eerste PRIV-domeincontroller voorbereiden
+<a id="step-2---prepare-the-first-priv-domain-controller" class="xliff"></a>
 
 >[!div class="step-by-step"]
 [« Stap 1](step-1-prepare-corp-domain.md)
@@ -28,11 +30,13 @@ ms.lasthandoff: 05/02/2017
 
 In deze stap maakt u een nieuw domein dat de bastionomgeving biedt voor verificatie door de beheerder.  Dit forest moet ten minste één domeincontroller hebben, en ten minste één lidserver. De lidserver worden geconfigureerd in de volgende stap.
 
-## <a name="create-a-new-privileged-access-management-domain-controller"></a>Een nieuwe Privileged Access Management-domeincontroller maken
+## Een nieuwe Privileged Access Management-domeincontroller maken
+<a id="create-a-new-privileged-access-management-domain-controller" class="xliff"></a>
 
 In dit gedeelte stelt u een virtuele machine in om te fungeren als een domeincontroller voor een nieuw forest
 
-### <a name="install-windows-server-2012-r2"></a>Windows Server 2012 R2 installeren
+### Windows Server 2012 R2 installeren
+<a id="install-windows-server-2012-r2" class="xliff"></a>
 Installeer Windows Server 2012 R2 op een andere nieuwe virtuele machine waarop geen software is geïnstalleerd om een computer 'PRIVDC' te maken.
 
 1. Selecteer deze optie om een aangepaste installatie (niet een upgrade) van Windows Server uit te voeren. Geef bij de installatie de editie **Windows Server 2012 R2 Standard x64 (server met een GUI)** op. _Selecteer niet_ **datacentrum of serverkern**.
@@ -45,7 +49,8 @@ Installeer Windows Server 2012 R2 op een andere nieuwe virtuele machine waarop g
 
 5. Nadat de server opnieuw is opgestart, moet u zich aanmelden als beheerder. Via Configuratiescherm configureert u de computer om te controleren op updates en installeert u alle vereiste updates. Hiervoor moet de server mogelijk opnieuw worden opgestart.
 
-### <a name="add-roles"></a>Functies toevoegen
+### Functies toevoegen
+<a id="add-roles" class="xliff"></a>
 Voeg de serverfuncties AD DS (Active Directory Domain Services) en DNS toe.
 
 1. Start PowerShell als beheerder.
@@ -58,7 +63,8 @@ Voeg de serverfuncties AD DS (Active Directory Domain Services) en DNS toe.
   Install-WindowsFeature AD-Domain-Services,DNS –restart –IncludeAllSubFeature -IncludeManagementTools
   ```
 
-### <a name="configure-registry-settings-for-sid-history-migration"></a>Registerinstellingen voor de migratie van de SID-geschiedenis configureren
+### Registerinstellingen voor de migratie van de SID-geschiedenis configureren
+<a id="configure-registry-settings-for-sid-history-migration" class="xliff"></a>
 
 Start PowerShell en typ de volgende opdracht voor het configureren van het brondomein om externe procedureaanroep (Remote Procedure Call, RPC) toegang te verlenen tot de database voor beveiligingsaccountbeheer (Security Accounts Manager, SAM).
 
@@ -66,13 +72,15 @@ Start PowerShell en typ de volgende opdracht voor het configureren van het brond
 New-ItemProperty –Path HKLM:SYSTEM\CurrentControlSet\Control\Lsa –Name TcpipClientSupport –PropertyType DWORD –Value 1
 ```
 
-## <a name="create-a-new-privileged-access-management-forest"></a>Een nieuw Privileged Access Management-forest maken
+## Een nieuw Privileged Access Management-forest maken
+<a id="create-a-new-privileged-access-management-forest" class="xliff"></a>
 
 Verhoog vervolgens het niveau van de server tot een domeincontroller voor een nieuw forest.
 
 In dit document, wordt de naam priv.contoso.local gebruikt als de domeinnaam van het nieuwe forest.  De naam van het forest is niet kritiek en hoeft niet ondergeschikt te zijn aan de bestaande forestnaam in de organisatie. Echter, de domeinnaam en de NetBIOS-naam van het nieuwe forest moeten uniek en anders zijn dan die van andere domeinen in de organisatie.  
 
-### <a name="create-a-domain-and-forest"></a>Een domein en forest maken
+### Een domein en forest maken
+<a id="create-a-domain-and-forest" class="xliff"></a>
 
 1. Typ de volgende opdrachten in een PowerShell-venster om het nieuwe domein te maken.  Hiermee wordt ook een DNS-delegatie gemaakt in een bovenliggende domein (contoso.local) die is gemaakt in de vorige stap.  Als u van plan bent later de DNS te configureren, moet u de `CreateDNSDelegation -DNSDelegationCredential $ca`-parameters weglaten.
 
@@ -88,7 +96,8 @@ In dit document, wordt de naam priv.contoso.local gebruikt als de domeinnaam van
 
 De server wordt opnieuw opgestart nadat het maken van het forest is voltooid.
 
-### <a name="create-user-and-service-accounts"></a>Gebruikers- en serviceaccounts maken
+### Gebruikers- en serviceaccounts maken
+<a id="create-user-and-service-accounts" class="xliff"></a>
 Maak de gebruikers- en serviceaccounts voor de installatie van de MIM-service en -portal. Deze accounts gaat in de container Gebruikers van het domein priv.contoso.local.
 
 1. Wanneer de server opnieuw is opgestart, meldt u zich aan bij PRIVDC als domeinbeheerder (PRIV\\Administrator).
@@ -159,7 +168,8 @@ Maak de gebruikers- en serviceaccounts voor de installatie van de MIM-service en
   Add-ADGroupMember "Domain Admins" MIMService
   ```
 
-### <a name="configure-auditing-and-logon-rights"></a>Controle- en aanmeldingsrechten configureren
+### Controle- en aanmeldingsrechten configureren
+<a id="configure-auditing-and-logon-rights" class="xliff"></a>
 
 U moet de controle instellen zodat de PAM-configuratie tot stand kan worden gebracht tussen forests.  
 
@@ -208,7 +218,8 @@ U moet de controle instellen zodat de PAM-configuratie tot stand kan worden gebr
   Na een minuut wordt de taak voltooid met het bericht 'Het bijwerken van het computerbeleid is voltooid'.
 
 
-### <a name="configure-dns-name-forwarding-on-privdc"></a>Doorsturen van de DNS-naam op PRIVDC configureren
+### Doorsturen van de DNS-naam op PRIVDC configureren
+<a id="configure-dns-name-forwarding-on-privdc" class="xliff"></a>
 
 Configureer met PowerShell op PRIVDC het doorsturen van de DNS-naam zodat het PRIV-domein andere bestaande forests kan herkennen.
 
@@ -225,7 +236,8 @@ Configureer met PowerShell op PRIVDC het doorsturen van de DNS-naam zodat het PR
 > [!NOTE]
 > De andere forests moeten ook in staat zijn om DNS-query's te routeren voor het PRIV-forest naar deze domeincontroller.  Als er meerdere bestaande Active Directory-forests zijn, moet u ook een voorwaardelijke DNS-doorstuurserver toevoegen aan elk van deze forests.
 
-### <a name="configure-kerberos"></a>Kerberos configureren
+### Kerberos configureren
+<a id="configure-kerberos" class="xliff"></a>
 
 1. Voeg met behulp van PowerShell SPN's toe zodat SharePoint, PAM REST-API en de MIM-service Kerberos-verificatie kunnen gebruiken.
 
@@ -239,7 +251,8 @@ Configureer met PowerShell op PRIVDC het doorsturen van de DNS-naam zodat het PR
 > [!NOTE]
 > In de volgende stappen van dit document wordt beschreven hoe u MIM 2016-serveronderdelen op één computer installeert. Als u van plan bent een andere server toe te voegen voor maximale beschikbaarheid, moet u Kerberos extra configureren zoals beschreven in [FIM 2010: Kerberos Authentication Setup](http://social.technet.microsoft.com/wiki/contents/articles/3385.fim-2010-kerberos-authentication-setup.aspx) (FIM 2010: Kerberos-verificatie instellen).
 
-### <a name="configure-delegation-to-give-mim-service-accounts-access"></a>Delegatie configureren om MIM-serviceaccounts toegang te geven
+### Delegatie configureren om MIM-serviceaccounts toegang te geven
+<a id="configure-delegation-to-give-mim-service-accounts-access" class="xliff"></a>
 
 Voer de volgende stappen uit op PRIVDC als een domeinbeheerder.
 
@@ -270,23 +283,25 @@ Voer de volgende stappen uit op PRIVDC als een domeinbeheerder.
 15. Selecteer in de lijst met machtigingen **Wachtwoord wijzigen** en **Wachtwoord opnieuw instellen**. Klik vervolgens op **Volgende** en daarna op **Voltooien**.  
 16. Sluit Active Directory - gebruikers en computers.
 
-17.    Open een opdrachtprompt.  
-18.    Controleer de toegangsbeheerlijst van het object Admin SD-houder in de PRIV-domeinen. Bijvoorbeeld, als uw domein 'priv.contoso.local' is, typt u de opdracht  
+17. Open een opdrachtprompt.  
+18. Controleer de toegangsbeheerlijst van het object Admin SD-houder in de PRIV-domeinen. Bijvoorbeeld, als uw domein 'priv.contoso.local' is, typt u de opdracht  
   ```
   dsacls "cn=adminsdholder,cn=system,dc=priv,dc=contoso,dc=local"
   ```
-19.    Werk de toegangsbeheerlijst indien nodig bij om ervoor te zorgen dat MIM-service en MIM-onderdeelservice lidmaatschappen van groepen kunnen bijwerken die zijn beveiligd door deze ACL.  Typ de opdracht:  
+19. Werk de toegangsbeheerlijst indien nodig bij om ervoor te zorgen dat MIM-service en MIM-onderdeelservice lidmaatschappen van groepen kunnen bijwerken die zijn beveiligd door deze ACL.  Typ de opdracht:  
   ```
   dsacls "cn=adminsdholder,cn=system,dc=priv,dc=contoso,dc=local" /G priv\mimservice:WP;"member"  
   dsacls "cn=adminsdholder,cn=system,dc=priv,dc=contoso,dc=local" /G priv\mimcomponent:WP;"member"
   ```
 20. Start de PRIVDC-server opnieuw op zodat deze wijzigingen van kracht worden.
 
-## <a name="prepare-a-priv-workstation"></a>Een PRIV-werkstation voorbereiden
+## Een PRIV-werkstation voorbereiden
+<a id="prepare-a-priv-workstation" class="xliff"></a>
 
 Als u nog geen werkstationcomputer hebt die lid wordt van het PRIV-domein voor het uitvoeren van onderhoud van PRIV-resources (zoals MIM), volgt u deze instructies voor het voorbereiden van een werkstation.  
 
-### <a name="install-windows-81-or-windows-10-enterprise"></a>Installeer Windows 8.1 of Windows 10 Enterprise
+### Installeer Windows 8.1 of Windows 10 Enterprise
+<a id="install-windows-81-or-windows-10-enterprise" class="xliff"></a>
 
 Installeer Windows 8.1 Enterprise of Windows 10 Enterprise op een andere nieuwe virtuele machine waarop geen software is geïnstalleerd om een computer *'PRIVWKSTN'* te maken.
 

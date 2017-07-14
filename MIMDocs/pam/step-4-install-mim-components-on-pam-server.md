@@ -13,15 +13,17 @@ ms.assetid: ef605496-7ed7-40f4-9475-5e4db4857b4f
 ROBOTS: noindex,nofollow
 ms.reviewer: mwahl
 ms.suite: ems
-translationtype: Human Translation
+ms.translationtype: MT
 ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
 ms.openlocfilehash: 3a1ec9db6da0a77f963dde76a3efe8d92f89078d
-ms.lasthandoff: 05/02/2017
+ms.contentlocale: nl-nl
+ms.lasthandoff: 07/10/2017
 
 
 ---
 
-# <a name="step-4--install-mim-components-on-pam-server-and-workstation"></a>Stap 4: MIM-onderdelen installeren op een PAM-server en -werkstation
+# Stap 4: MIM-onderdelen installeren op een PAM-server en -werkstation
+<a id="step-4--install-mim-components-on-pam-server-and-workstation" class="xliff"></a>
 
 >[!div class="step-by-step"]
 [« Stap 3](step-3-prepare-pam-server.md)
@@ -35,7 +37,8 @@ Meld u op PAMSRV aan als PRIV\Administrator om de MIM-service en -portal en de v
 
 Als u MIM hebt gedownload, pakt u het MIM-installatiearchief uit naar een nieuwe map.
 
-##  <a name="run-the-service-and-portal-install-program"></a>Voer het installatieprogramma voor de service en portal uit.  
+##  Voer het installatieprogramma voor de service en portal uit.
+<a id="run-the-service-and-portal-install-program" class="xliff"></a>  
 
 Volg de richtlijnen van het installatieprogramma en voltooi de installatie.
 
@@ -99,7 +102,8 @@ Volg de richtlijnen van het installatieprogramma en voltooi de installatie.
 
 Nadat de installatie is voltooid, wordt de server opnieuw opgestart. Controleer of de MIM-portal actief is en stel in dat gebruikers hun eigen objectresource kunnen weergeven in MIM.
 
-## <a name="set-up-mim-portal-management-policy-rules"></a>Beheerbeleidsregels voor de MIM-portal instellen
+## Beheerbeleidsregels voor de MIM-portal instellen
+<a id="set-up-mim-portal-management-policy-rules" class="xliff"></a>
 
 1. Nadat PAMSRV opnieuw is opgestart, meldt u zich aan als PRIV\Administrator.
 
@@ -115,7 +119,8 @@ Nadat de installatie is voltooid, wordt de server opnieuw opgestart. Controleer 
 
 7. Selecteer deze beheerbeleidsregel, schakel het selectievakje **Beleid is uitgeschakeld** uit, klik op **OK** en klik vervolgens op **Verzenden**.
 
-## <a name="verify-the-firewall-connections"></a>De firewallverbindingen controleren
+## De firewallverbindingen controleren
+<a id="verify-the-firewall-connections" class="xliff"></a>
 
 De firewall moet binnenkomende verbindingen voor TCP-poort 5725, 5726, 8086 en 8090 toestaan.
 
@@ -132,7 +137,8 @@ De firewall moet binnenkomende verbindingen voor TCP-poort 5725, 5726, 8086 en 8
 8.  Controleer of er een actief netwerk, dat wordt vermeld priv.contoso.local, en een domeinnetwerk worden weergegeven.  
 9. Sluit **Configuratiescherm**.
 
-## <a name="set-up-the-sample-web-application"></a>De voorbeeldwebtoepassing instellen
+## De voorbeeldwebtoepassing instellen
+<a id="set-up-the-sample-web-application" class="xliff"></a>
 
 In deze sectie gaat u de voorbeeldwebtoepassing voor de MIM PAM REST API installeren en configureren.
 
@@ -168,7 +174,8 @@ In deze sectie gaat u de voorbeeldwebtoepassing voor de MIM PAM REST API install
 
 7.  (Optioneel) Controleer of de gebruiker bij de REST API kan worden geverifieerd. Open een webbrowser als de beheerder op PAMSRV.  Navigeer naar de website-URL http://pamsrv.priv.contoso.local:8086/api/pamresources/pamroles/, voer zo nodig de verificatie uit en controleer of er een download wordt uitgevoerd.
 
-## <a name="install-the-mim-pam-requestor-cmdlets"></a>De aanvrager-cmdlets van MIM PAM installeren
+## De aanvrager-cmdlets van MIM PAM installeren
+<a id="install-the-mim-pam-requestor-cmdlets" class="xliff"></a>
 
 Installeer de aanvrager-cmdlets van MIM PAM op het werkstation dat u hebt geconfigureerd in stap 1.
 

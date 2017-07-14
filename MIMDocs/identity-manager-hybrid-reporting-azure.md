@@ -12,19 +12,21 @@ ms.technology: security
 ms.assetid: 7320f014-8b60-4866-92de-cfbd3e6edc48
 ms.reviewer: mwahl
 ms.suite: ems
-ms.translationtype: Human Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 3797f5789bb4e48836eb21776dafd5a2e0e11613
 ms.openlocfilehash: 678626e7c32659570de88d8178c16821cceaf7ee
 ms.contentlocale: nl-nl
-ms.lasthandoff: 05/09/2017
+ms.lasthandoff: 07/10/2017
 
 
 ---
 
-# <a name="hybrid-identity-management-audit-reports-in-azure-active-directory---public-previewrefresh"></a>Controlerapporten voor beheer van hybride identiteiten in Azure Active Directory - Openbare preview-versie (vernieuwen)
+# Controlerapporten voor beheer van hybride identiteiten in Azure Active Directory - Openbare preview-versie (vernieuwen)
+<a id="hybrid-identity-management-audit-reports-in-azure-active-directory---public-previewrefresh" class="xliff"></a>
 Met rapporten voor controle-activiteiten in Azure Active Directory (AD) kunt u één rapport weergeven waarin u identiteitsbeheeractiviteiten kunt bewaken die on-premises of in de cloud plaatsvinden. Met deze functie kunt u al uw identiteits- en toegangsgegevens op één locatie beheren en zodoende tijd besparen en de totale kosten reduceren.
 
-## <a name="what-is-azure-active-directory-hybrid-reporting"></a>Wat is hybride rapportage van Azure Active Directory?
+## Wat is hybride rapportage van Azure Active Directory?
+<a id="what-is-azure-active-directory-hybrid-reporting" class="xliff"></a>
 Hybride controlerapportage helpt IT-professionals met het oplossen van algemene rapportage-vraagstukken op het gebied van identiteitsbeheer.
 
 1. **Activiteiten in identiteitsbeheer verzamelen over verschillende systemen.** In hybride rapporten worden activiteit op het gebied van identiteitsbeheer uit Azure AD en Identity Manager weergegeven.
@@ -33,7 +35,8 @@ Hybride controlerapportage helpt IT-professionals met het oplossen van algemene 
 
 3. **Infrastructuurkosten voor rapportagesystemen verminderen.** Dankzij hybride rapportage in de cloud hebt u niet langer een datawarehouse-infrastructuur voor on-premises rapportage nodig.
 
-## <a name="how-does-it-work"></a>Hoe werkt dit?
+## Hoe werkt dit?
+<a id="how-does-it-work" class="xliff"></a>
 
 Als u de on-premises gegevens wilt verzamelen, moet u eerst een rapportageagent installeren op uw Identity Manager 2016-server. De rapportageagent kan [hier](https://www.microsoft.com/en-us/download/details.aspx?id=55112) worden gedownload van de downloadpagina van Microsoft.
 
@@ -44,6 +47,7 @@ Het proces voor hybride rapportage verloopt als volgt:
 4. De activiteitsgegevens worden gedurende één maand opgeslagen in Azure.
 5. De rapportagegegevens voor controle worden opgehaald in Azure Portal en worden als controle weergeven op de blade voor controlerapportage van Azure.
 
-## <a name="see-also"></a>Zie tevens
+## Zie tevens
+<a id="see-also" class="xliff"></a>
 - Meer informatie over [werken met hybride rapportage van Identity Manager](working-with-identity-manager-hybrid-reporting.md)
 - Meer informatie over [Rapporten voor controle-activiteiten in de Azure Active Directory-portal](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-reporting-activity-audit-logs)

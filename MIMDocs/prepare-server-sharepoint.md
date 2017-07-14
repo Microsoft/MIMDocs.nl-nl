@@ -12,15 +12,17 @@ ms.technology: security
 ms.assetid: c01487f2-3de6-4fc4-8c3a-7d62f7c2496c
 ms.reviewer: mwahl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 3623bffb099a83d0eba47ba25e9777c3d590e529
-ms.openlocfilehash: 2af432036033f8914d00228cd3d2d1af84f13054
-ms.lasthandoff: 01/24/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 7f16c3a054f0a2c59f118ba33bf64fca10034690
+ms.openlocfilehash: 1114be2ce13ca012582676803eb1dc29cadae596
+ms.contentlocale: nl-nl
+ms.lasthandoff: 07/10/2017
 
 
 ---
 
-# <a name="set-up-an-identity-management-server-sharepoint"></a>Een server voor identiteitsbeheer instellen: SharePoint
+# Een server voor identiteitsbeheer instellen: SharePoint
+<a id="set-up-an-identity-management-server-sharepoint" class="xliff"></a>
 
 >[!div class="step-by-step"]
 [« SQL Server 2014](prepare-server-sql2014.md)
@@ -33,7 +35,8 @@ ms.lasthandoff: 01/24/2017
 > - Wachtwoord - **Pass@word1**
 
 
-## <a name="install-sharepoint-foundation-2013-with-sp1"></a>Installeer **SharePoint Foundation 2013 met SP1**
+## Installeer **SharePoint Foundation 2013 met SP1**
+<a id="install-sharepoint-foundation-2013-with-sp1" class="xliff"></a>
 
 > [!NOTE]
 > Voor het installatieprogramma is een internetverbinding vereist zodat de vereiste onderdelen hiervoor kunnen worden gedownload. Als de computer zich op een virtueel netwerk bevindt dat geen verbinding met internet heeft, voegt u een extra netwerkinterface toe aan de computer zodat deze verbinding met internet kan maken. Dit kan worden uitgeschakeld nadat de installatie is voltooid.
@@ -60,7 +63,8 @@ Volg onderstaande stappen voor het installeren van SharePoint Foundation 2013 SP
 
 4.  Wanneer de installatie is voltooid, voert u de wizard uit.
 
-## <a name="run-the-wizard-to-configure-sharepoint"></a>De wizard voor het configureren van SharePoint uitvoeren
+## De wizard voor het configureren van SharePoint uitvoeren
+<a id="run-the-wizard-to-configure-sharepoint" class="xliff"></a>
 
 Voer de stappen uit die in de **wizard Configuratie van SharePoint-producten** worden vermeld, zodat SharePoint zo wordt geconfigureerd dat het met MIM kan samenwerken.
 
@@ -80,7 +84,8 @@ Voer de stappen uit die in de **wizard Configuratie van SharePoint-producten** w
 
 8. Klik in het venster **Een siteverzameling maken** op **Overslaan**.  Klik vervolgens op **Voltooien**.
 
-## <a name="prepare-sharepoint-to-host-the-mim-portal"></a>SharePoint voorbereiden om de MIM-portal te hosten
+## SharePoint voorbereiden om de MIM-portal te hosten
+<a id="prepare-sharepoint-to-host-the-mim-portal" class="xliff"></a>
 
 > [!NOTE]
 > In eerste instantie wordt SSL niet geconfigureerd. Configureer SSL of een vergelijkbaar protocol voordat u toegang tot deze portal inschakelt.

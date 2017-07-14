@@ -12,15 +12,17 @@ ms.technology: security
 ms.assetid: 2585e9c5-ce34-46c7-bdcf-8c08773901dc
 ms.reviewer: mwahl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 54d03fbd03f6c44298139324ea2dc7d945f008bc
-ms.openlocfilehash: c6cf0c93679319716c34904ea6239902010e0860
-ms.lasthandoff: 01/24/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 7f16c3a054f0a2c59f118ba33bf64fca10034690
+ms.openlocfilehash: 396c7066275db6123f15312cb8f0bc50d544275e
+ms.contentlocale: nl-nl
+ms.lasthandoff: 07/10/2017
 
 
 ---
 
-# <a name="install-mim-2016-mim-synchronization-service"></a>MIM 2016: MIM-synchronisatieservice installeren
+# MIM 2016: MIM-synchronisatieservice installeren
+<a id="install-mim-2016-mim-synchronization-service" class="xliff"></a>
 
 >[!div class="step-by-step"]
 [« Exchange Server](prepare-server-exchange.md)
@@ -38,7 +40,8 @@ Stel eerst het installatiepakket in voordat u de Microsoft Identity Manager 2016
 
 2. Pak het MIM-installatiepakket uit of plaats de dvd met de MIM-installatiekopie.
 
-## <a name="install-mim-2016-synchronization-service"></a>De MIM 2016-synchronisatieservice installeren
+## De MIM 2016-synchronisatieservice installeren
+<a id="install-mim-2016-synchronization-service" class="xliff"></a>
 
 1. Navigeer in de uitgepakte MIM-installatiemap naar de map **Synchronisatieservice**.
 
