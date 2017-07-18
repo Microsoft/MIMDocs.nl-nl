@@ -12,15 +12,12 @@ ms.technology: active-directory-domain-services
 ms.assetid: 03e521cd-cbf0-49f8-9797-dbc284c63018
 ms.reviewer: mwahl
 ms.suite: ems
-ms.translationtype: MT
-ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
 ms.openlocfilehash: 2fab9af837ed11b1f2f7f32c9ced6d79c8cc9d00
-ms.contentlocale: nl-nl
-ms.lasthandoff: 07/10/2017
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 07/13/2017
 ---
-
 # Overwegingen voor hoge beschikbaarheid en herstel na noodgevallen voor de bastionomgeving
 <a id="high-availability-and-disaster-recovery-considerations-for-the-bastion-environment" class="xliff"></a>
 In dit artikel worden de overwegingen beschreven voor hoge beschikbaarheid en herstel na noodgevallen bij de implementatie van Active Directory Domain Services (AD DS) en Microsoft Identity Manager 2016 (MIM) voor Privileged Access Management PAM.
@@ -251,4 +248,3 @@ De Privileged Access Management-onderdelen moeten worden geïnstalleerd op elke 
 Zorg ervoor dat de MIM-service wordt uitgevoerd op ten minste één server na het herstel van een storing.  Zorg ervoor dat de MIM PAM-bewakingsservice ook op die server wordt uitgevoerd met behulp van `net start "PAM Monitoring service"`.
 
 Als het functionele forestniveau van de bastionomgeving Windows Server 2012 R2 is, moet u ervoor zorgen dat de MIM PAM-onderdeelservice ook wordt uitgevoerd op die server met de opdracht `net start "PAM Component service"`.
-

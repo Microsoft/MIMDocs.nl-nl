@@ -12,15 +12,12 @@ ms.technology: active-directory-domain-services
 ms.assetid: c4ca5b58-ad0c-48af-a9eb-b71b22d0c67c
 ms.reviewer: mwahl
 ms.suite: ems
-ms.translationtype: MT
-ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
 ms.openlocfilehash: ce1ce0c67dfd39433ff01dabd542e862c557c787
-ms.contentlocale: nl-nl
-ms.lasthandoff: 07/10/2017
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 07/13/2017
 ---
-
 # De MIM-omgeving voor Privileged Access Management configureren
 <a id="configure-the-mim-environment-for-privileged-access-management" class="xliff"></a>
 Er zijn zeven stappen die u moet voltooien om de omgeving in stellen voor forest-overschrijdende toegang, Active Directory en Microsoft Identity Manager te installeren en configureren en een Just-In-Time toegangsaanvraag te demonstreren.
@@ -43,4 +40,3 @@ Deze stappen zijn zo opgezet dat u helemaal opnieuw begint met het maken van een
 
 >[!div class="step-by-step"]
 [Start »](step-1-prepare-corp-domain.md)
-

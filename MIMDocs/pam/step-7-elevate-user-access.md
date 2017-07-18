@@ -12,15 +12,12 @@ ms.technology: active-directory-domain-services
 ms.assetid: 5325fce2-ae35-45b0-9c1a-ad8b592fcd07
 ms.reviewer: mwahl
 ms.suite: ems
-ms.translationtype: MT
-ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
 ms.openlocfilehash: 89d9b38177b91f64e746fea583684abcecc9d7ff
-ms.contentlocale: nl-nl
-ms.lasthandoff: 07/10/2017
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 07/13/2017
 ---
-
 # Stap 7 – De toegangsrechten van een gebruiker uitbreiden
 <a id="step-7--elevate-a-users-access" class="xliff"></a>
 
@@ -108,4 +105,3 @@ Nadat u de stappen in dit overzicht hebt voltooid, hebt u een scenario voor Priv
 
 >[!div class="step-by-step"]
 [« Stap 6 ](step-6-transition-group-to-pam.md)
-

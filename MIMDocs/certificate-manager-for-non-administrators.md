@@ -12,15 +12,12 @@ ms.technology: security
 ms.assetid: bfabc562-a2f0-4cff-ac31-36927f41e102
 ms.reviewer: mwahl
 ms.suite: ems
-ms.translationtype: MT
-ms.sourcegitcommit: 7f16c3a054f0a2c59f118ba33bf64fca10034690
 ms.openlocfilehash: f8de75a0027371b7ff88b90d3097adc63c02d933
-ms.contentlocale: nl-nl
-ms.lasthandoff: 07/10/2017
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 07/13/2017
 ---
-
 # Smartcards voor niet-beheerders registreren
 <a id="enroll-smart-cards-for-non-administrators" class="xliff"></a>
 Gebruikers die geen lokale beheerder zijn van hun computer, kunnen standaard geen smartcard registreren op hun eigen computer. Dit probleem kunt u met de volgende procedure omzeilen.
@@ -97,4 +94,3 @@ Gebruikers die geen lokale beheerder zijn van hun computer, kunnen standaard gee
 7.  **Installeer de CM-app in het niet-beheerdersaccount**
 
 8.  **Start de CM-app en registratie voor een virtuele smartcard**
-

@@ -12,15 +12,12 @@ ms.technology: security
 ms.assetid: 51507d0a-2aeb-4cfd-a642-7c71e666d6cd
 ms.reviewer: mwahl
 ms.suite: ems
-ms.translationtype: MT
-ms.sourcegitcommit: 7f16c3a054f0a2c59f118ba33bf64fca10034690
 ms.openlocfilehash: a0241964edb21ca4bf938ae84693b9947f6e2efb
-ms.contentlocale: nl-nl
-ms.lasthandoff: 07/10/2017
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 07/13/2017
 ---
-
 # Een server voor identiteitsbeheer instellen: Windows Server 2012 R2
 <a id="set-up-an-identity-management-server-windows-server-2012-r2" class="xliff"></a>
 
@@ -114,4 +111,3 @@ Stel het beveiligingsbeleid van de server zo in dat de zojuist gemaakte accounts
 >[!div class="step-by-step"]  
 [« Een domein voorbereiden](preparing-domain.md)
 [SQL Server 2014 »](prepare-server-sql2014.md)
-

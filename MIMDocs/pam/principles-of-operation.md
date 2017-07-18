@@ -12,15 +12,12 @@ ms.technology: active-directory-domain-services
 ms.assetid: 6498f68f-36d3-448c-8fe6-649ad5a7f97d
 ms.reviewer: mwahl
 ms.suite: ems
-ms.translationtype: MT
-ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
 ms.openlocfilehash: 53fe79f251c3b18426f16b4007cda49e67d7b028
-ms.contentlocale: nl-nl
-ms.lasthandoff: 07/10/2017
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 07/13/2017
 ---
-
 # Inzicht in de PAM-onderdelen
 <a id="understand-the-components-of-pam" class="xliff"></a>
 
@@ -43,4 +40,3 @@ Eenmaal geïnstalleerd en geconfigureerd, is elke groep die is gemaakt in de mig
 Wanneer een gebruiker een uitbreiding aanvraagt via de PowerShell-cmdlets en de aanvraag wordt goedgekeurd, wordt het account met de MIM-service vervolgens toegevoegd aan een groep in het PRIV-forest. Wanneer de gebruiker zich aanmeldt met het bevoorrechte account, bevat het Kerberos-token een SID (Security Identifier) die identiek is aan de SID van de groep in het CORP-forest. Omdat het CORP-forest is geconfigureerd om het PRIV-forest te vertrouwen, wordt het account met verhoogde bevoegdheid weergegeven dat wordt gebruikt voor toegang tot een resource in het CORP-forest. Een resource die wordt gecontroleerd met de Kerberos-groepslidmaatschappen, moet deze lid zijn van de beveiligingsgroepen van die resource. Dit wordt opgegeven via forest-overschrijdende Kerberos-verificatie.
 
 Bovendien geldt voor deze lidmaatschappen een tijdslimiet zodat na een vooraf geconfigureerd interval het beheeraccount van de gebruiker niet langer deel uitmaakt van de groep in het PRIV-forest. Als gevolg hiervan kan dat account niet langer worden gebruikt voor toegang tot extra resources.
-

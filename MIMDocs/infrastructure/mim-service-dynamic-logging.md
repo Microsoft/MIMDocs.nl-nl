@@ -10,14 +10,11 @@ ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 1ff73d0bdfcbcb4ab79d0d81feca9abdc33f9213
 ms.openlocfilehash: 1e2fb9a9ae508ab601ebad1dec7acc21dc44d13e
-ms.contentlocale: nl-nl
-ms.lasthandoff: 07/10/2017
-
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 07/13/2017
 ---
 # MIM SP1 (4.4.1436.0)-service dynamische logboekregistratie
 <a id="mim-sp1-4414360--service-dynamic-logging" class="xliff"></a>
@@ -25,9 +22,9 @@ In 4.4.1436.0 hebben we een nieuwe mogelijkheid voor logboekregistratie geïntro
 
 Zodra u dit hebt geïnstalleerd, wordt de volgende nieuwe regel weergegeven in Microsoft.ResourceManagement.Service.exe.config met de naam
 
-*    Regel 6: ``<section name="dynamicLogging" type="Microsoft.ResourceManagement.Utilities.DynamicLoggingSection, Microsoft.ResourceManagement.Service" />``
-*    Regel 8: ``<dynamicLogging mode="true" loggingLevel="Verbose" />``
-*    Regel 266: ``</system.diagnostics> ``
+*   Regel 6: ``<section name="dynamicLogging" type="Microsoft.ResourceManagement.Utilities.DynamicLoggingSection, Microsoft.ResourceManagement.Service" />``
+*   Regel 8: ``<dynamicLogging mode="true" loggingLevel="Verbose" />``
+*   Regel 266: ``</system.diagnostics> ``
 
 ![De nieuwe dynamische vermeldingen in het logboek worden weergegeven in de gemarkeerde secties](media/mim-service-dynamic-logging/screen01.png)
 
@@ -53,4 +50,3 @@ De standaardlocatie voor logboekregistratie is **C:\Program Files\Microsoft Fore
 U kunt de [viewer voor servicetraceringen](https://msdn.microsoft.com//library/aa751795(v=vs.110).aspx) gebruiken om de tracering weer te geven
 
  ![Schermafbeelding van viewer voor servicetraceringen](media/mim-service-dynamic-logging/screen04.png)
-

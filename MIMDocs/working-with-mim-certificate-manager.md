@@ -12,15 +12,12 @@ ms.technology: security
 ms.assetid: 66060045-d0be-4874-914b-5926fd924ede
 ms.reviewer: mwahl
 ms.suite: ems
-ms.translationtype: MT
-ms.sourcegitcommit: 7f16c3a054f0a2c59f118ba33bf64fca10034690
 ms.openlocfilehash: 8a4582695d41ea605f2de4e336c3a780b2b2559f
-ms.contentlocale: nl-nl
-ms.lasthandoff: 07/10/2017
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 07/13/2017
 ---
-
 # Werken met MIM Certificate Manager
 <a id="working-with-the-mim-certificate-manager" class="xliff"></a>
 Wanneer MIM 2016 en Certificate Manager eenmaal actief en werkend zijn, kunt u de Windows Store-app voor MIM Certificate Manager implementeren zodat gebruikers eenvoudig hun fysieke en virtuele smartcards, en softwarecertificaten kunnen beheren. U kunt via de volgende stappen de MIM CM-app implementeren:
@@ -260,4 +257,3 @@ Wanneer u een profielsjabloon maakt, moet u deze instellen op Virtuele smartcard
 ## De app implementeren
 <a id="deploy-the-app" class="xliff"></a>
 Wanneer u de CM-app instelt, moet u in het Downloadcentrum het bestand MIMDMModernApp_&lt;versie&gt;_AnyCPU_Test.zip downloaden en alle inhoud daarvan uitpakken. Het appx-bestand is het installatieprogramma. U kunt de app implementeren zoals u normaal gesproken met [System Center Configuration Manager](https://technet.microsoft.com/library/dn613840.aspx) of [Intune](https://technet.microsoft.com/library/dn613839.aspx) Windows Store-apps implementeert. Hierbij wordt de app gesideload zodat gebruikers de bedrijfsportal moeten gebruiken om toegang te krijgen tot de app of de app wordt rechtstreeks naar de computers van de gebruikers gepusht.
-

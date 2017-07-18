@@ -12,14 +12,12 @@ ms.technology: active-directory-domain-services
 ms.assetid: cf3796f7-bc68-4cf7-b887-c5b14e855297
 ms.reviewer: mwahl
 ms.suite: ems
-ms.translationtype: MT
-ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
 ms.openlocfilehash: c227d848506a41fdd3569954961b021ca4e92d40
-ms.contentlocale: nl-nl
-ms.lasthandoff: 07/10/2017
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 07/13/2017
 ---
-
 # Privileged Access Management voor Active Directory Domain Services
 <a id="privileged-access-management-for-active-directory-domain-services" class="xliff"></a>
 Met Privileged Access Management (PAM) kunnen organisaties bevoorrechte toegang in een bestaande Active Directory-omgeving beperken.
@@ -100,4 +98,3 @@ Ervan uitgaande dat de aanvraag wordt goedgekeurd, communiceert de actiewerkstro
 > Daarentegen wordt een verlopen koppeling in real-time geëvalueerd door de Security Accounts Manager (SAM). Hoewel de toevoeging van een groepslid moet worden gerepliceerd door de domeincontroller die de toegangsaanvraag ontvangt, wordt het verwijderen van een groepslid direct geëvalueerd op een domeincontroller.
 
 Deze werkstroom is specifiek bedoeld voor deze beheerdersaccounts. Beheerders (of zelfs scripts) die alleen incidenteel toegang nodig hebben voor bevoorrechte groepen, kunnen die toegang nauwkeurig aanvragen. De aanvraag en wijzigingen in Active Directory worden in het logboek vastgelegd met MIM. U kunt ze weergeven in Logboeken of de gegevens verzenden naar de bewakingsoplossingen van de onderneming zoals System Center 2012 - Operations Manager Audit Collection Services (ACS) of andere hulpprogramma's van derden.
-
