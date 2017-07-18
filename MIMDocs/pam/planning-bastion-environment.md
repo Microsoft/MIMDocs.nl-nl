@@ -12,15 +12,12 @@ ms.technology: active-directory-domain-services
 ms.assetid: bfc7cb64-60c7-4e35-b36a-bbe73b99444b
 ms.reviewer: mwahl
 ms.suite: ems
-ms.translationtype: MT
-ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
 ms.openlocfilehash: b459906f0c8d2c631e9b63813e208c9098ea5a4e
-ms.contentlocale: nl-nl
-ms.lasthandoff: 07/10/2017
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 07/13/2017
 ---
-
 # Een bastionomgeving plannen
 <a id="planning-a-bastion-environment" class="xliff"></a>
 
@@ -273,4 +270,3 @@ Controleer de machtigingen op het object *AdminSDHolder* in de systeemcontainer 
 <a id="select-users-and-groups-for-inclusion" class="xliff"></a>
 
 De volgende stap is het definiëren van de PAM-rollen. Hierdoor koppelt u de gebruikers en groepen waartoe ze toegang moeten hebben. Dit is doorgaans een subset van de gebruikers en groepen voor de laag die waarvan in de bastionomgeving wordt aangegeven dat deze wordt beheerd. Zie [Rollen voor Privileged Access Management definiëren](defining-roles-for-pam.md) voor meer informatie.
-

@@ -12,15 +12,12 @@ ms.technology: active-directory-domain-services
 ms.assetid: c6e3cd02-1e32-4194-a8ed-3a0b3d022a43
 ms.reviewer: mwahl
 ms.suite: ems
-ms.translationtype: MT
-ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
 ms.openlocfilehash: 4c3b43e50403890572e77773191a821cf247269c
-ms.contentlocale: nl-nl
-ms.lasthandoff: 07/10/2017
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 07/13/2017
 ---
-
 # Laagmodel voor het partitioneren van beheerdersbevoegdheden
 <a id="tier-model-for-partitioning-administrative-privileges" class="xliff"></a>
 
@@ -64,4 +61,3 @@ Aanmeldingsbeperkingen kunnen worden afgedwongen met:
 - Selectieve verificatie als het account zich in een toegewezen beheerforest bevindt
 
 In het volgende artikel [Planning a bastion environment](planning-bastion-environment.md) (Een bastionomgeving plannen) wordt beschreven hoe u een toegewezen beheerforest voor Microsoft Identity Manager kunt toevoegen om beheerdersaccounts in te stellen.
-

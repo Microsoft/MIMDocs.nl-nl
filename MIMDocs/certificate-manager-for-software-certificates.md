@@ -12,15 +12,12 @@ ms.technology: security
 ms.assetid: fed5ada9-d80f-4825-aad7-4172ac5d71d3
 ms.reviewer: mwahl
 ms.suite: ems
-ms.translationtype: MT
-ms.sourcegitcommit: 7f16c3a054f0a2c59f118ba33bf64fca10034690
 ms.openlocfilehash: 274039a6866c5c0fda807e4326220ecf785ca3bb
-ms.contentlocale: nl-nl
-ms.lasthandoff: 07/10/2017
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 07/13/2017
 ---
-
 # Softwarecertificaten maken met de certificaatbeheerder
 <a id="create-software-certificates-with-certificate-manager" class="xliff"></a>
 U hoeft geen beheerder te zijn of over een virtuele smartcard te beschikken om softwarecertificaten te registreren en verlengen. Op een bepaald moment wordt u wel gevraagd toestemming te geven voor het bewerken van het certificaat. Dit is normaal.
@@ -100,4 +97,3 @@ U hoeft geen beheerder te zijn of over een virtuele smartcard te beschikken om s
 10. Als u gearchiveerde certificaten opnieuw uitgegeven wilt, schakelt u de selectievakjes links naast **Gearchiveerde certificaten opnieuw verlenen** in en klikt u op **OK**.
 
 11. Als u de CM virtuele smartcard gebruikt, moet u gegevensverzamelingsitems uitschakelen omdat de smartcard niet werkt met wanneer gegevensverzameling is ingeschakeld. Schakel gegevensverzameling voor elk beleid uit door op het beleid in het linkerdeelvenster te klikken, het selectievakje naast **Voorbeeldgegevensitem** uit te schakelen en vervolgens op **Gegevensverzamelingsitems verwijderen** te klikken. Klik vervolgens op **OK**.
-

@@ -12,15 +12,12 @@ ms.technology: security
 ms.assetid: 68df2817-2040-407d-b6d2-f46b9a9a3dbb
 ms.reviewer: mwahl
 ms.suite: ems
-ms.translationtype: MT
-ms.sourcegitcommit: 7f16c3a054f0a2c59f118ba33bf64fca10034690
 ms.openlocfilehash: df842309034ad68151dd8cc4151507e7ece6626d
-ms.contentlocale: nl-nl
-ms.lasthandoff: 07/10/2017
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 07/13/2017
 ---
-
 # Werken met hybride rapportage van Identity Manager - Openbare preview-versie (vernieuwen)
 <a id="working-with-identity-manager-hybrid-reporting---public-preview-refresh" class="xliff"></a>
 
@@ -123,4 +120,3 @@ Gebeurtenissen die worden gegenereerd door Microsoft Identity Manager, worden ge
 |--------------|------|-----------------|
 |Informatie|4121|MIM-gebeurtenisgegevens met alle aanvraaggegevens.|
 |Informatie|4137|Extensie van MIM-gebeurtenis 4121, indien er te veel gegevens zijn voor één gebeurtenis. De koptekst in deze gebeurtenis heeft de volgende notatie: `"Request: <GUID> , message <xxx> out of <xxx>`|
-

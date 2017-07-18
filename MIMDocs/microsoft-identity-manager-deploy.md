@@ -12,15 +12,12 @@ ms.technology: security
 ms.assetid: fa0af422-b5e9-4599-9d9b-cb6c18ea07f9
 ms.reviewer: mwahl
 ms.suite: ems
-ms.translationtype: MT
-ms.sourcegitcommit: 3797f5789bb4e48836eb21776dafd5a2e0e11613
 ms.openlocfilehash: fa200bb18871387420743af64ca196565397e5d5
-ms.contentlocale: nl-nl
-ms.lasthandoff: 07/10/2017
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 07/13/2017
 ---
-
 # MIM 2016 implementeren
 <a id="deploy-mim-2016" class="xliff"></a>
 In de artikelen in deze sectie vindt u stapsgewijze instructies voor het implementeren van Microsoft Identity Manager (MIM) 2016 voor selfservicescenario's voor eindgebruikers op een nieuwe server waarop niet eerder FIM of MIM is geïmplementeerd.
@@ -51,4 +48,3 @@ Nadat u het domein en de server hebt ingesteld, kunt u nu de MIM-onderdelen inst
 - [MIM-synchronisatieservice](install-mim-sync.md)
 - [MIM-service en -portal](install-mim-service-portal.md)
 - [Active Directory en de databases voor de MIM-service synchroniseren](install-mim-sync-ad-service.md)
-

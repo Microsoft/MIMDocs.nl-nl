@@ -12,15 +12,12 @@ ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: mwahl
 ms.suite: ems
-ms.translationtype: MT
-ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
 ms.openlocfilehash: 1164e7efb70d911497b08248b68f8d929bc6d3fb
-ms.contentlocale: nl-nl
-ms.lasthandoff: 07/10/2017
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 07/13/2017
 ---
-
 # Stap 1: de host en het domein CORP voorbereiden
 <a id="step-1---prepare-the-host-and-the-corp-domain" class="xliff"></a>
 
@@ -225,4 +222,3 @@ In de volgende stap bereidt de PRIV-domeincontroller voor.
 
 >[!div class="step-by-step"]
 [Stap 2 »](step-2-prepare-priv-domain-controller.md)
-

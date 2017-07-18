@@ -12,15 +12,12 @@ ms.technology: active-directory-domain-services
 ms.assetid: 479db14c-1bfb-4d7c-a344-cd718a01f328
 ms.reviewer: mwahl
 ms.suite: ems
-ms.translationtype: MT
-ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
 ms.openlocfilehash: 3e6c5a70c6b9ed140a56135676bbd14a84504317
-ms.contentlocale: nl-nl
-ms.lasthandoff: 07/10/2017
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 07/13/2017
 ---
-
 # Overzicht van de omgeving
 <a id="environment-overview" class="xliff"></a>
 
@@ -34,4 +31,3 @@ De stations waar de schijfinstallatiekopieën van de virtuele machines worden op
 
 > [!NOTE]
 > De huidige MIM Customer Technical Preview (CTP) is niet compatibel met de database of de mapinhoud van de vorige CTP. Als u eerder MIM voor PAM of andere scenario's hebt geëvalueerd, maakt u een back-up en archief van de virtuele machines die zijn gebruikt voor die test en start u de implementatie met de nieuwe installatiekopieën van virtuele machines die nog niet eerder zijn gebruikt voor MIM-scenario's.
-

@@ -11,16 +11,12 @@ ms.prod: identity-manager-2016
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 
-ms.translationtype: MT
-ms.sourcegitcommit: 1ef7b9816d265d17ef68fc54e010e655535dcdc8
 ms.openlocfilehash: 0a5a3f28af58dd59ab805f2836ffeb88f3508ae0
-ms.contentlocale: nl-nl
-ms.lasthandoff: 07/10/2017
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 07/13/2017
 ---
-
-
 # Wachtwoordbeheer voor Microsoft Identity Manager 2016
 <a id="microsoft-identity-manager-2016-password-management" class="xliff"></a>
 
@@ -179,4 +175,3 @@ In MIM worden tijdens de installatie twee beveiligingsgroepen gemaakt die specif
 -   FIMSyncBrowse: leden van deze groep hebben toestemming informatie over de accounts van een gebruiker te verzamelen bij het uitvoeren van zoekbewerkingen met WMI-query's.
 
 -   FIMSyncPasswordSet: leden van deze groep hebben toestemming in accounts te zoeken, wachtwoorden in te stellen en wachtwoorden te wijzigen met de wachtwoordbeheerinterfaces in combinatie met WMI.
-
