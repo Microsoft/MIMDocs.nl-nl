@@ -8,8 +8,7 @@ ms.translationtype: HT
 ms.contentlocale: nl-NL
 ms.lasthandoff: 07/13/2017
 ---
-# Documentatie voor Microsoft Identity Manager
-<a id="microsoft-identity-manager-documentation" class="xliff"></a>
+# <a name="microsoft-identity-manager-documentation"></a>Documentatie voor Microsoft Identity Manager
 
 Microsoft Identity Manager 2016 verbindt de Identity & Access Management-oplossingen van Microsoft via naadloze overbrugging van meerdere on-premises verificatiearchieven zoals Active Directory, LDAP, Oracle en andere toepassingen met Azure Active Directory. Zo kunt u profiteren van een consistente ervaring voor on-premises LOB-toepassingen en SaaS-oplossingen.
 
