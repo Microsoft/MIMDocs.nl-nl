@@ -18,12 +18,10 @@ ms.translationtype: MT
 ms.contentlocale: nl-NL
 ms.lasthandoff: 07/13/2017
 ---
-# Softwarecertificaten maken met de certificaatbeheerder
-<a id="create-software-certificates-with-certificate-manager" class="xliff"></a>
+# <a name="create-software-certificates-with-certificate-manager"></a>Softwarecertificaten maken met de certificaatbeheerder
 U hoeft geen beheerder te zijn of over een virtuele smartcard te beschikken om softwarecertificaten te registreren en verlengen. Op een bepaald moment wordt u wel gevraagd toestemming te geven voor het bewerken van het certificaat. Dit is normaal.
 
-## Een profielsjabloon van een softwarecertificaat maken in MIM 2016 Certificate Manager
-<a id="create-a-software-certificate-profile-template-in-mim-2016-certificate-manager" class="xliff"></a>
+## <a name="create-a-software-certificate-profile-template-in-mim-2016-certificate-manager"></a>Een profielsjabloon van een softwarecertificaat maken in MIM 2016 Certificate Manager
 
 1.  Maak een sjabloon voor het certificaat dat u wilt aanvragen voor de virtuele smartcard. Open MMC.
 
@@ -73,8 +71,7 @@ U hoeft geen beheerder te zijn of over een virtuele smartcard te beschikken om s
 
     10. Selecteer in de lijst de nieuwe sjabloon die u zojuist hebt gemaakt (**Gearchiveerde certificaatsjabloon**) en klik vervolgens op **OK**.
 
-## Het profielsjabloon maken
-<a id="create-the-profile-template" class="xliff"></a>
+## <a name="create-the-profile-template"></a>Het profielsjabloon maken
 
 1.  Meld u bij de CM-portal aan als gebruiker met beheerdersbevoegdheden.
 

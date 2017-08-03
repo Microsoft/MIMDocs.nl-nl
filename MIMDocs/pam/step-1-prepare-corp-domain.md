@@ -18,8 +18,7 @@ ms.translationtype: MT
 ms.contentlocale: nl-NL
 ms.lasthandoff: 07/13/2017
 ---
-# Stap 1: de host en het domein CORP voorbereiden
-<a id="step-1---prepare-the-host-and-the-corp-domain" class="xliff"></a>
+# <a name="step-1---prepare-the-host-and-the-corp-domain"></a>Stap 1: de host en het domein CORP voorbereiden
 
 >[!div class="step-by-step"]
 [Stap 2 »](step-2-prepare-priv-domain-controller.md)
@@ -29,13 +28,11 @@ In deze stap bereidt u het hosten van de bastionomgeving voor. Indien nodig, maa
 
 Als u al een bestaand Active Directory-domein (AD) met een domeincontroller met Windows Server 2012 R2 of hoger hebt waarvan u een domeinbeheerder bent, kunt u dat domein gebruiken.  
 
-## De CORP-domeincontroller voorbereiden
-<a id="prepare-the-corp-domain-controller" class="xliff"></a>
+## <a name="prepare-the-corp-domain-controller"></a>De CORP-domeincontroller voorbereiden
 
 In dit gedeelte wordt beschreven hoe u een domeincontroller voor een CORP-domein instelt. In het CORP-domein worden de gebruikers met beheerdersrechten beheerd door de bastionomgeving. De naam van de Domain Name System (DNS) van het CORP-domein dat in dit voorbeeld wordt gebruikt is *contoso.local*.
 
-### Windows Server installeren
-<a id="install-windows-server" class="xliff"></a>
+### <a name="install-windows-server"></a>Windows Server installeren
 
 Installeer Windows Server 2012 R2 of Windows Server 2016 Technical Preview 4 of hoger op een virtuele machine om een computer te maken met de naam *CORPDC*.
 
@@ -49,8 +46,7 @@ Installeer Windows Server 2012 R2 of Windows Server 2016 Technical Preview 4 of 
 
 5. Nadat de server opnieuw is opgestart, moet u zich aanmelden als een beheerder. Ga naar Configuratiescherm. Configureer de computer om te controleren op updates en installeer alle vereiste updates. Start de server opnieuw op.
 
-### Functies toevoegen voor het maken van een domeincontroller
-<a id="add-roles-to-establish-a-domain-controller" class="xliff"></a>
+### <a name="add-roles-to-establish-a-domain-controller"></a>Functies toevoegen voor het maken van een domeincontroller
 
 In dit gedeelte voegt u de functies Active Directory Domain Services (AD DS), DNS-server en bestandsserver (onderdeel van het gedeelte bestands- en opslagservices) toe en verhoogt u deze server naar een domeincontroller in een nieuw forest contoso.local.
 
@@ -75,8 +71,7 @@ In dit gedeelte voegt u de functies Active Directory Domain Services (AD DS), DN
 
 4. Wanneer de server opnieuw is opgestart, meldt u zich aan bij CORPDC als beheerder van het domein. Dit is doorgaans de gebruiker CONTOSO\\-beheerder, die het wachtwoord heeft dat is gemaakt bij het installeren van Windows op CORPDC.
 
-### Een groep maken
-<a id="create-a-group" class="xliff"></a>
+### <a name="create-a-group"></a>Een groep maken
 
 Een groep maken voor controledoeleinden door Active Directory, als deze groep nog niet bestaat. De naam van de groep moet de NetBIOS-domeinnaam zijn, gevolgd door drie dollartekens, bijvoorbeeld *CONTOSO$$$*.
 
@@ -94,8 +89,7 @@ Meld u bij elk domein aan bij een domeincontroller als een domeinbeheerder en vo
 
 In sommige gevallen kan deze groep al bestaan. Dit normaal als het domein ook in AD-migratiescenario's is gebruikt.
 
-### Extra gebruikers en groepen maken voor demonstratiedoeleinden
-<a id="create-additional-users-and-groups-for-demonstration-purposes" class="xliff"></a>
+### <a name="create-additional-users-and-groups-for-demonstration-purposes"></a>Extra gebruikers en groepen maken voor demonstratiedoeleinden
 
 Als u een nieuw CORP-domein hebt gemaakt, moet u vervolgens extra gebruikers en groepen maken om het PAM-scenario te kunnen demonstreren. De gebruiker en groep voor demonstratiedoeleinden mogen geen domeinbeheerders zijn of worden beheerd door de instellingen van de adminSDHolder in AD.
 
@@ -124,8 +118,7 @@ Maak een beveiligingsgroep met de naam *CorpAdmins* en een gebruiker met de naam
   Set-ADUser –identity Jen –Enabled 1 -DisplayName "Jen"
   ```
 
-### Controle configureren
-<a id="configure-auditing" class="xliff"></a>
+### <a name="configure-auditing"></a>Controle configureren
 
 U moet controle van bestaande forests inschakelen om de PAM-configuratie op die forests tot stand te brengen.  
 
@@ -153,8 +146,7 @@ Meld u bij elk domein aan bij een domeincontroller als een domeinbeheerder en vo
 
 Het bericht **Het bijwerken van het computerbeleid is voltooid** zou na een paar minuten moeten worden weergegeven.
 
-### Registerinstellingen configureren
-<a id="configure-registry-settings" class="xliff"></a>
+### <a name="configure-registry-settings"></a>Registerinstellingen configureren
 
 In dit gedeelte configureert u de registerinstellingen die nodig zijn voor sIDHistory-migratie, die wordt gebruikt voor het maken van de Privileged Access Management-groep.
 
@@ -170,16 +162,14 @@ In dit gedeelte configureert u de registerinstellingen die nodig zijn voor sIDHi
 
 Hierdoor wordt de domeincontroller opnieuw gestart. Zie voor meer informatie over deze registerinstelling [How to troubleshoot inter-forest sIDHistory migration with ADMTv2](http://support.microsoft.com/kb/322970) (Problemen oplossen met sIDHistory-migratie met ADMTv2 tussen forests).
 
-## Een CORP-werkstation en -resource voorbereiden
-<a id="prepare-a-corp-workstation-and-resource" class="xliff"></a>
+## <a name="prepare-a-corp-workstation-and-resource"></a>Een CORP-werkstation en -resource voorbereiden
 
 Als u nog geen werkstationcomputer hebt toegevoegd aan het domein, volgt u deze instructies om een werkstationcomputer voor te bereiden.  
 
 > [!NOTE]
 > Als u al een werkstation hebt toegevoegd aan het domein, gaat u naar [Een resource maken voor demonstratiedoeleinden](#create-a-resource-for-demonstration-purposes).
 
-### Windows 8.1 of Windows 10 Enterprise als een VM installeren
-<a id="install-windows-81-or-windows-10-enterprise-as-a-vm" class="xliff"></a>
+### <a name="install-windows-81-or-windows-10-enterprise-as-a-vm"></a>Windows 8.1 of Windows 10 Enterprise als een VM installeren
 
 Installeer Windows 8.1 Enterprise of Windows 10 Enterprise op een andere nieuwe virtuele machine waarop geen software is geïnstalleerd om een computer *CORPWKSTN* te maken.
 
@@ -191,8 +181,7 @@ Installeer Windows 8.1 Enterprise of Windows 10 Enterprise op een andere nieuwe 
 
 4. Stel via Configuratiescherm de domeindeelname van de computer CORPWKSTN in op het domein contoso.local. U moet de beheerdersreferenties voor het Contoso-domein opgeven. Wanneer dit is voltooid, start u de computer CORPWKSTN opnieuw op.
 
-### Een resource voor demonstratiedoeleinden maken
-<a id="create-a-resource-for-demonstration-purposes" class="xliff"></a>
+### <a name="create-a-resource-for-demonstration-purposes"></a>Een resource voor demonstratiedoeleinden maken
 
 U hebt een resource nodig om het toegangsbeheer op basis van een beveiligingsgroep met PAM te demonstreren.  Als u nog geen resource hebt, kunt u een bestandsmap gebruiken voor de demonstratie.  Dit maakt gebruik van de AD-objecten 'Jen' en 'CorpAdmins' die u hebt gemaakt in het domein contoso.local.
 

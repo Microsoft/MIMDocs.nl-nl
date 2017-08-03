@@ -19,6 +19,5 @@ ms.translationtype: MT
 ms.contentlocale: nl-NL
 ms.lasthandoff: 07/13/2017
 ---
-# Releaseopmerkingen voor MIM 2016
-<a id="release-notes-for-mim-2016" class="xliff"></a>
+# <a name="release-notes-for-mim-2016"></a>Releaseopmerkingen voor MIM 2016
 Er zijn op dit moment geen releaseopmerkingen.

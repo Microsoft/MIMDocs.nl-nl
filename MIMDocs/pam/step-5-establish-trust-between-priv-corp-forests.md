@@ -18,8 +18,7 @@ ms.translationtype: MT
 ms.contentlocale: nl-NL
 ms.lasthandoff: 07/13/2017
 ---
-# Stap 5 –Een vertrouwensrelatie tussen het PRIV- en CORP-forest instellen
-<a id="step-5--establish-trust-between-priv-and-corp-forests" class="xliff"></a>
+# <a name="step-5--establish-trust-between-priv-and-corp-forests"></a>Stap 5 –Een vertrouwensrelatie tussen het PRIV- en CORP-forest instellen
 
 >[!div class="step-by-step"]
 [« Stap 4](step-4-install-mim-components-on-pam-server.md)
@@ -28,8 +27,7 @@ ms.lasthandoff: 07/13/2017
 
 Voor elk CORP-domein, zoals contoso.local, moet voor de PRIV- en CONTOSO-domeincontrollers een vertrouwensrelatie zijn ingesteld. Hiermee hebben gebruikers in het PRIV-domein toegang tot resources op het CORP-domein.
 
-## Elke domeincontroller verbinden met het bijbehorende equivalent
-<a id="connect-each-domain-controller-to-its-counterpart" class="xliff"></a>
+## <a name="connect-each-domain-controller-to-its-counterpart"></a>Elke domeincontroller verbinden met het bijbehorende equivalent
 
 Voordat een vertrouwensrelatie tot stand kan worden gebracht, moet elke domeincontroller worden geconfigureerd voor DNS-naamomzetting voor het bijbehorende equivalent op basis van het IP-adres van de domeincontroller/DNS-server.
 
@@ -47,8 +45,7 @@ Voordat een vertrouwensrelatie tot stand kan worden gebracht, moet elke domeinco
 
     ![bestandsstructuur voor priv-sleutel - schermafbeelding](./media/PAM_GS_DNS_Manager.png)
 
-## Vertrouwensrelatie op PAMSRV instellen
-<a id="establish-trust-on-pamsrv" class="xliff"></a>
+## <a name="establish-trust-on-pamsrv"></a>Vertrouwensrelatie op PAMSRV instellen
 
 Op PAMSRV moet u een eenzijdige vertrouwensrelatie met elk domein, zoals CORPDC, instellen zodat de CORP-domeincontrollers het PRIV-forest vertrouwen.
 
@@ -70,8 +67,7 @@ Op PAMSRV moet u een eenzijdige vertrouwensrelatie met elk domein, zoals CORPDC,
     New-PAMDomainConfiguration -SourceDomain "contoso" -Credentials $ca
     ```
 
-## Forests leestoegang tot Active Directory geven
-<a id="give-forests-read-access-to-active-directory" class="xliff"></a>
+## <a name="give-forests-read-access-to-active-directory"></a>Forests leestoegang tot Active Directory geven
 
 Voor elk bestaand forest moet u voor PRIV-beheerders en de controleservice leestoegang tot AD inschakelen.
 
@@ -94,8 +90,7 @@ Voor elk bestaand forest moet u voor PRIV-beheerders en de controleservice leest
 
     Ook moet **Filteren op SID's is niet ingeschakeld voor deze vertrouwensrelatie** worden weergegeven in de uitvoer. Zie [Disable SID filter quarantining](http://technet.microsoft.com/library/cc772816.aspx) (In quarantaine plaatsen voor SID-filters uitschakelen) voor meer informatie.
 
-## De services voor controle en onderdelen starten
-<a id="start-the-monitoring-and-component-services" class="xliff"></a>
+## <a name="start-the-monitoring-and-component-services"></a>De services voor controle en onderdelen starten
 
 1.  Meld u aan bij PAMSRV als een PRIV-domeinbeheerder (PRIV\Administrator).
 

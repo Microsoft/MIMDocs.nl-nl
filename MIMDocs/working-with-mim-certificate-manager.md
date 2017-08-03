@@ -18,8 +18,7 @@ ms.translationtype: MT
 ms.contentlocale: nl-NL
 ms.lasthandoff: 07/13/2017
 ---
-# Werken met MIM Certificate Manager
-<a id="working-with-the-mim-certificate-manager" class="xliff"></a>
+# <a name="working-with-the-mim-certificate-manager"></a>Werken met MIM Certificate Manager
 Wanneer MIM 2016 en Certificate Manager eenmaal actief en werkend zijn, kunt u de Windows Store-app voor MIM Certificate Manager implementeren zodat gebruikers eenvoudig hun fysieke en virtuele smartcards, en softwarecertificaten kunnen beheren. U kunt via de volgende stappen de MIM CM-app implementeren:
 
 1.  Maak een certificaatsjabloon.
@@ -30,8 +29,7 @@ Wanneer MIM 2016 en Certificate Manager eenmaal actief en werkend zijn, kunt u d
 
 4.  Implementeer de app via SCCM of Intune.
 
-## Een certificaatsjabloon maken
-<a id="create-a-certificate-template" class="xliff"></a>
+## <a name="create-a-certificate-template"></a>Een certificaatsjabloon maken
 U maakt een certificaatsjabloon voor de CM-app op dezelfde manier als u normaal gesproken doet, alleen moet u ervoor zorgen dat de certificaatsjabloon versie 3 of hoger heeft.
 
 1.  Meld u aan bij de server waarop AD CS (de certificaatserver) wordt uitgevoerd.
@@ -70,8 +68,7 @@ U maakt een certificaatsjabloon voor de CM-app op dezelfde manier als u normaal 
 
 16. Selecteer in de lijst de nieuwe sjabloon die u hebt gemaakt en klik op **OK**.
 
-## Een profielsjabloon maken
-<a id="create-a-profile-template" class="xliff"></a>
+## <a name="create-a-profile-template"></a>Een profielsjabloon maken
 Wanneer u een profielsjabloon maakt, moet u deze instellen op Virtuele smartcard maken/verwijderen en op Gegevensverzameling verwijderen. De CM-app kan geen verzamelde gegevens verwerken, dus is het belangrijk dat u deze optie als volgt uitschakelt.
 
 1.  Meld u bij de CM-portal aan als gebruiker met beheerdersbevoegdheden.
@@ -96,8 +93,7 @@ Wanneer u een profielsjabloon maakt, moet u deze instellen op Virtuele smartcard
 
 11. U moet gegevensverzamelingsitems voor elk beleid uitschakelen door op het beleid in het linkerdeelvenster te klikken, het selectievakje naast **Voorbeeldgegevensitem** in te schakelen en vervolgens op **Gegevensverzamelingsitems verwijderen** te klikken. Klik vervolgens op **OK**.
 
-## De CM-app voor de implementatie voorbereiden
-<a id="prepare-the-cm-app-for-deployment" class="xliff"></a>
+## <a name="prepare-the-cm-app-for-deployment"></a>De CM-app voor de implementatie voorbereiden
 
 1.  Voer in het opdrachtpromptvenster de volgende opdracht uit om de app uit te pakken en de inhoud in een nieuwe submap met de naam appx te plaatsen en om een kopie te maken zodat u het oorspronkelijke bestand niet wijzigt.
 
@@ -254,6 +250,5 @@ Wanneer u een profielsjabloon maakt, moet u deze instellen op Virtuele smartcard
 
     -   Voor ondersteuning bij het script **ConfigureMIimCMClientAndRelyingParty.ps1** voert u de opdracht `get-help  -detailed ConfigureMimCMClientAndRelyingParty.ps1` uit.
 
-## De app implementeren
-<a id="deploy-the-app" class="xliff"></a>
+## <a name="deploy-the-app"></a>De app implementeren
 Wanneer u de CM-app instelt, moet u in het Downloadcentrum het bestand MIMDMModernApp_&lt;versie&gt;_AnyCPU_Test.zip downloaden en alle inhoud daarvan uitpakken. Het appx-bestand is het installatieprogramma. U kunt de app implementeren zoals u normaal gesproken met [System Center Configuration Manager](https://technet.microsoft.com/library/dn613840.aspx) of [Intune](https://technet.microsoft.com/library/dn613839.aspx) Windows Store-apps implementeert. Hierbij wordt de app gesideload zodat gebruikers de bedrijfsportal moeten gebruiken om toegang te krijgen tot de app of de app wordt rechtstreeks naar de computers van de gebruikers gepusht.

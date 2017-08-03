@@ -18,8 +18,7 @@ ms.translationtype: MT
 ms.contentlocale: nl-NL
 ms.lasthandoff: 07/13/2017
 ---
-# Stap 8 Verificatie van PAM-implementatie
-<a id="step-8-pam-deployment-verification" class="xliff"></a>
+# <a name="step-8-pam-deployment-verification"></a>Stap 8 Verificatie van PAM-implementatie
 
 >[!div class="step-by-step"]
 [« Stap 7](sp1-step7-setup-sidhistory-sidfiltering.md)

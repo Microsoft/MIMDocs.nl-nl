@@ -18,11 +18,9 @@ ms.translationtype: MT
 ms.contentlocale: nl-NL
 ms.lasthandoff: 07/13/2017
 ---
-# Werken met hybride rapportage van Identity Manager - Openbare preview-versie (vernieuwen)
-<a id="working-with-identity-manager-hybrid-reporting---public-preview-refresh" class="xliff"></a>
+# <a name="working-with-identity-manager-hybrid-reporting---public-preview-refresh"></a>Werken met hybride rapportage van Identity Manager - Openbare preview-versie (vernieuwen)
 
-## Beschikbare hybride rapporten
-<a id="available-hybrid-reports" class="xliff"></a>
+## <a name="available-hybrid-reports"></a>Beschikbare hybride rapporten
 De eerste drie MIM-rapporten (Microsoft Identity Manager) die beschikbaar zijn in Azure AD, zijn **Activiteit voor wachtwoord opnieuw instellen**, **Registratie voor wachtwoord opnieuw instellen** en **Activiteit voor selfservicegroepen**.
 
 -   In Activiteit voor wachtwoord opnieuw instellen wordt elke instantie weergegeven waarbij een gebruiker de bewerking voor het opnieuw instellen van het wachtwoord heeft uitgevoerd met behulp van de SSPR en worden de poorten of **methoden** vermeld die worden gebruikt voor verificatie.
@@ -39,8 +37,7 @@ De eerste drie MIM-rapporten (Microsoft Identity Manager) die beschikbaar zijn i
 > De vorige hybride-agent moet worden verwijderd</br>
 > Als u hybride rapporten wilt verwijderen, verwijdert u de agent MIMreportingAgent.msi.
 
-## Vereisten
-<a id="prerequisites" class="xliff"></a>
+## <a name="prerequisites"></a>Vereisten
 
 1.  Installeer Microsoft Identity Manager 2016 RTM /of SP1 MIM-service.
 
@@ -48,8 +45,7 @@ De eerste drie MIM-rapporten (Microsoft Identity Manager) die beschikbaar zijn i
 
 3.  Zorg ervoor dat u beschikt over een uitgaande internetverbinding vanaf de Microsoft Identity Manager-server naar Azure.
 
-## Vereisten
-<a id="requirements" class="xliff"></a>
+## <a name="requirements"></a>Vereisten
 De volgende tabel bevat een lijst met alle vereisten voor hybride rapportage Microsoft Identity Manager.
 
 | Vereiste | Beschrijving |
@@ -64,8 +60,7 @@ De volgende tabel bevat een lijst met alle vereisten voor hybride rapportage Mic
 | De volgende websites moeten zijn toegestaan als verbeterde beveiliging van Internet Explorer is ingeschakeld |Als verbeterde beveiliging van Internet Explorer is ingeschakeld, moeten de volgende websites worden toegestaan op de server waarop u de agent wilt installeren.</br></br><li>https://login.microsoftonline.com</li><li>https://secure.aadcdn.microsoftonline-p.com</li><li>https://login.windows.net</li><li>De federatieve server voor uw organisatie die wordt vertrouwd door Azure Active Directory. Bijvoorbeeld: https://sts.contoso.com</li> |
 </BR>
 
-## Installeer de Microsoft Identity Manager-rapportageagent in Azure AD
-<a id="install-microsoft-identity-manager-reporting-agent-in-azure-ad" class="xliff"></a>
+## <a name="install-microsoft-identity-manager-reporting-agent-in-azure-ad"></a>Installeer de Microsoft Identity Manager-rapportageagent in Azure AD
 Nadat de rapportageagent is geïnstalleerd worden de gegevens van de Microsoft Identity Manager-activiteit uit MIM geëxporteerd naar het Windows-gebeurtenislogboek. De MIM-reportageagent verwerkt de gebeurtenissen en uploadt deze naar Azure. In Azure worden de gebeurtenissen geparseerd, ontsleuteld en gefilterd voor de vereiste rapporten.
 
 1.  Installeer Microsoft Identity Manager 2016.
@@ -92,8 +87,7 @@ Nadat de rapportageagent is geïnstalleerd worden de gegevens van de Microsoft I
 
     U kunt rapportgegevens maken met behulp van de Microsoft Identity Manager-selfservice portal voor wachtwoord opnieuw instellen om het wachtwoord van een gebruiker opnieuw in te stellen. Zorg ervoor dat het opnieuw instellen van het wachtwoord is voltooid en controleer vervolgens of de gegevens worden weergegeven in de Azure AD-beheerportal.
 
-## Hybride rapporten weergeven in Azure Portal
-<a id="view-hybrid-reports-in-the-azure-portal" class="xliff"></a>
+## <a name="view-hybrid-reports-in-the-azure-portal"></a>Hybride rapporten weergeven in Azure Portal
 
 1.  Meld u met uw globale beheerdersaccount voor de tenant aan bij [Azure Portal](https://portal.azure.com/).
 
@@ -108,12 +102,10 @@ Nadat de rapportageagent is geïnstalleerd worden de gegevens van de Microsoft I
 > [!WARNING]
 > Het kan enige tijd duren voordat controlegegevens van Microsoft Identity Manager worden weergegeven in Azure Portal.
 
-## Stoppen met het maken van hybride rapporten
-<a id="stop-creating-hybrid-reports" class="xliff"></a>
+## <a name="stop-creating-hybrid-reports"></a>Stoppen met het maken van hybride rapporten
 Als u wilt stoppen met het uploaden van controlegegevens van Microsoft Identity Manager naar Azure Active Directory, verwijdert u de agent voor hybride rapportage. Gebruik het Windows-hulpprogramma **Programma's installeren of verwijderen** om hybride rapportage van Microsoft Identity Manager te verwijderen.
 
-## Windows-gebeurtenissen die worden gebruikt voor hybride rapportage
-<a id="windows-events-used-for-hybrid-reporting" class="xliff"></a>
+## <a name="windows-events-used-for-hybrid-reporting"></a>Windows-gebeurtenissen die worden gebruikt voor hybride rapportage
 Gebeurtenissen die worden gegenereerd door Microsoft Identity Manager, worden geregistreerd in het Windows-gebeurtenislogboek en zijn zichtbaar in Logboeken bij Logboeken voor toepassingen en services-&gt; **Logboek Identity Manager-aanvragen**. Elke MIM-aanvraag wordt geëxporteerd als een gebeurtenis in het Windows-gebeurtenislogboek in JSON-structuur. Dit kan worden geëxporteerd naar uw SIEM.
 
 |Gebeurtenistype|ID|Details van gebeurtenis|

@@ -18,8 +18,7 @@ ms.translationtype: MT
 ms.contentlocale: nl-NL
 ms.lasthandoff: 07/13/2017
 ---
-# Stap 1 Het privédomein configureren
-<a id="step-1-configuring-the-priv-domain" class="xliff"></a>
+# <a name="step-1-configuring-the-priv-domain"></a>Stap 1 Het privédomein configureren
 
 >[!div class="step-by-step"]
 [Stap 2 »](sp1-step2-configuring-corp-domain.md)

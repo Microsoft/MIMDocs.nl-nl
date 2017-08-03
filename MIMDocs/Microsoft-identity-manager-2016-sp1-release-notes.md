@@ -18,8 +18,7 @@ ms.translationtype: MT
 ms.contentlocale: nl-NL
 ms.lasthandoff: 07/13/2017
 ---
-# Nieuw in Microsoft Identity Manager 2016 Service Pack 1
-<a id="whats-new-for-microsoft-identity-manager-2016-service-pack-1" class="xliff"></a> #
+# <a name="whats-new-for-microsoft-identity-manager-2016-service-pack-1"></a>Nieuw in Microsoft Identity Manager 2016 Service Pack 1 #
 
 Als onderdeel van de standaardreleasecyclus voor de service en het bijwerken van Microsoft Identity Manager hebben we [Microsoft Identity Manager (MIM) 2016 servicepack 1 (SP1)](https://msdn.microsoft.com/subscriptions/downloads/?fileid=70212#searchTerm=&Languages=en&PageSize=10&PageIndex=0&FileId=70212) uitgebracht. Dit document geeft een overzicht van de updates, verbeteringen, functies en wijzigingen die zijn opgenomen in deze release.
 
@@ -29,11 +28,9 @@ We stellen uw feedback op prijs. Feedback of opmerkingen voor het productteam ku
 
 
 
-## Updates in dit servicepack
-<a id="updates-in-this-service-pack" class="xliff"></a> #
+## <a name="updates-in-this-service-pack"></a>Updates in dit servicepack #
 
-### MIM
-<a id="mim" class="xliff"></a>
+### <a name="mim"></a>MIM
 
 - **Compatibiliteit van MIM-portal met meerdere browsers voor selfservice voor eindgebruikers:** met dit servicepack introduceren we ondersteuning voor de meest belangrijke browsers. Gebruikers hebben nu toegang tot en kunnen communiceren met de MIM-portal voor selfservice groeps- en profielbeheer vanuit Microsoft Edge, Chrome en Safari.
 
@@ -41,8 +38,7 @@ We stellen uw feedback op prijs. Feedback of opmerkingen voor het productteam ku
 
 - **Validatie van bestandsindeling van afbeeldingen:** MIM kan de bestandsindeling van afbeeldingen controleren wanneer deze naar de portal worden geüpload.
 
-### Privileged Access Management (PAM) gebruiken
-<a id="privileged-access-managementpam" class="xliff"></a>
+### <a name="privileged-access-managementpam"></a>Privileged Access Management (PAM) gebruiken
 
 - **PAM PRIV (bastionhost) forestondersteuning voor het Windows Server 2016-functionaliteitsniveau:** de MIM PAM-service kan worden geconfigureerd in een omgeving met domeincontrollers die worden uitgevoerd op het functionele Active Directory Domain Services-forestniveau van Windows Server 2016. Als dit is geconfigureerd, wordt voor een Kerberos-ticket van een gebruiker een tijdslimiet ingesteld voor de resterende tijd van de activatie van de rol.
 
@@ -59,21 +55,17 @@ We stellen uw feedback op prijs. Feedback of opmerkingen voor het productteam ku
     Deze cmdlets worden automatisch uitgevoerd als onderdeel van de implementatiescripts.
 
 
-## Platformondersteuning
-<a id="platform-support" class="xliff"></a>
+## <a name="platform-support"></a>Platformondersteuning
 Informatie over bijgewerkte platformondersteuning vindt u in het document met de naam [Ondersteunde platformen voor MIM 2016](microsoft-identity-manager-2016-supported-platforms.md).  Nieuwe ondersteunde platformen in dit servicepack, waaronder SQL Server 2016 en SharePoint 2016
 
-## In deze release zijn problemen met de algemene beschikbaarheid van MIM 2016 opgelost
-<a id="issues-fixed-in-this-release-from-mim-2016-general-availability" class="xliff"></a>
+## <a name="issues-fixed-in-this-release-from-mim-2016-general-availability"></a>In deze release zijn problemen met de algemene beschikbaarheid van MIM 2016 opgelost
 
-### PAM
-<a id="pam" class="xliff"></a>
+### <a name="pam"></a>PAM
 - Nieuwe PAMGroup heeft geen MIM-objecten voor lokale domeingroepen gemaakt in het PRIV-forest
 - Nieuwe PAMDomainConfiguration mislukt met een netdom-foutbericht
 - PAM-controleservice heeft waarschuwingen voor groepen in het PRIV-forest vastgelegd
 
-## Bijwerken naar Service Pack 1
-<a id="how-to-upgrade-to-service-pack-1" class="xliff"></a>
+## <a name="how-to-upgrade-to-service-pack-1"></a>Bijwerken naar Service Pack 1
 
 Klanten die een upgrade naar Microsoft Identity Manager 2016 Service Pack 1 willen uitvoeren, moeten de onderstaande instructies volgen voor alle services die van toepassing zijn op hun implementatie.
 

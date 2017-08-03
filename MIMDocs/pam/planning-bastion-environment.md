@@ -18,8 +18,7 @@ ms.translationtype: MT
 ms.contentlocale: nl-NL
 ms.lasthandoff: 07/13/2017
 ---
-# Een bastionomgeving plannen
-<a id="planning-a-bastion-environment" class="xliff"></a>
+# <a name="planning-a-bastion-environment"></a>Een bastionomgeving plannen
 
 Door het toevoegen van een bastionomgeving met een specifiek beheerforest aan Active Directory kunnen organisaties gemakkelijk beheerdersaccounts, werkstations en groepen beheren in een omgeving die sterkere beveiligingsmechanismen heeft dan hun bestaande productieomgeving.
 
@@ -27,29 +26,25 @@ Deze architectuur maakt een aantal besturingselementen mogelijk die in een archi
 
 Naast het toegewezen beheerforest kunnen aanvullende technieken worden gebruikt. Hieronder vallen het beperken van blootstelling van beheerdersreferenties, hete beperken van rolbevoegdheden van gebruikers in die forest en het waarborgen dat administratieve taken niet worden uitgevoerd op hosts die worden gebruikt voor standaard gebruikersactiviteiten (bijvoorbeeld e-mailen en surfen op internet).
 
-## Aandachtspunten voor best practices
-<a id="best-practice-considerations" class="xliff"></a>
+## <a name="best-practice-considerations"></a>Aandachtspunten voor best practices
 
 Een toegewezen beheerforest is een standaard Active Directory-forest met één domein dat wordt gebruikt voor Active Directory-beheer. Beheerforests en -domeinen bieden het voordeel dat er vanwege hun beperkte gebruiksmogelijkheden meer beveiligingsmaatregelen mogelijk zijn dan op productieforests. Omdat het forest is gescheiden en bestaande forests van de organisatie niet vertrouwt, kan een beveiligingsinbreuk in een ander forest zich bovendien niet uitbreiden naar het toegewezen forest.
 
 Bij het ontwerp van een beheerforest moet u rekening houden met het volgende:
 
-### Beperkt bereik
-<a id="limited-scope" class="xliff"></a>
+### <a name="limited-scope"></a>Beperkt bereik
 
 De waarde van een beheerforest ligt in de hoge mate van beveiligingscontrole en de verminderde kwetsbaarheid voor aanvallen. Het forest kan aanvullende beheerfuncties en -toepassingen bevatten. Elke aanvulling vergroot echter de kwetsbaarheid voor aanvallen van het forest en de daarbij behorende resources. Het doel is om de functies van het forest te beperken om de kwetsbaarheid te minimaliseren.
 
 Volgens het [lagenmodel](tier-model-for-partitioning-administrative-privileges.md) van het partitioneren van beheerdersbevoegdheden, moeten de accounts in een specifieke beheerforest zich op één laag bevinden, doorgaans laag 0 of laag 1. Als een forest zich in laag 1 bevindt, beperk deze dan tot een specifiek toepassingsgebied (bijvoorbeeld apps voor de financiële afdeling) of gebruikersgemeenschap (bijvoorbeeld externe IT-leveranciers).
 
-### Beperkt vertrouwen
-<a id="restricted-trust" class="xliff"></a>
+### <a name="restricted-trust"></a>Beperkt vertrouwen
 
 Het productieforest *CORP* moet het beheerforest *PRIV* vertrouwen, maar niet andersom. Dit kan een domeinvertrouwen of een forestvertrouwensrelatie zijn. Het beheersforestdomein hoeft de beheerde domeinen en forests niet te vertrouwen om de Active Directory te beheren. Voor aanvullende toepassingen is mogelijk wel een wederzijdse vertrouwensrelatie, beveiligingsvalidatie en test vereist.
 
 Selectieve verificatie moet worden gebruikt om ervoor te zorgen dat accounts in het beheerforest alleen de juiste productiehosts gebruiken. Voor het onderhoud van domeincontrollers en het delegeren van rechten in Active Directory, is doorgaans het toekennen van het recht 'Allowed to logon' (Aanmelden toegestaan) vereist voor domeincontrollers in aangewezen beheerdersaccounts in laag 0 van het beheerforest. Zie [Configuring Selective Authentication Settings](http://technet.microsoft.com/library/cc816580.aspx) (Selectieve verificatie-instellingen configureren) voor meer informatie.
 
-## Logische scheiding behouden
-<a id="maintain-logical-separation" class="xliff"></a>
+## <a name="maintain-logical-separation"></a>Logische scheiding behouden
 
 Als u wilt voorkomen dat de bastionomgeving wordt beïnvloed door bestaande of toekomstige beveiligingsincidenten in de Active Directory van de organisatie, moet u de volgende richtlijnen gebruiken wanneer u systemen voorbereid voor de bastionomgeving:
 
@@ -65,8 +60,7 @@ Als u wilt voorkomen dat de bastionomgeving wordt beïnvloed door bestaande of t
 
 - Gebruikers die de bastionomgevingservers beheren, moeten zich aanmelden vanaf werkstations die niet toegankelijk zijn voor beheerders in de bestaande omgeving, zodat de referenties voor de bastionomgeving niet kunnen worden gelekt.
 
-## Beschikbaarheid van beheerservices waarborgen
-<a id="ensure-availability-of-administration-services" class="xliff"></a>
+## <a name="ensure-availability-of-administration-services"></a>Beschikbaarheid van beheerservices waarborgen
 
 Houd er tijdens de overgang van het beheer van toepassingen naar de bastionomgeving rekening mee dat u moet zorgen voor voldoende beschikbaarheid om te voldoen aan de vereisten van deze toepassingen. De technieken zijn onder andere:
 
@@ -78,8 +72,7 @@ Houd er tijdens de overgang van het beheer van toepassingen naar de bastionomgev
 
 - Behoud een back-up van AD en SQL voor elke wijziging aan gebruikers of roldefinities in het toegewezen beheerforest.
 
-## Juiste machtigingen configureren voor Active Directory
-<a id="configure-appropriate-active-directory-permissions" class="xliff"></a>
+## <a name="configure-appropriate-active-directory-permissions"></a>Juiste machtigingen configureren voor Active Directory
 
 Het beheerforest moet zijn geconfigureerd voor de minimale bevoegdheden op basis van de vereisten voor Active Directory-beheer.
 
@@ -97,8 +90,7 @@ Bij het maken van de bastionomgeving, en voordat u Microsoft Identity Manager in
 
 - **Serviceaccounts** zijn nodig voor Microsoft Identity Manager, SQL Server en andere software.
 
-## De hosts beveiligen
-<a id="harden-the-hosts" class="xliff"></a>
+## <a name="harden-the-hosts"></a>De hosts beveiligen
 
 Op alle hosts, waaronder domeincontrollers, servers en werkstations die zijn gekoppeld aan het beheerforest, moeten de meest recente besturingssystemen en servicepacks zijn geïnstalleerd. De installaties op deze hosts moeten actueel blijven.
 
@@ -106,8 +98,7 @@ Op alle hosts, waaronder domeincontrollers, servers en werkstations die zijn gek
 
 - Hosts voor beheerforest moeten automatisch worden bijgewerkt met beveiligingsupdates. Hierdoor ontstaat weliswaar het risico dat de domeincontroller wordt onderbroken door onderhoudsbewerkingen, maar het biedt een belangrijke beperking van beveiligingsrisico’s door niet-verholpen beveiligingsproblemen.
 
-### Hosts met een beheerderrol identificeren
-<a id="identify-administrative-hosts" class="xliff"></a>
+### <a name="identify-administrative-hosts"></a>Hosts met een beheerderrol identificeren
 
 Het risico van een systeem of werkstation moet worden gemeten aan de activiteit met het hoogste risico dat hierop wordt uitgevoerd, zoals surfen op internet, het verzenden en ontvangen van e-mailberichten of het gebruik van andere toepassingen die onbekende of niet-vertrouwde inhoud verwerken.
 
@@ -121,8 +112,7 @@ Hosts met een beheerderrol de volgende computers:
 
 - Servers waarop toepassingen worden gehost die moeten worden beheerd en die niet toegankelijk zijn met RDP met beperkte beheermodus of Windows PowerShell voor externe toegang.
 
-### Toegewezen beheerwerkstations implementeren
-<a id="deploy-dedicated-administrative-workstations" class="xliff"></a>
+### <a name="deploy-dedicated-administrative-workstations"></a>Toegewezen beheerwerkstations implementeren
 
 Afzonderlijk beveiligde werkstations die zijn toegewezen aan gebruikers met invloedrijke beheerdersreferenties zijn wellicht onhandig, maar zijn mogelijk vereist. Het is belangrijk om een host te voorzien van een beveiligingsniveau dat gelijk is aan of hoger is dan het niveau van de bevoegdheden die aan de referenties zijn toevertrouwd. Neem de volgende maatregelen voor aanvullende beveiliging:
 
@@ -152,15 +142,13 @@ Afzonderlijk beveiligde werkstations die zijn toegewezen aan gebruikers met invl
 
 Sommige van deze maatregelen lijken wellicht extreem, maar uit onthullingen in de afgelopen jaren blijken de belangrijke mogelijkheden waarover ervaren tegenstanders beschikken om inbreuk te maken op hun doelen.
 
-## Bestaande domeinen voorbereiden voor beheer door de bastionomgeving
-<a id="prepare-existing-domains-to-be-managed-by-the-bastion-environment" class="xliff"></a>
+## <a name="prepare-existing-domains-to-be-managed-by-the-bastion-environment"></a>Bestaande domeinen voorbereiden voor beheer door de bastionomgeving
 
 MIM gebruikt PowerShell-cmdlets om vertrouwensrelatie tot stand te brengen tussen de bestaande AD-domeinen en het toegewezen beheerforest in de bastionomgeving. Nadat de bastionomgeving is geïmplementeerd, en voordat er gebruikers of groepen worden geconverteerd naar JIT, worden de domeinvertrouwensrelaties bijgewerkt met de cmdlets `New-PAMTrust` en `New-PAMDomainConfiguration`, en worden artefacten gemaakt die nodig zijn voor AD en MIM.
 
 Als de bestaande Active Directory-topologie verandert, kunnen de cmdlets `Test-PAMTrust`, `Test-PAMDomainConfiguration`, `Remove-PAMTrust` en `Remove-PAMDomainConfiguration` worden gebruikt voor het bijwerken van de vertrouwensrelaties.
 
-## Vertrouwensrelatie instellen voor elke forest
-<a id="establish-trust-for-each-forest" class="xliff"></a>
+## <a name="establish-trust-for-each-forest"></a>Vertrouwensrelatie instellen voor elke forest
 
 De cmdlet `New-PAMTrust` moet voor elk bestaand forest één keer worden uitgevoerd. Deze wordt aangeroepen op de computer van de MIM-service in het beheerdomein. De parameters voor deze opdracht zijn de domeinnaam van het bovenste domein van het bestaande forest en de referenties van een beheerder van dat domein.
 
@@ -170,13 +158,11 @@ New-PAMTrust -SourceForest "contoso.local" -Credentials (get-credential)
 
 Nadat de vertrouwensrelatie is ingesteld, configureert u vervolgens elk domein voor beheer vanuit de bastionomgeving, zoals beschreven in het volgende gedeelte.
 
-## Beheer voor elk domein inschakelen
-<a id="enable-management-of-each-domain" class="xliff"></a>
+## <a name="enable-management-of-each-domain"></a>Beheer voor elk domein inschakelen
 
 Er zijn zeven vereisten voor het inschakelen van beheer voor een bestaand domein.
 
-### 1. Een beveiligingsgroep op het lokale domein
-<a id="1-a-security-group-on-the-local-domain" class="xliff"></a>
+### <a name="1-a-security-group-on-the-local-domain"></a>1. Een beveiligingsgroep op het lokale domein
 
 In het bestaande domein moet een groep bestaan waarvan de naam de NetBIOS-domeinnaam is, gevolgd door drie dollartekens, bijvoorbeeld *CONTOSO$$$*. Het groepsbereik moet *domeingebonden* zijn en het groepstype *Beveiliging*. Dit is nodig om groepen te kunnen maken in het toegewezen beheerforest met dezelfde beveiligings-id als groepen in dit domein. Meld u op een werkstation dat lid is van het bestaande domein aan als beheerder van het bestaande domein en maak deze groep met de volgende PowerShell-opdracht:
 
@@ -184,8 +170,7 @@ In het bestaande domein moet een groep bestaan waarvan de naam de NetBIOS-domein
 New-ADGroup -name 'CONTOSO$$$' -GroupCategory Security -GroupScope DomainLocal -SamAccountName 'CONTOSO$$$'
 ```
 
-### 2. Geslaagde en mislukte controle
-<a id="2-success-and-failure-auditing" class="xliff"></a>
+### <a name="2-success-and-failure-auditing"></a>2. Geslaagde en mislukte controle
 
 De instellingen voor groepsbeleid op de domeincontroller voor controle moet geslaagde en mislukte controle voor toegang tot Accountbeheer controleren en Active directory-service controleren omvatten. U doet dit met de console Groepsbeleidbeheer op een werkstation dat lid is van het bestaande domein en aangemeld als beheerder van het bestaande domein:
 
@@ -215,8 +200,7 @@ De instellingen voor groepsbeleid op de domeincontroller voor controle moet gesl
 
 Het bericht Het bijwerken van het computerbeleid is voltooid. wordt na enkele minuten weergegeven.
 
-### 3. Verbindingen met de lokale certificeringsinstantie toestaan
-<a id="3-allow-connections-to-the-local-security-authority" class="xliff"></a>
+### <a name="3-allow-connections-to-the-local-security-authority"></a>3. Verbindingen met de lokale certificeringsinstantie toestaan
 
 De domeincontrollers moeten RPC via TCP/IP-verbindingen toestaan voor de lokale certificeringsautoriteit (LSA) van de bastionomgeving. Bij oudere versies van Windows Server moet TCP/IP-ondersteuning in LSA zijn ingeschakeld in het register:
 
@@ -224,8 +208,7 @@ De domeincontrollers moeten RPC via TCP/IP-verbindingen toestaan voor de lokale 
 New-ItemProperty -Path HKLM:SYSTEM\\CurrentControlSet\\Control\\Lsa -Name TcpipClientSupport -PropertyType DWORD -Value 1
 ```
 
-### 4. De PAM-domeinconfiguratie maken
-<a id="4-create-the-pam-domain-configuration" class="xliff"></a>
+### <a name="4-create-the-pam-domain-configuration"></a>4. De PAM-domeinconfiguratie maken
 
 De cmdlet `New-PAMDomainConfiguration` wordt uitgevoerd op de computer van de MIM-service in het beheerdomein. De parameters voor deze opdracht zijn de domeinnaam van het bestaande domein en de referenties van een beheerder van dat domein.
 
@@ -233,8 +216,7 @@ De cmdlet `New-PAMDomainConfiguration` wordt uitgevoerd op de computer van de MI
  New-PAMDomainConfiguration -SourceDomain "contoso" -Credentials (get-credential)
 ```
 
-### 5. Leesmachtiging verlenen aan accounts
-<a id="5-give-read-permissions-to-accounts" class="xliff"></a>
+### <a name="5-give-read-permissions-to-accounts"></a>5. Leesmachtiging verlenen aan accounts
 
 De accounts in het bastionforest die worden gebruikt voor het opzetten van rollen (beheerders die de cmdlets `New-PAMUser` en `New-PAMGroup` gebruiken) en het account dat wordt gebruikt door de MIM-controleservice, hebben leesmachtigingen nodig in dat domein.
 
@@ -256,17 +238,14 @@ Met de volgende stappen schakelt u leestoegang in voor de gebruiker *PRIV\Admini
 
 18. Sluit Active Directory - gebruikers en computers.
 
-### 6. Een noodaccount
-<a id="6-a-break-glass-account" class="xliff"></a>
+### <a name="6-a-break-glass-account"></a>6. Een noodaccount
 
 Als het Privileged Access Management-project als doel heeft het verminderen van het aantal accounts met domeinbeheerdersbevoegdheden die permanent zijn toegewezen aan het domein, moet het domein een *nood*account bevatten, voor het geval er later een probleem ontstaat met de vertrouwensrelatie. In elk domein moeten accounts voor noodtoegang tot het productieforest bestaan. Deze accounts moeten alleen kunnen aanmelden op domeincontrollers. Voor organisaties met meerdere sites zijn mogelijk extra accounts vereist voor redundantie.
 
-### 7. Machtigingen bijwerken in de bastionomgeving
-<a id="7-update-permissions-in-the-bastion-environment" class="xliff"></a>
+### <a name="7-update-permissions-in-the-bastion-environment"></a>7. Machtigingen bijwerken in de bastionomgeving
 
 Controleer de machtigingen op het object *AdminSDHolder* in de systeemcontainer in dat domein. Het object *AdminSDHolder* heeft een unieke toegangsbeheerlijst (ACL), die wordt gebruikt voor het beheren van machtigingen van beveiligings-principals die lid zijn van de ingebouwde Active Directory-groepen met bevoorrechte rol. Let op of er in de standaardmachtigingen wijzigingen zijn doorgevoerd die gevolgen hebben voor gebruikers met beheerdersbevoegdheden in het domein. Deze machtigingen zijn niet van toepassing op gebruikers waarvan het account zich in de bastionomgeving bevindt.
 
-## Gebruikers en groepen selecteren voor insluiting
-<a id="select-users-and-groups-for-inclusion" class="xliff"></a>
+## <a name="select-users-and-groups-for-inclusion"></a>Gebruikers en groepen selecteren voor insluiting
 
 De volgende stap is het definiëren van de PAM-rollen. Hierdoor koppelt u de gebruikers en groepen waartoe ze toegang moeten hebben. Dit is doorgaans een subset van de gebruikers en groepen voor de laag die waarvan in de bastionomgeving wordt aangegeven dat deze wordt beheerd. Zie [Rollen voor Privileged Access Management definiëren](defining-roles-for-pam.md) voor meer informatie.

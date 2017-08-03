@@ -18,8 +18,7 @@ ms.translationtype: MT
 ms.contentlocale: nl-NL
 ms.lasthandoff: 07/13/2017
 ---
-# Stap 4 SharePoint configureren
-<a id="step-4-configuring-sharepoint" class="xliff"></a>
+# <a name="step-4-configuring-sharepoint"></a>Stap 4 SharePoint configureren
 
 >[!div class="step-by-step"]
 [« Stap 3](sp1-step3-installing-configuring-sql.md)

@@ -5,24 +5,22 @@ keywords:
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 03/23/2017
+ms.date: 08/01/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 97edae12-6f86-4f9f-8620-a95a096e482a
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: d7f054d8d82dcc0ac71a94f6e44407b0c41a75af
-ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.openlocfilehash: e0179d21752f31e55b132268e9429009e68ba89d
+ms.sourcegitcommit: 5ba5d916c0ca1e5aa501592af0cef714bfdc8afe
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 08/02/2017
 ---
-# De MIM-meldingsservice voor wachtwoordwijzigingen op een domeincontroller implementeren
-<a id="deploy-the-mim-password-change-notification-service-on-a-domain-controller" class="xliff"></a>
+# <a name="deploy-the-mim-password-change-notification-service-on-a-domain-controller"></a>De MIM-meldingsservice voor wachtwoordwijzigingen op een domeincontroller implementeren
 
-## De meldingsservice voor wachtwoordwijzigingen installeren
-<a id="install-the-password-change-notification-service" class="xliff"></a>
+## <a name="install-the-password-change-notification-service"></a>De meldingsservice voor wachtwoordwijzigingen installeren
 De meldingsservice voor wachtwoordwijzigingen (Password Change Notification Service of PCNS) is een service die u installeert op de domeincontrollers waarmee synchronisatie van wachtwoorden door MIM met andere systemen, zoals een adreslijstserver van een andere leverancier, mogelijk wordt gemaakt. Installeer voor wachtwoordsynchronisatie de PCNS op elke domeincontrollerserver.
 
 1.  Meld u aan als domeinadministrator op een server met Windows Server met de rol van Active Directory Domain Services.
@@ -57,6 +55,5 @@ De meldingsservice voor wachtwoordwijzigingen (Password Change Notification Serv
 
 14. Start de computer opnieuw op om de wijzigingen in de configuratie van de MIM-meldingsservice voor wachtwoordwijzigingen van kracht te laten worden. U kunt dit doen in het pop-upvenster dat wordt weergegeven op **Ja** te klikken, maar u kunt ook later opnieuw opstarten.
 
-## De meldingsservice voor wachtwoordwijzigingen configureren
-<a id="configuring-the-password-change-notification-service" class="xliff"></a>
+## <a name="configuring-the-password-change-notification-service"></a>De meldingsservice voor wachtwoordwijzigingen configureren
 Als u als domeinadministrator opnieuw verbinding hebt gemaakt met de DC-server, gaat u naar *C:\Program Files\Microsoft Password Change Notification.* Voer *pcnscfg.exe* uit.

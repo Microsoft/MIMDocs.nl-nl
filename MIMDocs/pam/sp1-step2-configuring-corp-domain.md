@@ -18,8 +18,7 @@ ms.translationtype: MT
 ms.contentlocale: nl-NL
 ms.lasthandoff: 07/13/2017
 ---
-# Stap 2 Het CORP-domein configureren
-<a id="step-2-configuring-the-corp-domain" class="xliff"></a>
+# <a name="step-2-configuring-the-corp-domain"></a>Stap 2 Het CORP-domein configureren
 
 >[!div class="step-by-step"]
 [« Stap 1](sp1-step1-configuring-priv-domain.md)
