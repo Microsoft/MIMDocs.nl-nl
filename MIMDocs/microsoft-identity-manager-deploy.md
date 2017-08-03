@@ -18,8 +18,7 @@ ms.translationtype: MT
 ms.contentlocale: nl-NL
 ms.lasthandoff: 07/13/2017
 ---
-# MIM 2016 implementeren
-<a id="deploy-mim-2016" class="xliff"></a>
+# <a name="deploy-mim-2016"></a>MIM 2016 implementeren
 In de artikelen in deze sectie vindt u stapsgewijze instructies voor het implementeren van Microsoft Identity Manager (MIM) 2016 voor selfservicescenario's voor eindgebruikers op een nieuwe server waarop niet eerder FIM of MIM is geïmplementeerd.
 
 > [!NOTE]
@@ -29,21 +28,18 @@ Het scenario voor Privileged Access Management wordt anders geïmplementeerd dan
 
 De procedure voor het implementeren van MIM 2016 lijkt sterk op die van diens voorganger FIM 2010 R2. Zie [Forefront Identity Manager 2010 R2 Deployment Guide](https://technet.microsoft.com/library/jj134310) (Engelstalig) als u de FIM-documentatie wilt raadplegen.
 
-## Eerste stap: een domein voorbereiden
-<a id="first-prepare-a-domain" class="xliff"></a>
+## <a name="first-prepare-a-domain"></a>Eerste stap: een domein voorbereiden
 MIM werkt met Active Directory (AD). Volg daarom onderstaande stappen om de AD-domeincontroller te configureren.
 - [Domeininstelling](preparing-domain.md)
 
-## Volgende stap: een server voor identiteitsbeheer voorbereiden
-<a id="next-prepare-an-identity-management-server" class="xliff"></a>
+## <a name="next-prepare-an-identity-management-server"></a>Volgende stap: een server voor identiteitsbeheer voorbereiden
 Als uw domein eenmaal is geïmplementeerd en geconfigureerd, bereidt u de server voor identiteitsbeheer van uw bedrijf voor. Het volgende moet hiervoor worden ingesteld:
 - [Windows Server 2012 R2](prepare-server-ws2012r2.md)
 - [SQL Server 2014](prepare-server-sql2014.md)
 - [SharePoint](prepare-server-sharepoint.md)
 - [Exchange Server](prepare-server-exchange.md) (optioneel)
 
-## Ten slotte: de Microsoft Identity Manager 2016-onderdelen installeren
-<a id="finally-install-microsoft-identity-manager-2016-components" class="xliff"></a>
+## <a name="finally-install-microsoft-identity-manager-2016-components"></a>Ten slotte: de Microsoft Identity Manager 2016-onderdelen installeren
 Nadat u het domein en de server hebt ingesteld, kunt u nu de MIM-onderdelen installeren en configureren zodat deze kunnen worden gesynchroniseerd met AD.
 - [MIM-synchronisatieservice](install-mim-sync.md)
 - [MIM-service en -portal](install-mim-service-portal.md)

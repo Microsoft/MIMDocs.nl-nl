@@ -16,8 +16,7 @@ ms.translationtype: MT
 ms.contentlocale: nl-NL
 ms.lasthandoff: 07/13/2017
 ---
-# MIM SP1 (4.4.1436.0)-service dynamische logboekregistratie
-<a id="mim-sp1-4414360--service-dynamic-logging" class="xliff"></a>
+# <a name="mim-sp1-4414360--service-dynamic-logging"></a>MIM SP1 (4.4.1436.0)-service dynamische logboekregistratie
 In 4.4.1436.0 hebben we een nieuwe mogelijkheid voor logboekregistratie geïntroduceerd. Hiermee kunnen beheerders en ondersteuningstechnici logboekregistratie inschakelen zonder de beheerservice opnieuw te hoeven starten.
 
 Zodra u dit hebt geïnstalleerd, wordt de volgende nieuwe regel weergegeven in Microsoft.ResourceManagement.Service.exe.config met de naam

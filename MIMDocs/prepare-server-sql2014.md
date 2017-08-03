@@ -18,8 +18,7 @@ ms.translationtype: MT
 ms.contentlocale: nl-NL
 ms.lasthandoff: 07/13/2017
 ---
-# Een server voor identiteitsbeheer instellen: SQL Server 2014
-<a id="set-up-an-identity-management-server-sql-server-2014" class="xliff"></a>
+# <a name="set-up-an-identity-management-server-sql-server-2014"></a>Een server voor identiteitsbeheer instellen: SQL Server 2014
 
 >[!div class="step-by-step"]
 [« Windows Server 2012 R2](prepare-server-ws2012r2.md)
@@ -31,8 +30,7 @@ ms.lasthandoff: 07/13/2017
 > - Domeinnaam: **contoso**
 > - Wachtwoord - **Pass@word1**
 
-## Installeer **SQL Server 2014 Standard Edition**
-<a id="install-sql-server-2014-standard-edition" class="xliff"></a>
+## <a name="install-sql-server-2014-standard-edition"></a>Installeer **SQL Server 2014 Standard Edition**
 
 1. Start **PowerShell** als een domeinbeheerder.
 

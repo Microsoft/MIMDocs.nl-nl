@@ -18,8 +18,7 @@ ms.translationtype: MT
 ms.contentlocale: nl-NL
 ms.lasthandoff: 07/13/2017
 ---
-# Overzicht van de omgeving
-<a id="environment-overview" class="xliff"></a>
+# <a name="environment-overview"></a>Overzicht van de omgeving
 
 Privileged Access Management (PAM) werkt met virtuele machines (VM's) met aparte stations die via een gedeeld netwerk met elkaar zijn verbonden. Deze virtuele machines kunnen worden gehost met Windows 8.1, Windows Server 2012 R2 of andere besturingssystemen.
 

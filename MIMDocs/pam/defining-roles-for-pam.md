@@ -18,8 +18,7 @@ ms.translationtype: MT
 ms.contentlocale: nl-NL
 ms.lasthandoff: 07/13/2017
 ---
-# Rollen voor Privileged Access Management definiëren
-<a id="define-roles-for-privileged-access-management" class="xliff"></a>
+# <a name="define-roles-for-privileged-access-management"></a>Rollen voor Privileged Access Management definiëren
 
 Met Privileged Access Management kunt u gebruikers toewijzen aan bevoorrechte rollen die ze naar behoefte kunnen activeren voor Just-In-Time-toegang. Deze rollen worden handmatig gedefinieerd en ingesteld n de bastionomgeving. In dit artikel wordt uitgelegd hoe u kunt beslissen welke rollen u wilt beheren via PAM en hoe u deze met de juiste machtigingen en beperkingen kunt definiëren.
 
@@ -33,8 +32,7 @@ De rolmachtigingen zijn afhankelijk van de toepassingen die worden beheerd. In d
 
 - De machtigingen die nodig zijn voor het beheren van de gegevens die in Active Directory zijn opgeslagen (bijvoorbeeld gebruikers en groepen maken)
 
-## Rollen identificeren
-<a id="identify-roles" class="xliff"></a>
+## <a name="identify-roles"></a>Rollen identificeren
 
 Begin met het vaststellen van de rollen die u wilt beheren met PAM. Op het werkblad is elke mogelijke rol in een eigen rij geplaatst.
 
@@ -58,8 +56,7 @@ Andere overwegingen bij het instellen van het bereik van de machtigingen die moe
 
 - Is het mogelijk om beheer en controle van elkaar te scheiden, zodat een gebruiker met een beheerrol de controlerecords van zijn acties niet kan wissen?
 
-## Stel de vereisten voor rolbeheer vast
-<a id="establish-role-governance-requirements" class="xliff"></a>
+## <a name="establish-role-governance-requirements"></a>Stel de vereisten voor rolbeheer vast
 
 Begin met het invullen van het werkblad wanneer u mogelijke rollen identificeert. Kolommen maken voor de vereisten die relevant zijn voor uw organisatie. Een aantal vereisten die u moet overwegen:
 
@@ -81,8 +78,7 @@ Begin met het invullen van het werkblad wanneer u mogelijke rollen identificeert
 
 - Welke toepassingsmachtigingen (zie de lijst met voorbeelden voor AD hieronder) zijn gekoppeld aan deze rol?
 
-## Een toegangsmethode selecteren
-<a id="select-an-access-method" class="xliff"></a>
+## <a name="select-an-access-method"></a>Een toegangsmethode selecteren
 
 Mogelijk zijn er meerdere rollen in een Privileged Access Management-systeem waaraan dezelfde machtigingen zijn toegewezen, als verschillende community's met gebruikers verschillende vereisten voor toegangsbeheer hebben. Een organisatie kan bijvoorbeeld andere beleidsregels toepassen voor fulltime werknemers dan voor externe IT-medewerkers van een andere organisatie.
 
@@ -98,8 +94,7 @@ In sommige gevallen kan een gebruiker permanent worden toegewezen aan een rol zo
 
 Voor organisaties die zich zorgen maken over de mogelijkheid van diefstal of misbruik van referenties bevat de handleiding [Azure MFA gebruiken voor activering](use-azure-mfa-for-activation.md) instructies voor het configureren van MIM om een extra buiten-bandcontrole te vereisen op het moment dat de rol wordt geactiveerd.
 
-## Machtigingen voor Active Directory delegeren
-<a id="delegate-active-directory-permissions" class="xliff"></a>
+## <a name="delegate-active-directory-permissions"></a>Machtigingen voor Active Directory delegeren
 
 Er worden met Windows Server automatisch standaardgroepen gemaakt zoals Domeinbeheerders wanneer nieuwe domeinen worden gemaakt. Dankzij deze groepen kunt u snel aan de slag en deze zijn mogelijk geschikt voor kleinere organisaties. Maar grotere organisaties of organisaties waarvoor meer isolatie van beheerdersbevoegdheden is vereist, moeten groepen zoals Domeinbeheerders leegmaken en deze vervangen door groepen met afzonderlijke machtigingen.
 
@@ -110,8 +105,7 @@ Een beperking van de groep Domeinbeheerders is dat deze geen leden van een exter
 
 Maak in plaats van standaardgroepen zoals Domeinbeheerders nieuwe beveiligingsgroepen die alleen de benodigde machtigingen verlenen en gebruik MIM om dynamisch beheerdersaccounts te maken met die groepslidmaatschappen.
 
-### Machtigingen voor servicebeheer
-<a id="service-management-permissions" class="xliff"></a>
+### <a name="service-management-permissions"></a>Machtigingen voor servicebeheer
 
 In de volgende tabel worden voorbeelden gegeven van machtigingen die geschikt zijn voor opname in rollen voor het beheer van AD.
 
@@ -127,8 +121,7 @@ In de volgende tabel worden voorbeelden gegeven van machtigingen die geschikt zi
 | Zones beheren | DNS-zones en -objecten in Active Directory maken, verwijderen en wijzigen |
 | Organisatie-eenheden op het niveau tier 0 wijzigen | Organisatie-eenheden op het niveau tier 0 en opgenomen objecten in Active Directory wijzigen |
 
-### Machtigingen voor gegevensbeheer
-<a id="data-management-permissions" class="xliff"></a>
+### <a name="data-management-permissions"></a>Machtigingen voor gegevensbeheer
 
 In de volgende tabel worden voorbeelden gegeven van machtigingen die geschikt zijn voor opname in rollen voor het beheer of het gebruik van gegevens die zijn opgeslagen in AD.
 
@@ -144,15 +137,13 @@ In de volgende tabel worden voorbeelden gegeven van machtigingen die geschikt zi
 | Pc/lokale beheerder toevoegen                    | Lokale beheerdersrechten op alle werkstations                               |
 | Server/lokale beheerder toevoegen                   | Lokale beheerdersrechten op alle servers                                    |
 
-## Voorbeeldroldefinities
-<a id="example-role-definitions" class="xliff"></a>
+## <a name="example-role-definitions"></a>Voorbeeldroldefinities
 
 De keuze van roldefinities is afhankelijk van de laag van de servers die worden beheerd met de bevoorrechte accounts. Het is ook afhankelijk van de keuze van toepassingen die worden beheerd, aangezien toepassingen, zoals Exchange of zakelijke producten van derden, zoals SAP, vaak zijn voorzien van hun eigen aanvullende roldefinities voor gedelegeerd beheer.
 
 De volgende secties bevatten voorbeelden voor typisch zakelijke scenario's.
 
-### Tier 0 - beheerderforest
-<a id="tier-0---administrative-forest" class="xliff"></a>
+### <a name="tier-0---administrative-forest"></a>Tier 0 - beheerderforest
 
 Rollen die geschikt zijn voor accounts in de bastionomgeving zijn onder andere:
 
@@ -161,8 +152,7 @@ Rollen die geschikt zijn voor accounts in de bastionomgeving zijn onder andere:
 - Gebruikers die beheerders zijn van het productieforest
 - Gebruikers aan wie beperkte beheerdersrechten voor toepassingen in het productieforest zijn verleend
 
-### Tier 0 - zakelijk productieforest
-<a id="tier-0---enterprise-production-forest" class="xliff"></a>
+### <a name="tier-0---enterprise-production-forest"></a>Tier 0 - zakelijk productieforest
 
 Rollen die geschikt zijn voor het beheren van productieforestaccounts en resources op het niveau tier 0 zijn onder andere:
 
@@ -179,8 +169,7 @@ Rollen die geschikt zijn voor het beheren van productieforestaccounts en resourc
 - Back-upbeheerders voor servers op het niveau van tier 0
 - Gebruikers van buiten-band- en baseboardbeheercontrollers (voor KVM of LOM) gekoppeld aan hosts op het niveau van tier 0
 
-### Tier 1
-<a id="tier-1" class="xliff"></a>
+### <a name="tier-1"></a>Tier 1
 
 Rollen voor het beheer en de back-up van servers op het niveau van tier 1 zijn onder andere:
 
@@ -202,8 +191,7 @@ Rollen voor het beheer van bedrijfstoepassingen op tier 1 zijn mogelijk ook:
 - Cloudservicebeheerders, bijvoorbeeld een bedrijfswebsite of de openbare DNS
 - Beheerders van HCM, financiële en juridische systemen
 
-### Tier 2
-<a id="tier-2" class="xliff"></a>
+### <a name="tier-2"></a>Tier 2
 
 Rollen voor het beheer van niet-administratieve gebruikers en computerbeheer zijn onder andere:
 

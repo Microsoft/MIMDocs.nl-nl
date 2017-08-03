@@ -18,11 +18,9 @@ ms.translationtype: MT
 ms.contentlocale: nl-NL
 ms.lasthandoff: 07/13/2017
 ---
-# Bijlage PAM-implementatiescripts:
-<a id="pam-deployment-scripts-addendum" class="xliff"></a>
+# <a name="pam-deployment-scripts-addendum"></a>Bijlage PAM-implementatiescripts:
 
-## Bijlage 1 instellen van het PRIV-domein
-<a id="addendum-1-setting-up-the-priv-domain" class="xliff"></a>
+## <a name="addendum-1-setting-up-the-priv-domain"></a>Bijlage 1 instellen van het PRIV-domein
 
 Nadat het gecomprimeerde bestand in de map $env:SYSTEMDRIVE\PAM is uitgepakt, bewerkt u het bestand MDeploymentConfig.xm, zodat details over het PRIV-forest worden weergegeven. Werk de DNS-naam, de NetBIOS-naam, de DC-naam en het Database/logboekpad & Sysvol-pad bij. Ook het domein & ForestMode bijwerken. Als u Windows Server Technical Preview 5 test, stel de DomainMode & ForestMode in op WinThreshold.
 
@@ -40,8 +38,7 @@ De domeincontroller wordt automatisch opnieuw opgestart na de voltooiing. Het ad
   * Het wachtwoord bevat ten minste één HOOFDLETTER
   * Het wachtwoord bevat ten minste één cijfer of speciale letter
 
-## Bijlage 2 Het CORP-domein instellen
-<a id="addendum-2-setting-up-the-corp-domain" class="xliff"></a>
+## <a name="addendum-2-setting-up-the-corp-domain"></a>Bijlage 2 Het CORP-domein instellen
 
 Als u net aan de slag gaat met PAM en een testomgeving wilt opstarten, kunt u met dit script ook de configuratie van een CORP-domein uitvoeren. Nadat het gecomprimeerde bestand in de map $env:SYSTEMDRIVE\PAM is uitgepakt, bewerkt u het bestand AMDeploymentConfig.xm, zodat details over het PRIV-forest worden weergegeven. Werk de DNS-naam, NetBIOS-naam, DC-naam/pad naar logboek en pad voor Sysvol bij. Het functionele niveau moet minstens Windows Server 2012 R2 zijn.
 
@@ -53,8 +50,7 @@ Als u net aan de slag gaat met PAM en een testomgeving wilt opstarten, kunt u me
 
 De domeincontroller wordt automatisch opnieuw opgestart nadat deze is voltooid
 
-## Bijlage 3 Een CORP-client instellen voor de validatie
-<a id="addendum-3-setting-up-a-corp-client-to-do-the-validation" class="xliff"></a>
+## <a name="addendum-3-setting-up-a-corp-client-to-do-the-validation"></a>Bijlage 3 Een CORP-client instellen voor de validatie
 
 De ClientBinaryLocation in het configuratiebestand moet verwijzen naar de locatie waarin setup.exe zich bevindt.
 Meld u aan bij de client als een lokale administrator en voer de volgende opdrachten uit in PowerShell-venster met verhoogde bevoegdheid:
@@ -72,7 +68,6 @@ Als de machine niet verbonden met het verbonden domein, worden de referentie van
 
 Ga verder met stap 8 hierboven.
 
-## Bijlage 4 als er iets verkeerd gaat
-<a id="addendum-4-if-something-goes-wrong" class="xliff"></a>
+## <a name="addendum-4-if-something-goes-wrong"></a>Bijlage 4 als er iets verkeerd gaat
 
 Alle scriptlogboeken worden opgeslagen in %AppData%\MIMPAMInstall. Comprimeer de map in een zipbestand en verstuur het via e-mail naar [mim2016@microsoft.com](mailto:mim2016@microsoft.com), samen met details van de uitvoering en de fout.

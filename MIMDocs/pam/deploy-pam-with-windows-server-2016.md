@@ -16,8 +16,7 @@ ms.translationtype: MT
 ms.contentlocale: nl-NL
 ms.lasthandoff: 07/13/2017
 ---
-# MIM PAM implementeren met Windows Server 2016
-<a id="deploy-mim-pam-with-windows-server-2016" class="xliff"></a>
+# <a name="deploy-mim-pam-with-windows-server-2016"></a>MIM PAM implementeren met Windows Server 2016
 
 
 Met dit scenario kunt u met MIM 2016 SP1 functies van Windows Server 2016 gebruiken als domeincontroller voor het PRIV-forest.  Als dit scenario is geconfigureerd, wordt voor een Kerberos-ticket van een gebruiker een tijdslimiet ingesteld voor de resterende tijd van de activeringen van de rol. 
@@ -25,8 +24,7 @@ Met dit scenario kunt u met MIM 2016 SP1 functies van Windows Server 2016 gebrui
 >[!Note]
 Eerdere technische preview-versies van Windows Server 2016 voor Technical Preview 5 kunnen niet met deze MIM-versie worden gebruikt.
 
-## Voorbereiding
-<a id="preparation" class="xliff"></a>
+## <a name="preparation"></a>Voorbereiding
 
 Er zijn minimaal twee virtuele machines nodig voor de testomgeving:
 
@@ -143,8 +141,7 @@ Voer de installatie uit, zoals beschreven in de [introductiehandleiding](privile
 
 -   Item 5 (verificatie van vertrouwensrelatie) is **niet vereist als zowel CORP- als PRIV-domein zich op het functionele domeinniveau van Windows Server 2016 bevinden**.
 
-## Meer informatie
-<a id="more-information" class="xliff"></a>
+## <a name="more-information"></a>Meer informatie
 
 - [Privileged Access Management voor Active Directory Domain Services](privileged-identity-management-for-active-directory-domain-services.md)
 - [De MIM-omgeving voor Privileged Access Management configureren](configuring-mim-environment-for-pam.md)

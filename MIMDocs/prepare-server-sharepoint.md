@@ -18,8 +18,7 @@ ms.translationtype: MT
 ms.contentlocale: nl-NL
 ms.lasthandoff: 07/13/2017
 ---
-# Een server voor identiteitsbeheer instellen: SharePoint
-<a id="set-up-an-identity-management-server-sharepoint" class="xliff"></a>
+# <a name="set-up-an-identity-management-server-sharepoint"></a>Een server voor identiteitsbeheer instellen: SharePoint
 
 >[!div class="step-by-step"]
 [« SQL Server 2014](prepare-server-sql2014.md)
@@ -32,8 +31,7 @@ ms.lasthandoff: 07/13/2017
 > - Wachtwoord - **Pass@word1**
 
 
-## Installeer **SharePoint Foundation 2013 met SP1**
-<a id="install-sharepoint-foundation-2013-with-sp1" class="xliff"></a>
+## <a name="install-sharepoint-foundation-2013-with-sp1"></a>Installeer **SharePoint Foundation 2013 met SP1**
 
 > [!NOTE]
 > Voor het installatieprogramma is een internetverbinding vereist zodat de vereiste onderdelen hiervoor kunnen worden gedownload. Als de computer zich op een virtueel netwerk bevindt dat geen verbinding met internet heeft, voegt u een extra netwerkinterface toe aan de computer zodat deze verbinding met internet kan maken. Dit kan worden uitgeschakeld nadat de installatie is voltooid.
@@ -60,8 +58,7 @@ Volg onderstaande stappen voor het installeren van SharePoint Foundation 2013 SP
 
 4.  Wanneer de installatie is voltooid, voert u de wizard uit.
 
-## De wizard voor het configureren van SharePoint uitvoeren
-<a id="run-the-wizard-to-configure-sharepoint" class="xliff"></a>
+## <a name="run-the-wizard-to-configure-sharepoint"></a>De wizard voor het configureren van SharePoint uitvoeren
 
 Voer de stappen uit die in de **wizard Configuratie van SharePoint-producten** worden vermeld, zodat SharePoint zo wordt geconfigureerd dat het met MIM kan samenwerken.
 
@@ -81,8 +78,7 @@ Voer de stappen uit die in de **wizard Configuratie van SharePoint-producten** w
 
 8. Klik in het venster **Een siteverzameling maken** op **Overslaan**.  Klik vervolgens op **Voltooien**.
 
-## SharePoint voorbereiden om de MIM-portal te hosten
-<a id="prepare-sharepoint-to-host-the-mim-portal" class="xliff"></a>
+## <a name="prepare-sharepoint-to-host-the-mim-portal"></a>SharePoint voorbereiden om de MIM-portal te hosten
 
 > [!NOTE]
 > In eerste instantie wordt SSL niet geconfigureerd. Configureer SSL of een vergelijkbaar protocol voordat u toegang tot deze portal inschakelt.

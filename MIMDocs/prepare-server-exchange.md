@@ -18,15 +18,13 @@ ms.translationtype: MT
 ms.contentlocale: nl-NL
 ms.lasthandoff: 07/13/2017
 ---
-# Een server voor identiteitsbeheer instellen: Exchange
-<a id="set-up-an-identity-management-server-exchange" class="xliff"></a>
+# <a name="set-up-an-identity-management-server-exchange"></a>Een server voor identiteitsbeheer instellen: Exchange
 
 >[!div class="step-by-step"]
 [« SharePoint](prepare-server-sharepoint.md)
 [MIM-synchronisatieservice »](install-mim-sync.md)
 
-## Microsoft Exchange Server implementeren
-<a id="deploy-microsoft-exchange-server" class="xliff"></a>
+## <a name="deploy-microsoft-exchange-server"></a>Microsoft Exchange Server implementeren
 Als u MIM wilt configureren voor het verzenden en ontvangen van e-mailberichten of het inrichten van postvakken, moet Exchange aanwezig zijn in de omgeving. Als u Exchange nog niet hebt geïmplementeerd, kunt u een evaluatieversie voor evaluatiedoeleinden installeren:
 
 1. Download en installeer Microsoft Office 2010 Filter Packs - versie 2.0 + Microsoft Office 2010 Filter Packs - versie 2.0 SP1

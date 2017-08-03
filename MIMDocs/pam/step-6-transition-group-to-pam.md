@@ -18,8 +18,7 @@ ms.translationtype: MT
 ms.contentlocale: nl-NL
 ms.lasthandoff: 07/13/2017
 ---
-# Stap 6 – Een groep overzetten naar Privileged Access Management
-<a id="step-6--transition-a-group-to-privileged-access-management" class="xliff"></a>
+# <a name="step-6--transition-a-group-to-privileged-access-management"></a>Stap 6 – Een groep overzetten naar Privileged Access Management
 
 >[!div class="step-by-step"]
 [«Stap 5 ](step-5-establish-trust-between-priv-corp-forests.md)

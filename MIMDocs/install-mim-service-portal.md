@@ -18,8 +18,7 @@ ms.translationtype: MT
 ms.contentlocale: nl-NL
 ms.lasthandoff: 07/13/2017
 ---
-# MIM 2016 installeren: de MIM-service en -portal
-<a id="install-mim-2016-mim-service-and-portal" class="xliff"></a>
+# <a name="install-mim-2016-mim-service-and-portal"></a>MIM 2016 installeren: de MIM-service en -portal
 
 >[!div class="step-by-step"]
 [« MIM-synchronisatieservice](install-mim-sync.md)
@@ -35,8 +34,7 @@ ms.lasthandoff: 07/13/2017
 Als u in de laatste stap geen MIM-installatiepakket hebt ingesteld, gaat u terug en installeert u de Microsoft Identity Manager 2016-onderdelen voordat u verdergaat.
 
 
-## De MIM-service en -portal configureren voor de installatie
-<a id="configure-mim-service-and-portal-for-installation" class="xliff"></a>
+## <a name="configure-mim-service-and-portal-for-installation"></a>De MIM-service en -portal configureren voor de installatie
 
 1. Voer het **installatieprogramma voor de MIM-service en -portal** uit in de uitgepakte submap **Service en portal**.
 
@@ -78,8 +76,7 @@ Als u in de laatste stap geen MIM-installatiepakket hebt ingesteld, gaat u terug
 
 16. Schakel het selectievakje in om de poorten 5725 en 5726 in de firewall te openen en schakel het selectievakje in om alle geverifieerde gebruikers toegang te verlenen tot de MIM-portal.
 
-## De MIM-portal voor wachtwoordregistratie configureren
-<a id="configure-mim-password-registration-portal" class="xliff"></a>
+## <a name="configure-mim-password-registration-portal"></a>De MIM-portal voor wachtwoordregistratie configureren
 
 1.  Stel de serviceaccountnaam voor SSPR-registratie in op *contoso\MIMSSPR* en het bijbehorende wachtwoord op *Pass@word1*.
 
@@ -91,8 +88,7 @@ Als u in de laatste stap geen MIM-installatiepakket hebt ingesteld, gaat u terug
 
 4. Geef in het volgende configuratiescherm voor de MIM-portal voor wachtwoordregistratie *http://CorpIDM.contoso.local* op als serveradres van de MIM-service voor de MIM-portal voor wachtwoordregistratie.
 
-## Het MIM-portal voor het opnieuw instellen van het wachtwoord configureren
-<a id="configure-mim-password-reset-portal" class="xliff"></a>
+## <a name="configure-mim-password-reset-portal"></a>Het MIM-portal voor het opnieuw instellen van het wachtwoord configureren
 
 1.  Stel de serviceaccountnaam voor SSPR-registratie in op *Contoso\MIMSSPRService* en het bijbehorende wachtwoord op *Pass@word1*.
 
@@ -104,8 +100,7 @@ Als u in de laatste stap geen MIM-installatiepakket hebt ingesteld, gaat u terug
 
 4. Geef in het volgende configuratiescherm voor de MIM-portal voor wachtwoordregistratie *CorpIDname  http://CorpIDname.domain.local* op als het serveradres van de MIM-service voor de portal voor het opnieuw instellen van het wachtwoord.
 
-## De MIM-service en -portal installeren
-<a id="install-mim-service-and-portal" class="xliff"></a>
+## <a name="install-mim-service-and-portal"></a>De MIM-service en -portal installeren
 
 Wanneer alle definities voorafgaand aan de installatie gereed zijn, klikt u op **Installeren** om met de installatie van de geselecteerde onderdelen voor de **service en portal** te beginnen.
 

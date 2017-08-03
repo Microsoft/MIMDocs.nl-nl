@@ -18,8 +18,7 @@ ms.translationtype: MT
 ms.contentlocale: nl-NL
 ms.lasthandoff: 07/13/2017
 ---
-# Stap 3 SQL configureren
-<a id="step-3-configuring-sql" class="xliff"></a>
+# <a name="step-3-configuring-sql"></a>Stap 3 SQL configureren
 
 >[!div class="step-by-step"]
 [« Stap 2](sp1-step2-configuring-corp-domain.md)

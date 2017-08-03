@@ -18,8 +18,7 @@ ms.translationtype: MT
 ms.contentlocale: nl-NL
 ms.lasthandoff: 07/13/2017
 ---
-# Stap 6 De PAM-vertrouwensrelatie installeren
-<a id="step-6-set-up-the-pam-trust" class="xliff"></a>
+# <a name="step-6-set-up-the-pam-trust"></a>Stap 6 De PAM-vertrouwensrelatie installeren
 
 >[!div class="step-by-step"]
 [« Stap 5](sp1-step5-configuring-pam.md)

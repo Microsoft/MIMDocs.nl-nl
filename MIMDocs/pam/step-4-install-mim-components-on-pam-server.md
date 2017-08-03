@@ -19,8 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nl-NL
 ms.lasthandoff: 07/13/2017
 ---
-# Stap 4: MIM-onderdelen installeren op een PAM-server en -werkstation
-<a id="step-4--install-mim-components-on-pam-server-and-workstation" class="xliff"></a>
+# <a name="step-4--install-mim-components-on-pam-server-and-workstation"></a>Stap 4: MIM-onderdelen installeren op een PAM-server en -werkstation
 
 >[!div class="step-by-step"]
 [« Stap 3](step-3-prepare-pam-server.md)
@@ -34,8 +33,7 @@ Meld u op PAMSRV aan als PRIV\Administrator om de MIM-service en -portal en de v
 
 Als u MIM hebt gedownload, pakt u het MIM-installatiearchief uit naar een nieuwe map.
 
-##  Voer het installatieprogramma voor de service en portal uit.
-<a id="run-the-service-and-portal-install-program" class="xliff"></a>  
+##  <a name="run-the-service-and-portal-install-program"></a>Voer het installatieprogramma voor de service en portal uit.  
 
 Volg de richtlijnen van het installatieprogramma en voltooi de installatie.
 
@@ -99,8 +97,7 @@ Volg de richtlijnen van het installatieprogramma en voltooi de installatie.
 
 Nadat de installatie is voltooid, wordt de server opnieuw opgestart. Controleer of de MIM-portal actief is en stel in dat gebruikers hun eigen objectresource kunnen weergeven in MIM.
 
-## Beheerbeleidsregels voor de MIM-portal instellen
-<a id="set-up-mim-portal-management-policy-rules" class="xliff"></a>
+## <a name="set-up-mim-portal-management-policy-rules"></a>Beheerbeleidsregels voor de MIM-portal instellen
 
 1. Nadat PAMSRV opnieuw is opgestart, meldt u zich aan als PRIV\Administrator.
 
@@ -116,8 +113,7 @@ Nadat de installatie is voltooid, wordt de server opnieuw opgestart. Controleer 
 
 7. Selecteer deze beheerbeleidsregel, schakel het selectievakje **Beleid is uitgeschakeld** uit, klik op **OK** en klik vervolgens op **Verzenden**.
 
-## De firewallverbindingen controleren
-<a id="verify-the-firewall-connections" class="xliff"></a>
+## <a name="verify-the-firewall-connections"></a>De firewallverbindingen controleren
 
 De firewall moet binnenkomende verbindingen voor TCP-poort 5725, 5726, 8086 en 8090 toestaan.
 
@@ -134,8 +130,7 @@ De firewall moet binnenkomende verbindingen voor TCP-poort 5725, 5726, 8086 en 8
 8.  Controleer of er een actief netwerk, dat wordt vermeld priv.contoso.local, en een domeinnetwerk worden weergegeven.  
 9. Sluit **Configuratiescherm**.
 
-## De voorbeeldwebtoepassing instellen
-<a id="set-up-the-sample-web-application" class="xliff"></a>
+## <a name="set-up-the-sample-web-application"></a>De voorbeeldwebtoepassing instellen
 
 In deze sectie gaat u de voorbeeldwebtoepassing voor de MIM PAM REST API installeren en configureren.
 
@@ -171,8 +166,7 @@ In deze sectie gaat u de voorbeeldwebtoepassing voor de MIM PAM REST API install
 
 7.  (Optioneel) Controleer of de gebruiker bij de REST API kan worden geverifieerd. Open een webbrowser als de beheerder op PAMSRV.  Navigeer naar de website-URL http://pamsrv.priv.contoso.local:8086/api/pamresources/pamroles/, voer zo nodig de verificatie uit en controleer of er een download wordt uitgevoerd.
 
-## De aanvrager-cmdlets van MIM PAM installeren
-<a id="install-the-mim-pam-requestor-cmdlets" class="xliff"></a>
+## <a name="install-the-mim-pam-requestor-cmdlets"></a>De aanvrager-cmdlets van MIM PAM installeren
 
 Installeer de aanvrager-cmdlets van MIM PAM op het werkstation dat u hebt geconfigureerd in stap 1.
 

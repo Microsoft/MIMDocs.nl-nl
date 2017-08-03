@@ -18,8 +18,7 @@ ms.translationtype: MT
 ms.contentlocale: nl-NL
 ms.lasthandoff: 07/13/2017
 ---
-# Inzicht in de PAM-onderdelen
-<a id="understand-the-components-of-pam" class="xliff"></a>
+# <a name="understand-the-components-of-pam"></a>Inzicht in de PAM-onderdelen
 
 Met Privileged Access Management wordt beheerderstoegang gescheiden gehouden van dagelijkse gebruikersaccounts. Deze oplossing is afhankelijk van parallelle forests:
 
