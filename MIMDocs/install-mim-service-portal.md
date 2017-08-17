@@ -5,18 +5,18 @@ keywords:
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 03/23/2017
+ms.date: 08/16/2017
 ms.topic: get-started-article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: b0b39631-66df-4c5f-80c9-a1774346f816
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 974015bbba3a36e1107da33655eedf94e2938582
-ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.openlocfilehash: 03a0e6e90c1d0059872c4d37c88cb6f4f4095bac
+ms.sourcegitcommit: 451c3ddda84758c87b8eb0359dac4043af52865f
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 08/16/2017
 ---
 # <a name="install-mim-2016-mim-service-and-portal"></a>MIM 2016 installeren: de MIM-service en -portal
 
@@ -62,13 +62,13 @@ Als u in de laatste stap geen MIM-installatiepakket hebt ingesteld, gaat u terug
 
 10. Er kan een waarschuwing worden weergegeven dat het serviceaccount niet is beveiligd in de huidige configuratie.
 
-11. Accepteer de standaardinstellingen voor de locatie van de synchronisatieserver en geef *contoso\MIMsync* op als het MIM-beheeragentaccount.
+11. Accepteer de standaardwaarden voor de locatie van de synchronisatieserver en geef het account van de MIM-beheeragent als *contoso\MIMMA*.
 
     ![Afbeelding voor het configureren van de MIM-service en -portal](media/MIM-Install13.png)
 
 12. Geef *CORPIDM* (de naam van deze computer) op als het serveradres van de MIM-service voor de MIM-portal.
 
-13. Geef *http://CorpIDM.contoso.local:82* op als de URL van de SharePoint-siteverzameling.
+13. Geef *http://CorpIDM.contoso.local* URL als de SharePoint-siteverzameling.
 
 14. Geef *http://CorpIDM.contoso.local:8080* op als de URL voor de wachtwoordregistratie.
 
@@ -106,7 +106,7 @@ Wanneer alle definities voorafgaand aan de installatie gereed zijn, klikt u op *
 
 Nadat de installatie is voltooid, controleert u of de MIM-portal actief is.
 
-1. Start Internet Explorer en maak verbinding met de MIM-portal op *http://corpidm.contoso.local:82/identitymanagement*. Er kan bij het eerste bezoek aan deze pagina een korte vertraging optreden.
+1. Start Internet Explorer en maak verbinding met de MIM-Portal op *http://corpidm.contoso.local/identitymanagement*. Er kan bij het eerste bezoek aan deze pagina een korte vertraging optreden.
 
     - Verifieer u zelf zo nodig als *contoso\Administrator* bij Internet Explorer.
 
