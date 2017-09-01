@@ -2,56 +2,65 @@
 title: Privileged Access Management voor Active Directory Domain Services | Microsoft Docs
 description: Meer informatie over Privileged Access Management en hoe u hiermee uw Active Directory-omgeving kunt beheren en beveiligen.
 keywords: 
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 03/10/2017
+author: barclayn
+ms.author: barclayn
+manager: mbaldwin
+ms.date: 08/30/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: cf3796f7-bc68-4cf7-b887-c5b14e855297
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 1034db2b33ffd680e673f975af17145e9cf4c312
-ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.openlocfilehash: 890e0f77219f6871de3fc43e3122fbc829c6adba
+ms.sourcegitcommit: c049dceaf02ab8b6008fe440daae4d07b752ca2e
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 08/31/2017
 ---
 # <a name="privileged-access-management-for-active-directory-domain-services"></a>Privileged Access Management voor Active Directory Domain Services
+
 Privileged Access Management (PAM) is een oplossing waarmee organisaties bevoorrechte toegang in een bestaande Active Directory-omgeving kunnen beperken.
 
 Met Privileged Access Management kunnen twee doelen worden behaald:
 
-- De controle terugkrijgen over een aangetaste Active Directory-omgeving door een afzonderlijke bastionomgeving te behouden waarvan bekend is dat deze niet is beïnvloed door aanvallen.  
+- De controle terugkrijgen over een aangetaste Active Directory-omgeving door een afzonderlijke bastionomgeving te behouden waarvan bekend is dat deze niet is beïnvloed door aanvallen.
 - Het gebruik van bevoorrechte accounts isoleren om het risico te verminderen dat deze referenties worden gestolen.
 
 > [!NOTE]
 > PAM is een instantie van [Privileged Identity Management](https://azure.microsoft.com/documentation/articles/active-directory-privileged-identity-management-configure/) (PIM) die is geïmplementeerd met Microsoft Identity Manager (MIM).
 
 ## <a name="what-problems-does-pam-help-solve"></a>Welke problemen kunnen worden opgelost met PAM?
-Een echt aandachtspunt voor moderne ondernemingen is toegang tot resources in een Active Directory-omgeving. Nieuws over beveiligingsproblemen, escalaties door niet-geautoriseerde verhoging van bevoegdheden andere typen onbevoegde toegang, waaronder pass-the-hash, pass-the-ticket, spear phishing en Kerberos-problemen zijn vooral zorgwekkend.
+
+Een echt aandachtspunt voor moderne ondernemingen is toegang tot resources in een Active Directory-omgeving. Problemen zijn vooral zorgwekkend zijn:
+
+- Beveiligingsproblemen.
+- Niet-geautoriseerde bevoegdheid escalaties.
+- [Pass-the-hash](https://technet.microsoft.com/dn785092.aspx).
+- Pass-the-ticket.
+- spear phishing.
+- Kerberos-inbreuk.
+- Andere aanvallen.
 
 Het is tegenwoordig te gemakkelijk voor aanvallers om de accountreferenties van Domeinbeheerders te achterhalen en het is te moeilijk om deze aanvallen achteraf te detecteren. Het doel van PAM is om de mogelijkheden voor kwaadwillende gebruikers om toegang te krijgen te verminderen terwijl het beheer en het bewustzijn van de omgeving voor u worden vergroot.
 
-Dankzij PAM is het moeilijker voor kwaadwillende personen om door te dringen tot een netwerk en bevoorrechte accounttoegang te verkrijgen. Er wordt met PAM beveiliging toegevoegd aan bevoorrechte groepen waarmee de toegang wordt bepaald op verschillende computers die lid zijn van een domein en de toepassingen op deze computers. Ook worden meer controle, meer zichtbaarheid en specifieke besturingselementen toegevoegd zodat organisaties zien kunnen wie de bevoorrechte beheerders zijn en wat ze doen. Dankzij PAM hebben organisaties meer inzicht in hoe beheerdersaccounts worden gebruikt in de omgeving.
+Dankzij PAM is het moeilijker voor kwaadwillende personen om door te dringen tot een netwerk en bevoorrechte accounttoegang te verkrijgen. Er wordt met PAM beveiliging toegevoegd aan bevoorrechte groepen waarmee de toegang wordt bepaald op verschillende computers die lid zijn van een domein en de toepassingen op deze computers. Deze voegt ook meer controle, meer zichtbaarheid en specifieke besturingselementen toegevoegd. Hierdoor kunnen organisaties om te zien wie de bevoorrechte beheerders zijn en wat ze doen. Dankzij PAM hebben organisaties meer inzicht in hoe beheerdersaccounts worden gebruikt in de omgeving.
 
-## <a name="how-is-pam-set-up"></a>Hoe wordt PAM ingesteld?
-PAM borduurt voort op het principe van Just-In-Time-beheer; [Just Enough Administration (JEA)](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2014/DCIM-B362). JEA is een Windows PowerShell-toolkit waarmee een reeks opdrachten wordt gedefinieerd voor het uitvoeren van bevoorrechte activiteiten en een eindpunt waar beheerders autorisatie kunnen verkrijgen voor het uitvoeren van deze opdrachten. In JEA besluit een beheerder dat gebruikers met een bepaalde bevoegdheid een bepaalde taak kunnen uitvoeren. Elke keer dat een in aanmerking komende gebruiker deze taak moet uitvoeren, wordt deze machtiging ingeschakeld. De machtigingen verlopen na een opgegeven periode, zodat een kwaadwillende gebruiker de toegang niet kan stelen.
+## <a name="setting-up-pam"></a>Instellen van PAM
+
+PAM borduurt voort op het principe van Just-In-Time-beheer; [Just Enough Administration (JEA)](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2014/DCIM-B362). JEA is een Windows PowerShell-toolkit waarmee een reeks opdrachten voor het uitvoeren van bevoorrechte activiteiten definieert. Het is een eindpunt waar beheerders autorisatie kunnen verkrijgen voor opdrachten uitvoeren. In JEA besluit een beheerder dat gebruikers met een bepaalde bevoegdheid een bepaalde taak kunnen uitvoeren. Elke keer dat een in aanmerking komende gebruiker deze taak moet uitvoeren, wordt deze machtiging ingeschakeld. De machtigingen verlopen na een opgegeven periode, zodat een kwaadwillende gebruiker de toegang niet kan stelen.
 
 De installatie en het gebruik van PAM bestaat uit vier stappen.
 
 ![PAM-stappen: voorbereiden, beveiligen, werken, bewaken - diagram](media/MIM_PIM_SetupProcess.png)
 
-1.  **Voorbereiden**: identificeer welke groepen in uw bestaande forest aanzienlijke bevoegdheden hebben. Maak deze groepen opnieuw zonder leden in het bastionforest.
-
-2.  **Beveiligen**: Stel levensduur- en verificatiebeveiliging, zoals Multi-Factor Authentication (MFA), in voor wanneer gebruikers Just-In-Time-beheer aanvragen. MFA voorkomt programmatische aanvallen van schadelijke software of na de diefstal van referenties.
-
-3.  **Werken**: Nadat is voldaan aan de verificatievereisten en een aanvraag is goedgekeurd, wordt een gebruikersaccount tijdelijk toegevoegd aan een bevoorrechte groep in het bastionforest. De beheerder beschikt gedurende een vooraf ingestelde periode over alle bevoegdheden en toegangsmachtigingen die zijn toegewezen aan die groep. Na deze periode wordt het account verwijderd uit de groep.
-
-4.  **Controleren**: Er wordt met PAM functionaliteit toegevoegd voor controle, waarschuwingen en rapporten van aanvragen voor bevoorrechte toegang. U kunt de geschiedenis van bevoorrechte toegang controleren en zien wie een activiteit heeft uitgevoerd. U kunt beslissen of de activiteit geldig is en eenvoudig onbevoegde activiteiten identificeren, zoals een poging tot het rechtstreeks toevoegen van een gebruiker aan een bevoorrechte groep in het oorspronkelijke forest. Deze stap is niet alleen belangrijk voor het identificeren van schadelijke software, maar ook voor bijhouden van aanvallers van binnenuit.
+1. **Voorbereiden**: identificeer welke groepen in uw bestaande forest aanzienlijke bevoegdheden hebben. Maak deze groepen opnieuw zonder leden in het bastionforest.
+2. **Beveiligen**: Stel levensduur- en verificatiebeveiliging, zoals Multi-Factor Authentication (MFA), in voor wanneer gebruikers Just-In-Time-beheer aanvragen. MFA voorkomt programmatische aanvallen van schadelijke software of na de diefstal van referenties.
+3. **Werken**: Nadat is voldaan aan de verificatievereisten en een aanvraag is goedgekeurd, wordt een gebruikersaccount tijdelijk toegevoegd aan een bevoorrechte groep in het bastionforest. De beheerder beschikt gedurende een vooraf ingestelde periode over alle bevoegdheden en toegangsmachtigingen die zijn toegewezen aan die groep. Na deze periode wordt het account verwijderd uit de groep.
+4. **Controleren**: Er wordt met PAM functionaliteit toegevoegd voor controle, waarschuwingen en rapporten van aanvragen voor bevoorrechte toegang. U kunt de geschiedenis van bevoorrechte toegang controleren en zien wie een activiteit heeft uitgevoerd. U kunt beslissen of de activiteit geldig is en eenvoudig onbevoegde activiteiten identificeren, zoals een poging tot het rechtstreeks toevoegen van een gebruiker aan een bevoorrechte groep in het oorspronkelijke forest. Deze stap is niet alleen belangrijk voor het identificeren van schadelijke software, maar ook voor bijhouden van aanvallers van binnenuit.
 
 ## <a name="how-does-pam-work"></a>Hoe werkt PAM?
+
 PAM is gebaseerd op de nieuwe mogelijkheden in AD DS, met name voor domeinaccountverificatie en -autorisatie en de nieuwe functies in Microsoft Identity Manager. Met PAM worden bevoorrechte accounts gescheiden van een bestaande Active Directory-omgeving. Wanneer een bevoorrecht account moet worden gebruikt, moet dit eerst worden aangevraagd en vervolgens goedgekeurd. Na de goedkeuring, wordt aan het bevoorrechte account een machtiging verleend via een Foreign Principal Group in een nieuw bastionforest in plaats van in het huidige forest van de gebruiker of toepassing. De organisatie heeft meer controle dankzij het gebruik van een bastionforest, zoals wanneer een gebruiker een lid kan zijn van een bevoorrechte groep en hoe de gebruiker moet worden geverifieerd.
 
 Active Directory, de MIM-service en andere delen van deze oplossing kunnen ook worden geïmplementeerd in een maximaal beschikbare configuratie.
@@ -66,23 +75,26 @@ Dagelijkse gebruikersaccounts hoeven niet te worden verplaatst naar een nieuw fo
 
 PAM biedt de volgende voordelen:
 
--   **Isolatie/bereik van bevoegdheden**: Gebruikers hebben geen bevoegdheden voor accounts die ook voor onbevoegde taken worden gebruikt, zoals e-mail controleren of internet gebruiken. Gebruikers moeten bevoegdheden aanvragen. Aanvragen worden goedgekeurd of geweigerd op basis van MIM-beleidsregels die zijn gedefinieerd door een PAM-beheerder. Tot een aanvraag is goedgekeurd, is bevoorrechte toegang niet beschikbaar.
+- **Isolatie/bereik van bevoegdheden**: Gebruikers hebben geen bevoegdheden voor accounts die ook voor onbevoegde taken worden gebruikt, zoals e-mail controleren of internet gebruiken. Gebruikers moeten bevoegdheden aanvragen. Aanvragen worden goedgekeurd of geweigerd op basis van MIM-beleidsregels die zijn gedefinieerd door een PAM-beheerder. Tot een aanvraag is goedgekeurd, is bevoorrechte toegang niet beschikbaar.
 
--   **Meer bevoegdheden en verificatie**: Dit zijn nieuwe verificatie- en autorisatie-uitdagingen voor het beheer van de levenscyclus van afzonderlijke beheerdersaccounts. De gebruiker kan de uitbreiding van bevoegdheden voor een beheerdersaccount aanvragen en die aanvraag wordt verwerkt via de MIM-werkstroom.
+- **Meer bevoegdheden en verificatie**: Dit zijn nieuwe verificatie- en autorisatie-uitdagingen voor het beheer van de levenscyclus van afzonderlijke beheerdersaccounts. De gebruiker kan de uitbreiding van bevoegdheden voor een beheerdersaccount aanvragen en die aanvraag wordt verwerkt via de MIM-werkstroom.
 
--   **Aanvullende logboekregistratie**: samen met de geïntegreerde MIM-werkstromen, is er extra logboekregistratie voor PAM waarmee de aanvraag wordt geïdentificeerd en alle gebeurtenissen die plaatsvinden na de goedkeuring.
+- **Aanvullende logboekregistratie**: samen met de geïntegreerde MIM-werkstromen, is er extra logboekregistratie voor PAM waarmee de aanvraag wordt geïdentificeerd en alle gebeurtenissen die plaatsvinden na de goedkeuring.
 
--   **Aanpasbare werkstroom**: de MIM-werkstromen kunnen worden geconfigureerd voor verschillende scenario's en meerdere werkstromen kunnen worden gebruikt, op basis van de parameters van de aanvragende gebruiker of aangevraagde rollen.
+- **Aanpasbare werkstroom**: de MIM-werkstromen kunnen worden geconfigureerd voor verschillende scenario's en meerdere werkstromen kunnen worden gebruikt, op basis van de parameters van de aanvragende gebruiker of aangevraagde rollen.
 
 ## <a name="how-do-users-request-privileged-access"></a>Hoe kunnen gebruikers bevoorrechte toegang aanvragen?
-Er zijn verschillende manieren waarop een gebruiker een aanvraag kan indienen, waaronder:  
-- De webservices-API voor de MIM-services  
-- Een REST-eindpunt  
+
+Er zijn verschillende manieren waarop een gebruiker een aanvraag kan indienen, waaronder:
+
+- De webservices-API voor de MIM-services
+- Een REST-eindpunt
 - Windows PowerShell (`New-PAMRequest`)
 
-Meer informatie over de [Privileged Access Management-cmdlets](https://technet.microsoft.com/library/mt604080.aspx).
+Meer informatie over de [Privileged Access Management-cmdlets](https://docs.microsoft.com/powershell/identitymanager/mimpam/vlatest/mimpam).
 
 ## <a name="what-workflows-and-monitoring-options-are-available"></a>Welke werkstromen en controle-opties zijn beschikbaar?
+
 Stel dat een gebruiker lid was van een beheergroep voordat PIM werd ingesteld. Als onderdeel van de PIM-installatie wordt de gebruiker verwijderd uit de beheerdersgroep en wordt er een beleid gemaakt in MIM. Het beleid bepaalt dat als die gebruiker beheerdersbevoegdheden aanvraagt en wordt geverifieerd met MFA, de aanvraag wordt goedgekeurd en een afzonderlijk account voor de gebruiker wordt toegevoegd aan de bevoorrechte groep in het bastionforest.
 
 Ervan uitgaande dat de aanvraag wordt goedgekeurd, communiceert de actiewerkstroom rechtstreeks met het bastionforest Active Directory om een gebruiker aan een groep toe te voegen. Wanneer Jen bijvoorbeeld een aanvraag indient voor het beheer van de HR-database, wordt het beheerdersaccount van Jen binnen enkele seconden toegevoegd aan de bevoorrechte groep in het bastionforest. Haar lidmaatschap van het beheerdersaccount in die groep verloopt na een bepaalde tijd. Met Windows Server Technical Preview wordt dat lidmaatschap gekoppeld in Active Directory met een tijdslimiet; met Windows Server 2012 R2 in het bastionforest wordt die termijn afgedwongen door MIM.
@@ -93,3 +105,8 @@ Ervan uitgaande dat de aanvraag wordt goedgekeurd, communiceert de actiewerkstro
 > Daarentegen wordt een verlopen koppeling in real-time geëvalueerd door de Security Accounts Manager (SAM). Hoewel de toevoeging van een groepslid moet worden gerepliceerd door de domeincontroller die de toegangsaanvraag ontvangt, wordt het verwijderen van een groepslid direct geëvalueerd op een domeincontroller.
 
 Deze werkstroom is specifiek bedoeld voor deze beheerdersaccounts. Beheerders (of zelfs scripts) die alleen incidenteel toegang nodig hebben voor bevoorrechte groepen, kunnen die toegang nauwkeurig aanvragen. De aanvraag en wijzigingen in Active Directory worden in het logboek vastgelegd met MIM. U kunt ze weergeven in Logboeken of de gegevens verzenden naar de bewakingsoplossingen van de onderneming zoals System Center 2012 - Operations Manager Audit Collection Services (ACS) of andere hulpprogramma's van derden.
+
+## <a name="next-steps"></a>Volgende stappen
+
+- [Beperkende Pass-the-Hash (PtH) aanvallen en andere Referentiediefstal, versie 1 en 2](https://www.microsoft.com/download/details.aspx?id=36036)
+- [Privileged Access Management-cmdlets](https://docs.microsoft.com/powershell/identitymanager/mimpam/vlatest/mimpam)

@@ -2,21 +2,21 @@
 title: "Bevoorrechte rollen definiëren voor PAM | Microsoft Docs"
 description: "Bepalen welke bevoorrechte rollen moeten worden beheerd en het beheerbeleid voor elke rol definiëren."
 keywords: 
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 03/15/2017
+author: barclayn
+ms.author: barclayn
+manager: mbaldwin
+ms.date: 08/31/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 1a368e8e-68e1-4f40-a279-916e605581bc
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 807ee44c23f367c33b820251012008324bb2c005
-ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.openlocfilehash: cfd7c5bee0038740db0ad526072ec248ed9f221d
+ms.sourcegitcommit: 210195369d2ecd610569d57d0f519d683ea6a13b
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 09/01/2017
 ---
 # <a name="define-roles-for-privileged-access-management"></a>Rollen voor Privileged Access Management definiëren
 
@@ -24,7 +24,11 @@ Met Privileged Access Management kunt u gebruikers toewijzen aan bevoorrechte ro
 
 Een eenvoudige benadering voor het definiëren van rollen voor Privileged Access Management is door alle informatie in een werkblad te verzamelen. Vermeld de rollen in de rollen en gebruik de kolommen om beheervereisten en -machtigingen te identificeren.
 
-De beheervereisten variëren afhankelijk van de bestaande identiteit en toegangsbeleid of nalevingsvereisten. De parameters voor het identificeren van elke rol bevatten mogelijk de eigenaar van de rol, de mogelijke gebruikers die aan die rol kunnen worden toegevoegd en welke besturingselementen voor verificatie, goedkeuring of melding moeten worden gekoppeld aan het gebruik van de rol.
+De beheervereisten variëren afhankelijk van de bestaande identiteit en toegangsbeleid of nalevingsvereisten. De parameters voor het identificeren van elke rol zijn onder andere:
+
+- De eigenaar van de rol.
+- De mogelijke gebruikers die weergegeven in die rol worden
+- De verificatie, goedkeuring of melding besturingselementen die gekoppeld aan het gebruik van de rol worden moeten.
 
 De rolmachtigingen zijn afhankelijk van de toepassingen die worden beheerd. In dit artikel wordt Active Directory gebruikt als een voorbeeldtoepassing, waarbij de machtigingen in twee categorieën worden ingedeeld:
 
@@ -38,9 +42,9 @@ Begin met het vaststellen van de rollen die u wilt beheren met PAM. Op het werkb
 
 Bekijk elke toepassing die mogelijk wordt gebruikt voor beheer om de juiste rollen te vinden:
 
-- Bevindt de toepassing zich op niveau tier 0, tier 1 of tier 2?  
-- Wat zijn de machtigingen die van invloed zijn op de vertrouwelijkheid, integriteit of beschikbaarheid van de toepassing?  
-- Is de toepassing afhankelijk van andere onderdelen van het systeem, zoals databases, netwerk- of beveiligingsinfrastructuur, of het virtualisatie- of hostplatform?
+- De toepassing in [niveau van tier 0, tier 1 of tier 2](https://docs.microsoft.com/windows-server/identity/securing-privileged-access/securing-privileged-access-reference-material)?
+- Wat zijn de machtigingen die van invloed zijn op de vertrouwelijkheid, integriteit of beschikbaarheid van de toepassing?
+- De toepassing beschikt over afhankelijkheden van andere onderdelen van het systeem? Bijvoorbeeld, heeft deze afhankelijkheden op databases, netwerken, beveiligingsinfrastructuur, virtualisatie of hosting-platform?
 
 Bepaal hoe u deze app-overwegingen wilt groeperen. U kunt het beste rollen instellen met duidelijke grenzen en alleen voldoende machtigingen verlenen om algemene beheertaken in de app te kunnen voltooien.
 
@@ -80,15 +84,15 @@ Begin met het invullen van het werkblad wanneer u mogelijke rollen identificeert
 
 ## <a name="select-an-access-method"></a>Een toegangsmethode selecteren
 
-Mogelijk zijn er meerdere rollen in een Privileged Access Management-systeem waaraan dezelfde machtigingen zijn toegewezen, als verschillende community's met gebruikers verschillende vereisten voor toegangsbeheer hebben. Een organisatie kan bijvoorbeeld andere beleidsregels toepassen voor fulltime werknemers dan voor externe IT-medewerkers van een andere organisatie.
+Mogelijk zijn er meerdere rollen in een privileged access management-systeem met dezelfde machtigingen aan hen toegewezen. Dit kan gebeuren als verschillende community's van gebruikers verschillende vereisten voor toegangsbeheer hebben. Een organisatie kan bijvoorbeeld andere beleidsregels toepassen voor fulltime werknemers dan voor externe IT-medewerkers van een andere organisatie.
 
-In sommige gevallen kan een gebruiker permanent worden toegewezen aan een rol zodat deze geen roltoewijzing hoeft aan te vragen of te activeren. Voorbeelden van scenario’s voor permanente toewijzing:
+In sommige gevallen kan een gebruiker permanent worden toegewezen aan een rol. In dat geval hoeft ze niet aan te vragen of een roltoewijzing activeren. Voorbeelden van scenario’s voor permanente toewijzing:
 
 - Een beheerd serviceaccount in een bestaand forest
 
-- Een gebruikersaccount in het bestaande forest, met een referentie beheerd buiten PAM (bijvoorbeeld een account waarin een rol, zoals "domein/DC-onderhoud", nodig is om problemen op te lossen met vertrouwen en DC-status permanent wordt toegewezen aan het account met een fysiek beveiligd wachtwoord)
+- Een gebruikersaccount in het bestaande forest, met een referentie beheerd buiten PAM. Dit kan een account 'nood' zijn. De noodaccount kan moet een rol, zoals "domein / DC-onderhoud" problemen zoals vertrouwen en DC health om problemen te verhelpen. Als een noodaccount zou er de rol definitief toegewezen met een fysiek beveiligd wachtwoord)
 
-- Een gebruikersaccount in het beheerforest dat wordt geverifieerd met een wachtwoord (bijvoorbeeld, een gebruiker die permanent over constante beheermachtigingen moet beschikken en zich aanmeldt vanaf een apparaat waarop sterke verificatie niet wordt ondersteund)
+- Een gebruikersaccount in het beheerforest dat wordt geverifieerd met een wachtwoord. Dit kan zijn, een gebruiker die u moet beschikken over beheerdersmachtigingen voor permanente 24 x 7 en zich aanmeldt vanaf een apparaat waarop sterke verificatie kan niet ondersteunen.
 
 - Een gebruikersaccount in het beheerforest met een smartcard of virtuele smartcard (bijvoorbeeld, een account met een offlinesmartcard, die nodig is voor zeldzame onderhoudstaken)
 
@@ -96,14 +100,15 @@ Voor organisaties die zich zorgen maken over de mogelijkheid van diefstal of mis
 
 ## <a name="delegate-active-directory-permissions"></a>Machtigingen voor Active Directory delegeren
 
-Er worden met Windows Server automatisch standaardgroepen gemaakt zoals Domeinbeheerders wanneer nieuwe domeinen worden gemaakt. Dankzij deze groepen kunt u snel aan de slag en deze zijn mogelijk geschikt voor kleinere organisaties. Maar grotere organisaties of organisaties waarvoor meer isolatie van beheerdersbevoegdheden is vereist, moeten groepen zoals Domeinbeheerders leegmaken en deze vervangen door groepen met afzonderlijke machtigingen.
+Er worden met Windows Server automatisch standaardgroepen gemaakt zoals Domeinbeheerders wanneer nieuwe domeinen worden gemaakt. Dankzij deze groepen kunt u snel aan de slag en deze zijn mogelijk geschikt voor kleinere organisaties. Grotere organisaties of organisaties waarvoor meer isolatie van beheerdersbevoegdheden, moeten deze groepen leeg en deze vervangen door groepen met afzonderlijke machtigingen.
 
-Een beperking van de groep Domeinbeheerders is dat deze geen leden van een extern domein kan bevatten. Een andere beperking is dat hiermee machtigingen voor drie afzonderlijke functies worden verleend:  
-- De Active Directory-service zelf beheren  
-- De gegevens in Active Directory beheren  
+Een beperking van de groep Domeinbeheerders is dat deze geen leden van een extern domein kan bevatten. Een andere beperking is dat hiermee machtigingen voor drie afzonderlijke functies worden verleend:
+
+- De Active Directory-service zelf beheren
+- De gegevens in Active Directory beheren
 - Externe aanmelding bij computers die lid zijn van het domein inschakelen.
 
-Maak in plaats van standaardgroepen zoals Domeinbeheerders nieuwe beveiligingsgroepen die alleen de benodigde machtigingen verlenen en gebruik MIM om dynamisch beheerdersaccounts te maken met die groepslidmaatschappen.
+Maak in plaats van standaardgroepen zoals domeinbeheerders, nieuwe beveiligingsgroepen die alleen de benodigde machtigingen te bieden. Vervolgens moet u MIM om dynamisch beheerdersaccounts met die groepslidmaatschappen gebruiken.
 
 ### <a name="service-management-permissions"></a>Machtigingen voor servicebeheer
 
@@ -111,7 +116,7 @@ In de volgende tabel worden voorbeelden gegeven van machtigingen die geschikt zi
 
 | Rol | Beschrijving |
 | ---- | ---- |
-| Domein/DC-onderhoud | Lidmaatschap van de groep Domein\beheerders voor het oplossen van problemen en het wijzigen van het besturingssysteem van de domeincontroller waarmee een nieuwe domeincontroller kan worden toegevoegd aan een bestaand domein in het forest en de overdracht van AD-rollen.
+| Domein/DC-onderhoud | Lidmaatschap van de groep domein\beheerders maakt het oplossen van problemen en het wijzigen van het besturingssysteem van de domain controller. Bewerkingen zoals het promoveren van een nieuwe domeincontroller in een bestaand domein in het forest en de overdracht van AD-rol.
 |Virtuele DC's beheren | Domeincontrollers en virtuele machines beheren met de software voor virtualisatiebeheer. Deze bevoegdheid kan worden verleend via volledig beheer van alle virtuele machines in het beheerhulpprogramma of de functie voor op rollen gebaseerde toegang. |
 | Schema uitbreiden | Het schema beheren, inclusief nieuwe objectdefinities toevoegen, machtigingen voor schemaobjecten wijzigen en standaardmachtigingen voor objecttypen van het schema wijzigen |
 | Een back-up maken van een Active Directory-database | Een back-up maken van de volledige Active Directory-database, inclusief alle geheimen toevertrouwd aan de domeincontroller en het domein. |
@@ -123,7 +128,7 @@ In de volgende tabel worden voorbeelden gegeven van machtigingen die geschikt zi
 
 ### <a name="data-management-permissions"></a>Machtigingen voor gegevensbeheer
 
-In de volgende tabel worden voorbeelden gegeven van machtigingen die geschikt zijn voor opname in rollen voor het beheer of het gebruik van gegevens die zijn opgeslagen in AD.
+De volgende tabel worden voorbeelden gegeven van machtigingen die geschikt zijn voor opname in rollen voor het beheer of met behulp van de gegevens die zijn opgeslagen in AD.
 
 | Rol | Beschrijving |
 | ---- | ---- |
@@ -139,7 +144,7 @@ In de volgende tabel worden voorbeelden gegeven van machtigingen die geschikt zi
 
 ## <a name="example-role-definitions"></a>Voorbeeldroldefinities
 
-De keuze van roldefinities is afhankelijk van de laag van de servers die worden beheerd met de bevoorrechte accounts. Het is ook afhankelijk van de keuze van toepassingen die worden beheerd, aangezien toepassingen, zoals Exchange of zakelijke producten van derden, zoals SAP, vaak zijn voorzien van hun eigen aanvullende roldefinities voor gedelegeerd beheer.
+De keuze van roldefinities is afhankelijk van de laag van de servers die worden beheerd. Dit is ook afhankelijk van de keuze van toepassingen die worden beheerd. Toepassingen, zoals Exchange of van derden enterprise-producten, zoals SAP, vaak zijn voorzien hun eigen aanvullende roldefinities voor gedelegeerd beheer.
 
 De volgende secties bevatten voorbeelden voor typisch zakelijke scenario's.
 
@@ -199,3 +204,8 @@ Rollen voor het beheer van niet-administratieve gebruikers en computerbeheer zij
 - Helpdesk
 - Beveiligingsgroepbeheerders
 - Ondersteuning voor werkstations op locatie
+
+## <a name="next-steps"></a>Volgende stappen
+
+- [Naslagmateriaal bevoorrechte toegang beveiligen](https://docs.microsoft.com/windows-server/identity/securing-privileged-access/securing-privileged-access-reference-material)
+- [Azure MFA gebruiken voor activering](use-azure-mfa-for-activation.md)
