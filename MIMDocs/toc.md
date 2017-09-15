@@ -21,6 +21,15 @@
 ### [MIM installeren: service en portal](install-mim-service-portal.md)
 ### [MIM installeren: databases synchroniseren](install-mim-sync-ad-service.md)
 ## [Upgrade uitvoeren in Forefront Identity Manager 2010 R2](microsoft-identity-manager-2016-upgrade-from-fim-2010-R2.md)
+## [MIM Certificate Management installeren](./deploy-use/mim-cm-deploy.md)
+## [Installatie-onderwerpen voor BHOLD](./deploy-use/bhold-installation-guide.md)
+### [Basisinstallatie van BHOLD](./deploy-use/bhold-core-installation.md)
+### [Installatie van BHOLD-integratie](./deploy-use/bhold-integration-installation.md)
+### [Installatie van BHOLD-attestation](./deploy-use/bhold-attestation-installation.md)
+### [Installatie van BHOLD-modelgenerator](./deploy-use/bhold-model-generator-installation.md)
+### [Installatie van BHOLD-rapportage](./deploy-use/bhold-reporting-installation.md)
+### [Installatie van BHOLD-analyse](./deploy-use/bhold-analytics-installation.md)
+### [Installatie van BHOLD-access management-connector](./deploy-use/bhold-access-management-connector-install.md)
 ## [Meldingsservice voor wachtwoordwijzigingen](deploying-mim-password-change-notification-service-on-domain-controller.md)
 ## [Hybride rapportage van Identity Manager](working-with-identity-manager-hybrid-reporting.md)
 ## [Selfservice voor wachtwoordherstel](working-with-self-service-password-reset.md)
@@ -75,7 +84,10 @@
 ### [Rapportage van aangepaste rapporten en uitbreidbaarheid](https://technet.microsoft.com/library/jj133861)
 ## [Microsoft Identity-software: buildversies van openbare versie](https://blogs.technet.microsoft.com/iamsupport/idmbuildversions/)
 # [Verwijzing](./reference/microsoft-identity-manager-2016-developer-reference.md)
-## [Microsoft Identity Manager 2016-naslaginformatie voor ontwikkelaars](./reference/microsoft-identity-manager-2016-developer-reference.md)
+## Referentie voor ontwikkelaars
+### [MIM 2016-referentie voor ontwikkelaars](./reference/microsoft-identity-manager-2016-developer-reference.md)
+### BHOLD
+#### [BHOLD-referentie voor ontwikkelaars](./reference/mim2016-bhold-developer-reference.md) 
 ### [Naslaginformatie voor REST API van Certificate Management](./reference/certificate-management-rest-api-reference.md)
 #### [Servicegegevens voor REST API van CM](./reference/certificate-management-rest-api-service-details.md)
 #### [Overzicht met voorbeeld van inschrijving](./reference/sample-enrollment-walkthrough.md)
@@ -117,4 +129,8 @@
 ### [Foutcodes voor Management-agent](./reference/maerrorcodes.md)
 ### [Functieoverzicht voor Microsoft Identity Manager 2016](./reference/mim2016-functions-reference.md)
 ### [Wachtwoordbeheer voor Microsoft Identity Manager 2016](./infrastructure/mim2016-password-management.md)
-## [Versiegeschiedenis](./reference/version-history.md)
+### BHOLD
+#### [Handleiding voor BHOLD-concepten](./understand-explore/bhold-concepts-guide.md)
+## Versiegeschiedenis
+### [Versiegeschiedenis van MIM](./reference/version-history.md)
+### [Versiegeschiedenis van BHOLD](./reference/version-bhold-history.md)
