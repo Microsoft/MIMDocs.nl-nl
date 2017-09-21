@@ -2,23 +2,24 @@
 title: Herstel na noodgevallen in PAM | Microsoft Docs
 description: Meer informatie over het configureren van Privileged Access Management voor een hoge beschikbaarheid en herstel na noodgevallen.
 keywords: 
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 03/15/2017
+author: barclayn
+ms.author: barclayn
+manager: mbaldwin
+ms.date: 09/13/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 03e521cd-cbf0-49f8-9797-dbc284c63018
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 2fab9af837ed11b1f2f7f32c9ced6d79c8cc9d00
-ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.openlocfilehash: e6e603a4d827639c30880f6997f949d0d1732421
+ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 09/14/2017
 ---
 # <a name="high-availability-and-disaster-recovery-considerations-for-the-bastion-environment"></a>Overwegingen voor hoge beschikbaarheid en herstel na noodgevallen voor de bastionomgeving
+
 In dit artikel worden de overwegingen beschreven voor hoge beschikbaarheid en herstel na noodgevallen bij de implementatie van Active Directory Domain Services (AD DS) en Microsoft Identity Manager 2016 (MIM) voor Privileged Access Management PAM.
 
 Ondernemingen concentreren zich op hoge beschikbaarheid en herstel na noodgevallen voor werkbelastingen in Windows Server, SQL Server en Active Directory. Maar de betrouwbare beschikbaarheid van de bastionomgeving voor Privileged Access Management is ook belangrijk. De bastionomgeving speelt een cruciale rol in de IT-infrastructuur van de onderneming omdat gebruikers communiceren met de onderdelen om beheerdersrollen te kunnen aannemen. U kunt het technische document [Microsoft High Availability Overview](http://download.microsoft.com/download/3/B/5/3B51A025-7522-4686-AA16-8AE2E536034D/Microsoft%20High%20Availability%20Strategy%20White%20Paper.doc) (Overzicht van hoge beschikbaarheid van Microsoft) voor meer informatie over maximale beschikbaarheid in het algemeen.
@@ -57,26 +58,31 @@ Zodra een vertrouwensrelatie tot stand is gebracht, kunnen schaduwgroepen worden
 Voor gebruikers- en groepsmigratie moeten de bestaande forestdomeincontrollers online zijn, evenals de MIM- en AD-onderdelen van de bastionomgeving.   Als de bestaande forestdomeincontrollers niet bereikbaar zijn, kunnen er geen extra gebruikers en groepen worden toegevoegd aan de bastionomgeving, maar bestaande gebruikers en groepen worden niet beïnvloed. Als er een storing optreedt van een van deze onderdelen tijdens de migratie, kan de beheerder het opnieuw proberen zodra de storing is opgelost.
 
 ### <a name="mim-administration"></a>MIM-beheer
+
 Als gebruikers en groepen zijn gemigreerd, kan een beheerder de roltoewijzingen waarmee gebruikers worden gekoppeld als kandidaten voor activering in rollen verder configureren in MIM.  Ze kunnen ook het MIM-beleid configureren voor goedkeuring en Azure MFA.  
 
 Voor MIM-beheer is vereist dat de MIM- en AD-onderdelen van de bastionomgeving online zijn.
 
 ### <a name="privileged-role-activation"></a>Activering van bevoorrechte rollen
+
 Wanneer een gebruiker een bevoorrechte rol wil activeren, moet deze zich verifiëren bij de bastionomgeving en een aanvraag indienen bij MIM.  MIM bevat SOAP en REST API's, evenals gebruikersinterfaces in PowerShell en een webpagina.
 
 Voor activering van bevoorrechte rollen is vereist dat de MIM- en AD-onderdelen van de bastionomgeving online zijn.  Als MIM daarnaast is geconfigureerd voor gebruik van [Azure MFA voor activering](use-azure-mfa-for-activation.md) van de geselecteerde rol, is internettoegang vereist om contact op te nemen met de Azure MFA-service.
 
 ### <a name="resource-management"></a>Resourcebeheer
+
 Wanneer een gebruiker is geactiveerd voor de rol, kan de domeincontroller een Kerberos-ticket genereren voor deze gebruiker dat kan worden gebruikt door domeincontrollers in de bestaande domeinen. Hiermee worden de nieuwe tijdelijke groepslidmaatschappen van de gebruiker herkend.
 
 Voor resourcebeheer is vereist dat een domeincontroller voor het resourcedomein online is, evenals een domeincontroller in de bastionomgeving.  Wanneer een gebruiker is geactiveerd, hoeven MIM of SQL niet online te zijn in de bastionomgeving om het Kerberos-ticket uit te geven.  (Als Windows Server 2012 R2 het functionele niveau voor de bastionomgeving is, moet MIM online zijn om het tijdelijke lidmaatschap van de groep te beëindigen.)
 
 ### <a name="monitoring-of-users-and-groups-in-the-existing-forest"></a>Bewaking van gebruikers en groepen in het bestaande forest
+
 MIM bevat ook een PAM-controleservice die regelmatig de gebruikers en groepen in de bestaande domeinen controleert en de MIM-database en AD dienovereenkomstig bijwerkt.  Deze service hoeft niet online te zijn voor rolactivering of tijdens resourcebeheer.
 
 Voor bewaking moeten de bestaande forestdomeincontrollers online zijn, evenals de MIM- en AD-onderdelen van de bastionomgeving.  
 
 ## <a name="deployment-options"></a>Implementatie-opties
+
 Het [overzicht van de omgeving](environment-overview.md) laat een basistopologie zien die geschikt is voor het leren van de technologie en die niet is bedoeld voor maximale beschikbaarheid. In deze sectie wordt beschreven hoe u die topologie kunt uitbreiden voor hoge beschikbaarheid, voor organisaties met één site evenals met meerdere bestaande sites.
 
 ### <a name="networking"></a>Netwerken
@@ -84,6 +90,7 @@ Het [overzicht van de omgeving](environment-overview.md) laat een basistopologie
 Het netwerkverkeer tussen de computers in de bastionomgeving moet worden geïsoleerd van de bestaande netwerken, bijvoorbeeld door een ander fysiek of virtueel netwerk te gebruiken.  Afhankelijk van de risico's voor de bastionomgeving, kan ook het nodig zijn om onafhankelijke fysieke verbindingen tussen de computers tot stand te brengen.  Voor bepaalde failoverclustertechnologieën gelden aanvullende vereisten voor netwerkinterfaces.
 
 De computers waarop Active Directory Domain Services worden gehost en de computers die de MIM-services hosten in de bastionomgeving vereisen bidirectionele verbinding met de resources in het bestaande forest zodat:
+
 - gebruikers kunnen worden geverifieerd door de PRIV-forestdomeincontrollers
 - gebruikers activering kunnen aanvragen
 - gebruikers Kerberos-tickets kunnen ontvangen voor resources in een bestaand forest
@@ -91,6 +98,7 @@ De computers waarop Active Directory Domain Services worden gehost en de compute
 - e-mailberichten van MIM via mailservers in het bestaande forest kunnen worden verzonden.
 
 ### <a name="minimal-high-availability-topologies"></a>Minimale topologieën voor hoge beschikbaarheid
+
 Een organisatie kan selecteren voor welke functies in de bastionomgeving hoge beschikbaarheid is vereist, met de volgende beperkingen:
 
 - Voor hoge beschikbaarheid voor elke functie die wordt geleverd door de bastionomgeving zijn ten minste twee domeincontrollers vereist.  
@@ -109,9 +117,11 @@ In het volgende diagram wordt een mogelijke architectuur weergegeven:
 Er kunnen extra servers worden geconfigureerd voor elk van deze functies om betere prestaties te leveren bij belastingsvoorwaarden of voor geografische redundantie zoals hieronder wordt beschreven.
 
 ### <a name="deployments-supporting-multiple-sites"></a>Implementaties die meerdere sites ondersteunen
-De juiste implementatietopologie kiezen voor resources die zijn geïmplementeerd op meerdere sites is afhankelijke van drie factoren:  
-- Doelen en risico’s voor hoge beschikbaarheid en herstel na noodgevallen  
-- De hardwaremogelijkheden voor het hosten van de bastionomgeving  
+
+De juiste implementatietopologie kiezen voor resources die zijn geïmplementeerd op meerdere sites is afhankelijke van drie factoren:
+
+- Doelen en risico’s voor hoge beschikbaarheid en herstel na noodgevallen
+- De hardwaremogelijkheden voor het hosten van de bastionomgeving
 - Het werkmodel voor beheer voor elke site.
 
 Een van de meest eenvoudige manieren is om de bastionomgeving op een bepaalde site te hosten.  Onder normale omstandigheden maken gebruikers verbinding met de MIM-implementatie in de bastionomgeving van die site en vragen activering aan. De activeringen worden toegepast op de resources in alle sites.  Als de netwerkverbinding wordt verbroken of de site die als host fungeert voor de bastionomgeving is niet beschikbaar, kunnen offlinereferenties worden gebruikt op een andere site om tijdelijk beheer uit te voeren totdat de netwerkverbinding weer is hersteld.  Mogelijk is deze benadering geschikt voor situaties waarbij lokaal beheer van een bepaalde site, zoals een filiaal, niet vaak voorkomen en zijn beperkt tot het opnieuw verbinden van die site met de rest van het netwerk van een organisatie.
@@ -135,6 +145,7 @@ Ten slotte zijn er complexere implementaties mogelijk waarbij meerdere bastionom
 ![Complex bastion voor topologieën met meerdere sites - diagram](media/bastion6.png)
 
 ### <a name="hosted-bastion-environment"></a>Gehoste bastionomgeving
+
 Sommige organisaties hebben ook overwogen om de bastionomgeving onafhankelijk van de bestaande sites tot stand te brengen. De software van de bastionomgeving kan worden gehost op een virtualisatieplatform binnen het netwerk van de organisatie of op een externe hostingprovider.  Houd rekening met het volgende wanneer u deze aanpak evalueert:
 
 - Als u bescherming wilt instellen tegen aanvallen van de bestaande domeinen, moet het beheer van de bastionomgeving worden geïsoleerd van de beheerdersaccounts van het bestaande domein.
@@ -143,9 +154,11 @@ Sommige organisaties hebben ook overwogen om de bastionomgeving onafhankelijk va
 - Voor een implementatie met hoge beschikbaarheid van SQL Server voor de MIM-service is een speciale opslagconfiguratie vereist zoals beschreven in de sectie [Database-opslag voor SQL Server](#sql-server-database-storage) hieronder.  Niet alle hostingproviders bieden momenteel Windows Server-hosting met schijfconfiguraties die geschikt zijn voor SQL Server-failoverclusters.
 
 ## <a name="deployment-preparation-and-recovery-procedures"></a>Procedures voor de implementatie en het herstel van implementaties
+
 Tijdens de voorbereiding voor een implementatie van de bastionomgeving met hoge beschikbaarheid en die gereed is voor herstel na noodgevallen moet worden nagedacht over hoe Windows Server Active Directory, SQL Server en de bijbehorende database in gedeelde opslag en de MIM-service en de bijbehorende PAM-onderdelen moeten worden geïnstalleerd.
 
 ### <a name="windows-server"></a>Windows Server
+
 Windows Server bevat een ingebouwde functie voor maximale beschikbaarheid, waardoor meerdere computers kunnen samenwerken als een failovercluster. De geclusterde servers zijn verbonden via fysieke kabels en software. Als een of meer van de clusterknooppunten uitvallen, worden andere knooppunten actief (dit proces wordt failover genoemd).   Zie het [Overzicht van failoverclustering](https://technet.microsoft.com/library/hh831579.aspx) voor meer informatie.
 
 Zorg ervoor dat het besturingssysteem en de toepassingen in de bastionomgeving updates ontvangen voor beveiligingsproblemen. Voor sommige van deze updates moet de server mogelijk opnieuw worden opgestart. U moet de tijdstippen waarop updates worden toegepast op de server goed coördineren om uitgebreide onderbrekingen te voorkomen. Een aanpak is het gebruik van [clusterbewust bijwerken](https://technet.microsoft.com/library/hh831694.aspx) voor de servers in een Windows Server-failovercluster.
@@ -153,9 +166,11 @@ Zorg ervoor dat het besturingssysteem en de toepassingen in de bastionomgeving u
 De servers in de bastionomgeving zijn toegevoegd aan een domein en zijn afhankelijk van de domeinservices. Zorg ervoor dat ze niet per ongeluk zijn geconfigureerd met een afhankelijkheid op een bepaalde domeincontroller voor services zoals DNS.
 
 ### <a name="bastion-environment-active-directory"></a>Active Directory in de bastionomgeving
+
 Windows Server Active Directory Domain Services biedt systeemeigen ondersteuning voor hoge beschikbaarheid en herstel na noodgevallen.
 
 #### <a name="preparation"></a>Voorbereiding
+
 Een standaard productie-implementatie van Privileged Access Management bevat ten minste twee domeincontrollers in de bastionomgeving. Instructies voor het instellen van de eerste domeincontroller in de bastionomgeving vindt u in stap 2 van de artikelen over implementatie: [De PRIV-domeincontroller voorbereiden](step-2-prepare-priv-domain-controller.md).
 
 De procedure voor het toevoegen van een extra domeincontroller kan worden gevonden in [Een replica van een Windows Server 2012-domeincontroller installeren in een bestaand domein (niveau 200)](https://technet.microsoft.com/library/jj574134.aspx).  
@@ -164,6 +179,7 @@ De procedure voor het toevoegen van een extra domeincontroller kan worden gevond
 > Lees de waarschuwingen in [Gevirtualiseerde domeincontrollers implementeren en configureren](https://technet.microsoft.com/library/jj574223.aspx) wanneer de domeincontroller moet worden gehost op een virtualisatieplatform zoals Hyper-V.
 
 #### <a name="recovery"></a>Herstel
+
 Zorg er na een storing voor dat er ten minste één domeincontroller beschikbaar is in de bastionomgeving voordat u de andere servers opnieuw start.
 
 Binnen een domein worden met Active Directory de FSMO-rollen (Flexible Single Master Operation) gedistribueerd tussen domeincontrollers, zoals beschreven in [De werking van Operations-masters](https://technet.microsoft.com/library/cc780487.aspx).  Als er een storing optreedt in een domeincontroller, moet u misschien een of meer van de [domeincontrollerrollen](https://technet.microsoft.com/library/cc786438.aspx) overzetten die aan dat domein zijn toegewezen.
@@ -173,18 +189,22 @@ Nadat u hebt vastgesteld dat een domeincontroller niet meer kan worden ingezet v
 U kunt het beste ook de DNS-instellingen controleren van computers die zijn toegevoegd aan de bastionomgeving, evenals de domeincontrollers in CORP-domeinen met een vertrouwensrelatie met die domeincontroller om er zeker van te zijn dat er geen domeincontrollers zijn gecodeerd met een afhankelijkheid op het IP-adres van die domeincontroller.
 
 ### <a name="sql-server-database-storage"></a>Database-opslag voor SQL Server
+
 Voor een implementatie met hoge beschikbaarheid zijn SQL Server-failoverclusters vereist. Deze SQL Server-failoverclusterinstanties zijn afhankelijk van gedeelde opslag tussen alle knooppunten voor de opslag van de database en logboekbestanden. De gedeelde opslag kan bestaan uit Windows Server Failover Clustering-clusterschijven, schijven op een Storage Area Network (SAN) of bestandsshares op een SMB-server.  Houd er rekening mee dat deze moeten worden toegewezen aan de bastionomgeving; opslag delen met andere werkbelastingen buiten de bastionomgeving wordt niet aanbevolen omdat dit de integriteit van de bastionomgeving in gevaar kan brengen.
 
 ### <a name="sql-server"></a>SQL Server
+
 Voor de MIM-service is een SQL Server-implementatie in de bastionomgeving vereist.   SQL kan worden geïmplementeerd met een failoverclusterinstatie voor hoge beschikbaarheid. In tegenstelling tot in zelfstandige instanties wordt de hoge beschikbaarheid van SQL Server in failoverclusterinstanties beveiligd door de aanwezigheid van redundante knooppunten in de failoverclusterinstanties. Tijdens een storing of een geplande upgrade wordt het eigendom van de resourcegroep verplaatst naar een ander Windows Server-failoverclusterknooppunt.
 
 Als u alleen ondersteuning nodig hebt voor herstel na noodgevallen en geen hoge beschikbaarheid, kunnen de back-upfunctie voor logboekbestanden, transactiereplicatie, momentopnamereplicatie of databasespiegeling worden gebruikt in plaats van failoverclustering.   
 
 #### <a name="preparation"></a>Voorbereiding
+
 Wanneer u de SQL-server installeert in de bastionomgeving, moet deze onafhankelijk zijn van SQL-servers die al aanwezig in de CORP-forests.  Bovendien wordt het aanbevolen de SQL-server te implementeren op een toegewezen server die niet gelijk is aan die van de domeincontroller.
 In de SQL Server-handleiding voor [Exemplaren van AlwaysOn-failoverclusters](https://msdn.microsoft.com/library/ms189134.aspx) kunt u meer informatie vinden.
 
 #### <a name="recovery"></a>Herstel
+
 Als SQL Server is geconfigureerd voor herstel na noodgevallen met de back-upfunctie voor logboekverzending, moet er actie moet worden ondernomen om SQL Server bij te werken tijdens het herstel.  Bovendien moeten alle instanties van de MIM-service opnieuw worden gestart.
 
 Als er een probleem is met SQL Server of de verbinding tussen SQL Server en de MIM-service is verbroken, kunt het beste alle MIM-services opnieuw starten nadat SQL Server is hersteld.  Dit zorgt ervoor dat de verbinding tussen de MIM-service en SQL Server wordt hersteld.
@@ -206,17 +226,21 @@ Elke MIM-implementatie met meerdere servers heeft elke MIM-service een externe h
 Als een MIM-service een aanvraag ontvangt, wordt de servicepartitienaam opgeslagen als een kenmerk voor deze aanvraag.   Vervolgens kunnen alleen andere installaties van de MIM-service met dezelfde servicepartitienaam deze aanvraag verwerken.  Als het PAM-scenario meerdere handmatige goedkeuringen bevat of andere langdurige aanvraagverwerkingen, moet u er dus voor zorgen dat elke MIM-service hetzelfde `servicePartitionName`-kenmerk bevat in dat configuratiebestand.
 
 #### <a name="recovery"></a>Herstel
+
 Zorg ervoor dat er na een storing ten minste één Active Directory-domeincontroller en SQL-server beschikbaar zijn in de bastionomgeving voordat u de MIM-service opnieuw start.  
 
 Een werkstroominstantie kan alleen worden voltooid door een MIM-serviceserver die dezelfde servicepartitienaam en servicenaam heeft als de MIM-serviceserver waarmee deze is gestart.  Als er een storing optreedt op een bepaalde computer tijdens het hosten van een MIM-service waarmee aanvragen werden verwerkt, en die computer wordt niet meer in gebruik genomen, moet de MIM-service op een nieuwe computer worden geïnstalleerd. Nadat de installatie is voltooid, moet u op de nieuwe MIM-service het bestand *resourcemanagementservice.exe.config* aanpassen en de kenmerken `serviceName` en `servicePartitionName` van de nieuwe MIM-implementatie instellen op dezelfde hostnaam en servicepartitienaam als de computer waarop de storing is opgetreden.
 
 ### <a name="mim-pam-components"></a>MIM PAM-onderdelen
+
 Het installatieprogramma voor de MIM-service en de portal bevat ook extra PAM-onderdelen, inclusief PowerShell-modules en twee services.
 
 #### <a name="preparation"></a>Voorbereiding
+
 De Privileged Access Management-onderdelen moeten worden geïnstalleerd op elke computer in de bastionomgeving waar de MIM-service wordt geïnstalleerd.  Ze kunnen niet later worden toegevoegd.
 
 #### <a name="recovery"></a>Herstel
+
 Zorg ervoor dat de MIM-service wordt uitgevoerd op ten minste één server na het herstel van een storing.  Zorg ervoor dat de MIM PAM-bewakingsservice ook op die server wordt uitgevoerd met behulp van `net start "PAM Monitoring service"`.
 
 Als het functionele forestniveau van de bastionomgeving Windows Server 2012 R2 is, moet u ervoor zorgen dat de MIM PAM-onderdeelservice ook wordt uitgevoerd op die server met de opdracht `net start "PAM Component service"`.

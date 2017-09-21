@@ -13,11 +13,11 @@ ms.assetid: 4978f60d-044d-4e84-8d93-65801fce1144
 ms.reviewer: mwahl
 ms.suite: ems
 ms.custom: mim
-ms.openlocfilehash: 36de40afac0c612bb8233f2cdbc53d97c96d8db1
-ms.sourcegitcommit: f29f02fa8437fa55e86afd7b0b99a36d2306b96b
+ms.openlocfilehash: 4c1576d8ee2d3edfe1a522131046b9a3afacf998
+ms.sourcegitcommit: ed8dd5563e77ef4a3345b2a52a1426859c95576a
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 09/15/2017
 ---
 # <a name="supported-platforms-for-mim-2016"></a>Ondersteunde platformen voor MIM 2016
 
@@ -38,7 +38,7 @@ In deze tabel worden de ondersteunde platformen en versies voor elk onderdeel va
 | | MIM-servicedatabases | SQL Server 2008 R2 SP3<br/>SQL Server 2012 SP2<br/>SQL Server 2014 SP1 <br/> SQL Server 2016 * |
 | | SharePoint | SharePoint Foundation 2010<br/>SharePoint Foundation 2013 SP1 <br/> SharePoint 2016 * |
 | | Mailserver voor goedkeuring van de MIM-service en e-mailberichten voor groepsbeheer (optioneel) | Exchange Server 2010 SP3<br/>Exchange Server 2013 SP1 <br/> Exchange Server 2016 * <br/> Exchange Online * (alleen meldingen) |
-| | Browser | Alle belangrijke browsers * |
+| | Browser | Alle belangrijke browsers * (mobiele apparaten beperkt)|
 | **MIM-servicerapportages** | Windows Server | Windows Server 2012 <br/> Windows Server 2016 * |
 | | Datawarehouse | System Center 2012 Service Manager <br/> System Center 2012 R2 Service Manager </br> System Center 2016 Service Manager * (met 4.4.1459)<br/> [Compatibiliteit van de versie van SQL Server voor System Center 2016](https://docs.microsoft.com/system-center/scsm/upgrade-to-sm-2016)
  |

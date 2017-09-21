@@ -2,21 +2,21 @@
 title: PAM implementeren - Stap 7 - Gebruikerstoegang | Microsoft Docs
 description: Als laatste stap moet u tijdelijke bevoorrechte gebruikerstoegang opgeven om aan te tonen dat de Privileged Access Management-implementatie is gelukt.
 keywords: 
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 03/15/2017
+author: barclayn
+ms.author: barclayn
+manager: mbaldwin
+ms.date: 09/13/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 5325fce2-ae35-45b0-9c1a-ad8b592fcd07
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 89d9b38177b91f64e746fea583684abcecc9d7ff
-ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.openlocfilehash: f8ad03bc072dbf6df36a9ef737479dce60b70b8b
+ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 09/14/2017
 ---
 # <a name="step-7--elevate-a-users-access"></a>Stap 7 – De toegangsrechten van een gebruiker uitbreiden
 
@@ -27,6 +27,7 @@ ms.lasthandoff: 07/13/2017
 In deze stap wordt gedemonstreerd dat een gebruiker via MIM toegang tot een functie kan aanvragen.
 
 ## <a name="verify-that-jen-cannot-access-the-privileged-resource"></a>Controleren of Jen geen toegang heeft tot de bevoorrechte resource
+
 Zonder verhoogde bevoegdheden heeft Jen geen toegang tot de bevoorrechte resource in het CORP-forest.
 
 1. Meld u af bij CORPWKSTN om alle geopende verbindingen in de cache te verwijderen.
@@ -36,9 +37,10 @@ Zonder verhoogde bevoegdheden heeft Jen geen toegang tot de bevoorrechte resourc
 5. Houd het opdrachtpromptvenster geopend.
 
 ## <a name="request-privileged-access-from-mim"></a>Bevoorrechte toegang aanvragen bij MIM
+
 1. Typ op CORPWKSTN de volgende opdracht terwijl u nog steeds als CONTOSO\Jen bent aangemeld.
 
-    ```
+    ```cmd
     runas /user:Priv.Jen@priv.contoso.local powershell
     ```
 
@@ -48,7 +50,7 @@ Zonder verhoogde bevoegdheden heeft Jen geen toegang tot de bevoorrechte resourc
     > [!NOTE]
     > Nadat u deze opdrachten uitgevoerd, zijn de volgende stappen tijdgebonden.
 
-    ```
+    ```PowerShell
     Import-module MIMPAM
     $r = Get-PAMRoleForRequest | ? { $_.DisplayName –eq "CorpAdmins" }
     New-PAMRequest –role $r
@@ -58,7 +60,7 @@ Zonder verhoogde bevoegdheden heeft Jen geen toegang tot de bevoorrechte resourc
 4. Sluit het PowerShell-venster nadat de stappen zijn voltooid.
 5. Typ de volgende opdracht in het DOS-opdrachtvenster.
 
-    ```
+    ```cmd
     runas /user:Priv.Jen@priv.contoso.local powershell
     ```
 
@@ -67,7 +69,7 @@ Zonder verhoogde bevoegdheden heeft Jen geen toegang tot de bevoorrechte resourc
 ## <a name="validate-the-elevated-access"></a>Valideer de uitgebreide toegangsrechten.
 Typ de volgende opdrachten in het nieuwe venster dat wordt geopend.
 
-```
+```cmd
 whoami /groups
 dir \\corpwkstn\corpfs
 ```
@@ -75,12 +77,13 @@ dir \\corpwkstn\corpfs
 Als de opdracht dir mislukt met het foutbericht **De toegang is geweigerd**, moet u de vertrouwensrelatie opnieuw controleren.
 
 ## <a name="activate-the-privileged-role"></a>De bevoorrechte rol activeren
+
 U kunt de activering uitvoeren door bevoorrechte toegang aan te vragen via de PAM-voorbeeldportal.
 
 1. Controleer of u op CORPWKSTN bent aangemeld als CORP\Jen.
 2. Typ de volgende opdracht in een DOS-opdrachtvenster.
 
-    ```
+    ```cmd
     runas /user:Priv.Jen@priv.contoso.local "c:\program files\Internet Explorer\iexplore.exe"
     ```
 
@@ -95,6 +98,7 @@ U kunt de activering uitvoeren door bevoorrechte toegang aan te vragen via de PA
 > In deze omgeving kunt u ook ontdekken hoe u toepassingen kunt ontwikkelen die gebruikmaken van de PAM REST API, zoals is beschreven in het [referentiemateriaal voor de Privileged Access Management REST API](/microsoft-identity-manager/reference/privileged-access-management-rest-api-reference).
 
 ## <a name="summary"></a>Samenvatting
+
 Nadat u de stappen in dit overzicht hebt voltooid, hebt u een scenario voor Privileged Access Management gedemonstreerd waarin gebruikersbevoegdheden tijdelijk worden uitgebreid zodat de gebruiker toegang heeft tot beveiligde resources met een afzonderlijk bevoorrecht account. Zodra de sessie voor uitbreiding van de toegangsrechten is verlopen, is de beveiligde resource niet meer toegankelijk met het bevoorrechte account. De beslissing over welke beveiligingsgroepen de bevoorrechte rollen vertegenwoordigen, wordt gecoördineerd door de PAM-beheerder. Nadat de toegangsrechten zijn gemigreerd naar het Privileged Access Management-systeem, kan er geen toegang meer worden verkregen met het oorspronkelijke gebruikersaccount, maar moeten gebruikers zich aanmelden met een speciaal bevoorrecht account dat alleen op aanvraag beschikbaar wordt gesteld. Als gevolg hiervan zijn groepslidmaatschappen voor maximaal bevoorrechte accounts slechts tijdelijk van kracht.
 
 >[!div class="step-by-step"]

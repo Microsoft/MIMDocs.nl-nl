@@ -2,28 +2,27 @@
 title: PAM implementeren - Stap 5 - Forest-koppeling | Microsoft Docs
 description: Vertrouwensrelatie tussen de PRIV- en CORP-forests instellen zodat bevoegde gebruikers in PRIV nog steeds toegang hebben tot resources in CORP.
 keywords: 
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 03/15/2017
+author: barclayn
+ms.author: barclayn
+manager: mbaldwin
+ms.date: 09/13/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: eef248c4-b3b6-4b28-9dd0-ae2f0b552425
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 1239ca2c0c6d376420723da01d7aa42821f5980f
-ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.openlocfilehash: 6d57b09508d4c0834619be0281fb373d9d3d361e
+ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 09/14/2017
 ---
 # <a name="step-5--establish-trust-between-priv-and-corp-forests"></a>Stap 5 –Een vertrouwensrelatie tussen het PRIV- en CORP-forest instellen
 
 >[!div class="step-by-step"]
 [« Stap 4](step-4-install-mim-components-on-pam-server.md)
 [Stap 6 »](step-6-transition-group-to-pam.md)
-
 
 Voor elk CORP-domein, zoals contoso.local, moet voor de PRIV- en CONTOSO-domeincontrollers een vertrouwensrelatie zijn ingesteld. Hiermee hebben gebruikers in het PRIV-domein toegang tot resources op het CORP-domein.
 
@@ -36,7 +35,7 @@ Voordat een vertrouwensrelatie tot stand kan worden gebracht, moet elke domeinco
 
 2.  Controleer of met elke bestaande CORP-domeincontroller namen naar het PRIV-forest kunnen worden omgeleid. Start PowerShell op elke domeincontroller buiten het PRIV-forest, zoals CORPDC, en typ de volgende opdracht:
 
-    ```
+    ```cmd
     nslookup -qt=ns priv.contoso.local.
     ```
     Controleer of de uitvoer een naamserverrecord voor het PRIV-domein met de juiste IP-adres bevat.
@@ -55,14 +54,14 @@ Op PAMSRV moet u een eenzijdige vertrouwensrelatie met elk domein, zoals CORPDC,
 
 3.  Typ de volgende PowerShell-opdrachten voor elk bestaand forest. Voer de referentie voor de CORP-domeinbeheerder in (CONTOSO\Administrator) als u hierom wordt gevraagd.
 
-    ```
+    ```PowerShell
     $ca = get-credential
     New-PAMTrust -SourceForest "contoso.local" -Credentials $ca
     ```
 
 4.  Typ de volgende PowerShell-opdrachten voor elk domein in de bestaande forests. Voer de referentie voor de CORP-domeinbeheerder in (CONTOSO\Administrator) als u hierom wordt gevraagd.
 
-    ```
+    ```PowerShell
     $ca = get-credential
     New-PAMDomainConfiguration -SourceDomain "contoso" -Credentials $ca
     ```
@@ -80,9 +79,9 @@ Voor elk bestaand forest moet u voor PRIV-beheerders en de controleservice leest
 7.  Selecteer in de lijst met algemene taken **Alle gebruikersgegevens lezen** en klik vervolgens op **Volgende** en **Voltooien**.  
 8.  Sluit Active Directory - gebruikers en computers.
 
-9.  Open een PowerShell-venster.  
-10.  Gebruik `netdom` om ervoor te zorgen dat SID-geschiedenis is ingeschakeld en SID-filtering is uitgeschakeld. Type:  
-    ```
+9.  Open een PowerShell-venster.
+10.  Gebruik `netdom` om ervoor te zorgen dat SID-geschiedenis is ingeschakeld en SID-filtering is uitgeschakeld. Type:
+    ```cmd
     netdom trust contoso.local /quarantine /domain priv.contoso.local
     netdom trust /enablesidhistory:yes /domain priv.contoso.local
     ```
@@ -98,7 +97,7 @@ Voor elk bestaand forest moet u voor PRIV-beheerders en de controleservice leest
 
 3.  Typ de volgende PowerShell-opdrachten.
 
-    ```
+    ```cmd
     net start "PAM Component service"
     net start "PAM Monitoring service"
     ```

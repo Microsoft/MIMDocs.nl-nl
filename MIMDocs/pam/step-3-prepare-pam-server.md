@@ -2,10 +2,10 @@
 title: PAM implementeren - Stap 3 - PAM-server | Microsoft Docs
 description: Een PAM-server voorbereiden die fungeert als host voor SQL en SharePoint van uw Privileged Access Management-implementatie.
 keywords: 
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 03/15/2017
+author: barclayn
+ms.author: barclayn
+manager: mbaldwin
+ms.date: 09/13/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
@@ -13,11 +13,11 @@ ms.assetid: 68ec2145-6faa-485e-b79f-2b0c4ce9eff7
 ROBOTS: noindex,nofollow
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 9a262a256062688542040827653a7df8d82e1044
-ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.openlocfilehash: fd52a191a0592441131249451011c4e2f026ea48
+ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 09/14/2017
 ---
 # <a name="step-3--prepare-a-pam-server"></a>Stap 3 – Een PAM-server voorbereiden
 
@@ -26,6 +26,7 @@ ms.lasthandoff: 07/13/2017
 [Stap 4 »](step-4-install-mim-components-on-pam-server.md)
 
 ## <a name="install-windows-server-2012-r2"></a>Windows Server 2012 R2 installeren
+
 Installeer op een derde virtuele machine Windows Server 2012 R2, meer specifiek Windows Server 2012 R2 Standard (server met een GUI) x64, om *PAMSRV* te maken. Omdat SQL Server en SharePoint 2013 worden geïnstalleerd op deze computer, is er ten minst 8 GB aan RAM-geheugen vereist.
 
 1. Selecteer **Windows Server 2012 R2 Standard (server met een GUI) x64**.
@@ -46,13 +47,14 @@ Installeer op een derde virtuele machine Windows Server 2012 R2, meer specifiek 
 
 
 ### <a name="add-the-web-server-iis-and-application-server-roles"></a>De functies van de webserver (IIS) en de toepassingsserver toevoegen
+
 Voeg de functies van de webserver (IIS) en de toepassingsserver, de onderdelen van .NET Framework 3.5, de Active Directory-module voor Windows PowerShell en andere functies toe die zijn vereist voor SharePoint.
 
 1.  Meld u aan als een PRIV-domeinbeheerder (PRIV\Administrator) en start PowerShell.
 
 2.  Typ de volgende opdrachten: U moet mogelijk een andere locatie opgeven voor de bronbestanden voor de .NET Framework 3.5-onderdelen. Deze onderdelen zijn meestal niet aanwezig wanneer Windows Server wordt geïnstalleerd, maar zijn beschikbaar in de map SxS (side-by-side), die deel uitmaakt van de map Bronnen op de installatieschijf voor het besturingssysteem, bijvoorbeeld: d:\Sources\SxS\.
 
-    ```
+    ```PowerShell
     import-module ServerManager
     Install-WindowsFeature Web-WebServer, Net-Framework-Features,
     rsat-ad-powershell,Web-Mgmt-Tools,Application-Server,
@@ -61,6 +63,7 @@ Voeg de functies van de webserver (IIS) en de toepassingsserver, de onderdelen v
     ```
 
 ### <a name="configure-the-server-security-policy"></a>Het beveiligingsbeleid van de server configureren
+
 Configureer het beveiligingsbeleid van de server zodanig dat de zojuist gemaakte accounts als services kunnen worden uitgevoerd.
 
 1.  Start het programma **Lokaal beveiligingsbeleid**.   
@@ -68,45 +71,49 @@ Configureer het beveiligingsbeleid van de server zodanig dat de zojuist gemaakte
 3.  Klik in het detailvenster met de rechtermuisknop op **Aanmelden als service** en selecteer **Eigenschappen**.  
 4.  Klik op **Gebruiker of groep toevoegen** en voer bij Gebruiker en groepsnamen *priv\mimmonitor; priv\MIMService; priv\SharePoint; priv\mimcomponent; priv\SqlServer* in. Klik op **Namen controleren** en vervolgens op **OK**.  
 
-5.  Klik op **OK** om het venster Eigenschappen te sluiten.  
+5.  Klik op **OK** om het venster Eigenschappen te sluiten.
 6.  Klik in het detailvenster met de rechtermuisknop op **Toegang tot deze computer vanaf het netwerk weigeren** en selecteer **Eigenschappen**.  
 7.  Klik op **Gebruiker of groep toevoegen**, voer bij Gebruiker en groepsnamen *priv\mimmonitor; priv\MIMService; priv\mimcomponent* in en klik op **OK**.  
-8.  Klik op **OK** om het venster Eigenschappen te sluiten.  
+8.  Klik op **OK** om het venster Eigenschappen te sluiten.
 
 9. Klik in het detailvenster met de rechtermuisknop op **Lokaal aanmelden weigeren** en selecteer **Eigenschappen**.  
 10. Klik op **Gebruiker of groep toevoegen**, voer bij Gebruiker en groepsnamen *priv\mimmonitor; priv\MIMService; priv\mimcomponent* in en klik op **OK**.  
 11. Klik op **OK** om het venster Eigenschappen te sluiten.  
 12. Sluit het venster Lokaal beveiligingsbeleid.  
 
-13. Open Configuratiescherm en schakel over naar **Gebruikersaccounts**.  
-14. Klik op **Andere gebruikers toegang tot deze computer geven** .  
+13. Open Configuratiescherm en schakel over naar **Gebruikersaccounts**.
+14. Klik op **Andere gebruikers toegang tot deze computer geven **.
 15. Klik op **Toevoegen**, voer de gebruiker *MIMADMIN* in het domein *PRIV* in en klik in het volgende scherm van de wizard op **Deze gebruiker toevoegen als beheerder**.  
 16. Klik op **Toevoegen**, voer de gebruiker *SharePoint* in het domein *PRIV* in en klik in het volgende scherm van de wizard op **Deze gebruiker toevoegen als beheerder**.  
-17. Sluit Configuratiescherm.  
+17. Sluit Configuratiescherm.
 
 ### <a name="change-the-iis-configuration"></a>IIS-configuratie wijzigen
+
 Er zijn twee manieren waarop u de IIS-configuratie kunt wijzigen zodat toepassingen kunnen gebruikmaken van de Windows-verificatiemodus. Zorg dat u bent aangemeld als MIMAdmin en gebruik vervolgens een van deze opties.
 
 Als u PowerShell wilt gebruiken:
-1.  Klik met de rechtermuisknop op PowerShell en selecteer **Als administrator uitvoeren**.  
-2.  Stop IIS en ontgrendel de instellingen voor de toepassingshost met de volgende opdrachten.  
-    ```
+
+1.  Klik met de rechtermuisknop op PowerShell en selecteer **Als administrator uitvoeren**.
+2.  Stop IIS en ontgrendel de instellingen voor de toepassingshost met de volgende opdrachten.
+    ```CMD
     iisreset /STOP
     C:\Windows\System32\inetsrv\appcmd.exe unlock config /section:windowsAuthentication -commit:apphost
     iisreset /START
     ```
 
-Als u een teksteditor wilt gebruiken zoals Kladblok:   
-1. Open het bestand **C:\Windows\System32\inetsrv\config\applicationHost.config**   
+Als u een teksteditor wilt gebruiken zoals Kladblok:
+
+1. Open het bestand **C:\Windows\System32\inetsrv\config\applicationHost.config**
 2. Schuif naar regel 82 van het bestand. De labelwaarde van **overrideModeDefault** moet **<section name="windowsAuthentication" overrideModeDefault="Deny" />** zijn.  
 3. Wijzig de waarde van **overrideModeDefault** in *Allow*.  
 4. Sla het bestand op en start IIS opnieuw met de PowerShell-opdracht `iisreset /START`.
 
 ## <a name="install-sql-server"></a>SQL Server installeren
+
 Als SQL Server nog niet aanwezig is in de bastionomgeving, installeert u SQL Server 2012 (Service Pack 1 of hoger) of SQL Server 2014. In de volgende stappen wordt ervan uitgegaan dat u SQL Server 2014 gebruikt.
 
 1. Zorg dat u bent aangemeld als MIMAdmin.
-2. Klik met de rechtermuisknop op PowerShell en selecteer **Als administrator uitvoeren**.   
+2. Klik met de rechtermuisknop op PowerShell en selecteer **Als administrator uitvoeren**.
 3. Ga naar de map met het installatieprogramma van SQL Server.  
 4. Typ de volgende opdracht:  
     ```
@@ -133,6 +140,7 @@ Nadat de vereiste onderdelen voor SharePoint zijn geïnstalleerd, installeert u 
 5.  Voer de wizard uit nadat de installatie is voltooid.  
 
 ### <a name="configure-sharepoint"></a>SharePoint configureren
+
 Voer de wizard Configuratie van SharePoint-producten uit.
 
 1.  Schakel op het tabblad Verbinding met een serverfarm over naar **Een nieuwe serverfarm maken**.  
@@ -146,13 +154,14 @@ Voer de wizard Configuratie van SharePoint-producten uit.
 9. Klik in het venster Een siteverzameling maken op **Overslaan** en **Voltooien**.  
 
 ## <a name="create-a-sharepoint-foundation-2013-web-application"></a>Een SharePoint Foundation 2013-webtoepassing maken
+
 Nadat de wizard is voltooid, gebruikt u PowerShell om een SharePoint Foundation 2013-webtoepassing te maken waarmee de MIM-portal wordt gehost. Omdat dit overzicht alleen is bedoeld voor demonstratiedoeleinden, wordt SSL niet ingeschakeld.
 
 1.  Klik met de rechtermuisknop op de SharePoint 2013-beheershell, selecteer **Als administrator uitvoeren** en voer het volgende PowerShell-script uit:
 
-    ```
+    ```PowerShell
     $dbManagedAccount = Get-SPManagedAccount -Identity PRIV\SharePoint
-    New-SpWebApplication -Name "MIM Portal" -ApplicationPool "MIMAppPool"            -ApplicationPoolAccount $dbManagedAccount -AuthenticationMethod "Kerberos" -Port 82 -URL http://PAMSRV.priv.contoso.local
+    New-SpWebApplication -Name "MIM Portal" -ApplicationPool "MIMAppPool" -ApplicationPoolAccount $dbManagedAccount -AuthenticationMethod "Kerberos" -Port 82 -URL http://PAMSRV.priv.contoso.local
     ```
 
 2. Er wordt een waarschuwing weergegeven waarin wordt aangegeven dat de klassieke Windows-verificatiemethode wordt gebruikt en dat het enkele minuten kan duren voordat de laatste opdracht een waarde retourneert.  Nadat het script is voltooid, wordt in de uitvoer de URL van de nieuwe portal aangegeven.
@@ -161,11 +170,12 @@ Nadat de wizard is voltooid, gebruikt u PowerShell om een SharePoint Foundation 
 > Houd het venster SharePoint 2013-beheershell geopend zodat u dit in de volgende stap kunt gebruiken.
 
 ## <a name="create-a-sharepoint-site-collection"></a>Een SharePoint-siteverzameling maken
+
 Vervolgens moet u een SharePoint-siteverzameling maken die is gekoppeld aan deze webtoepassing waarmee de MIM-portal wordt gehost.
 
 1.  Start **SharePoint 2013-beheershell**als het venster nog niet is geopend en voer het volgende PowerShell-script uit.
 
-    ```
+    ```PowerShell
     $t = Get-SPWebTemplate -compatibilityLevel 14 -Identity "STS#1"
     $w = Get-SPWebApplication http://pamsrv.priv.contoso.local:82
     New-SPSite -Url $w.Url -Template $t -OwnerAlias PRIV\MIMAdmin                -CompatibilityLevel 14 -Name "MIM Portal" -SecondaryOwnerAlias PRIV\BackupAdmin
@@ -178,7 +188,7 @@ Vervolgens moet u een SharePoint-siteverzameling maken die is gekoppeld aan deze
 
 2.  Voer de volgende PowerShell-opdrachten uit in de **SharePoint 2013-beheershell**. Hiermee worden de weergavestatus op de SharePoint-server en de SharePoint-taak **Statusanalysetaak (Elk uur, Microsoft SharePoint Foundation-timer, Alle servers)** uitgeschakeld.
 
-    ```
+    ```PowerShell
     $contentService = [Microsoft.SharePoint.Administration.SPWebService]::ContentService;
     $contentService.ViewStateOnServer = $false;
     $contentService.Update();
