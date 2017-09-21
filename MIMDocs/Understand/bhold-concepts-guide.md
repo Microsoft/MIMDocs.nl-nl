@@ -5,15 +5,15 @@ keywords:
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
-ms.date: 09/06/2017
+ms.date: 09/14/2017
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 
-ms.openlocfilehash: 0db8c2ebaee204c929dc7345ac6858fff6b0993b
-ms.sourcegitcommit: f29f02fa8437fa55e86afd7b0b99a36d2306b96b
+ms.openlocfilehash: 45054799cdc8bbe6d39fa2beb28e69d13cace031
+ms.sourcegitcommit: ed8dd5563e77ef4a3345b2a52a1426859c95576a
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 09/15/2017
 ---
 # <a name="microsoft-bhold-suite-concepts-guide"></a>Microsoft BHOLD-Suite concepten handleiding
 
@@ -341,3 +341,7 @@ Een belangrijk en krachtige functie van Forefront Identity Manager 2010 en Foref
 Het is belangrijk te weten dat de BHOLD-extensies voor de MIM-Portal functie selfservice en werkstroombeheer ondersteunen en rapportage. Andere functies voor het beheer van BHOLD, evenals de Attestation-bewerking, worden geleverd door de webportals BHOLD-modules die worden gehost, afzonderlijk van de MIM-Portal.
 
 ## <a name="next-steps"></a>Volgende stappen
+
+- [BHOLD-installatiehandleiding](../deploy-use/bhold-installation-guide.md)
+- [BHOLD-referentie voor ontwikkelaars](../reference/mim2016-bhold-developer-reference.md)
+- [Versiegeschiedenis van BHOLD](../reference/version-bhold-history.md)
