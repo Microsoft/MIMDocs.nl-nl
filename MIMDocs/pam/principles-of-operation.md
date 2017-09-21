@@ -2,21 +2,21 @@
 title: PAM-onderdelen | Microsoft Docs
 description: Privileged Access Management deelt sommige onderdelen met MIM en heeft daarnaast een aantal eigen onderdelen. Meer informatie over hoe deze onderdelen samenwerken.
 keywords: 
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 03/15/2017
+author: barclayn
+ms.author: barclayn
+manager: mbaldwin
+ms.date: 09/13/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 6498f68f-36d3-448c-8fe6-649ad5a7f97d
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 53fe79f251c3b18426f16b4007cda49e67d7b028
-ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.openlocfilehash: a129088989bb977c191e9dc372fed07044314403
+ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 09/14/2017
 ---
 # <a name="understand-the-components-of-pam"></a>Inzicht in de PAM-onderdelen
 
@@ -27,7 +27,7 @@ Met Privileged Access Management wordt beheerderstoegang gescheiden gehouden van
 
 De MIM-oplossing zoals geconfigureerd voor PAM omvat de volgende onderdelen:  
 
-- **MIM-service**: hiermee wordt bedrijfslogica geïmplementeerd voor bewerkingen voor identiteits- en toegangsbeheer, zoals bevoorrecht accountbeheer en de verwerking van aanvragen voor uitbreiding.   
+- **MIM-service**: hiermee wordt bedrijfslogica geïmplementeerd voor bewerkingen voor identiteits- en toegangsbeheer, zoals bevoorrecht accountbeheer en de verwerking van aanvragen voor uitbreiding.
 - **MIM-portal**: een SharePoint-portal, gehost door SharePoint 2013, voor administratorbeheer en een gebruikersinterface voor configuratie.
 - **MIM-servicedatabase**: opgeslagen in SQL Server 2012 of 2014 en bevat identiteitsgegevens en metagegevens die nodig zijn voor de MIM-service.
 - **PAM-controleservice** en **PAM Component-service**: twee services waarmee de levenscyclus van bevoorrechte accounts wordt beheerd en waarmee ondersteuning wordt geboden aan de PRIV AD bij de levenscyclus voor groeplidmaatschap.
