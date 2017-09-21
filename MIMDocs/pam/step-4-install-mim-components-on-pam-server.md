@@ -2,10 +2,10 @@
 title: PAM installeren - Stap 4 - MIM installeren | Microsoft Docs
 description: De MIM-service en -portal op uw Privileged Access Management-server en -werkstations installeren en configureren.
 keywords: 
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 03/15/2017
+author: barclayn
+ms.author: barclayn
+manager: barclayn
+ms.date: 09/13/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
@@ -13,18 +13,17 @@ ms.assetid: ef605496-7ed7-40f4-9475-5e4db4857b4f
 ROBOTS: noindex,nofollow
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 3a1ec9db6da0a77f963dde76a3efe8d92f89078d
-ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.openlocfilehash: b69dfc39da63ec523fb09a58661b5f8367e6042c
+ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 09/14/2017
 ---
 # <a name="step-4--install-mim-components-on-pam-server-and-workstation"></a>Stap 4: MIM-onderdelen installeren op een PAM-server en -werkstation
 
 >[!div class="step-by-step"]
 [« Stap 3](step-3-prepare-pam-server.md)
 [Stap 5 »](step-5-establish-trust-between-priv-corp-forests.md)
-
 
 Meld u op PAMSRV aan als PRIV\Administrator om de MIM-service en -portal en de voorbeeldwebtoepassing van de portal te installeren.
 
@@ -33,7 +32,7 @@ Meld u op PAMSRV aan als PRIV\Administrator om de MIM-service en -portal en de v
 
 Als u MIM hebt gedownload, pakt u het MIM-installatiearchief uit naar een nieuwe map.
 
-##  <a name="run-the-service-and-portal-install-program"></a>Voer het installatieprogramma voor de service en portal uit.  
+## <a name="run-the-service-and-portal-install-program"></a>Voer het installatieprogramma voor de service en portal uit.
 
 Volg de richtlijnen van het installatieprogramma en voltooi de installatie.
 
@@ -140,13 +139,13 @@ In deze sectie gaat u de voorbeeldwebtoepassing voor de MIM PAM REST API install
 
 3.  Maak een nieuwe website in IIS. Gebruik hiervoor de sitenaam MIM Privileged Access Management Example Portal, het fysieke pad C:\Program Files\Microsoft Forefront Identity Manager\2010\Privileged Access Management Portal en de poort 8090.  U kunt hiervoor de volgende PowerShell-opdracht gebruiken:
 
-  ```
+  ```PowerShell
   New-WebSite -Name "MIM Privileged Access Management Example Portal" -Port 8090   -PhysicalPath "C:\Program Files\Microsoft Forefront Identity Manager\2010\Privileged Access Management Portal\"
   ```
 
 4.  Stel de voorbeeldwebtoepassing zo in dat gebruikers worden omgeleid naar de MIM PAM REST API. Bewerk het bestand **C:\Program Files\Microsoft Forefront Identity Manager\2010\Privileged Access Management REST API\web.config** met een teksteditor zoals Kladblok. Voeg in de sectie **< system.webServer >** de volgende regels toe:
 
-  ```
+  ```XML
   <httpProtocol>
     <customHeaders>
       <add name="Access-Control-Allow-Credentials" value="true"  />
@@ -160,7 +159,7 @@ In deze sectie gaat u de voorbeeldwebtoepassing voor de MIM PAM REST API install
 
 6.  Start IIS opnieuw met de volgende opdracht om deze wijzigingen door te voeren.
 
-  ```
+  ```cmd
   iisreset
   ```
 

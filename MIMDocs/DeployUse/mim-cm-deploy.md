@@ -5,16 +5,16 @@ keywords:
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
-ms.date: 08/16/2017
+ms.date: 09/19/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 
-ms.openlocfilehash: 61987d5b259830be0cf0bc12832a853e24e9c282
-ms.sourcegitcommit: f29f02fa8437fa55e86afd7b0b99a36d2306b96b
+ms.openlocfilehash: 2473ef1c3d6fc5350d60d81bd508296a33343f01
+ms.sourcegitcommit: 58d6c628d3bb770669348b987cf8f52ec0576132
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 09/19/2017
 ---
 # <a name="deploying-microsoft-identity-manager-certificate-manager-2016-mim-cm"></a>Microsoft Identity Manager Certificate Manager 2016 (MIM CM) implementeren
 
@@ -54,8 +54,7 @@ Voor meer informatie over de ondersteunde platforms voor MIM 2016 Kijk eens naar
 
 ## <a name="pre-deployment-steps"></a>Stappen voorafgaand aan de implementatie
 
-De MIM CM-configuratiewizard vereist informatie te verstrekken langs de manier om deze te voltooien. De stappen vóór de implementatie wordt (ONVOLLEDIG beschouwd hier)
-
+De MIM CM-configuratiewizard vereist informatie te verstrekken langs de manier om deze te voltooien. 
 ![](media/mim-cm-deploy/image003.png)
 
 ### <a name="extending-the-schema"></a>Het schema uitbreiden
@@ -222,7 +221,7 @@ Alle drie de bovenstaande accounts wordt wel verhoogde bevoegdheden hebben binne
 
 Op de **onderwerpnaam** tabblad, schakel de **e-mailnaam opnemen in onderwerpnaam** en **e-mailnaam** selectievakjes uit.
 
-Op de **extensies** tabblad, in de **extensies opgenomen in deze sjabloon** lijst **toepassingsbeleid** is geselecteerd en klik vervolgens op **bewerken** .
+Op de **extensies** tabblad, in de **extensies opgenomen in deze sjabloon** lijst **toepassingsbeleid** is geselecteerd en klik vervolgens op **bewerken **.
 
 In de **Toepassingenbeleidsuitbreiding bewerken** dialoogvenster, selecteer de **Encrypting File System** en de **beveiligde E-mail** toepassingsbeleid. Klik op **verwijderen**, en klik vervolgens op **OK**.
 
@@ -254,7 +253,7 @@ In de **eigenschappen van nieuwe sjabloon** in het dialoogvenster op de **algeme
 
 Op de **afhandeling van aanvragen** tabblad, schakelt u **persoonlijke sleutel exporteerbaar**, en klik vervolgens op **CSP's of tabblad cryptografie.**
 
-In de **CSP-selectie** in het dialoogvenster uitschakelen **Microsoft Base Cryptographic Provider v1.0**, uitschakelen **Microsoft Enhanced Cryptographic Provider v1.0**, inschakelen **Microsoft Enhanced RSA and AES Cryptographic Provider**, en klik vervolgens op **OK**.
+In de **CSP-selectie** in het dialoogvenster uitschakelen **Microsoft Base Cryptographic Provider v1.0**, uitschakelen **Microsoft Enhanced Cryptographic Provider v1.0**, inschakelen** Microsoft Enhanced RSA and AES Cryptographic Provider**, en klik vervolgens op **OK**.
 
 Op de **beveiliging** tabblad Voer de volgende stappen:
 
@@ -496,7 +495,7 @@ In deze stap wordt installeren en configureren van de FIM CM CA-modules op de ce
 
 1. FIM CM alleen inspecteren gebruikersmachtigingen voor beheerbewerkingen configureren
 
-2. In de **C:\\Program Files\\Microsoft Forefront Identity Manager\\2010\\Certificaatbeheer\\web** venster een kopie van  **Web.config** naamgeving van de kopie **web.1.config**.
+2. In de **C:\\Program Files\\Microsoft Forefront Identity Manager\\2010\\Certificaatbeheer\\web** venster een kopie van ** Web.config** naamgeving van de kopie **web.1.config**.
 
 3. In de **Web** venster met de rechtermuisknop op **Web.config**, en klik vervolgens op **Open**.
 
@@ -509,7 +508,7 @@ In deze stap wordt installeren en configureren van de FIM CM CA-modules op de ce
 
 6. Sluit de **zoeken en vervangen** in het dialoogvenster.
 
-7. U moet zich op de regel  **\<key="Clm.RequestSecurity.Flags toevoegen ' waarde"UseUser UseGroups"= /\>**. Wijzig de regel lezen  **\<key="Clm.RequestSecurity.Flags toevoegen ' waarde 'UseUser' = /\>**.
+7. U moet zich op de regel ** \<key="Clm.RequestSecurity.Flags toevoegen ' waarde"UseUser UseGroups"= /\>**. Wijzig de regel lezen ** \<key="Clm.RequestSecurity.Flags toevoegen ' waarde 'UseUser' = /\>**.
 
 8. Sluit het bestand, alle wijzigingen worden opgeslagen.
 
@@ -757,7 +756,7 @@ In deze stap wordt installeren en configureren van de FIM CM CA-modules op de ce
      2. In de **OID eigenschappen** in het dialoogvenster op de **beveiliging** tabblad **Geavanceerd**.
      3. In de **geavanceerde beveiligingsinstellingen voor OID** in het dialoogvenster, klikt u op **toevoegen**.
      4. In de **Selecteer gebruiker, Computer, serviceaccount of groep** het dialoogvenster de **Voer de naam van het object te selecteren** in het vak **mimcm Managers**, en klik vervolgens op **OK**.
-     5. In de **Machtigingsvermelding voor OID** dialoogvenster Zorg dat de machtigingen van toepassing op **dit object en alle onderliggende objecten**, klikt u op **volledig beheer**, en klik vervolgens op  **OK**.
+     5. In de **Machtigingsvermelding voor OID** dialoogvenster Zorg dat de machtigingen van toepassing op **dit object en alle onderliggende objecten**, klikt u op **volledig beheer**, en klik vervolgens op ** OK**.
      6. In de **geavanceerde beveiligingsinstellingen voor OID** in het dialoogvenster, klikt u op **OK**.
      7. In de **OID eigenschappen** in het dialoogvenster, klikt u op **OK**.
      8. Sluit **Active Directory-Sites en Services**.

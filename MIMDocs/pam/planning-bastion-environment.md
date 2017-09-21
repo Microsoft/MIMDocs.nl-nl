@@ -2,21 +2,21 @@
 title: Een bastionomgeving plannen | Microsoft Docs
 description: 
 keywords: 
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 03/16/2017
+author: barclayn
+ms.author: barclayn
+manager: mbaldwin
+ms.date: 09/13/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: bfc7cb64-60c7-4e35-b36a-bbe73b99444b
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 402c690b514dce62024f13014c1491433fbd8816
-ms.sourcegitcommit: a0e206fd67245f02d94d5f6c9d606970117dd8ed
+ms.openlocfilehash: 16ad83ab9a0fbe2b93428cf318b5ef138e2f3783
+ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/02/2017
+ms.lasthandoff: 09/14/2017
 ---
 # <a name="planning-a-bastion-environment"></a>Een bastionomgeving plannen
 
@@ -166,7 +166,7 @@ Er zijn zeven vereisten voor het inschakelen van beheer voor een bestaand domein
 
 In het bestaande domein moet een groep bestaan waarvan de naam de NetBIOS-domeinnaam is, gevolgd door drie dollartekens, bijvoorbeeld *CONTOSO$$$*. Het groepsbereik moet *domeingebonden* zijn en het groepstype *Beveiliging*. Dit is nodig om groepen te kunnen maken in het toegewezen beheerforest met dezelfde beveiligings-id als groepen in dit domein. Meld u op een werkstation dat lid is van het bestaande domein aan als beheerder van het bestaande domein en maak deze groep met de volgende PowerShell-opdracht:
 
-```
+```PowerShell
 New-ADGroup -name 'CONTOSO$$$' -GroupCategory Security -GroupScope DomainLocal -SamAccountName 'CONTOSO$$$'
 ```
 
@@ -194,7 +194,7 @@ De instellingen voor groepsbeleid op de domeincontroller voor controle moet gesl
 
 7. Sluit het venster Groepsbeleidsbeheer-editor en het venster Groepsbeleidsbeheer. Pas vervolgens de controle-instellingen toe door een PowerShell-venster te starten en het volgende te typen:
 
-    ```
+    ```cmd
     gpupdate /force /target:computer
     ```
 
@@ -204,7 +204,7 @@ Het bericht Het bijwerken van het computerbeleid is voltooid. wordt na enkele mi
 
 De domeincontrollers moeten RPC via TCP/IP-verbindingen toestaan voor de lokale certificeringsautoriteit (LSA) van de bastionomgeving. Bij oudere versies van Windows Server moet TCP/IP-ondersteuning in LSA zijn ingeschakeld in het register:
 
-```
+```PowerShell
 New-ItemProperty -Path HKLM:SYSTEM\\CurrentControlSet\\Control\\Lsa -Name TcpipClientSupport -PropertyType DWORD -Value 1
 ```
 
@@ -212,7 +212,7 @@ New-ItemProperty -Path HKLM:SYSTEM\\CurrentControlSet\\Control\\Lsa -Name TcpipC
 
 De cmdlet `New-PAMDomainConfiguration` wordt uitgevoerd op de computer van de MIM-service in het beheerdomein. De parameters voor deze opdracht zijn de domeinnaam van het bestaande domein en de referenties van een beheerder van dat domein.
 
-```
+```PowerShell
  New-PAMDomainConfiguration -SourceDomain "contoso" -Credentials (get-credential)
 ```
 

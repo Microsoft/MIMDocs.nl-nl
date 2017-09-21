@@ -2,21 +2,21 @@
 title: PAM implementeren - Stap 2 - PRIV DC | Microsoft Docs
 description: "De PRIV-domeincontroller voorbereiden voor de bastionomgeving waarin Privileged Access Management wordt geïsoleerd."
 keywords: 
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 03/15/2017
+author: barclayn
+ms.author: barclayn
+manager: mbaldwin
+ms.date: 09/14/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 0e9993a0-b8ae-40e2-8228-040256adb7e2
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: edc15b41d4248887f4a93217f68d8125f6500585
-ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.openlocfilehash: de3392648f187ce6007bba332c0f191d32980c94
+ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 09/14/2017
 ---
 # <a name="step-2---prepare-the-first-priv-domain-controller"></a>Stap 2: de eerste PRIV-domeincontroller voorbereiden
 
@@ -31,6 +31,7 @@ In deze stap maakt u een nieuw domein dat de bastionomgeving biedt voor verifica
 In dit gedeelte stelt u een virtuele machine in om te fungeren als een domeincontroller voor een nieuw forest
 
 ### <a name="install-windows-server-2012-r2"></a>Windows Server 2012 R2 installeren
+
 Installeer Windows Server 2012 R2 op een andere nieuwe virtuele machine waarop geen software is geïnstalleerd om een computer 'PRIVDC' te maken.
 
 1. Selecteer deze optie om een aangepaste installatie (niet een upgrade) van Windows Server uit te voeren. Geef bij de installatie de editie **Windows Server 2012 R2 Standard x64 (server met een GUI)** op. _Selecteer niet_ **datacentrum of serverkern**.
@@ -44,13 +45,14 @@ Installeer Windows Server 2012 R2 op een andere nieuwe virtuele machine waarop g
 5. Nadat de server opnieuw is opgestart, moet u zich aanmelden als beheerder. Via Configuratiescherm configureert u de computer om te controleren op updates en installeert u alle vereiste updates. Hiervoor moet de server mogelijk opnieuw worden opgestart.
 
 ### <a name="add-roles"></a>Functies toevoegen
+
 Voeg de serverfuncties AD DS (Active Directory Domain Services) en DNS toe.
 
 1. Start PowerShell als beheerder.
 
 2. Typ de volgende opdrachten om voor te bereiden voor een Windows Server Active Directory-installatie.
 
-  ```
+  ```PowerShell
   import-module ServerManager
 
   Install-WindowsFeature AD-Domain-Services,DNS –restart –IncludeAllSubFeature -IncludeManagementTools
@@ -60,7 +62,7 @@ Voeg de serverfuncties AD DS (Active Directory Domain Services) en DNS toe.
 
 Start PowerShell en typ de volgende opdracht voor het configureren van het brondomein om externe procedureaanroep (Remote Procedure Call, RPC) toegang te verlenen tot de database voor beveiligingsaccountbeheer (Security Accounts Manager, SAM).
 
-```
+```PowerShell
 New-ItemProperty –Path HKLM:SYSTEM\CurrentControlSet\Control\Lsa –Name TcpipClientSupport –PropertyType DWORD –Value 1
 ```
 
@@ -74,9 +76,8 @@ In dit document, wordt de naam priv.contoso.local gebruikt als de domeinnaam van
 
 1. Typ de volgende opdrachten in een PowerShell-venster om het nieuwe domein te maken.  Hiermee wordt ook een DNS-delegatie gemaakt in een bovenliggende domein (contoso.local) die is gemaakt in de vorige stap.  Als u van plan bent later de DNS te configureren, moet u de `CreateDNSDelegation -DNSDelegationCredential $ca`-parameters weglaten.
 
-  ```
+  ```PowerShell
   $ca= get-credential
-
   Install-ADDSForest –DomainMode 6 –ForestMode 6 –DomainName priv.contoso.local –DomainNetbiosName priv –Force –CreateDNSDelegation –DNSDelegationCredential $ca
   ```
 
@@ -87,13 +88,14 @@ In dit document, wordt de naam priv.contoso.local gebruikt als de domeinnaam van
 De server wordt opnieuw opgestart nadat het maken van het forest is voltooid.
 
 ### <a name="create-user-and-service-accounts"></a>Gebruikers- en serviceaccounts maken
+
 Maak de gebruikers- en serviceaccounts voor de installatie van de MIM-service en -portal. Deze accounts gaat in de container Gebruikers van het domein priv.contoso.local.
 
 1. Wanneer de server opnieuw is opgestart, meldt u zich aan bij PRIVDC als domeinbeheerder (PRIV\\Administrator).
 
 2. Start PowerShell en typ de volgende opdrachten: Het wachtwoord 'Pass@word1' is slechts een voorbeeld en moet u een ander wachtwoord gebruiken voor de accounts.
 
-  ```
+  ```PowerShell
   import-module activedirectory
 
   $sp = ConvertTo-SecureString "Pass@word1" –asplaintext –force
@@ -159,7 +161,7 @@ Maak de gebruikers- en serviceaccounts voor de installatie van de MIM-service en
 
 ### <a name="configure-auditing-and-logon-rights"></a>Controle- en aanmeldingsrechten configureren
 
-U moet de controle instellen zodat de PAM-configuratie tot stand kan worden gebracht tussen forests.  
+U moet de controle instellen zodat de PAM-configuratie tot stand kan worden gebracht tussen forests.
 
 1. Zorg ervoor dat u bent aangemeld als domeinbeheerder (PRIV\\Administrator).
 
@@ -199,7 +201,7 @@ U moet de controle instellen zodat de PAM-configuratie tot stand kan worden gebr
 
 19. Start als beheerder een PowerShell-venster en typ de volgende opdracht om de DC bij te werken met de groepsbeleidsinstellingen.
 
-  ```
+  ```cmd
   gpupdate /force /target:computer
   ```
 
@@ -216,7 +218,7 @@ Configureer met PowerShell op PRIVDC het doorsturen van de DNS-naam zodat het PR
 
   Als u in de vorige stap één domein contoso.local hebt gemaakt, geeft u vervolgens *10.1.1.31* op als het IP-adres van het virtuele netwerk van de CORPDC-computer.
 
-  ```
+  ```PowerShell
   Add-DnsServerConditionalForwarderZone –name "contoso.local" –masterservers 10.1.1.31
   ```
 
@@ -227,7 +229,7 @@ Configureer met PowerShell op PRIVDC het doorsturen van de DNS-naam zodat het PR
 
 1. Voeg met behulp van PowerShell SPN's toe zodat SharePoint, PAM REST-API en de MIM-service Kerberos-verificatie kunnen gebruiken.
 
-  ```
+  ```cmd
   setspn -S http/pamsrv.priv.contoso.local PRIV\SharePoint
   setspn -S http/pamsrv PRIV\SharePoint
   setspn -S FIMService/pamsrv.priv.contoso.local PRIV\MIMService
@@ -241,25 +243,24 @@ Configureer met PowerShell op PRIVDC het doorsturen van de DNS-naam zodat het PR
 
 Voer de volgende stappen uit op PRIVDC als een domeinbeheerder.
 
-1. Start **Active Directory: gebruikers en computers**.  
-2. Klik met de rechtermuisknop op het domein **priv.contoso.local** en selecteer **Beheer delegeren**.  
-3. Klik op het tabblad Geselecteerde gebruikers en groepen op **Toevoegen**.  
-4. Typ in het venster Gebruikers, computers, of groepen selecteren *mimcomponent; mimmonitor; mimservice* en klik op **Namen controleren**. Nadat de namen zijn onderstreept, klikt u op **OK** en vervolgens op **Volgende**.  
+1. Start **Active Directory: gebruikers en computers**.
+2. Klik met de rechtermuisknop op het domein **priv.contoso.local** en selecteer **Beheer delegeren**.
+3. Klik op het tabblad Geselecteerde gebruikers en groepen op **Toevoegen**.
+4. Typ in het venster Gebruikers, computers, of groepen selecteren *mimcomponent; mimmonitor; mimservice* en klik op **Namen controleren**. Nadat de namen zijn onderstreept, klikt u op **OK** en vervolgens op **Volgende**.
 5. Selecteer in de lijst met algemene taken **Gebruikersaccounts maken, verwijderen en beheren** en **Lidmaatschap van een groep wijzigen**, klik vervolgens op **Volgende** en **Voltooien**.
 
-6. Klik nogmaals met de rechtermuisknop op het domein **priv.contoso.local** en selecteer **Beheer delegeren**.  
+6. Klik nogmaals met de rechtermuisknop op het domein **priv.contoso.local** en selecteer **Beheer delegeren**.
 7. Klik op het tabblad Geselecteerde gebruikers en groepen op **Toevoegen**.  
-8. Voer in het venster Gebruikers, computers, of groepen selecteren *MIMAdmin* in en klik op **Namen controleren**. Nadat de namen zijn onderstreept, klikt u op **OK** en vervolgens op **Volgende**.  
-9. Selecteer **Aangepaste taak**, van toepassing op **Deze map**, met **Algemene machtigingen**.    
-10. Selecteer het volgende in de lijst met bevoegdheden:  
-  - **Lezen**  
-  - **Schrijven**  
-  - **Alle onderliggende objecten maken**  
-  - **Alle onderliggende objecten verwijderen**  
-  - **Alle eigenschappen lezen**  
-  - **Alle eigenschappen schrijven**  
-  - **SID-geschiedenis migreren**  
-  Klik op **Volgende** en vervolgens op **Voltooien**.
+8. Voer in het venster Gebruikers, computers, of groepen selecteren *MIMAdmin* in en klik op **Namen controleren**. Nadat de namen zijn onderstreept, klikt u op **OK** en vervolgens op **Volgende**.
+9. Selecteer **Aangepaste taak**, van toepassing op **Deze map**, met **Algemene machtigingen**.
+10. Selecteer het volgende in de lijst met bevoegdheden:
+  - **Lezen**
+  - **Schrijven**
+  - **Alle onderliggende objecten maken**
+  - **Alle onderliggende objecten verwijderen**
+  - **Alle eigenschappen lezen**
+  - **Alle eigenschappen schrijven**
+  - **SID-geschiedenis migreren** klikt u op **volgende** vervolgens **voltooien**.
 
 11. Klik nog één keer met de rechtermuisknop op het domein **priv.contoso.local** en selecteer **Beheer delegeren**.  
 12. Klik op het tabblad Geselecteerde gebruikers en groepen op **Toevoegen**.  
@@ -269,15 +270,17 @@ Voer de volgende stappen uit op PRIVDC als een domeinbeheerder.
 16. Sluit Active Directory - gebruikers en computers.
 
 17. Open een opdrachtprompt.  
-18. Controleer de toegangsbeheerlijst van het object Admin SD-houder in de PRIV-domeinen. Bijvoorbeeld, als uw domein 'priv.contoso.local' is, typt u de opdracht  
-  ```
+18. Controleer de toegangsbeheerlijst van het object Admin SD-houder in de PRIV-domeinen. Bijvoorbeeld, als uw domein 'priv.contoso.local' is, typt u de opdracht
+  ```cmd
   dsacls "cn=adminsdholder,cn=system,dc=priv,dc=contoso,dc=local"
   ```
-19. Werk de toegangsbeheerlijst indien nodig bij om ervoor te zorgen dat MIM-service en MIM-onderdeelservice lidmaatschappen van groepen kunnen bijwerken die zijn beveiligd door deze ACL.  Typ de opdracht:  
-  ```
-  dsacls "cn=adminsdholder,cn=system,dc=priv,dc=contoso,dc=local" /G priv\mimservice:WP;"member"  
-  dsacls "cn=adminsdholder,cn=system,dc=priv,dc=contoso,dc=local" /G priv\mimcomponent:WP;"member"
-  ```
+19. Werk de toegangsbeheerlijst indien nodig bij om ervoor te zorgen dat MIM-service en MIM-onderdeelservice lidmaatschappen van groepen kunnen bijwerken die zijn beveiligd door deze ACL.  Typ de opdracht:
+
+```cmd
+dsacls "cn=adminsdholder,cn=system,dc=priv,dc=contoso,dc=local" /G priv\mimservice:WP;"member"
+dsacls "cn=adminsdholder,cn=system,dc=priv,dc=contoso,dc=local" /G priv\mimcomponent:WP;"member"
+```
+
 20. Start de PRIVDC-server opnieuw op zodat deze wijzigingen van kracht worden.
 
 ## <a name="prepare-a-priv-workstation"></a>Een PRIV-werkstation voorbereiden

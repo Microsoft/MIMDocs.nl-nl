@@ -2,27 +2,26 @@
 title: PAM implementeren - Stap 1 - CORP-domein | Microsoft Docs
 description: Het CORP-domein voorbereiden met bestaande of nieuwe identiteiten die worden beheerd door Privileged Identity Manager
 keywords: 
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 03/15/2017
+author: barclayn
+ms.author: barclayn
+manager: mbaldwin
+ms.date: 09/13/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 1164e7efb70d911497b08248b68f8d929bc6d3fb
-ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.openlocfilehash: d14d2f40972686305abea2426e20f4c13e3e267b
+ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 09/14/2017
 ---
 # <a name="step-1---prepare-the-host-and-the-corp-domain"></a>Stap 1: de host en het domein CORP voorbereiden
 
 >[!div class="step-by-step"]
 [Stap 2 »](step-2-prepare-priv-domain-controller.md)
-
 
 In deze stap bereidt u het hosten van de bastionomgeving voor. Indien nodig, maakt u ook een domeincontroller en een lidwerkstation in een nieuw domein en forest (het *CORP*forest) met identiteiten die worden beheerd door de bastionomgeving. Dit CORP-forest komt overeen met een bestaand forest dat resources heeft om te worden beheerd. Dit document bevat een voorbeeldresource die moet worden beveiligd; een bestandsshare.
 
@@ -57,7 +56,7 @@ In dit gedeelte voegt u de functies Active Directory Domain Services (AD DS), DN
 
 2. Typ de volgende opdrachten:
 
-  ```
+  ```PowoerShell
   import-module ServerManager
 
   Add-WindowsFeature AD-Domain-Services,DNS,FS-FileServer –restart –IncludeAllSubFeature -IncludeManagementTools
@@ -81,7 +80,7 @@ Meld u bij elk domein aan bij een domeincontroller als een domeinbeheerder en vo
 
 2. Typ de volgende opdrachten, maar vervang 'CONTOSO' door de NetBIOS-naam van uw domein.
 
-  ```
+  ```PowerShell
   import-module activedirectory
 
   New-ADGroup –name 'CONTOSO$$$' –GroupCategory Security –GroupScope DomainLocal –SamAccountName 'CONTOSO$$$'
@@ -102,7 +101,7 @@ Maak een beveiligingsgroep met de naam *CorpAdmins* en een gebruiker met de naam
 
 2. Typ de volgende opdrachten: Vervang het wachtwoord Pass@word1 door een andere wachtwoordtekenreeks.
 
-  ```
+  ```PowerShell
   import-module activedirectory
 
   New-ADGroup –name CorpAdmins –GroupCategory Security –GroupScope Global –SamAccountName CorpAdmins
@@ -140,7 +139,7 @@ Meld u bij elk domein aan bij een domeincontroller als een domeinbeheerder en vo
 
 8. Pas de controle-instellingen toe door een PowerShell-venster te starten en het volgende te typen:
 
-  ```
+  ```cmd
   gpupdate /force /target:computer
   ```
 
@@ -154,7 +153,7 @@ In dit gedeelte configureert u de registerinstellingen die nodig zijn voor sIDHi
 
 2. Typ de volgende opdrachten voor het configureren van het brondomein om externe procedureaanroep (Remote Procedure Call, RPC) toegang te verlenen tot de database voor beveiligingsaccountbeheer (Security Accounts Manager, SAM).
 
-  ```
+  ```PowerShell
   New-ItemProperty –Path HKLM:SYSTEM\CurrentControlSet\Control\Lsa –Name TcpipClientSupport –PropertyType DWORD –Value 1
 
   Restart-Computer
@@ -193,7 +192,7 @@ U hebt een resource nodig om het toegangsbeheer op basis van een beveiligingsgro
 
 4. Typ de volgende opdrachten:
 
-  ```
+  ```PowerShell
   mkdir c:\corpfs
 
   New-SMBShare –Name corpfs –Path c:\corpfs –ChangeAccess CorpAdmins
