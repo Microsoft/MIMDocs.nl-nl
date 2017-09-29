@@ -125,6 +125,7 @@
 #### [Een PAM-aanvraag in behandeling goedkeuren of weigeren](./reference/privileged-access-management-approve-reject-pending-request.md)
 #### [Gegevens van PAM-sessie ophalen](./reference/privileged-access-management-get-session-info.md)
 ## Technische documentatie
+### [Microsoft Identity Manager 2016 SP1-terminologie](./reference/mim-2016-sp1-terms.md)
 ### [XML-referentie van weergaveconfiguratie voor resourcebeheer](./reference/rcd-configuration-xml-reference.md)
 ### [Foutcodes voor Management-agent](./reference/maerrorcodes.md)
 ### [Functieoverzicht voor Microsoft Identity Manager 2016](./reference/mim2016-functions-reference.md)
