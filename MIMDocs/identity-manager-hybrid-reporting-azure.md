@@ -4,19 +4,19 @@ description: In de rapporten voor hybride controle-activiteiten in Azure Active 
 keywords: 
 author: fimguy
 ms.author: fimguy
-manager: femila
-ms.date: 04/28/2017
+manager: bhu
+ms.date: 09/28/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 7320f014-8b60-4866-92de-cfbd3e6edc48
-ms.reviewer: mwahl
+ms.reviewer: fimguy
 ms.suite: ems
-ms.openlocfilehash: 678626e7c32659570de88d8178c16821cceaf7ee
-ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.openlocfilehash: 151fbd26011ca76901d181131a88ded8a718a27a
+ms.sourcegitcommit: 0f99de31fe6b52ec692b3886073909f549a451d6
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 09/29/2017
 ---
 # <a name="hybrid-identity-management-audit-reports-in-azure-active-directory---public-previewrefresh"></a>Controlerapporten voor beheer van hybride identiteiten in Azure Active Directory - Openbare preview-versie (vernieuwen)
 Met rapporten voor controle-activiteiten in Azure Active Directory (AD) kunt u één rapport weergeven waarin u identiteitsbeheeractiviteiten kunt bewaken die on-premises of in de cloud plaatsvinden. Met deze functie kunt u al uw identiteits- en toegangsgegevens op één locatie beheren en zodoende tijd besparen en de totale kosten reduceren.
@@ -41,6 +41,9 @@ Het proces voor hybride rapportage verloopt als volgt:
 4. De activiteitsgegevens worden gedurende één maand opgeslagen in Azure.
 5. De rapportagegegevens voor controle worden opgehaald in Azure Portal en worden als controle weergeven op de blade voor controlerapportage van Azure.
 
-## <a name="see-also"></a>Zie tevens
+## <a name="next-steps"></a>Volgende stappen
 - Meer informatie over [werken met hybride rapportage van Identity Manager](working-with-identity-manager-hybrid-reporting.md)
 - Meer informatie over [Rapporten voor controle-activiteiten in de Azure Active Directory-portal](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-reporting-activity-audit-logs)
+- Meer informatie [bewaarbeleidsregels rapporteren](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-reporting-retention)
+- Meer informatie [integratie met Microsoft Azure-logboek (SIEM)](https://docs.microsoft.com/en-us/azure/security/security-azure-log-integration-overview)
+- Meer informatie [Azure Active Directory rapportage-API](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-reporting-api-getting-started)
