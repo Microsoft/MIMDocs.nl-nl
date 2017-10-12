@@ -10,11 +10,11 @@ ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 
-ms.openlocfilehash: 21a2fb4459f46fe0dea89ff016aa77358f940c24
-ms.sourcegitcommit: 8edd380f54c3e9e83cfabe8adfa31587612e5773
+ms.openlocfilehash: 0e039c0b05cc9088a6934c07ead09fb5250f8a81
+ms.sourcegitcommit: 81ad3ede52c3a4308b806c0c8a3fd42b5f5965b0
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/19/2017
+ms.lasthandoff: 10/11/2017
 ---
 # <a name="how-do-i-provision-users-to-ad-ds"></a>Hoe kan ik gebruikers inrichten voor AD DS?
 
@@ -294,7 +294,7 @@ In de volgende tabellen wordt de configuratie getoond van de vereiste inrichting
 
 
  >[!NOTE]
- Belangrijk: Verifieer dat u Alleen initiële stroom hebt geselecteerd voor de kenmerkstroom met de DN als doel.                                                                          
+Controleer of u hebt geselecteerd alleen initiële stroom voor de kenmerkstroom met de DN-naam als de bestemming.                                                                          
 
 ### <a name="step-7-create-the-workflow"></a>Stap 7: De werkstroom maken
 
