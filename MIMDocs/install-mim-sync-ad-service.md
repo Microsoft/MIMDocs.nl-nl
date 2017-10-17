@@ -14,7 +14,7 @@ ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: 4ad41fc9679be702ab17fb5bef5d3efab5ff5adc
 ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: nl-NL
 ms.lasthandoff: 07/13/2017
 ---
@@ -63,7 +63,7 @@ Wanneer u een MIM-beheeragent configureert, moet u een gebruikersaccount opgeven
 
     -   Gebruikersnaam: mimma
 
-    -   Wachtwoord: Pass@word
+    -   Wachtwoord: Pass@word 
 
     -   Domein: contoso
 
