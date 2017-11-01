@@ -5,18 +5,18 @@ keywords:
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
-ms.date: 08/18/2017
+ms.date: 10/17/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: ccdd8a9f-02da-440a-81a8-354800dcd2a8
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 21bb12a70850a5f835ca6715d9683558ac6fad1d
-ms.sourcegitcommit: f2778c5fa5f0cd04e8a74fc15fa340cd118dded5
+ms.openlocfilehash: cd8191e3fdf571f4140bcdd51c54aa25bd663215
+ms.sourcegitcommit: 06add1a636720f74bc0c0f25b4100b19f1bd31da
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/18/2017
+ms.lasthandoff: 10/17/2017
 ---
 # <a name="microsoft-identity-manager-2016"></a>Microsoft Identity Manager 2016
 
@@ -28,9 +28,9 @@ Naast de bestaande functionaliteit voor identiteitsbeheer opgenomen in [FIM](htt
 - Nieuwe functionaliteit in Certificaatbeheer
   - [Naslaginformatie voor REST API van Certificate Management](./reference/certificate-management-rest-api-reference.md)
   - Ondersteuning voor topologieën met meerdere forests.
-  - Een Windows-app voor de virtuele smartcard
+  - [Een Windows-app voor de virtuele smartcard](working-with-mim-certificate-manager.md)
   - Bijgewerkte gebeurtenissen en mogelijkheden voor probleemoplossing. 
-- Selfservicescenario's omvatten nu een functie voor het ontgrendelen van accounts en een poort voor meervoudige verificatie (Azure MFA) voor het opnieuw instellen van het wachtwoord.
+- [Selfservicescenario's](working-with-self-service-password-reset.md) omvatten nu ontgrendelen van accounts en Azure MFA (Multi-factor authentication)-gate voor wachtwoord opnieuw instellen.
 
 ## <a name="hybrid-experience"></a>Hybride-ervaring
 
