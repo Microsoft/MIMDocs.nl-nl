@@ -11,10 +11,10 @@ ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 
 ms.openlocfilehash: ef68de19bd0eabd6d9203469ecc991d496f05846
-ms.sourcegitcommit: ed8dd5563e77ef4a3345b2a52a1426859c95576a
+ms.sourcegitcommit: 0d8b19c5d4bfd39d9c202a3d2f990144402ca79c
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 11/14/2017
 ---
 # <a name="bhold-fimmim-integration-installation"></a>Installatie van BHOLD FIM/MIM-integratie
 
@@ -75,7 +75,7 @@ Voor het installeren van de integratiemodule BHOLD FIM aanmelden als lid van de 
 
 - BholdFIMIntegration*\<versie\>*\_Release.msi
 
-Vervang * \<versie\> * met het versienummer van de integratie van BHOLD FIM-versie die u installeert.
+Vervang  *\<versie\>*  met het versienummer van de integratie van BHOLD FIM-versie die u installeert.
 
 Als u wilt het programmabestand uitvoeren als beheerder, met de rechtermuisknop op het bestand en klik vervolgens op **als administrator uitvoeren**.
 
@@ -125,17 +125,17 @@ De volgende tabel bevat de bestanden en de oorspronkelijke en gewijzigde versies
 
 Waarbij:
 
--   *\<BHOLD_Server\> * geeft de naam van de server BHOLD zoals gevonden in de oorspronkelijke versie van het bestand
+-   *\<BHOLD_Server\>*  geeft de naam van de server BHOLD zoals gevonden in de oorspronkelijke versie van het bestand
 
--   *\<MIM_Server\> * geeft de naam van de FIM-server zoals gevonden in de oorspronkelijke versie van het bestand
+-   *\<MIM_Server\>*  geeft de naam van de FIM-server zoals gevonden in de oorspronkelijke versie van het bestand
 
--   *\<BHOLD_Server_FQDN\> * Hiermee geeft u de volledig gekwalificeerde domeinnaam (FQDN) van de BHOLD-server
+-   *\<BHOLD_Server_FQDN\>*  Hiermee geeft u de volledig gekwalificeerde domeinnaam (FQDN) van de BHOLD-server
 
--   *\<MIM_Port\> * geeft u het poortnummer van de FIM-server zoals gevonden in de oorspronkelijke versie van het bestand
+-   *\<MIM_Port\>*  geeft u het poortnummer van de FIM-server zoals gevonden in de oorspronkelijke versie van het bestand
 
--   *\<MIM_Server_FQDN\> * geeft de FQDN van de FIM-server
+-   *\<MIM_Server_FQDN\>*  geeft de FQDN van de FIM-server
 
--   *\<MIM_SSL_Port\> * geeft een andere poort voor gebruik met SSL op de FIM-server
+-   *\<MIM_SSL_Port\>*  geeft een andere poort voor gebruik met SSL op de FIM-server
 
 ### <a name="enable-approval-workflows-in-bhold-core"></a>Van goedkeuringswerkstromen in BHOLD Core inschakelen
 
@@ -189,7 +189,7 @@ Als een goedkeurder voor een aanvraag voor een selfservice-rol niet is opgegeven
 
 18. Op de **organisatie-eenheid/root** pagina, klikt u op **wijzigen**.
 
-19. Op de **wijzigen van de organisatie-eenheid kenmerken/root** pagina **goedkeurder**, typ de naam van het domein en gebruikersnaam van de gebruiker die roltoewijzing aanvragen, in de indeling goedkeurt * \<domein\>*\\*\<gebruiker\>*, waarbij * \<domein\> * is de (Korte) NetBIOS-domeinnaam en * \<gebruiker\> * aanmeldingsnaam van de gebruiker.
+19. Op de **wijzigen van de organisatie-eenheid kenmerken/root** pagina **goedkeurder**, typ de naam van het domein en gebruikersnaam van de gebruiker die roltoewijzing aanvragen, in de indeling goedkeurt  *\<domein\>*\\*\<gebruiker\>*, waarbij  *\<domein\>*  is de (Korte) NetBIOS-domeinnaam en  *\<gebruiker\>*  aanmeldingsnaam van de gebruiker.
 20. Klik op **OK**.
 
 >[!IMPORTANT]
@@ -207,7 +207,7 @@ Betere beveiliging van de werkstroom, naast goedkeurders, moet u aanvullende goe
 
 - melding*\<n\>*
 
-waar * \< n \> * geeft een optionele numeriek achtervoegsel zodat meerdere kenmerken van hetzelfde type.
+waar  *\< n \>*  geeft een optionele numeriek achtervoegsel zodat meerdere kenmerken van hetzelfde type.
 
 ### <a name="verify-approval-workflows-configured-in-the-fim-service"></a>Werkstromen voor goedkeuring geconfigureerd in de FIM-Service controleren
 

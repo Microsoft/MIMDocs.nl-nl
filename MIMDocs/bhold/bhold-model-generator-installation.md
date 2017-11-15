@@ -11,10 +11,10 @@ ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 
 ms.openlocfilehash: 96363fb3b0067ff5c8f8c2f32e9a855464038653
-ms.sourcegitcommit: ed8dd5563e77ef4a3345b2a52a1426859c95576a
+ms.sourcegitcommit: 0d8b19c5d4bfd39d9c202a3d2f990144402ca79c
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 11/14/2017
 ---
 # <a name="bhold-model-generator-installation"></a>BHOLD Model Generator-installatie
 
@@ -39,7 +39,7 @@ Microsoft Access Database Engine 2010 Redistributable
 
  
 
-*Van \< * <http://daipvstf:8080/tfs/ActiveDirectory/IAM/_workitems>*\>*
+*Van \<*  <http://daipvstf:8080/tfs/ActiveDirectory/IAM/_workitems>*\>*
 
  
 
@@ -60,15 +60,15 @@ Microsoft Access Database Engine 2010 Redistributable
 |---------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Geïntegreerde beveiliging gebruiken**                 | Hiermee geeft u op dat de Windows-verificatie wordt gebruikt voor toegang tot de database.                                                                                                                                                                                                                                                                                                                                                        | Schakel het selectievakje in als Windows-verificatie wordt gebruikt voor verbinding met de SQL-Server. Schakel het selectievakje in als SQL Server-verificatie wordt gebruikt. De database moet zijn gemaakt voordat uitgevoerd BHOLD Core Setup als SQL Server-verificatie wordt gebruikt. **Opmerking:** als Windows-verificatie wordt gebruikt, u moet zijn aangemeld met een account met de serverrol sysadmin op de databaseserver. **Belangrijk:** Gebruik SQL Server-verificatie alleen in een testomgeving. Microsoft raadt het gebruik van Windows-verificatie in productie-implementaties. |
 | **Databasegebruiker** en **databasewachtwoord** | Hiermee geeft u de gebruikersnaam en wachtwoord van een gebruiker met de serverrol sysadmin op de databaseserver. Deze waarden worden geleverd, alleen wanneer SQL Server-verificatie wordt gebruikt.                                                                                                                                                                                                                                                  | Schrijf hier de gebruikersnaam van de SQL Server: SQL Server-gebruikerswachtwoord hier schrijven: </br></br> **Belangrijk:** Zorg ervoor dat dit wachtwoord in een verborgen, een veilige locatie.                                                                                                                                                                                                                                                                                                                                                                                                           |
-| **Databaseserver** en **databasenaam**   | Hiermee geeft u de NetBIOS-naam van de databaseserver en de naam van de back-updatabase die BHOLD Model Generator Setup wordt gemaakt. Als u niet het standaardexemplaar van de database-server gebruikt, geeft u de database-server-exemplaar in het formulier * \<server\>*\\*\<exemplaar\> *.  Microsoft raadt aan dat u de back-updatabase met de naam van de Core BHOLD-database gevolgd door de naam \_back-up, bijvoorbeeld B1_BACKUP. | De server (of server en -exemplaar) naam hier schrijven: </br> Schrijf hier de naam van de database:
+| **Databaseserver** en **databasenaam**   | Hiermee geeft u de NetBIOS-naam van de databaseserver en de naam van de back-updatabase die BHOLD Model Generator Setup wordt gemaakt. Als u niet het standaardexemplaar van de database-server gebruikt, geeft u de database-server-exemplaar in het formulier  *\<server\>*\\*\<exemplaar\>* .  Microsoft raadt aan dat u de back-updatabase met de naam van de Core BHOLD-database gevolgd door de naam \_back-up, bijvoorbeeld B1_BACKUP. | De server (of server en -exemplaar) naam hier schrijven: </br> Schrijf hier de naam van de database:
 
 ## <a name="bhold-model-generator-setup"></a>BHOLD Model Generator setup
 
 Meld u aan als lid van de groep Domeinadministrators voor het installeren van de module BHOLD Model Generator, downloadt u het volgende bestand en als administrator uitvoeren op de server die u wilt de Core BHOLD-module installeren op:
 
-- BholdModelGenerator * \<versie\>*\_Release.msi
+- BholdModelGenerator  *\<versie\>*\_Release.msi
 
-Vervang * \<versie\> * met het versienummer van de Generator van BHOLD-Model-versie die u installeert.
+Vervang  *\<versie\>*  met het versienummer van de Generator van BHOLD-Model-versie die u installeert.
 
 Als u wilt het programmabestand uitvoeren als beheerder, met de rechtermuisknop op het bestand en klik vervolgens op **als administrator uitvoeren**.
 

@@ -11,10 +11,10 @@ ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 
 ms.openlocfilehash: 33fbe63528d5d7c543ae286f934654538782b4d5
-ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
+ms.sourcegitcommit: 0d8b19c5d4bfd39d9c202a3d2f990144402ca79c
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 11/14/2017
 ---
 # <a name="bhold-core-installation"></a>BHOLD-Core-installatie
 
@@ -109,7 +109,7 @@ Voordat u begint met het installeren van de module BHOLD-Core, moet u worden voo
 |------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Geïntegreerde beveiliging gebruiken**                    | Hiermee geeft u op dat de Windows-verificatie wordt gebruikt voor toegang tot de database.                                                                                                                                                                                                     | Schakel het selectievakje in als Windows-verificatie wordt gebruikt voor verbinding met de SQL-Server. Schakel het selectievakje in als SQL Server-verificatie wordt gebruikt. De database moet zijn gemaakt voordat uitgevoerd BHOLD Core Setup als SQL Server-verificatie wordt gebruikt. **Opmerking:** als Windows-verificatie wordt gebruikt, u moet zijn aangemeld met een account met de serverrol sysadmin op de databaseserver. |
 | **Databasegebruiker** en **databasewachtwoord** | Hiermee geeft u de gebruikersnaam en wachtwoord van een gebruiker met de serverrol sysadmin op de databaseserver. Deze waarden worden geleverd, alleen wanneer SQL Server-verificatie wordt gebruikt.                                                                                               | Schrijf hier de gebruikersnaam van de SQL Server: SQL Server-gebruikerswachtwoord hier schrijven: **Opmerking:** Zorg ervoor dat dit wachtwoord in een verborgen, een veilige locatie.                                                                                                                                                                                                                                                  |
-| **Databaseserver** en **databasenaam**   | Hiermee geeft u de NetBIOS-naam van de databaseserver en de naam van de database (standaard: b1) die BHOLD Core-installatie maakt. Als u niet het standaardexemplaar van de database-server gebruikt, geeft u de database-server-exemplaar in het formulier * \<server\>*\\*\<exemplaar\> *. | De server (of server en -exemplaar) naam hier schrijven: Schrijf hier de naam van de database:                                                                                                                                                                                                                                                                                                                   |
+| **Databaseserver** en **databasenaam**   | Hiermee geeft u de NetBIOS-naam van de databaseserver en de naam van de database (standaard: b1) die BHOLD Core-installatie maakt. Als u niet het standaardexemplaar van de database-server gebruikt, geeft u de database-server-exemplaar in het formulier  *\<server\>*\\*\<exemplaar\>* . | De server (of server en -exemplaar) naam hier schrijven: Schrijf hier de naam van de database:                                                                                                                                                                                                                                                                                                                   |
 | **Beperkingen voor de database-gebruikersaccount maken**    | Verouderd.                                                                                                                                                                                                                                                                 | Wijzig de standaardwaarde niet                                                                                                                                                                                                                                                                                                                                                                       |
 |                                                |                                                                                                                                                                                                                                                                           |                                                                                                                                                                                                                                                                                                                                                                                                       |
 |                                                |                                                                                                                                                                                                                                                                           |                                                                                                                                                                                                                                                                                                                                                                                                       |
@@ -118,9 +118,9 @@ Voordat u begint met het installeren van de module BHOLD-Core, moet u worden voo
 
 Voor het installeren van de module BHOLD-Core, meld u aan als lid van de groep Domeinadministrators, moet het volgende bestand downloaden en uitvoeren als beheerder op de server die u wilt de Core BHOLD-module installeren op: 
 
-- BholdCore * \<versie\>*\_Release.msi
+- BholdCore  *\<versie\>*\_Release.msi
 
-Vervang * \<versie\> * met het versienummer van de Core BHOLD-versie die u installeert.
+Vervang  *\<versie\>*  met het versienummer van de Core BHOLD-versie die u installeert.
 
 Als u wilt het programmabestand uitvoeren als beheerder, met de rechtermuisknop op het bestand en klik vervolgens op **als administrator uitvoeren**.
 
@@ -142,7 +142,7 @@ Om deze procedure uitvoert, moet u lid zijn van de groep Administrators op de lo
 
 3.  Klik in de wizard nieuwe regel voor binnenkomende verbindingen op **poort**, en klik vervolgens op **volgende**.
 
-4.  Zorg ervoor dat **TCP** is geselecteerd in **specifieke lokale poorten**, typt u het standaardpoortnummer voor BHOLD Core (5151) of het poortnummer dat u hebt opgegeven als u BHOLD Core geïnstalleerd en klik vervolgens op ** Volgende**.
+4.  Zorg ervoor dat **TCP** is geselecteerd in **specifieke lokale poorten**, typt u het standaardpoortnummer voor BHOLD Core (5151) of het poortnummer dat u hebt opgegeven als u BHOLD Core geïnstalleerd en klik vervolgens op  **Volgende**.
 
 5.  Zorg ervoor dat **de verbinding toestaan** is geselecteerd en klik vervolgens op **volgende**.
 
@@ -175,13 +175,13 @@ Lidmaatschap van **Domeinadministrators**, of gelijkwaardig, is de minimale vere
 
 #### <a name="to-establish-the-spn-of-the-bhold-website"></a>Tot stand brengen van de SPN-naam van de BHOLD-website
 
-1.  Klik op de domeincontroller in Active Directory Domain Services, **Start**, klikt u op **alle programma's**, klikt u op **accessoires**, met de rechtermuisknop op **opdrachtprompt **, en klik vervolgens op **als administrator uitvoeren**.
+1.  Klik op de domeincontroller in Active Directory Domain Services, **Start**, klikt u op **alle programma's**, klikt u op **accessoires**, met de rechtermuisknop op **opdrachtprompt** , en klik vervolgens op **als administrator uitvoeren**.
 
-2.  Typ de volgende opdracht achter de opdrachtprompt en druk op ENTER: setspn – S HTTP / * \<networkalias\> \<domein\> * \\ * \<accountname\> * waar:
+2.  Typ de volgende opdracht achter de opdrachtprompt en druk op ENTER: setspn – S HTTP /  *\<networkalias\> \<domein\>*  \\  *\<accountname\>*  waar:
 
-    -   *\<networkalias\> * is het adres dat clients contact opnemen met de BHOLD-website gebruiken
+    -   *\<networkalias\>*  is het adres dat clients contact opnemen met de BHOLD-website gebruiken
 
-    -   *\<domein\>*\\*\<accountname\> * is de naam van het domein en gebruikersnaam van het serviceaccount van BHOLD-Core die u hebt gemaakt tijdens de installatie van BHOLD-Core.
+    -   *\<domein\>*\\*\<accountname\>*  is de naam van het domein en gebruikersnaam van het serviceaccount van BHOLD-Core die u hebt gemaakt tijdens de installatie van BHOLD-Core.
 
 3.  Herhaal de vorige stap voor alle andere namen die clients gebruiken om contact op met de website BHOLD bijvoorbeeld, CNAME-aliassen, namen met een FQDN-naam of namen met een NetBIOS-domeinnaam (korte).
 
@@ -205,7 +205,7 @@ U moet zijn aangemeld als lid van de groep Domeinadministrators deze procedure u
 
 1.  Klik op **Start**, klikt u op **alle programma's**, en klik vervolgens op **Internet Explorer**.
 
-2.  Typ in het adresvak, waarbij * \<server\> * is de naam van de BHOLD-websiteserver en * \<poort\> * is het poortnummer dat is gebonden aan de website.
+2.  Typ in het adresvak, waarbij  *\<server\>*  is de naam van de BHOLD-websiteserver en  *\<poort\>*  is het poortnummer dat is gebonden aan de website.
 
 3.  Klik op **Start**, klikt u op **waarden**, en klik vervolgens op **wijzigen**.
 
