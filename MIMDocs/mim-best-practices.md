@@ -11,11 +11,11 @@ ms.prod: identity-manager-2016
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 
-ms.openlocfilehash: 694ec1e0d6577c4335fd75ab0984aed9a0e4f220
-ms.sourcegitcommit: 8edd380f54c3e9e83cfabe8adfa31587612e5773
+ms.openlocfilehash: fe361c3f6dd85a478d655a910f0f3ec9802128b0
+ms.sourcegitcommit: 0d8b19c5d4bfd39d9c202a3d2f990144402ca79c
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/19/2017
+ms.lasthandoff: 11/14/2017
 ---
 # <a name="microsoft-identity-manager-2016-best-practices"></a>Aanbevolen procedures voor Microsoft Identity Manager 2016
 
@@ -189,8 +189,7 @@ MANUAL
 ALTER FULLTEXT INDEX ON [fim].[ObjectValueXml] SET CHANGE_TRACKING = MANUAL
 ```
 
-Het is belangrijk dat u bekend bent met de schijfvereisten voor het herstelmodel van uw SQL server. Afhankelijk van uw back-upschema, kunt u overwegen om met behulp van de modus voor eenvoudig herstel tijdens het initieel laden van het systeem het gebruik van schijfruimte te beperken. U moet echter wel begrijpen welke gevolgen dit kan hebben op het gebied van gegevensverlies.
-Wanneer u de volledig-herstelmodus gebruikt, moet u schijfgebruik beheren via back-ups. Dit houdt onder meer in dat u regelmatig back-ups moet maken van het transactielogboek om intensief gebruik van de schijfruimte te voorkomen.
+Het is belangrijk dat u bekend bent met de schijfvereisten voor het herstelmodel van uw SQL server. Afhankelijk van uw back-upschema, kunt u overwegen om met behulp van de modus voor eenvoudig herstel tijdens het initieel laden van het systeem het gebruik van schijfruimte te beperken. U moet echter wel begrijpen welke gevolgen dit kan hebben op het gebied van gegevensverlies. Wanneer u de volledig-herstelmodus gebruikt, moet u schijfgebruik beheren via back-ups. Dit houdt onder meer in dat u regelmatig back-ups moet maken van het transactielogboek om intensief gebruik van de schijfruimte te voorkomen.
 
 >[!IMPORTANT]
 Het niet implementeren van deze procedures kan leiden tot een intensief gebruik van de schijfruimte, wat kan resulteren in onvoldoende schijfruimte. U vindt aanvullende informatie over dit onderwerp in [Recovery Model Overview (Overzicht van herstelmodellen)](http://go.microsoft.com/fwlink/?LinkID=185370). [De FIM Backup and Restore Guide (Handleiding voor back-up en herstel](http://go.microsoft.com/fwlink/?LinkID=165864) bevat aanvullende informatie.
@@ -200,7 +199,6 @@ Het niet implementeren van deze procedures kan leiden tot een intensief gebruik 
 Tijdens het initiële laadproces moet u alleen de minimaal benodigde configuratie toepassen voor uw FIM-configuratie voor uw beheerbeleidsregels (MPR’s) en setdefinities. Nadat het laden van gegevens is voltooid, maakt u de extra sets die vereist zijn voor uw implementatie. Gebruik de instelling Uitvoeren bij beleidsupdates op de actiewerkstromen om dat beleid met terugwerkende kracht op de geladen gegevens toe te passen.
 
 ### <a name="step-3-configure-and-populate-the-fim-service-with-external-identity-data"></a>Stap 3: De FIM-service configureren en vullen met externe identiteitsgegevens
-
 
 Voor deze stap volgt u de procedures beschreven in de Engelstalige handleiding How Do I Synchronize Users from Active Directory
 
@@ -224,13 +222,11 @@ Voor elke bronbeheeragent die deel uitmaakt van de initialisatiecyclus, voert u 
 
 ### <a name="step-4-apply-your-full-mim-configuration"></a>Stap 4: De volledige MIM-configuratie toepassen
 
-
 Als het initieel laden van gegevens is uitgevoerd, past u de volledige MIM-configuratie toe voor uw implementatie.
 
 Afhankelijk van uw scenario's, kan dit het maken van aanvullende sets, beheerbeleidsregels en werkstromen omvatten. Voor elk beleid dat u met terugwerkende wilt toepassen op alle bestaande objecten in het systeem, gebruikt u de instelling Uitvoeren bij beleidsupdates op actiewerkstromen om die beleidsregels met terugwerkende kracht op de geladen gegevens toe te passen.
 
 ### <a name="step-5-reconfigure-sql-to-previous-settings"></a>Stap 5: SQL weer terugzetten op vorige instellingen
-
 
 Vergeet niet de SQL-instellingen te wijzigen in de normale instellingen. Dit omvat:
 
@@ -267,8 +263,7 @@ ActivityInformationConfiguration moet het versienummer nauwkeurig verwijzen naar
 
 ### <a name="avoid-cyclic-references"></a>Cyclische verwijzingen voorkomen
 
-Over het algemeen worden cyclische verwijzingen niet aangeraden in een MIM-configuratie.
-Er kunnen echter cycli optreden wanneer set A naar set B verwijst en set B ook naar set A verwijst. U kunt dergelijke cyclische verwijzingen voorkomen door de definitie van set A en set B zo aan te passen dat beide niet naar elkaar verwijzen. Start dan het migratieproces opnieuw. Als er wel sprake is van cyclische verwijzingen en de cmdlet Compare-FIMConfig hierdoor resulteert in een fout, moet de cyclus handmatig worden doorbroken. Omdat de cmdlet Compare-FIMConfig een lijst met wijzigingen uitvoert in volgorde van prioriteit, mogen er geen cycli bestaan tussen de verwijzingen van configuratieobjecten.
+Over het algemeen worden cyclische verwijzingen niet aangeraden in een MIM-configuratie. Er kunnen echter cycli optreden wanneer set A naar set B verwijst en set B ook naar set A verwijst. U kunt dergelijke cyclische verwijzingen voorkomen door de definitie van set A en set B zo aan te passen dat beide niet naar elkaar verwijzen. Start dan het migratieproces opnieuw. Als er wel sprake is van cyclische verwijzingen en de cmdlet Compare-FIMConfig hierdoor resulteert in een fout, moet de cyclus handmatig worden doorbroken. Omdat de cmdlet Compare-FIMConfig een lijst met wijzigingen uitvoert in volgorde van prioriteit, mogen er geen cycli bestaan tussen de verwijzingen van configuratieobjecten.
 
 ## <a name="security"></a>Beveiliging
 
@@ -394,17 +389,16 @@ MIM 2016 schoont standaard om de 30 dagen verlopen systeemobjecten op, waaronder
 
 MIM biedt twee typen beheerbeleidsregels: aanvraag en setovergang:
 
--   Beheerbeleidsregel van het type aanvraag (RMPR)
+-  Beheerbeleidsregel van het type aanvraag (RMPR)
 
- - Hiermee definieert u het toegangsbeheerbeleid (verificatie, autorisatie en actie) voor Create-, Read-, Update- of Delete-bewerkingen (CRUD) op resources.
- - Dit wordt toegepast wanneer een CRUD-bewerking is gegeven voor een doelresource in FIM.
-   - Het bereik van de bewerking wordt bepaald door de overeenkomende criteria gedefinieerd in de regel, dat wil zeggen de CRUD-aanvragen waarop de regel van toepassing is.
+  - Hiermee definieert u het toegangsbeheerbeleid (verificatie, autorisatie en actie) voor Create-, Read-, Update- of Delete-bewerkingen (CRUD) op resources.
+  - Dit wordt toegepast wanneer een CRUD-bewerking is gegeven voor een doelresource in FIM.
+  - Het bereik van de bewerking wordt bepaald door de overeenkomende criteria gedefinieerd in de regel, dat wil zeggen de CRUD-aanvragen waarop de regel van toepassing is.
 
-
--   Beheerbeleidsregel van het type setovergang (TMPR)
- - Wordt gebruikt om beleidsregels te definiëren, ongeacht hoe het object de huidige status is ingegaan die wordt voorgesteld door de setovergang. Gebruik TMPR om het rechtenbeleid te modelleren.
- - Wordt toegepast wanneer een resource een bijbehorende set binnengaat of verlaat.
- - Afgestemd op de leden van de set.
+- Beheerbeleidsregel van het type setovergang (TMPR)
+  - Wordt gebruikt om beleidsregels te definiëren, ongeacht hoe het object de huidige status is ingegaan die wordt voorgesteld door de setovergang. Gebruik TMPR om het rechtenbeleid te modelleren.
+  - Wordt toegepast wanneer een resource een bijbehorende set binnengaat of verlaat.
+  - Afgestemd op de leden van de set.
 
 >[OPMERKING] Zie voor meer informatie [Bedrijfsbeleidsregels ontwerpen](http://go.microsoft.com/fwlink/?LinkID=183691).
 
@@ -413,18 +407,14 @@ MIM biedt twee typen beheerbeleidsregels: aanvraag en setovergang:
 Gebruik het principe van minimale bevoegdheden bij het toepassen van uw configuratie. Beheerbeleidsregels bepalen het toegangsbeleid voor uw FIM-implementatie. Schakel alleen de functies in die worden gebruikt door de meeste gebruikers. Niet alle gebruikers gebruiken bijvoorbeeld FIM voor groepsbeheer. Beheerbeleidsregels voor groepsbeheer moet dus worden uitgeschakeld. FIM wordt standaard geleverd met de meeste niet-beheerdersmachtigingen uitgeschakeld.
 
 #### <a name="duplicate-built-in-mprs-instead-of-directly-modifying"></a>Ingebouwde beheerbeleidsregels dupliceren in plaats van rechtstreeks wijzigen
-
 Wanneer u de ingebouwde beheerbeleidsregels wilt wijzigen, moet u een nieuwe beheerbeleidsregel maken met de vereiste configuratie en de ingebouwde beheerbeleidsregel uitschakelen. Dit zorgt ervoor dat toekomstige wijzigingen in de ingebouwde beheerbeleidsregels die zijn geïntroduceerd door het upgradeproces, geen negatieve invloed op uw systeemconfiguratie hebben.
 
 #### <a name="end-user-permissions-should-use-explicit-attribute-lists-scoped-to-users-business-needs"></a>Machtigingen voor eindgebruikers moeten lijsten met expliciete kenmerken omvatten die zijn afgestemd op de zakelijke behoeften van gebruikers
-
-Met behulp van lijsten van expliciete kenmerken kan worden voorkomen dat machtigingen onbedoeld worden toegekend aan niet-gemachtigde gebruikers wanneer kenmerken worden toegevoegd aan objecten.
-Beheerders moeten expliciet toegang verlenen tot de nieuwe kenmerken in plaats van de toegang verwijderen.
+Met behulp van lijsten van expliciete kenmerken kan worden voorkomen dat machtigingen onbedoeld worden toegekend aan niet-gemachtigde gebruikers wanneer kenmerken worden toegevoegd aan objecten. Beheerders moeten expliciet toegang verlenen tot de nieuwe kenmerken in plaats van de toegang verwijderen.
 
 De toegang tot gegevens moet worden afgestemd op de zakelijke behoeften van de gebruikers. Groepsleden mogen bijvoorbeeld geen toegang hebben tot het filterkenmerk van de groep waarvan ze deel uitmaken. Het filter kan onbedoeld gegevens van de organisatie laten zien waartoe de gebruiker normaal gesproken geen toegang zou hebben.
 
 #### <a name="mprs-should-reflect-effective-permissions-in-the-system"></a>Beheerbeleidsregels moeten de effectieve machtigingen in het systeem weerspiegelen
-
 Vermijd het verlenen van machtigingen aan kenmerken die de gebruiker nooit kan gebruiken. Verleen bijvoorbeeld geen machtiging voor het aanpassen van kernresourcekenmerken, zoals objectType. Ondanks de beheerbeleidsregel wordt elke poging om het type van een resource aan te passen nadat deze is gemaakt, geweigerd door het systeem.
 
 #### <a name="read-permissions-should-be-separate-from-modify-and-create-permissions-when-using-explicit-attributes-in-mprs"></a>Leesmachtigingen moeten losstaan van wijzig- en maakmachtigingen bij het gebruik van expliciete kenmerken in beheerbeleidsregels
@@ -443,12 +433,9 @@ Kenmerken met dezelfde toegangsvereisten die zeer waarschijnlijk niet zullen ver
 
 In FIM worden machtigingen gedefinieerd als een positieve verklaring. Omdat FIM weigeringsmachtigingen niet ondersteunt, bemoeilijkt het verlenen van onbeperkte toegang tot een resource het opnemen van uitsluitingen in de machtigingen. De aanbevolen procedure is om alleen de benodigde machtigingen te verlenen.
 
->[!NOTE]
-Hieronder volgt de sectie over rechten. I am wondering how to merge them to avoid creating 5 level headers
 #### <a name="use-tmprs-to-define-custom-entitlements"></a>Beheerbeleidsregels van het type setovergang gebruiken voor het definiëren van aangepaste rechten
 
-Gebruik beheerbeleidsregels van het type setovergang (TMPR's) in plaats van RMPR's om aangepaste rechten te definiëren.
-TMPR's bieden een model op basis van status voor het toewijzen of verwijderen van rechten op basis van het lidmaatschap in de gedefinieerde overgangssets, of rollen, en de bijbehorende werkstroomactiviteiten. TMPR's moeten altijd worden gedefinieerd in paren, één voor resources die geleidelijk toetreden en één voor resources die geleidelijk verdwijnen. Daarnaast moet elke overgang-MPR afzonderlijke werkstromen bevatten voor de inrichting en het opheffen van de inrichting van activiteiten.
+Gebruik beheerbeleidsregels van het type setovergang (TMPR's) in plaats van RMPR's om aangepaste rechten te definiëren. TMPR's bieden een model op basis van status voor het toewijzen of verwijderen van rechten op basis van het lidmaatschap in de gedefinieerde overgangssets, of rollen, en de bijbehorende werkstroomactiviteiten. TMPR's moeten altijd worden gedefinieerd in paren, één voor resources die geleidelijk toetreden en één voor resources die geleidelijk verdwijnen. Daarnaast moet elke overgang-MPR afzonderlijke werkstromen bevatten voor de inrichting en het opheffen van de inrichting van activiteiten.
 
 >[!NOTE]
 Elke werkstroom voor het opheffen van inrichtingen moet ervoor zorgen dat het kenmerk Uitvoeren bij beleidsupdates is ingesteld op Waar.
@@ -461,8 +448,7 @@ Bij het maken van een TMPR-paar schakelt u In MPR last in. Deze volgorde zorgt e
 
 Bij het inrichten van werkstromen moet eerst worden bepaald of de doelresource al is ingericht in overeenstemming met het recht. Als dat zo is, zou er niets moeten gebeuren.
 
-Werkstromen voor het opheffen van inrichtingen moeten eerst bepalen of de doelresource is ingericht. Als dat zo is, zou de inrichting van de doelresource moeten worden opgeheven.
-Als dit niet het geval is, gebeurt er niets.
+Werkstromen voor het opheffen van inrichtingen moeten eerst bepalen of de doelresource is ingericht. Als dat zo is, zou de inrichting van de doelresource moeten worden opgeheven. Als dit niet het geval is, gebeurt er niets.
 
 #### <a name="select-run-on-policy-update-for-tmprs"></a>Uitvoeren bij beleidsupdates voor TMPR's selecteren
 
@@ -494,19 +480,17 @@ Wanneer u een recht wilt verwijderen maar de huidige leden met rust wilt laten (
 
 ### <a name="sets"></a>Sets
 
-Wanneer u de aanbevolen procedures voor sets toepast, moet u rekening houden met de gevolgen van de optimaliseringen voor de uitvoerbaarheid en het gemak van toekomstig beheer.
-Goede tests met de verwachte productieschaal moeten worden uitgevoerd om de juiste balans te bepalen tussen prestaties en beheerbaarheid voordat u deze aanbevelingen toepast.
+Wanneer u de aanbevolen procedures voor sets toepast, moet u rekening houden met de gevolgen van de optimaliseringen voor de uitvoerbaarheid en het gemak van toekomstig beheer. Goede tests met de verwachte productieschaal moeten worden uitgevoerd om de juiste balans te bepalen tussen prestaties en beheerbaarheid voordat u deze aanbevelingen toepast.
 
 >[!NOTE]
-Alle volgende richtlijnen gelden voor dynamische sets en dynamische groepen.
+> Alle volgende richtlijnen gelden voor dynamische sets en dynamische groepen.
 
 
 #### <a name="minimize-the-use-of-dynamic-nesting"></a>Het gebruik van dynamisch nesten minimaliseren
 
 Dit heeft betrekking op het filter van een set die verwijst naar het kenmerk ComputedMember van een andere set. Een veelvoorkomende reden voor het nesten van sets is om te voorkomen dat een voorwaarde voor lidmaatschap in veel gegevenssets wordt gedupliceerd. Deze methode kan leiden tot betere mogelijkheden voor het beheren van de sets, maar heeft negatieve gevolgen voor de prestaties. U kunt de prestaties optimaliseren door de lidmaatschapsvoorwaarden van een geneste set te dupliceren in plaats van de set zelf te nesten.
 
-U kunt gevallen tegenkomen waarin u het nesten van sets niet kunt vermijden omdat moet worden voldaan aan een functionele vereiste. Dit zijn de voornaamste situaties waarin u sets moet nesten. Voor het definiëren van de set met alle groepen zonder fulltime-werknemereigenaars moet het nesten van sets bijvoorbeeld als volgt worden gebruikt: `/Group[not(Owner =
-/Set[ObjectID = ‘X’]/ComputedMember]`, waarbij 'X' de ObjectID is van de set met alle fulltime-werknemers.
+U kunt gevallen tegenkomen waarin u het nesten van sets niet kunt vermijden omdat moet worden voldaan aan een functionele vereiste. Dit zijn de voornaamste situaties waarin u sets moet nesten. Voor het definiëren van de set met alle groepen zonder fulltime-werknemereigenaars moet het nesten van sets bijvoorbeeld als volgt worden gebruikt: `/Group[not(Owner = /Set[ObjectID = ‘X’]/ComputedMember]`, waarbij 'X' de ObjectID is van de set met alle fulltime-werknemers.
 
 #### <a name="minimize-the-use-of-negative-conditions"></a>Het gebruik van negatieve situaties minimaliseren
 
@@ -540,8 +524,7 @@ Communication Foundation (WCF). Deze optie is niet standaard ingeschakeld en het
 
 #### <a name="do-not-map-an-authorization-workflow-to-the-password-reset-process"></a>Een autorisatiewerkstroom niet toewijzen aan het proces voor wachtwoordherstel
 
-Koppel een autorisatiewerkstroom niet aan een bewerking voor wachtwoordherstel.
-Wachtwoordherstel vereist een synchrone reactie en autorisatiewerkstromen die activiteiten bevatten, zoals de goedkeuringsactiviteit, zijn asynchroon.
+Koppel een autorisatiewerkstroom niet aan een bewerking voor wachtwoordherstel. Wachtwoordherstel vereist een synchrone reactie en autorisatiewerkstromen die activiteiten bevatten, zoals de goedkeuringsactiviteit, zijn asynchroon.
 
 #### <a name="do-not-map-multiple-action-activities-to-password-reset"></a>Meerdere actieactiviteiten niet toewijzen aan wachtwoordherstel
 

@@ -10,11 +10,11 @@ ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 
-ms.openlocfilehash: 0e039c0b05cc9088a6934c07ead09fb5250f8a81
-ms.sourcegitcommit: 81ad3ede52c3a4308b806c0c8a3fd42b5f5965b0
+ms.openlocfilehash: 171aa1a2e19ea9f78f9fadbc7368404702095d71
+ms.sourcegitcommit: 0d8b19c5d4bfd39d9c202a3d2f990144402ca79c
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/11/2017
+ms.lasthandoff: 11/14/2017
 ---
 # <a name="how-do-i-provision-users-to-ad-ds"></a>Hoe kan ik gebruikers inrichten voor AD DS?
 
@@ -294,7 +294,7 @@ In de volgende tabellen wordt de configuratie getoond van de vereiste inrichting
 
 
  >[!NOTE]
-Controleer of u hebt geselecteerd alleen initiële stroom voor de kenmerkstroom met de DN-naam als de bestemming.                                                                          
+ Belangrijk: Verifieer dat u Alleen initiële stroom hebt geselecteerd voor de kenmerkstroom met de DN als doel.                                                                          
 
 ### <a name="step-7-create-the-workflow"></a>Stap 7: De werkstroom maken
 
@@ -459,11 +459,7 @@ Voer de volgende uitvoerprofielen uit als u deze taken wilt verrichten.
 | Fabrikam FIMMA   | 1. Exporteren <br/> 2. Delta-Import       |
 
 
-Na de importbewerking vanuit de FIM-servicedatabase, worden Julia Steen en het object ExpectedRuleEntry, dat Julia koppelt aan de
-
-uitgaande synchronisatieregel voor AD-gebruikers, gefaseerd binnengebracht in het Fabrikam FIMMA-connectorgebied. Als u de eigenschappen
-
-van Julia in het connectorgebied controleert, vindt u naast de kenmerkwaarden die u in de FIM-portal hebt geconfigureerd, ook een geldige verwijzing naar het object Verwachte-regelvermelding. In de volgende schermopname ziet u hier een voorbeeld van.
+Na het importeren van de FIM-servicedatabase, Britta Simon en het ExpectedRuleEntry-object dat koppelingen Britta aan de uitgaande Synchronisatieregel van AD-gebruiker in de ruimte van de connector Fabrikam FIMMA worden voorbereid. Wanneer u de Britta eigenschappen in het connectorgebied overgebracht, naast de kenmerkwaarden weer die u hebt geconfigureerd in de FIM-Portal, bekijkt vinden u ook een geldige verwijzing naar het verwachte-Regelvermelding-object. In de volgende schermopname ziet u hier een voorbeeld van.
 
 ![Eigenschappen van het object van het connectorgebied](media/how-provision-users-adds/image025.jpg)
 

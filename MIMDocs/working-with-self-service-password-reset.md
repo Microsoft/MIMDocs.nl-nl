@@ -12,12 +12,15 @@ ms.technology: security
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: c6786ea653f178b25ea3da4fbd3b01d21b79c622
-ms.sourcegitcommit: f077508b5569e2a96084267879c5b6551e1e0905
+ms.openlocfilehash: 90c773c30b0ab23ad29ca1a215745bf59b188764
+ms.sourcegitcommit: 0d8b19c5d4bfd39d9c202a3d2f990144402ca79c
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 11/14/2017
 ---
+>[!IMPORTANT]
+Als gevolg van de aankondiging van afschaffing van Azure multi-factor Authentication Software Development Kit. De Azure MFA-SDK worden voor bestaande klanten tot de datum buiten gebruik stellen van 01 oktober 2018 ondersteund. Huidige en nieuwe klanten kunnen niet meer SDK downloaden via de klassieke Azure portal. U kunt u downloaden moet bereiken Azure klantondersteuning om uw gegenereerde Servicereferenties MFA-pakket wordt ontvangen. <br> Het ontwikkelteam Microsoft werkt over het plannen van wijzigingen in de MFA door te integreren met MFA Server SDK. Deze oplossing wordt opgenomen in toekomstige hotfix in vroege 2018.
+
 # <a name="working-with-self-service-password-reset"></a>Werken met de selfservice voor wachtwoordherstel
 Microsoft Identity Manager 2016 biedt aanvullende functionaliteit voor de functie Wachtwoord opnieuw instellen in Selfservice. Deze functionaliteit is uitgebreid met verschillende belangrijke functies:
 
@@ -68,7 +71,7 @@ In de volgende sectie stelt u de Azure MFA-provider in Microsoft Azure Active Di
 
 3.  Klik op **App-services &gt; Active Directory &gt; Provider voor Multi-Factor Authentication&gt; Snelle invoer**.
 
-![Afbeelding voor snelle invoer voor MFA-provider in Azure Portal](media/MIM-SSPR-Azureportal.png)
+![Azure Portals snelle maken MFA installatiekopie](media/MIM-SSPR-Azureportal.png)
 
 4.  Typ in het veld **Naam** de tekst **SSPRMFA** en klik vervolgens op **Maken**.
 
@@ -82,7 +85,7 @@ In de volgende sectie stelt u de Azure MFA-provider in Microsoft Azure Active Di
 
 7.  Klik in het nieuwe venster in het linkerdeelvenster onder **Configureren** op **Instellingen**.
 
-8.  Schakel onder **Fraudewaarschuwing** het selectievakje **Gebruiker blokkeren wanneer fraude wordt gemeld** uit. Dit wordt gedaan om te voorkomen dat de hele service wordt geblokkeerd.
+8.  Onder **fraudewaarschuwing**, schakel het selectievakje ** gebruiker blokkeren wanneer fraude wordt gemeld. Dit wordt gedaan om te voorkomen dat de hele service wordt geblokkeerd.
 
 9. Klik in het venster **Microsoft Azure Multi-Factor Authentication** dat wordt geopend op **SDK** onder **Downloads** in het menu aan de linkerkant.
 
@@ -136,7 +139,7 @@ Gebruikers in uw organisatie kunnen zich nu registreren voor het opnieuw instell
 
 #### <a name="register-users-for-password-reset"></a>Gebruikers registreren voor het opnieuw instellen van het wachtwoord
 
-1.  De gebruiker opent een webbrowser om naar de MIM-registratieportal voor het opnieuw instellen van het wachtwoord te navigeren.  (Deze portal is meestal geconfigureerd met Windows-verificatie).  In de portal geven ze nogmaals hun gebruikersnaam en wachtwoord op om hun identiteit te bevestigen.
+1.  Een gebruiker wordt opent een webbrowser en navigeer naar de MIM opnieuw Portal voor Wachtwoordregistratie.  (Deze portal is meestal geconfigureerd met Windows-verificatie).  In de portal geven ze nogmaals hun gebruikersnaam en wachtwoord op om hun identiteit te bevestigen.
 
     Ze moeten naar de portal voor wachtwoordregistratie gaan en zich verifiëren met hun gebruikersnaam en wachtwoord.
 
@@ -165,7 +168,7 @@ Wanneer de MIM-invoegtoepassingen en -uitbreidingen worden geïnstalleerd op een
 
 2.  De gebruiker wordt gevraagd om zich te verifiëren. Als MFA is geconfigureerd, wordt de gebruiker gebeld.
 
-3.  Op de achtergrond wordt door Azure MFA naar het nummer gebeld dat door de gebruiker is opgegeven toen deze zich voor de service heeft aangemeld.
+3.  Op de achtergrond is wat er gebeurt door Azure MFA een telefonische oproep naar het nummer van de gebruiker is opgegeven toen deze zich aangemeld voor de service.
 
 4.  Wanneer de gebruiker de telefoonoproep beantwoordt, wordt deze gevraagd om de hekjestoets (#) op de telefoon in te toetsen. De gebruiker klikt vervolgens in de portal op **Volgende**.
 
@@ -182,7 +185,7 @@ Wanneer de MIM-invoegtoepassingen en -uitbreidingen worden geïnstalleerd op een
 
 1.  Gebruikers kunnen een webbrowser openen, naar de **portal voor het opnieuw instellen van het wachtwoord** navigeren, hun gebruikersnaam invoeren en op **Volgende** klikken.
 
-    Als MFA is geconfigureerd, wordt de gebruiker gebeld. Op de achtergrond wordt door Azure MFA naar het nummer gebeld dat door de gebruiker is opgegeven toen deze zich voor de service heeft aangemeld.
+    Als MFA is geconfigureerd, wordt de gebruiker gebeld. Op de achtergrond is wat er gebeurt door Azure MFA een telefonische oproep naar het nummer van de gebruiker is opgegeven toen deze zich aangemeld voor de service.
 
     Wanneer de gebruiker de telefoonoproep beantwoordt, wordt deze gevraagd om de hekjestoets (#) op de telefoon in te toetsen. De gebruiker klikt vervolgens in de portal op **Volgende**.
 

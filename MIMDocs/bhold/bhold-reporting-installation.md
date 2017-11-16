@@ -11,10 +11,10 @@ ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 
 ms.openlocfilehash: aa6a263daadc4abdcad0eaaba554b6bc739fbd5f
-ms.sourcegitcommit: ed8dd5563e77ef4a3345b2a52a1426859c95576a
+ms.sourcegitcommit: 0d8b19c5d4bfd39d9c202a3d2f990144402ca79c
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 11/14/2017
 ---
 # <a name="bhold-reporting-installation"></a>BHOLD reporting installatie
 
@@ -44,7 +44,7 @@ Meld u aan als lid van de groep Domeinadministrators voor het installeren van de
 
 - BholdReporting*\<versie\>*\_Release.msi
 
-Vervang * \<versie\> * met het versienummer van de rapportage van BHOLD-versie die u installeert.
+Vervang  *\<versie\>*  met het versienummer van de rapportage van BHOLD-versie die u installeert.
 
 Als u wilt het programmabestand uitvoeren als beheerder, met de rechtermuisknop op het bestand en klik vervolgens op **als administrator uitvoeren**.
 

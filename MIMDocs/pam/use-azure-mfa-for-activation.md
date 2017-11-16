@@ -3,22 +3,26 @@ title: Azure MFA gebruiken om PAM te activeren | Microsoft Docs
 description: Azure MFA instellen als een tweede beveiligingslaag wanneer uw gebruikers rollen in Privileged Access Management activeren.
 keywords: 
 author: barclayn
-ms.author: barclayn
+ms.author: fimguy
 manager: mbaldwin
-ms.date: 08/31/2017
+ms.date: 11/14/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 5134a112-f73f-41d0-a5a5-a89f285e1f73
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: dd77c0135bee40a90f3ea9fd5c1b2771cbc21793
-ms.sourcegitcommit: c049dceaf02ab8b6008fe440daae4d07b752ca2e
+ms.openlocfilehash: 4accb4c1db90f11c18917012b9a3ab4966ea6496
+ms.sourcegitcommit: 0d8b19c5d4bfd39d9c202a3d2f990144402ca79c
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/31/2017
+ms.lasthandoff: 11/14/2017
 ---
 # <a name="using-azure-mfa-for-activation"></a>Azure MFA gebruiken voor activering
+>[!IMPORTANT]
+Als gevolg van de aankondiging van afschaffing van Azure multi-factor Authentication Software Development Kit. De Azure MFA-SDK worden voor bestaande klanten tot de datum buiten gebruik stellen van 01 oktober 2018 ondersteund. Huidige en nieuwe klanten kan niet worden voor het downloaden van de SDK meer via de klassieke Azure portal. U kunt u downloaden moet bereiken Azure klantondersteuning om uw gegenereerde Servicereferenties MFA-pakket wordt ontvangen. <br> Het ontwikkelteam Microsoft werkt over het plannen van wijzigingen in de MFA door te integreren met MFA Server SDK. Deze oplossing wordt opgenomen in toekomstige hotfix in vroege 2018.
+
+
 
 Wanneer u een PAM-rol configureert, kunt u hoe gebruikers die een aanvragen voor activering van de rol verzenden, moeten worden geautoriseerd. Met de PAM-autorisatieactiviteit worden de volgende keuzen geïmplementeerd:
 

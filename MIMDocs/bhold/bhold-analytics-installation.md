@@ -11,10 +11,10 @@ ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 
 ms.openlocfilehash: 631e08667e5d1535d8f63cc297aad360080f8b20
-ms.sourcegitcommit: ed8dd5563e77ef4a3345b2a52a1426859c95576a
+ms.sourcegitcommit: 0d8b19c5d4bfd39d9c202a3d2f990144402ca79c
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 11/14/2017
 ---
 # <a name="bhold-analytics-installation"></a>Installatie van BHOLD-analyse
 
@@ -41,7 +41,7 @@ Voor het installeren van de module BHOLD-analyse, meld u aan als lid van de groe
 
 - BholdAnalytics*\<versie\>*\_Release.msi
 
-Vervang * \<versie\> * met het versienummer van de release van BHOLD-analyse die u installeert.
+Vervang  *\<versie\>*  met het versienummer van de release van BHOLD-analyse die u installeert.
 
 Als u wilt het programmabestand uitvoeren als beheerder, met de rechtermuisknop op het bestand en klik vervolgens op **als administrator uitvoeren**.
 

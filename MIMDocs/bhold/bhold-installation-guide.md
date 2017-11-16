@@ -11,10 +11,10 @@ ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 
 ms.openlocfilehash: c36a9d02e90101b98ade913224e573ed21dc3d5c
-ms.sourcegitcommit: ed8dd5563e77ef4a3345b2a52a1426859c95576a
+ms.sourcegitcommit: 0d8b19c5d4bfd39d9c202a3d2f990144402ca79c
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 11/14/2017
 ---
 # <a name="microsoft-bhold-suite-sp1-60-installation-guide"></a>Installatiehandleiding voor Microsoft BHOLD-Suite SP1 (6.0)
 
@@ -52,7 +52,7 @@ Deze sectie bevat de volgende onderwerpen:
 
 - Architectuur van één server
 - Dual-server-architectuur
-- Architectuur van de twee lagen
+- architectuur van de twee lagen
 - SQL Server-aanbevelingen
 
 ### <a name="single-server-architecture"></a>Architectuur van één server
@@ -73,7 +73,7 @@ BHOLD-Core en FIM installeren op afzonderlijke servers biedt meer prestaties en 
 >[!IMPORTANT]
 De rapportagefunctie van BHOLD FIM-integratiemodule vereist de BHOLD en de FIM-databases worden geïnstalleerd op hetzelfde exemplaar van SQL Server en de BHOLD-serviceaccount moet toegangsrechten voor de FIM-servicedatabase.
 
-### <a name="two-tier-architecture"></a>Architectuur van de twee lagen
+### <a name="two-tier-architecture"></a>architectuur van de twee lagen
 
 In de meeste omgevingen, met name wanneer prestaties belangrijk is, moet u de BHOLD-Suite SP1, FIM en SQL Server op afzonderlijke servers (twee lagen architectuur). Met een architectuur met twee lagen, zijn geheugen en CPU-resources toegewezen voor elke laag. De volgende afbeelding toont een mogelijke manier voor het configureren van een architectuur met twee lagen. De FIM-synchronisatieservice uitgevoerd op de FIM-server synchroniseert wijzigingen tussen FIM en BHOLD-databases. Houd er rekening mee dat als self-service door eindgebruikers vereist is, de BHOLD FIM-integratiemodule moet worden geïnstalleerd op dezelfde server als de FIM-Service en de Portal.
 
