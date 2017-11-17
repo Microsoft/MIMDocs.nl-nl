@@ -5,17 +5,17 @@ keywords:
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
-ms.date: 08/18/2017
+ms.date: 11/15/2017
 ms.topic: reference
 ms.prod: identity-manager-2016
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 
-ms.openlocfilehash: fe361c3f6dd85a478d655a910f0f3ec9802128b0
-ms.sourcegitcommit: 0d8b19c5d4bfd39d9c202a3d2f990144402ca79c
+ms.openlocfilehash: 7f56882bf005de6c888997c1bf6a9e2feaea410c
+ms.sourcegitcommit: 42253562ac2f9ed689e9db9d0c470213b7926883
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/14/2017
+ms.lasthandoff: 11/16/2017
 ---
 # <a name="microsoft-identity-manager-2016-best-practices"></a>Aanbevolen procedures voor Microsoft Identity Manager 2016
 
@@ -90,7 +90,7 @@ Afhankelijk van de hoeveelheid geheugen op de SQL-server en als u de SQL-server 
   WITH OVERRIDE
   ```
 
-  In dit voorbeeld wordt de SQL-server opnieuw geconfigureerd voor het gebruik van niet meer dan 12 gigabyte (GB) aan geheugen.
+  In dit voorbeeld opnieuw geconfigureerd voor de SQL server voor het gebruik van niet meer dan 12 gigabyte (GB) aan geheugen.
 
 4.  Controleer de instelling met de volgende query:
 
@@ -108,13 +108,16 @@ Afhankelijk van de hoeveelheid geheugen op de SQL-server en als u de SQL-server 
 
 ### <a name="backup-and-recovery-configuration"></a>Back-up en herstel configureren
 
-Over het algemeen moet u databaseback-ups uitvoeren in overeenstemming met het back-upbeleid van uw organisatie. Als er geen incrementele logboekback-ups zijn gepland, moet de database worden ingesteld op de eenvoudige herstelmodus. Zorg dat u de gevolgen begrijpt van de verschillende herstelmodellen voordat u uw back-upstrategie implementeert, evenals de schijfruimtevereisten voor deze modellen. Voor het volledig-herstelmodel moet u regelmatig back-ups maken om intensief gebruik van de schijfruimte te voorkomen. Zie [Recovery Model Overview (Overzicht van herstelmodellen)](http://go.microsoft.com/fwlink/?LinkID=185370) en [FIM 2010 Backup and Restore Guide (Handleiding voor back-up en herstel)](http://go.microsoft.com/fwlink/?LinkID=165864).
+In het algemeen moet u samenwerken met de beheerder van de database voor het ontwerpen van een strategie voor back-up en herstel. Er zijn enkele aanbevelingen:
+- Databaseback-ups volgens de back-upbeleid van uw organisatie uitvoeren. 
+- Als er geen incrementele logboekback-ups zijn gepland, moet de database worden ingesteld op de eenvoudige herstelmodus. 
+- Zorg ervoor dat u de implicaties van de verschillende herstelmodellen begrijpt voordat u uw back-upstrategie implementeert. Meer informatie over de benodigde schijfruimte voor deze modellen. Voor het volledig-herstelmodel moet u regelmatig back-ups maken om intensief gebruik van de schijfruimte te voorkomen. 
 
-## <a name="create-a-backup-administrator-account-for-the-fimservice-after-installation"></a>Een Administrator-back-upaccount voor de FIMService maken na de installatie
+Zie [Recovery Model Overview (Overzicht van herstelmodellen)](http://go.microsoft.com/fwlink/?LinkID=185370) en [FIM 2010 Backup and Restore Guide (Handleiding voor back-up en herstel)](http://go.microsoft.com/fwlink/?LinkID=165864).
 
+## <a name="create-a-backup-administrator-account-for-the-fim-service-after-installation"></a>Maak een back-up Administrator-account voor de FIM-Service na de installatie
 
->[!IMPORTANT]
-Leden van de groep FIMService Administrators hebben unieke machtigingen die essentieel zijn voor de werking van uw FIM-implementatie. Als u zich niet kunt aanmelden als onderdeel van de groep Administrators, is de enige oplossing een eerdere back-up van het systeem terug te zetten. Om het risico op deze situatie te beperken, is het raadzaam dat u andere gebruikers aan de groep FIM-administrators toevoegt als onderdeel van uw configuratie na de installatie.
+Leden van de set FIMService beheerders hebben unieke machtigingen vereist voor de werking van uw MIM-implementatie. Als u niet aanmelden als onderdeel van de beheerders is ingesteld, is de enige oplossing kunt terugkeren naar een eerdere back-up van het systeem. Om het risico op deze situatie te beperken, is het raadzaam dat u andere gebruikers aan de groep FIM-administrators toevoegt als onderdeel van uw configuratie na de installatie.
 
 ## <a name="fim-service"></a>FIM-service
 
@@ -144,7 +147,7 @@ Zie [Beperkingen voor de bezorging van e-mail configureren](http://go.microsoft.
 
 ### <a name="disable-sharepoint-indexing"></a>Indexeren van SharePoint uitschakelen
 
-Het is raadzaam om het indexeren van Microsoft Office SharePoint® uit te schakelen. Er zijn geen documenten die moeten worden geïndexeerd en indexering veroorzaakt veel fouten in logboekvermeldingen en mogelijke prestatieproblemen met FIM 2010. Indexeren van SharePoint uitschakelen
+Het is raadzaam om het indexeren van Microsoft Office SharePoint® uit te schakelen. Er zijn geen documenten die moeten worden geïndexeerd. Indexeren zorgt ervoor dat veel fout logboekvermeldingen en potentiële prestatieproblemen in MIM. Als u wilt uitschakelen, indexeren van SharePoint de volgende stappen uitvoeren:
 
 1.  Klik op Start op de server die als host fungeert voor de MIM 2016-portal.
 
@@ -164,16 +167,16 @@ Het is raadzaam om het indexeren van Microsoft Office SharePoint® uit te schake
 
 ## <a name="mim-2016-initial-data-load"></a>MIM 2016: initiële gegevens laden
 
-In deze sectie vindt u een reeks stappen voor het verhogen van de prestaties bij het initieel laden van gegevens van een extern systeem naar FIM 2010. Een aantal hiervan zijn tijdelijke stappen tijdens de initiële populatie van het systeem en deze moeten na de voltooiing opnieuw worden ingesteld. Dit is een eenmalige bewerking en geen continue synchronisatie.
+Deze sectie vindt een reeks stappen voor het verbeteren de prestaties van de initiële gegevens laden van het externe systeem naar MIM. Het is belangrijk te weten dat een aantal van deze stappen alleen worden uitgevoerd tijdens de eerste populatie van het systeem. Ze worden ingesteld na voltooiing van de belasting. Dit is een eenmalige bewerking en geen continue synchronisatie.
 
 >[!NOTE]
-Zie [How do I Synchronize Users from Active Directory to FIM (Hoe kan ik gebruikers synchroniseren vanuit Active Directory naar FIM)](http://go.microsoft.com/fwlink/?LinkID=188277) in de FIM-documentatie voor meer informatie over het synchroniseren van gebruikers tussen FIM 2010 en Active Directory Domain Services (AD DS).
+Zie voor meer informatie over het synchroniseren van gebruikers tussen MIM en Active Directory Domain Services (AD DS), [hoe maak ik een synchronisatie van gebruikers uit Active Directory naar FIM](http://go.microsoft.com/fwlink/?LinkID=188277) in de FIM-documentatie.
 
 >[!IMPORTANT]
-Zorg ervoor dat u de aanbevolen procedures hebt toegepast die worden beschreven in de sectie SQL Setup van deze handleiding.                                                                                                                                                      |
+Zorg ervoor dat u de aanbevolen procedures hebt toegepast die worden beschreven in de sectie SQL Setup van deze handleiding. 
 
 ### <a name="step-1-configure-the-sql-server-for-initial-data-load"></a>Stap 1: De SQL-server configureren voor het initieel laden van gegevens
-Wanneer u van plan bent in eerste instantie grote hoeveelheden gegevens te laden, kunt u de tijd die nodig is voor het vullen van de database verkorten door tijdelijk de zoekopdracht in volledige tekst uit te schakelen en weer in te schakelen nadat het exporteren van de MIM 2016 Management Agent (FIM MA) is voltooid.
+Het initiële laden van gegevens kan lang duren zijn. Wanneer u van plan bent een grote hoeveelheid gegevens in eerste instantie te laden, kunt u de tijd die nodig zijn voor het vullen van de database tijdelijk zoekopdracht in volledige tekst uitschakelen en inschakelen het opnieuw nadat het exporteren van de MIM 2016-beheeragent (FIM MA) is voltooid verkorten.
 
 De zoekopdracht in volledige tekst tijdelijk uitschakelen:
 
@@ -184,12 +187,9 @@ De zoekopdracht in volledige tekst tijdelijk uitschakelen:
 3.  Voer de volgende SQL-instructies uit:
 
 ```SQL
-ALTER FULLTEXT INDEX ON [fim].[ObjectValueString] SET CHANGE_TRACKING =
-MANUAL
+ALTER FULLTEXT INDEX ON [fim].[ObjectValueString] SET CHANGE_TRACKING = MANUAL
 ALTER FULLTEXT INDEX ON [fim].[ObjectValueXml] SET CHANGE_TRACKING = MANUAL
 ```
-
-Het is belangrijk dat u bekend bent met de schijfvereisten voor het herstelmodel van uw SQL server. Afhankelijk van uw back-upschema, kunt u overwegen om met behulp van de modus voor eenvoudig herstel tijdens het initieel laden van het systeem het gebruik van schijfruimte te beperken. U moet echter wel begrijpen welke gevolgen dit kan hebben op het gebied van gegevensverlies. Wanneer u de volledig-herstelmodus gebruikt, moet u schijfgebruik beheren via back-ups. Dit houdt onder meer in dat u regelmatig back-ups moet maken van het transactielogboek om intensief gebruik van de schijfruimte te voorkomen.
 
 >[!IMPORTANT]
 Het niet implementeren van deze procedures kan leiden tot een intensief gebruik van de schijfruimte, wat kan resulteren in onvoldoende schijfruimte. U vindt aanvullende informatie over dit onderwerp in [Recovery Model Overview (Overzicht van herstelmodellen)](http://go.microsoft.com/fwlink/?LinkID=185370). [De FIM Backup and Restore Guide (Handleiding voor back-up en herstel](http://go.microsoft.com/fwlink/?LinkID=165864) bevat aanvullende informatie.
@@ -200,16 +200,11 @@ Tijdens het initiële laadproces moet u alleen de minimaal benodigde configurati
 
 ### <a name="step-3-configure-and-populate-the-fim-service-with-external-identity-data"></a>Stap 3: De FIM-service configureren en vullen met externe identiteitsgegevens
 
-Voor deze stap volgt u de procedures beschreven in de Engelstalige handleiding How Do I Synchronize Users from Active Directory
-
-Domain Services to FIM (Hoe kan ik gebruikers synchroniseren uit Active Directory Domain Services naar FIM) om uw systeem te configureren voor en synchroniseren met gebruikers uit Active Directory. Als u groepsgegevens wilt synchroniseren vindt u de procedures hiervoor in de Engelstalige handleiding How Do I Synchronize Groups from Active Directory Domain Services to FIM (Hoe kan ik groepen synchroniseren uit Active Directory Domain Services met FIM).
+Op dit punt Volg de procedures beschreven in de hoe kan ik synchroniseren gebruikers uit Active Directory Domain Services FIM-handleiding voor het configureren en synchroniseren van uw systeem met gebruikers uit Active Directory. Als u synchroniseren van gegevens van de groep wilt, de procedures voor het proces worden beschreven in de [hoe kan ik synchroniseren groepen van Active Directory Domain Services naar FIM](https://technet.microsoft.com/library/ff686936(v=ws.10).aspx) handleiding.
 
 #### <a name="synchronization-and-export-sequences"></a>Synchronisatie- en exportprocedures
 
-Voor optimale prestaties voert u een exportprocedure uit na een synchronisatieprocedure die resulteert in een groot aantal wachtende exportbewerkingen in een connectorgebied.
-
-Voer dan een import uit op de beheeragent die is gekoppeld aan het betreffende connectorgebied. Wanneer u bijvoorbeeld bij het initieel laden van gegevens synchronisatieprofielen moet uitvoeren op verschillende beheeragenten, moet u een export uitvoeren gevolgd door een delta-import na het uitvoeren van elke afzonderlijke synchronisatie.
-
+Voor optimale prestaties voert u een exportprocedure uit na een synchronisatieprocedure die resulteert in een groot aantal wachtende exportbewerkingen in een connectorgebied. Voer dan een import uit op de beheeragent die is gekoppeld aan het betreffende connectorgebied. Wanneer u bijvoorbeeld bij het initieel laden van gegevens synchronisatieprofielen moet uitvoeren op verschillende beheeragenten, moet u een export uitvoeren gevolgd door een delta-import na het uitvoeren van elke afzonderlijke synchronisatie.
 Voor elke bronbeheeragent die deel uitmaakt van de initialisatiecyclus, voert u de volgende stappen uit:
 
 1.  Volledige import op een bronbeheeragent.
@@ -320,7 +315,7 @@ SSL implementeren:
 
 7.  Sla het bestand op een willekeurige locatie op. Voor de volgende stappen moet u toegang hebben tot deze locatie.
 
-8.  In Windows Internet Explorer® bladert u naar https://servernaam/certsrv. Vervang servernaam door de naam van de server die certificaten uitgeeft.
+8.  Blader naar https://servername/certsrv. Vervang servernaam door de naam van de server die certificaten uitgeeft.
 
 9.  Klik op Request a new Certificate.
 
@@ -374,7 +369,7 @@ Voor het configureren van optimale prestaties:
 
 -   Pas de aanbevolen procedures voor SQL-instellingen toe zoals beschreven in de sectie SQL-instellingen in dit document.
 
--   Schakel het indexeren van SharePoint op de site FIM 2010 R2-portal uit. Zie voor meer informatie de sectie Indexering van SharePoint uitschakelen in dit document.
+-   Indexeren van SharePoint op de MIM-portalsite uitschakelen. Zie voor meer informatie de sectie Indexering van SharePoint uitschakelen in dit document.
 
 ## <a name="feature-specific-best-practices--i-want-to-remove-this-and-collapse-this-section-and-just-have-the-specific-features-at-header-2-level-versus-3"></a>Aanbevolen procedures voor specifieke functies
 
@@ -392,7 +387,7 @@ MIM biedt twee typen beheerbeleidsregels: aanvraag en setovergang:
 -  Beheerbeleidsregel van het type aanvraag (RMPR)
 
   - Hiermee definieert u het toegangsbeheerbeleid (verificatie, autorisatie en actie) voor Create-, Read-, Update- of Delete-bewerkingen (CRUD) op resources.
-  - Dit wordt toegepast wanneer een CRUD-bewerking is gegeven voor een doelresource in FIM.
+  - Toegepast wanneer een CRUD-bewerking is uitgegeven voor een doelbron in MIM.
   - Het bereik van de bewerking wordt bepaald door de overeenkomende criteria gedefinieerd in de regel, dat wil zeggen de CRUD-aanvragen waarop de regel van toepassing is.
 
 - Beheerbeleidsregel van het type setovergang (TMPR)
@@ -404,7 +399,7 @@ MIM biedt twee typen beheerbeleidsregels: aanvraag en setovergang:
 
 #### <a name="only-enable-mprs-as-necessary"></a>Beheerbeleidsregels alleen naar wens inschakelen
 
-Gebruik het principe van minimale bevoegdheden bij het toepassen van uw configuratie. Beheerbeleidsregels bepalen het toegangsbeleid voor uw FIM-implementatie. Schakel alleen de functies in die worden gebruikt door de meeste gebruikers. Niet alle gebruikers gebruiken bijvoorbeeld FIM voor groepsbeheer. Beheerbeleidsregels voor groepsbeheer moet dus worden uitgeschakeld. FIM wordt standaard geleverd met de meeste niet-beheerdersmachtigingen uitgeschakeld.
+Gebruik het principe van minimale bevoegdheden bij het toepassen van uw configuratie. MPR's bepalen het toegangsbeleid voor uw implementatie MIM. Schakel alleen de functies in die worden gebruikt door de meeste gebruikers. Niet alle gebruikers gebruiken bijvoorbeeld MIM voor groepsbeheer, zodat de bijbehorende groep management MPR's moet worden uitgeschakeld. Standaard wordt MIM geleverd met de meeste geen beheerder machtigingen uitgeschakeld.
 
 #### <a name="duplicate-built-in-mprs-instead-of-directly-modifying"></a>Ingebouwde beheerbeleidsregels dupliceren in plaats van rechtstreeks wijzigen
 Wanneer u de ingebouwde beheerbeleidsregels wilt wijzigen, moet u een nieuwe beheerbeleidsregel maken met de vereiste configuratie en de ingebouwde beheerbeleidsregel uitschakelen. Dit zorgt ervoor dat toekomstige wijzigingen in de ingebouwde beheerbeleidsregels die zijn geïntroduceerd door het upgradeproces, geen negatieve invloed op uw systeemconfiguratie hebben.
@@ -431,7 +426,7 @@ Kenmerken met dezelfde toegangsvereisten die zeer waarschijnlijk niet zullen ver
 
 #### <a name="avoid-giving-unrestricted-access-even-to-selected-principal-groups"></a>Vermijd het verlenen van onbeperkte toegang tot geselecteerde principal-groepen
 
-In FIM worden machtigingen gedefinieerd als een positieve verklaring. Omdat FIM weigeringsmachtigingen niet ondersteunt, bemoeilijkt het verlenen van onbeperkte toegang tot een resource het opnemen van uitsluitingen in de machtigingen. De aanbevolen procedure is om alleen de benodigde machtigingen te verlenen.
+Machtigingen zijn in MIM gedefinieerd als een positieve bevestiging. Omdat MIM biedt geen ondersteuning voor machtigingen te weigeren, ingewikkelder onbeperkte toegang geven tot een resource eventuele uitzonderingen in de machtigingen te geven. De aanbevolen procedure is om alleen de benodigde machtigingen te verlenen.
 
 #### <a name="use-tmprs-to-define-custom-entitlements"></a>Beheerbeleidsregels van het type setovergang gebruiken voor het definiëren van aangepaste rechten
 
@@ -470,7 +465,7 @@ Een recht verwijderen uit het systeem (en het intrekken van het recht voor alle 
 
 3.  Schakel de beheerbeleidsregel T-Out uit.
 
-Wanneer u een recht wilt verwijderen maar de huidige leden met rust wilt laten (u wilt bijvoorbeeld stoppen met het gebruik van FIM voor het beheren van rechten):
+Te verwijderen van een recht, maar de huidige leden ongewijzigd laten (bijvoorbeeld stop het recht beheren met behulp van MIM):
 
 1.  Schakel de beheerbeleidsregel T-In uit. Hiermee voorkomt u nieuwe toekenningen.
 
@@ -504,11 +499,11 @@ Het gebruik van voorwaarden op basis van verwijzingskenmerken met meerdere waard
 
 #### <a name="kiosk-like-computers-that-are-used-for-password-reset-should-set-local-security-to-clear-the-virtual-memory-pagefile"></a>Op computers bedoeld als kiosk die worden gebruikt voor wachtwoordherstel, moet de lokale beveiliging zijn ingesteld op het wissen van het wisselbestand voor virtueel geheugen
 
-Bij het implementeren van FIM 2010-wachtwoordherstel op een werkstation bedoeld als een kiosk is het raadzaam om Afsluiten: wisselbestand voor virtueel geheugen wissen in te schakelen om ervoor te zorgen dat gevoelige informatie in het procesgeheugen niet beschikbaar is voor onbevoegde gebruikers.
+Bij het implementeren van de MIM-wachtwoord opnieuw instellen op een werkstation dat is bedoeld voor een kiosk we raden aan dat het afsluiten: instelling van virtueel geheugen wissen wisselbestand lokaal beveiligingsbeleid worden ingeschakeld om ervoor te zorgen dat gevoelige informatie uit het procesgeheugen van het is niet beschikbaar voor onbevoegde gebruikers.
 
 #### <a name="users-should-always-register-for-a-password-reset-on-a-computer-that-they-are-logged-on-to"></a>Gebruikers moeten zich altijd registreren voor wachtwoordherstel op een computer waarop ze zijn aangemeld
 
-Wanneer een gebruiker zich probeert te registreren voor wachtwoordherstel via een webportal, initieert FIM 2010 altijd registratie namens de aangemelde gebruiker, ongeacht wie is aangemeld bij de website. Gebruikers moeten zich altijd registreren voor wachtwoordherstel op een computer waarop ze zijn aangemeld.
+Wanneer een gebruiker probeert te registreren voor wachtwoord opnieuw instellen via een webportal, initieert MIM altijd registratie namens de aangemelde gebruiker, ongeacht wie de website is aangemeld. Gebruikers moeten zich altijd registreren voor wachtwoordherstel op een computer waarop ze zijn aangemeld.
 
 #### <a name="do-not-set-the-avoidpdconwan-registry-key-to-true"></a>De registersleutel AvoidPdcOnWan niet instellen op Waar
 
@@ -580,7 +575,7 @@ Verwijder uw schema-resources niet zolang u nog steeds controlevereisten voor de
 
 #### <a name="making-regular-expressions-case-insensitive"></a>Reguliere expressies hoofdlettergevoelig maken
 
-In FIM kan het handig zijn om sommige reguliere expressies hoofdlettergevoelig te maken. U kunt het onderscheid tussen hoofd- en kleine letters binnen een groep negeren met behulp van ?!:. Gebruik bijvoorbeeld voor Employee Type
+In MIM, kan het handig zijn om sommige reguliere expressies niet hoofdlettergevoelig. U kunt het onderscheid tussen hoofd- en kleine letters binnen een groep negeren met behulp van ?!:. Gebruik bijvoorbeeld voor Employee Type
 
 `\^(?!:contractor\|full time employee)%.`
 
@@ -590,17 +585,17 @@ Het kenmerk Member dat is blootgesteld aan de synchronisatie-engine wordt daadwe
 
 #### <a name="leading-and-trailing-spaces-in-strings-are-ignored"></a>Voorloopspaties en volgspaties in tekenreeksen worden genegeerd
 
-U kunt in FIM tekenreeksen met voorloop- en volgspaties invoeren, maar deze worden door het FIM-systeem genegeerd. Als u een tekenreeks invoert met een voorloop- en volgspatie, worden die spaties door de synchronisatie-engine en webservices genegeerd.
+In MIM, kunt u tekenreeksen met voorloop- en volgspaties invoeren, maar negeert die ruimten van de MIM-systeem. Als u een tekenreeks invoert met een voorloop- en volgspatie, worden die spaties door de synchronisatie-engine en webservices genegeerd.
 
 #### <a name="empty-strings-do-not-equal-null"></a>Lege tekenreeksen zijn niet gelijk aan null
 
-Lege tekenreeksen zijn niet gelijk aan null in deze versie van FIM. Een lege tekenreeks wordt beschouwd als een geldige waarde. Niet aanwezig wordt beschouwd als een null-waarde.
+Lege tekenreeksen zijn niet gelijk is aan null zijn in deze release van MIM. Een lege tekenreeks wordt beschouwd als een geldige waarde. Niet aanwezig wordt beschouwd als een null-waarde.
 
 ### <a name="workflow-and-request-processing"></a>Verwerking van werkstromen en aanvragen
 
 #### <a name="do-not-delete-default-workflows-that-are-shipped-with-mim-2016"></a>Standaardwerkstromen die worden geleverd met MIM 2016 niet verwijderen
 
-De volgende werkstromen worden geleverd met FIM 2010 en mogen niet worden verwijderd:
+De volgende werkstromen worden geleverd met MIM en mag niet worden verwijderd:
 
 -   Werkstroom verloop
 
@@ -634,4 +629,11 @@ Voorkom het gebruik van activiteiten waarbij MIM-resources, zoals de activiteit 
 
 ### <a name="understanding-fim-service-partitions"></a>Meer informatie over FIM-servicepartities
 
-Het doel van FIM is het verwerken van aanvragen die kunnen worden gestart door verschillende FIM-clients, zoals de FIM-synchronisatieservice en de selfserviceonderdelen, volgens uw geconfigureerde bedrijfsbeleid. Standaard behoort elk FIM service-exemplaar toe aan een logische groep die bestaat uit een of meer FIM service-instanties, die ook wel een FIM-servicepartitie wordt genoemd. Als u slechts één FIM service-exemplaar hebt geïmplementeerd voor het verwerken van alle aanvragen, is het mogelijk dat u te maken krijgt met latentie bij de verwerking. Bij bepaalde bewerkingen kunnen zelfs de standaard time-outwaarden worden overschreden die geschikt zijn voor selfservicebewerkingen. U kunt dit probleem oplossen met behulp van FIM-servicepartities. Zie Meer informatie over FIM-servicepartities.
+Het doel van MIM is het verwerken van aanvragen die kunnen worden gestart door de verschillende MIM-clients, zoals de FIM-synchronisatieservice en de onderdelen selfservice volgens uw geconfigureerde bedrijfsbeleid. Standaard behoort elk FIM service-exemplaar toe aan een logische groep die bestaat uit een of meer FIM service-instanties, die ook wel een FIM-servicepartitie wordt genoemd. Als u slechts één FIM service-exemplaar hebt geïmplementeerd voor het verwerken van alle aanvragen, is het mogelijk dat u te maken krijgt met latentie bij de verwerking. Bij bepaalde bewerkingen kunnen zelfs de standaard time-outwaarden worden overschreden die geschikt zijn voor selfservicebewerkingen. U kunt dit probleem oplossen met behulp van FIM-servicepartities.
+
+Zie voor meer informatie [Understanding FIM Servicepartities](https://social.technet.microsoft.com/wiki/contents/articles/2363.understanding-fim-service-partitions.aspx).
+
+## <a name="next-steps"></a>Volgende stappen
+- [FIM back-up en herstel handleiding](http://go.microsoft.com/fwlink/?LinkID=165864)
+- [Hoe maak ik een synchronisatie van gebruikers uit Active Directory naar FIM weer](http://go.microsoft.com/fwlink/?LinkID=188277) 
+- [Recovery Model Overview](http://go.microsoft.com/fwlink/?LinkID=185370).
