@@ -2,11 +2,11 @@
 layout: LandingPage
 title: Documentatie voor Microsoft Identity Manager | Microsoft Docs
 description: Meer informatie over het gebruik van Microsoft Identity Manager.
-ms.openlocfilehash: c49fbae1892bfa0207a1615d11e600fe21d638c8
-ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.openlocfilehash: 14bfdf808072f236a17431cf4e0634bf287c3a65
+ms.sourcegitcommit: f95369a51ec5edae076505b3b0059f878cdf6e96
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 11/16/2017
 ---
 # <a name="microsoft-identity-manager-documentation"></a>Documentatie voor Microsoft Identity Manager
 
@@ -24,7 +24,7 @@ Microsoft Identity Manager 2016 verbindt de Identity & Access Management-oplossi
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Wat is er nieuw in Microsoft Identity Manager 2016 Service Pack 1</h3>
+                        <h3>Wat is er nieuw in Microsoft Identity Manager 2016 Service Pack 1?</h3>
                     </div>
                 </div>
             </div>
@@ -71,7 +71,7 @@ Microsoft Identity Manager 2016 verbindt de Identity & Access Management-oplossi
 ---
 <br>
 >[!Warning]
-Algemene ondersteuning voor Forefront Identity Manager (FIM) wordt beëindigd op 10-10-2017. [Voer een upgrade uit](microsoft-identity-manager-2016-upgrade-from-fim-2010-r2.md) naar Microsoft Identity Manager 2016. Meer informatie: </br>  - Informatie over de levenscyclus van FIM is [hier](https://support.microsoft.com/lifecycle/search?alpha=Microsoft%20Forefront%20Identity%20Manager%202010%20R2%20Service%20Pack%201,Microsoft%20Identity%20Manager%202016,Microsoft%20Forefront%20Identity%20Manager%202010) beschikbaar </br> - Lees voor informatie over openbare releases van identiteitsproducten de post met de titel [Microsoft Identity Software: Public Release Build Versions](https://blogs.technet.microsoft.com/iamsupport/idmbuildversions/) (Microsoft Identity-software: openbare releaseversies)
+Algemene ondersteuning voor Forefront Identity Manager (FIM) is beëindigd op 10-10-2017. [Voer een upgrade uit](microsoft-identity-manager-2016-upgrade-from-fim-2010-r2.md) naar Microsoft Identity Manager 2016. Meer informatie: </br>  - Informatie over de levenscyclus van FIM is [hier](https://support.microsoft.com/lifecycle/search?alpha=Microsoft%20Forefront%20Identity%20Manager%202010%20R2%20Service%20Pack%201,Microsoft%20Identity%20Manager%202016,Microsoft%20Forefront%20Identity%20Manager%202010) beschikbaar </br> - Lees voor informatie over openbare releases van identiteitsproducten de post met de titel [Microsoft Identity Software: Public Release Build Versions](https://blogs.technet.microsoft.com/iamsupport/idmbuildversions/) (Microsoft Identity-software: openbare releaseversies)
 
 <h2>Verwijzing</h2>
 <ul class="panelContent cardsFTitle">
