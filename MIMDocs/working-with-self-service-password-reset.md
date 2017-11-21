@@ -12,14 +12,14 @@ ms.technology: security
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 90c773c30b0ab23ad29ca1a215745bf59b188764
-ms.sourcegitcommit: 0d8b19c5d4bfd39d9c202a3d2f990144402ca79c
+ms.openlocfilehash: 0463a91275f3e181a66eb460c167bb9a2008f444
+ms.sourcegitcommit: 27a23142393bbb0f66a3d533d89a5a8366a29e41
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/14/2017
+ms.lasthandoff: 11/20/2017
 ---
 >[!IMPORTANT]
-Als gevolg van de aankondiging van afschaffing van Azure multi-factor Authentication Software Development Kit. De Azure MFA-SDK worden voor bestaande klanten tot de datum buiten gebruik stellen van 01 oktober 2018 ondersteund. Huidige en nieuwe klanten kunnen niet meer SDK downloaden via de klassieke Azure portal. U kunt u downloaden moet bereiken Azure klantondersteuning om uw gegenereerde Servicereferenties MFA-pakket wordt ontvangen. <br> Het ontwikkelteam Microsoft werkt over het plannen van wijzigingen in de MFA door te integreren met MFA Server SDK. Deze oplossing wordt opgenomen in toekomstige hotfix in vroege 2018.
+Als gevolg van de aankondiging van afschaffing van Azure multi-factor Authentication Software Development Kit. De Azure MFA-SDK worden voor bestaande klanten tot de datum buiten gebruik stellen van 14 November 2018 ondersteund. Huidige en nieuwe klanten kunnen niet meer SDK downloaden via de klassieke Azure portal. U kunt u downloaden moet bereiken Azure klantondersteuning om uw gegenereerde Servicereferenties MFA-pakket wordt ontvangen. <br> Het ontwikkelteam Microsoft werkt over het plannen van wijzigingen in de MFA door te integreren met MFA Server SDK. Deze oplossing wordt opgenomen in toekomstige hotfix in vroege 2018.
 
 # <a name="working-with-self-service-password-reset"></a>Werken met de selfservice voor wachtwoordherstel
 Microsoft Identity Manager 2016 biedt aanvullende functionaliteit voor de functie Wachtwoord opnieuw instellen in Selfservice. Deze functionaliteit is uitgebreid met verschillende belangrijke functies:
