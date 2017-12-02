@@ -12,11 +12,11 @@ ms.technology: security
 ms.assetid: bfabc562-a2f0-4cff-ac31-36927f41e102
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 263752678e75267d6f58fe3fcb28975984f62f70
-ms.sourcegitcommit: f077508b5569e2a96084267879c5b6551e1e0905
+ms.openlocfilehash: 39becb555d2efe17e60789453dbaf448c90a8b60
+ms.sourcegitcommit: 362475d4018e74e5a17ba574ccaec47a2caebaff
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="enroll-smart-cards-for-non-administrators"></a>Smartcards voor niet-beheerders registreren
 Gebruikers die geen lokale beheerder zijn van hun computer, kunnen standaard geen smartcard registreren op hun eigen computer. Dit probleem kunt u met de volgende procedure omzeilen.
@@ -63,7 +63,7 @@ Gebruikers die geen lokale beheerder zijn van hun computer, kunnen standaard gee
 
     `makeappx pack /l /d .\appx /p <app package name>.appx`
 
-    s`igntool sign /f <path\>mysign.pfx /p <pfx password> /fd "sha256" <app package name>.appx`
+    `signtool sign /f <path\>mysign.pfx /p <pfx password> /fd "sha256" <app package name>.appx`
 
 4.  Dupliceer de profielsjabloon en voeg de initiële beheersleutel toe om de MIM-server te configureren:
 
