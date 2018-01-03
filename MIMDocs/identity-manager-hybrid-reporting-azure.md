@@ -12,11 +12,11 @@ ms.technology: security
 ms.assetid: 7320f014-8b60-4866-92de-cfbd3e6edc48
 ms.reviewer: fimguy
 ms.suite: ems
-ms.openlocfilehash: 151fbd26011ca76901d181131a88ded8a718a27a
-ms.sourcegitcommit: 0f99de31fe6b52ec692b3886073909f549a451d6
+ms.openlocfilehash: ffe372c273aae55278f9b18b45b65425734aa6f7
+ms.sourcegitcommit: e52bab207117390997c6fa8450de24335b502673
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/29/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="hybrid-identity-management-audit-reports-in-azure-active-directory---public-previewrefresh"></a>Controlerapporten voor beheer van hybride identiteiten in Azure Active Directory - Openbare preview-versie (vernieuwen)
 Met rapporten voor controle-activiteiten in Azure Active Directory (AD) kunt u één rapport weergeven waarin u identiteitsbeheeractiviteiten kunt bewaken die on-premises of in de cloud plaatsvinden. Met deze functie kunt u al uw identiteits- en toegangsgegevens op één locatie beheren en zodoende tijd besparen en de totale kosten reduceren.
@@ -32,7 +32,7 @@ Hybride controlerapportage helpt IT-professionals met het oplossen van algemene 
 
 ## <a name="how-does-it-work"></a>Hoe werkt dit?
 
-Als u de on-premises gegevens wilt verzamelen, moet u eerst een rapportageagent installeren op uw Identity Manager 2016-server. De rapportageagent kan [hier](https://www.microsoft.com/en-us/download/details.aspx?id=55112) worden gedownload van de downloadpagina van Microsoft.
+Als u de on-premises gegevens wilt verzamelen, moet u eerst een rapportageagent installeren op uw Identity Manager 2016-server. De rapportageagent kan [hier](https://www.microsoft.com/download/details.aspx?id=55112) worden gedownload van de downloadpagina van Microsoft.
 
 Het proces voor hybride rapportage verloopt als volgt:
 1. Nadat de rapportageagent is geïnstalleerd, worden de activiteitsgegevens van Identity Manager verzonden naar het Windows-gebeurtenislogboek.
@@ -43,7 +43,7 @@ Het proces voor hybride rapportage verloopt als volgt:
 
 ## <a name="next-steps"></a>Volgende stappen
 - Meer informatie over [werken met hybride rapportage van Identity Manager](working-with-identity-manager-hybrid-reporting.md)
-- Meer informatie over [Rapporten voor controle-activiteiten in de Azure Active Directory-portal](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-reporting-activity-audit-logs)
-- Meer informatie [bewaarbeleidsregels rapporteren](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-reporting-retention)
-- Meer informatie [integratie met Microsoft Azure-logboek (SIEM)](https://docs.microsoft.com/en-us/azure/security/security-azure-log-integration-overview)
-- Meer informatie [Azure Active Directory rapportage-API](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-reporting-api-getting-started)
+- Meer informatie over [Rapporten voor controle-activiteiten in de Azure Active Directory-portal](https://docs.microsoft.com/azure/active-directory/active-directory-reporting-activity-audit-logs)
+- Meer informatie [bewaarbeleidsregels rapporteren](https://docs.microsoft.com/azure/active-directory/active-directory-reporting-retention)
+- Meer informatie [integratie met Microsoft Azure-logboek (SIEM)](https://docs.microsoft.com/azure/security/security-azure-log-integration-overview)
+- Meer informatie [Azure Active Directory rapportage-API](https://docs.microsoft.com/azure/active-directory/active-directory-reporting-api-getting-started)

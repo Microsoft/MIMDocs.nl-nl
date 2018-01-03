@@ -12,11 +12,11 @@ ms.technology: security
 ms.assetid: 68df2817-2040-407d-b6d2-f46b9a9a3dbb
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: cf8395583dcfcc2a84237bad80b6a4ca40ce166c
-ms.sourcegitcommit: f077508b5569e2a96084267879c5b6551e1e0905
+ms.openlocfilehash: 17745bfdba831364d32bc2786cc2a38191fe6cc7
+ms.sourcegitcommit: e52bab207117390997c6fa8450de24335b502673
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="working-with-identity-manager-hybrid-reporting---public-preview-refresh"></a>Werken met hybride rapportage van Identity Manager - Openbare preview-versie (vernieuwen)
 
@@ -48,13 +48,13 @@ De eerste drie MIM-rapporten (Microsoft Identity Manager) die beschikbaar zijn i
 ## <a name="requirements"></a>Vereisten
 De volgende tabel bevat een lijst met alle vereisten voor hybride rapportage Microsoft Identity Manager.
 
-| Vereiste | Beschrijving |
+| Vereiste | Description |
 | --- | --- |
-| Azure AD Premium | Hybride rapportage is een Azure AD Premium-functie waarvoor Azure AD Premium is vereist. </br></br>Zie [Aan de slag met Azure AD Premium](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-get-started-premium) voor meer informatie </br>Zie [Een proefversie starten](https://azure.microsoft.com/trial/get-started-active-directory/) voor een gratis proefversie van 30 dagen. |
-| U moet een globale beheerder van Azure AD zijn om te beginnen |Alleen globale beheerders kunnen de agents installeren en configureren om aan de slag te gaan, toegang te krijgen tot de portal en bewerkingen in Azure uit te voeren. </br></br>**Belangrijk:** Het account dat wordt gebruikt voor installatie van de agents, moet een werk- of schoolaccount zijn. Dit mag geen Microsoft-account zijn. Zie [Sign up for Azure as an organization](https://docs.microsoft.com/en-us/azure/active-directory/sign-up-organization) (Aanmelden voor Azure als bedrijf) voor meer informatie |
+| Azure AD Premium | Hybride rapportage is een Azure AD Premium-functie waarvoor Azure AD Premium is vereist. </br></br>Zie [Aan de slag met Azure AD Premium](https://docs.microsoft.com/azure/active-directory/active-directory-get-started-premium) voor meer informatie </br>Zie [Een proefversie starten](https://azure.microsoft.com/trial/get-started-active-directory/) voor een gratis proefversie van 30 dagen. |
+| U moet een globale beheerder van Azure AD zijn om te beginnen |Alleen globale beheerders kunnen de agents installeren en configureren om aan de slag te gaan, toegang te krijgen tot de portal en bewerkingen in Azure uit te voeren. </br></br>**Belangrijk:** Het account dat wordt gebruikt voor installatie van de agents, moet een werk- of schoolaccount zijn. Dit mag geen Microsoft-account zijn. Zie [Sign up for Azure as an organization](https://docs.microsoft.com/azure/active-directory/sign-up-organization) (Aanmelden voor Azure als bedrijf) voor meer informatie |
 | De agent voor hybride rapportage van Microsoft Identity Manager is geïnstalleerd op elke doelserver van de MIM-service | Voor hybride rapportage is vereist dat de agents worden geïnstalleerd en geconfigureerd op de doelservers voor de ontvangst van gegevens en voor het verstrekken van mogelijkheden voor controle en analyse </br>|
 | Uitgaande verbinding met de service-eindpunten van Azure | Tijdens de installatie en runtime moet de agent verbinding hebben met service-eindpunten van Azure. Als uitgaande connectiviteit is geblokkeerd via firewalls, moet u ervoor zorgen dat de volgende eindpunten worden toegevoegd aan de lijst: </br></br><li>&#42;.blob.core.windows.net </li><li>&#42;.servicebus.windows.net - poort: 5671 </li><li>&#42;.adhybridhealth.azure.com/</li><li>https://management.azure.com </li><li>https://policykeyservice.dc.ad.msft.net/</li><li>https://login.windows.net</li><li>https://login.microsoftonline.com</li><li>https://secure.aadcdn.microsoftonline-p.com</li> |
-|Uitgaande verbindingen op basis van IP-adressen | Zie [IP-bereiken van Azure](https://www.microsoft.com/en-us/download/details.aspx?id=41653) voor filters op basis van IP-adressen op firewalls.|
+|Uitgaande verbindingen op basis van IP-adressen | Zie [IP-bereiken van Azure](https://www.microsoft.com/download/details.aspx?id=41653) voor filters op basis van IP-adressen op firewalls.|
 | SSL-inspectie voor uitgaand verkeer is gefilterd of uitgeschakeld | De registratie- of uploadbewerkingen in de agent mislukken mogelijk als er sprake is van SSL-inspectie of beëindiging van uitgaand verkeer in de netwerklaag. |
 | Firewallpoorten op de server waarop de agent wordt uitgevoerd. |Voor de agent is vereist dat de volgende firewallpoorten zijn geopend zodat de agent kan communiceren met de service-eindpunten van Azure.</br></br><li>TCP-poort 443</li><li>TCP-poort 5671</li> |
 | De volgende websites moeten zijn toegestaan als verbeterde beveiliging van Internet Explorer is ingeschakeld |Als verbeterde beveiliging van Internet Explorer is ingeschakeld, moeten de volgende websites worden toegestaan op de server waarop u de agent wilt installeren.</br></br><li>https://login.microsoftonline.com</li><li>https://secure.aadcdn.microsoftonline-p.com</li><li>https://login.windows.net</li><li>De federatieve server voor uw organisatie die wordt vertrouwd door Azure Active Directory. Bijvoorbeeld: https://sts.contoso.com</li> |
