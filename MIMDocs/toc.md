@@ -93,6 +93,7 @@
 #### [Werkstroomgids voor de webserviceconnector voor Sample Rest](./reference/microsoft-identity-manager-2016-ma-ws-restgeneric.md)
 #### [Rest Sample van de App Service voor de webserviceconnector](./reference/microsoft-identity-manager-2016-ma-ws-restsample.md)
 #### [Configuratieopties van de webserviceconnector](./reference/microsoft-identity-manager-2016-ma-ws-maconfig.md)
+#### [De webserviceconnector importeren](./reference/microsoft-identity-manager-2016-ma-ws-import.md)
 ### BHOLD
 #### [BHOLD-referentie voor ontwikkelaars](./reference/mim2016-bhold-developer-reference.md) 
 ### [Naslaginformatie voor REST API van Certificate Management](./reference/certificate-management-rest-api-reference.md)
