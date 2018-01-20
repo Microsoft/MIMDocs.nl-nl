@@ -1,22 +1,19 @@
 ---
 title: PAM implementeren - Stap 7 - Gebruikerstoegang | Microsoft Docs
 description: Als laatste stap moet u tijdelijke bevoorrechte gebruikerstoegang opgeven om aan te tonen dat de Privileged Access Management-implementatie is gelukt.
-keywords: 
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
-ms.date: 09/13/2017
+ms.date: 01/17/2018
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 5325fce2-ae35-45b0-9c1a-ad8b592fcd07
-ms.reviewer: mwahl
-ms.suite: ems
-ms.openlocfilehash: f8ad03bc072dbf6df36a9ef737479dce60b70b8b
-ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
+ms.openlocfilehash: 2d92be315547da1c352c0e60732f9aeecf0c2d90
+ms.sourcegitcommit: 3d8a2493eae1218bfdb75a399ffa4adc8c2a8fdf
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 01/20/2018
 ---
 # <a name="step-7--elevate-a-users-access"></a>Stap 7 – De toegangsrechten van een gebruiker uitbreiden
 
@@ -38,7 +35,12 @@ Zonder verhoogde bevoegdheden heeft Jen geen toegang tot de bevoorrechte resourc
 
 ## <a name="request-privileged-access-from-mim"></a>Bevoorrechte toegang aanvragen bij MIM
 
-1. Typ op CORPWKSTN de volgende opdracht terwijl u nog steeds als CONTOSO\Jen bent aangemeld.
+> [!NOTE]
+> Het verdient aanbeveling dat het werkstation een bevoorrechte workstation(PAW) zijn.  Zie voor meer informatie [PAW](https://docs.microsoft.com/windows-server/identity/securing-privileged-access/privileged-access-workstations).
+
+1. Op PRIVWKSTN, meld u aan als PRIV\priv.jen.
+2. Klik op **Start**, **uitvoeren**, en voer **PowerShell.exe**.
+3. Typ de volgende opdracht:
 
     ```cmd
     runas /user:Priv.Jen@priv.contoso.local powershell
