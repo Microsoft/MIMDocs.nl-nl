@@ -11,6 +11,7 @@
 ## [Implementatietopologie](topology-considerations.md)
 ## [De PAM-implementatie plannen](./pam/environment-overview.md)
 # [Implementeren en gebruiken](microsoft-identity-manager-deploy.md)
+## [Verouderde functies:](microsoft-identity-manager-2016-deprecated-features.md)
 ## [Eerste implementatie](microsoft-identity-manager-deploy.md)
 ### [Domeininstelling](preparing-domain.md)
 ### [Installatie van de server: Windows Server](prepare-server-ws2012r2.md)
