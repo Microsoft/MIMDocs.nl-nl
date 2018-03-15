@@ -82,7 +82,7 @@ Configureer het beveiligingsbeleid van de server zodanig dat de zojuist gemaakte
 12. Sluit het venster Lokaal beveiligingsbeleid.  
 
 13. Open Configuratiescherm en schakel over naar **Gebruikersaccounts**.
-14. Klik op **Andere gebruikers toegang tot deze computer geven **.
+14. Klik op **Andere gebruikers toegang tot deze computer geven**.
 15. Klik op **Toevoegen**, voer de gebruiker *MIMADMIN* in het domein *PRIV* in en klik in het volgende scherm van de wizard op **Deze gebruiker toevoegen als beheerder**.  
 16. Klik op **Toevoegen**, voer de gebruiker *SharePoint* in het domein *PRIV* in en klik in het volgende scherm van de wizard op **Deze gebruiker toevoegen als beheerder**.  
 17. Sluit Configuratiescherm.
