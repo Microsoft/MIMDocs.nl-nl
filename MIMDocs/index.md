@@ -1,12 +1,13 @@
 ---
 layout: LandingPage
+ms.topic: landing-page
 title: Documentatie voor Microsoft Identity Manager | Microsoft Docs
 description: Meer informatie over het gebruik van Microsoft Identity Manager.
-ms.openlocfilehash: 14bfdf808072f236a17431cf4e0634bf287c3a65
-ms.sourcegitcommit: f95369a51ec5edae076505b3b0059f878cdf6e96
+ms.openlocfilehash: f57d2f9b4f61eeef09b8abb29ef3023cba798a5d
+ms.sourcegitcommit: 3c422a03c33774d3f94faee72e063d80730a9d1a
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/16/2017
+ms.lasthandoff: 03/30/2018
 ---
 # <a name="microsoft-identity-manager-documentation"></a>Documentatie voor Microsoft Identity Manager
 
@@ -24,7 +25,7 @@ Microsoft Identity Manager 2016 verbindt de Identity & Access Management-oplossi
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Wat is er nieuw in Microsoft Identity Manager 2016 Service Pack 1?</h3>
+                        <h3>Wat is er nieuw in Microsoft Identity Manager 2016 Service Pack 1</h3>
                     </div>
                 </div>
             </div>
