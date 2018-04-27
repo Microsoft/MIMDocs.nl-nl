@@ -1,7 +1,7 @@
 ---
 title: De synchronisatiefunctie van Microsoft Identity Manager gebruiken met AD | Microsoft Docs
 description: Gebruik beheeragents en de MIM-synchronisatieservice om Active Directory en de MIM-databases te synchroniseren.
-keywords: 
+keywords: ''
 author: billmath
 ms.author: barclayn
 manager: mbaldwin
@@ -12,11 +12,11 @@ ms.technology: security
 ms.assetid: 5e532b67-64a6-4af6-a806-980a6c11a82d
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 31cc9a61bbcb309dae4ee4d09654432d08bf1e28
-ms.sourcegitcommit: f077508b5569e2a96084267879c5b6551e1e0905
+ms.openlocfilehash: 736d933f2c62d440abafdab27f82b3b1ba0f9a06
+ms.sourcegitcommit: 48f89d555c0ac7caa97d149ee42e0b9ef6ccc5f5
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 04/23/2018
 ---
 # <a name="install-mim-2016-synchronize-active-directory-and-mim-service"></a>MIM 2016 installeren: Active Directory en de MIM-service synchroniseren
 
@@ -43,7 +43,7 @@ Wanneer u een MIM-beheeragent configureert, moet u een gebruikersaccount opgeven
 
 1.  Open Synchronization Service Manager.
 
-2.  Ga naar de pagina **Beheeracties** en klik in het menu **Acties** op **Maken** om de wizard voor het maken van de beheeragent te openen.
+2.  Start de wizard beheeragent maken, wijzigen in de **Beheeragents** pagina, klik vervolgens op de **acties** menu, klikt u op **maken**.
 
 3.  Geef op de pagina **Beheeragent maken** de volgende instellingen op en klik vervolgens op **Volgende**.
 
@@ -57,7 +57,7 @@ Wanneer u een MIM-beheeragent configureert, moet u een gebruikersaccount opgeven
 
     -   Database: FIMService
 
-    -   Basisadres van de MIM-service: http://localhost:5725
+    -   Basisadres van de MIM-Service: http://localhost:5725
 
     -   Verificatiemodus: met Windows geïntegreerde verificatie
 
