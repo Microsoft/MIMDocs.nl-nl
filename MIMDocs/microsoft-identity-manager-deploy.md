@@ -1,7 +1,7 @@
 ---
 title: Vereiste stappen voor implementatie van Microsoft Identity Manager 2016 | Microsoft Docs
 description: Lees de beschrijving van alle stappen voor het implementeren van Microsoft Identity Manager 2016, van het voorbereiden van de omgeving tot het configureren van de portals.
-keywords: 
+keywords: ''
 author: billmath
 ms.author: barclayn
 manager: mbaldwin
@@ -12,13 +12,13 @@ ms.technology: security
 ms.assetid: fa0af422-b5e9-4599-9d9b-cb6c18ea07f9
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 2730c41d9b95d3c6e44c12dc734a0e9e13792a32
-ms.sourcegitcommit: f077508b5569e2a96084267879c5b6551e1e0905
+ms.openlocfilehash: a1f2a30dd6d8519ec09ea3765e5584123725fe03
+ms.sourcegitcommit: 32d9a963a4487a8649210745c97a3254645e8744
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 04/27/2018
 ---
-# <a name="deploy-mim-2016"></a>MIM 2016 implementeren
+# <a name="deploy-microsoft-identity-manager-2016-sp1"></a>Implementatie van Microsoft Identity Manager 2016 SP1
 In de artikelen in deze sectie vindt u stapsgewijze instructies voor het implementeren van Microsoft Identity Manager (MIM) 2016 voor selfservicescenario's voor eindgebruikers op een nieuwe server waarop niet eerder FIM of MIM is geïmplementeerd.
 
 > [!NOTE]
@@ -26,21 +26,22 @@ In de artikelen in deze sectie vindt u stapsgewijze instructies voor het impleme
 
 Het scenario voor Privileged Access Management wordt anders geïmplementeerd dan andere MIM-scenario's, aangezien hiervoor een speciale bastionomgeving met forest is vereist.  Zie [De MIM-omgeving voor Privileged Access Management configureren](./pam/configuring-mim-environment-for-pam.md) voor meer informatie over het implementeren van MIM voor Privileged Identity Management.
 
-De procedure voor het implementeren van MIM 2016 lijkt sterk op die van diens voorganger FIM 2010 R2. Zie [Forefront Identity Manager 2010 R2 Deployment Guide](https://technet.microsoft.com/library/jj134310) (Engelstalig) als u de FIM-documentatie wilt raadplegen.
+Het proces voor het implementeren van MIM is vergelijkbaar met het proces voor de voorganger FIM 2010 R2. Zie [Forefront Identity Manager 2010 R2 Deployment Guide](https://technet.microsoft.com/library/jj134310) (Engelstalig) als u de FIM-documentatie wilt raadplegen.
 
 ## <a name="first-prepare-a-domain"></a>Eerste stap: een domein voorbereiden
 MIM werkt met Active Directory (AD). Volg daarom onderstaande stappen om de AD-domeincontroller te configureren.
 - [Domeininstelling](preparing-domain.md)
 
-## <a name="next-prepare-an-identity-management-server"></a>Volgende stap: een server voor identiteitsbeheer voorbereiden
+## <a name="next-prepare-an-identity-management-servers"></a>Volgende stap: Een identity management-servers voorbereiden
 Als uw domein eenmaal is geïmplementeerd en geconfigureerd, bereidt u de server voor identiteitsbeheer van uw bedrijf voor. Het volgende moet hiervoor worden ingesteld:
-- [Windows Server 2012 R2](prepare-server-ws2012r2.md)
-- [SQL Server 2014](prepare-server-sql2014.md)
-- [SharePoint](prepare-server-sharepoint.md)
+- [Windows Server 2012 R2](prepare-server-ws2016.md)
+- [SQL Server 2016](prepare-server-sql2016.md)
+- [SharePoint 2016](prepare-server-sharepoint.md)
 - [Exchange Server](prepare-server-exchange.md) (optioneel)
 
-## <a name="finally-install-microsoft-identity-manager-2016-components"></a>Ten slotte: de Microsoft Identity Manager 2016-onderdelen installeren
+## <a name="finally-install-microsoft-identity-manager-2016-sp1-components"></a>Ten slotte: Microsoft Identity Manager 2016 SP1 onderdelen installeren
 Nadat u het domein en de server hebt ingesteld, kunt u nu de MIM-onderdelen installeren en configureren zodat deze kunnen worden gesynchroniseerd met AD.
 - [MIM-synchronisatieservice](install-mim-sync.md)
 - [MIM-service en -portal](install-mim-service-portal.md)
 - [Active Directory en de databases voor de MIM-service synchroniseren](install-mim-sync-ad-service.md)
+- [Ondersteunde platforms voor MIM 2016 of hoger](microsoft-identity-manager-2016-supported-platforms.md)

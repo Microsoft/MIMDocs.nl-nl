@@ -1,22 +1,22 @@
 ---
 title: De synchronisatieservice van MIM installeren | Microsoft Docs
 description: Ga aan de slag met de MIM 2016-onderdelen en installeer en configureer de synchronisatieservice.
-keywords: 
+keywords: ''
 author: billmath
 ms.author: barclayn
 manager: mbaldwin
-ms.date: 10/12/2017
+ms.date: 04/26/2018
 ms.topic: get-started-article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 2585e9c5-ce34-46c7-bdcf-8c08773901dc
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 836279ecc7fce65912df4a1a34a9d48daf9d1151
-ms.sourcegitcommit: f077508b5569e2a96084267879c5b6551e1e0905
+ms.openlocfilehash: f5204d0396e2b485c9e8c210906703c467a67994
+ms.sourcegitcommit: 32d9a963a4487a8649210745c97a3254645e8744
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="install-mim-2016-mim-synchronization-service"></a>MIM 2016: MIM-synchronisatieservice installeren
 
@@ -26,17 +26,20 @@ ms.lasthandoff: 10/12/2017
 
 > [!NOTE]
 > In deze stapsgewijze instructies wordt gebruikgemaakt van voorbeeldnamen en -waarden van een bedrijf met de naam Contoso. Vervang deze door uw eigen namen en waarden. Bijvoorbeeld:
-> - Naam van de domeincontroller: **mimservername**
+> - Naam van de domeincontroller - **corpdc**
 > - Domeinnaam: **contoso**
+> - Naam van de MIM-Service-Server: **corpservice**
+> - Naam van de MIM-synchronisatieserver: **corpsync**
+> - De naam van de SQL Server - **corpsql**
 > - Wachtwoord - **Pass@word1**
 
 Stel eerst het installatiepakket in voordat u de Microsoft Identity Manager 2016-onderdelen installeert.
 
-1. Meld u als *contoso\Administrator* aan bij de server die u voor het identiteitsbeheer gebruikt.
+1. Meld u aan als *contoso\miminstall* naar de server die u voor de server voor identiteitsbeheer synchronisatie gebruikt **corpsync**.
 
 2. Pak het MIM-installatiepakket uit of plaats de dvd met de MIM-installatiekopie.
 
-## <a name="install-mim-2016-synchronization-service"></a>De MIM 2016-synchronisatieservice installeren
+## <a name="install-mim-2016-sp1-synchronization-service"></a>MIM 2016-SP1-synchronisatieservice installeren
 
 1. Navigeer in de uitgepakte MIM-installatiemap naar de map **Synchronisatieservice**.
 

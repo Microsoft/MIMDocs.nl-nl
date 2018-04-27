@@ -1,7 +1,7 @@
 ---
 title: De Microsoft Identity Manager-service en -portal installeren | Microsoft Docs
 description: Lees welke stappen u moet uitvoeren voor het configureren en installeren van de MIM-service en -portal voor Microsoft Identity Manager 2016
-keywords: 
+keywords: ''
 author: billmath
 ms.author: barclayn
 manager: mbaldiwn
@@ -12,11 +12,11 @@ ms.technology: security
 ms.assetid: b0b39631-66df-4c5f-80c9-a1774346f816
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 77ceaf1b2152a6fa6e1047656bedda31ce383871
-ms.sourcegitcommit: f077508b5569e2a96084267879c5b6551e1e0905
+ms.openlocfilehash: 204aa33cb21ed3998d9085fc56f0c7bea7afec58
+ms.sourcegitcommit: 32d9a963a4487a8649210745c97a3254645e8744
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="install-mim-2016-mim-service-and-portal"></a>MIM 2016 installeren: de MIM-service en -portal
 
@@ -50,7 +50,7 @@ Als u in de laatste stap geen MIM-installatiepakket hebt ingesteld, gaat u terug
 
     ![Afbeelding voor het configureren van de MIM-databaseverbinding](media/MIM-Install10.png)
 
-7. Voer op de pagina **De mailserververbinding configureren** de naam van uw Exchange-server in als **Mailserver**. Als u geen mailserver hebt geconfigureerd, gebruikt u **localhost** als de naam van de mailserver en schakelt u de twee bovenste selectievakjes uit. Klik op **Volgende**.
+7. Op de **mailserververbinding configureren**, voer de naam van uw Exchange-server als **e-mailserver** of kunt u O365 postvak. Als u geen mailserver hebt geconfigureerd, gebruikt u **localhost** als de naam van de mailserver en schakelt u de twee bovenste selectievakjes uit. Klik op **Volgende**.
 
     ![Afbeelding van Configureren van de e-mailserververbinding](media/MIM-Install11.png)
 
@@ -68,11 +68,11 @@ Als u in de laatste stap geen MIM-installatiepakket hebt ingesteld, gaat u terug
 
 12. Geef *CORPIDM* (de naam van deze computer) op als het serveradres van de MIM-service voor de MIM-portal.
 
-13. Geef *http://CorpIDM.contoso.local* URL als de SharePoint-siteverzameling.
+13. Geef *http://mim.contoso.com* URL als de SharePoint-siteverzameling.
 
-14. Geef *http://CorpIDM.contoso.local:8080* op als de URL voor de wachtwoordregistratie.
+14. Geef *http://passwordregistration.contoso.com* als de URL voor Wachtwoordregistratie poort 80, het beste later bijwerken met SSL-certificaat op 443.
 
-15. Geef *http://CorpIDM.contoso.local:8088* op als de URL voor het opnieuw instellen van het wachtwoord.
+15. Geef *http://passwordreset.contoso.com* als de URL voor wachtwoord opnieuw instellen poort 80, het beste later bijwerken met SSL-certificaat op 443.
 
 16. Schakel het selectievakje in om de poorten 5725 en 5726 in de firewall te openen en schakel het selectievakje in om alle geverifieerde gebruikers toegang te verlenen tot de MIM-portal.
 
@@ -80,25 +80,25 @@ Als u in de laatste stap geen MIM-installatiepakket hebt ingesteld, gaat u terug
 
 1.  Stel de serviceaccountnaam voor SSPR-registratie in op *contoso\MIMSSPR* en het bijbehorende wachtwoord op *Pass@word1*.
 
-2.  Geef *CORPIDM* op als de hostnaam voor de MIM-wachtwoordregistratie en stel de poort in op **8080**. Schakel de optie **Poort in de firewall openen** in.
+2.  Geef *passwordregistration.contoso.com* als de hostnaam voor de MIM-Wachtwoordregistratie en stel de poort op **80**. Schakel de optie **Poort in de firewall openen** in.
 
     ![Afbeelding voor het invoeren van de configuratiegegevens die worden gebruikt door IIS](media/MIM-Install14.png)
 
 3.  Er wordt een waarschuwing weergegeven: lees deze en klik op **Volgende**.
 
-4. Geef in het volgende configuratiescherm voor de MIM-portal voor wachtwoordregistratie *http://CorpIDM.contoso.local* op als serveradres van de MIM-service voor de MIM-portal voor wachtwoordregistratie.
+4. Geef in het volgende scherm in de configuratie van MIM-Portal voor Wachtwoordregistratie, *mim.contoso.com* als het serveradres van de MIM-Service voor de Portal voor Wachtwoordregistratie.
 
 ## <a name="configure-mim-password-reset-portal"></a>Het MIM-portal voor het opnieuw instellen van het wachtwoord configureren
 
-1.  Stel de serviceaccountnaam voor SSPR-registratie in op *Contoso\MIMSSPRService* en het bijbehorende wachtwoord op *Pass@word1*.
+1.  Stel de serviceaccountnaam voor SSPR-registratie voor *Contoso\MIMSSPR* en het bijbehorende wachtwoord op *Pass@word1*.
 
-2.  Geef *CORPIDM* op als de hostnaam voor de MIM-portal voor wachtwoordherstel en stel de poort in op **8088**. Schakel de optie **Poort in de firewall openen** in.
+2.  Geef *passwordreset.contoso.com* als de hostnaam voor MIM wachtwoord opnieuw instellen-Portal, en stel de poort op **80**. Schakel de optie **Poort in de firewall openen** in.
 
     ![Afbeelding voor het invoeren van de configuratiegegevens die worden gebruikt door IIS](media/MIM-Install15.png)
 
 3.  Er wordt een waarschuwing weergegeven: lees deze en klik op **Volgende**.
 
-4. Geef in het volgende configuratiescherm voor de MIM-portal voor wachtwoordregistratie *CorpIDname  http://CorpIDname.domain.local* op als het serveradres van de MIM-service voor de portal voor het opnieuw instellen van het wachtwoord.
+4. Geef in het volgende scherm in de configuratie van MIM-Portal voor Wachtwoordregistratie, *mim.contoso.com* als het serveradres van de MIM-Service voor de Portal voor wachtwoord opnieuw instellen.
 
 ## <a name="install-mim-service-and-portal"></a>De MIM-service en -portal installeren
 
@@ -106,9 +106,9 @@ Wanneer alle definities voorafgaand aan de installatie gereed zijn, klikt u op *
 
 Nadat de installatie is voltooid, controleert u of de MIM-portal actief is.
 
-1. Start Internet Explorer en maak verbinding met de MIM-Portal op *http://corpidm.contoso.local/identitymanagement*. Er kan bij het eerste bezoek aan deze pagina een korte vertraging optreden.
+1. Start Internet Explorer en maak verbinding met de MIM-Portal op *http://mim.contoso.com/identitymanagement*. Er kan bij het eerste bezoek aan deze pagina een korte vertraging optreden.
 
-    - Verifieer u zelf zo nodig als *contoso\Administrator* bij Internet Explorer.
+    - Indien nodig geverifieerd als *contoso\miminstall* naar Internet Explorer.
 
 2. Ga in Internet Explorer naar **Internetopties**, open het tabblad **Beveiliging** en voeg de site toe aan de zone **Lokaal intranet** als de site hier nog niet wordt weergegeven.  Sluit het dialoogvenster **Internetopties**.
 
