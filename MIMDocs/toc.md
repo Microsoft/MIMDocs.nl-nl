@@ -145,3 +145,11 @@
 ### [Versiegeschiedenis van MIM](./reference/version-history.md)
 ### [Versiegeschiedenis van BHOLD](./reference/version-bhold-history.md)
 ### [Releasegeschiedenis connectorversie](./reference/microsoft-identity-manager-2016-connector-version-history.md)
+## Connectors
+### [Graph](microsoft-identity-manager-2016-connector-graph.md)
+### [Lotus Notes](./reference/microsoft-identity-manager-2016-connector-domino.md)
+### [Algemene LDAP](./reference/microsoft-identity-manager-2016-connector-genericldap.md)
+### [Algemene SQL](./reference/microsoft-identity-manager-2016-connector-genericsql.md)
+### [Webservices](./reference/microsoft-identity-manager-2016-ma-ws.md)
+### [PowerShell](./reference/microsoft-identity-manager-2016-connector-powershell.md)
+### [Releasegeschiedenis connectorversie](./reference/microsoft-identity-manager-2016-connector-version-history.md)
