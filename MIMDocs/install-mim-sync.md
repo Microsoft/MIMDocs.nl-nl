@@ -2,21 +2,21 @@
 title: De synchronisatieservice van MIM installeren | Microsoft Docs
 description: Ga aan de slag met de MIM 2016-onderdelen en installeer en configureer de synchronisatieservice.
 keywords: ''
-author: billmath
+author: fimguy
 ms.author: barclayn
 manager: mbaldwin
-ms.date: 04/26/2018
+ms.date: 05/01/2018
 ms.topic: get-started-article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 2585e9c5-ce34-46c7-bdcf-8c08773901dc
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: f5204d0396e2b485c9e8c210906703c467a67994
-ms.sourcegitcommit: 32d9a963a4487a8649210745c97a3254645e8744
+ms.openlocfilehash: d2f8c000205aacafaeb4e159ef692e9666b4b965
+ms.sourcegitcommit: a98a4c1aee12016d480c400f4ff2c6aadb6518ee
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="install-mim-2016-mim-synchronization-service"></a>MIM 2016: MIM-synchronisatieservice installeren
 
@@ -47,21 +47,21 @@ Stel eerst het installatiepakket in voordat u de Microsoft Identity Manager 2016
 
 3. Klik in het welkomstscherm op **Volgende**.
 
-    ![Afbeelding voor het welkomstscherm van de wizard voor het MIM-installatieprogramma](media/MIM-Install1.png)
+    ![Afbeelding voor het welkomstscherm van de wizard voor het MIM-installatieprogramma](media/install-mim-sync/MIM_Install1.png)
 
 4. Lees de licentievoorwaarden en klik op **Volgende** om deze te accepteren.
 
 5. Klik in het scherm **Aangepaste installatie** op **Volgende**.
 
-    ![Afbeelding van Aangepaste installatie](media/MIM-Install2.png)
+    ![Afbeelding van Aangepaste installatie](media/install-mim-sync/MIM_Install2.png)
 
 6.  Selecteer het volgende in het configuratiescherm voor de Sync-servicedatabase:
 
-    1.  SQL Server bevindt zich op: **Deze computer**.
+    1.  De SQL-Server bevindt zich op: **een externe computer** aangeroepen **corpsql.contoso.com**.
 
-    2.  Het SQL Server-exemplaar is: **Het standaardexemplaar**.
+    2.  De SQL Server-exemplaar: **het standaardexemplaar**
 
-    ![Afbeelding voor de databaseverbinding](media/MIM-Install3.png)
+    ![Afbeelding voor de databaseverbinding](media/install-mim-sync/MIM_Install3.png)
 
 7.  Configureer het synchronisatieserviceaccount volgens het account dat u eerder hebt gemaakt:
 
@@ -71,7 +71,7 @@ Stel eerst het installatiepakket in voordat u de Microsoft Identity Manager 2016
 
     3.  Serviceaccountdomein of naam van de lokale computer: *contoso*
 
-    ![Afbeelding voor het serviceaccount](media/MIM-Install4.png)
+    ![Afbeelding voor het serviceaccount](media/install-mim-sync/MIM_Install4.png)
 
 8.  Geef de betreffende beveiligingsgroepen op voor het installatieprogramma van de MIM Sync-service:
 
@@ -85,7 +85,7 @@ Stel eerst het installatiepakket in voordat u de Microsoft Identity Manager 2016
 
     5. WMI-wachtwoordbeheer = *contoso\MIMSyncPasswordReset*
 
-    ![Afbeelding voor de beveiligingsgroepen](media/MIM-Install5.png)
+    ![Afbeelding voor de beveiligingsgroepen](media/install-mim-sync/MIM_Install5.png)
 
 9. Schakel in het scherm voor de beveiligingsinstellingen de optie **Firewallregels voor binnenkomende RPC-communicatie inschakelen** in en klik op **Volgende**.
 

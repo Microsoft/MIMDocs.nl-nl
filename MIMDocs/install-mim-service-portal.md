@@ -5,18 +5,18 @@ keywords: ''
 author: billmath
 ms.author: barclayn
 manager: mbaldiwn
-ms.date: 10/12/2017
+ms.date: 04/30/2018
 ms.topic: get-started-article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: b0b39631-66df-4c5f-80c9-a1774346f816
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 204aa33cb21ed3998d9085fc56f0c7bea7afec58
-ms.sourcegitcommit: 32d9a963a4487a8649210745c97a3254645e8744
+ms.openlocfilehash: fcc137527d8326c82bf3b201039926699bd4e342
+ms.sourcegitcommit: a98a4c1aee12016d480c400f4ff2c6aadb6518ee
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="install-mim-2016-mim-service-and-portal"></a>MIM 2016 installeren: de MIM-service en -portal
 
@@ -48,23 +48,23 @@ Als u in de laatste stap geen MIM-installatiepakket hebt ingesteld, gaat u terug
 
 6. Kies op de pagina **De MIM-databaseverbinding configureren** de optie **Een nieuwe database maken**.
 
-    ![Afbeelding voor het configureren van de MIM-databaseverbinding](media/MIM-Install10.png)
+    ![Afbeelding voor het configureren van de MIM-databaseverbinding](media/install-mim-service-portal/MIM_Install10.png)
 
-7. Op de **mailserververbinding configureren**, voer de naam van uw Exchange-server als **e-mailserver** of kunt u O365 postvak. Als u geen mailserver hebt geconfigureerd, gebruikt u **localhost** als de naam van de mailserver en schakelt u de twee bovenste selectievakjes uit. Klik op **Volgende**.
+7. Op de **mailserververbinding configureren**, voer de naam van uw Exchange-server als **e-mailserver** of kunt u **O365 Postvak**. Als u geen mailserver hebt geconfigureerd, gebruikt u **localhost** als de naam van de mailserver en schakelt u de twee bovenste selectievakjes uit. Klik op **Volgende**.
 
-    ![Afbeelding van Configureren van de e-mailserververbinding](media/MIM-Install11.png)
+    ![Afbeelding van Configureren van de e-mailserververbinding](media/install-mim-service-portal/MIM_Install11.png)
 
 8. Geef op dat u een nieuw zelfondertekend certificaat wilt genereren of selecteer het betreffende certificaat.
 
 9. Geef de serviceaccountnaam op die moet worden gebruikt, bijvoorbeeld *MIMService*, en het serviceaccountwachtwoord, bijvoorbeeld *Pass@word1*. Geef daarnaast uw serviceaccountdomein, bijvoorbeeld *contoso*, en het e-mailaccount voor de service, bijvoorbeeld *contoso*, op.
 
-    ![Afbeelding van Het MIM-serviceaccount configureren](media/MIM-Install12.png)
+    ![Afbeelding van Het MIM-serviceaccount configureren](media/install-mim-service-portal/MIM_Install12.png)
 
 10. Er kan een waarschuwing worden weergegeven dat het serviceaccount niet is beveiligd in de huidige configuratie.
 
 11. Accepteer de standaardwaarden voor de locatie van de synchronisatieserver en geef het account van de MIM-beheeragent als *contoso\MIMMA*.
 
-    ![Afbeelding voor het configureren van de MIM-service en -portal](media/MIM-Install13.png)
+    ![Afbeelding voor het configureren van de MIM-service en -portal](media/install-mim-service-portal/MIM_Install13.png)
 
 12. Geef *CORPIDM* (de naam van deze computer) op als het serveradres van de MIM-service voor de MIM-portal.
 
@@ -82,7 +82,7 @@ Als u in de laatste stap geen MIM-installatiepakket hebt ingesteld, gaat u terug
 
 2.  Geef *passwordregistration.contoso.com* als de hostnaam voor de MIM-Wachtwoordregistratie en stel de poort op **80**. Schakel de optie **Poort in de firewall openen** in.
 
-    ![Afbeelding voor het invoeren van de configuratiegegevens die worden gebruikt door IIS](media/MIM-Install14.png)
+    ![Afbeelding voor het invoeren van de configuratiegegevens die worden gebruikt door IIS](media/install-mim-service-portal/MIM_Install14.png)
 
 3.  Er wordt een waarschuwing weergegeven: lees deze en klik op **Volgende**.
 
@@ -94,7 +94,7 @@ Als u in de laatste stap geen MIM-installatiepakket hebt ingesteld, gaat u terug
 
 2.  Geef *passwordreset.contoso.com* als de hostnaam voor MIM wachtwoord opnieuw instellen-Portal, en stel de poort op **80**. Schakel de optie **Poort in de firewall openen** in.
 
-    ![Afbeelding voor het invoeren van de configuratiegegevens die worden gebruikt door IIS](media/MIM-Install15.png)
+    ![Afbeelding voor het invoeren van de configuratiegegevens die worden gebruikt door IIS](media/install-mim-service-portal/MIM_Install15.png)
 
 3.  Er wordt een waarschuwing weergegeven: lees deze en klik op **Volgende**.
 

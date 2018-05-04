@@ -12,11 +12,11 @@ ms.technology: security
 ms.assetid: c01487f2-3de6-4fc4-8c3a-7d62f7c2496c
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: eceb1ed31b0212970d5cf0eae0bc8d96aa087ff5
-ms.sourcegitcommit: 32d9a963a4487a8649210745c97a3254645e8744
+ms.openlocfilehash: 6922c3c2f66b6dbb0b0751420be9dd778206a3cf
+ms.sourcegitcommit: 8316fa41f06f137dba0739a8700910116b5575d8
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="set-up-an-identity-management-server-sharepoint"></a>Een server voor identiteitsbeheer instellen: SharePoint
 
@@ -68,14 +68,15 @@ Voer de stappen uit die in de **wizard Configuratie van SharePoint-producten** w
 1. Stel de gegevens op het tabblad **Verbinding met een serverfarm maken** in om een nieuwe serverfarm te maken.
 
 2. Geef deze server als de databaseserver zoals **corpsql** voor de configuratiedatabase en *Contoso\SharePoint* als het account van de database-toegang voor SharePoint moet worden gebruikt.
-    a. In de configuratie van de Wizard Wij raden u aan [MinRole](https://docs.microsoft.com/en-us/sharepoint/install/overview-of-minrole-server-roles-in-sharepoint-server-2016) type **front-**
 3. Maak een wachtwoord voor de wachtwoordzin van de farmbeveiliging.
 
-4. Wanneer configuratietaak 10 (van de 10 taken) door de configuratiewizard is voltooid, klikt u op Voltooien en wordt er een webbrowser geopend.
+4. In de configuratie van de Wizard Wij raden u aan [MinRole](https://docs.microsoft.com/en-us/sharepoint/install/overview-of-minrole-server-roles-in-sharepoint-server-2016) type **front-**
 
-5. Verifieer uzelf in de pop-up van Internet Explorer als *Contoso\miminstall* (of het equivalent administrator-account) om door te gaan.
+5. Wanneer de configuratiewizard is voltooid configuratietaak 10 van 10, klikt u op Voltooien en een browser wordt geopend...
 
-6. Klik in de wizard (in de web-app) op **annuleren/Skip**.
+6. Als u wordt gevraagd de pop-up van Internet Explorer, verifieer uzelf als *Contoso\miminstall* (of het equivalent administrator-account) om door te gaan.
+
+7. Klik in de wizard (in de web-app) op **annuleren/Skip**.
 
 
 ## <a name="prepare-sharepoint-to-host-the-mim-portal"></a>SharePoint voorbereiden om de MIM-portal te hosten
@@ -94,14 +95,13 @@ Voer de stappen uit die in de **wizard Configuratie van SharePoint-producten** w
     > [!NOTE]
     > Er wordt een waarschuwing weergegeven waarin wordt vermeld dat de klassieke Windows-verificatiemethode wordt gebruikt en het kan enkele minuten duren voordat de laatste opdracht een waarde retourneert. Wanneer het script is voltooid, wordt in de uitvoer de URL van de nieuwe portal vermeld. Houd de **SharePoint 2016-beheershell** venster geopend zodat u deze later kunt raadplegen.
 
-2. Start de SharePoint 2013-beheershell en voer het volgende PowerShell-script uit om een **SharePoint Foundation 2013-siteverzameling** te maken.
+2. Start SharePoint 2016-beheershell en voer het volgende PowerShell-script maken een **SharePoint-siteverzameling** die zijn gekoppeld aan deze webtoepassing.
 
   ```
     $t = Get-SPWebTemplate -compatibilityLevel 15 -Identity "STS#1"
     $w = Get-SPWebApplication http://mim.contoso.com/
     New-SPSite -Url $w.Url -Template $t -OwnerAlias contoso\miminstall -CompatibilityLevel 15 -Name "MIM Portal"
     $s = SpSite($w.Url)
-    $s.AllowSelfServiceUpgrade = $false
     $s.CompatibilityLevel
   ```
 
@@ -119,7 +119,7 @@ Voer de stappen uit die in de **wizard Configuratie van SharePoint-producten** w
 
 4. Open een nieuw browsertabblad op uw server voor identiteitsbeheer, gaat u naar http://mim.contoso.com/ en meld u aan als *contoso\miminstall*.  Er wordt een lege SharePoint-site met de naam *MIM-portal* weergegeven.
 
-    ![MIM-Portal op http://mim.contoso.com/ afbeelding](media/MIM-DeploySP1.png)
+    ![MIM-Portal op http://mim.contoso.com/ afbeelding](media/prepare-server-sharepoint/MIM_DeploySP1new.png)
 
 5. Kopieer de URL en ga vervolgens in Internet Explorer naar **Internetopties**, open het tabblad **Beveiliging**, selecteer **Lokaal intranet** en klik op **Sites**.
 

@@ -12,11 +12,11 @@ ms.technology: security
 ms.assetid: fa0af422-b5e9-4599-9d9b-cb6c18ea07f9
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: a1f2a30dd6d8519ec09ea3765e5584123725fe03
-ms.sourcegitcommit: 32d9a963a4487a8649210745c97a3254645e8744
+ms.openlocfilehash: 3460436682054acf5e9e1b186c3fa39faaa40a43
+ms.sourcegitcommit: 8316fa41f06f137dba0739a8700910116b5575d8
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="deploy-microsoft-identity-manager-2016-sp1"></a>Implementatie van Microsoft Identity Manager 2016 SP1
 In de artikelen in deze sectie vindt u stapsgewijze instructies voor het implementeren van Microsoft Identity Manager (MIM) 2016 voor selfservicescenario's voor eindgebruikers op een nieuwe server waarop niet eerder FIM of MIM is geïmplementeerd.
@@ -34,7 +34,7 @@ MIM werkt met Active Directory (AD). Volg daarom onderstaande stappen om de AD-d
 
 ## <a name="next-prepare-an-identity-management-servers"></a>Volgende stap: Een identity management-servers voorbereiden
 Als uw domein eenmaal is geïmplementeerd en geconfigureerd, bereidt u de server voor identiteitsbeheer van uw bedrijf voor. Het volgende moet hiervoor worden ingesteld:
-- [Windows Server 2012 R2](prepare-server-ws2016.md)
+- [Windows Server 2016](prepare-server-ws2016.md)
 - [SQL Server 2016](prepare-server-sql2016.md)
 - [SharePoint 2016](prepare-server-sharepoint.md)
 - [Exchange Server](prepare-server-exchange.md) (optioneel)
