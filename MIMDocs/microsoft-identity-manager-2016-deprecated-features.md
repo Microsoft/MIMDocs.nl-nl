@@ -1,21 +1,21 @@
 ---
 title: MIM afgeschafte functies en plannen voor de toekomst | Microsoft Docs
 description: Dit artikel worden afgeschafte functies van de MIM-Identity Manager 2016 SP1.
-keywords: 
+keywords: ''
 author: barclayn
 ms.author: davidste
 manager: mbaldwin
-ms.date: 1/31/2017
+ms.date: 2/28/2018
 ms.topic: reference
 ms.prod: identity-manager-2016
 ms.service: microsoft-identity-manager
 ms.technology: security
-ms.assetid: 
-ms.openlocfilehash: d1e016c45261be5fa9c4dba67ead7f88aa14890b
-ms.sourcegitcommit: 24746cf23b4688b3f8290519527259fc469e0373
+ms.assetid: ''
+ms.openlocfilehash: 50f7b135ce0d5a46ea08068a7658b229759d2b50
+ms.sourcegitcommit: 24bb3e82f55971696bdefa6c240f1a27f856e110
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="deprecated-features"></a>Afgeschafte functies
 
