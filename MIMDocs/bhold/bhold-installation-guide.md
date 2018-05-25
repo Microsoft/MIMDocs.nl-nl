@@ -1,7 +1,7 @@
 ---
 title: BHOLD-SP1-installatie | Microsoft Docs
 description: BHOLD-SP1-documentatie voor installatie
-keywords: 
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -9,12 +9,12 @@ ms.date: 09/11/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
-ms.assetid: 
-ms.openlocfilehash: c36a9d02e90101b98ade913224e573ed21dc3d5c
-ms.sourcegitcommit: 0d8b19c5d4bfd39d9c202a3d2f990144402ca79c
+ms.assetid: ''
+ms.openlocfilehash: e0514530c9bceef18cc8eea7ec8b7060110811c2
+ms.sourcegitcommit: c773edc8262b38df50d82dae0f026bb49500d0a4
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/14/2017
+ms.lasthandoff: 05/25/2018
 ---
 # <a name="microsoft-bhold-suite-sp1-60-installation-guide"></a>Installatiehandleiding voor Microsoft BHOLD-Suite SP1 (6.0)
 
@@ -109,7 +109,7 @@ Na het bewerken en opslaan van het bestand, voert u de opdracht iisreset opnieuw
 
 ## <a name="upgrading-bhold-suite"></a>Upgraden van BHOLD-Suite
 
-U kunt een bestaande BHOLD-Suite-installatie niet upgraden. In plaats daarvan moet u een bestaande installatie van BHOLD-Suite verwijderen voordat u BHOLD-modules kunt bijwerken. Als u een bestaand BHOLD rol model hebt, kunt u de BHOLD-database bijwerken en deze gebruiken tijdens de installatie van de bijgewerkte BHOLD-Core-module. Zie voor meer informatie [BHOLD-Suite met BHOLD-Suite SP1 vervangt](https://technet.microsoft.com/en-us/library/jj874043(v=ws.10).aspx).
+U kunt een bestaande BHOLD-Suite-installatie niet upgraden. In plaats daarvan moet u een bestaande installatie van BHOLD-Suite verwijderen voordat u BHOLD-modules kunt bijwerken. Als u een bestaand BHOLD rol model hebt, kunt u de BHOLD-database bijwerken en deze gebruiken tijdens de installatie van de bijgewerkte BHOLD-Core-module. Zie voor meer informatie [BHOLD-Suite met BHOLD-Suite SP1 vervangt](https://technet.microsoft.com/library/jj874043(v=ws.10).aspx).
 
 
 ## <a name="next-steps"></a>Volgende stappen

@@ -10,20 +10,20 @@ ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
-ms.openlocfilehash: 77d322f447546897ad18f0981e5faad12efafef1
-ms.sourcegitcommit: 637988684768c994398b5725eb142e16e4b03bb3
+ms.openlocfilehash: ac11a4dfb23944d50dbbcf0b0d70c915f186c159
+ms.sourcegitcommit: c773edc8262b38df50d82dae0f026bb49500d0a4
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/25/2018
 ---
 <a name="azure-ad-business-to-business-b2b-collaboration-with-microsoft-identity-managermim-2016-sp1-with-azure-application-proxy-public-preview"></a>Azure AD-business-to-business (B2B) samenwerking met Microsoft Identity Manager(MIM) 2016 SP1 met Azure-toepassingsproxy (openbare Preview)
 ============================================================================================================================
 
-Het eerste scenario in preview voor is externe gebruiker levenscyclusbeheer van AD-account.   In dit scenario kan een organisatie gasten in hun Azure AD-directory heeft uitgenodigd en wenst te geven die gasten toegang krijgen tot lokale Windows-verificatie of toepassingen op basis van Kerberos via de [Azure AD-toepassing](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-application-proxy-publish)proxy of andere wijze gateway. De Azure AD-toepassingsproxy is vereist voor elke gebruiker hebben hun eigen AD DS-account voor identificatie en overdracht
+Het eerste scenario in preview voor is externe gebruiker levenscyclusbeheer van AD-account.   In dit scenario kan een organisatie gasten in hun Azure AD-directory heeft uitgenodigd en wenst te geven die gasten toegang krijgen tot lokale Windows-verificatie of toepassingen op basis van Kerberos via de [Azure AD-toepassing](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-publish)proxy of andere wijze gateway. De Azure AD-toepassingsproxy is vereist voor elke gebruiker hebben hun eigen AD DS-account voor identificatie en overdracht
 
 ## <a name="scenario-specific-supported-guidance"></a>Scenario-specifieke ondersteund richtlijnen
 
-In dit scenario wordt een organisatie gasten in hun Azure AD-directory heeft uitgenodigd en wil deze gasten toegang geven tot lokale Windows. Geïntegreerde verificatie of toepassingen op basis van Kerberos via de [Azure AD-toepassing](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-application-proxy-publish) proxy of andere wijze gateway. De Azure AD-toepassingsproxy is vereist voor elke gebruiker hebben hun eigen AD DS-account voor identificatie en overdracht
+In dit scenario wordt een organisatie gasten in hun Azure AD-directory heeft uitgenodigd en wil deze gasten toegang geven tot lokale Windows. Geïntegreerde verificatie of toepassingen op basis van Kerberos via de [Azure AD-toepassing](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-publish) proxy of andere wijze gateway. De Azure AD-toepassingsproxy is vereist voor elke gebruiker hebben hun eigen AD DS-account voor identificatie en overdracht
 
 Enkele veronderstellingen in de configuratie van B2B met MIM en Azure-toepassingsproxy
 
@@ -33,14 +33,14 @@ Enkele veronderstellingen in de configuratie van B2B met MIM en Azure-toepassing
 
     -   Office-groepen beheren van de toepassing openen met behulp [Azure AD Connect](http://robsgroupsblog.com/blog/how-to-write-back-an-office-group-in-azure-active-directory-to-a-mail-enabled-security-group-in-an-on-premises-active-directory)
 
--   U al toepassingsproxy connectors en groepen van de connector hebt ingesteld, als dat niet het vindt u [hier](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-application-proxy-enable#install-and-register-a-connector) installeren en configureren
+-   U al toepassingsproxy connectors en groepen van de connector hebt ingesteld, als dat niet het vindt u [hier](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-enable#install-and-register-a-connector) installeren en configureren
 
 -   Een of meer toepassingen die afhankelijk van geïntegreerde Windows-verificatie of afzonderlijke AD-accounts via toepassingsproxy van Azure AD zijn gepubliceerd
 
--   U hebt uitgenodigd of u een of meer gasten die zijn gemaakt in Azure AD uitnodigen <https://docs.microsoft.com/en-us/azure/active-directory/active-directory-b2b-self-service-portal>
+-   U hebt uitgenodigd of u een of meer gasten die zijn gemaakt in Azure AD uitnodigen <https://docs.microsoft.com/azure/active-directory/active-directory-b2b-self-service-portal>
 
 -   Microsoft Identity Manager is geïnstalleerd en eenvoudige configuratie van de Service en -Portal en Active Directory-beheeragent.
-    <https://docs.microsoft.com/en-us/microsoft-identity-manager/microsoft-identity-manager-deploy>
+    <https://docs.microsoft.com/microsoft-identity-manager/microsoft-identity-manager-deploy>
 
 ## <a name="b2b-end-to-end-deployment"></a>B2B-End-to-End-implementatie
 
@@ -188,7 +188,7 @@ Geïndexeerde = **True**
 
 De volgende stappen wordt de minimale configuratie van de configuratie van de FIM-Service Management Agent en de Active Directory Domain Services-beheeragent vereisen.
 
-Meer informatie vindt u hier om de configuratie <https://technet.microsoft.com/en-us/library/ff686263(v=ws.10).aspx> -hoe kan ik gebruikers inrichten in AD DS
+Meer informatie vindt u hier om de configuratie <https://technet.microsoft.com/library/ff686263(v=ws.10).aspx> -hoe kan ik gebruikers inrichten in AD DS
 
 ### <a name="synchronization-rule-import-guest-user-to-mv-to-synchronization-service-metaverse-from-azure-active-directorybr"></a>Regel voor het synchroniseren: Gastgebruiker in MV voor synchronisatie Service Metaverse van Azure Active Directory importeren<br>
 
@@ -292,10 +292,10 @@ Ten slotte B2B gebruikersaanmelding en de toepassing bekijken
 <a name="next-steps"></a>Volgende stappen
 ----------
 
-[Gebruikers inrichten voor AD DS](https://technet.microsoft.com/en-us/library/ff686263(v=ws.10).aspx)
+[Gebruikers inrichten voor AD DS](https://technet.microsoft.com/library/ff686263(v=ws.10).aspx)
 
-[Functiereferentie voor FIM 2010](https://technet.microsoft.com/en-us/library/ff800820(v=ws.10).aspx)
+[Functiereferentie voor FIM 2010](https://technet.microsoft.com/library/ff800820(v=ws.10).aspx)
 
-[Het verstrekken van veilige externe toegang tot on-premises toepassingen](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-application-proxy-get-started)
+[Het verstrekken van veilige externe toegang tot on-premises toepassingen](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started)
 
 [Microsoft Identity Manager-management-agent voor Microsoft Graph (preview) downloaden](http://go.microsoft.com/fwlink/?LinkId=717495)

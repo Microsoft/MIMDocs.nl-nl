@@ -1,7 +1,7 @@
 ---
 title: Installatie van BHOLD FIM/MIM-integratie | Microsoft Docs
 description: BHOLD-integratiemodule selfservice rollenbeheer toevoegen aan de MIM- en FIM
-keywords: 
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -9,12 +9,12 @@ ms.date: 09/12/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
-ms.assetid: 
-ms.openlocfilehash: ef68de19bd0eabd6d9203469ecc991d496f05846
-ms.sourcegitcommit: 0d8b19c5d4bfd39d9c202a3d2f990144402ca79c
+ms.assetid: ''
+ms.openlocfilehash: 86ab45d1deaac2a7d697bc9860764e598252a0ef
+ms.sourcegitcommit: c773edc8262b38df50d82dae0f026bb49500d0a4
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/14/2017
+ms.lasthandoff: 05/25/2018
 ---
 # <a name="bhold-fimmim-integration-installation"></a>Installatie van BHOLD FIM/MIM-integratie
 
@@ -30,7 +30,7 @@ Hier volgen de softwareonderdelen die aanwezig zijn op de computer zijn moeten v
 - Internet informatieservices en ASP.NET
 - Hulpprogramma's voor Microsoft Silverlight
 
-Bovendien moeten de modules BHOLD-Core en Access Management-Connector al geïmplementeerd op een server in de omgeving en FIM moet worden geconfigureerd met een of meer BHOLD-beheeragents. Zie voor meer informatie over het installeren en configureren van de module BHOLD Core [BHOLD Core-installatie](https://technet.microsoft.com/en-us/library/jj134095(v=ws.10).aspx). Zie voor meer informatie over het installeren en met behulp van de module Access Management-Connector [Access Management-Connectorinstallatie](https://technet.microsoft.com/en-us/library/jj874042(v=ws.10).aspx) en [Test Lab Guide: BHOLD Access Management-Connector](https://technet.microsoft.com/en-us/library/jj853085(v=ws.10).aspx).
+Bovendien moeten de modules BHOLD-Core en Access Management-Connector al geïmplementeerd op een server in de omgeving en FIM moet worden geconfigureerd met een of meer BHOLD-beheeragents. Zie voor meer informatie over het installeren en configureren van de module BHOLD Core [BHOLD Core-installatie](https://technet.microsoft.com/library/jj134095(v=ws.10).aspx). Zie voor meer informatie over het installeren en met behulp van de module Access Management-Connector [Access Management-Connectorinstallatie](https://technet.microsoft.com/library/jj874042(v=ws.10).aspx) en [Test Lab Guide: BHOLD Access Management-Connector](https://technet.microsoft.com/library/jj853085(v=ws.10).aspx).
 
 >[!IMPORTANT]
 De naam van de FIM-servicedatabase moet FIMService zijn. BHOLD FIM-integratie-instellingen mislukt als FIM niet is geïnstalleerd met de standaardnaam FIM service-database.
@@ -43,16 +43,16 @@ Bovendien moet u de gegevens die de installatiewizard van BHOLD FIM-integratie i
 
 ### <a name="bholdfim-account-settings"></a>BHOLDFim Accountinstellingen
 
-| **Item**                            | **Beschrijving**                                                                                                                                                                                                               | **Waarde**                                                                                                                                                                                                                                                                                                            |
+| **item**                            | **Beschrijving**                                                                                                                                                                                                               | **Waarde**                                                                                                                                                                                                                                                                                                            |
 |-------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Beveiligingsprovider in domein gebruiken** | Wanneer u selecteert, geeft u aan dat Active Directory Domain Services-beveiliging de toegang tot BHOLD Core beheert.                                                                                                                    | Schakel het selectievakje in. **Belangrijk:** mislukt de installatie als dit selectievakje niet is ingeschakeld.                                                                                                                                                                                                                   |
-| **Domein**                          | Hiermee geeft u het domein waarin de **-serviceaccount** dat u hebt gemaakt bij het installeren van BHOLD-Core. Zie voor meer informatie [BHOLD Core-installatie](https://technet.microsoft.com/en-us/library/jj134095(v=ws.10).aspx). | Naam van het domein wordt automatisch opgegeven door de wizard. Wijzig de naam alleen als dit onjuist is. **Belangrijk:** de domeinnaam opgeven met de naam van de NetBIOS-(korte), niet de volledig gekwalificeerde domeinnaam (FQDN). Bijvoorbeeld, als de FQDN-naam van het domein fabrikam.com is, geef de domeinnaam als FABRIKAM. |
+| **Domein**                          | Hiermee geeft u het domein waarin de **-serviceaccount** dat u hebt gemaakt bij het installeren van BHOLD-Core. Zie voor meer informatie [BHOLD Core-installatie](https://technet.microsoft.com/library/jj134095(v=ws.10).aspx). | Naam van het domein wordt automatisch opgegeven door de wizard. Wijzig de naam alleen als dit onjuist is. **Belangrijk:** de domeinnaam opgeven met de naam van de NetBIOS-(korte), niet de volledig gekwalificeerde domeinnaam (FQDN). Bijvoorbeeld, als de FQDN-naam van het domein fabrikam.com is, geef de domeinnaam als FABRIKAM. |
 | **Gebruikersnaam**                        | Hiermee geeft u de aanmeldingsnaam van de gebruikersaccount van de Core BHOLD-service.                                                                                                                                                              | Schrijf hier de accountnaam van de gebruiker:                                                                                                                                                                                                                                                                                    |
 | **Wachtwoord**                        | Hiermee geeft u het wachtwoord van het serviceaccount van de gebruiker.                                                                                                                                                                           | Schrijf hier het wachtwoord: **belangrijk:** Zorg ervoor dat dit wachtwoord in een verborgen, een veilige locatie.                                                                                                                                                                                                                  |
 
 ### <a name="fim-service-settings"></a>FIM-Service-instellingen
 
-| **Item**            | **Beschrijving**                                                                                                                                                                                                                               | **Waarde**                                                                                           |
+| **item**            | **Beschrijving**                                                                                                                                                                                                                               | **Waarde**                                                                                           |
 |---------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
 | **Gebruiker**            | Hiermee geeft u de naam van een account met administrator-bevoegdheden voor FIM. Microsoft raadt u aan het account dat is gekoppeld aan de hoofdgebruiker in BHOLD Core (standaard is dit het account dat wordt gebruikt voor het installeren van BHOLD-Core) niet te gebruiken. | Schrijf hier de accountnaam van de gebruiker:                                                                   |
 | **Wachtwoord**        | Hiermee geeft u het wachtwoord van de FIM-beheerdersaccount.                                                                                                                                                                                 | Schrijf hier het wachtwoord: **belangrijk:** Zorg ervoor dat dit wachtwoord in een verborgen, een veilige locatie. |
@@ -61,7 +61,7 @@ Bovendien moet u de gegevens die de installatiewizard van BHOLD FIM-integratie i
 
 ### <a name="bhold-core-connection"></a>BHOLD-Core verbinding
 
-| **Item**               | **Beschrijving**                                                                                                                                                                                                                                                                                                                                                                               | **Waarde**                                                                                           |
+| **item**               | **Beschrijving**                                                                                                                                                                                                                                                                                                                                                                               | **Waarde**                                                                                           |
 |------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
 | **Domein**             | Hiermee geeft u de naam van het domein van het account opgegeven in **gebruiker**onderstaande. Geef het domein (korte) NetBIOS-indeling.                                                                                                                                                                                                                                                                   | De domein gebruikersaccountnaam hier schrijven?                                                            |
 | **Gebruiker**               | Hiermee geeft u de aanmeldingsnaam van de account van **BHOLD-gebruiker die een supervisor** van alle gebruikers en -rollen en gemachtigd is om te koppelen en ontkoppelen van gebruikersrollen. Microsoft raadt u aan het account dat is gekoppeld aan de hoofdgebruiker in BHOLD Core (standaard is dit het account dat wordt gebruikt voor het installeren van BHOLD-Core) niet te gebruiken. Dit account kan worden hetzelfde account waarmee u verbinding maken met FIM | Schrijf hier de accountnaam van de gebruiker:                                                                   |
@@ -75,7 +75,7 @@ Voor het installeren van de integratiemodule BHOLD FIM aanmelden als lid van de 
 
 - BholdFIMIntegration*\<versie\>*\_Release.msi
 
-Vervang  *\<versie\>*  met het versienummer van de integratie van BHOLD FIM-versie die u installeert.
+Vervang *\<versie\>* met het versienummer van de integratie van BHOLD FIM-versie die u installeert.
 
 Als u wilt het programmabestand uitvoeren als beheerder, met de rechtermuisknop op het bestand en klik vervolgens op **als administrator uitvoeren**.
 
@@ -157,7 +157,7 @@ Als een goedkeurder voor een aanvraag voor een selfservice-rol niet is opgegeven
 
 2.  Klik op **Start**, en klik vervolgens op **Internet Explorer**.
 
-3.  Typ in de adresbalk van Internet Explorer <bhold-http://localhost:5151/core>, en druk vervolgens op ENTER.
+3.  Typ in de adresbalk van Internet Explorer <http://localhost:5151/bhold/core>, en druk vervolgens op ENTER.
 
 4.  Voor de belangrijkste BHOLD startpagina, onder **kenmerk def**, klikt u op **kenmerken van het type**.
 
@@ -189,7 +189,7 @@ Als een goedkeurder voor een aanvraag voor een selfservice-rol niet is opgegeven
 
 18. Op de **organisatie-eenheid/root** pagina, klikt u op **wijzigen**.
 
-19. Op de **wijzigen van de organisatie-eenheid kenmerken/root** pagina **goedkeurder**, typ de naam van het domein en gebruikersnaam van de gebruiker die roltoewijzing aanvragen, in de indeling goedkeurt  *\<domein\>*\\*\<gebruiker\>*, waarbij  *\<domein\>*  is de (Korte) NetBIOS-domeinnaam en  *\<gebruiker\>*  aanmeldingsnaam van de gebruiker.
+19. Op de **wijzigen van de organisatie-eenheid kenmerken/root** pagina **goedkeurder**, typ de naam van het domein en gebruikersnaam van de gebruiker die roltoewijzing aanvragen, in de indeling goedkeurt  *\<domein\>*\\*\<gebruiker\>*, waarbij *\<domein\>* is de (Korte) NetBIOS-domeinnaam en *\<gebruiker\>* aanmeldingsnaam van de gebruiker.
 20. Klik op **OK**.
 
 >[!IMPORTANT]
@@ -207,7 +207,7 @@ Betere beveiliging van de werkstroom, naast goedkeurders, moet u aanvullende goe
 
 - melding*\<n\>*
 
-waar  *\< n \>*  geeft een optionele numeriek achtervoegsel zodat meerdere kenmerken van hetzelfde type.
+waar *\<n\>* geeft een optionele numeriek achtervoegsel zodat meerdere kenmerken van hetzelfde type.
 
 ### <a name="verify-approval-workflows-configured-in-the-fim-service"></a>Werkstromen voor goedkeuring geconfigureerd in de FIM-Service controleren
 

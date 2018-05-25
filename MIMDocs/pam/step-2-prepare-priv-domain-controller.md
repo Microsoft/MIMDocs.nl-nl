@@ -1,7 +1,7 @@
 ---
 title: PAM implementeren - Stap 2 - PRIV DC | Microsoft Docs
-description: "De PRIV-domeincontroller voorbereiden voor de bastionomgeving waarin Privileged Access Management wordt geïsoleerd."
-keywords: 
+description: De PRIV-domeincontroller voorbereiden voor de bastionomgeving waarin Privileged Access Management wordt geïsoleerd.
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -12,11 +12,11 @@ ms.technology: active-directory-domain-services
 ms.assetid: 0e9993a0-b8ae-40e2-8228-040256adb7e2
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: de3392648f187ce6007bba332c0f191d32980c94
-ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
+ms.openlocfilehash: 9cb36a52525c538d0ac323a3342a9dd6b7f6e42e
+ms.sourcegitcommit: c773edc8262b38df50d82dae0f026bb49500d0a4
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 05/25/2018
 ---
 # <a name="step-2---prepare-the-first-priv-domain-controller"></a>Stap 2: de eerste PRIV-domeincontroller voorbereiden
 
@@ -299,7 +299,7 @@ Installeer Windows 8.1 Enterprise of Windows 10 Enterprise op een andere nieuwe 
 
 4. Stel via Configuratiescherm de domeindeelname van de computer PRIVWKSTN in op het domein priv.contoso.local. Hiervoor beheerdersreferenties van het PRIV-domein vereist. Wanneer dit is voltooid, start u de computer PRIVWKSTN opnieuw op.
 
-Zie voor meer informatie [securing privileged access workstations](https://technet.microsoft.com/en-us/library/mt634654.aspx) (bevoegde toegang tot werkstations beveiligen).
+Zie voor meer informatie [securing privileged access workstations](https://technet.microsoft.com/library/mt634654.aspx) (bevoegde toegang tot werkstations beveiligen).
 
 In de volgende stap bereidt u een PAM-server voor.
 

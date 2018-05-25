@@ -1,7 +1,7 @@
 ---
 title: Basisinstallatie van BHOLD | Microsoft Docs
 description: BHOLD-suite installatie core document
-keywords: 
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -9,12 +9,12 @@ ms.date: 09/07/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
-ms.assetid: 
-ms.openlocfilehash: 33fbe63528d5d7c543ae286f934654538782b4d5
-ms.sourcegitcommit: 0d8b19c5d4bfd39d9c202a3d2f990144402ca79c
+ms.assetid: ''
+ms.openlocfilehash: 25825c1472dec44ed0e09519d4bc17809c1b95b1
+ms.sourcegitcommit: c773edc8262b38df50d82dae0f026bb49500d0a4
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/14/2017
+ms.lasthandoff: 05/25/2018
 ---
 # <a name="bhold-core-installation"></a>BHOLD-Core-installatie
 
@@ -30,7 +30,7 @@ De module BHOLD Core vormt de basis van BHOLD-Suite van Microsoft. U moet de Cor
 
 |          |        |          |
 |----------|--------|----------|
-|**Onderdeel** |**Minimale** | **Aanbevolen** |
+|**Onderdeel** |**Minimum** | **Aanbevolen** |
 |Processor | 64-bits processor | Multicore 64-bits processor |
 | Geheugen |3 GB | 6 GB of meer |
 |Opslag| 30 GB beschikbaar |Afhankelijk van de grootte van de implementatie |
@@ -94,18 +94,18 @@ Voordat u begint met het installeren van de module BHOLD-Core, moet u worden voo
 
 ### <a name="account-settings"></a>Accountinstellingen
 
-| **Item**                                    | **Beschrijving**                                                                                                                                                                                                                                                                                             | **Waarde**                                                                                                                                                          |
+| **item**                                    | **Beschrijving**                                                                                                                                                                                                                                                                                             | **Waarde**                                                                                                                                                          |
 |---------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Beveiligingsprovider worden gebruikt op de computer van het domein /** | Wanneer u selecteert, geeft u aan dat Active Directory Domain Services-beveiliging de toegang tot BHOLD Core beheert.                                                                                                                                                                                                  | Schakel het selectievakje in. **Belangrijk:** mislukt de installatie als dit selectievakje niet is ingeschakeld.                                                                 |
 | **Domein**                                  | Hiermee geeft u het domein met de BHOLD-server, service-account en toepassingsgroep. **Belangrijk:** de domeinnaam opgeven met de naam van de NetBIOS-(korte), niet de volledig gekwalificeerde domeinnaam (FQDN). Bijvoorbeeld, als de FQDN-naam van het domein fabrikam.com is, geef de domeinnaam als CONTOSO. | Schrijf hier de naam van het domein:                                                                                                                                        |
-| **Toepassingsgroep**                       | Geeft de naam van de beveiligingsgroep die u eerder hebt gemaakt in [vereiste gebruikers en groepen](https://technet.microsoft.com/en-us/library/jj134095(v=ws.10).aspx#rug).                                                                                                                                  | Schrijf hier de naam van de groep:                                                                                                                                         |
-| **Gebruiker voor de service**                            | Hiermee geeft u de aanmeldingsnaam van de service-gebruikersaccount dat u eerder hebt gemaakt in [vereiste gebruikers en groepen](https://technet.microsoft.com/en-us/library/jj134095(v=ws.10).aspx#rug).                                                                                                                      | Schrijf hier de accountnaam van de gebruiker:                                                                                                                                  |
+| **Toepassingsgroep**                       | Geeft de naam van de beveiligingsgroep die u eerder hebt gemaakt in [vereiste gebruikers en groepen](https://technet.microsoft.com/library/jj134095(v=ws.10).aspx#rug).                                                                                                                                  | Schrijf hier de naam van de groep:                                                                                                                                         |
+| **Gebruiker voor de service**                            | Hiermee geeft u de aanmeldingsnaam van de service-gebruikersaccount dat u eerder hebt gemaakt in [vereiste gebruikers en groepen](https://technet.microsoft.com/library/jj134095(v=ws.10).aspx#rug).                                                                                                                      | Schrijf hier de accountnaam van de gebruiker:                                                                                                                                  |
 | **Wachtwoord**                                | Hiermee geeft u het wachtwoord van het gebruikersaccount van de Core BHOLD-service.                                                                                                                                                                                                                                              | Schrijf hier het wachtwoord: **belangrijk:** Zorg ervoor dat dit wachtwoord in een verborgen, een veilige locatie.                                                                |
 | **IP/poort van website**                         | Hiermee geeft u het aantal IP-adres en poort van de website op de intranetserver moeten worden gemaakt. Wijzig de standaardwaarde (\*) alleen als u wordt niet hetzelfde IP-adres als de standaardwebsite. Wijzig het poortnummer moet een beschikbare poort wordt alleen als de standaardpoort (5151) al gebruikt.             | Als een niet-standaard IP-adres wordt gebruikt door de standaardwebsite, schrijf deze hier: als het standaardpoortnummer al in gebruik is, schrijf het BHOLD website poortnummer hier: |
 
 ### <a name="database-settings"></a>Database-instellingen
 
-| **Item**                                       | **Beschrijving**                                                                                                                                                                                                                                                           | **Waarde**                                                                                                                                                                                                                                                                                                                                                                                             |
+| **item**                                       | **Beschrijving**                                                                                                                                                                                                                                                           | **Waarde**                                                                                                                                                                                                                                                                                                                                                                                             |
 |------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Geïntegreerde beveiliging gebruiken**                    | Hiermee geeft u op dat de Windows-verificatie wordt gebruikt voor toegang tot de database.                                                                                                                                                                                                     | Schakel het selectievakje in als Windows-verificatie wordt gebruikt voor verbinding met de SQL-Server. Schakel het selectievakje in als SQL Server-verificatie wordt gebruikt. De database moet zijn gemaakt voordat uitgevoerd BHOLD Core Setup als SQL Server-verificatie wordt gebruikt. **Opmerking:** als Windows-verificatie wordt gebruikt, u moet zijn aangemeld met een account met de serverrol sysadmin op de databaseserver. |
 | **Databasegebruiker** en **databasewachtwoord** | Hiermee geeft u de gebruikersnaam en wachtwoord van een gebruiker met de serverrol sysadmin op de databaseserver. Deze waarden worden geleverd, alleen wanneer SQL Server-verificatie wordt gebruikt.                                                                                               | Schrijf hier de gebruikersnaam van de SQL Server: SQL Server-gebruikerswachtwoord hier schrijven: **Opmerking:** Zorg ervoor dat dit wachtwoord in een verborgen, een veilige locatie.                                                                                                                                                                                                                                                  |
@@ -120,7 +120,7 @@ Voor het installeren van de module BHOLD-Core, meld u aan als lid van de groep D
 
 - BholdCore  *\<versie\>*\_Release.msi
 
-Vervang  *\<versie\>*  met het versienummer van de Core BHOLD-versie die u installeert.
+Vervang *\<versie\>* met het versienummer van de Core BHOLD-versie die u installeert.
 
 Als u wilt het programmabestand uitvoeren als beheerder, met de rechtermuisknop op het bestand en klik vervolgens op **als administrator uitvoeren**.
 
@@ -177,7 +177,7 @@ Lidmaatschap van **Domeinadministrators**, of gelijkwaardig, is de minimale vere
 
 1.  Klik op de domeincontroller in Active Directory Domain Services, **Start**, klikt u op **alle programma's**, klikt u op **accessoires**, met de rechtermuisknop op **opdrachtprompt** , en klik vervolgens op **als administrator uitvoeren**.
 
-2.  Typ de volgende opdracht achter de opdrachtprompt en druk op ENTER: setspn – S HTTP /  *\<networkalias\> \<domein\>*  \\  *\<accountname\>*  waar:
+2.  Typ de volgende opdracht achter de opdrachtprompt en druk op ENTER: setspn – S HTTP / *\<networkalias\> \<domein\>* \\ *\<accountname\>* waar:
 
     -   *\<networkalias\>*  is het adres dat clients contact opnemen met de BHOLD-website gebruiken
 
@@ -205,7 +205,7 @@ U moet zijn aangemeld als lid van de groep Domeinadministrators deze procedure u
 
 1.  Klik op **Start**, klikt u op **alle programma's**, en klik vervolgens op **Internet Explorer**.
 
-2.  Typ in het adresvak, waarbij  *\<server\>*  is de naam van de BHOLD-websiteserver en  *\<poort\>*  is het poortnummer dat is gebonden aan de website.
+2.  Typ in het adresvak, waarbij *\<server\>* is de naam van de BHOLD-websiteserver en *\<poort\>* is het poortnummer dat is gebonden aan de website.
 
 3.  Klik op **Start**, klikt u op **waarden**, en klik vervolgens op **wijzigen**.
 
@@ -213,9 +213,9 @@ U moet zijn aangemeld als lid van de groep Domeinadministrators deze procedure u
 
 ## <a name="next-steps"></a>Volgende stappen
 
-Nadat u hebt geïnstalleerd BHOLD-Core en gevalideerd of de installatie geslaagd is, kunt u aanvullende modules installeren. De BHOLD-database zal op dit moment niet in wezen leeg is, met slechts één gebruikersaccount, het root-account en een organisatie-eenheid (orgunit), de hoofdmap orgunit. Als u wilt meer gebruikers toevoegen aan de BHOLD-database, kunt u ofwel de module Access Management-Connector of de Generator van BHOLD-Model, afhankelijk van uw behoeften installeren. U kunt de module Access Management-Connector gebruiken om gebruikersgegevens te importeren uit de FIM-synchronisatieservice of u kunt de Generator BHOLD-Model gebruiken om gebruikersgegevens te importeren uit een reeks gestructureerde bestanden. Zie voor meer informatie over het gebruik van de module Access Management-Connector [Test Lab Guide: BHOLD Access Management-Connector](https://technet.microsoft.com/en-us/library/jj853085(v=ws.10).aspx).
+Nadat u hebt geïnstalleerd BHOLD-Core en gevalideerd of de installatie geslaagd is, kunt u aanvullende modules installeren. De BHOLD-database zal op dit moment niet in wezen leeg is, met slechts één gebruikersaccount, het root-account en een organisatie-eenheid (orgunit), de hoofdmap orgunit. Als u wilt meer gebruikers toevoegen aan de BHOLD-database, kunt u ofwel de module Access Management-Connector of de Generator van BHOLD-Model, afhankelijk van uw behoeften installeren. U kunt de module Access Management-Connector gebruiken om gebruikersgegevens te importeren uit de FIM-synchronisatieservice of u kunt de Generator BHOLD-Model gebruiken om gebruikersgegevens te importeren uit een reeks gestructureerde bestanden. Zie voor meer informatie over het gebruik van de module Access Management-Connector [Test Lab Guide: BHOLD Access Management-Connector](https://technet.microsoft.com/library/jj853085(v=ws.10).aspx).
 
 Zie voor meer informatie over het gebruik van de Generator van BHOLD-Model-module:
 
-- [Microsoft BHOLD-Suite concepten handleiding](https://technet.microsoft.com/en-us/library/jj134102(v=ws.10).aspx)
-- [Microsoft BHOLD-Suite TechnicalReference](https://technet.microsoft.com/en-us/library/jj134935(v=ws.10).aspx).
+- [Microsoft BHOLD-Suite concepten handleiding](https://technet.microsoft.com/library/jj134102(v=ws.10).aspx)
+- [Microsoft BHOLD-Suite TechnicalReference](https://technet.microsoft.com/library/jj134935(v=ws.10).aspx).
