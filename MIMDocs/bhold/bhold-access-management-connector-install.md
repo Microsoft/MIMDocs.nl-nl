@@ -1,7 +1,7 @@
 ---
 title: De installatie van BHOLD access management-connector | Microsoft Docs
-description: "De module BHOLD-connector ondersteunt de initiële en lopende synchronisatie van gegevens"
-keywords: 
+description: De module BHOLD-connector ondersteunt de initiële en lopende synchronisatie van gegevens
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -9,12 +9,13 @@ ms.date: 09/07/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
-ms.assetid: 
+ms.assetid: ''
 ms.openlocfilehash: 6d7f19f470d0c0f82a68652115ab9265a13b3508
 ms.sourcegitcommit: 0d8b19c5d4bfd39d9c202a3d2f990144402ca79c
 ms.translationtype: MT
 ms.contentlocale: nl-NL
 ms.lasthandoff: 11/14/2017
+ms.locfileid: "24522325"
 ---
 # <a name="access-management-connector-installation"></a>De installatie van een Access Management-Connector
 

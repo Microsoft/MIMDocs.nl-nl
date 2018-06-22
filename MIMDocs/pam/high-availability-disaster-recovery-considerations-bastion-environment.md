@@ -1,7 +1,7 @@
 ---
 title: Herstel na noodgevallen in PAM | Microsoft Docs
 description: Meer informatie over het configureren van Privileged Access Management voor een hoge beschikbaarheid en herstel na noodgevallen.
-keywords: 
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -17,6 +17,7 @@ ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
 ms.translationtype: MT
 ms.contentlocale: nl-NL
 ms.lasthandoff: 09/14/2017
+ms.locfileid: "22052311"
 ---
 # <a name="high-availability-and-disaster-recovery-considerations-for-the-bastion-environment"></a>Overwegingen voor hoge beschikbaarheid en herstel na noodgevallen voor de bastionomgeving
 

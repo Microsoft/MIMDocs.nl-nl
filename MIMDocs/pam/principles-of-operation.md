@@ -1,7 +1,7 @@
 ---
 title: PAM-onderdelen | Microsoft Docs
 description: Privileged Access Management deelt sommige onderdelen met MIM en heeft daarnaast een aantal eigen onderdelen. Meer informatie over hoe deze onderdelen samenwerken.
-keywords: 
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -17,6 +17,7 @@ ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
 ms.translationtype: MT
 ms.contentlocale: nl-NL
 ms.lasthandoff: 09/14/2017
+ms.locfileid: "22052362"
 ---
 # <a name="understand-the-components-of-pam"></a>Inzicht in de PAM-onderdelen
 

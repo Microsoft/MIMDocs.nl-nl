@@ -1,7 +1,7 @@
 ---
-title: "Bevoorrechte rollen definiëren voor PAM | Microsoft Docs"
-description: "Bepalen welke bevoorrechte rollen moeten worden beheerd en het beheerbeleid voor elke rol definiëren."
-keywords: 
+title: Bevoorrechte rollen definiëren voor PAM | Microsoft Docs
+description: Bepalen welke bevoorrechte rollen moeten worden beheerd en het beheerbeleid voor elke rol definiëren.
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -17,6 +17,7 @@ ms.sourcegitcommit: 210195369d2ecd610569d57d0f519d683ea6a13b
 ms.translationtype: MT
 ms.contentlocale: nl-NL
 ms.lasthandoff: 09/01/2017
+ms.locfileid: "21943754"
 ---
 # <a name="define-roles-for-privileged-access-management"></a>Rollen voor Privileged Access Management definiëren
 

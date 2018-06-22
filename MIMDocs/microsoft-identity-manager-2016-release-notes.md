@@ -1,7 +1,7 @@
 ---
 title: Opmerkingen bij de release voor Microsoft Identity Manager 2016 | Microsoft Docs
 description: Informatie over de laatste MIM-releases.
-keywords: 
+keywords: ''
 author: billmath
 ms.author: barclayn
 manager: mbaldwin
@@ -18,6 +18,7 @@ ms.sourcegitcommit: f077508b5569e2a96084267879c5b6551e1e0905
 ms.translationtype: MT
 ms.contentlocale: nl-NL
 ms.lasthandoff: 10/12/2017
+ms.locfileid: "23137571"
 ---
 # <a name="release-notes-for-mim-2016"></a>Releaseopmerkingen voor MIM 2016
 Er zijn op dit moment geen releaseopmerkingen.

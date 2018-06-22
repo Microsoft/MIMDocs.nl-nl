@@ -1,7 +1,7 @@
 ---
 title: Het laagmodel van de PAM-omgeving | Microsoft Docs
 description: Meer informatie over het laagmodel dat uw systeem scheidt op basis van de kwetsbaarheid voor risico's.
-keywords: 
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -17,6 +17,7 @@ ms.sourcegitcommit: c049dceaf02ab8b6008fe440daae4d07b752ca2e
 ms.translationtype: MT
 ms.contentlocale: nl-NL
 ms.lasthandoff: 08/31/2017
+ms.locfileid: "21942728"
 ---
 # <a name="tier-model-for-partitioning-administrative-privileges"></a>Laagmodel voor het partitioneren van beheerdersbevoegdheden
 

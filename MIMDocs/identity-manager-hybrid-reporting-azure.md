@@ -1,7 +1,7 @@
 ---
 title: Wat is hybride rapportage in Azure AD | Microsoft Docs
 description: Hybride audit activiteitsrapporten in Azure Active Directory kunt u de gecontroleerde gebeurtenissen bekijken in de cloud en de on-premises.
-keywords: 
+keywords: ''
 author: davidste
 ms.author: davidste
 manager: bhu
@@ -16,6 +16,7 @@ ms.sourcegitcommit: b4a39928c5fa1d7718046563c0809bcbf11d833d
 ms.translationtype: MT
 ms.contentlocale: nl-NL
 ms.lasthandoff: 02/20/2018
+ms.locfileid: "29370375"
 ---
 # <a name="hybrid-identity-management-audit-reporting-in-azure-active-directory"></a>Beheer van hybride identiteit controleren rapportage in Azure Active Directory
 Met Azure Active Directory (Azure AD) audit activiteitenrapporten, u kunt identity management-activiteit controleren on-premises of in de cloud. Door het beheer van al uw identiteits- en toegangsbeheer gegevens in één rapport, kunt u tijd besparen en de algehele kosten te verlagen.

@@ -6,6 +6,7 @@
 ## [Hybride rapportage in Azure](identity-manager-hybrid-reporting-azure.md)
 # [Plannen en ontwerpen](microsoft-identity-manager-2016-supported-platforms.md)
 ## [Ondersteunde platforms](microsoft-identity-manager-2016-supported-platforms.md)
+## [Ondersteunde talen](microsoft-identity-manager-2016-language-support.md)
 ## [Verbinding maken met uw adreslijsten](supported-management-agents.md)
 ## [Capaciteitsplanning](capacity-planning-guide.md)
 ## [Implementatietopologie](topology-considerations.md)

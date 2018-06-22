@@ -1,7 +1,7 @@
 ---
 title: Een bastionomgeving plannen | Microsoft Docs
-description: 
-keywords: 
+description: ''
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -17,6 +17,7 @@ ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
 ms.translationtype: MT
 ms.contentlocale: nl-NL
 ms.lasthandoff: 09/14/2017
+ms.locfileid: "22052413"
 ---
 # <a name="planning-a-bastion-environment"></a>Een bastionomgeving plannen
 
