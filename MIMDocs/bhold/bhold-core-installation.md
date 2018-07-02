@@ -10,11 +10,12 @@ ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: ''
-ms.openlocfilehash: 25825c1472dec44ed0e09519d4bc17809c1b95b1
-ms.sourcegitcommit: c773edc8262b38df50d82dae0f026bb49500d0a4
+ms.openlocfilehash: 752605be1392e514f5b132a654134185b38e2cef
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/25/2018
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36290132"
 ---
 # <a name="bhold-core-installation"></a>BHOLD-Core-installatie
 
@@ -94,7 +95,7 @@ Voordat u begint met het installeren van de module BHOLD-Core, moet u worden voo
 
 ### <a name="account-settings"></a>Accountinstellingen
 
-| **item**                                    | **Beschrijving**                                                                                                                                                                                                                                                                                             | **Waarde**                                                                                                                                                          |
+| **Item**                                    | **Beschrijving**                                                                                                                                                                                                                                                                                             | **Waarde**                                                                                                                                                          |
 |---------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Beveiligingsprovider worden gebruikt op de computer van het domein /** | Wanneer u selecteert, geeft u aan dat Active Directory Domain Services-beveiliging de toegang tot BHOLD Core beheert.                                                                                                                                                                                                  | Schakel het selectievakje in. **Belangrijk:** mislukt de installatie als dit selectievakje niet is ingeschakeld.                                                                 |
 | **Domein**                                  | Hiermee geeft u het domein met de BHOLD-server, service-account en toepassingsgroep. **Belangrijk:** de domeinnaam opgeven met de naam van de NetBIOS-(korte), niet de volledig gekwalificeerde domeinnaam (FQDN). Bijvoorbeeld, als de FQDN-naam van het domein fabrikam.com is, geef de domeinnaam als CONTOSO. | Schrijf hier de naam van het domein:                                                                                                                                        |
@@ -105,7 +106,7 @@ Voordat u begint met het installeren van de module BHOLD-Core, moet u worden voo
 
 ### <a name="database-settings"></a>Database-instellingen
 
-| **item**                                       | **Beschrijving**                                                                                                                                                                                                                                                           | **Waarde**                                                                                                                                                                                                                                                                                                                                                                                             |
+| **Item**                                       | **Beschrijving**                                                                                                                                                                                                                                                           | **Waarde**                                                                                                                                                                                                                                                                                                                                                                                             |
 |------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Geïntegreerde beveiliging gebruiken**                    | Hiermee geeft u op dat de Windows-verificatie wordt gebruikt voor toegang tot de database.                                                                                                                                                                                                     | Schakel het selectievakje in als Windows-verificatie wordt gebruikt voor verbinding met de SQL-Server. Schakel het selectievakje in als SQL Server-verificatie wordt gebruikt. De database moet zijn gemaakt voordat uitgevoerd BHOLD Core Setup als SQL Server-verificatie wordt gebruikt. **Opmerking:** als Windows-verificatie wordt gebruikt, u moet zijn aangemeld met een account met de serverrol sysadmin op de databaseserver. |
 | **Databasegebruiker** en **databasewachtwoord** | Hiermee geeft u de gebruikersnaam en wachtwoord van een gebruiker met de serverrol sysadmin op de databaseserver. Deze waarden worden geleverd, alleen wanneer SQL Server-verificatie wordt gebruikt.                                                                                               | Schrijf hier de gebruikersnaam van de SQL Server: SQL Server-gebruikerswachtwoord hier schrijven: **Opmerking:** Zorg ervoor dat dit wachtwoord in een verborgen, een veilige locatie.                                                                                                                                                                                                                                                  |
@@ -160,34 +161,34 @@ Als u wilt toestaan dat IIS goed te laten werken met de module BHOLD-Core, moet 
 
 2.  Vouw de servernaam in de consolestructuur en klik vervolgens op **toepassingsgroepen**.
 
-3.  In de **toepassingsgroepen** lijst, met de rechtermuisknop op **CoreAppPool**, en klik vervolgens op **geavanceerde instellingen**.
+3.  De standaardwaarde is Y.
 
-4.  In de **geavanceerde instellingen** het dialoogvenster de **inschakelen 32-bits toepassingen** selecteert **True**, en klik vervolgens op **OK**.
+4.  Ingesteld op N als u niet dat de wijzigingen wilt moeten worden vastgelegd.
 
-#### <a name="establishing-the-service-principal-name-for-the-bhold-website"></a>Tot stand brengen van de service principal name voor de BHOLD-website
+#### <a name="establishing-the-service-principal-name-for-the-bhold-website"></a>SystemQueue verwerking
 
-Als de naam van het netwerk dat wordt gebruikt voor het contact op met de BHOLD-website niet hetzelfde zijn als de hostnaam van de server is, moet u een service principal name (SPN) voor HTTP-maken. Als u een CNAME-bronrecord in DNS gebruiken om op te geven van een alias voor de server, of als u Netwerktaakverdeling gebruiken, moet u deze extra netwerkadressen registreren in Active Directory. Als u niet om dit te doen, Internet Explorer het Kerberos-protocol niet gebruiken tijdens de verbinding met de BHOLD-website.
+Als u niet dat systeem wachtrijbewerkingen wilt ingesteld op N. Wijzig deze waarde niet tenzij omgeleid naar dit doen door productondersteuning. Een systeemkenmerk BHOLD instellen
 
->[!IMPORTANT]
-Als de Core BHOLD-module is geïnstalleerd op dezelfde computer als de FIM-Portal, moet u DNS-bronrecords (CNAME- of A) maken met verschillende hostnamen voor de BHOLD-Core-servers en de server met de FIM-Portal. Slechts één SPN kan worden vastgesteld voor een bepaalde combinatie van de service-type/server-alias en dus BHOLD-Core en de FIM-Portal moet afzonderlijke SPN's omdat ze doorgaans worden uitgevoerd onder verschillende accounts. De setspn-opdracht meldt een fout als een SPN is al onder een ander account.
+> [!IMPORTANT]
+> Klik op Start, klikt u op alle programma's, en klik vervolgens op Internet Explorer. Typ in het adresvak, waarbij  server  is de naam van de BHOLD-websiteserver en  poort  is het poortnummer dat is gebonden aan de website. Klik op Start, klikt u op waarden, en klik vervolgens op wijzigen.
 
 Lidmaatschap van **Domeinadministrators**, of gelijkwaardig, is de minimale vereiste om deze procedure te voltooien.
 
-#### <a name="to-establish-the-spn-of-the-bhold-website"></a>Tot stand brengen van de SPN-naam van de BHOLD-website
+#### <a name="to-establish-the-spn-of-the-bhold-website"></a>Zoek de naam van het kenmerk dat u wilt wijzigen, typt u de nieuwe waarde in het vak naast de naam van het kenmerk en klik vervolgens op OK.
 
-1.  Klik op de domeincontroller in Active Directory Domain Services, **Start**, klikt u op **alle programma's**, klikt u op **accessoires**, met de rechtermuisknop op **opdrachtprompt** , en klik vervolgens op **als administrator uitvoeren**.
+1.  Nadat u hebt geïnstalleerd BHOLD-Core en gevalideerd of de installatie geslaagd is, kunt u aanvullende modules installeren.
 
-2.  Typ de volgende opdracht achter de opdrachtprompt en druk op ENTER: setspn – S HTTP / *\<networkalias\> \<domein\>* \\ *\<accountname\>* waar:
+2.  De BHOLD-database zal op dit moment niet in wezen leeg is, met slechts één gebruikersaccount, het root-account en een organisatie-eenheid (orgunit), de hoofdmap orgunit.
 
-    -   *\<networkalias\>*  is het adres dat clients contact opnemen met de BHOLD-website gebruiken
+    -   *\<Als u wilt meer gebruikers toevoegen aan de BHOLD-database, kunt u ofwel de module Access Management-Connector of de Generator van BHOLD-Model, afhankelijk van uw behoeften installeren.
 
-    -   *\<domein\>*\\*\<accountname\>*  is de naam van het domein en gebruikersnaam van het serviceaccount van BHOLD-Core die u hebt gemaakt tijdens de installatie van BHOLD-Core.
+    -   *\<U kunt de module Access Management-Connector gebruiken om gebruikersgegevens te importeren uit de FIM-synchronisatieservice of u kunt de Generator BHOLD-Model gebruiken om gebruikersgegevens te importeren uit een reeks gestructureerde bestanden.
 
-3.  Herhaal de vorige stap voor alle andere namen die clients gebruiken om contact op met de website BHOLD bijvoorbeeld, CNAME-aliassen, namen met een FQDN-naam of namen met een NetBIOS-domeinnaam (korte).
+3.  Zie voor meer informatie over het gebruik van de module Access Management-Connector Test Lab Guide: BHOLD Access Management-Connector.
 
-#### <a name="setting-bhold-system-attributes"></a>BHOLD-kenmerken instellen
+#### <a name="setting-bhold-system-attributes"></a>Zie voor meer informatie over het gebruik van de Generator van BHOLD-Model-module:
 
-Om te valideren dat de installatie van de Core BHOLD-module geslaagd is, opent u de belangrijkste BHOLD-portal en bekijk de systeemkenmerken. Om te controleren of de functies van de module BHOLD Core goed in uw omgeving, kunt u bovendien de volgende BHOLD-systeemkenmerken desgewenst wijzigen:
+Microsoft BHOLD-Suite concepten handleiding Microsoft BHOLD-Suite TechnicalReference.
 
 | **Kenmerk**                | **Beschrijving**                                                                                                                                                                                                                                                                                                      |
 |------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
