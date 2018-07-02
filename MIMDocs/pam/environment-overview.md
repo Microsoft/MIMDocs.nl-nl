@@ -1,7 +1,7 @@
 ---
 title: Overzicht van de PAM-omgeving | Microsoft Docs
-description: "Zoeken naar het vereiste aantal en de configuratie van virtuele machines die in Privileged Access Management kunnen worden geïmplementeerd"
-keywords: 
+description: Zoeken naar het vereiste aantal en de configuratie van virtuele machines die in Privileged Access Management kunnen worden geïmplementeerd
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -12,11 +12,12 @@ ms.technology: active-directory-domain-services
 ms.assetid: 479db14c-1bfb-4d7c-a344-cd718a01f328
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 3be2e19673a863098739e830d9c83ce264abf412
-ms.sourcegitcommit: 210195369d2ecd610569d57d0f519d683ea6a13b
+ms.openlocfilehash: e83c326d32645ce80541d5c415cd9c0e9d1dae54
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36288789"
 ---
 # <a name="environment-overview"></a>Overzicht van de omgeving
 
@@ -28,8 +29,8 @@ U moet minimaal drie virtuele machines.  Als u nog geen AD-domein beheren met PA
 
 De stations waar de installatiekopieën van het VM-schijf worden opgeslagen moeten ten minste 120 GB aan vrije schijfruimte.  Als u wilt implementeren voor maximale beschikbaarheid, moet u ervoor zorgen dat het schijfsubsysteem voldoet aan de vereisten voor gedeelde opslag via SQL.  De gedeelde opslag kan bestaan uit Windows Server Failover Clustering-clusterschijven, schijven op een Storage Area Network (SAN) of bestandsshares op een SMB-server.
 
->[!IMPORTANT]
-Opslag moet worden toegewezen aan de bastionomgeving. Opslag delen met andere werkbelastingen buiten de bastionomgeving wordt niet aanbevolen omdat dit de integriteit van de bastionomgeving in gevaar brengen.
+> [!IMPORTANT]
+> Opslag moet worden toegewezen aan de bastionomgeving. Opslag delen met andere werkbelastingen buiten de bastionomgeving wordt niet aanbevolen omdat dit de integriteit van de bastionomgeving in gevaar brengen.
 
 ## <a name="next-steps"></a>Volgende stappen
 

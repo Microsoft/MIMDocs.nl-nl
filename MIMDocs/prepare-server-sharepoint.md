@@ -12,18 +12,19 @@ ms.technology: security
 ms.assetid: c01487f2-3de6-4fc4-8c3a-7d62f7c2496c
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 6922c3c2f66b6dbb0b0751420be9dd778206a3cf
-ms.sourcegitcommit: 8316fa41f06f137dba0739a8700910116b5575d8
+ms.openlocfilehash: f69648e7e4229ca7c8de895cdf10ccb2c5f368e2
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289530"
 ---
 # <a name="set-up-an-identity-management-server-sharepoint"></a>Een server voor identiteitsbeheer instellen: SharePoint
 
->[!div class="step-by-step"]
-[«SQL Server 2016](prepare-server-sql2016.md)
-[Exchange-Server»](prepare-server-exchange.md)
-
+> [!div class="step-by-step"]
+> [«SQL Server 2016](prepare-server-sql2016.md)
+> [Exchange-Server»](prepare-server-exchange.md)
+> 
 > [!NOTE]
 > In deze stapsgewijze instructies wordt gebruikgemaakt van voorbeeldnamen en -waarden van een bedrijf met de naam Contoso. Vervang deze door uw eigen namen en waarden. Bijvoorbeeld:
 > - Naam van de domeincontroller - **corpdc**
@@ -31,7 +32,7 @@ ms.lasthandoff: 05/04/2018
 > - Naam van de MIM-Service-Server: **corpservice**
 > - Naam van de MIM-synchronisatieserver: **corpsync**
 > - De naam van de SQL Server - **corpsql**
-> - Wachtwoord - **Pass@word1**
+> - Wachtwoord - <strong>Pass@word1</strong>
 
 
 ## <a name="install-sharepoint-2016"></a>Installeer **SharePoint 2016**
@@ -97,25 +98,25 @@ Voer de stappen uit die in de **wizard Configuratie van SharePoint-producten** w
 
 2. Start SharePoint 2016-beheershell en voer het volgende PowerShell-script maken een **SharePoint-siteverzameling** die zijn gekoppeld aan deze webtoepassing.
 
-  ```
+   ```
     $t = Get-SPWebTemplate -compatibilityLevel 15 -Identity "STS#1"
     $w = Get-SPWebApplication http://mim.contoso.com/
     New-SPSite -Url $w.Url -Template $t -OwnerAlias contoso\miminstall -CompatibilityLevel 15 -Name "MIM Portal"
     $s = SpSite($w.Url)
     $s.CompatibilityLevel
-  ```
+   ```
 
-  > [!NOTE]
-  > Controleer het resultaat van de *CompatibilityLevel* variabele is "15". Als het resultaat is dan "15", vervolgens de siteverzameling niet gemaakt de ervaringsversie van de juiste; Verwijder de siteverzameling en maak deze opnieuw.
+   > [!NOTE]
+   > Controleer het resultaat van de *CompatibilityLevel* variabele is "15". Als het resultaat is dan "15", vervolgens de siteverzameling niet gemaakt de ervaringsversie van de juiste; Verwijder de siteverzameling en maak deze opnieuw.
 
 3. Schakel **weergavestatus aan serverzijde voor SharePoint** en de SharePoint-taak 'Statusanalysetaak (elk uur, Microsoft SharePoint Foundation-Timer, alle Servers)' door het uitvoeren van de volgende PowerShell-opdrachten in de  **SharePoint 2016-beheershell**:
 
-  ```
-  $contentService = [Microsoft.SharePoint.Administration.SPWebService]::ContentService;
-  $contentService.ViewStateOnServer = $false;
-  $contentService.Update();
-  Get-SPTimerJob hourly-all-sptimerservice-health-analysis-job | disable-SPTimerJob
-  ```
+   ```
+   $contentService = [Microsoft.SharePoint.Administration.SPWebService]::ContentService;
+   $contentService.ViewStateOnServer = $false;
+   $contentService.Update();
+   Get-SPTimerJob hourly-all-sptimerservice-health-analysis-job | disable-SPTimerJob
+   ```
 
 4. Open een nieuw browsertabblad op uw server voor identiteitsbeheer, gaat u naar http://mim.contoso.com/ en meld u aan als *contoso\miminstall*.  Er wordt een lege SharePoint-site met de naam *MIM-portal* weergegeven.
 
@@ -129,6 +130,6 @@ Voer de stappen uit die in de **wizard Configuratie van SharePoint-producten** w
 
 7. Open het programma **Systeembeheer**, ga naar **Services** en vervolgens naar de SharePoint-beheerservice en start deze op als deze nog niet wordt uitgevoerd.
 
->[!div class="step-by-step"]  
-[«SQL Server 2016](prepare-server-sql2016.md)
-[Exchange-Server»](prepare-server-exchange.md)
+> [!div class="step-by-step"]  
+> [«SQL Server 2016](prepare-server-sql2016.md)
+> [Exchange-Server»](prepare-server-exchange.md)

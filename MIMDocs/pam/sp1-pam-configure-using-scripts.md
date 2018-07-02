@@ -1,7 +1,7 @@
 ---
 title: PAM configureren met behulp van scripts
 description: Dit artikel is onderdeel van de serie artikelen over het configureren van PAM met behulp van scripts. In het artikel wordt de aanpassing behandeld van het XML-bestand dat wordt gebruikt voor de PAM-implementatiescripts.
-keywords: 
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: MBaldwin
@@ -10,13 +10,14 @@ ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: 5718ec64fff049cb8717e4cbb36784c8f4ee4db3
-ms.sourcegitcommit: c13f814ce753e1fdacc7d0814087f59542e5098f
+ms.openlocfilehash: 741d722ce315b7265278997275d05981f44826e8
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/21/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289418"
 ---
 # <a name="configure-pam-using-scripts"></a>PAM configureren met behulp van scripts
 
@@ -66,5 +67,5 @@ Voordat u verdergaat, moet u de PAMDeploymentConfig.xml bijwerken en het bijgewe
 |  CORP-client | <PRIV>\PRIV.pamRequestor-gebruiker en in het geval van PRIVOnly: <CORP>\pamrequestor   | Importmodule .\PAMValidation.psm1; Testen-PAMValidationScenarioNoApprovalRequest  |
 
 
->[!div class="step-by-step"]
-[Start »](sp1-step1-configuring-priv-domain.md)
+> [!div class="step-by-step"]
+> [Start »](sp1-step1-configuring-priv-domain.md)

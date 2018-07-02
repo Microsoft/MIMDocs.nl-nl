@@ -1,7 +1,7 @@
 ---
 title: Exchange configureren voor MIM om e-mail te verzenden en postvakken te maken | Microsoft Docs
 description: Implementeer Exchange Server als optionele stap zodat met MIM 2016 e-mailberichten kunnen worden verzonden en postvakken kunnen worden gemaakt.
-keywords: 
+keywords: ''
 author: billmath
 ms.author: barclayn
 manager: mbaldwin
@@ -12,17 +12,18 @@ ms.technology: security
 ms.assetid: 34a8c16e-3bed-4e16-939b-b9fe17dd834b
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: cdb425938f7458f74cf06b76d33f557d6a38beeb
-ms.sourcegitcommit: 362475d4018e74e5a17ba574ccaec47a2caebaff
+ms.openlocfilehash: c5fb54c870d750cdf675dd91c1b27dc9bed7d963
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289071"
 ---
 # <a name="set-up-an-identity-management-server-exchange"></a>Een server voor identiteitsbeheer instellen: Exchange
 
->[!div class="step-by-step"]
-[« SharePoint](prepare-server-sharepoint.md)
-[MIM-synchronisatieservice »](install-mim-sync.md)
+> [!div class="step-by-step"]
+> [« SharePoint](prepare-server-sharepoint.md)
+> [MIM-synchronisatieservice »](install-mim-sync.md)
 
 ## <a name="deploy-microsoft-exchange-server"></a>Microsoft Exchange Server implementeren
 Als u MIM wilt configureren voor het verzenden en ontvangen van e-mailberichten of het inrichten van postvakken, moet Exchange aanwezig zijn in de omgeving. Als u Exchange nog niet hebt geïmplementeerd, kunt u een evaluatieversie voor evaluatiedoeleinden installeren:
@@ -37,6 +38,6 @@ Als u MIM wilt configureren voor het verzenden en ontvangen van e-mailberichten 
 
 3. Download en installeer de [evaluatieversie voor 180 dagen van MS Exchange Server 2013](http://www.microsoft.com/evalcenter/evaluate-exchange-server-2013)
 
->[!div class="step-by-step"]  
-[« SharePoint](prepare-server-sharepoint.md)
-[MIM-synchronisatieservice »](install-mim-sync.md)
+> [!div class="step-by-step"]  
+> [« SharePoint](prepare-server-sharepoint.md)
+> [MIM-synchronisatieservice »](install-mim-sync.md)

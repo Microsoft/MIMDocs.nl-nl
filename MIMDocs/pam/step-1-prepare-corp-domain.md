@@ -1,7 +1,7 @@
 ---
 title: PAM implementeren - Stap 1 - CORP-domein | Microsoft Docs
 description: Het CORP-domein voorbereiden met bestaande of nieuwe identiteiten die worden beheerd door Privileged Identity Manager
-keywords: 
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -12,16 +12,17 @@ ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: d14d2f40972686305abea2426e20f4c13e3e267b
-ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
+ms.openlocfilehash: f0d2ebd198ad6aee2b2b6ba07c83f5147243f598
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289598"
 ---
 # <a name="step-1---prepare-the-host-and-the-corp-domain"></a>Stap 1: de host en het domein CORP voorbereiden
 
->[!div class="step-by-step"]
-[Stap 2 »](step-2-prepare-priv-domain-controller.md)
+> [!div class="step-by-step"]
+> [Stap 2 »](step-2-prepare-priv-domain-controller.md)
 
 In deze stap bereidt u het hosten van de bastionomgeving voor. Indien nodig, maakt u ook een domeincontroller en een lidwerkstation in een nieuw domein en forest (het *CORP*forest) met identiteiten die worden beheerd door de bastionomgeving. Dit CORP-forest komt overeen met een bestaand forest dat resources heeft om te worden beheerd. Dit document bevat een voorbeeldresource die moet worden beveiligd; een bestandsshare.
 
@@ -56,15 +57,15 @@ In dit gedeelte voegt u de functies Active Directory Domain Services (AD DS), DN
 
 2. Typ de volgende opdrachten:
 
-  ```PowoerShell
-  import-module ServerManager
+   ```PowoerShell
+   import-module ServerManager
 
-  Add-WindowsFeature AD-Domain-Services,DNS,FS-FileServer –restart –IncludeAllSubFeature -IncludeManagementTools
+   Add-WindowsFeature AD-Domain-Services,DNS,FS-FileServer –restart –IncludeAllSubFeature -IncludeManagementTools
 
-  Install-ADDSForest –DomainMode Win2008R2 –ForestMode Win2008R2 –DomainName contoso.local –DomainNetbiosName contoso –Force -NoDnsOnNetwork
-  ```
+   Install-ADDSForest –DomainMode Win2008R2 –ForestMode Win2008R2 –DomainName contoso.local –DomainNetbiosName contoso –Force -NoDnsOnNetwork
+   ```
 
-  Hierdoor wordt u gevraagd een beheerderswachtwoord voor de veilige modus op te geven. Houd er rekening mee dat waarschuwingsberichten voor DNS-delegatie- en cryptografie-instellingen worden weergegeven. Dit is normaal.
+   Hierdoor wordt u gevraagd een beheerderswachtwoord voor de veilige modus op te geven. Houd er rekening mee dat waarschuwingsberichten voor DNS-delegatie- en cryptografie-instellingen worden weergegeven. Dit is normaal.
 
 3. Meld u af nadat het maken van het forest voltooid is. De server wordt automatisch opnieuw opgestart.
 
@@ -80,11 +81,11 @@ Meld u bij elk domein aan bij een domeincontroller als een domeinbeheerder en vo
 
 2. Typ de volgende opdrachten, maar vervang 'CONTOSO' door de NetBIOS-naam van uw domein.
 
-  ```PowerShell
-  import-module activedirectory
+   ```PowerShell
+   import-module activedirectory
 
-  New-ADGroup –name 'CONTOSO$$$' –GroupCategory Security –GroupScope DomainLocal –SamAccountName 'CONTOSO$$$'
-  ```
+   New-ADGroup –name 'CONTOSO$$$' –GroupCategory Security –GroupScope DomainLocal –SamAccountName 'CONTOSO$$$'
+   ```
 
 In sommige gevallen kan deze groep al bestaan. Dit normaal als het domein ook in AD-migratiescenario's is gebruikt.
 
@@ -101,21 +102,21 @@ Maak een beveiligingsgroep met de naam *CorpAdmins* en een gebruiker met de naam
 
 2. Typ de volgende opdrachten: Vervang het wachtwoord Pass@word1 door een andere wachtwoordtekenreeks.
 
-  ```PowerShell
-  import-module activedirectory
+   ```PowerShell
+   import-module activedirectory
 
-  New-ADGroup –name CorpAdmins –GroupCategory Security –GroupScope Global –SamAccountName CorpAdmins
+   New-ADGroup –name CorpAdmins –GroupCategory Security –GroupScope Global –SamAccountName CorpAdmins
 
-  New-ADUser –SamAccountName Jen –name Jen
+   New-ADUser –SamAccountName Jen –name Jen
 
-  Add-ADGroupMember –identity CorpAdmins –Members Jen
+   Add-ADGroupMember –identity CorpAdmins –Members Jen
 
-  $jp = ConvertTo-SecureString "Pass@word1" –asplaintext –force
+   $jp = ConvertTo-SecureString "Pass@word1" –asplaintext –force
 
-  Set-ADAccountPassword –identity Jen –NewPassword $jp
+   Set-ADAccountPassword –identity Jen –NewPassword $jp
 
-  Set-ADUser –identity Jen –Enabled 1 -DisplayName "Jen"
-  ```
+   Set-ADUser –identity Jen –Enabled 1 -DisplayName "Jen"
+   ```
 
 ### <a name="configure-auditing"></a>Controle configureren
 
@@ -139,9 +140,9 @@ Meld u bij elk domein aan bij een domeincontroller als een domeinbeheerder en vo
 
 8. Pas de controle-instellingen toe door een PowerShell-venster te starten en het volgende te typen:
 
-  ```cmd
-  gpupdate /force /target:computer
-  ```
+   ```cmd
+   gpupdate /force /target:computer
+   ```
 
 Het bericht **Het bijwerken van het computerbeleid is voltooid** zou na een paar minuten moeten worden weergegeven.
 
@@ -153,11 +154,11 @@ In dit gedeelte configureert u de registerinstellingen die nodig zijn voor sIDHi
 
 2. Typ de volgende opdrachten voor het configureren van het brondomein om externe procedureaanroep (Remote Procedure Call, RPC) toegang te verlenen tot de database voor beveiligingsaccountbeheer (Security Accounts Manager, SAM).
 
-  ```PowerShell
-  New-ItemProperty –Path HKLM:SYSTEM\CurrentControlSet\Control\Lsa –Name TcpipClientSupport –PropertyType DWORD –Value 1
+   ```PowerShell
+   New-ItemProperty –Path HKLM:SYSTEM\CurrentControlSet\Control\Lsa –Name TcpipClientSupport –PropertyType DWORD –Value 1
 
-  Restart-Computer
-  ```
+   Restart-Computer
+   ```
 
 Hierdoor wordt de domeincontroller opnieuw gestart. Zie voor meer informatie over deze registerinstelling [How to troubleshoot inter-forest sIDHistory migration with ADMTv2](http://support.microsoft.com/kb/322970) (Problemen oplossen met sIDHistory-migratie met ADMTv2 tussen forests).
 
@@ -192,21 +193,21 @@ U hebt een resource nodig om het toegangsbeheer op basis van een beveiligingsgro
 
 4. Typ de volgende opdrachten:
 
-  ```PowerShell
-  mkdir c:\corpfs
+   ```PowerShell
+   mkdir c:\corpfs
 
-  New-SMBShare –Name corpfs –Path c:\corpfs –ChangeAccess CorpAdmins
+   New-SMBShare –Name corpfs –Path c:\corpfs –ChangeAccess CorpAdmins
 
-  $acl = Get-Acl c:\corpfs
+   $acl = Get-Acl c:\corpfs
 
-  $car = New-Object System.Security.AccessControl.FileSystemAccessRule( "CONTOSO\CorpAdmins", "FullControl", "Allow")
+   $car = New-Object System.Security.AccessControl.FileSystemAccessRule( "CONTOSO\CorpAdmins", "FullControl", "Allow")
 
-  $acl.SetAccessRule($car)
+   $acl.SetAccessRule($car)
 
-  Set-Acl c:\corpfs $acl
-  ```
+   Set-Acl c:\corpfs $acl
+   ```
 
 In de volgende stap bereidt de PRIV-domeincontroller voor.
 
->[!div class="step-by-step"]
-[Stap 2 »](step-2-prepare-priv-domain-controller.md)
+> [!div class="step-by-step"]
+> [Stap 2 »](step-2-prepare-priv-domain-controller.md)

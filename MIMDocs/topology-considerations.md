@@ -1,7 +1,7 @@
 ---
 title: Handleiding voor topologie van uw implementatie | Microsoft Docs
 description: Krijg inzicht in de MIM 2016-onderdelen en profiteer van tips voor het implementeren ervan in uw omgeving.
-keywords: 
+keywords: ''
 author: billmath
 ms.author: barclayn
 manager: mbaldwin
@@ -12,18 +12,19 @@ ms.technology: security
 ms.assetid: 735dc357-dfba-4f68-a5b3-d66d6c018803
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: e257a2e64225a4bc545d8a9384167819412e939b
-ms.sourcegitcommit: f077508b5569e2a96084267879c5b6551e1e0905
+ms.openlocfilehash: f67068709cf9910fa04110fce75623fd2f94ca4a
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289809"
 ---
 # <a name="topology-considerations"></a>Aandachtspunten voor topologie
 U kunt Microsoft Identity Manager-onderdelen (MIM) op dezelfde server of op meerdere servers in verschillende configuraties implementeren. De topologie die u hebt geselecteerd voor uw implementatie, is van invloed op de prestaties van MIM. Dit artikel bevat meerdere implementatietopologieën die u kunt overwegen voor uw implementatie.
 
 
->[!NOTE]
-Deze opties zijn van toepassing op implementaties die uitsluitend gebruik maken van MIM-synchronisatie, MIM-Service en MIM-Portal voor identiteitsbeheer.  Implementaties met MIM CM, MIM BHOLD Suite, of voor privileged access management hebben verschillende implementatieopties.
+> [!NOTE]
+> Deze opties zijn van toepassing op implementaties die uitsluitend gebruik maken van MIM-synchronisatie, MIM-Service en MIM-Portal voor identiteitsbeheer.  Implementaties met MIM CM, MIM BHOLD Suite, of voor privileged access management hebben verschillende implementatieopties.
 
 
 ## <a name="mim-components"></a>MIM-onderdelen
@@ -39,10 +40,10 @@ De volgende tabel bevat de opties voor het hosten van elk van de MIM-onderdelen.
 
 | | MIM-portal | MIM-service | MIM-synchronisatieservice | SQL Server |
 | --- | --- | --- | --- | --- |
-| Dezelfde computer | Ja | Ja | Ja | Yes |
-| Afzonderlijke server | Ja | Ja | Ja | Yes |
-| Netwerktaakverdelingscluster | Yes | Ja | | |
-| Servercluster | | | | Yes |
+| Dezelfde computer | Ja | Ja | Ja | Ja |
+| Afzonderlijke server | Ja | Ja | Ja | Ja |
+| Netwerktaakverdelingscluster | Ja | Ja | | |
+| Servercluster | | | | Ja |
 
 
 ## <a name="multitier-topology"></a>Topologie met meerdere lagen
@@ -64,5 +65,5 @@ Net zoals bij de standaardtopologie met meerdere lagen, kunt u de prestaties van
 
 De computers met SQL Server die als host fungeren voor de MIM-synchronisatieservice en de MIM-servicedatabase zullen de algehele prestaties van uw MIM-implementatie aanzienlijk beïnvloeden. Volg daarom de aanbevelingen in de SQL Server-documentatie voor het optimaliseren van databaseprestaties. Zie de volgende documenten voor meer informatie:
 
-## <a name="see-also"></a>Zie tevens
+## <a name="see-also"></a>Zie ook
 - De downloadbare [handleiding voor planningscapaciteit van Forefront Identity Manager (FIM) 2010 ](http://go.microsoft.com/fwlink/?LinkId=200180) biedt meer informatie over een testbuild en prestatietestresultaten.

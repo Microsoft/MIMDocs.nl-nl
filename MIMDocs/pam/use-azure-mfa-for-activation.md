@@ -1,7 +1,7 @@
 ---
 title: Azure MFA gebruiken om PAM te activeren | Microsoft Docs
 description: Azure MFA instellen als een tweede beveiligingslaag wanneer uw gebruikers rollen in Privileged Access Management activeren.
-keywords: 
+keywords: ''
 author: barclayn
 ms.author: fimguy
 manager: mbaldwin
@@ -12,15 +12,16 @@ ms.technology: active-directory-domain-services
 ms.assetid: 5134a112-f73f-41d0-a5a5-a89f285e1f73
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 1fb012034685257d35ba4f8a79468145187ae5b6
-ms.sourcegitcommit: 27a23142393bbb0f66a3d533d89a5a8366a29e41
+ms.openlocfilehash: 30e683a0bd13d911f73eca19c847a2c9cd10f36d
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289826"
 ---
 # <a name="using-azure-mfa-for-activation"></a>Azure MFA gebruiken voor activering
->[!IMPORTANT]
-Als gevolg van de aankondiging van afschaffing van Azure multi-factor Authentication Software Development Kit. De Azure MFA-SDK worden voor bestaande klanten tot de datum buiten gebruik stellen van 14 November 2018 ondersteund. Huidige en nieuwe klanten kan niet worden voor het downloaden van de SDK meer via de klassieke Azure portal. U kunt u downloaden moet bereiken Azure klantondersteuning om uw gegenereerde Servicereferenties MFA-pakket wordt ontvangen. <br> Het ontwikkelteam Microsoft werkt over het plannen van wijzigingen in de MFA door te integreren met MFA Server SDK. Deze oplossing wordt opgenomen in toekomstige hotfix in vroege 2018.
+> [!IMPORTANT]
+> Als gevolg van de aankondiging van afschaffing van Azure multi-factor Authentication Software Development Kit. De Azure MFA-SDK worden voor bestaande klanten tot de datum buiten gebruik stellen van 14 November 2018 ondersteund. Huidige en nieuwe klanten kan niet worden voor het downloaden van de SDK meer via de klassieke Azure portal. U kunt u downloaden moet bereiken Azure klantondersteuning om uw gegenereerde Servicereferenties MFA-pakket wordt ontvangen. <br> Het ontwikkelteam Microsoft werkt over het plannen van wijzigingen in de MFA door te integreren met MFA Server SDK. Deze oplossing wordt opgenomen in toekomstige hotfix in vroege 2018.
 
 
 
@@ -132,7 +133,7 @@ U kunt Azure MFA uitschakelen voor een rol door de parameter -MFAEnabled 0 op te
 
 De volgende gebeurtenissen vindt u in het gebeurtenislogboek voor Privileged Access Management:
 
-| Id  | Ernst | Gegenereerd door | Beschrijving |
+| Id  | Ernst | Gegenereerd door | Description |
 |-----|----------|--------------|-------------|
 | 101 | Fout       | MIM-service            | De gebruiker heeft Azure MFA niet voltooid (heeft bijvoorbeeld de telefoonoproep niet beantwoord) |
 | 103 | Informatie | MIM-service            | De gebruiker heeft Azure MFA voltooid tijdens de activering                       |

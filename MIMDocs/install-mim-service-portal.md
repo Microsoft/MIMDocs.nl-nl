@@ -12,23 +12,24 @@ ms.technology: security
 ms.assetid: b0b39631-66df-4c5f-80c9-a1774346f816
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: fcc137527d8326c82bf3b201039926699bd4e342
-ms.sourcegitcommit: a98a4c1aee12016d480c400f4ff2c6aadb6518ee
+ms.openlocfilehash: 562ca6a977509cad7c3423ef42d4b6f6705494d3
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289513"
 ---
 # <a name="install-mim-2016-mim-service-and-portal"></a>MIM 2016 installeren: de MIM-service en -portal
 
->[!div class="step-by-step"]
-[« MIM-synchronisatieservice](install-mim-sync.md)
-[Databases synchroniseren »](install-mim-sync-ad-service.md)
-
+> [!div class="step-by-step"]
+> [« MIM-synchronisatieservice](install-mim-sync.md)
+> [Databases synchroniseren »](install-mim-sync-ad-service.md)
+> 
 > [!NOTE]
 > In deze stapsgewijze instructies wordt gebruikgemaakt van voorbeeldnamen en -waarden van een bedrijf met de naam Contoso. Vervang deze door uw eigen namen en waarden. Bijvoorbeeld:
 > - Naam van de domeincontroller: **mimservername**
 > - Domeinnaam: **contoso**
-> - Wachtwoord - **Pass@word1**
+> - Wachtwoord - <strong>Pass@word1</strong>
 > - Serviceaccountnaam: **MIMService**
 
 Als u in de laatste stap geen MIM-installatiepakket hebt ingesteld, gaat u terug en installeert u de Microsoft Identity Manager 2016-onderdelen voordat u verdergaat.
@@ -56,7 +57,7 @@ Als u in de laatste stap geen MIM-installatiepakket hebt ingesteld, gaat u terug
 
 8. Geef op dat u een nieuw zelfondertekend certificaat wilt genereren of selecteer het betreffende certificaat.
 
-9. Geef de serviceaccountnaam op die moet worden gebruikt, bijvoorbeeld *MIMService*, en het serviceaccountwachtwoord, bijvoorbeeld *Pass@word1*. Geef daarnaast uw serviceaccountdomein, bijvoorbeeld *contoso*, en het e-mailaccount voor de service, bijvoorbeeld *contoso*, op.
+9. Geef de serviceaccountnaam op die moet worden gebruikt, bijvoorbeeld *MIMService*, en het serviceaccountwachtwoord, bijvoorbeeld <em>Pass@word1</em>. Geef daarnaast uw serviceaccountdomein, bijvoorbeeld *contoso*, en het e-mailaccount voor de service, bijvoorbeeld *contoso*, op.
 
     ![Afbeelding van Het MIM-serviceaccount configureren](media/install-mim-service-portal/MIM_Install12.png)
 
@@ -78,25 +79,25 @@ Als u in de laatste stap geen MIM-installatiepakket hebt ingesteld, gaat u terug
 
 ## <a name="configure-mim-password-registration-portal"></a>De MIM-portal voor wachtwoordregistratie configureren
 
-1.  Stel de serviceaccountnaam voor SSPR-registratie in op *contoso\MIMSSPR* en het bijbehorende wachtwoord op *Pass@word1*.
+1. Stel de serviceaccountnaam voor SSPR-registratie in op *contoso\MIMSSPR* en het bijbehorende wachtwoord op <em>Pass@word1</em>.
 
-2.  Geef *passwordregistration.contoso.com* als de hostnaam voor de MIM-Wachtwoordregistratie en stel de poort op **80**. Schakel de optie **Poort in de firewall openen** in.
+2. Geef *passwordregistration.contoso.com* als de hostnaam voor de MIM-Wachtwoordregistratie en stel de poort op **80**. Schakel de optie **Poort in de firewall openen** in.
 
-    ![Afbeelding voor het invoeren van de configuratiegegevens die worden gebruikt door IIS](media/install-mim-service-portal/MIM_Install14.png)
+   ![Afbeelding voor het invoeren van de configuratiegegevens die worden gebruikt door IIS](media/install-mim-service-portal/MIM_Install14.png)
 
-3.  Er wordt een waarschuwing weergegeven: lees deze en klik op **Volgende**.
+3. Er wordt een waarschuwing weergegeven: lees deze en klik op **Volgende**.
 
 4. Geef in het volgende scherm in de configuratie van MIM-Portal voor Wachtwoordregistratie, *mim.contoso.com* als het serveradres van de MIM-Service voor de Portal voor Wachtwoordregistratie.
 
 ## <a name="configure-mim-password-reset-portal"></a>Het MIM-portal voor het opnieuw instellen van het wachtwoord configureren
 
-1.  Stel de serviceaccountnaam voor SSPR-registratie voor *Contoso\MIMSSPR* en het bijbehorende wachtwoord op *Pass@word1*.
+1. Stel de serviceaccountnaam voor SSPR-registratie voor *Contoso\MIMSSPR* en het bijbehorende wachtwoord op <em>Pass@word1</em>.
 
-2.  Geef *passwordreset.contoso.com* als de hostnaam voor MIM wachtwoord opnieuw instellen-Portal, en stel de poort op **80**. Schakel de optie **Poort in de firewall openen** in.
+2. Geef *passwordreset.contoso.com* als de hostnaam voor MIM wachtwoord opnieuw instellen-Portal, en stel de poort op **80**. Schakel de optie **Poort in de firewall openen** in.
 
-    ![Afbeelding voor het invoeren van de configuratiegegevens die worden gebruikt door IIS](media/install-mim-service-portal/MIM_Install15.png)
+   ![Afbeelding voor het invoeren van de configuratiegegevens die worden gebruikt door IIS](media/install-mim-service-portal/MIM_Install15.png)
 
-3.  Er wordt een waarschuwing weergegeven: lees deze en klik op **Volgende**.
+3. Er wordt een waarschuwing weergegeven: lees deze en klik op **Volgende**.
 
 4. Geef in het volgende scherm in de configuratie van MIM-Portal voor Wachtwoordregistratie, *mim.contoso.com* als het serveradres van de MIM-Service voor de Portal voor wachtwoord opnieuw instellen.
 
@@ -144,7 +145,7 @@ Nadat de installatie is voltooid, controleert u of de MIM-portal actief is.
 
 > [!NOTE]
 > Optioneel: op dit moment kunt u MIM-invoegtoepassingen en -uitbreidingen installeren.
-
->[!div class="step-by-step"]  
-[« MIM-synchronisatieservice](install-mim-sync.md)
-[Databases synchroniseren »](install-mim-sync-ad-service.md)
+> 
+> [!div class="step-by-step"]  
+> [« MIM-synchronisatieservice](install-mim-sync.md)
+> [Databases synchroniseren »](install-mim-sync-ad-service.md)

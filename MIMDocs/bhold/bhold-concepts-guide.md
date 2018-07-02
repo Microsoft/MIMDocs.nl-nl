@@ -1,19 +1,20 @@
 ---
 title: Microsoft BHOLD-Suite concepten handleiding | Microsoft Docs
 description: Ga aan de slag met de MIM 2016-onderdelen en installeer en configureer de synchronisatieservice.
-keywords: 
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
 ms.date: 09/14/2017
 ms.service: microsoft-identity-manager
 ms.technology: security
-ms.assetid: 
-ms.openlocfilehash: 0d814dd27fe53ee7cfc46eac24ec577b05f78e52
-ms.sourcegitcommit: 0d8b19c5d4bfd39d9c202a3d2f990144402ca79c
+ms.assetid: ''
+ms.openlocfilehash: 521025de3dc16a9bda02aed8287faeb3449192c1
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/14/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36290064"
 ---
 # <a name="microsoft-bhold-suite-concepts-guide"></a>Microsoft BHOLD-Suite concepten handleiding
 
@@ -56,8 +57,8 @@ U kunt opgeven en functies binnen uw organisatie, de gebruikers toewijzen aan ro
 
 Organisatie-eenheden (OrgUnits) zijn de belangrijkste middelen waarmee gebruikers zijn ingedeeld in het model van de BHOLD-functie. Elke gebruiker moet behoren tot ten minste één OrgUnit. (Zelfs wanneer een gebruiker wordt verwijderd uit de laatste organisatie-eenheid in BHOLD, record van de gegevens van de gebruiker wordt verwijderd uit de BHOLD-database.)
 
->[!Important]
-Organisatie-eenheden in het model van de rol BHOLD mag geen verward met organisatie-eenheden in Active Directory Domain Services (AD DS). Normaal gesproken is de structuur van de organisatie-eenheid in BHOLD gebaseerd op de organisatie en het beleid van uw bedrijf, niet de vereisten van uw netwerkinfrastructuur.
+> [!Important]
+> Organisatie-eenheden in het model van de rol BHOLD mag geen verward met organisatie-eenheden in Active Directory Domain Services (AD DS). Normaal gesproken is de structuur van de organisatie-eenheid in BHOLD gebaseerd op de organisatie en het beleid van uw bedrijf, niet de vereisten van uw netwerkinfrastructuur.
 
 Hoewel dit niet vereist is, in de meeste gevallen zijn organisatie-eenheden geordend in BHOLD vertegenwoordigt de hiërarchische structuur van de werkelijke organisatie, zoals hieronder:
 
@@ -124,136 +125,136 @@ De eerste stap bij het gebruik van de Generator BHOLD-Model is om deze bestanden
 
 - Van lidmaatschapsfuncties die zijn toegewezen aan een gebruiker op basis van de OrgUnits die de gebruiker behoort (organisatie-eenheden)
 - Kenmerk-functies die zijn toegewezen aan een gebruiker op basis van de kenmerken van de gebruiker in de BHOLD-database
-- Voorgestelde functies die zijn gekoppeld aan een organisatie-eenheid, maar moeten worden geactiveerd voor specifieke gebruikers
-- Eigendom-functies die een controle van de gebruiker over de organisatie-eenheden en functies waarvoor een eigenaar niet is opgegeven in de geïmporteerde bestanden verlenen
+- Bijvoorbeeld, wordt als de kardinaliteitsinstelling van de van een regel bepaalt niet meer dan twee gebruikers een rol kunnen worden toegewezen, en als een regel ABA zou een rol voor vier gebruikers anders activeren, de rol geactiveerd alleen voor de eerste twee gebruikers die de test ABA doorstaan.
+- Het systeem van kenmerken in BHOLD is maximaal worden uitgebreid.
 
->[!Important]
-Tijdens het uploaden van bestanden, selecteer de **bestaande Model behouden** selectievakje alleen in een testomgeving. In een productieomgeving, moet u Model Generator gebruiken om de eerste rol-model te maken. U kunt deze niet gebruiken om te wijzigen van een bestaand model van de rol in de BHOLD-database.
+> [!Important]
+> U kunt nieuwe typen van de kenmerken voor dergelijke objecten definiëren als gebruikers, organisatie-eenheden (organisatie-eenheden) en rollen. Kenmerken kunnen worden gedefinieerd als u wilt dat de waarden die gehele getallen, Booleaanse waarde (Ja/Nee), alfanumerieke, datum, tijd en e-mailadressen. Kenmerken kunnen worden opgegeven als één waarde of een lijst met waarden.
 
-Nadat u deze rollen Model Generator maakt in het model van de functie, kunt u vervolgens het model van de functie met de BHOLD-database in de vorm van een XML-bestand exporteren.
+BHOLD-Suite biedt hulpprogramma's die u gebruiken kunt om te controleren dat afzonderlijke gebruikers machtigingen hebben gekregen juiste hun zakelijke taken uitvoeren.
 
-### <a name="advanced-bhold-features"></a>Geavanceerde BHOLD-functies
-
-Vorige secties beschreven de basisfuncties van op rollen gebaseerde toegangsbeheer (RBAC) in BHOLD. Deze sectie bevat een overzicht van aanvullende functies in BHOLD die verbeterde beveiliging en flexibiliteit om de implementatie van uw organisatie van RBAC te kunnen bieden. Deze sectie biedt overzichten van de volgende BHOLD-functies:
-
-- Kardinaliteit
-- Scheiding van functies
-- Context aanpasbare machtigingen
-- Verificatie op basis van kenmerken
-- Flexibele kenmerktypen
-
-
-#### <a name="cardinality"></a>Kardinaliteit
-
-*Kardinaliteit* verwijst naar de implementatie van bedrijfsregels die zijn ontworpen om te beperken het aantal keren twee entiteiten kunnen zijn gerelateerd aan elkaar. In het geval van BHOLD, kunnen de kardinaliteit van regels voor rollen, machtigingen en gebruikers worden gemaakt.
-
-U kunt een rol als u wilt beperken, het volgende configureren:
-
-- Het maximum aantal gebruikers waarvoor een voorgestelde rol kan worden geactiveerd
-- Het maximum aantal subfuncties die kunnen worden gekoppeld aan de rol
-- Het maximum aantal machtigingen die kunnen worden gekoppeld aan de rol
-
-U kunt een machtiging voor het beperken van de volgende configureren:
-
-- Het maximum aantal rollen die kunnen worden gekoppeld aan de machtiging
-- Het maximum aantal gebruikers die de machtiging kunnen worden verleend
-
-U kunt een gebruiker om te beperken, het volgende configureren:
-
-- Het maximum aantal rollen die kunnen worden gekoppeld aan de gebruiker
-- Het maximum aantal machtigingen die kunnen worden toegewezen aan de gebruiker via roltoewijzingen
-
-#### <a name="separation-of-duties"></a>Scheiding van functies
-
-Scheiding van functies (beplanten) is een zakelijke principe waarmee wordt geprobeerd te voorkomen dat personen de mogelijkheid voor het uitvoeren van acties die niet beschikbaar is voor één persoon krijgen. Een werknemer moet bijvoorbeeld niet mogelijk om aan te vragen een betaling en machtigen van de betaling. Het principe van beplanten kan organisaties voor het implementeren van een systeem van controle- en balansniveau hun blootstelling aan het risico van de werknemer fout of fouten minimaliseren.
-
-BHOLD implementeert beplanten doordat u incompatibel machtigingen definiëren. Wanneer deze machtigingen zijn gedefinieerd, BHOLD beplanten wordt afgedwongen door te voorkomen dat het maken van rollen die zijn gekoppeld aan niet-compatibele machtigingen of ze rechtstreeks zijn gekoppeld of door overname en door te voorkomen dat gebruikers niet kan worden toegewezen meerdere functies die bij gecombineerd, incompatibel machtigingen wilt verlenen opnieuw door rechtstreekse toewijzing toe of door overname. Conflicten kunnen eventueel worden genegeerd.
-
-#### <a name="context-adaptable-permissions"></a>Context aanpasbare machtigingen
-
-Door de machtigingen die kunnen worden automatisch gewijzigd op basis van een objectkenmerk maakt, kunt u het totale aantal machtigingen die u hebt voor het beheren van reduceren. Context aanpasbare machtigingen (CAP's) kunnen u een formule te definiëren als een machtiging-kenmerk op dat hoe de machtiging wordt toegepast door de toepassing die is gekoppeld aan de machtiging wijzigt. Bijvoorbeeld, kunt u een formule waarvan de wijzigingen de toegangsmachtigingen voor een map (via een beveiligingsgroep die is gekoppeld met de map access control list) op basis van of een gebruiker behoort tot een organisatie-eenheid (organisatie-eenheid) met fulltime- of samenvouwen van werknemers. Als de gebruiker naar een andere wordt verplaatst van de ene organisatie-eenheid, de nieuwe machtiging wordt automatisch toegepast en de oude machtiging is gedeactiveerd. 
-
-De formule CAP kunt opvragen van de waarden van kenmerken die zijn toegepast voor toepassingen, machtigingen, organisatie-eenheden en gebruikers.
-
-#### <a name="attribute-based-authorization"></a>Verificatie op basis van kenmerken
-
-Een manier om te bepalen of een rol die is gekoppeld aan een organisatie-eenheid (organisatie-eenheid) is geactiveerd voor een bepaalde gebruiker in de organisatie-eenheid is het gebruik van kenmerk gebaseerde verificatie (ABA). U kunt automatisch een rol activeren met behulp van ABA alleen wanneer aan bepaalde regels op basis van de kenmerken van een gebruiker wordt voldaan. U kunt bijvoorbeeld een rol koppelen aan een organisatie-eenheid die actief is voor een gebruiker wordt alleen als de functie van de gebruiker overeenkomt met de functie in de ABA-regel. Hierdoor is de noodzaak om handmatig te activeren een voorgestelde rol voor een gebruiker. In plaats daarvan kan een rol worden geactiveerd voor alle gebruikers in een organisatie-eenheid die een kenmerkwaarde die voldoet aan de rol ABA regel hebben. Regels kunnen worden gecombineerd, zodat een rol wordt alleen geactiveerd wanneer een gebruiker kenmerken voldoen aan alle ABA regels opgegeven voor de rol.
-
-Het is belangrijk te weten dat de resultaten van ABA regel tests worden beperkt door de van Kardinaliteitsinstellingen. Bijvoorbeeld, wordt als de kardinaliteitsinstelling van de van een regel bepaalt niet meer dan twee gebruikers een rol kunnen worden toegewezen, en als een regel ABA zou een rol voor vier gebruikers anders activeren, de rol geactiveerd alleen voor de eerste twee gebruikers die de test ABA doorstaan.
-
-#### <a name="flexible-attribute-types"></a>Flexibele kenmerktypen
-
-Het systeem van kenmerken in BHOLD is maximaal worden uitgebreid. U kunt nieuwe typen van de kenmerken voor dergelijke objecten definiëren als gebruikers, organisatie-eenheden (organisatie-eenheden) en rollen. Kenmerken kunnen worden gedefinieerd als u wilt dat de waarden die gehele getallen, Booleaanse waarde (Ja/Nee), alfanumerieke, datum, tijd en e-mailadressen. Kenmerken kunnen worden opgegeven als één waarde of een lijst met waarden.
-
-## <a name="attestation"></a>Attestation
-
-BHOLD-Suite biedt hulpprogramma's die u gebruiken kunt om te controleren dat afzonderlijke gebruikers machtigingen hebben gekregen juiste hun zakelijke taken uitvoeren. De beheerder kan de opgegeven door de module BHOLD Attestation portal gebruiken voor het ontwerpen van een beheren de attestation-proces.
+### <a name="advanced-bhold-features"></a>De beheerder kan de opgegeven door de module BHOLD Attestation portal gebruiken voor het ontwerpen van een beheren de attestation-proces.
 
 De attestation-proces wordt uitgevoerd met behulp van de campagnes in welke campagne stewards de gelegenheid krijgt en betekent om te controleren of de gebruikers waarvoor ze verantwoordelijk zijn relevante toegang heeft tot BHOLD-beheerde toepassingen en de juiste machtigingen in deze toepassingen. De eigenaar van een campagne is aangewezen voor de campagne productactiveringsprogramma beheert en om ervoor te zorgen dat de campagne correct wordt verricht. Een campagne kan worden gemaakt voor het eenmalig zijn of op periodieke basis.
 
-De wereldburgers voor een campagne worden normaal gesproken een manager die wordt behaald na de toegangsrechten van gebruikers die behoren tot een of meer organisatie-eenheden waarvoor de manager verantwoordelijk is. Stewards automatisch kan worden geselecteerd voor de gebruikers in een campagne op basis van gebruikerskenmerken wordt aangetoond of de stewards voor een campagne kunnen worden gedefinieerd door deze in een bestand dat elke gebruiker in de campagne wordt Attestation naar een wereldburgers wordt toegewezen.
+- De wereldburgers voor een campagne worden normaal gesproken een manager die wordt behaald na de toegangsrechten van gebruikers die behoren tot een of meer organisatie-eenheden waarvoor de manager verantwoordelijk is.
+- Stewards automatisch kan worden geselecteerd voor de gebruikers in een campagne op basis van gebruikerskenmerken wordt aangetoond of de stewards voor een campagne kunnen worden gedefinieerd door deze in een bestand dat elke gebruiker in de campagne wordt Attestation naar een wereldburgers wordt toegewezen.
+- Wanneer een campagne wordt gestart, wordt BHOLD een melding e-mailbericht verzendt naar de campagne stewards en de eigenaar en stuurt vervolgens regelmatig herinneringen waarmee ze worden uitgevoerd in de campagne onderhouden.
+- Stewards worden omgeleid naar een campagne-portal waar ze een lijst van de gebruikers waarvoor ze verantwoordelijk zijn en de functies die zijn toegewezen aan deze gebruikers kunnen zien.
+- De stewards kunnen vervolgens controleren of ze verantwoordelijk voor elk van de vermelde gebruikers zijn en goedkeuren of weigeren van de toegangsrechten van elk van de vermelde gebruikers.
 
-Wanneer een campagne wordt gestart, wordt BHOLD een melding e-mailbericht verzendt naar de campagne stewards en de eigenaar en stuurt vervolgens regelmatig herinneringen waarmee ze worden uitgevoerd in de campagne onderhouden. Stewards worden omgeleid naar een campagne-portal waar ze een lijst van de gebruikers waarvoor ze verantwoordelijk zijn en de functies die zijn toegewezen aan deze gebruikers kunnen zien. De stewards kunnen vervolgens controleren of ze verantwoordelijk voor elk van de vermelde gebruikers zijn en goedkeuren of weigeren van de toegangsrechten van elk van de vermelde gebruikers.
 
-De portal campagne eigenaren ook gebruiken om de voortgang van de campagne te controleren en campagneactiviteiten worden vastgelegd zodat eigenaars van de campagne de acties die zijn uitgevoerd in de loop van de campagne kunnen analyseren.
+#### <a name="cardinality"></a>De wereldburgers voor een campagne worden normaal gesproken een manager die wordt behaald na de toegangsrechten van gebruikers die behoren tot een of meer organisatie-eenheden waarvoor de manager verantwoordelijk is.
+
+*De portal campagne eigenaren ook gebruiken om de voortgang van de campagne te controleren en campagneactiviteiten worden vastgelegd zodat eigenaars van de campagne de acties die zijn uitgevoerd in de loop van de campagne kunnen analyseren. Een van de belangrijke overwegingen bij het implementeren van een systeem van uitgebreide toegang op basis van rechten toegangsbeheer (RBAC) is het saldo tussen strikt toegangsbeheer onderhouden en te vermijden onnodige (of, slechter in, onverwachte) barrières voor toegang tot.
+
+De inspanning om dit saldo vaak onderhouden resulteert in een access control-structuur die zo complex is of onverwachte interacties tussen beleidsregels zijn bijna onvermijdelijk.
+
+- Daarom is het belangrijk om te kunnen analyseren van de gevolgen van het beleid voor toegangsbeheer voordat ze daadwerkelijk worden geplaatst in plaats.
+- De module Analytics van BHOLD-Suite biedt u de mogelijkheid om uit te voeren deze analyse door zodat u kunt regels die staan voor uw beleid ontwikkelen en vervolgens de gebruikers waarvan de machtigingen in overeenstemming zijn of een conflict met de regel.
+- Op basis van deze analyse, kunt u het beleid aanpassen of rollen en machtigingen eventuele conflicten met het beleid wijzigen.
+
+De portal BHOLD-analyse biedt u de mogelijkheid om samen te stellen rulesets die bestaan uit een of meer regels die u maakt voor een bepaald beleid of de groep van het beleid testen.
+
+- Een regel bestaat uit de volgende belangrijke onderdelen:
+- Een titel en beschrijving op die u kunt identificeren en beschrijven de regel
+
+Een status die aangeeft of de regel gereed voor een overzicht is, wordt gecontroleerd of goedgekeurd
+
+- Een element worden ingesteld (zoals gebruikers- of machtigingen) die de regel is ontworpen om te testen
+- Optionele subset filters voor expressies die u gebruiken kunt om te selecteren van een juiste subgroep van het element dat moet worden onderzocht
+
+#### <a name="separation-of-duties"></a>Stewards automatisch kan worden geselecteerd voor de gebruikers in een campagne op basis van gebruikerskenmerken wordt aangetoond of de stewards voor een campagne kunnen worden gedefinieerd door deze in een bestand dat elke gebruiker in de campagne wordt Attestation naar een wereldburgers wordt toegewezen.
+
+Een of meer regel filters zijn expressies met daarin het beleid wordt getest. Een regel kan een van de volgende sets van element kunt testen: Organisatie-eenheden
+
+Het volgende diagram wordt een eenvoudige regel die bestaan uit twee subset en twee filterregels: Noteer het verschil in het effect van het mislukken van een subsetfilter en een filter regel mislukt: mislukt een subsetfilter een elementobject verwijdert uit het testen door de volgende filters, terwijl een filter regel mislukt zorgt ervoor het object dat dat moet worden gerapporteerd als niet compatibel zijn. Alleen objecten die alle subset-filters en alle filters voor de regel doorgeven worden gerapporteerd als zijnde compatibel.
+
+#### <a name="context-adaptable-permissions"></a>Wanneer een campagne wordt gestart, wordt BHOLD een melding e-mailbericht verzendt naar de campagne stewards en de eigenaar en stuurt vervolgens regelmatig herinneringen waarmee ze worden uitgevoerd in de campagne onderhouden.
+
+Elk filter bestaat uit een type, een operator (dat type afhankelijke), een sleutel (een van de elementen) en een waarde op basis waarvan de sleutel wordt getest door de operator. Het volgende filter zou bijvoorbeeld controleren of het aantal gebruikers in een subset van het element groter is dan 10: Aantal Sleutel: 
+
+De filters regels kunnen zijn drie soorten en gebruiken van operators die specifiek zijn voor hun type, zoals wordt aangegeven:
+
+#### <a name="attribute-based-authorization"></a>Stewards worden omgeleid naar een campagne-portal waar ze een lijst van de gebruikers waarvoor ze verantwoordelijk zijn en de functies die zijn toegewezen aan deze gebruikers kunnen zien.
+
+< en > = en! = bevat Bevat geen Beperkende Moet een hebben en moet alle
+
+Geen en kan niet alle Kan slechts een hebben en alleen voor alle hebben kunnen
+
+#### <a name="flexible-attribute-types"></a>De stewards kunnen vervolgens controleren of ze verantwoordelijk voor elk van de vermelde gebruikers zijn en goedkeuren of weigeren van de toegangsrechten van elk van de vermelde gebruikers.
+
+Uitsluitend hebben alle en uitsluitend alle Beperkende filters kunnen de aangegeven operators gebruiken voor het testen van een sleutel op basis van een verzameling met meerdere waarden. Als u testen van de implementatie van een scheiding van rechten (beplanten)-beleid met de mededeling wilt dat er geen gebruiker die de aanvraag betaling machtiging heeft ook betaling goedkeuren toestemming hebben, kunt u bijvoorbeeld een regel als volgt opgeven. Betaling beplanten Test
+
+## <a name="attestation"></a>Attestation
+
+Element: Subsetfilter:
+
+Een andere machtiging betaling aanvragen hebben Regel filter: Kan niet alle machtigingen goedkeuren betaling hebben
+
+Wanneer u deze regel wordt uitgevoerd, wordt de module BHOLD-analyse weergegeven van het aantal gebruikers in de geselecteerde subset (het aantal gebruikers met de machtiging betaling aanvragen), het aantal gebruikers die aan de regel voldoen en het aantal gebruikers die niet aan de regel voldoen. Vervolgens kunt u de niet-compatibele gebruikers weergeven, zodat u kunt de inconsistentie corrigeren.
+
+Naast de resultaten weer te geven, kunt u ook het rapport opslaan als een door komma's gescheiden waarden (CSV) of het XML-bestand kunt u later de resultaten te analyseren. U kunt ook de resulterende lijst wilt weergeven van aanvullende informatie waarmee u de impact beter te begrijpen kunt aanpassen. Bijvoorbeeld, als u gebruikers testen wilt, kunt u weergeven (of rapporteren) de accounts van compatibele of niet-compatibele gebruikers zodat u kunt zien welke toepassingen betrokken zijn.
+
+Omdat een regel meerdere filters bevatten kan, kunt u filters om te testen of een bepaalde combinatie van voorwaarden bestaan.
 
 ## <a name="analytics"></a>Analytics
 
-Een van de belangrijke overwegingen bij het implementeren van een systeem van uitgebreide toegang op basis van rechten toegangsbeheer (RBAC) is het saldo tussen strikt toegangsbeheer onderhouden en te vermijden onnodige (of, slechter in, onverwachte) barrières voor toegang tot. De inspanning om dit saldo vaak onderhouden resulteert in een access control-structuur die zo complex is of onverwachte interacties tussen beleidsregels zijn bijna onvermijdelijk.
+Standaard wordt het resultaat is het product van een test en Booleaanse van alle filters, maar u kunt opgeven dat een test of van de combinatie filter worden uitgevoerd. Bijvoorbeeld, als uw bedrijfsbeleid managers vereist om de machtiging betaling wijzigen of de machtiging goedkeuren betaling, kan u test naleving van het beleid door het construeren van een regel als volgt:
 
-Daarom is het belangrijk om te kunnen analyseren van de gevolgen van het beleid voor toegangsbeheer voordat ze daadwerkelijk worden geplaatst in plaats. De module Analytics van BHOLD-Suite biedt u de mogelijkheid om uit te voeren deze analyse door zodat u kunt regels die staan voor uw beleid ontwikkelen en vervolgens de gebruikers waarvan de machtigingen in overeenstemming zijn of een conflict met de regel. Op basis van deze analyse, kunt u het beleid aanpassen of rollen en machtigingen eventuele conflicten met het beleid wijzigen.
+Betaling beplanten Test wijzigen Een rol Manager hebben Filters voor regel:
 
-De portal BHOLD-analyse biedt u de mogelijkheid om samen te stellen rulesets die bestaan uit een of meer regels die u maakt voor een bepaald beleid of de groep van het beleid testen. Een regel bestaat uit de volgende belangrijke onderdelen:
+Gemachtigd bent een betaling wijzigen Moet een machtiging goedkeuren betaling hebben
 
-- Een titel en beschrijving op die u kunt identificeren en beschrijven de regel
-- Een status die aangeeft of de regel gereed voor een overzicht is, wordt gecontroleerd of goedgekeurd
-- Een element worden ingesteld (zoals gebruikers- of machtigingen) die de regel is ontworpen om te testen
-- Optionele subset filters voor expressies die u gebruiken kunt om te selecteren van een juiste subgroep van het element dat moet worden onderzocht
-- Een of meer regel filters zijn expressies met daarin het beleid wordt getest.
+- Standaard worden elke gebruiker die een manager die de betalingsmethode wijzigen de machtiging betaling aanvragen en gerapporteerd als zijnde compatibel.
+- Het beleid is echter vereist dat een manager gemachtigd beide, niet beide.
+- Als u wilt testen werkelijke naleving van het beleid, moet u de of Booleaanse operator met de regel gebruiken om te bepalen of er zijn geen beheerders die niet over de machtiging betaling wijzigen of de machtiging goedkeuren betaling.
+- In tegenstelling tot andere operators de uitsluitend hebt en de uitsluitend beschikken over alle operators wijzen op naleving voor objecten die anders zou worden uitgesloten door een subsetfilter.
+- Als u bijvoorbeeld een beleid dat u alle managers (en alleen managers) de machtiging goedkeuren beoordelingen hebben testen, kunt u een regel als volgt opgeven.
 
-Een regel kan een van de volgende sets van element kunt testen:
+Bekijk goedkeuring testen
 
 - Users
-- Organisatie-eenheden
+- Uitsluitend hebt machtiging goedkeuren beoordelingen
 - Rollen
 - Machtigingen
 - Toepassingen
 - Accounts
 
-Het volgende diagram wordt een eenvoudige regel die bestaan uit twee subset en twee filterregels:
+Deze regel wordt gemeld als compatibel met gebruikers die managers zijn en hebben de machtiging goedkeuren beoordelingen en gebruikers die niet managers en wie bent niet gemachtigd de beoordelingen goedkeuren.
 
 ![](media/bhold-concepts-guide/rules.png)
 
-Noteer het verschil in het effect van het mislukken van een subsetfilter en een filter regel mislukt: mislukt een subsetfilter een elementobject verwijdert uit het testen door de volgende filters, terwijl een filter regel mislukt zorgt ervoor het object dat dat moet worden gerapporteerd als niet compatibel zijn. Alleen objecten die alle subset-filters en alle filters voor de regel doorgeven worden gerapporteerd als zijnde compatibel.
+Als u daarentegen worden managers die beschikt niet over deze machtiging en gebruikers die geen managers maar die gerapporteerd als niet compatibel zijn. Zoals eerder is aangegeven, kunt u regels combineren in een ruleset waardoor het gemakkelijker om te categoriseren en regels om te voldoen aan uw bedrijfsvereisten beheren is.
 
-Elk filter bestaat uit een type, een operator (dat type afhankelijke), een sleutel (een van de elementen) en een waarde op basis waarvan de sleutel wordt getest door de operator. Het volgende filter zou bijvoorbeeld controleren of het aantal gebruikers in een subset van het element groter is dan 10:
+Ook kunt u een set van globale filters die, wanneer dit is ingeschakeld, van toepassing op elke regel die wordt getest. Als u vaak uitsluiten van een specifieke subset van records wilt bij het testen van de regels in andere rulesets, kunt u algemene filters die u kunt inschakelen of uitschakelen, indien nodig.
 
 
 |   |   |   |   |   |
 |---|---|---|---|---|
-|**Type:**   | Aantal   |
-| **Sleutel:**  | Users  |
+|**Type:**   | De rapportage van BHOLD-module biedt u informatie weergeven in het model van de functie via diverse rapporten.   |
+| **De rapportage van BHOLD-module biedt een uitgebreide verzameling van ingebouwde rapporten, plus het bevat een wizard waarmee u gebruiken kunt om gewone en geavanceerde aangepaste rapporten te maken.**  | Users  |
 | **Operator**  | >  |
 | **Waarde:** | 10 |
 
-De filters regels kunnen zijn drie soorten en gebruiken van operators die specifiek zijn voor hun type, zoals wordt aangegeven:
+Wanneer u een rapport uitvoert, kunt u onmiddellijk de resultaten weer te geven of opslaan van de resultaten in een Microsoft Excel (.xlsx).
 
 - Kenmerk
-  - < en >
-  - = en! =
-  - **Bevat**
-  - **Bevat geen**
-- Aantal
-  - < en >
-  - = en! =
-- Beperkende
-  - **Moet een hebben en moet alle**
-  - **Geen en kan niet alle**
+  - Als u wilt weergeven van dit bestand met behulp van Microsoft Excel 2000, Microsoft Excel 2002 of Microsoft Excel 2003, kunt u downloaden en installeren van Microsoft Office Compatibility Pack voor Word, Excel en PowerPoint-bestandsindelingen.
+  - Kunt u de BHOLD rapportagemodule voornamelijk produceren van rapporten die zijn gebaseerd op de huidige rol informatie.
+  - **Rapporten voor controle wijzigingen in gegevens van identiteit gegenereerd, heeft Forefront Identity Manager 2010 R2 een rapportagemogelijkheid voor de FIM-Service die is geïmplementeerd in de System Center Service Manager-datawarehouse.**
+  - **Zie voor meer informatie over FIM reporting de Forefront Identity Manager 2010 en Forefront Identity Manager 2010 R2-documentatie in de technische bibliotheek voor Forefront Identity Management.**
+- De rapportage van BHOLD-module biedt u informatie weergeven in het model van de functie via diverse rapporten.
+  - Als u wilt weergeven van dit bestand met behulp van Microsoft Excel 2000, Microsoft Excel 2002 of Microsoft Excel 2003, kunt u downloaden en installeren van Microsoft Office Compatibility Pack voor Word, Excel en PowerPoint-bestandsindelingen.
+  - Kunt u de BHOLD rapportagemodule voornamelijk produceren van rapporten die zijn gebaseerd op de huidige rol informatie.
+- Categorieën vallen de ingebouwde rapporten omvatten het volgende:
+  - **Besturingselementen**
+  - **Inkomende toegangsbeheer**
   - **Kan slechts een hebben en alleen voor alle hebben kunnen**
   - **Uitsluitend hebben alle en uitsluitend alle**
 
->[!Note]
-Beperkende filters kunnen de aangegeven operators gebruiken voor het testen van een sleutel op basis van een verzameling met meerdere waarden.
+> [!Note]
+> Beperkende filters kunnen de aangegeven operators gebruiken voor het testen van een sleutel op basis van een verzameling met meerdere waarden.
 
 Als u testen van de implementatie van een scheiding van rechten (beplanten)-beleid met de mededeling wilt dat er geen gebruiker die de aanvraag betaling machtiging heeft ook betaling goedkeuren toestemming hebben, kunt u bijvoorbeeld een regel als volgt opgeven.
 

@@ -14,7 +14,8 @@ ms.openlocfilehash: ac11a4dfb23944d50dbbcf0b0d70c915f186c159
 ms.sourcegitcommit: c773edc8262b38df50d82dae0f026bb49500d0a4
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/25/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34479159"
 ---
 <a name="azure-ad-business-to-business-b2b-collaboration-with-microsoft-identity-managermim-2016-sp1-with-azure-application-proxy-public-preview"></a>Azure AD-business-to-business (B2B) samenwerking met Microsoft Identity Manager(MIM) 2016 SP1 met Azure-toepassingsproxy (openbare Preview)
 ============================================================================================================================
@@ -116,7 +117,7 @@ Selecteer op het scherm kenmerken selecteren vereiste kenmerken voor het beheren
 
 -   userPrincipalName
 
--   UserType
+-   userType
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/58da80f5475cf01a97a6843dd279385c.png)
 

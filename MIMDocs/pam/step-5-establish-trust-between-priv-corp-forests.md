@@ -1,7 +1,7 @@
 ---
 title: PAM implementeren - Stap 5 - Forest-koppeling | Microsoft Docs
 description: Vertrouwensrelatie tussen de PRIV- en CORP-forests instellen zodat bevoegde gebruikers in PRIV nog steeds toegang hebben tot resources in CORP.
-keywords: 
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -12,17 +12,18 @@ ms.technology: active-directory-domain-services
 ms.assetid: eef248c4-b3b6-4b28-9dd0-ae2f0b552425
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: ba4b94c1f0f0879436e370a7f2f041c720bd1f60
-ms.sourcegitcommit: 362475d4018e74e5a17ba574ccaec47a2caebaff
+ms.openlocfilehash: df4294ca6dbc98ec684e690d3ce66765d27cc359
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289088"
 ---
 # <a name="step-5--establish-trust-between-priv-and-corp-forests"></a>Stap 5 –Een vertrouwensrelatie tussen het PRIV- en CORP-forest instellen
 
->[!div class="step-by-step"]
-[« Stap 4](step-4-install-mim-components-on-pam-server.md)
-[Stap 6 »](step-6-transition-group-to-pam.md)
+> [!div class="step-by-step"]
+> [« Stap 4](step-4-install-mim-components-on-pam-server.md)
+> [Stap 6 »](step-6-transition-group-to-pam.md)
 
 Voor elk CORP-domein, zoals contoso.local, moet voor de PRIV- en CONTOSO-domeincontrollers een vertrouwensrelatie zijn ingesteld. Hiermee hebben gebruikers in het PRIV-domein toegang tot resources op het CORP-domein.
 
@@ -70,17 +71,17 @@ Op PAMSRV moet u een eenzijdige vertrouwensrelatie met elk domein, zoals CORPDC,
 
 Voor elk bestaand forest moet u voor PRIV-beheerders en de controleservice leestoegang tot AD inschakelen.
 
-1.  Meld u aan bij de bestaande domeincontroller van het CORP-forest (CORPDC) als een domeinbeheerder voor het topleveldomein in het forest (Contoso\Administrator).  
-2.  Start **Active Directory: gebruikers en computers**.  
-3.  Klik met de rechtermuisknop op het domein **contoso.local** en selecteer **Beheer delegeren**.  
-4.  Klik op het tabblad Geselecteerde gebruikers en groepen op **Toevoegen**.  
-5.  Klik in het venster Gebruikers, computers of groepen selecteren op **Locaties** en wijzig de locatie in *priv.contoso.local*.  Typ op de objectnaam *Domeinbeheerders* en klik op **Namen controleren**. Wanneer een pop-up wordt weergegeven, voert u de gebruikersnaam *priv\administrator* en het bijbehorende wachtwoord in.  
-6.  Voeg na Domeinbeheerders *; MIMMonitor* toe. Nadat de namen **Domeinbeheerders** en **MIMMonitor** zijn onderstreept, klikt u op **OK** en vervolgens op **Volgende**.  
-7.  Selecteer in de lijst met algemene taken **Alle gebruikersgegevens lezen** en klik vervolgens op **Volgende** en **Voltooien**.  
-8.  Sluit Active Directory - gebruikers en computers.
+1. Meld u aan bij de bestaande domeincontroller van het CORP-forest (CORPDC) als een domeinbeheerder voor het topleveldomein in het forest (Contoso\Administrator).  
+2. Start **Active Directory: gebruikers en computers**.  
+3. Klik met de rechtermuisknop op het domein **contoso.local** en selecteer **Beheer delegeren**.  
+4. Klik op het tabblad Geselecteerde gebruikers en groepen op **Toevoegen**.  
+5. Klik in het venster Gebruikers, computers of groepen selecteren op **Locaties** en wijzig de locatie in *priv.contoso.local*.  Typ op de objectnaam *Domeinbeheerders* en klik op **Namen controleren**. Wanneer een pop-up wordt weergegeven, voert u de gebruikersnaam *priv\administrator* en het bijbehorende wachtwoord in.  
+6. Voeg na Domeinbeheerders *; MIMMonitor* toe. Nadat de namen **Domeinbeheerders** en **MIMMonitor** zijn onderstreept, klikt u op **OK** en vervolgens op **Volgende**.  
+7. Selecteer in de lijst met algemene taken **Alle gebruikersgegevens lezen** en klik vervolgens op **Volgende** en **Voltooien**.  
+8. Sluit Active Directory - gebruikers en computers.
 
-9.  Open een PowerShell-venster.
-10.  Gebruik `netdom` om ervoor te zorgen dat SID-geschiedenis is ingeschakeld en SID-filtering is uitgeschakeld. Type:
+9. Open een PowerShell-venster.
+10. Gebruik `netdom` om ervoor te zorgen dat SID-geschiedenis is ingeschakeld en SID-filtering is uitgeschakeld. Type:
     ```cmd
     netdom trust contoso.local /quarantine:no /domain priv.contoso.local
     netdom trust /enablesidhistory:yes /domain priv.contoso.local
@@ -104,6 +105,6 @@ Voor elk bestaand forest moet u voor PRIV-beheerders en de controleservice leest
 
 In de volgende stap gaat u een groep naar PAM verplaatsen.
 
->[!div class="step-by-step"]
-[« Stap 4](step-4-install-mim-components-on-pam-server.md)
-[Stap 6 »](step-6-transition-group-to-pam.md)
+> [!div class="step-by-step"]
+> [« Stap 4](step-4-install-mim-components-on-pam-server.md)
+> [Stap 6 »](step-6-transition-group-to-pam.md)

@@ -12,18 +12,19 @@ ms.technology: security
 ms.assetid: 51507d0a-2aeb-4cfd-a642-7c71e666d6cd
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 7c77ed0ceb541b9b00ebb9954ce65a53f0f44442
-ms.sourcegitcommit: 32d9a963a4487a8649210745c97a3254645e8744
+ms.openlocfilehash: bfc79d27f015ee3d57c33c26ecae0f5b8ff38370
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289486"
 ---
 # <a name="set-up-an-identity-management-servers-windows-server-2016"></a>Een identity management-servers instellen: Windows Server 2016
 
->[!div class="step-by-step"]
-[«Een domein voorbereiden](preparing-domain.md)
-[SQL Server 2016»](prepare-server-sql2016.md)
-
+> [!div class="step-by-step"]
+> [«Een domein voorbereiden](preparing-domain.md)
+> [SQL Server 2016»](prepare-server-sql2016.md)
+> 
 > [!NOTE]
 > In deze stapsgewijze instructies wordt gebruikgemaakt van voorbeeldnamen en -waarden van een bedrijf met de naam Contoso. Vervang deze door uw eigen namen en waarden. Bijvoorbeeld:
 > - Naam van de domeincontroller - **corpdc**
@@ -31,7 +32,7 @@ ms.lasthandoff: 04/27/2018
 > - Naam van de MIM-Service-Server: **corpservice**
 > - Naam van de MIM-synchronisatieserver: **corpsync**
 > - De naam van de SQL Server - **corpsql**
-> - Wachtwoord - **Pass@word1**
+> - Wachtwoord - <strong>Pass@word1</strong>
 
 ## <a name="join-windows-server-2016-to-your-domain"></a>Windows Server 2016 aan uw domein koppelen
 
@@ -112,6 +113,6 @@ Stel het beveiligingsbeleid van de server zo in dat de zojuist gemaakte accounts
     iisreset /START
     ```
 
->[!div class="step-by-step"]  
-[«Een domein voorbereiden](preparing-domain.md)
-[SQL Server 2016»](prepare-server-sql2016.md)
+> [!div class="step-by-step"]  
+> [«Een domein voorbereiden](preparing-domain.md)
+> [SQL Server 2016»](prepare-server-sql2016.md)

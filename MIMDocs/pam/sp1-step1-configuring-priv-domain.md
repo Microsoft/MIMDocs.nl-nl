@@ -1,7 +1,7 @@
 ---
-title: "Stap 1 Het privédomein configureren"
+title: Stap 1 Het privédomein configureren
 description: Het CORP-domein voorbereiden met bestaande of nieuwe identiteiten die worden beheerd door Privileged Identity Manager via scripts
-keywords: 
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: MBaldwin
@@ -10,23 +10,24 @@ ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: 40822bb7702cf3d7ac23ecd6e98ac392f2d3a480
-ms.sourcegitcommit: 8edd380f54c3e9e83cfabe8adfa31587612e5773
+ms.openlocfilehash: e5be140e7ffea7b0c7cacbc1c82d3b2883804203
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/19/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36290302"
 ---
 # <a name="step-1-configuring-the-priv-domain"></a>Stap 1 Het privédomein configureren
 
->[!div class="step-by-step"]
-[Stap 2 »](sp1-step2-configuring-corp-domain.md)
+> [!div class="step-by-step"]
+> [Stap 2 »](sp1-step2-configuring-corp-domain.md)
 
 1. Meld u aan bij PRIVC als administrator
-  * Als dit een PRIV-omgeving is, meldt u zich aan bij de CORPDC
+   * Als dit een PRIV-omgeving is, meldt u zich aan bij de CORPDC
 2. Voer PowerShell uit als Administrator
-3. cd $env:SYSTEMDRIVE\PAM
+3. cd $env: SYSTEMDRIVE\PAM
 4. .\PAMDeployment.ps1
 5. Selecteer menuoptie 1 (PRIV Forest Configuration)
 
@@ -41,5 +42,5 @@ Voor functionele niveaus onder Windows Server 2016 kunt u de waarschuwing negere
 Kopieer de SIDs.txt die wordt gegenereerd in $env: SYSTEMDRIVE\PAM naar de vergelijkbare map op de CORPDC. Dit wordt vereist door de CORPDC om machtigingen voor PRIV-gebruikers in te stellen om CORP-gebruikerseigenschappen te lezen.
 Nadat het script is voltooid, wordt u gevraagd om de computer opnieuw op te starten om de wijzigingen van kracht te laten worden.
 
->[!div class="step-by-step"]
-[Stap 2 »](sp1-step2-configuring-corp-domain.md)
+> [!div class="step-by-step"]
+> [Stap 2 »](sp1-step2-configuring-corp-domain.md)

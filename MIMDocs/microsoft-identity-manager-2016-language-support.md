@@ -10,11 +10,12 @@ ms.topic: get-started-article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 50345fda-56d7-4b6e-a861-f49ff90a8376
-ms.openlocfilehash: 101f4110d6439cfc17f25c8880531e18f51920da
-ms.sourcegitcommit: 19ed53fa6af61086774a0429fd1520067caf4e93
+ms.openlocfilehash: 834343243dfeefa8d1874414fa369751288fd64d
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36288867"
 ---
 # <a name="supported-languages"></a>Ondersteunde talen
 
@@ -30,41 +31,41 @@ De volgende talen 33 talen wordt ondersteund door de MIM-Service van Microsoft e
 > [!IMPORTANT]
 > De tekst in de SSPR-invoegtoepassing en de portal wordt vertaald, maar de vragen worden niet zonder extra werk. U moet verificatieprocessen werkstromen (en bijbehorende sets en beheerbeleidsregels doel te definiëren) maken op doel vragen in elke taal naar de doellocatie.
 
-|taal|FIM(4.3.x.x)/MIM(4.4.xx)|MIM(4.5.x.x)
-|-----|-----|-----|
-|Bulgaars|bg-BG|BG|
-|Chinees (Vereenvoudigd)|zh-CN|zh-hans|
-|Chinees (Taiwan)|zh-TW.|zh-hant|
-|Kroatisch|hr-HR|HR|
-|Tsjechisch|cs-CZ|CS|
-|Deens|da-DK|da|
-|Nederlands|NL-NL|nl|
-|Estisch|et-EE|et|
-|Frans|fr-FR|FR|
-|Fins|fi-FI|fi|
-|Duits|de-DE|de|
-|Grieks|el-GR|El|
-|Hindi|hi-IN|Hallo|
-|Hongaars|hu-HU|Hu|
-|Italiaans|IT-IT|Deze|
-|Japans|ja-JP|Japan|
-|Koreaans|ko-KR|Ko|
-|Litouws|lt-LT|lt|
-|Lets|lv-LV|LV|
-|Noors|nb-NO|nb-NO|
-|Pools|pl-PL|PL|
-|Portugees (Portugal)|pt-PT|pt|
-|Portugees (Brazilië)|pt-BR|pt-BR|
-|Russisch|ru-RU|RU||SV|
-|Roemeens|ro-RO|ro|
-|Spaans|es-ES|Ja|
-|Slowaaks|sk-SK|SK|
-|Zweeds|SV-SE|SV|
-|Sloveens|sl-SI|SL|
-|Servisch - Servië |sr-latn-CS(Depricated)|sr-Latn-RS|
-|Thais|th-TH|TH|
-|Turks|tr-TR|TR|
-|Oekraïens|VK UA|Verenigd Koninkrijk|
+|       taal        | FIM(4.3.x.x)/MIM(4.4.xx) | MIM(4.5.x.x) |
+|-----------------------|--------------------------|--------------|
+|       Bulgaars       |          bg-BG           |      BG      |
+| Chinees (Vereenvoudigd)  |          zh-CN           |   zh-hans    |
+|   Chinees (Taiwan)    |          zh-TW.           |   zh-hant    |
+|       Kroatisch        |          hr-HR           |      HR      |
+|         Tsjechisch         |          cs-CZ           |      CS      |
+|        Deens         |          da-DK           |      da      |
+|         Nederlands         |          NL-NL           |      nl      |
+|       Estisch        |          et-EE           |      et      |
+|        Frans         |          fr-FR           |      FR      |
+|        Fins        |          fi-FI           |      fi      |
+|        Duits         |          de-DE           |      de      |
+|         Grieks         |          el-GR           |      El      |
+|         Hindi         |          hi-IN           |      Hallo      |
+|       Hongaars       |          hu-HU           |      Hu      |
+|        Italiaans        |          IT-IT           |      Deze      |
+|       Japans        |          ja-JP           |      Japan      |
+|        Koreaans         |          ko-KR           |      Ko      |
+|      Litouws       |          lt-LT           |      lt      |
+|        Lets        |          lv-LV           |      LV      |
+|       Noors       |          nb-NO           |    nb-NO     |
+|        Pools         |          pl-PL           |      PL      |
+| Portugees (Portugal) |          pt-PT           |      pt      |
+|  Portugees (Brazilië)  |          pt-BR           |    pt-BR     |
+|        Russisch        |          ru-RU           |      RU      |
+|       Roemeens        |          ro-RO           |      ro      |
+|        Spaans        |          es-ES           |      Ja      |
+|        Slowaaks         |          sk-SK           |      SK      |
+|        Zweeds        |          SV-SE           |      SV      |
+|       Sloveens       |          sl-SI           |      SL      |
+|   Servisch - Servië    |  sr-latn-CS(Depricated)  |  sr-Latn-RS  |
+|         Thais          |          th-TH           |      TH      |
+|        Turks        |          tr-TR           |      TR      |
+|       Oekraïens       |          VK UA           |      Verenigd Koninkrijk      |
 
 ## <a name="certificate-management"></a>Certificaatbeheer 
 De Microsoft Certificate Management ondersteunt de volgende 9 talen. 

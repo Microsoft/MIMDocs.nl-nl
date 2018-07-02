@@ -1,7 +1,7 @@
 ---
 title: Microsoft Identity Manager-selfservice voor verlenging van smartcard zonder Administrator-toegang | Microsoft Docs
 description: Informatie over het registreren van smartcards voor gebruikers die geen beheerdersrechten hebben voor hun computers, zodat ze de certificaatbeheerder kunnen gebruiken.
-keywords: 
+keywords: ''
 author: billmath
 ms.author: barclayn
 manager: mbaldwin
@@ -13,10 +13,11 @@ ms.assetid: bfabc562-a2f0-4cff-ac31-36927f41e102
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: 39becb555d2efe17e60789453dbaf448c90a8b60
-ms.sourcegitcommit: 362475d4018e74e5a17ba574ccaec47a2caebaff
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289159"
 ---
 # <a name="enroll-smart-cards-for-non-administrators"></a>Smartcards voor niet-beheerders registreren
 Gebruikers die geen lokale beheerder zijn van hun computer, kunnen standaard geen smartcard registreren op hun eigen computer. Dit probleem kunt u met de volgende procedure omzeilen.

@@ -1,7 +1,7 @@
 ---
 title: Stap 8 Verificatie van PAM-implementatie
 description: De procedure voor implementatie van PAM met behulp van scripts omvat verificatiescripts waarmee een PAM-scenario kan worden uitgevoerd om te controleren of de PAM-implementatie naar behoren werkt.
-keywords: 
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: MBaldwin
@@ -10,19 +10,20 @@ ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: 28fcbe10366df749796be76f83f608561b5f39d3
-ms.sourcegitcommit: 8edd380f54c3e9e83cfabe8adfa31587612e5773
+ms.openlocfilehash: b01980c020b1027c3b40eaf49b4431631ee041be
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/19/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289469"
 ---
 # <a name="step-8-pam-deployment-verification"></a>Stap 8 Verificatie van PAM-implementatie
 
->[!div class="step-by-step"]
-[« Stap 7](sp1-step7-setup-sidhistory-sidfiltering.md)
-[Bijlage »](sp1-pam-deployment-addendum.md)
+> [!div class="step-by-step"]
+> [« Stap 7](sp1-step7-setup-sidhistory-sidfiltering.md)
+> [Bijlage »](sp1-pam-deployment-addendum.md)
 
 Het implementatiepakket wordt geleverd met verificatiescripts die een PAM-scenario kunnen uitvoeren om te controleren of de PAM-implementatie naar behoren werkt.
 Om deze controlestap te kunnen gebruiken, wijzigt u in PAMDeploymentConfig.xml de sectie <PamValidation/>.
@@ -37,7 +38,7 @@ Stap 1:
 
 1. Meld u aan bij de CORPDC als een CORP-domeinadministrator
 2. Voer PowerShell uit als Administrator
-3. cd $env:SYSTEMDRIVE\PAM
+3. cd $env: SYSTEMDRIVE\PAM
 4. Import-module .\PAMValidation.psm1
 5. Create-PAMValidationonCORPDCConfig
 
@@ -64,10 +65,10 @@ Stap 3:
 
 In deze stap moet u uw CORPAdmin-referenties opgeven. Zodra u deze hebt opgegeven, worden de juiste gebruikers toegevoegd aan de groepen Extern bureaubladgebruikers en Extern beheer-gebruikers.
 Gebruik op de CORP-client de volgende opdracht om PowerShell als de PRIV-gebruiker te openen die u valideert. </br></br>
-**Runas /u:<PRIV domain>\PRIV.pamRequestor powershell.exe**  </br></br>
+**Runas/u:<PRIV domain>\PRIV.pamRequestor powershell.exe**  </br></br>
 Typ in het PowerShell-venster het volgende:
 
-1. cd $env:SYSTEMDRIVE\PAM
+1. cd $env: SYSTEMDRIVE\PAM
 2. import-module .\PAMValidation.psm1
 3. test-PAMValidationScenarioNoApprovalRequest
 
@@ -76,6 +77,6 @@ Typ in het PowerShell-venster het volgende:
   In eerste instantie heeft de gebruiker geen toegang tot de resource. Nadat de gebruiker Just-In-Time is toegevoegd aan de rol, heeft de gebruiker wel toegang. Zodra de duur van de aanvraag is verlopen, heeft de gebruiker opnieuw geen toegang.
   Voor het script geldt de standaardduur (11 minuten) voordat de aanvraag verloopt.
 
->[!div class="step-by-step"]
-[« Stap 7](sp1-step7-setup-sidhistory-sidfiltering.md)
-[Bijlage »](sp1-pam-deployment-addendum.md)
+> [!div class="step-by-step"]
+> [« Stap 7](sp1-step7-setup-sidhistory-sidfiltering.md)
+> [Bijlage »](sp1-pam-deployment-addendum.md)

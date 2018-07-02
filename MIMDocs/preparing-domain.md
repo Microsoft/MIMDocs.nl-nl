@@ -12,16 +12,17 @@ ms.technology: security
 ms.assetid: 50345fda-56d7-4b6e-a861-f49ff90a8376
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: ff8d8a6f66212b006e2c17186dc299a5bcf3f68b
-ms.sourcegitcommit: 32d9a963a4487a8649210745c97a3254645e8744
+ms.openlocfilehash: ddab5b1ab57d3d332d5cd36ecc5a29abd83222ec
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289027"
 ---
 # <a name="set-up-a-domain"></a>Stel een domein in
 
->[!div class="step-by-step"]
-[WindowsServer 2016»](prepare-server-ws2016.md)
+> [!div class="step-by-step"]
+> [WindowsServer 2016»](prepare-server-ws2016.md)
 
 Microsoft Identity Manager (MIM) werkt samen met uw Active Directory-domein (AD). U moet AD al hebben geïnstalleerd en ervoor zorgen dat uw omgeving een domeincontroller bevat voor een domein dat u kunt beheren.
 
@@ -38,7 +39,7 @@ Alle onderdelen van uw MIM-implementatie hebben een eigen identiteit in het dome
 > - Naam van de MIM-Service-Server: **corpservice**
 > - Naam van de MIM-synchronisatieserver: **corpsync**
 > - De naam van de SQL Server - **corpsql**
-> - Wachtwoord - **Pass@word1**
+> - Wachtwoord - <strong>Pass@word1</strong>
 
 1. Meld u als domeinbeheerder (*bijvoorbeeld Contoso\Administrator*) aan bij de domeincontroller.
 
@@ -105,5 +106,5 @@ Alle onderdelen van uw MIM-implementatie hebben een eigen identiteit in het dome
 - PasswordReset.contoso.com punt naar corpservice fysieke IP-adres
 - passwordregistration.contoso.com punt naar corpservice fysieke IP-adres
 
->[!div class="step-by-step"]
-[WindowsServer 2016»](prepare-server-ws2016.md)
+> [!div class="step-by-step"]
+> [WindowsServer 2016»](prepare-server-ws2016.md)

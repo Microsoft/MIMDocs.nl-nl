@@ -1,7 +1,7 @@
 ---
 title: Microsoft Identity Manager 2016 | Microsoft Docs
 description: Bekijk het proces om gebruikers te maken in AD DS met Microsoft Identity Manager 2016
-keywords: 
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -9,12 +9,13 @@ ms.date: 08/18/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
-ms.assetid: 
-ms.openlocfilehash: 171aa1a2e19ea9f78f9fadbc7368404702095d71
-ms.sourcegitcommit: 0d8b19c5d4bfd39d9c202a3d2f990144402ca79c
+ms.assetid: ''
+ms.openlocfilehash: a12a8436d70b3ae866df0f615e10a3d76f791168
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/14/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36290098"
 ---
 # <a name="how-do-i-provision-users-to-ad-ds"></a>Hoe kan ik gebruikers inrichten voor AD DS?
 
@@ -87,8 +88,8 @@ In de volgende illustratie wordt deze omgeving verduidelijkt.
 
 U kunt alle componenten op één computer uitvoeren.
 
->[!NOTE]
-Zie de [FIM Installation Guide](http://go.microsoft.com/FWLink/p/?LinkId=165845) (FIM-installatiehandleiding) voor meer informatie over het instellen van MIM.
+> [!NOTE]
+> Zie de [FIM Installation Guide](http://go.microsoft.com/FWLink/p/?LinkId=165845) (FIM-installatiehandleiding) voor meer informatie over het instellen van MIM.
 
 ## <a name="scenario-components-list"></a>Lijst met componenten voor het scenario
 
@@ -160,8 +161,8 @@ Als u een gebruiker in AD DS wilt maken, dient u de DN van het object uit te lat
 
 In AD DS maken gebruikers nog steeds gebruik van het kenmerk sAMAccountName om zich aan te melden bij de adreslijstservice. Als u geen waarde voor dit kenmerk opgeeft, genereert de adreslijstservice er een willekeurige waarde voor. De willekeurige waarden zijn echter niet gebruikersvriendelijk. Daarom maakt een gebruikersvriendelijke versie van dit kenmerk gewoonlijk deel uit van een export naar AD DS. Gebruikers kunnen zich pas aanmelden bij AD DS, als u een wachtwoord opneemt dat is gemaakt met behulp van het kenmerk unicodePwd in uw exportlogica.
 
->[!Note]                                
-Zorg ervoor dat de waarde die u opgeeft als unicodePwd in overeenstemming is met het wachtwoordbeleid van de doel-AD DS.
+> [!Note]
+> Zorg ervoor dat de waarde die u opgeeft als unicodePwd in overeenstemming is met het wachtwoordbeleid van de doel-AD DS.
 
 Als u een wachtwoord instelt voor AD DS-accounts, moet u ook een account maken als een ingeschakeld account. Stel hiervoor het kenmerk userAccountControl in. Zie [Using FIM to Enable or Disable Accounts in Active Directory](http://go.microsoft.com/FWLink/p/?LinkId=189658) (FIM gebruiken voor het in- of uitschakelen van accounts in Active Directory) voor meer informatie over het kenmerk userAccountControl.
 
@@ -180,8 +181,8 @@ Zie de volgende onderwerpen in de Help voor meer informatie:
 - De beheeragent voor Active Directory gebruiken
 - Mappartities configureren
 
->[!Note]
-Zorg dat u een importkenmerkstroomregel hebt geconfigureerd voor het kenmerk ExpectedRulesList.
+> [!Note]
+> Zorg dat u een importkenmerkstroomregel hebt geconfigureerd voor het kenmerk ExpectedRulesList.
 
 ### <a name="step-4-create-the-fabrikam-fimma-management-agent"></a>Stap 4: de Fabrikam FIMMA-beheeragent maken
 
@@ -194,7 +195,7 @@ In de volgende tabel worden de belangrijkste scenariospecifieke instellingen ver
 | Ontwerppagina voor beheeragenten | Configuration |
 |------------|------------------------------------|
 | Beheeragent maken | 1. **Beheeragent voor:** FIM-servicebeheerAgent <br/> 2. **Naam:** Fabrikam FIMMA |
-| Verbinding maken met database     | Gebruik de volgende instellingen: <br/> &#183; **Server:** localhost <br/> &#183; **Database:** FIMService <br/> &#183; **Basisadres FIM-service:** http://localhost:5725 <br/> <br/> Geef de informatie op over het account dat u voor deze beheeragent hebt gemaakt. |
+| Verbinding maken met database     | Gebruik de volgende instellingen: <br/> &#183; **Server:** localhost <br/> &#183; **Database:** FIMService <br/> &#183;**Basisadres van de FIM-Service:** http://localhost:5725 <br/> <br/> Geef de informatie op over het account dat u voor deze beheeragent hebt gemaakt. |
 | Objecttypen selecteren                                     | Naast de reeds geselecteerde objecttypen selecteert u **Persoon.**   |
 | Objecttypetoewijzingen configureren                          | Voeg naast de al bestaande objecttypetoewijzingen een toewijzing toe voor het **Gegevensbronobjecttype** Persoon in het **Metaverseobjecttype** Persoon. |
 | Kenmerkstroom configureren                                | Voeg naast de al bestaande kenmerkstroomtoewijzingen de volgende kenmerkstroomtoewijzingen toe: <br/><br/> ![Kenmerkstroom](media/how-provision-users-adds/image018.jpg) |
@@ -211,8 +212,8 @@ Zie de volgende onderwerpen in de Help voor meer informatie:
 
 -   Mappartities configureren
 
->[!NOTE]
- Zorg dat u een importkenmerkstroomregel hebt geconfigureerd voor het kenmerk ExpectedRulesList.
+> [!NOTE]
+>  Zorg dat u een importkenmerkstroomregel hebt geconfigureerd voor het kenmerk ExpectedRulesList.
 
 ### <a name="step-5-create-the-run-profiles"></a>Stap 5: de uitvoerprofielen maken
 
@@ -226,12 +227,12 @@ In de volgende tabel worden de uitvoerprofielen vermeld die u moet maken voor he
 Maak aan de hand van de vorige tabel uitvoerprofielen voor elke beheeragent.
 
 
->[!Note]
-Zie Create a Management Agent Run Profile (Een uitvoerprofiel voor beheeragenten maken) in MIM Help voor meer informatie.                                                                                                                  
-
-
->[!Important]
- Controleer of het inrichten in uw omgeving is ingeschakeld. Voer hiertoe het volgende script uit: Using Windows PowerShell to Enable Provisioning (Windows PowerShell gebruiken om inrichten in te schakelen) (http://go.microsoft.com/FWLink/p/?LinkId=189660).
+> [!Note]
+> Zie Create a Management Agent Run Profile (Een uitvoerprofiel voor beheeragenten maken) in MIM Help voor meer informatie.                                                                                                                  
+> 
+> 
+> [!Important]
+>  Controleer of het inrichten in uw omgeving is ingeschakeld. U kunt dit doen door het uitvoeren van het script, met behulp van Windows PowerShell voor het inrichten van inschakelen (http://go.microsoft.com/FWLink/p/?LinkId=189660).
 
 
 ## <a name="configuring-the-fim-service"></a>De FIM-service configureren
@@ -243,7 +244,7 @@ Voor het scenario in deze handleiding moet u een inrichtingsbeleid voor inrichte
 
 Het doel van dit inrichtingsbeleid is om groepen binnen het bereik te brengen van de regel voor uitgaande synchronisatie van Active Directory-gebruikers. Als u de resource binnen het bereik van de synchronisatieregel hebt gebracht, schakelt u de synchronisatie-engine in om uw resource volgens uw configuratie in te richten voor AD DS.
 
-Als u de FIM-service wilt configureren, gaat u in Windows Internet Explorer® naar http://localhost/identitymanagement. Als u het inrichtingsbeleid wilt maken, gaat u op de pagina van de MIM-portal naar de gerelateerde pagina's van de sectie Beheer. Verifieer de configuratie door het script uit te voeren in [Using Windows PowerShell to document your provisioning policy configuration](http://go.microsoft.com/FWLink/p/?LinkId=189661) (Windows PowerShell gebruiken om de configuratie voor het inrichtingsbeleid te documenteren).
+Voor het configureren van de FIM-Service, navigeert u in Windows Internet Explorer® naar http://localhost/identitymanagement. Als u het inrichtingsbeleid wilt maken, gaat u op de pagina van de MIM-portal naar de gerelateerde pagina's van de sectie Beheer. Verifieer de configuratie door het script uit te voeren in [Using Windows PowerShell to document your provisioning policy configuration](http://go.microsoft.com/FWLink/p/?LinkId=189661) (Windows PowerShell gebruiken om de configuratie voor het inrichtingsbeleid te documenteren).
 
 ### <a name="step-6-create-the-synchronization-rule"></a>Stap 6: de synchronisatieregel maken
 
@@ -252,7 +253,7 @@ In de volgende tabellen wordt de configuratie getoond van de vereiste inrichting
 | Configuratie van de synchronisatieregel                                                                         |                                                                             |                                                           
 |------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------|-----------------------------------------------------------|
 | Naam                                                                                                       | Regel voor uitgaande synchronisatie van Active Directory-gebruiker                         |                                                          
-| Beschrijving                                                                                               |                                                                             |                                                           
+| Description                                                                                               |                                                                             |                                                           
 | Prioriteit                                                                                                | 2                                                                           |                                                           
 | Richting gegevensstroom   | Uitgaand             |       
 | Afhankelijkheid       |         |                                         
@@ -293,8 +294,8 @@ In de volgende tabellen wordt de configuratie getoond van de vereiste inrichting
 
 
 
- >[!NOTE]
- Belangrijk: Verifieer dat u Alleen initiële stroom hebt geselecteerd voor de kenmerkstroom met de DN als doel.                                                                          
+> [!NOTE]
+>  Belangrijk: Verifieer dat u Alleen initiële stroom hebt geselecteerd voor de kenmerkstroom met de DN als doel.                                                                          
 
 ### <a name="step-7-create-the-workflow"></a>Stap 7: De werkstroom maken
 
@@ -303,7 +304,7 @@ Het doel van de AD-inrichtingswerkstroom is om de inrichtingssynchronisatieregel
 | Werkstroomconfiguratie               |                                                                 |
 |--------------------------------------|-----------------------------------------------------------------|
 | Naam                                 | Inrichtingswerkstroom van Active Directory-gebruiker                     |
-| Beschrijving                          |                                                                 |
+| Description                          |                                                                 |
 | Werkstroomtype                        | Actie                                                          |
 | Uitvoeren bij beleidsupdates                 | False                                                           |
 
@@ -322,7 +323,7 @@ De vereiste MPR is van het type Setovergang en wordt getriggerd wanneer een reso
 | MPR-configuratie                    |                                                             |
 |--------------------------------------|-------------------------------------------------------------|
 | Naam                                 | Beheerbeleidsregel voor inrichting van AD-gebruikers                 |
-| Beschrijving                          |                                                             |
+| Description                          |                                                             |
 | Type                                 | Setovergang                                              |
 | Verleent toestemmingen                   | False                                                       |
 | Uitgeschakeld                             | False                                                       |
@@ -365,8 +366,8 @@ In de volgende tabellen worden de uitvoerprofielen vermeld die onderdeel zijn va
 
 
 
->[!NOTE]
-Controleer of de regel voor uitgaande synchronisatie is geprojecteerd in de metaverse.
+> [!NOTE]
+> Controleer of de regel voor uitgaande synchronisatie is geprojecteerd in de metaverse.
 
 ## <a name="testing-the-configuration"></a>De configuratie testen
 
@@ -490,8 +491,8 @@ In FIM moet elke exportbewerking worden gevolgd door een delta-importbewerking o
 
 Voer het uitvoerprofiel uit volgens de instructies in deze sectie.
 
->[!IMPORTANT]
-Elk uitvoerprofiel moet zonder fouten worden voltooid.
+> [!IMPORTANT]
+> Elk uitvoerprofiel moet zonder fouten worden voltooid.
 
 ### <a name="step-14-verify-the-provisioned-user-in-ad-ds"></a>Stap 14: de ingerichte gebruiker in AD DS inrichten
 

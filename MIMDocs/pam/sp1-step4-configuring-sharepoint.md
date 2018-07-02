@@ -1,7 +1,7 @@
 ---
 title: Stap 4 SharePoint configureren
 description: Dit is stap 4 van de procedure voor het configureren van PAM met behulp van scripts. In deze stap gaat u SharePoint configureren zodat u SharePoint kunt gebruiken als onderdeel van een PAM-implementatie.
-keywords: 
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: MBaldwin
@@ -10,19 +10,20 @@ ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: f8d033bec440c6efed26dd959acc713638258dd3
-ms.sourcegitcommit: 8edd380f54c3e9e83cfabe8adfa31587612e5773
+ms.openlocfilehash: e46b7cf75eb60930441e309448773353668ed454
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/19/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289625"
 ---
 # <a name="step-4-configuring-sharepoint"></a>Stap 4 SharePoint configureren
 
->[!div class="step-by-step"]
-[« Stap 3](sp1-step3-installing-configuring-sql.md)
-[Stap 5 »](sp1-step5-configuring-pam.md)
+> [!div class="step-by-step"]
+> [« Stap 3](sp1-step3-installing-configuring-sql.md)
+> [Stap 5 »](sp1-step5-configuring-pam.md)
 
 Voor SharePoint moet SharePoint Foundation 2013 met SP 1 zijn geïnstalleerd.
 
@@ -36,7 +37,7 @@ Voor servers via domeinen moet u zich aanmelden als MIMAdmin
 Voor werkgroepservers
 
 1. Voer PowerShell uit als Administrator
-2.  cd $env:SYSTEMDRIVE\PAM
+2.  cd $env: SYSTEMDRIVE\PAM
 3.  .\PAMDeployment.ps1
 4. Selecteer menuoptie 4 (SharePoint Setup)
 
@@ -51,6 +52,6 @@ Na de installatie wordt de gebruikersinterface voor de configuratie van SharePoi
 
 Meer informatie vindt u in de sectie **SharePoint configureren** in [Stap 3 - Een PAM-server voorbereiden](/microsoft-identity-manager/pam/step-3-prepare-pam-server) Wanneer deze stap is voltooid, voert u het script .\PAMDeployment.ps1 opnieuw uit en selecteert u optie 4 (SharePoint setup) om deze stap te voltooien.
 
->[!div class="step-by-step"]
-[« Stap 3](sp1-step3-installing-configuring-sql.md)
-[Stap 5 »](sp1-step5-configuring-pam.md)
+> [!div class="step-by-step"]
+> [« Stap 3](sp1-step3-installing-configuring-sql.md)
+> [Stap 5 »](sp1-step5-configuring-pam.md)

@@ -12,18 +12,19 @@ ms.technology: security
 ms.assetid: 2585e9c5-ce34-46c7-bdcf-8c08773901dc
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: d2f8c000205aacafaeb4e159ef692e9666b4b965
-ms.sourcegitcommit: a98a4c1aee12016d480c400f4ff2c6aadb6518ee
+ms.openlocfilehash: c68b33b2ff28d75b6f4e63fa8caf0c87727a5927
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289394"
 ---
 # <a name="install-mim-2016-mim-synchronization-service"></a>MIM 2016: MIM-synchronisatieservice installeren
 
->[!div class="step-by-step"]
-[« Exchange Server](prepare-server-exchange.md)
-[MIM-service en -portal »](install-mim-service-portal.md)
-
+> [!div class="step-by-step"]
+> [« Exchange Server](prepare-server-exchange.md)
+> [MIM-service en -portal »](install-mim-service-portal.md)
+> 
 > [!NOTE]
 > In deze stapsgewijze instructies wordt gebruikgemaakt van voorbeeldnamen en -waarden van een bedrijf met de naam Contoso. Vervang deze door uw eigen namen en waarden. Bijvoorbeeld:
 > - Naam van de domeincontroller - **corpdc**
@@ -31,7 +32,7 @@ ms.lasthandoff: 05/03/2018
 > - Naam van de MIM-Service-Server: **corpservice**
 > - Naam van de MIM-synchronisatieserver: **corpsync**
 > - De naam van de SQL Server - **corpsql**
-> - Wachtwoord - **Pass@word1**
+> - Wachtwoord - <strong>Pass@word1</strong>
 
 Stel eerst het installatiepakket in voordat u de Microsoft Identity Manager 2016-onderdelen installeert.
 
@@ -55,37 +56,37 @@ Stel eerst het installatiepakket in voordat u de Microsoft Identity Manager 2016
 
     ![Afbeelding van Aangepaste installatie](media/install-mim-sync/MIM_Install2.png)
 
-6.  Selecteer het volgende in het configuratiescherm voor de Sync-servicedatabase:
+6. Selecteer het volgende in het configuratiescherm voor de Sync-servicedatabase:
 
-    1.  De SQL-Server bevindt zich op: **een externe computer** aangeroepen **corpsql.contoso.com**.
+   1.  De SQL-Server bevindt zich op: **een externe computer** aangeroepen **corpsql.contoso.com**.
 
-    2.  De SQL Server-exemplaar: **het standaardexemplaar**
+   2.  De SQL Server-exemplaar: **het standaardexemplaar**
 
-    ![Afbeelding voor de databaseverbinding](media/install-mim-sync/MIM_Install3.png)
+   ![Afbeelding voor de databaseverbinding](media/install-mim-sync/MIM_Install3.png)
 
-7.  Configureer het synchronisatieserviceaccount volgens het account dat u eerder hebt gemaakt:
+7. Configureer het synchronisatieserviceaccount volgens het account dat u eerder hebt gemaakt:
 
-    1.  Serviceaccount: *MIMSync*
+   1. Serviceaccount: *MIMSync*
 
-    2.  Wachtwoord: *Pass@word1*
+   2. Wachtwoord: <em>Pass@word1</em>
 
-    3.  Serviceaccountdomein of naam van de lokale computer: *contoso*
+   3. Serviceaccountdomein of naam van de lokale computer: *contoso*
 
-    ![Afbeelding voor het serviceaccount](media/install-mim-sync/MIM_Install4.png)
+   ![Afbeelding voor het serviceaccount](media/install-mim-sync/MIM_Install4.png)
 
-8.  Geef de betreffende beveiligingsgroepen op voor het installatieprogramma van de MIM Sync-service:
+8. Geef de betreffende beveiligingsgroepen op voor het installatieprogramma van de MIM Sync-service:
 
-    1. Beheerder = *contoso\MIMSyncAdmins*
+   1. Beheerder = *contoso\MIMSyncAdmins*
 
-    2. Operator = *contoso\MIMSyncOperators*
+   2. Operator = *contoso\MIMSyncOperators*
 
-    3. Verbinding = *contoso\MIMSyncJoiners*
+   3. Verbinding = *contoso\MIMSyncJoiners*
 
-    4. Browsen met connectoren = *contoso\MIMSyncBrowse*
+   4. Browsen met connectoren = *contoso\MIMSyncBrowse*
 
-    5. WMI-wachtwoordbeheer = *contoso\MIMSyncPasswordReset*
+   5. WMI-wachtwoordbeheer = *contoso\MIMSyncPasswordReset*
 
-    ![Afbeelding voor de beveiligingsgroepen](media/install-mim-sync/MIM_Install5.png)
+   ![Afbeelding voor de beveiligingsgroepen](media/install-mim-sync/MIM_Install5.png)
 
 9. Schakel in het scherm voor de beveiligingsinstellingen de optie **Firewallregels voor binnenkomende RPC-communicatie inschakelen** in en klik op **Volgende**.
 
@@ -103,6 +104,6 @@ Stel eerst het installatiepakket in voordat u de Microsoft Identity Manager 2016
 
     5. U moet zich afmelden en weer aanmelden om de wijzigingen voor een groepslidmaatschap door te voeren. Klik op **Ja** om u af te melden.
 
->[!div class="step-by-step"]  
-[« Exchange Server](prepare-server-exchange.md)
-[MIM-service en -portal »](install-mim-service-portal.md)
+> [!div class="step-by-step"]  
+> [« Exchange Server](prepare-server-exchange.md)
+> [MIM-service en -portal »](install-mim-service-portal.md)

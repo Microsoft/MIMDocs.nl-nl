@@ -12,22 +12,23 @@ ms.technology: security
 ms.assetid: 5e532b67-64a6-4af6-a806-980a6c11a82d
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 736d933f2c62d440abafdab27f82b3b1ba0f9a06
-ms.sourcegitcommit: 48f89d555c0ac7caa97d149ee42e0b9ef6ccc5f5
+ms.openlocfilehash: 119dca043ec478e68317c14103204da2482eb001
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/23/2018
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36290149"
 ---
 # <a name="install-mim-2016-synchronize-active-directory-and-mim-service"></a>MIM 2016 installeren: Active Directory en de MIM-service synchroniseren
 
->[!div class="step-by-step"]
-[« MIM-service en -portal](install-mim-service-portal.md)
-
+> [!div class="step-by-step"]
+> [« MIM-service en -portal](install-mim-service-portal.md)
+> 
 > [!NOTE]
 > In deze stapsgewijze instructies wordt gebruikgemaakt van voorbeeldnamen en -waarden van een bedrijf met de naam Contoso. Vervang deze door uw eigen namen en waarden. Bijvoorbeeld:
 > - Naam van de domeincontroller: **mimservername**
 > - Domeinnaam: **contoso**
-> - Wachtwoord - **Pass@word1**
+> - Wachtwoord - <strong>Pass@word1</strong>
 
 Er zijn voor de MIM-synchronisatieservice (Sync) standaard geen connectoren geconfigureerd.  Normaal gesproken wordt eerst met MIM Sync de database voor de MIM-service gevuld met bestaande Active Directory-accounts. U gebruikt hiervoor de MIM-synchronisatieservice.
 
@@ -39,7 +40,7 @@ Wanneer u een MIM-beheeragent configureert, moet u een gebruikersaccount opgeven
 > [!NOTE]
 > Het account dat u voor de MIM-beheeragent gebruikt, moet hetzelfde account zijn als het account dat u tijdens de installatie van de MIM-service hebt opgegeven.
 
-###<a name="to-create-the-mim-ma"></a>De MIM-beheeragent maken
+### <a name="to-create-the-mim-ma"></a>De MIM-beheeragent maken
 
 1.  Open Synchronization Service Manager.
 
@@ -429,5 +430,5 @@ Hanteer de volgende stappen om elk van de drie uitvoeringsprofielen uit te voere
     - Selecteer in de lijst **Uitvoeringsprofielen** het uitvoeringsprofiel dat u wilt uitvoeren.
     - Klik op **OK** om het uitvoeringsprofiel te starten.
 
->[!div class="step-by-step"]
-[« MIM-service en -portal](install-mim-service-portal.md)
+> [!div class="step-by-step"]
+> [« MIM-service en -portal](install-mim-service-portal.md)

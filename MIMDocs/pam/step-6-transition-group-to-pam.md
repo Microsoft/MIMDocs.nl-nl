@@ -1,7 +1,7 @@
 ---
 title: PAM implementeren - Stap 6 - Groep verplaatsen | Microsoft Docs
 description: Een groep migreren naar het PRIV-forest, zodat de groep kan worden beheerd met Privilege Access Management.
-keywords: 
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -12,17 +12,18 @@ ms.technology: active-directory-domain-services
 ms.assetid: 7b689eff-3a10-4f51-97b2-cb1b4827b63c
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 550ad1e68ed8464dc7361e7a35ef35ee97753a9a
-ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
+ms.openlocfilehash: 3a7359c664e1c4aeacbc571242c2b348be186a89
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289581"
 ---
 # <a name="step-6--transition-a-group-to-privileged-access-management"></a>Stap 6 – Een groep overzetten naar Privileged Access Management
 
->[!div class="step-by-step"]
-[«Stap 5 ](step-5-establish-trust-between-priv-corp-forests.md)
-[stap 7 »](step-7-elevate-user-access.md)
+> [!div class="step-by-step"]
+> [«Stap 5 ](step-5-establish-trust-between-priv-corp-forests.md)
+> [stap 7 »](step-7-elevate-user-access.md)
 
 U moet PowerShell-cmdlets gebruiken om bevoorrechte accounts in het PRIV-forest te maken. Met deze cmdlets worden de volgende functies uitgevoerd:
 
@@ -42,26 +43,26 @@ De cmdlets moet eenmaal voor elke groep worden uitgevoerd en eenmaal voor elk li
    Import-Module ActiveDirectory
 ```
 
-3.  Maak voor demonstratiedoeleinden een overeenkomend gebruikersaccount in PRIV voor een gebruikersaccount in een bestaand forest.
+3. Maak voor demonstratiedoeleinden een overeenkomend gebruikersaccount in PRIV voor een gebruikersaccount in een bestaand forest.
 
-    Typ in PowerShell de volgende opdrachten.  Als u niet de naam *Jen* hebt gebruikt om eerder de gebruiker in contoso.local te maken, wijzigt u waar nodig de parameters van de opdracht. Het wachtwoord 'Pass@word1' is slechts een voorbeeld en moet worden gewijzigd in een unieke wachtwoordwaarde.
+   Typ in PowerShell de volgende opdrachten.  Als u niet de naam *Jen* hebt gebruikt om eerder de gebruiker in contoso.local te maken, wijzigt u waar nodig de parameters van de opdracht. Het wachtwoord 'Pass@word1' is slechts een voorbeeld en moet worden gewijzigd in een unieke wachtwoordwaarde.
 
- ```PowerShell
-        $sj = New-PAMUser –SourceDomain CONTOSO.local –SourceAccountName Jen
-        $jp = ConvertTo-SecureString "Pass@word1" –asplaintext –force
-        Set-ADAccountPassword –identity priv.Jen –NewPassword $jp
-        Set-ADUser –identity priv.Jen –Enabled 1
-  ```
+   ```PowerShell
+       $sj = New-PAMUser –SourceDomain CONTOSO.local –SourceAccountName Jen
+       $jp = ConvertTo-SecureString "Pass@word1" –asplaintext –force
+       Set-ADAccountPassword –identity priv.Jen –NewPassword $jp
+       Set-ADUser –identity priv.Jen –Enabled 1
+   ```
 
 4. Kopieer voor demonstratiedoeleinden een groep en het bijbehorende lid (Jen) van het CONTOSO- naar het PRIV-domein.
 
     Voer de volgende opdrachten uit en geef het wachtwoord van de CORP-domeinbeheerder (CONTOSO\Administrator) op als u hierom wordt gevraagd:
 
- ```PowerShell
+   ```PowerShell
         $ca = get-credential –UserName CONTOSO\Administrator –Message "CORP forest domain admin credentials"
         $pg = New-PAMGroup –SourceGroupName "CorpAdmins" –SourceDomain CONTOSO.local                 –SourceDC CORPDC.contoso.local –Credentials $ca
         $pr = New-PAMRole –DisplayName "CorpAdmins" –Privileges $pg –Candidates $sj
- ```
+   ```
 
     Ter referentie moeten voor de opdracht **New-PAMGroup** de volgende parameters worden gebruikt:
 
@@ -70,19 +71,19 @@ De cmdlets moet eenmaal voor elke groep worden uitgevoerd en eenmaal voor elk li
      -   De CORP-forest Domain Controller NetBIOS-naam  
      -   De referenties van een gebruiker met beheerdersrechten domein in het CORP-forest  
 
-5.  (Optioneel) Verwijder op CORPDC het account van Jen uit de groep **CONTOSO CorpAdmins** als het account nog aanwezig is in deze groep.  Dit is alleen nodig voor demonstratiedoeleinden om duidelijk te maken hoe machtigingen kunnen worden gekoppeld met accounts die zijn gemaakt in het PRIV-forest.
+5. (Optioneel) Verwijder op CORPDC het account van Jen uit de groep **CONTOSO CorpAdmins** als het account nog aanwezig is in deze groep.  Dit is alleen nodig voor demonstratiedoeleinden om duidelijk te maken hoe machtigingen kunnen worden gekoppeld met accounts die zijn gemaakt in het PRIV-forest.
 
-    1.  Meld u aan bij CORPDC als *CONTOSO\Administrator*.
+   1.  Meld u aan bij CORPDC als *CONTOSO\Administrator*.
 
-    2.  Start PowerShell, voer de volgende opdracht uit en bevestig de wijziging.
+   2.  Start PowerShell, voer de volgende opdracht uit en bevestig de wijziging.
 
-        ```PowerShell
-        Remove-ADGroupMember -identity "CorpAdmins" -Members "Jen"
-        ```
+       ```PowerShell
+       Remove-ADGroupMember -identity "CorpAdmins" -Members "Jen"
+       ```
 
 
 Als u wilt demonstreren dat forest-overschrijdende toegangsrechten geldig zijn voor het beheerdersaccount van de gebruiker, gaat u door met de volgende stap.
 
->[!div class="step-by-step"]
-[«Stap 5 ](step-5-establish-trust-between-priv-corp-forests.md)
-[stap 7 »](step-7-elevate-user-access.md)
+> [!div class="step-by-step"]
+> [«Stap 5 ](step-5-establish-trust-between-priv-corp-forests.md)
+> [stap 7 »](step-7-elevate-user-access.md)

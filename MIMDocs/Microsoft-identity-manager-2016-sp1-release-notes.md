@@ -12,11 +12,12 @@ ms.technology: security
 ms.assetid: ccdd8a9f-02da-440a-81a8-354800dcd2a8
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 98d21076801bbe60b7a2d2d5b7e1c41d4bce1b4a
-ms.sourcegitcommit: c773edc8262b38df50d82dae0f026bb49500d0a4
+ms.openlocfilehash: 9b12f8bebf44847d76e94fe083266b1b32b608a9
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/25/2018
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36290285"
 ---
 # <a name="whats-new-for-microsoft-identity-manager-2016-service-pack-1"></a>Nieuw in Microsoft Identity Manager 2016 Service Pack 1 #
 
@@ -42,8 +43,8 @@ We stellen uw feedback op prijs. Feedback of opmerkingen voor het productteam ku
 
 - **PAM PRIV (bastionhost) forestondersteuning voor het Windows Server 2016-functionaliteitsniveau:** de MIM PAM-service kan worden geconfigureerd in een omgeving met domeincontrollers die worden uitgevoerd op het functionele Active Directory Domain Services-forestniveau van Windows Server 2016. Als dit is geconfigureerd, wordt voor een Kerberos-ticket van een gebruiker een tijdslimiet ingesteld voor de resterende tijd van de activatie van de rol.
 
-    >[!Note]
-    Als u het forest-functionaliteitsniveau van Windows Server 2012 R2 in uw CORP-domein wilt behouden, is het raadzaam om [KB 2919442](https://support.microsoft.com/en-us/kb/2919442) en [KB 2919355](https://support.microsoft.com/en-us/kb/2919355) op de CORP-domeincontroller te installeren.
+  > [!Note]
+  >   Als u het forest-functionaliteitsniveau van Windows Server 2012 R2 in uw CORP-domein wilt behouden, is het raadzaam om [KB 2919442](https://support.microsoft.com/en-us/kb/2919442) en [KB 2919355](https://support.microsoft.com/en-us/kb/2919355) op de CORP-domeincontroller te installeren.
 
 - **Bevoegde uitbreiding van accounts in groepen, exclusief voor het PRIV-forest (bastion):** administrators kunnen de MIM-service van groepen en gebruikers exclusief informeren in het PRIV-forest. Hierdoor kunt u deze groepen en gebruikers opnemen in PAM-rollen.  Vervolgens kunnen de gebruikers worden geactiveerd voor een rol en toegewezen lidmaatschap aan groepen in het PRIV-forest.
 
@@ -51,8 +52,8 @@ We stellen uw feedback op prijs. Feedback of opmerkingen voor het productteam ku
 
 - **PAM-cmdlets voor de configuratie van authenticatiebeleidssilo’s:** Service Pack 1 introduceert nieuwe cmdlets om de beveiliging van uw bastionforest op te schroeven. Deze cmdlets maken automatisch een authenticatiebeleidssilo die gebonden is aan een authenticatiebeleidssjabloon.
 
-    >[!Note]
-    Deze cmdlets worden automatisch uitgevoerd als onderdeel van de implementatiescripts.
+  > [!Note]
+  >   Deze cmdlets worden automatisch uitgevoerd als onderdeel van de implementatiescripts.
 
 
 ## <a name="platform-support"></a>Platformondersteuning
@@ -77,8 +78,8 @@ Voordat u begint
 U moet de MIM-synchronisatie-engine upgraden voordat u de MIM-service en -portal bijwerkt.
 U moet een back-up maken van de MIMService- en MIM-Sync-databases.
 
-  1. Het Microsoft Identity Manager-onderdeel dat u wilt bijwerken, verwijderen
-  2. Nadat de verwijdering is voltooid, opent u de welkomstpagina FIMSplash.htm in uw installatiemedia
-  3. Het MIM-onderdeel selecteren dat u wilt bijwerken
-  4. Ga door met de installatie door de prompts te volgen
-    * Installatie van de MIM-service en -portal: als u Exchange Online als het e-mail-account selecteert, voert u het e-mailadres en de referenties van het Exchange Online-account in het volgende scherm in.
+1. Het Microsoft Identity Manager-onderdeel dat u wilt bijwerken, verwijderen
+2. Nadat de verwijdering is voltooid, opent u de welkomstpagina FIMSplash.htm in uw installatiemedia
+3. Het MIM-onderdeel selecteren dat u wilt bijwerken
+4. Ga door met de installatie door de prompts te volgen
+   * Installatie van de MIM-service en -portal: als u Exchange Online als het e-mail-account selecteert, voert u het e-mailadres en de referenties van het Exchange Online-account in het volgende scherm in.

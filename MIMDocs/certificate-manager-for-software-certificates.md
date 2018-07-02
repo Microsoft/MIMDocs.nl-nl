@@ -1,7 +1,7 @@
 ---
 title: Certificaten aanvragen in Certificate Manager met sjablonen | Microsoft Docs
 description: Informatie over het gebruik van de certificaatbeheerder voor het maken en vernieuwen van softwarecertificaten met profielsjablonen.
-keywords: 
+keywords: ''
 author: billmath
 ms.author: barclayn
 manager: mbaldwin
@@ -13,10 +13,11 @@ ms.assetid: fed5ada9-d80f-4825-aad7-4172ac5d71d3
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: aebf5af709f4f775ce13be49d8f9075a94e864a2
-ms.sourcegitcommit: f077508b5569e2a96084267879c5b6551e1e0905
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36290319"
 ---
 # <a name="create-software-certificates-with-certificate-manager"></a>Softwarecertificaten maken met de certificaatbeheerder
 U hoeft geen beheerder te zijn of over een virtuele smartcard te beschikken om softwarecertificaten te registreren en verlengen. Op een bepaald moment wordt u wel gevraagd toestemming te geven voor het bewerken van het certificaat. Dit is normaal.

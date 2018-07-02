@@ -12,17 +12,18 @@ ms.technology: active-directory-domain-services
 ms.assetid: 0e9993a0-b8ae-40e2-8228-040256adb7e2
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 9cb36a52525c538d0ac323a3342a9dd6b7f6e42e
-ms.sourcegitcommit: c773edc8262b38df50d82dae0f026bb49500d0a4
+ms.openlocfilehash: 960ec81d822e02a848c3ef9ac1b65f5fa0d9e61a
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/25/2018
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289452"
 ---
 # <a name="step-2---prepare-the-first-priv-domain-controller"></a>Stap 2: de eerste PRIV-domeincontroller voorbereiden
 
->[!div class="step-by-step"]
-[« Stap 1](step-1-prepare-corp-domain.md)
-[Stap 3 »](step-3-prepare-pam-server.md)
+> [!div class="step-by-step"]
+> [« Stap 1](step-1-prepare-corp-domain.md)
+> [Stap 3 »](step-3-prepare-pam-server.md)
 
 In deze stap maakt u een nieuw domein dat de bastionomgeving biedt voor verificatie door de beheerder.  Dit forest moet ten minste één domeincontroller hebben, en ten minste één lidserver. De lidserver worden geconfigureerd in de volgende stap.
 
@@ -52,11 +53,11 @@ Voeg de serverfuncties AD DS (Active Directory Domain Services) en DNS toe.
 
 2. Typ de volgende opdrachten om voor te bereiden voor een Windows Server Active Directory-installatie.
 
-  ```PowerShell
-  import-module ServerManager
+   ```PowerShell
+   import-module ServerManager
 
-  Install-WindowsFeature AD-Domain-Services,DNS –restart –IncludeAllSubFeature -IncludeManagementTools
-  ```
+   Install-WindowsFeature AD-Domain-Services,DNS –restart –IncludeAllSubFeature -IncludeManagementTools
+   ```
 
 ### <a name="configure-registry-settings-for-sid-history-migration"></a>Registerinstellingen voor de migratie van de SID-geschiedenis configureren
 
@@ -76,10 +77,10 @@ In dit document, wordt de naam priv.contoso.local gebruikt als de domeinnaam van
 
 1. Typ de volgende opdrachten in een PowerShell-venster om het nieuwe domein te maken.  Hiermee wordt ook een DNS-delegatie gemaakt in een bovenliggende domein (contoso.local) die is gemaakt in de vorige stap.  Als u van plan bent later de DNS te configureren, moet u de `CreateDNSDelegation -DNSDelegationCredential $ca`-parameters weglaten.
 
-  ```PowerShell
-  $ca= get-credential
-  Install-ADDSForest –DomainMode 6 –ForestMode 6 –DomainName priv.contoso.local –DomainNetbiosName priv –Force –CreateDNSDelegation –DNSDelegationCredential $ca
-  ```
+   ```PowerShell
+   $ca= get-credential
+   Install-ADDSForest –DomainMode 6 –ForestMode 6 –DomainName priv.contoso.local –DomainNetbiosName priv –Force –CreateDNSDelegation –DNSDelegationCredential $ca
+   ```
 
 2. Wanneer de pop-up wordt weergegeven, geeft u de referenties voor de CORP forestbeheerder op (bijvoorbeeld, de gebruikersnaam CONTOSO\\-beheerder en het bijbehorende wachtwoord uit stap 1).
 
@@ -95,69 +96,69 @@ Maak de gebruikers- en serviceaccounts voor de installatie van de MIM-service en
 
 2. Start PowerShell en typ de volgende opdrachten: Het wachtwoord 'Pass@word1' is slechts een voorbeeld en moet u een ander wachtwoord gebruiken voor de accounts.
 
-  ```PowerShell
-  import-module activedirectory
+   ```PowerShell
+   import-module activedirectory
 
-  $sp = ConvertTo-SecureString "Pass@word1" –asplaintext –force
+   $sp = ConvertTo-SecureString "Pass@word1" –asplaintext –force
 
-  New-ADUser –SamAccountName MIMMA –name MIMMA
+   New-ADUser –SamAccountName MIMMA –name MIMMA
 
-  Set-ADAccountPassword –identity MIMMA –NewPassword $sp
+   Set-ADAccountPassword –identity MIMMA –NewPassword $sp
 
-  Set-ADUser –identity MIMMA –Enabled 1 –PasswordNeverExpires 1
+   Set-ADUser –identity MIMMA –Enabled 1 –PasswordNeverExpires 1
 
-  New-ADUser –SamAccountName MIMMonitor –name MIMMonitor -DisplayName MIMMonitor
+   New-ADUser –SamAccountName MIMMonitor –name MIMMonitor -DisplayName MIMMonitor
 
-  Set-ADAccountPassword –identity MIMMonitor –NewPassword $sp
+   Set-ADAccountPassword –identity MIMMonitor –NewPassword $sp
 
-  Set-ADUser –identity MIMMonitor –Enabled 1 –PasswordNeverExpires 1
+   Set-ADUser –identity MIMMonitor –Enabled 1 –PasswordNeverExpires 1
 
-  New-ADUser –SamAccountName MIMComponent –name MIMComponent -DisplayName MIMComponent
+   New-ADUser –SamAccountName MIMComponent –name MIMComponent -DisplayName MIMComponent
 
-  Set-ADAccountPassword –identity MIMComponent –NewPassword $sp
+   Set-ADAccountPassword –identity MIMComponent –NewPassword $sp
 
-  Set-ADUser –identity MIMComponent –Enabled 1 –PasswordNeverExpires 1
+   Set-ADUser –identity MIMComponent –Enabled 1 –PasswordNeverExpires 1
 
-  New-ADUser –SamAccountName MIMSync –name MIMSync
+   New-ADUser –SamAccountName MIMSync –name MIMSync
 
-  Set-ADAccountPassword –identity MIMSync –NewPassword $sp
+   Set-ADAccountPassword –identity MIMSync –NewPassword $sp
 
-  Set-ADUser –identity MIMSync –Enabled 1 –PasswordNeverExpires 1
+   Set-ADUser –identity MIMSync –Enabled 1 –PasswordNeverExpires 1
 
-  New-ADUser –SamAccountName MIMService –name MIMService
+   New-ADUser –SamAccountName MIMService –name MIMService
 
-  Set-ADAccountPassword –identity MIMService –NewPassword $sp
+   Set-ADAccountPassword –identity MIMService –NewPassword $sp
 
-  Set-ADUser –identity MIMService –Enabled 1 –PasswordNeverExpires 1
+   Set-ADUser –identity MIMService –Enabled 1 –PasswordNeverExpires 1
 
-  New-ADUser –SamAccountName SharePoint –name SharePoint
+   New-ADUser –SamAccountName SharePoint –name SharePoint
 
-  Set-ADAccountPassword –identity SharePoint –NewPassword $sp
+   Set-ADAccountPassword –identity SharePoint –NewPassword $sp
 
-  Set-ADUser –identity SharePoint –Enabled 1 –PasswordNeverExpires 1
+   Set-ADUser –identity SharePoint –Enabled 1 –PasswordNeverExpires 1
 
-  New-ADUser –SamAccountName SqlServer –name SqlServer
+   New-ADUser –SamAccountName SqlServer –name SqlServer
 
-  Set-ADAccountPassword –identity SqlServer –NewPassword $sp
+   Set-ADAccountPassword –identity SqlServer –NewPassword $sp
 
-  Set-ADUser –identity SqlServer –Enabled 1 –PasswordNeverExpires 1
+   Set-ADUser –identity SqlServer –Enabled 1 –PasswordNeverExpires 1
 
-  New-ADUser –SamAccountName BackupAdmin –name BackupAdmin
+   New-ADUser –SamAccountName BackupAdmin –name BackupAdmin
 
-  Set-ADAccountPassword –identity BackupAdmin –NewPassword $sp
+   Set-ADAccountPassword –identity BackupAdmin –NewPassword $sp
 
-  Set-ADUser –identity BackupAdmin –Enabled 1 -PasswordNeverExpires 1
+   Set-ADUser –identity BackupAdmin –Enabled 1 -PasswordNeverExpires 1
 
-  New-ADUser -SamAccountName MIMAdmin -name MIMAdmin
+   New-ADUser -SamAccountName MIMAdmin -name MIMAdmin
 
-  Set-ADAccountPassword –identity MIMAdmin  -NewPassword $sp
+   Set-ADAccountPassword –identity MIMAdmin  -NewPassword $sp
 
-  Set-ADUser -identity MIMAdmin -Enabled 1 -PasswordNeverExpires 1
+   Set-ADUser -identity MIMAdmin -Enabled 1 -PasswordNeverExpires 1
 
-  Add-ADGroupMember "Domain Admins" SharePoint
+   Add-ADGroupMember "Domain Admins" SharePoint
 
-  Add-ADGroupMember "Domain Admins" MIMService
-  ```
+   Add-ADGroupMember "Domain Admins" MIMService
+   ```
 
 ### <a name="configure-auditing-and-logon-rights"></a>Controle- en aanmeldingsrechten configureren
 
@@ -201,11 +202,11 @@ U moet de controle instellen zodat de PAM-configuratie tot stand kan worden gebr
 
 19. Start als beheerder een PowerShell-venster en typ de volgende opdracht om de DC bij te werken met de groepsbeleidsinstellingen.
 
-  ```cmd
-  gpupdate /force /target:computer
-  ```
+    ```cmd
+    gpupdate /force /target:computer
+    ```
 
-  Na een minuut wordt de taak voltooid met het bericht 'Het bijwerken van het computerbeleid is voltooid'.
+    Na een minuut wordt de taak voltooid met het bericht 'Het bijwerken van het computerbeleid is voltooid'.
 
 
 ### <a name="configure-dns-name-forwarding-on-privdc"></a>Doorsturen van de DNS-naam op PRIVDC configureren
@@ -216,11 +217,11 @@ Configureer met PowerShell op PRIVDC het doorsturen van de DNS-naam zodat het PR
 
 2. Typ voor elk domein bovenaan elk bestaand forest de volgende opdracht, waarmee u het bestaande DNS-domein (bijvoorbeeld contoso.local) en het IP-adres van de hoofdserver van dat domein opgeeft.  
 
-  Als u in de vorige stap één domein contoso.local hebt gemaakt, geeft u vervolgens *10.1.1.31* op als het IP-adres van het virtuele netwerk van de CORPDC-computer.
+   Als u in de vorige stap één domein contoso.local hebt gemaakt, geeft u vervolgens *10.1.1.31* op als het IP-adres van het virtuele netwerk van de CORPDC-computer.
 
-  ```PowerShell
-  Add-DnsServerConditionalForwarderZone –name "contoso.local" –masterservers 10.1.1.31
-  ```
+   ```PowerShell
+   Add-DnsServerConditionalForwarderZone –name "contoso.local" –masterservers 10.1.1.31
+   ```
 
 > [!NOTE]
 > De andere forests moeten ook in staat zijn om DNS-query's te routeren voor het PRIV-forest naar deze domeincontroller.  Als er meerdere bestaande Active Directory-forests zijn, moet u ook een voorwaardelijke DNS-doorstuurserver toevoegen aan elk van deze forests.
@@ -229,12 +230,12 @@ Configureer met PowerShell op PRIVDC het doorsturen van de DNS-naam zodat het PR
 
 1. Voeg met behulp van PowerShell SPN's toe zodat SharePoint, PAM REST-API en de MIM-service Kerberos-verificatie kunnen gebruiken.
 
-  ```cmd
-  setspn -S http/pamsrv.priv.contoso.local PRIV\SharePoint
-  setspn -S http/pamsrv PRIV\SharePoint
-  setspn -S FIMService/pamsrv.priv.contoso.local PRIV\MIMService
-  setspn -S FIMService/pamsrv PRIV\MIMService
-  ```
+   ```cmd
+   setspn -S http/pamsrv.priv.contoso.local PRIV\SharePoint
+   setspn -S http/pamsrv PRIV\SharePoint
+   setspn -S FIMService/pamsrv.priv.contoso.local PRIV\MIMService
+   setspn -S FIMService/pamsrv PRIV\MIMService
+   ```
 
 > [!NOTE]
 > In de volgende stappen van dit document wordt beschreven hoe u MIM 2016-serveronderdelen op één computer installeert. Als u van plan bent een andere server toe te voegen voor maximale beschikbaarheid, moet u Kerberos extra configureren zoals beschreven in [FIM 2010: Kerberos Authentication Setup](http://social.technet.microsoft.com/wiki/contents/articles/3385.fim-2010-kerberos-authentication-setup.aspx) (FIM 2010: Kerberos-verificatie instellen).
@@ -254,13 +255,13 @@ Voer de volgende stappen uit op PRIVDC als een domeinbeheerder.
 8. Voer in het venster Gebruikers, computers, of groepen selecteren *MIMAdmin* in en klik op **Namen controleren**. Nadat de namen zijn onderstreept, klikt u op **OK** en vervolgens op **Volgende**.
 9. Selecteer **Aangepaste taak**, van toepassing op **Deze map**, met **Algemene machtigingen**.
 10. Selecteer het volgende in de lijst met bevoegdheden:
-  - **Lezen**
-  - **Schrijven**
-  - **Alle onderliggende objecten maken**
-  - **Alle onderliggende objecten verwijderen**
-  - **Alle eigenschappen lezen**
-  - **Alle eigenschappen schrijven**
-  - **SID-geschiedenis migreren** klikt u op **volgende** vervolgens **voltooien**.
+    - **Lezen**
+    - **Schrijven**
+    - **Alle onderliggende objecten maken**
+    - **Alle onderliggende objecten verwijderen**
+    - **Alle eigenschappen lezen**
+    - **Alle eigenschappen schrijven**
+    - **SID-geschiedenis migreren** klikt u op **volgende** vervolgens **voltooien**.
 
 11. Klik nog één keer met de rechtermuisknop op het domein **priv.contoso.local** en selecteer **Beheer delegeren**.  
 12. Klik op het tabblad Geselecteerde gebruikers en groepen op **Toevoegen**.  
@@ -271,9 +272,9 @@ Voer de volgende stappen uit op PRIVDC als een domeinbeheerder.
 
 17. Open een opdrachtprompt.  
 18. Controleer de toegangsbeheerlijst van het object Admin SD-houder in de PRIV-domeinen. Bijvoorbeeld, als uw domein 'priv.contoso.local' is, typt u de opdracht
-  ```cmd
-  dsacls "cn=adminsdholder,cn=system,dc=priv,dc=contoso,dc=local"
-  ```
+    ```cmd
+    dsacls "cn=adminsdholder,cn=system,dc=priv,dc=contoso,dc=local"
+    ```
 19. Werk de toegangsbeheerlijst indien nodig bij om ervoor te zorgen dat MIM-service en MIM-onderdeelservice lidmaatschappen van groepen kunnen bijwerken die zijn beveiligd door deze ACL.  Typ de opdracht:
 
 ```cmd
@@ -303,6 +304,6 @@ Zie voor meer informatie [securing privileged access workstations](https://techn
 
 In de volgende stap bereidt u een PAM-server voor.
 
->[!div class="step-by-step"]
-[« Stap 1](step-1-prepare-corp-domain.md)
-[Stap 3 »](step-3-prepare-pam-server.md)
+> [!div class="step-by-step"]
+> [« Stap 1](step-1-prepare-corp-domain.md)
+> [Stap 3 »](step-3-prepare-pam-server.md)

@@ -10,11 +10,12 @@ ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: ''
-ms.openlocfilehash: 2cff1f0b048a647198be6c05c658713750b41180
-ms.sourcegitcommit: c773edc8262b38df50d82dae0f026bb49500d0a4
+ms.openlocfilehash: 24e43d8ad886fcd7bfa7a9e694754b956f1659cd
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/25/2018
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36290268"
 ---
 # <a name="bhold-analytics-installation"></a>Installatie van BHOLD-analyse
 
@@ -28,7 +29,7 @@ Voordat u de module BHOLD-analyse installeert, moet u de belangrijkste BHOLD-mod
 
 Voordat u begint met het installeren van de module BHOLD-analyse, moet u worden voorbereid voor de informatie die de wizard Setup van BHOLD-analyse is vereist om de installatie te voltooien. Het werkblad voor het volgende kunt u gegevens vastleggen, zodat u gereed om te leveren wanneer deze nodig is.
 
-| **item**                                    | **Beschrijving**                                                                                                                                                                                                           | **Waarde**                                                                                                                                                                                                                                                                                                            |
+| **Item**                                    | **Beschrijving**                                                                                                                                                                                                           | **Waarde**                                                                                                                                                                                                                                                                                                            |
 |---------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Beveiligingsprovider worden gebruikt op de computer van het domein /** | Wanneer u selecteert, geeft u aan dat Active Directory Domain Services-beveiliging de toegang tot BHOLD Core beheert.                                                                                                                | Schakel het selectievakje in. **Belangrijk:** mislukt de installatie als dit selectievakje niet is ingeschakeld.                                                                                                                                                                                                                   |
 | **Domein**                                  | Hiermee geeft u het domein met het serviceaccount dat u hebt gemaakt bij het installeren van BHOLD-Core. Zie voor meer informatie [BHOLD Core-installatie](https://technet.microsoft.com/library/jj134095(v=ws.10).aspx). | Naam van het domein wordt automatisch opgegeven door de wizard. Wijzig de naam alleen als dit onjuist is. **Belangrijk:** de domeinnaam opgeven met de naam van de NetBIOS-(korte), niet de volledig gekwalificeerde domeinnaam (FQDN). Bijvoorbeeld, als de FQDN-naam van het domein fabrikam.com is, geef de domeinnaam als FABRIKAM. |
@@ -39,7 +40,7 @@ Voordat u begint met het installeren van de module BHOLD-analyse, moet u worden 
 
 Voor het installeren van de module BHOLD-analyse, meld u aan als lid van de groep Domeinadministrators, moet het volgende bestand downloaden en uitvoeren als beheerder op de server die u wilt de BHOLD-analyse-module installeren op:
 
-- BholdAnalytics*\<versie\>*\_Release.msi
+- BholdAnalytics<em>\<versie\></em>\_Release.msi
 
 Vervang *\<versie\>* met het versienummer van de release van BHOLD-analyse die u installeert.
 

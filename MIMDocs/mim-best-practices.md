@@ -1,7 +1,7 @@
 ---
 title: Aanbevolen procedures voor Microsoft Identity Manager 2016| Microsoft Docs
-description: 
-keywords: 
+description: ''
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -10,20 +10,21 @@ ms.topic: reference
 ms.prod: identity-manager-2016
 ms.service: microsoft-identity-manager
 ms.technology: security
-ms.assetid: 
-ms.openlocfilehash: bb967bfb43218384044e324c270d3d6b35d33afe
-ms.sourcegitcommit: b4513f0f72ac6efd5c2610863f4e3e8c8e65c860
+ms.assetid: ''
+ms.openlocfilehash: 9ef96b88942fd33107d9021ddddb90d0d80dbed1
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36290115"
 ---
 # <a name="microsoft-identity-manager-2016-best-practices"></a>Aanbevolen procedures voor Microsoft Identity Manager 2016
 
 In dit onderwerp worden de aanbevolen procedures beschreven voor het implementeren van en werken met Microsoft Identity Manager 2016 (MIM)
 
 ## <a name="sql-setup"></a>Installatie van SQL
->[!NOTE]
-In de volgende aanbevelingen voor het instellen van een server met SQL wordt uitgegaan van een SQL-exemplaar toegewezen aan de FIMService en een SQL-exemplaar toegewezen aan de FIMSynchronizationService-database. Als u de FIMService in een geconsolideerde omgeving uitvoert, brengt u wijzigingen aan die geschikt zijn voor uw configuratie.
+> [!NOTE]
+> In de volgende aanbevelingen voor het instellen van een server met SQL wordt uitgegaan van een SQL-exemplaar toegewezen aan de FIMService en een SQL-exemplaar toegewezen aan de FIMSynchronizationService-database. Als u de FIMService in een geconsolideerde omgeving uitvoert, brengt u wijzigingen aan die geschikt zijn voor uw configuratie.
 
 Configuratie van de SQL-server (Structured Query Language) is essentieel voor optimale systeemprestaties. Het bereiken van optimale MIM-prestaties in grootschalige implementaties is afhankelijk van de toepassing van aanbevolen procedures voor een server waarop SQL wordt uitgevoerd. Zie de volgende onderwerpen voor meer informatie over aanbevolen procedures voor SQL:
 
@@ -71,40 +72,40 @@ Het is belangrijk dat u de schijfvereisten van uw herstelmodel weet. De modus vo
 
 Afhankelijk van de hoeveelheid geheugen op de SQL-server en als u de SQL-server deelt met andere services (dat wil zeggen MIM 2016-service en MIM 2016-synchronisatieservice), wilt u mogelijk het geheugengebruik van SQL beperken. U kunt dit doen met de volgende procedure.
 
-1.  Start SQL Server Enterprise Manager.
+1. Start SQL Server Enterprise Manager.
 
-2.  Selecteer Nieuwe query.
+2. Selecteer Nieuwe query.
 
-3.  Voer de volgende query uit:
+3. Voer de volgende query uit:
 
-  ```SQL
-  USE master
+   ```SQL
+   USE master
 
-  EXEC sp_configure 'show advanced options', 1
+   EXEC sp_configure 'show advanced options', 1
 
-  RECONFIGURE WITH OVERRIDE
+   RECONFIGURE WITH OVERRIDE
 
-  USE master
+   USE master
 
-  EXEC sp_configure 'max server memory (MB)', 12000--- max=12G RECONFIGURE
-  WITH OVERRIDE
-  ```
+   EXEC sp_configure 'max server memory (MB)', 12000--- max=12G RECONFIGURE
+   WITH OVERRIDE
+   ```
 
-  In dit voorbeeld opnieuw geconfigureerd voor de SQL server voor het gebruik van niet meer dan 12 gigabyte (GB) aan geheugen.
+   In dit voorbeeld opnieuw geconfigureerd voor de SQL server voor het gebruik van niet meer dan 12 gigabyte (GB) aan geheugen.
 
-4.  Controleer de instelling met de volgende query:
+4. Controleer de instelling met de volgende query:
 
-  ```SQL
-  USE master
+   ```SQL
+   USE master
 
-  EXEC sp_configure 'max server memory (MB)'--- verify the setting
+   EXEC sp_configure 'max server memory (MB)'--- verify the setting
 
-  USE master
+   USE master
 
-  EXEC sp_configure 'show advanced options', 0
+   EXEC sp_configure 'show advanced options', 0
 
-  RECONFIGURE WITH OVERRIDE
-  ```
+   RECONFIGURE WITH OVERRIDE
+   ```
 
 ### <a name="backup-and-recovery-configuration"></a>Back-up en herstel configureren
 
@@ -169,11 +170,11 @@ Het is raadzaam om het indexeren van Microsoft Office SharePoint® uit te schake
 
 Deze sectie vindt een reeks stappen voor het verbeteren de prestaties van de initiële gegevens laden van het externe systeem naar MIM. Het is belangrijk te weten dat een aantal van deze stappen alleen worden uitgevoerd tijdens de eerste populatie van het systeem. Ze worden ingesteld na voltooiing van de belasting. Dit is een eenmalige bewerking en geen continue synchronisatie.
 
->[!NOTE]
-Zie voor meer informatie over het synchroniseren van gebruikers tussen MIM en Active Directory Domain Services (AD DS), [hoe maak ik een synchronisatie van gebruikers uit Active Directory naar FIM](http://go.microsoft.com/fwlink/?LinkID=188277) in de FIM-documentatie.
-
->[!IMPORTANT]
-Zorg ervoor dat u de aanbevolen procedures hebt toegepast die worden beschreven in de sectie SQL Setup van deze handleiding. 
+> [!NOTE]
+> Zie voor meer informatie over het synchroniseren van gebruikers tussen MIM en Active Directory Domain Services (AD DS), [hoe maak ik een synchronisatie van gebruikers uit Active Directory naar FIM](http://go.microsoft.com/fwlink/?LinkID=188277) in de FIM-documentatie.
+> 
+> [!IMPORTANT]
+> Zorg ervoor dat u de aanbevolen procedures hebt toegepast die worden beschreven in de sectie SQL Setup van deze handleiding. 
 
 ### <a name="step-1-configure-the-sql-server-for-initial-data-load"></a>Stap 1: De SQL-server configureren voor het initieel laden van gegevens
 Het initiële laden van gegevens kan lang duren zijn. Wanneer u van plan bent een grote hoeveelheid gegevens in eerste instantie te laden, kunt u de tijd die nodig zijn voor het vullen van de database tijdelijk zoekopdracht in volledige tekst uitschakelen en inschakelen het opnieuw nadat het exporteren van de MIM 2016-beheeragent (FIM MA) is voltooid verkorten.
@@ -191,8 +192,8 @@ ALTER FULLTEXT INDEX ON [fim].[ObjectValueString] SET CHANGE_TRACKING = MANUAL
 ALTER FULLTEXT INDEX ON [fim].[ObjectValueXml] SET CHANGE_TRACKING = MANUAL
 ```
 
->[!IMPORTANT]
-Het niet implementeren van deze procedures kan leiden tot een intensief gebruik van de schijfruimte, wat kan resulteren in onvoldoende schijfruimte. U vindt aanvullende informatie over dit onderwerp in [Recovery Model Overview (Overzicht van herstelmodellen)](http://go.microsoft.com/fwlink/?LinkID=185370). [De FIM Backup and Restore Guide (Handleiding voor back-up en herstel](http://go.microsoft.com/fwlink/?LinkID=165864) bevat aanvullende informatie.
+> [!IMPORTANT]
+> Het niet implementeren van deze procedures kan leiden tot een intensief gebruik van de schijfruimte, wat kan resulteren in onvoldoende schijfruimte. U vindt aanvullende informatie over dit onderwerp in [Recovery Model Overview (Overzicht van herstelmodellen)](http://go.microsoft.com/fwlink/?LinkID=185370). [De FIM Backup and Restore Guide (Handleiding voor back-up en herstel](http://go.microsoft.com/fwlink/?LinkID=165864) bevat aanvullende informatie.
 
 ### <a name="step-2-apply-the-minimum-necessary-mim-configuration-during-the-load-process"></a>Stap 2: De minimaal benodigde MIM-configuratie toepassen tijdens het laadproces
 
@@ -288,8 +289,8 @@ De serviceaccounts mogen geen lid zijn van de lokale groep beheerders.
 
 Het serviceaccount van de FIM-synchronisatieservice mag geen lid zijn van de beveiligingsgroepen die worden gebruikt voor het beheren van toegang tot de FIM-synchronisatieservice (groepen die beginnen met FIMSync, bijvoorbeeld FIMSyncAdmins, enzovoort).
 
->[!IMPORTANT]
- Als u de opties selecteert voor het gebruik van hetzelfde account voor beide serviceaccounts en u de FIM-service en de FIM-synchronisatieservice scheidt, kunt u niet Toegang tot deze computer vanaf het netwerk weigeren instellen op de server voor de MMS-synchronisatieservice. Als de toegang wordt geweigerd, kan de FIM-service geen verbinding maken met de met de FIM-synchronisatieservice om de configuratie te wijzigen en wachtwoorden te beheren.
+> [!IMPORTANT]
+>  Als u de opties selecteert voor het gebruik van hetzelfde account voor beide serviceaccounts en u de FIM-service en de FIM-synchronisatieservice scheidt, kunt u niet Toegang tot deze computer vanaf het netwerk weigeren instellen op de server voor de MMS-synchronisatieservice. Als de toegang wordt geweigerd, kan de FIM-service geen verbinding maken met de met de FIM-synchronisatieservice om de configuratie te wijzigen en wachtwoorden te beheren.
 
 ### <a name="password-reset-deployed-to-kiosk-like-computers-should-set-local-security-to-clear-virtual-memory-pagefile"></a>Voor wachtwoordherstel op computers bedoeld als een kiosk, moet de lokale beveiliging zijn ingesteld voor het wissen van het wisselbestand voor virtueel geheugen
 
@@ -357,9 +358,9 @@ SSL implementeren:
 
 28. Klik op Bewerkingen en vervolgens op Alternatieve toewijzingen voor toegang.
 
-29. Klik op http://servernaam.
+29. Klik op http://servername.
 
-30. Wijzig http://servernaam in https://servernaam en klik op OK.
+30. Wijziging http://servername naar https://servername, en klik op OK.
 
 31. Klik op Start, klik op Uitvoeren, typ iisreset en klik vervolgens op OK.
 
@@ -384,7 +385,7 @@ MIM 2016 schoont standaard om de 30 dagen verlopen systeemobjecten op, waaronder
 
 MIM biedt twee typen beheerbeleidsregels: aanvraag en setovergang:
 
--  Beheerbeleidsregel van het type aanvraag (RMPR)
+- Beheerbeleidsregel van het type aanvraag (RMPR)
 
   - Hiermee definieert u het toegangsbeheerbeleid (verificatie, autorisatie en actie) voor Create-, Read-, Update- of Delete-bewerkingen (CRUD) op resources.
   - Toegepast wanneer een CRUD-bewerking is uitgegeven voor een doelbron in MIM.
@@ -432,8 +433,8 @@ Machtigingen zijn in MIM gedefinieerd als een positieve bevestiging. Omdat MIM b
 
 Gebruik beheerbeleidsregels van het type setovergang (TMPR's) in plaats van RMPR's om aangepaste rechten te definiëren. TMPR's bieden een model op basis van status voor het toewijzen of verwijderen van rechten op basis van het lidmaatschap in de gedefinieerde overgangssets, of rollen, en de bijbehorende werkstroomactiviteiten. TMPR's moeten altijd worden gedefinieerd in paren, één voor resources die geleidelijk toetreden en één voor resources die geleidelijk verdwijnen. Daarnaast moet elke overgang-MPR afzonderlijke werkstromen bevatten voor de inrichting en het opheffen van de inrichting van activiteiten.
 
->[!NOTE]
-Elke werkstroom voor het opheffen van inrichtingen moet ervoor zorgen dat het kenmerk Uitvoeren bij beleidsupdates is ingesteld op Waar.
+> [!NOTE]
+> Elke werkstroom voor het opheffen van inrichtingen moet ervoor zorgen dat het kenmerk Uitvoeren bij beleidsupdates is ingesteld op Waar.
 
 #### <a name="enable-the-set-transition-in-mpr-last"></a>De setovergang In MPR last inschakelen
 

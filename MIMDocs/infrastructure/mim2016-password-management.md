@@ -1,7 +1,7 @@
 ---
 title: Wachtwoordbeheer voor Microsoft Identity Manager 2016 | Microsoft Docs
-description: 
-keywords: 
+description: ''
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -10,12 +10,13 @@ ms.topic: reference
 ms.prod: identity-manager-2016
 ms.service: microsoft-identity-manager
 ms.technology: security
-ms.assetid: 
-ms.openlocfilehash: 156551f4083c71ee7059e817213751393db5833e
-ms.sourcegitcommit: 5ba5d916c0ca1e5aa501592af0cef714bfdc8afe
+ms.assetid: ''
+ms.openlocfilehash: 86b8b9bdf5c6441d0708cd874742fa48b65177fa
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289360"
 ---
 # <a name="microsoft-identity-manager-2016-password-management"></a>Wachtwoordbeheer voor Microsoft Identity Manager 2016
 
@@ -61,8 +62,8 @@ De .NET-DLL voor wachtwoordextensie wordt aangeroepen als er een wachtwoord moet
 
 Wachtwoordsynchronisatie werkt met de PCNS voor een Active Directory-domein. Hierbij worden wachtwoordwijzigingen die afkomstig zijn van Active Directory automatisch doorgegeven naar andere verbonden gegevensbronnen. Hiervoor wordt MIM uitgevoerd als een RPC-server (server voor externe procedureaanroepen) die meldingen voor wachtwoordwijzigingen van een Active Directorydomeincontroller detecteert. Als de aanvraag voor een wachtwoordwijziging is ontvangen en geverifieerd, wordt deze door MIM verwerkt en doorgegeven aan de desbetreffende beheeragents.
 
->[!IMPORTANT]
-Bidirectionele wachtwoordsynchronisatie wordt in MIM niet ondersteund. Het configureren van bidirectionele wachtwoordsynchronisatie kan een loop veroorzaken. Het gevolg hiervan is extra verbruik van serverresources en het kan tevens negatieve gevolgen hebben voor zowel Active Directory als MIM.
+> [!IMPORTANT]
+> Bidirectionele wachtwoordsynchronisatie wordt in MIM niet ondersteund. Het configureren van bidirectionele wachtwoordsynchronisatie kan een loop veroorzaken. Het gevolg hiervan is extra verbruik van serverresources en het kan tevens negatieve gevolgen hebben voor zowel Active Directory als MIM.
 
 De PCNS wordt uitgevoerd op elke Active Directory domeincontroller. De systemen die de wachtwoordmeldingen ontvangen, staan bekend als de doelen. De MIM-server moet worden geconfigureerd als een PCNS-doel in Active Directory voordat er wachtwoordmeldingen worden verzonden. In de PCNS-configuratie moet een opnamegroep en eventueel een uitsluitingsgroep worden gedefinieerd. Deze groepen worden gebruikt om de stroom gevoelige wachtwoorden uit het domein te beperken. Als u bijvoorbeeld wachtwoorden voor alle gebruikers wilt verzenden, maar geen beheerwachtwoorden, kunt u Domeingebruikers als opnamegroep kiezen en Domeinbeheerders als uitsluitingsgroep. Zie [Using Password Synchronization](https://technet.microsoft.com/library/jj590288(v=ws.10).aspx) Wachtwoordsynchronisatie gebruiken) voor meer informatie over het configureren van de meldingsservice voor wachtwoordwijzigingen
 
@@ -149,7 +150,7 @@ In het ideale geval wordt een door de gebruiker gewijzigd wachtwoord foutloos ge
 
 Sommige fouten zijn dermate ernstig dat de bewerking ook na zeer veel nieuwe pogingen niet slaagt. In deze gevallen wordt er een foutgebeurtenis gelogd en wordt het proces beëindigd. De volgende gebeurtenissen worden niet opnieuw geprobeerd:
 
-| Gebeurtenis | Ernst    | Beschrijving                                                                                                                                                            |
+| Gebeurtenis | Ernst    | Description                                                                                                                                                            |
 |-------|-------------|-----------|
 | 6919  | Informatie | Een instelbewerking voor wachtwoordsynchronisatie wordt niet uitgevoerd omdat het tijdstempel verouderd is.                                                                      |
 | 6921  | Fout       | De instelbewerking voor wachtwoordsynchronisatie wordt niet verwerkt omdat wachtwoordbeheer niet is ingeschakeld op de doelbeheerserver.                                |

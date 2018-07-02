@@ -10,11 +10,12 @@ ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: ''
-ms.openlocfilehash: 241ad68d3f4a692c87d0d2a0069781ad042453c7
-ms.sourcegitcommit: 39f34a38967baa9c0da6ae5b57734b222f5771a5
+ms.openlocfilehash: 25a511dc590b02019c65a688c9b2c8dc821fff50
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/12/2018
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36290081"
 ---
 # <a name="deploying-microsoft-identity-manager-certificate-manager-2016-mim-cm"></a>Microsoft Identity Manager Certificate Manager 2016 (MIM CM) implementeren
 
@@ -80,13 +81,13 @@ Het proces van uitbreiding van het schema is eenvoudig, maar moet worden gereali
     ![Diagram](media/mim-cm-deploy/image005.png)
 
 3. Voer het script resourceForestModifySchema.vbs één Forest scenario. Voer de scripts voor het scenario met bron-forest:
-    - DomeinA – gebruikers zich (userForestModifySchema.vbs)
-    - ResourceForestB: locatie van CM-installatie (resourceForestModifySchema.vbs).
+   - DomeinA – gebruikers zich (userForestModifySchema.vbs)
+   - ResourceForestB: locatie van CM-installatie (resourceForestModifySchema.vbs).
 
-    >[!NOTE]
-    >Wijzigingen in het schema een eenrichtingsbewerking zijn en vereisen van een forest herstel terugdraaien dus zorg ervoor dat u de nodige back-ups hebben. Voor meer informatie over de wijzigingen aan het schema van deze bewerking Lees het artikel [Forefront Identity Manager 2010 Certificate Management-schemawijzigingen](https://technet.microsoft.com/library/jj159298(v=ws.10).aspx)
+     >[!NOTE]
+     >Wijzigingen in het schema een eenrichtingsbewerking zijn en vereisen van een forest herstel terugdraaien dus zorg ervoor dat u de nodige back-ups hebben. Voor meer informatie over de wijzigingen aan het schema van deze bewerking Lees het artikel [Forefront Identity Manager 2010 Certificate Management-schemawijzigingen](https://technet.microsoft.com/library/jj159298(v=ws.10).aspx)
 
-    ![Diagram](media/mim-cm-deploy/image007.png)
+     ![Diagram](media/mim-cm-deploy/image007.png)
 
 4. Voer het script en het foutbericht is een geslaagde eenmaal bericht dat het script is voltooid.
 
@@ -355,7 +356,6 @@ Het account MIMCMWebAgent zal worden uitgevoerd als de MIM CM-portal. Standaard 
 SETSPN -S http/cm.contoso.com contoso\MIMCMWebAgent
 #Delegation for certificate authority
 Get-ADUser CONTOSO\MIMCMWebAgent | Set-ADObject -Add @{"msDS-AllowedToDelegateTo"="rpcss/CORPCA","rpcss/CORPCA.contoso.com"}
-
 ```
 
 **IIS op CORPCM bijwerken**
@@ -368,7 +368,6 @@ add-pssnapin WebAdministration
 Set-WebConfigurationProperty -Filter System.webServer/security/authentication/WindowsAuthentication -Location 'Default Web Site' -Name enabled -Value $true
 Set-WebConfigurationProperty -Filter System.webServer/security/authentication/WindowsAuthentication -Location 'Default Web Site' -Name useKernelMode -Value $false
 Set-WebConfigurationProperty -Filter System.webServer/security/authentication/WindowsAuthentication -Location 'Default Web Site' -Name useAppPoolCredentials -Value $true
-
 ```
 
 >[!NOTE]
@@ -465,10 +464,10 @@ Voeg MIMINSTALL aan voordat u zich aanmeldt voor CORPCM **domain Admins, Schema-
 
    - Gebruik een bestaande gebruiker: **ingeschakeld**
 
-    >[!NOTE]
-    >Deze accounts eerder is gemaakt. Zorg ervoor dat de procedures in stap 8 worden herhaald voor alle zes agent account tabbladen.
+     >[!NOTE]
+     >Deze accounts eerder is gemaakt. Zorg ervoor dat de procedures in stap 8 worden herhaald voor alle zes agent account tabbladen.
 
-    ![MIM CM-accounts](media/mim-cm-deploy/image030.png)
+     ![MIM CM-accounts](media/mim-cm-deploy/image030.png)
 
 10. Wanneer alle gegevens van agent voltooid is, klikt u op **OK**.
 
@@ -602,9 +601,9 @@ In deze stap wordt installeren en configureren van de FIM CM CA-modules op de ce
 
 6. In de **contoso-CORPCA-CA-eigenschappen** in het dialoogvenster, klikt u op **OK**.
 
-7. Met de rechtermuisknop op **contoso-CORPCA-CA **** wijs **alle taken**, en klik vervolgens op **Service stoppen**. Wacht totdat de Active Directory Certificate Services wordt gestopt.
+7. Met de rechtermuisknop op **contoso-CORPCA-CA** *,* wijs **alle taken**, en klik vervolgens op **Service stoppen**. Wacht totdat de Active Directory Certificate Services wordt gestopt.
 
-8. Met de rechtermuisknop op **contoso-CORPCA-CA **** wijs **alle taken**, en klik vervolgens op **Service starten**.
+8. Met de rechtermuisknop op **contoso-CORPCA-CA** *,* wijs **alle taken**, en klik vervolgens op **Service starten**.
 
 9. Minimaliseer de **certificeringsinstantie** console.
 
@@ -668,7 +667,7 @@ In deze stap wordt installeren en configureren van de FIM CM CA-modules op de ce
     - Klik in het dialoogvenster certificaat met de rechtermuisknop op de **Geef hexadecimaal gecodeerde certificaat-hash** vak en klik vervolgens op **plakken**.
 
     - In de **certificaat** in het dialoogvenster, klikt u op **OK**.
-    
+
         >[!Note]
         >Als de **OK** knop niet is ingeschakeld, kunt u een verborgen teken in de tekenreeks vingerafdruk per ongeluk opgenomen wanneer u de vingerafdruk van het certificaat clmAgent gekopieerd. Herhaal de bovenstaande stappen vanaf **taak 4: de MIMCMAgent certificaatvingerafdruk naar Windows Klembord te kopiëren** in deze oefening.
 
@@ -678,11 +677,11 @@ In deze stap wordt installeren en configureren van de FIM CM CA-modules op de ce
 
 6. In de **contoso-CORPCA-CA-eigenschappen** in het dialoogvenster, klikt u op **OK**.
 
-7. Met de rechtermuisknop op **contoso-CORPCA-CA **** wijs **alle taken**, en klik vervolgens op **Service stoppen**.
+7. Met de rechtermuisknop op **contoso-CORPCA-CA** *,* wijs **alle taken**, en klik vervolgens op **Service stoppen**.
 
 8. Wacht totdat de Active Directory Certificate Services wordt gestopt.
 
-9. Met de rechtermuisknop op **contoso-CORPCA-CA **** wijs **alle taken**, en klik vervolgens op **Service starten**.
+9. Met de rechtermuisknop op **contoso-CORPCA-CA** *,* wijs **alle taken**, en klik vervolgens op **Service starten**.
 
 10. Sluit de **certificeringsinstantie** console.
 
@@ -736,7 +735,7 @@ Eerste stappen: **configureren van het Service Connection Point en machtigingen 
 6. In de **Machtigingsvermelding voor Contoso** het dialoogvenster de **toepassen op** selecteert **Descendant gebruikersobjecten** en schakel vervolgens de **toestaan**selectievakje in voor de volgende **machtigingen**:
 
     - **Alle eigenschappen lezen**
-    
+
     - **Machtigingen voor lezen**
 
     - **FIM CM-Audit**
@@ -904,7 +903,7 @@ $adace.GetEnumerator() | **Foreach-Object** {
 $acl = **Get-Acl** *-Path* $_.Value
 $sid=(**Get-ADGroup** "MIMCM-Managers").SID
 $p = **New-Object** System.Security.Principal.SecurityIdentifier($sid)
-##https://msdn.microsoft.com/en-us/library/system.directoryservices.activedirectorysecurityinheritance(v=vs.110).aspx
+##https://msdn.microsoft.com/library/system.directoryservices.activedirectorysecurityinheritance(v=vs.110).aspx
 $ace = **New-Object** System.DirectoryServices.ActiveDirectoryAccessRule
 ($p,[System.DirectoryServices.ActiveDirectoryRights]"GenericAll",[System.Security.AccessControl.AccessControlType]::Allow,
 [DirectoryServices.ActiveDirectorySecurityInheritance]::All)

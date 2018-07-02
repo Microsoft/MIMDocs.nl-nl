@@ -10,11 +10,12 @@ ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: ''
-ms.openlocfilehash: 3d45d18042ccda83873aa929101222c15f36246a
-ms.sourcegitcommit: c773edc8262b38df50d82dae0f026bb49500d0a4
+ms.openlocfilehash: 90e7da2a1e39b802723ff0714bd0caccf9649440
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/25/2018
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289132"
 ---
 # <a name="bhold-model-generator-installation"></a>BHOLD Model Generator-installatie
 
@@ -28,8 +29,8 @@ Voordat u de module BHOLD Model Generator installeert, moet u het volgende:
 
 2. De Microsoft OLE DB-Provider voor Microsoft Jet moet worden geïnstalleerd. Zie voor meer informatie [in dit artikel](http://support.microsoft.com/kb/271908).
 
->[!WARNING]
-Installeer geen Generator van BHOLD-Model in het productienetwerk. BHOLD Model Generator is bedoeld om het offline in een testomgeving worden gebruikt voor het maken van een genormaliseerde model voor de functie die u in het model van uw enterprise-functie importeren kunt. BHOLD Model Generator uitgevoerd in uw productienetwerk kan leiden tot verlies van het model van uw bestaande functie.
+> [!WARNING]
+> Installeer geen Generator van BHOLD-Model in het productienetwerk. BHOLD Model Generator is bedoeld om het offline in een testomgeving worden gebruikt voor het maken van een genormaliseerde model voor de functie die u in het model van uw enterprise-functie importeren kunt. BHOLD Model Generator uitgevoerd in uw productienetwerk kan leiden tot verlies van het model van uw bestaande functie.
 
 ## <a name="before-you-begin"></a>Voordat u begint
 
@@ -47,7 +48,7 @@ Microsoft Access Database Engine 2010 Redistributable
 
 **Accountinstellingen**
 
-| **item**                                    | **Beschrijving**                                                                                                                                                                                                           | **Waarde**                                                                                                                                                                                                                                                                                                            |
+| **Item**                                    | **Beschrijving**                                                                                                                                                                                                           | **Waarde**                                                                                                                                                                                                                                                                                                            |
 |---------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Beveiligingsprovider worden gebruikt op de computer van het domein /** | Wanneer u selecteert, geeft u aan dat Active Directory Domain Services-beveiliging de toegang tot BHOLD Core beheert.                                                                                                                | Schakel het selectievakje in. **Belangrijk:** mislukt de installatie als dit selectievakje niet is ingeschakeld.                                                                                                                                                                                                                   |
 | **Domein**                                  | Hiermee geeft u het domein met het serviceaccount dat u hebt gemaakt bij het installeren van BHOLD-Core. Zie voor meer informatie [BHOLD Core-installatie](https://technet.microsoft.com/library/jj134095(v=ws.10).aspx). | Naam van het domein wordt automatisch opgegeven door de wizard. Wijzig de naam alleen als dit onjuist is. **Belangrijk:** de domeinnaam opgeven met de naam van de NetBIOS-(korte), niet de volledig gekwalificeerde domeinnaam (FQDN). Bijvoorbeeld, als de FQDN-naam van het domein fabrikam.com is, geef de domeinnaam als FABRIKAM. |

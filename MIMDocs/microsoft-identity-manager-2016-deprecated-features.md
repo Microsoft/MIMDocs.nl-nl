@@ -11,19 +11,20 @@ ms.prod: identity-manager-2016
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: ''
-ms.openlocfilehash: 50f7b135ce0d5a46ea08068a7658b229759d2b50
-ms.sourcegitcommit: 24bb3e82f55971696bdefa6c240f1a27f856e110
+ms.openlocfilehash: a4239f1d69d8a43d70dd38af16e9ef8be62bd33c
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36288908"
 ---
 # <a name="deprecated-features"></a>Afgeschafte functies
 
 In dit artikel beschrijft de afgeschafte functies van Microsoft Identity Manager 2016 SP1. Wanneer de functie nog steeds aanwezig is in Microsoft Identity Manager is, is het nog steeds ondersteund. Functies worden niet aanbevolen voor nieuwe implementaties als ze in een versie van de functie kunnen worden verwijderd.  Voor ontwikkelaars, wordt aangeraden geen gebruik van afgeschafte functies in de nieuwe toepassingen of oplossingen.
 
->[!NOTE]
-Functies en functionaliteiten in de Microsoft Identity Manager SP1 hebt verwijderd, worden aangeduid met **. <br>
-Voor meer informatie over de ondersteuning [levenscyclus voor Microsoft Identity Manager](https://support.microsoft.com/en-us/lifecycle/search?alpha=Microsoft%20Forefront%20Identity%20Manager%202010%20R2%20Service%20Pack%201,Microsoft%20Identity%20Manager%202016,Microsoft%20Forefront%20Identity%20Manager%202010)
+> [!NOTE]
+> Functies en functionaliteiten in de Microsoft Identity Manager SP1 hebt verwijderd, worden aangeduid met **. <br>
+> Voor meer informatie over de ondersteuning [levenscyclus voor Microsoft Identity Manager](https://support.microsoft.com/en-us/lifecycle/search?alpha=Microsoft%20Forefront%20Identity%20Manager%202010%20R2%20Service%20Pack%201,Microsoft%20Identity%20Manager%202016,Microsoft%20Forefront%20Identity%20Manager%202010)
 
 
 ## <a name="bhold"></a>BHOLD 
@@ -31,6 +32,7 @@ Voor meer informatie over de ondersteuning [levenscyclus voor Microsoft Identity
 Klanten beginnen nieuwe implementaties van de Microsoft BHOLD-Suite-onderdelen wordt niet aanbevolen. Bestaande implementaties van BHOLD blijven worden ondersteund. Nu Azure AD levert [toegang tot beoordelingen](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-azure-ad-controls-access-reviews-overview) die enkele van de functies van BHOLD attestation campagne vervangen.
 
 ## <a name="certificate-management"></a>Certificaatbeheer 
+
 | **Categorie**                | **Afgeschafte functie**              | **Vervangen en -opmerkingen**           |
 |-----------------------------|-------------------------------------|----------------------------------------------|
 | Beheeragents | ** FIM Certificate Management | FIM Certificate Management Agent is verwijderd uit MIM 2016.                                                             |
@@ -53,8 +55,8 @@ Klanten beginnen nieuwe implementaties van de Microsoft BHOLD-Suite-onderdelen w
 | Beheeragents           | Weergavenaam van de partitie configureren    | Deze functie wordt niet vervangen. Deze optie is alleen gebruikt voor een alternatieve naam voor een partitie in de WMI-interfaces.                                                                                                                                                                       |
 | Profielen uitvoeren                | Gecombineerde profielen                   | De gecombineerde profielen importeren/Deltasynchronisatie, volledige import-/ Deltasynchronisatie en volledige import/synchronisatie wordt verwijderd. U moet gebruiken uitvoeringsprofielen met twee stappen. 
 
->[!NOTE]
-U moet de gecombineerde uitvoeringsprofielen alleen in omgevingen waar de prestaties zou worden beïnvloed door een groot aantal bestaande disconnectors bewaren.
+> [!NOTE]
+> U moet de gecombineerde uitvoeringsprofielen alleen in omgevingen waar de prestaties zou worden beïnvloed door een groot aantal bestaande disconnectors bewaren.
 
 
 | **Categorie**                | **Afgeschafte functie**              | **Vervangen en -opmerkingen**           |

@@ -9,16 +9,17 @@ ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 5325fce2-ae35-45b0-9c1a-ad8b592fcd07
-ms.openlocfilehash: 2d92be315547da1c352c0e60732f9aeecf0c2d90
-ms.sourcegitcommit: 3d8a2493eae1218bfdb75a399ffa4adc8c2a8fdf
+ms.openlocfilehash: 9515d17767a75b349b0d3150fb90c136c478baa2
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 01/20/2018
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289843"
 ---
 # <a name="step-7--elevate-a-users-access"></a>Stap 7 – De toegangsrechten van een gebruiker uitbreiden
 
->[!div class="step-by-step"]
-[« Stap 6 ](step-6-transition-group-to-pam.md)
+> [!div class="step-by-step"]
+> [« Stap 6 ](step-6-transition-group-to-pam.md)
 
 
 In deze stap wordt gedemonstreerd dat een gebruiker via MIM toegang tot een functie kan aanvragen.
@@ -90,7 +91,7 @@ U kunt de activering uitvoeren door bevoorrechte toegang aan te vragen via de PA
     ```
 
 3. Typ het wachtwoord voor het account PRIV.Jen als u hierom wordt gevraagd. Er wordt een nieuw browservenster weergegeven.
-4. Navigeer naar http://pamsrv.priv.contoso.local:8090 en controleer of een webpagina op de voorbeeldportal zichtbaar is.
+4. Navigeer naar http://pamsrv.priv.contoso.local:8090 en zorg ervoor dat een webpagina op de voorbeeldportal zichtbaar is.
 5. Selecteer in Internet Explorer **Extra** > **Internetopties** en klik op het tabblad **Beveiliging**.
 6. Klik op **Lokale intranetzone** > **Sites** > **Geavanceerd** en voeg vervolgens de website toe aan de zone.
 7. Sluit de dialoogvensters van **Internetopties**.
@@ -103,5 +104,5 @@ U kunt de activering uitvoeren door bevoorrechte toegang aan te vragen via de PA
 
 Nadat u de stappen in dit overzicht hebt voltooid, hebt u een scenario voor Privileged Access Management gedemonstreerd waarin gebruikersbevoegdheden tijdelijk worden uitgebreid zodat de gebruiker toegang heeft tot beveiligde resources met een afzonderlijk bevoorrecht account. Zodra de sessie voor uitbreiding van de toegangsrechten is verlopen, is de beveiligde resource niet meer toegankelijk met het bevoorrechte account. De beslissing over welke beveiligingsgroepen de bevoorrechte rollen vertegenwoordigen, wordt gecoördineerd door de PAM-beheerder. Nadat de toegangsrechten zijn gemigreerd naar het Privileged Access Management-systeem, kan er geen toegang meer worden verkregen met het oorspronkelijke gebruikersaccount, maar moeten gebruikers zich aanmelden met een speciaal bevoorrecht account dat alleen op aanvraag beschikbaar wordt gesteld. Als gevolg hiervan zijn groepslidmaatschappen voor maximaal bevoorrechte accounts slechts tijdelijk van kracht.
 
->[!div class="step-by-step"]
-[« Stap 6 ](step-6-transition-group-to-pam.md)
+> [!div class="step-by-step"]
+> [« Stap 6 ](step-6-transition-group-to-pam.md)

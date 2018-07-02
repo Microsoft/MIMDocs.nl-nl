@@ -10,11 +10,12 @@ ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: ''
-ms.openlocfilehash: 2b8e6935eda6c679b00b5b5b17752a675a257de9
-ms.sourcegitcommit: c773edc8262b38df50d82dae0f026bb49500d0a4
+ms.openlocfilehash: deb43aeb9133d7eed958730b0eb2cbd22fe3a0ef
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/25/2018
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289302"
 ---
 # <a name="bhold-reporting-installation"></a>BHOLD reporting installatie
 
@@ -24,14 +25,14 @@ De rapportage van BHOLD-module biedt u de mogelijkheid om rapporten te genereren
 
 Voordat u de module BHOLD Reporting installeert, moet u de belangrijkste BHOLD-module installeren op de server waarop u van plan bent om de BHOLD rapportagemodule te installeren. Zie voor meer informatie over het installeren van de module BHOLD Core [BHOLD Core-installatie](https://technet.microsoft.com/library/jj134095(v=ws.10).aspx).
 
->[!IMPORTANT]
-Als u BHOLD-rapportage en BHOLD Attestation installeert, moet u BHOLD Reporting installeren voordat u BHOLD Attestation installeert.
+> [!IMPORTANT]
+> Als u BHOLD-rapportage en BHOLD Attestation installeert, moet u BHOLD Reporting installeren voordat u BHOLD Attestation installeert.
 
 ## <a name="before-you-begin"></a>Voordat u begint
 
 Voordat u begint met de rapportage van BHOLD-module installeren, moet u worden voorbereid voor de informatie die de wizard Setup van BHOLD Reporting vereist om de installatie te voltooien. Het werkblad voor het volgende kunt u gegevens vastleggen, zodat u gereed om te leveren wanneer deze nodig is.
 
-| **item**                                    | **Beschrijving**                                                                                                                                                                                                           | **Waarde**                                                                                                                                                                                                                                                                                                            |
+| **Item**                                    | **Beschrijving**                                                                                                                                                                                                           | **Waarde**                                                                                                                                                                                                                                                                                                            |
 |---------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Beveiligingsprovider worden gebruikt op de computer van het domein /** | Wanneer u selecteert, geeft u aan dat Active Directory Domain Services-beveiliging de toegang tot BHOLD Core beheert.                                                                                                                | Schakel het selectievakje in. </br>**Belangrijk:** mislukt de installatie als dit selectievakje niet is ingeschakeld.                                                                                                                                                                                                                   |
 | **Domein**                                  | Hiermee geeft u het domein met het serviceaccount dat u hebt gemaakt bij het installeren van BHOLD-Core. Zie voor meer informatie [BHOLD Core-installatie](https://technet.microsoft.com/library/jj134095(v=ws.10).aspx). | Naam van het domein wordt automatisch opgegeven door de wizard. Wijzig de naam alleen als dit onjuist is. **Belangrijk:** de domeinnaam opgeven met de naam van de NetBIOS-(korte), niet de volledig gekwalificeerde domeinnaam (FQDN). Bijvoorbeeld, als de FQDN-naam van het domein fabrikam.com is, geef de domeinnaam als FABRIKAM. |
@@ -42,7 +43,7 @@ Voordat u begint met de rapportage van BHOLD-module installeren, moet u worden v
 
 Meld u aan als lid van de groep Domeinadministrators voor het installeren van de rapportage van BHOLD-module, downloadt u het volgende bestand en als administrator uitvoeren op de server die u van plan bent de BHOLD rapportagemodule installeren op:
 
-- BholdReporting*\<versie\>*\_Release.msi
+- BholdReporting<em>\<versie\></em>\_Release.msi
 
 Vervang *\<versie\>* met het versienummer van de rapportage van BHOLD-versie die u installeert.
 
