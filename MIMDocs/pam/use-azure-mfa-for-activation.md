@@ -2,27 +2,25 @@
 title: Azure MFA gebruiken om PAM te activeren | Microsoft Docs
 description: Azure MFA instellen als een tweede beveiligingslaag wanneer uw gebruikers rollen in Privileged Access Management activeren.
 keywords: ''
-author: barclayn
-ms.author: fimguy
-manager: mbaldwin
-ms.date: 11/14/2017
+author: billmath
+ms.author: billmath
+ms.reviewer: fimguy
+manager: mtillman
+ms.date: 07/06/2018
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 5134a112-f73f-41d0-a5a5-a89f285e1f73
-ms.reviewer: mwahl
-ms.suite: ems
-ms.openlocfilehash: 30e683a0bd13d911f73eca19c847a2c9cd10f36d
-ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
+ms.openlocfilehash: ad47de279dd18239ff55d89c1b717ccafe16374f
+ms.sourcegitcommit: 0b6cb02d1d6e0d821b00c17090622ba354252188
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36289826"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37895500"
 ---
 # <a name="using-azure-mfa-for-activation"></a>Azure MFA gebruiken voor activering
 > [!IMPORTANT]
-> Als gevolg van de aankondiging van afschaffing van Azure multi-factor Authentication Software Development Kit. De Azure MFA-SDK worden voor bestaande klanten tot de datum buiten gebruik stellen van 14 November 2018 ondersteund. Huidige en nieuwe klanten kan niet worden voor het downloaden van de SDK meer via de klassieke Azure portal. U kunt u downloaden moet bereiken Azure klantondersteuning om uw gegenereerde Servicereferenties MFA-pakket wordt ontvangen. <br> Het ontwikkelteam Microsoft werkt over het plannen van wijzigingen in de MFA door te integreren met MFA Server SDK. Deze oplossing wordt opgenomen in toekomstige hotfix in vroege 2018.
-
+> Vanwege de aankondiging van de afschaffing van Azure multi-factor Authentication Software Development Kit. De Azure MFA-SDK wordt ondersteund voor bestaande klanten tot de vervaldatum van 14 November 2018. Nieuwe klanten en huidige klanten zich niet kunnen downloaden van de SDK niet meer via de klassieke Azure portal. Als u wilt downloaden dat u moet contact opnemen met ondersteuning voor Azure-klant voor het ontvangen van de gegenereerde Servicereferenties voor de MFA-pakket. <br> Het Microsoft-ontwikkelteam werkt op wijzigingen in MFA door te integreren met MFA Server SDK.  Dit is opgenomen in een toekomstige hotfix Zie [versiegeschiedenis](/reference/version-history.md) aankondigingen. 
 
 
 Wanneer u een PAM-rol configureert, kunt u hoe gebruikers die een aanvragen voor activering van de rol verzenden, moeten worden geautoriseerd. Met de PAM-autorisatieactiviteit worden de volgende keuzen geïmplementeerd:
@@ -36,7 +34,7 @@ Microsoft Azure Multi-Factor Authentication (MFA) is een verificatieservice waar
 
 ## <a name="prerequisites"></a>Vereisten
 
-Als u wilt met Azure MFA met MIM gebruikt, moet u de:
+Als u wilt gebruiken Azure MFA met MIM, hebt u het volgende nodig:
 
 - Internettoegang voor elke MIM-service waarmee PAM wordt geleverd voor de communicatie met Azure MFA
 - Een Azure-abonnement
@@ -45,7 +43,7 @@ Als u wilt met Azure MFA met MIM gebruikt, moet u de:
 
 ## <a name="creating-an-azure-mfa-provider"></a>Een Azure MFA-provider maken
 
-In deze sectie stelt u de Azure MFA-provider in Microsoft Azure Active Directory.  Als u Azure MFA al gebruikt, als zelfstandige functie of geconfigureerd met Azure Active Directory Premium, gaat u door naar de volgende sectie.
+In deze sectie maakt instellen u de Azure MFA-provider in Microsoft Azure Active Directory.  Als u Azure MFA al gebruikt, als zelfstandige functie of geconfigureerd met Azure Active Directory Premium, gaat u door naar de volgende sectie.
 
 1.  Open een webbrowser en maak verbinding met de [klassieke Azure Portal](https://manage.windowsazure.com) als een Azure-abonnementsbeheerder.
 
@@ -84,7 +82,7 @@ Vervolgens gaat u een bestand genereren met de verificatiegegevens die nodig zij
 
 2.  Maak een nieuwe map in de map waar de MIM-service is geïnstalleerd, bijvoorbeeld ```C:\Program Files\Microsoft Forefront Identity Manager\2010\Service\MfaCerts```.
 
-3.  Navigeer in Windows Verkenner naar de ```pf\certs``` map van het ZIP-bestand dat in de vorige sectie is gedownload. Kopieer het bestand ```cert\_key.p12``` naar de nieuwe map.
+3.  Navigeer in Windows Verkenner naar de ```pf\certs``` map van het ZIP-bestand in de vorige sectie hebt gedownload. Kopieer het bestand ```cert\_key.p12``` naar de nieuwe map.
 
 4.  Navigeer in Windows Verkenner naar de ```pf``` map van het ZIP-bestand en open het bestand ```pf\_auth.cs``` in een teksteditor zoals Wordpad.
 
@@ -156,4 +154,4 @@ U kunt ook een rapport van Azure MFA weergeven of downloaden voor meer informati
 ## <a name="next-steps"></a>Volgende stappen
 
 - [Wat is Azure multi-factor Authentication](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication)
-- [Vandaag de dag uw gratis Azure-account maken](https://azure.microsoft.com/free/)
+- [Maak vandaag nog uw gratis Azure-account](https://azure.microsoft.com/free/)
