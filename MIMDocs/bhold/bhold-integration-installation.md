@@ -158,7 +158,7 @@ roltrapn eigenaarn securityOfficern
 
 2.  Werkstromen voor goedkeuring geconfigureerd in de FIM-Service controleren
 
-3.  Installatie van BHOLD FIM-integratie maakt sets, werkstroomdefinities en beheerbeleidsregels (MPR's) naar de FIM-Service.
+3.  Typ in de adresbalk van Internet Explorer <http://localhost:5151/bhold/core>, en druk vervolgens op ENTER.
 
 4.  Als u uw FIM-implementatie om de sets van administrators of de sets van gebruikers die kunnen aanvragen te wijzigen is aangepast, moet u ervoor zorgen dat de MPR's verwijzen naar de juiste gebruiker sets.
 

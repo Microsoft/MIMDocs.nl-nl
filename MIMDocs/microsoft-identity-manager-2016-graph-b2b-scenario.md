@@ -204,16 +204,16 @@ Stroomregels:
 
 | **Alleen de initiële stroom** | **Gebruik als de Test bestaan** | **Stroom (FIM waarde ⇒ bestemming kenmerk)**                          |
 |-----------------------|---------------------------|-----------------------------------------------------------------------|
-|                       |                           | [displayName⇒displayName] (javascript:void(0);)                        |
-|                       |                           | [Links (id 20) ⇒accountName] (javascript:void(0);)                        |
-|                       |                           | [id⇒uid] (javascript:void(0);)                                         |
-|                       |                           | [userType⇒employeeType] (javascript:void(0);)                          |
-|                       |                           | [givenName⇒givenName] (javascript:void(0);)                            |
-|                       |                           | [surname⇒sn] (javascript:void(0);)                                     |
-|                       |                           | [userPrincipalName⇒userPrincipalName] (javascript:void(0);)            |
-|                       |                           | [id⇒cn] (javascript:void(0);)                                          |
-|                       |                           | [mail⇒mail] (javascript:void(0);)                                      |
-|                       |                           | [mobilePhone⇒mobilePhone] (javascript:void(0);)                        |
+|                       |                           | [displayName⇒displayName](javascript:void(0);)                        |
+|                       |                           | [Links (id 20) ⇒accountName](javascript:void(0);)                        |
+|                       |                           | [id⇒uid](javascript:void(0);)                                         |
+|                       |                           | [userType⇒employeeType](javascript:void(0);)                          |
+|                       |                           | [givenName⇒givenName](javascript:void(0);)                            |
+|                       |                           | [surname⇒sn](javascript:void(0);)                                     |
+|                       |                           | [userPrincipalName⇒userPrincipalName](javascript:void(0);)            |
+|                       |                           | [id⇒cn](javascript:void(0);)                                          |
+|                       |                           | [mail⇒mail](javascript:void(0);)                                      |
+|                       |                           | [mobilePhone⇒mobilePhone](javascript:void(0);)                        |
 
 ### <a name="synchronization-rule-create-guest-user-account-to-active-directory"></a>Regel voor het synchroniseren: Gast-gebruikersaccount in Active Directory maken 
 
@@ -229,14 +229,14 @@ Stroomregels:
 
 | **Alleen de initiële stroom** | **Gebruik als de Test bestaan** | **Stroom (FIM waarde ⇒ bestemming kenmerk)**                          |
 |-----------------------|---------------------------|-----------------------------------------------------------------------|
-|                       |                           | [accountName⇒sAMAccountName] (javascript:void(0);)                     |
-|                       |                           | [givenName⇒givenName] (javascript:void(0);)                            |
-|                       |                           | [mail⇒mail] (javascript:void(0);)                                      |
-|                       |                           | [sn⇒sn] (javascript:void(0);)                                          |
-|                       |                           | [userPrincipalName⇒userPrincipalName] (javascript:void(0);)            |
-| **Y**                 |                           | ["CN = '+ uid +', organisatie-eenheid B2BGuest, DC = = scontoso, DC = com" ⇒dn] (javascript:void(0);) |
-| **Y**                 |                           | [RandomNum (0,999) + userPrincipalName⇒unicodePwd] (javascript:void(0);)  |
-| **Y**                 |                           | [262656⇒userAccountControl] (javascript:void(0);)                      |
+|                       |                           | [accountName⇒sAMAccountName](javascript:void(0);)                     |
+|                       |                           | [givenName⇒givenName](javascript:void(0);)                            |
+|                       |                           | [mail⇒mail](javascript:void(0);)                                      |
+|                       |                           | [sn⇒sn](javascript:void(0);)                                          |
+|                       |                           | [userPrincipalName⇒userPrincipalName](javascript:void(0);)            |
+| **Y**                 |                           | ["CN = '+ uid +', organisatie-eenheid B2BGuest, DC = = scontoso, DC = com" ⇒dn](javascript:void(0);) |
+| **Y**                 |                           | [RandomNum (0,999) + userPrincipalName⇒unicodePwd](javascript:void(0);)  |
+| **Y**                 |                           | [262656⇒userAccountControl](javascript:void(0);)                      |
 
 ### <a name="synchronization-rule-import-b2b-guest-user-objects-sid-to-allow-for-login-to-mim"></a>Regel voor het synchroniseren: Import B2B Gast objecten SID gebruiker voor aanmelding bij MIM 
 
@@ -278,9 +278,9 @@ Ook, naast de gebruiker handmatig toegevoegd aan de gebruikers en groepen behere
 
 | **Alleen de initiële stroom** | **Gebruik als de Test bestaan** | **Stroom (FIM waarde ⇒ bestemming kenmerk)**                          |
 |-----------------------|---------------------------|-----------------------------------------------------------------------|
-|                       |                           | [sAMAccountName⇒accountName] (javascript:void(0);)                     |
-|                       |                           | ['CONTOSO' ⇒domain] (javascript:void(0);)                            |
-|                       |                           | [objectSid⇒objectSid] (javascript:void(0);)                                      |
+|                       |                           | [sAMAccountName⇒accountName](javascript:void(0);)                     |
+|                       |                           | ['CONTOSO' ⇒domain](javascript:void(0);)                            |
+|                       |                           | [objectSid⇒objectSid](javascript:void(0);)                                      |
 
 Zodra alle configureren
 
