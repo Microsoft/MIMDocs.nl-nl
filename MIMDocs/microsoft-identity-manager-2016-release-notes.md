@@ -13,12 +13,12 @@ ms.technology: active-directory-domain-services
 ms.assetid: 297e25a5-668b-45a4-b2de-7767ebc59100
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 1c48bc4ba779a3d699394d810071c5c457a992a7
-ms.sourcegitcommit: f077508b5569e2a96084267879c5b6551e1e0905
+ms.openlocfilehash: 021ad2b0eeac0f9157071fe52951c7f62c610695
+ms.sourcegitcommit: 82d30d0bf3225182f6ea0329e92f6cf7015889cb
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/12/2017
-ms.locfileid: "23137571"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39357001"
 ---
 # <a name="release-notes-for-mim-2016"></a>Releaseopmerkingen voor MIM 2016
-Er zijn op dit moment geen releaseopmerkingen.
+Het team van Microsoft Identity Manager publiceert regelmatig updates. Zie de [versiegeschiedenis van MIM](reference/version-history.md).
