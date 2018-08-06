@@ -57,7 +57,7 @@ Bovendien moet u de gegevens die de installatiewizard van BHOLD FIM-integratie i
 |---------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
 | **Gebruiker**            | Hiermee geeft u de naam van een account met administrator-bevoegdheden voor FIM. Microsoft raadt u aan het account dat is gekoppeld aan de hoofdgebruiker in BHOLD Core (standaard is dit het account dat wordt gebruikt voor het installeren van BHOLD-Core) niet te gebruiken. | Schrijf hier de accountnaam van de gebruiker:                                                                   |
 | **Wachtwoord**        | Hiermee geeft u het wachtwoord van de FIM-beheerdersaccount.                                                                                                                                                                                 | Schrijf hier het wachtwoord: **belangrijk:** Zorg ervoor dat dit wachtwoord in een verborgen, een veilige locatie. |
-| **FIM-Database**    | Hiermee geeft u de naam van de FIM-servicedatabase.                                                                                                                                                                                               | FIMService                                                                                          |
+| **FIM Database**    | Hiermee geeft u de naam van de FIM-servicedatabase.                                                                                                                                                                                               | FIMService                                                                                          |
 | **IP/poort van website** | Hiermee geeft u de naam of IP-adres van de FIM-Portal-server en de poort van website.                                                                                                                                                               | De servernaam of het adres en de poort hier schrijven:                                                     |
 
 ### <a name="bhold-core-connection"></a>BHOLD-Core verbinding
@@ -116,57 +116,57 @@ Als de FIM-Portal voor het gebruik van SSL-beveiliging is geconfigureerd, moet u
 
 De volgende tabel bevat de bestanden en de oorspronkelijke en gewijzigde versies van de tekenreeksen die moeten worden bewerkt.
 
-| **Bestand**                  | **Oorspronkelijke tekenreeks**                                                                                                                   | **Gewijzigde tekenreeks**                                                                                                                                |
+| **File**                  | **Oorspronkelijke tekenreeks**                                                                                                                   | **Gewijzigde tekenreeks**                                                                                                                                |
 |---------------------------|---------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
-| Analytics.aspx            |   http://<BHOLD_Server>/bhold/Analytics/index_fim.HTML | https://<BHOLD_Server_FQDN>/bhold/Analytics/index_fim.HTML       |
+| Analytics.aspx            |   http://<BHOLD_Server>/bhold/Analytics/index_fim.html | https://<BHOLD_Server_FQDN>/bhold/Analytics/index_fim.html       |
 | AttestationCampaigns.aspx |    http://<BHOLD_Server>/bhold/Attestation/Campaigns.aspx?hideMenu=1 | https://<BHOLD_Server_FQDN>/bhold/Attestation/Campaigns.aspx?hideMenu=1 | 
 | AttestationMain.aspx      |  http://<BHOLD_Server>/bhold/Attestation/dashboard.aspx?hideMenu=1        | https://<BHOLD_Server_FQDN>/bhold/Attestation/dashboard.aspx?hideMenu=1 |
-| Reporting.aspx            | http://<BHOLD_Server>/bhold/Reporting/index_fim.HTML |  https://<BHOLD_Server_FQDN>/bhold/Reporting/index_fim.HTML |
-| Selfservice.aspx          | RoleExchangePoint = http: / /\<*FIM_Server*\>: \< *FIM_Port*\>/BHOLD RoleExchangePoint/BHOLDRoleExchangePoint.svc TransportMode Transport = | RoleExchangePoint = https: / /\<*FIM_Server_FQDN*\>: \< *FIM_SSL_Port\>*\>/BHOLD/RoleExchangePoint / BHOLDRoleExchangePoint.svc,TransportMode=Transport |
+| Reporting.aspx            | http://<BHOLD_Server>/bhold/Reporting/index_fim.html |  https://<BHOLD_Server_FQDN>/bhold/Reporting/index_fim.html |
+| Selfservice.aspx          | RoleExchangePoint=http://\<*FIM_Server*\>: \<*FIM_Port*\>/BHOLD RoleExchangePoint/BHOLDRoleExchangePoint.svc,TransportMode=Transport | RoleExchangePoint=https://\<*FIM_Server_FQDN*\>: \<*FIM_SSL_Port\>*\>/BHOLD/RoleExchangePoint/ BHOLDRoleExchangePoint.svc,TransportMode=Transport |
 
 Waarbij:
 
--   *\<BHOLD_Server\>*  geeft de naam van de server BHOLD zoals gevonden in de oorspronkelijke versie van het bestand
+-   *\<BHOLD_Server\>* geeft de naam van de server BHOLD zoals gevonden in de oorspronkelijke versie van het bestand
 
--   *\<MIM_Server\>*  geeft de naam van de FIM-server zoals gevonden in de oorspronkelijke versie van het bestand
+-   *\<MIM_Server\>* geeft de naam van de FIM-server zoals gevonden in de oorspronkelijke versie van het bestand
 
--   *\<BHOLD_Server_FQDN\>*  Hiermee geeft u de volledig gekwalificeerde domeinnaam (FQDN) van de BHOLD-server
+-   *\<BHOLD_Server_FQDN\>* Hiermee geeft u de volledig gekwalificeerde domeinnaam (FQDN) van de BHOLD-server
 
--   *\<In het linkerdeelvenster onder *kenmerk def\< klikt u op \>kenmerk type sets*.
+-   *\<MIM_Port\>* geeft u het poortnummer van de FIM-server zoals gevonden in de oorspronkelijke versie van het bestand
 
--   *\<Op de *kenmerk type sets\< pagina, klikt u op \>toevoegen*.
+-   *\<MIM_Server_FQDN\>* geeft de FQDN van de FIM-server
 
--   *\<Op de *kenmerk type set toevoegen\< pagina \>beschrijving*, typt u OrgUnit kenmerken en klik op OK.
+-   *\<MIM_SSL_Port\>* geeft een andere poort voor gebruik met SSL op de FIM-server
 
-### <a name="enable-approval-workflows-in-bhold-core"></a>Op de OrgUnit kenmerken pagina uit, vouw kenmerken van het type, en klik vervolgens op wijzigen.
+### <a name="enable-approval-workflows-in-bhold-core"></a>Van goedkeuringswerkstromen in BHOLD Core inschakelen
 
-In de kenmerktype lijst, klikt u op approver1, klikt u op toevoegen, en klik vervolgens op gedaan. Klik in het linkerdeelvenster op objecttypen. Op de objecttypen pagina, klikt u op OrgUnit. Op de Object van type/OrgUnit pagina uit, vouw kenmerk type sets, en klik vervolgens op wijzigen. Op de koppelen kenmerk type set/OrgUnit pagina volgorde, 10, typ in de type kenmerkenset lijst, klikt u op OrgUnit kenmerken, Klik op toevoegen, en klik vervolgens op gedaan.
+Als FIM en BHOLD voor self-service zijn geïntegreerd, worden de werkstromen voor goedkeuringen uitgevoerd in de FIM-Service. Dit is vergelijkbaar met het model van de werkstroom voor aanvragen die afkomstig uit de FIM-Portal zijn, zoals wanneer een gebruiker een aanvraag voor het koppelen van een distributielijst verzendt. Er zijn belangrijke verschillen tussen BHOLD rol werkstromen en andere werkstromen echter gehost in de FIM-Service. In het geval van BHOLD afkomstig Workflowparameters die opgeeft welke gebruikers een rol-aanvraag moeten goedkeuren in BHOLD in plaats van wordt opgeslagen in de definitie van de werkstroom in de FIM-servicedatabase. Deze parameters zijn bedoeld om de FIM-Service door BHOLD wanneer de eerste aanvraag wordt gedaan en een actiewerkstroom de resultaten teruggestuurd naar BHOLD Core.
 
-In het linkerdeelvenster onder Model, klikt u op organisatie-eenheden.
+BHOLD selecteert u een goedkeurder voor een aanvraag selfservice op drie manieren:
 
--   **Op de **organisatie-eenheden** pagina, klikt u op hoofdmap.
+-   **Lijnmanager als goedkeurder: selectie op basis van rollen voor een organisatie-eenheid (OrgUnit)** als een rol heeft een kenmerk genaamd roletype die is ingesteld op goedkeurder of roltrap, en als die rol is gekoppeld aan een of meer gebruikers in de context van een OrgUnit, aanvragen van gebruikers binnen die OrgUnit moeten worden goedgekeurd door een van de gebruikers die is gekoppeld aan de rol met de goedkeurder of roltrap roletype.
 
--   **Op de **organisatie-eenheid/root** pagina, klikt u op wijzigen. Op de wijzigen van de organisatie-eenheid kenmerken/root pagina goedkeurder, typ de naam van het domein en gebruikersnaam van de gebruiker die roltoewijzing aanvragen, in de indeling goedkeurt  domeingebruiker, waarbij  domein  is de (Korte) NetBIOS-domeinnaam en  gebruiker  aanmeldingsnaam van de gebruiker. De naam van de domein- en gebruikersnaam moet overeenkomen met de standaardalias van een gebruiker in de kern van BHOLD-database. Als alternatief voor het opgeven van een goedkeurder voor organisatie-eenheden, kunt u een goedkeurder voor voorgestelde functies in de kern van BHOLD-database.
+-   **Lijnmanager als goedkeurder: selectie op basis van kenmerken voor een OrgUnit** elke OrgUnit kan een of meer kenmerken opgeven van de gebruikers die roltoewijzingen voor andere gebruikers in de OrgUnit goedkeuren kunnen-aliassen hebben. Deze kenmerken zijn benoemde approver1, approver2, enzovoort. Wanneer een gebruiker in de OrgUnit een roltoewijzing aanvraagt, routeert BHOLD de aanvraag (via FIM) aan de gebruikers die is opgegeven door de kenmerken van de goedkeurder OrgUnit. Als een OrgUnit waarop geen van deze kenmerken is ingesteld, controleert BHOLD bovenliggende OrgUnits tot de hoofdmap OrgUnit.
 
--   **Het kenmerk approver1 maken om dit te doen, toevoegen om een kenmerk te vervangen die zijn gekoppeld aan de rol van het type en wijzigt u elke voorgestelde rol om op te geven van de goedkeurder. Betere beveiliging van de werkstroom, naast goedkeurders, moet u aanvullende goedkeuring modi en gebruikers aanwijzen door het maken en vullen met de volgende kenmerken voor OrgUnits en rollen:
+-   **Rolmanager als goedkeurder: selectie op basis van kenmerken voor een functie** een rol kan een of meer kenmerken hebben (ook benoemde approver1, enzovoort) die de aliassen van gebruikers die de toewijzing van de rol kunnen goedkeuren. Wanneer een gebruiker wil een rol heeft die over de kenmerken van deze goedkeurder ingesteld worden toegewezen, stuurt BHOLD de aanvraag door naar de gebruikers die zijn opgegeven door de kenmerken.
 
-roltrapn eigenaarn securityOfficern
+Als een goedkeurder voor een aanvraag voor een selfservice-rol niet is opgegeven door een van deze methoden, standaard wijst BHOLD automatisch de rol zonder goedkeuring. Om deze reden moet onmiddellijk na de installatie van BHOLD FIM-integratie, u de hoofdmap OrgUnit met configureren de alias van een goedkeurder, zoals het root-account. Hierdoor kan een gebruiker niet per ongeluk wordt verleend een rol voordat een uitgebreidere goedkeuring beleid kan worden geïmplementeerd.
 
-#### <a name="to-configure-an-approver-for-the-root-orgunit"></a>meldingn
+#### <a name="to-configure-an-approver-for-the-root-orgunit"></a>Een goedkeurder voor de basis-OrgUnit configureren
 
-1.  waar  n  geeft een optionele numeriek achtervoegsel zodat meerdere kenmerken van hetzelfde type.
+1.  Meld u aan de BHOLD-Core-server aan als beheerder.
 
-2.  Werkstromen voor goedkeuring geconfigureerd in de FIM-Service controleren
+2.  Klik op **Start**, en klik vervolgens op **Internet Explorer**.
 
 3.  Typ in de adresbalk van Internet Explorer <http://localhost:5151/bhold/core>, en druk vervolgens op ENTER.
 
-4.  Als u uw FIM-implementatie om de sets van administrators of de sets van gebruikers die kunnen aanvragen te wijzigen is aangepast, moet u ervoor zorgen dat de MPR's verwijzen naar de juiste gebruiker sets.
+4.  Voor de belangrijkste BHOLD startpagina, onder **kenmerk def**, klikt u op **kenmerken van het type**.
 
-5.  Voordat gebruikers van de FIM-Portal de selfservicefuncties geleverd door BHOLD gebruiken kunnen, moeten de gebruikersaccounts worden gesynchroniseerd in de BHOLD-database van de FIM-synchronisatieservice.
+5.  Op de **kenmerktype** pagina, klikt u op **toevoegen**.
 
-6.  In het bijzonder, moet er een gebruikersrecord in de kern van BHOLD-database en in de FIM-servicedatabase voor elke gebruiker die u kunt een selfservice indienen of is opgegeven als een goedkeurder of roltrap voor self-service aanvragen.
+6.  Op de **toevoegen kenmerk type pagina**in **identiteit**, approver1, typ in het **gegevenstype** lijst, klikt u op **alfanumeriek**, in **Maximumlengte**, 255, typt u in **lijst met waarden**, klikt u op **Nee**in **Engels**, typt u goedkeurder 1, klik op **OK**, en klik vervolgens op **gedaan**.
 
-7.  Zie voor meer informatie over het installeren van FIM-Portal en andere functies FIM **Planning en architectuur** in de technische bibliotheek van Microsoft Forefront.
+7.  In het linkerdeelvenster onder **kenmerk def** klikt u op **kenmerk type sets**.
 
 8.  Op de **kenmerk type sets** pagina, klikt u op **toevoegen**.
 

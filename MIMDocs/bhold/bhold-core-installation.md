@@ -31,7 +31,7 @@ De module BHOLD Core vormt de basis van BHOLD-Suite van Microsoft. U moet de Cor
 
 |          |        |          |
 |----------|--------|----------|
-|**Onderdeel** |**Minimum** | **Aanbevolen** |
+|**Component** |**Minimum** | **Aanbevolen** |
 |Processor | 64-bits processor | Multicore 64-bits processor |
 | Geheugen |3 GB | 6 GB of meer |
 |Opslag| 30 GB beschikbaar |Afhankelijk van de grootte van de implementatie |
@@ -161,34 +161,34 @@ Als u wilt toestaan dat IIS goed te laten werken met de module BHOLD-Core, moet 
 
 2.  Vouw de servernaam in de consolestructuur en klik vervolgens op **toepassingsgroepen**.
 
-3.  De standaardwaarde is Y.
+3.  In de **toepassingsgroepen** lijst, met de rechtermuisknop op **CoreAppPool**, en klik vervolgens op **geavanceerde instellingen**.
 
-4.  Ingesteld op N als u niet dat de wijzigingen wilt moeten worden vastgelegd.
+4.  In de **geavanceerde instellingen** het dialoogvenster de **inschakelen 32-bits toepassingen** selecteert **True**, en klik vervolgens op **OK**.
 
-#### <a name="establishing-the-service-principal-name-for-the-bhold-website"></a>SystemQueue verwerking
+#### <a name="establishing-the-service-principal-name-for-the-bhold-website"></a>Tot stand brengen van de service principal name voor de BHOLD-website
 
-Als u niet dat systeem wachtrijbewerkingen wilt ingesteld op N. Wijzig deze waarde niet tenzij omgeleid naar dit doen door productondersteuning. Een systeemkenmerk BHOLD instellen
+Als de naam van het netwerk dat wordt gebruikt voor het contact op met de BHOLD-website niet hetzelfde zijn als de hostnaam van de server is, moet u een service principal name (SPN) voor HTTP-maken. Als u een CNAME-bronrecord in DNS gebruiken om op te geven van een alias voor de server, of als u Netwerktaakverdeling gebruiken, moet u deze extra netwerkadressen registreren in Active Directory. Als u niet om dit te doen, Internet Explorer het Kerberos-protocol niet gebruiken tijdens de verbinding met de BHOLD-website.
 
 > [!IMPORTANT]
-> Klik op Start, klikt u op alle programma's, en klik vervolgens op Internet Explorer. Typ in het adresvak, waarbij  server  is de naam van de BHOLD-websiteserver en  poort  is het poortnummer dat is gebonden aan de website. Klik op Start, klikt u op waarden, en klik vervolgens op wijzigen.
+> Als de Core BHOLD-module is geïnstalleerd op dezelfde computer als de FIM-Portal, moet u DNS-bronrecords (CNAME- of A) maken met verschillende hostnamen voor de BHOLD-Core-servers en de server met de FIM-Portal. Slechts één SPN kan worden vastgesteld voor een bepaalde combinatie van de service-type/server-alias en dus BHOLD-Core en de FIM-Portal moet afzonderlijke SPN's omdat ze doorgaans worden uitgevoerd onder verschillende accounts. De setspn-opdracht meldt een fout als een SPN is al onder een ander account.
 
 Lidmaatschap van **Domeinadministrators**, of gelijkwaardig, is de minimale vereiste om deze procedure te voltooien.
 
-#### <a name="to-establish-the-spn-of-the-bhold-website"></a>Zoek de naam van het kenmerk dat u wilt wijzigen, typt u de nieuwe waarde in het vak naast de naam van het kenmerk en klik vervolgens op OK.
+#### <a name="to-establish-the-spn-of-the-bhold-website"></a>Tot stand brengen van de SPN-naam van de BHOLD-website
 
-1.  Nadat u hebt geïnstalleerd BHOLD-Core en gevalideerd of de installatie geslaagd is, kunt u aanvullende modules installeren.
+1.  Klik op de domeincontroller in Active Directory Domain Services, **Start**, klikt u op **alle programma's**, klikt u op **accessoires**, met de rechtermuisknop op **opdrachtprompt** , en klik vervolgens op **als administrator uitvoeren**.
 
-2.  De BHOLD-database zal op dit moment niet in wezen leeg is, met slechts één gebruikersaccount, het root-account en een organisatie-eenheid (orgunit), de hoofdmap orgunit.
+2.  Typ de volgende opdracht achter de opdrachtprompt en druk op ENTER: setspn – S HTTP/ *\<networkalias\> \<domein\>*\\*\<accountname\>* waar:
 
-    -   *\<Als u wilt meer gebruikers toevoegen aan de BHOLD-database, kunt u ofwel de module Access Management-Connector of de Generator van BHOLD-Model, afhankelijk van uw behoeften installeren.
+    -   *\<networkalias\>* is het adres dat clients contact opnemen met de BHOLD-website gebruiken
 
-    -   *\<U kunt de module Access Management-Connector gebruiken om gebruikersgegevens te importeren uit de FIM-synchronisatieservice of u kunt de Generator BHOLD-Model gebruiken om gebruikersgegevens te importeren uit een reeks gestructureerde bestanden.
+    -   *\<domein\>*\\*\<accountname\>* is de naam van het domein en gebruikersnaam van het serviceaccount van BHOLD-Core die u hebt gemaakt tijdens de installatie van BHOLD-Core.
 
 3.  Zie voor meer informatie over het gebruik van de module Access Management-Connector Test Lab Guide: BHOLD Access Management-Connector.
 
-#### <a name="setting-bhold-system-attributes"></a>Zie voor meer informatie over het gebruik van de Generator van BHOLD-Model-module:
+#### <a name="setting-bhold-system-attributes"></a>BHOLD-kenmerken instellen
 
-Microsoft BHOLD-Suite concepten handleiding Microsoft BHOLD-Suite TechnicalReference.
+Om te valideren dat de installatie van de Core BHOLD-module geslaagd is, opent u de belangrijkste BHOLD-portal en bekijk de systeemkenmerken. Om te controleren of de functies van de module BHOLD Core goed in uw omgeving, kunt u bovendien de volgende BHOLD-systeemkenmerken desgewenst wijzigen:
 
 | **Kenmerk**                | **Beschrijving**                                                                                                                                                                                                                                                                                                      |
 |------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -218,5 +218,5 @@ Nadat u hebt geïnstalleerd BHOLD-Core en gevalideerd of de installatie geslaagd
 
 Zie voor meer informatie over het gebruik van de Generator van BHOLD-Model-module:
 
-- [Microsoft BHOLD-Suite concepten handleiding](https://technet.microsoft.com/library/jj134102(v=ws.10).aspx)
-- [Microsoft BHOLD-Suite TechnicalReference](https://technet.microsoft.com/library/jj134935(v=ws.10).aspx).
+- [Microsoft BHOLD Suite Concepts Guide](https://technet.microsoft.com/library/jj134102(v=ws.10).aspx)
+- [Microsoft BHOLD Suite TechnicalReference](https://technet.microsoft.com/library/jj134935(v=ws.10).aspx).
