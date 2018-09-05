@@ -1,37 +1,48 @@
 ---
-title: Werken met de portal van de self-service voor wachtwoord opnieuw instellen | Microsoft Docs
+title: Werken met Self-service voor wachtwoord opnieuw instellen | Microsoft Docs
 description: Ontdek wat er nieuw is bij de selfservice voor wachtwoordherstel in MIM 2016, zoals de werking van SSPR met meervoudige verificatie.
 keywords: ''
 author: billmath
 ms.author: billmath
 manager: mtillman
-ms.reviewer: davidste
-ms.date: 06/26/2018
+ms.date: 08/30/2018
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
-ms.openlocfilehash: b1b30b744a5f735512f31d98184a561ce3f9b047
-ms.sourcegitcommit: 03617b441135a55b664e0d81cce4d17541bee93b
+ms.openlocfilehash: a7314aaf559836fb77b32ae191527917c4854417
+ms.sourcegitcommit: acb2c61831cb634278acc439d6d9496ff51a6a54
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36963372"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43694619"
 ---
-# <a name="working-with-self-service-password-reset"></a>Werken met de selfservice voor wachtwoordherstel
+# <a name="self-service-password-reset-deployment-options"></a>Selfservice voor wachtwoordherstel implementatieopties
 
-> [!IMPORTANT]
-> Als gevolg van de aankondiging van afschaffing van Azure multi-factor Authentication Software Development Kit. De Azure MFA-SDK worden voor bestaande klanten tot de datum buiten gebruik stellen van 14 November 2018 ondersteund. Huidige en nieuwe klanten kunnen niet meer SDK downloaden via de klassieke Azure portal. U kunt u downloaden moet bereiken Azure klantondersteuning om uw gegenereerde Servicereferenties MFA-pakket wordt ontvangen. <br> Het ontwikkelteam Microsoft werkt op wijzigingen in MFA door te integreren met MFA Server SDK.  Hiermee worden opgenomen in een toekomstige hotfix Zie [versiegeschiedenis](/reference/version-history.md) aankondigingen.
+Voor nieuwe klanten die [een licentie voor Azure Active Directory Premium](https://docs.microsoft.com/azure/active-directory/authentication/concept-sspr-licensing), wordt u aangeraden [Azure AD Self-service voor wachtwoord opnieuw instellen](https://docs.microsoft.com/azure/active-directory/authentication/concept-sspr-howitworks.md) voor de eindgebruiker.  Azure AD-selfservice wachtwoord opnieuw instellen biedt een web- en geïntegreerde Windows-ervaring voor hun eigen wachtwoord opnieuw instellen van een gebruiker en biedt ondersteuning voor veel van dezelfde mogelijkheden als MIM, met inbegrip van alternatieve e-mailadres en Q & A-poorten.  Bij het implementeren van Azure AD selfservice voor wachtwoordherstel, Azure AD Connect ondersteunt [de nieuwe wachtwoorden terugschrijven naar AD DS](https://docs.microsoft.com/azure/active-directory/authentication/concept-sspr-writeback.md), en MIM [meldingsservice voor wachtwoordwijzigingen](deploying-mim-password-change-notification-service-on-domain-controller.md) kan worden gebruikt voor het doorsturen van de wachtwoorden van andere systemen, zoals een andere leverancier directory-server, evenals.  Implementeren van MIM voor [wachtwoordbeheer](infrastructure/mim2016-password-management.md) vereist niet de MIM-Service of de MIM-Self-service voor wachtwoord opnieuw instellen of de registratie-portals om te worden geïmplementeerd.  In plaats daarvan kunt u deze stappen volgen:
 
-Microsoft Identity Manager 2016 biedt aanvullende functionaliteit voor de functie Wachtwoord opnieuw instellen in Selfservice. Deze functionaliteit is uitgebreid met verschillende belangrijke functies:
+- Eerste, als u nodig hebt voor het verzenden van wachtwoorden voor mappen dan Azure AD en AD DS, MIM Sync met connectors voor Active Directory Domain Services en eventuele aanvullende doelsystemen implementeren, configureren van MIM voor [wachtwoordbeheer](infrastructure/mim2016-password-management.md) en implementeren de [meldingsservice voor wachtwoordwijzigingen](deploying-mim-password-change-notification-service-on-domain-controller.md).
+- Als u nodig hebt voor het verzenden van wachtwoorden voor mappen dan Azure AD, configureer vervolgens Azure AD Connect voor [de nieuwe wachtwoorden terugschrijven naar AD DS](https://docs.microsoft.com/azure/active-directory/authentication/concept-sspr-writeback.md).
+- U kunt desgewenst [schrijf gebruikers](https://docs.microsoft.com/azure/active-directory/authentication/howto-sspr-authenticationdata.md).
+- Ten slotte [implementatie van Azure AD Self-service voor wachtwoord opnieuw instellen voor uw eindgebruikers](https://docs.microsoft.com/azure/active-directory/authentication/howto-sspr-deployment.md).
 
--   De selfservice voor wachtwoordherstel portal en de Windows-aanmeldingsscherm nu kunnen gebruikers hun account ontgrendelen zonder hun wachtwoorden wijzigen of beheerders ondersteuning aan te roepen. Gebruikers kunnen ophalen vergrendeld hun account voor diverse geldige redenen, zoals als ze een oud wachtwoord hebben ingevoerd, tweetalige computer gebruiken en het toetsenbord ingesteld op de verkeerde taal hebben of poging om aan te melden bij een gedeeld werkstation aan een account van iemand anders geopend.
+Voor bestaande klanten die was eerder Forefront Identity Manager (FIM) geïmplementeerd voor selfservice voor wachtwoord opnieuw instellen en hebben een licentie voor Azure Active Directory Premium, wordt aangeraden planning overgang naar Azure AD Self-service voor wachtwoord opnieuw instellen.  U kunt overgaan eindgebruikers kunnen Azure AD Self-service voor wachtwoord opnieuw instellen zonder dat ze opnieuw registreren door [synchroniseren of hoe via PowerShell alternatieve e-mailadres van een gebruiker de waarde-adres of een mobiele telefoon](https://docs.microsoft.com/azure/active-directory/authentication/howto-sspr-authenticationdata.md). Nadat gebruikers zijn geregistreerd voor Azure AD Self-service voor wachtwoord opnieuw instelt, de FIM-portal voor het opnieuw instellen van wachtwoord kan worden genomen.
 
--   Er is een nieuwe verificatiepoort, een telefoonpoort, toegevoegd. Deze poort kan de gebruikersverificatie via een telefoongesprek.
+Voor klanten die nog niet hebben geïmplementeerd Azure AD Self-service voor wachtwoord opnieuw instellen voor hun gebruikers, bevat MIM ook Self-service voor wachtwoord opnieuw instellen van portals.  Vergeleken met de FIM, bevat MIM 2016 de volgende wijzigingen:
 
--   Is er ondersteuning toegevoegd voor de service Microsoft Azure multi-factor Authentication (MFA). Deze service kan worden gebruikt voor de bestaande SMS-Gate een eenmalig wachtwoord of de nieuwe Telefoonpoort.
+- De portal MIM selfservice voor wachtwoordherstel en Windows-aanmeldingsscherm toestaan dat gebruikers hun account ontgrendelen zonder hun wachtwoord wijzigen.
+- Er is een nieuwe verificatiepoort, een Telefoonpoort, toegevoegd aan MIM. Dit kan de gebruikersverificatie telefonisch via de Microsoft Azure multi-factor Authentication (MFA)-service.
 
-## <a name="azure-for-multi-factor-authentication"></a>Azure voor meervoudige verificatie
+MIM 2016-release builds tot versie 4.5.26.0 vertrouwd bij de klant voor het downloaden van de Azure multi-factor Authentication Software Development Kit (Azure MFA-SDK).  Deze SDK is afgeschaft en de Azure MFA-SDK wordt ondersteund voor bestaande klanten alleen tot de vervaldatum van 14 November 2018. Tot die datum worden klanten moeten contact opnemen met ondersteuning voor Azure-klant voor het ontvangen van het gegenereerde Servicereferenties voor de MFA-pakket, omdat ze niet kunnen naar de Azure MFA-SDK downloaden. 
+
+#### <a name="new-update-current-azure-mfa-configuration-to-azure-multi-factor-authentication-server"></a>NIEUW! Huidige Azure MFA-configuratie naar Azure multi-factor Authentication-Server bijwerken
+
+Dit [artikel](working-with-mfaserver-for-mim.md) wordt beschreven hoe u uw implementatie MIM-portal voor self-service voor wachtwoord opnieuw instellen en de PAM-configuratie, met behulp van Azure multi-factor Authentication-Server voor multi-factor authentication bij te werken.
+
+## <a name="deploying-mim-self-service-password-reset-portal-using-azure-mfa-for-multi-factor-authentication"></a>Implementeren van MIM selfserviceportal met behulp van Azure MFA voor meervoudige verificatie
+
+De volgende sectie wordt beschreven hoe u MIM Self-service voor wachtwoord opnieuw instellen-portal, Azure MFA gebruiken voor verificatie met meerdere factoren te implementeren.  Deze stappen zijn alleen die nodig zijn voor klanten die Azure AD Self-service voor wachtwoord opnieuw instellen niet voor hun gebruikers gebruiken.
+
 Microsoft Azure Multi-Factor Authentication is een verificatieservice waarbij gebruikers zich bij het aanmelden moeten verifiëren door middel van een mobiele app, telefonische oproep of een tekstbericht. Het kan met Microsoft Azure Active Directory worden gebruikt en als service voor bedrijfstoepassingen in de cloud en on-premises.
 
 Azure MFA biedt een aanvullende verificatiemethode waarmee bestaande verificatieprocessen kunnen worden uitgebreid, zoals de verificatie die wordt uitgevoerd door MIM voor de aanmeldassistent van de selfservice.
@@ -39,7 +50,8 @@ Azure MFA biedt een aanvullende verificatiemethode waarmee bestaande verificatie
 Gebruikers verifiëren zich met Azure MFA bij het systeem om hun identiteit kenbaar te maken en tegelijkertijd om opnieuw toegang te krijgen tot hun account en resources. Verificatie kan plaatsvinden via sms of een telefoonoproep.   Hoe strenger de verificatie, hoe groter het vertrouwen dat de persoon die toegang probeert te krijgen inderdaad de werkelijke gebruiker is die houder is van de identiteit. Wanneer de gebruiker eenmaal is geverifieerd, kan deze een nieuw wachtwoord kiezen ter vervanging van het oude.
 
 ## <a name="prerequisites-to-set-up-self-service-account-unlock-and-password-reset-using-mfa"></a>Vereisten voor het instellen van de selfservicefuncties voor het ontgrendelen van het account en het opnieuw instellen van het wachtwoord met MFA
-In deze sectie wordt ervan uitgegaan dat u Microsoft Identity Manager 2016 hebt gedownload en de implementatie hiervan hebt voltooid, met inbegrip van de volgende onderdelen en services:
+
+Deze sectie wordt ervan uitgegaan dat u hebt gedownload en de implementatie van de Microsoft Identity Manager 2016 voltooid [MIM-synchronisatie, MIM-Service en MIM-Portal-onderdelen](microsoft-identity-manager-deploy.md), met inbegrip van de volgende onderdelen en services:
 
 -   Een Windows Server 2008 R2-server of hoger is ingesteld als een Active Directory-server, met inbegrip van AD Domain Services en de domeincontroller met een aangewezen domein (een 'bedrijfsdomein')
 
@@ -57,44 +69,22 @@ In deze sectie wordt ervan uitgegaan dat u Microsoft Identity Manager 2016 hebt 
 
     -   De configuratie van synchronisatieregels in de MIM-portal om de synchronisatie van gebruikersgegevens toe te staan en synchronisatieactiviteiten in de MIM-service mogelijk te maken.
 
--   MIM 2016-invoegtoepassingen &amp; uitbreidingen, zoals de SSPR Windows geïntegreerde aanmelding-client wordt geïmplementeerd op de server of op een afzonderlijke clientcomputer.
+-   MIM 2016-invoegtoepassingen &amp; -uitbreidingen, zoals de geïntegreerde client voor Windows-aanmelding in SSPR die op de server of op een afzonderlijke clientcomputer wordt geïmplementeerd.
+
+In dit scenario moet u MIM CAL's voor uw gebruikers, evenals het abonnement voor Azure MFA hebt.
 
 ## <a name="prepare-mim-to-work-with-multi-factor-authentication"></a>MIM voorbereiden voor het toepassen van meervoudige verificatie
 Configureer MIM Sync voor de ondersteuning van de functies voor het opnieuw instellen van het wachtwoord en het ontgrendelen van het account. Zie [De FIM-invoegtoepassingen en -uitbreidingen installeren](https://technet.microsoft.com/library/ff512688%28v=ws.10%29.aspx), [FIM SSPR installeren](https://technet.microsoft.com/library/hh322891%28v=ws.10%29.aspx), [SSPR-verificatiepoorten](https://technet.microsoft.com/library/jj134288%28v=ws.10%29.aspx) en [de handleiding voor de SSPR-testomgeving](https://technet.microsoft.com/library/hh826057%28v=ws.10%29.aspx)
 
-In de volgende sectie stelt u de Azure MFA-provider in Microsoft Azure Active Directory in. Genereert u een bestand met de verificatiegegevens die nodig zijn voor Azure MFA contact kunnen maken.  U moet over een Azure-abonnement beschikken om verder te gaan.
+In de volgende sectie stelt u de Azure MFA-provider in Microsoft Azure Active Directory in. Als onderdeel hiervan genereert u een bestand met de verificatiegegevens die nodig zijn voor MFA om met Azure MFA verbinding te maken.  U moet over een Azure-abonnement beschikken om verder te gaan.
 
 ### <a name="register-your-multi-factor-authentication-provider-in-azure"></a>Uw provider voor meervoudige verificatie in Azure registreren
 
-1.  Maak een [MFA-provider](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication-get-started-auth-provider).
+1.  Maak een [MFA-provider](https://docs.microsoft.com/en-us/azure/multi-factor-authentication/multi-factor-authentication-get-started-auth-provider.md).
 
-2. Open een ondersteuningsaanvraag en aanvragen van de directe SDK voor ASP.net 2.0 C#. De SDK wordt alleen voor gebruikers van MIM met MFA worden opgegeven omdat de directe SDK is afgeschaft. Nieuwe klanten moeten de volgende versie van MIM die kan worden geïntegreerd met MFA-server vaststellen.
+2. Een ondersteuningsaanvraag openen en de SDK direct aanvragen voor ASP.net 2.0 C#. De SDK wordt alleen worden opgegeven voor de huidige gebruikers van MIM met MFA omdat de direct SDK is afgeschaft. Nieuwe klanten moeten de volgende versie van MIM die kan worden geïntegreerd met MFA-server vast.
 
-3.  Klik op **App-services &gt; Active Directory &gt; Provider voor Multi-Factor Authentication&gt; Snelle invoer**.
-
-![Azure Portals snelle maken MFA installatiekopie](media/MIM-SSPR-Azureportal.png)
-
-4.  Typ in het veld **Naam** de tekst **SSPRMFA** en klik vervolgens op **Maken**.
-
-![Afbeelding voor Azure Portal MFA](media/MIM-SSPR-Azureportal-2.png)
-
-5.  Klik op **Active Directory** in het menu van de klassieke Azure Portal en vervolgens op het tabblad **Providers voor meervoudige verificatie**.
-
-6.  Klik op **SSPRMFA** en vervolgens op **Beheren** onder aan het scherm.
-
-    ![Pictogram voor Beheren in Azure Portal](media/MIM-SSPR-ManageButton.png)
-
-7.  Klik in het nieuwe venster in het linkerdeelvenster onder **Configureren** op **Instellingen**.
-
-8.  Onder **fraudewaarschuwing**, schakel het selectievakje ** gebruiker blokkeren wanneer fraude wordt gemeld. Als u het selectievakje uitschakelt, is om te voorkomen dat de hele service wordt geblokkeerd.
-
-9. Klik in het venster **Microsoft Azure Multi-Factor Authentication** dat wordt geopend op **SDK** onder **Downloads** in het menu aan de linkerkant.
-
-10. Klik op de koppeling **Downloaden** in de kolom met ZIP-bestanden voor het bestand met de programmeertaal **SDK voor ASP.net 2.0 C**.
-
-    ![Afbeelding voor het downloaden van het ZIP-bestand voor Azure MFA](media/MIM-SSPR-Azure-MFA.png)
-
-11. Kopieer het betreffende ZIP-bestand naar elk systeem waarop de MIM-service is geïnstalleerd.  Houd er rekening mee dat het ZIP-bestand sleutelmateriaal bevat dat wordt gebruikt bij de verificatie voor de Azure MFA-service.
+3. Kopieer het betreffende ZIP-bestand naar elk systeem waarop de MIM-service is geïnstalleerd.  Houd er rekening mee dat het ZIP-bestand sleutelmateriaal bevat dat wordt gebruikt bij de verificatie voor de Azure MFA-service.
 
 ### <a name="update-the-configuration-file"></a>Het configuratiebestand bijwerken
 
@@ -118,13 +108,13 @@ In de volgende sectie stelt u de Azure MFA-provider in Microsoft Azure Active Di
 
 9. Voer in het element `<username>` een gebruikersnaam in.
 
-10. Voer in het element `<DefaultCountryCode>` uw standaardlandnummer in. In gevallen waar telefoonnummers worden geregistreerd voor gebruikers zonder een landnummer, krijgen gebruikers deze code. In gevallen waarin een gebruiker een internationale landcode heeft, heeft deze in het geregistreerde telefoonnummer worden opgenomen.
+10. Voer in het element `<DefaultCountryCode>` uw standaardlandnummer in. Wanneer telefoonnummers worden geregistreerd voor gebruikers zonder een landnummer, wordt dit landnummer gebruikt. Als een gebruiker over een internationaal landnummer beschikt, moet dit in het geregistreerde telefoonnummer worden opgenomen.
 
 11. Sla het bestand MfaSettings.xml op met dezelfde naam en op dezelfde locatie.
 
 #### <a name="configure-the-phone-gate-or-the-one-time-password-sms-gate"></a>De poort voor verificatie met een eenmalig wachtwoord via sms of de nieuwe telefoonpoort configureren
 
-1.  Start Internet Explorer en navigeer naar de MIM-Portal, verifieer uzelf als de MIM-beheerder en klik vervolgens op **werkstromen** in de linkernavigatiebalk.
+1.  Start Internet Explorer en navigeer naar de MIM-portal, verifieer uzelf als de MIM-beheerder en klik vervolgens op de navigatiebalk aan de linkerkant op **Werkstromen**.
 
     ![Afbeelding van de navigatie in de MIM-portal](media/MIM-SSPR-workflow.jpg)
 
@@ -140,7 +130,7 @@ Gebruikers in uw organisatie kunnen zich nu registreren voor het opnieuw instell
 
 #### <a name="register-users-for-password-reset"></a>Gebruikers registreren voor het opnieuw instellen van het wachtwoord
 
-1.  Een gebruiker wordt opent een webbrowser en navigeer naar de MIM opnieuw Portal voor Wachtwoordregistratie.  (Deze portal is meestal geconfigureerd met Windows-verificatie).  In de portal geven ze nogmaals hun gebruikersnaam en wachtwoord op om hun identiteit te bevestigen.
+1.  De gebruiker opent een webbrowser om naar de MIM-registratieportal voor het opnieuw instellen van het wachtwoord te navigeren.  (Deze portal is meestal geconfigureerd met Windows-verificatie).  In de portal geven ze nogmaals hun gebruikersnaam en wachtwoord op om hun identiteit te bevestigen.
 
     Ze moeten naar de portal voor wachtwoordregistratie gaan en zich verifiëren met hun gebruikersnaam en wachtwoord.
 
@@ -157,7 +147,7 @@ De gebruiker kan op twee manieren gebruikmaken van de functies voor het opnieuw 
 
 Wanneer de MIM-invoegtoepassingen en -uitbreidingen worden geïnstalleerd op een computer in het domein die via het netwerk van uw organisatie is verbonden met de MIM-service, kunnen gebruikers een vergeten wachtwoord herstellen bij het aanmelden op de computer.  U moet hiervoor de onderstaande stappen uitvoeren.
 
-#### <a name="windows-desktop-login-integrated-password-reset"></a>Windows desktop geïntegreerde aanmelding-wachtwoord opnieuw instellen
+#### <a name="windows-desktop-login-integrated-password-reset"></a>Geïntegreerde functie voor het opnieuw instellen van het wachtwoord bij de aanmelding bij het Windows-bureaublad
 
 1.  Als de gebruiker meerdere keren het verkeerde wachtwoord in het scherm invoert, kan deze op **Problemen bij het aanmelden?** klikken .
 
@@ -169,7 +159,7 @@ Wanneer de MIM-invoegtoepassingen en -uitbreidingen worden geïnstalleerd op een
 
 2.  De gebruiker wordt gevraagd om zich te verifiëren. Als MFA is geconfigureerd, wordt de gebruiker gebeld.
 
-3.  Op de achtergrond is wat er gebeurt door Azure MFA een telefonische oproep naar het nummer van de gebruiker is opgegeven toen deze zich aangemeld voor de service.
+3.  Op de achtergrond wordt door Azure MFA naar het nummer gebeld dat door de gebruiker is opgegeven toen deze zich voor de service heeft aangemeld.
 
 4.  Wanneer de gebruiker de telefoonoproep beantwoordt, wordt deze gevraagd om de hekjestoets (#) op de telefoon in te toetsen. De gebruiker klikt vervolgens in de portal op **Volgende**.
 
@@ -186,7 +176,7 @@ Wanneer de MIM-invoegtoepassingen en -uitbreidingen worden geïnstalleerd op een
 
 1.  Gebruikers kunnen een webbrowser openen, naar de **portal voor het opnieuw instellen van het wachtwoord** navigeren, hun gebruikersnaam invoeren en op **Volgende** klikken.
 
-    Als MFA is geconfigureerd, wordt de gebruiker gebeld. Op de achtergrond is wat er gebeurt door Azure MFA een telefonische oproep naar het nummer van de gebruiker is opgegeven toen deze zich aangemeld voor de service.
+    Als MFA is geconfigureerd, wordt de gebruiker gebeld. Op de achtergrond wordt door Azure MFA naar het nummer gebeld dat door de gebruiker is opgegeven toen deze zich voor de service heeft aangemeld.
 
     Wanneer de gebruiker de telefoonoproep beantwoordt, wordt deze gevraagd om de hekjestoets (#) op de telefoon in te toetsen. De gebruiker klikt vervolgens in de portal op **Volgende**.
 
@@ -201,8 +191,7 @@ Wanneer de MIM-invoegtoepassingen en -uitbreidingen worden geïnstalleerd op een
 
 4.  Wanneer de gebruiker is geverifieerd, heeft deze twee opties: het huidige wachtwoord behouden of een nieuw wachtwoord instellen.
 
-5.  ![Afbeelding voor ontgrendeld account in MIM](media/MIM-SSPR-account-unlock.JPG)
+5.  ! [MIM ac
+6.  ontgrendeld image](media/MIM-SSPR-account-unlock.JPG) tellen
 
 6.  Als de gebruiker ervoor kiest om het wachtwoord opnieuw in te stellen, moet deze twee keer een nieuw wachtwoord invoeren en op **Volgende** klikken om het wachtwoord te wijzigen.
-
-    ![Afbeelding voor het opnieuw instellen van het wachtwoord in de MIM-aanmeldassistent](media/MIM-SSPR-PR1.JPG)

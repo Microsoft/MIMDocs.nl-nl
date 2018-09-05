@@ -10,32 +10,32 @@ ms.topic: get-started-article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 50345fda-56d7-4b6e-a861-f49ff90a8376
-ms.openlocfilehash: 834343243dfeefa8d1874414fa369751288fd64d
-ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
+ms.openlocfilehash: bb0287b894786d13398819b04bdb089f0f36b33e
+ms.sourcegitcommit: acb2c61831cb634278acc439d6d9496ff51a6a54
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36288867"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43694636"
 ---
 # <a name="supported-languages"></a>Ondersteunde talen
 
-In dit artikel bevat een overzicht van de ondersteunde talen en toewijzing van updates van Microsoft Identity Manager 2016-SP1-versie 4.5.x of hoger.
+In dit artikel bevat een overzicht van de ondersteunde talen en de toewijzing van updates van Microsoft Identity Manager 2016 SP1-versie 4.5.x of hoger.
 
 ## <a name="mim-service-and-portal-and-add-ins-and-extensions-language-pack"></a>MIM-Service en Portal en -invoegtoepassingen en extensies Language Pack 
 
-De volgende talen 33 talen wordt ondersteund door de MIM-Service van Microsoft en het taalpakket voor de Portal.  
+De MIM-Service van Microsoft en taalpakket voor de Portal ondersteunt de volgende talen 33 talen.  
 
 > [!NOTE]
-> In [4.4.1642.0](https://support.microsoft.com/en-us/help/4021562/hotfix-rollup-package-build-4-4-1642-0-is-available-for-microsoft) een registersleutel is aangeroepen 'OverrideDefaultUILocale' toegevoegd aan de MIM-invoegtoepassingen en extensies taalpakket zal proberen om toe te wijzen alle talen die vergelijkbaar met de fout die wordt ondersteund. Bijvoorbeeld, als de weergavetaal van Windows is ES-CL (Spaans onderliggende) of een ES-**, probeert deze voor de toewijzing ES-ES (Spaans Spanje).
+> In [4.4.1642.0](https://support.microsoft.com/en-us/help/4021562/hotfix-rollup-package-build-4-4-1642-0-is-available-for-microsoft) een registersleutel met de naam 'OverrideDefaultUILocale' is toegevoegd aan de MIM-invoegtoepassingen en extensies taalpakket wordt geprobeerd om toe te wijzen alle talen die vergelijkbaar met de fout die wordt ondersteund. Bijvoorbeeld, als de weergavetaal van Windows is ES-CL (Chili Spaans), of een ES -\*, zal proberen voor de toewijzing ES-ES (Spaans-Spanje).
 
 > [!IMPORTANT]
-> De tekst in de SSPR-invoegtoepassing en de portal wordt vertaald, maar de vragen worden niet zonder extra werk. U moet verificatieprocessen werkstromen (en bijbehorende sets en beheerbeleidsregels doel te definiëren) maken op doel vragen in elke taal naar de doellocatie.
+> De tekst in de SSPR-invoegtoepassing en de portal wordt vertaald, maar de vragen worden niet zonder extra werk. U moet AuthN werkstromen (en bijbehorende sets en beheerbeleidsregels doel te) maken op doel vragen in elke taal op de doellocatie.
 
-|       taal        | FIM(4.3.x.x)/MIM(4.4.xx) | MIM(4.5.x.x) |
+|       Taal        | FIM(4.3.x.x)/MIM(4.4.xx) | MIM(4.5.x.x) |
 |-----------------------|--------------------------|--------------|
 |       Bulgaars       |          bg-BG           |      BG      |
 | Chinees (Vereenvoudigd)  |          zh-CN           |   zh-hans    |
-|   Chinees (Taiwan)    |          zh-TW.           |   zh-hant    |
+|   Chinees (Taiwan)    |          zh-TW           |   zh-hant    |
 |       Kroatisch        |          hr-HR           |      HR      |
 |         Tsjechisch         |          cs-CZ           |      CS      |
 |        Deens         |          da-DK           |      da      |
@@ -44,7 +44,7 @@ De volgende talen 33 talen wordt ondersteund door de MIM-Service van Microsoft e
 |        Frans         |          fr-FR           |      FR      |
 |        Fins        |          fi-FI           |      fi      |
 |        Duits         |          de-DE           |      de      |
-|         Grieks         |          el-GR           |      El      |
+|         Grieks         |          el GR           |      El      |
 |         Hindi         |          hi-IN           |      Hallo      |
 |       Hongaars       |          hu-HU           |      Hu      |
 |        Italiaans        |          IT-IT           |      Deze      |
@@ -63,17 +63,17 @@ De volgende talen 33 talen wordt ondersteund door de MIM-Service van Microsoft e
 |        Zweeds        |          SV-SE           |      SV      |
 |       Sloveens       |          sl-SI           |      SL      |
 |   Servisch - Servië    |  sr-latn-CS(Depricated)  |  sr-Latn-RS  |
-|         Thais          |          th-TH           |      TH      |
+|         Thais          |          e-e           |      do      |
 |        Turks        |          tr-TR           |      TR      |
-|       Oekraïens       |          VK UA           |      Verenigd Koninkrijk      |
+|       Oekraïens       |          Verenigd Koninkrijk-UA           |      Groot-Brittannië      |
 
 ## <a name="certificate-management"></a>Certificaatbeheer 
 De Microsoft Certificate Management ondersteunt de volgende 9 talen. 
 
-|taal|FIM(4.3.x.x)/MIM(4.4.xx)|Nieuwe MIM(4.5.x.x)
+|Taal|FIM(4.3.x.x)/MIM(4.4.xx)|Nieuwe MIM(4.5.x.x)
 |-----|-----|-----|-----|
 |Chinees (Vereenvoudigd)|zh-CN|zh-hans|
-|Chinees (Taiwan)|zh-TW.|zh-hant|
+|Chinees (Taiwan)|zh-TW|zh-hant|
 |Nederlands|NL-NL|nl|
 |Frans|fr-FR|FR|
 |Duits|de-DE|de|
@@ -82,20 +82,20 @@ De Microsoft Certificate Management ondersteunt de volgende 9 talen.
 |Portugees (Portugal)|pt-PT|pt-PT|
 |Spaans|es-ES|Ja|
 
-## <a name="certificate-management-modern-application"></a>Moderne Certificate Management-toepassing  
+## <a name="certificate-management-modern-application"></a>Certificate Management-toepassing voor moderne  
 De Microsoft Certificate Management-toepassing voor moderne ondersteunt de volgende 33 talen. 
 
-|taal | [1.0.225.104](https://www.microsoft.com/en-us/download/details.aspx?id=54954) | |
+|Taal | [1.0.225.104](https://www.microsoft.com/en-us/download/details.aspx?id=54954) | |
 |-----|-----|-----|-----|
 |Nederlands|NL-NL|nl|
 |Chinees (Vereenvoudigd)|zh-CN|zh-hans|
-|Chinees (Taiwan)|zh-TW.|zh-hant|
+|Chinees (Taiwan)|zh-TW|zh-hant|
 |Tsjechisch|cs-CZ|CS|
 |Deens|da-DK|da|
 |Frans|fr-FR|FR|
 |Fins|fi-FI|fi|
 |Duits|de-DE|de|
-|Grieks|el-GR|El|
+|Grieks|el GR|El|
 |Hongaars|hu-HU|Hu|
 |Italiaans|IT-IT|Deze|
 |Japans|ja-JP|Japan|
