@@ -2,20 +2,20 @@
 title: SDK voor Azure multi-factor Authentication-Server gebruiken om PAM of scenario's voor self-service voor Wachtwoordherstel te activeren | Microsoft Docs
 description: Instellen van de SDK van Azure multi-factor Authentication-Server als een tweede beveiligingslaag wanneer uw gebruikers rollen in Privileged Access Management en selfservice voor wachtwoordherstel activeren.
 keywords: ''
-author: billmath
+author: fimguy
 ms.author: billmath
 manager: mtillman
-ms.date: 08/31/2018
+ms.date: 09/02/2018
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
-ms.openlocfilehash: a2a3becab4fbef1126a96ade46b85ef10c0c6291
-ms.sourcegitcommit: acb2c61831cb634278acc439d6d9496ff51a6a54
+ms.openlocfilehash: 7191e445688cc9e3c5c02b9c6852c869a28a937a
+ms.sourcegitcommit: ad0690bd57e3d056397108bf1c8417965d69a32c
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43694895"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43772675"
 ---
 # <a name="use-azure-multi-factor-authentication-server-to-activate-pam-or-sspr"></a>Azure multi-factor Authentication-Server gebruiken om PAM of self-service voor Wachtwoordherstel te activeren
 Het volgende document wordt beschreven hoe u de Azure MFA-server instellen als een tweede beveiligingslaag wanneer uw gebruikers rollen in de bevoegdheid Access Management of selfservice voor wachtwoordherstel activeren.
@@ -57,7 +57,8 @@ Nadat u de server hebt gedownload [installeren](https://docs.microsoft.com/en-us
 4. Zodra de wizards is klik door config, selecteer "MIM MFASDK' en app-pool
 
 > [!NOTE] 
-> Wizard moet een beheerdersgroep moet worden gemaakt. Meer informatie vindt u in de documentatie van Azure MFA Azure multi-factor Authentication-Server.
+> Wizard moet een beheerdersgroep moet worden gemaakt. Meer informatie vindt u in de Azure >> MFA Azure multi-factor Authentication-Server-documentatie.
+
 5. Vervolgens moeten we voor het importeren van de MIM-Service-account openen multi-factor Authentication-Console selecteren 'Gebruikers' een. Klik op 'Importeren uit Active Directory' b. Ga naar serviceaccount, ook wel 'contoso\mimservice' c. Klik op "Importeren" en "Afsluiten" ![werken-met-mfaserver-voor-mim_importmimserviceaccount. PNG](media/working-with-mfaserver-for-mim/working-with-mfaserver-for-mim_importmimserviceaccount.PNG) 
 6. Bewerk het account van de MIM-Service inschakelen in multi-factor Authentication-Console voor ![werken-met-mfaserver-voor-mim_enableserviceaccount. PNG](media/working-with-mfaserver-for-mim/working-with-mfaserver-for-mim_enableserviceaccount.PNG)
 7. Werk de IIS-verificatie op de website 'MIM MFASDK'. Eerst wordt uitgeschakeld. de 'Anonieme verificatie' vervolgens naar het Windows-verificatie inschakelen' ![werken-met-mfaserver-voor-mim_iisconfig. PNG](media/working-with-mfaserver-for-mim/working-with-mfaserver-for-mim_iisconfig.PNG)
@@ -65,7 +66,7 @@ Nadat u de server hebt gedownload [installeren](https://docs.microsoft.com/en-us
 
 ## <a name="configuring-the-mim-service-for-azure-multi-factor-authentication-server"></a>De MIM-Service voor Azure multi-factor Authentication-Server configureren 
 
-### <a name="step-1-patch-server-to-452000"></a>Stap 1: Patch Server 4.5.200.0
+### <a name="step-1-patch-server-to-452020"></a>Stap 1: Patch Server 4.5.202.0
  
 ### <a name="step-2-backup-and-open-the-mfasettingsxml-located-in-the-cprogram-filesmicrosoft-forefront-identity-manager2010service"></a>Stap 2: Back-up en Open de MfaSettings.xml zich in de 'C:\Program Files\Microsoft Forefront Identity Manager\2010\Service"
 
