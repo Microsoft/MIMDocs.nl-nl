@@ -1,6 +1,6 @@
 ---
-title: SQL-Server configureren voor Microsoft Identity Manager 2016 SP1 | Microsoft Docs
-description: Installeer SQL Server 2016 in voorbereiding voor de installatie van MIM 2016.
+title: SQL Server configureren voor Microsoft Identity Manager 2016 SP1 | Microsoft Docs
+description: Installeer SQL Server 2016 ter voorbereiding op voor uw installatie van MIM 2016.
 keywords: ''
 author: billmath
 ms.author: barclayn
@@ -12,12 +12,12 @@ ms.technology: security
 ms.assetid: 297df3b3-192e-4ed9-82ed-c95eb5297c84
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 915bf316fad2278ca1f62a9c2efd5850039d17a4
-ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
+ms.openlocfilehash: 6fe251a3976167909aa55a687884585b1937ebf3
+ms.sourcegitcommit: 28834821cbddd6384613d8ba45424c35f4c39ce6
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36289377"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45538554"
 ---
 # <a name="set-up-an-identity-management-server-sql-server-2016"></a>Een server voor identiteitsbeheer instellen: SQL Server 2016
 
@@ -29,9 +29,9 @@ ms.locfileid: "36289377"
 > In deze stapsgewijze instructies wordt gebruikgemaakt van voorbeeldnamen en -waarden van een bedrijf met de naam Contoso. Vervang deze door uw eigen namen en waarden. Bijvoorbeeld:
 > - Naam van de domeincontroller - **corpdc**
 > - Domeinnaam: **contoso**
-> - Naam van de MIM-Service-Server: **corpservice**
-> - Naam van de MIM-synchronisatieserver: **corpsync**
-> - De naam van de SQL Server - **corpsql**
+> - Naam van de MIM-Service-Server - **corpservice**
+> - Naam van de MIM-synchronisatieserver - **corpsync**
+> - Naam van SQL Server - **corpsql**
 > - Wachtwoord - <strong>Pass@word1</strong>
 
 ## <a name="install-sql-server-2016-standardenterprise-edition"></a>Installeer **SQL Server 2016 Standard/Enterprise Edition**
@@ -45,9 +45,9 @@ ms.locfileid: "36289377"
     ```
     .\setup.exe /Q /IACCEPTSQLSERVERLICENSETERMS /ACTION=install /FEATURES=SQL /INSTANCENAME=MSSQLSERVER /SQLSVCACCOUNT="contoso\SqlServer" /SQLSVCPASSWORD="Pass@word1"   /AGTSVCSTARTUPTYPE=Automatic /AGTSVCACCOUNT="NT AUTHORITY\Network Service" /SQLSYSADMINACCOUNTS="contoso\Administrator"
 
-More info SQL deployment accounts and services can be found [here](https://docs.microsoft.com/en-us/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions?view=sql-server-2017)
+More info SQL deployment accounts and services can be found [here](https://docs.microsoft.com/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions?view=sql-server-2017)
 > [!NOTE]
-> SSMS is no longer included in SQL 2016 downlaod details can be found [here](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017)    ```
+> SSMS is no longer included in SQL 2016 downlaod details can be found [here](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017)    ```
 > 
 > [!div class="step-by-step"]  
 > [« Windows Server 2016](prepare-server-ws2016.md)
