@@ -1,208 +1,220 @@
 ---
-title: De Microsoft Identity Manager-management-agent voor Microsoft Graph | Microsoft Docs
-author: fimguy
-description: Microsoft Graph (preview) is een externe gebruiker levenscyclusbeheer van AD-account. In dit scenario wordt een organisatie gasten in hun Azure AD-directory heeft uitgenodigd en wil deze gasten-toegang geven tot het lokale Windows-verificatie of Kerberos-toepassingen
+title: De Microsoft Identity Manager-connector voor Microsoft Graph configureren voor B2B | Microsoft Docs
+author: billmath
+description: Microsoft Graph-connector is een externe gebruiker levenscyclusbeheer voor AD-account. In dit scenario, een organisatie is uitgenodigd voor gasten hun Azure AD-directory en wil deze gasten-toegang geven tot on-premises Windows-Integrated verificatie- of Kerberos-toepassingen
 keywords: ''
-ms.author: davidste
-manager: bhu
-ms.date: 04/25/2018
+ms.author: billmath
+manager: mtillman
+ms.date: 10/02/2018
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
-ms.openlocfilehash: ac11a4dfb23944d50dbbcf0b0d70c915f186c159
-ms.sourcegitcommit: c773edc8262b38df50d82dae0f026bb49500d0a4
+ms.openlocfilehash: b7623da4c210711bd09882a8222377e725162991
+ms.sourcegitcommit: 032b3cdd8a88b1ccfb30c0070f216020feee6293
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34479159"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48045663"
 ---
-<a name="azure-ad-business-to-business-b2b-collaboration-with-microsoft-identity-managermim-2016-sp1-with-azure-application-proxy-public-preview"></a>Azure AD-business-to-business (B2B) samenwerking met Microsoft Identity Manager(MIM) 2016 SP1 met Azure-toepassingsproxy (openbare Preview)
+<a name="azure-ad-business-to-business-b2b-collaboration-with-microsoft-identity-managermim-2016-sp1-with-azure-application-proxy"></a>Azure AD-business-to-business (B2B) samenwerking met Microsoft Identity Manager(MIM) 2016 SP1 met Azure Application Proxy
 ============================================================================================================================
 
-Het eerste scenario in preview voor is externe gebruiker levenscyclusbeheer van AD-account.   In dit scenario kan een organisatie gasten in hun Azure AD-directory heeft uitgenodigd en wenst te geven die gasten toegang krijgen tot lokale Windows-verificatie of toepassingen op basis van Kerberos via de [Azure AD-toepassing](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-publish)proxy of andere wijze gateway. De Azure AD-toepassingsproxy is vereist voor elke gebruiker hebben hun eigen AD DS-account voor identificatie en overdracht
+Het eerste scenario is de externe gebruiker levenscyclusbeheer voor AD-account.   In dit scenario, een organisatie is uitgenodigd voor gasten hun Azure AD-directory en wil deze gasten toegang geven tot on-premises Windows-Integrated verificatie- of Kerberos-toepassingen, via de [Azure AD-toepassingsproxy](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-publish) of andere mechanismen gateway. De Azure AD-toepassingsproxy moet elke gebruiker hebben hun eigen AD DS-account voor identificatie- en overdracht.
 
-## <a name="scenario-specific-supported-guidance"></a>Scenario-specifieke ondersteund richtlijnen
+## <a name="scenario-specific-guidance"></a>Scenario-specifieke richtlijnen
 
-In dit scenario wordt een organisatie gasten in hun Azure AD-directory heeft uitgenodigd en wil deze gasten toegang geven tot lokale Windows. Geïntegreerde verificatie of toepassingen op basis van Kerberos via de [Azure AD-toepassing](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-publish) proxy of andere wijze gateway. De Azure AD-toepassingsproxy is vereist voor elke gebruiker hebben hun eigen AD DS-account voor identificatie en overdracht
+Enkele veronderstellingen in de configuratie van B2B met MIM en AD-toepassingsproxy:
 
-Enkele veronderstellingen in de configuratie van B2B met MIM en Azure-toepassingsproxy
-
--   U al hebt geïnstalleerd het [grafiek Management Agent](microsoft-identity-manager-2016-connector-graph.md).
-
--   U hebt een on-premises AD en Azure AD Connect set up voor het synchroniseren van gebruikers en groepen naar Azure AD.
-
-    -   Office-groepen beheren van de toepassing openen met behulp [Azure AD Connect](http://robsgroupsblog.com/blog/how-to-write-back-an-office-group-in-azure-active-directory-to-a-mail-enabled-security-group-in-an-on-premises-active-directory)
-
--   U al toepassingsproxy connectors en groepen van de connector hebt ingesteld, als dat niet het vindt u [hier](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-enable#install-and-register-a-connector) installeren en configureren
-
--   Een of meer toepassingen die afhankelijk van geïntegreerde Windows-verificatie of afzonderlijke AD-accounts via toepassingsproxy van Azure AD zijn gepubliceerd
-
--   U hebt uitgenodigd of u een of meer gasten die zijn gemaakt in Azure AD uitnodigen <https://docs.microsoft.com/azure/active-directory/active-directory-b2b-self-service-portal>
-
--   Microsoft Identity Manager is geïnstalleerd en eenvoudige configuratie van de Service en -Portal en Active Directory-beheeragent.
+-   U hebt al geïmplementeerd met een on-premises AD, en Microsoft Identity Manager is geïnstalleerd en eenvoudige configuratie van MIM-Service, MIM-Portal, Active Directory-beheeragent (MA AD) en de FIM-beheeragent (FIM MA).
     <https://docs.microsoft.com/microsoft-identity-manager/microsoft-identity-manager-deploy>
 
-## <a name="b2b-end-to-end-deployment"></a>B2B-End-to-End-implementatie
+-   U hebt al de instructies in het artikel gevolgd voor het downloaden en installeren de [Graph connector](microsoft-identity-manager-2016-connector-graph.md).
 
-Scenario
+-   Hebt u Azure AD Connect geconfigureerd voor het synchroniseren van gebruikers en groepen naar Azure AD.
 
-Trey Research Inc. werkt Contoso Pharmaceuticals als onderdeel van hun R & D-afdeling. Trey Research werknemers nodig toegang tot de toepassing geleverd door Contoso Pharmaceuticals rapportage onderzoeken.
+-   Hebt u Azure AD Connect geconfigureerd voor het synchroniseren van Office-groepen voor het beheren van de toepassing [terug naar on-premises AD DS](http://robsgroupsblog.com/blog/how-to-write-back-an-office-group-in-azure-active-directory-to-a-mail-enabled-security-group-in-an-on-premises-active-directory)
 
--   Contoso Pharmaceuticals zijn in een onafhankelijke tenant, om een aangepast domein hebt geconfigureerd.
+-   U al Application Proxy connectors en connectorgroepen hebt ingesteld, indien niet vindt u [hier](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-enable#install-and-register-a-connector) installeren en configureren
 
--   Een externe gebruiker uitgenodigd: aan de Contoso Pharmaceuticals tenant.
-    Deze gebruiker de uitnodiging heeft geaccepteerd en toegang tot bronnen die worden gedeeld.
+-   U hebt een of meer toepassingen die afhankelijk van geïntegreerde Windows-verificatie of afzonderlijke AD-accounts via toepassingsproxy van Azure AD zijn al gepubliceerd
 
--   Gepubliceerd van een toepassing via toepassingsproxy van en in dit scenario als voorbeeld gebruiken MIM-Service en Portal voor gastgebruiker deel te nemen in MIM proces voorbeeld helpdeskscenario's.
+-   U hebt uitgenodigd of u een of meer gasten, die hebben geleid tot een of meer gebruikers die worden gemaakt in Azure AD uitnodigen <https://docs.microsoft.com/azure/active-directory/active-directory-b2b-self-service-portal>
 
-## <a name="create-the-graph-management-agent"></a>De grafiek-beheeragent maken
 
-Opmerking: Controleer voordat u het maken van connector, lees de [grafiek Management Agent](microsoft-identity-manager-2016-connector-graph.md).
+
+## <a name="b2b-end-to-end-deployment-example-scenario"></a>Voorbeeldscenario voor B2B-End-to-End implementatie
+
+Deze handleiding is gebaseerd op het volgende scenario:
+
+Contoso Pharmaceuticals werkt met Trey Research Inc. als onderdeel van hun R & D-afdeling. Trey Research werknemers nodig voor toegang tot de toepassing die worden geleverd door Contoso Pharmaceuticals rapportage onderzoeken.
+
+-   Contoso Pharmaceuticals zijn in hun eigen tenant, om een aangepast domein hebt geconfigureerd.
+
+-   Iemand heeft een externe gebruiker voor de tenant van Contoso Pharmaceuticals uitgenodigd.
+    Deze gebruiker de uitnodiging heeft geaccepteerd en toegang hebben tot resources die worden gedeeld.
+
+-   Een toepassing via App Proxy, Contoso Pharmaceuticals heeft gepubliceerd. In dit scenario wordt de voorbeeldtoepassing met de MIM-Portal. Hierdoor zou een gastgebruiker om deel te nemen in MIM processen, bijvoorbeeld in de help helpdesk-scenario's of voor het aanvragen van toegang tot groepen in MIM.
+
+
+## <a name="configure-ad-and-azure-ad-connect-to-exclude-users-added-from-azure-ad"></a>Configureren van AD en Azure AD Connect wilt uitsluiten van gebruikers die zijn toegevoegd vanuit Azure AD
+
+Standaard wordt Azure AD Connect wordt ervan uitgegaan dat gebruikers van niet-beheerders in Active Directory moeten worden gesynchroniseerd met Azure AD.  Als Azure AD Connect vindt een bestaande gebruiker in Azure AD die overeenkomt met de gebruiker van on-premises AD, Azure AD Connect wordt overeenkomen met de twee accounts en wordt ervan uitgegaan dat dit een oudere synchronisatie van de gebruiker is en controleer de on-premises AD gezaghebbende.  Dit standaardgedrag is echter niet geschikt is voor de stroom B2B waar het gebruikersaccount dat afkomstig is in Azure AD. 
+
+Daarom moeten de gebruikers in AD DS door MIM gebracht van Azure AD worden opgeslagen op een manier die Azure AD niet getracht wordt te synchroniseren van deze gebruikers terug naar Azure AD.
+Een manier om dit te doen is een nieuwe organisatie-eenheid maken in AD DS en Azure AD Connect als u wilt uitsluiten van die organisatie-eenheid configureren.  
+
+Meer informatie vindt u [Azure AD Connect-synchronisatie: filtering configureren](https://docs.microsoft.com/en-us/azure/active-directory/connect/active-directory-aadconnectsync-configure-filtering). 
+ 
+
+## <a name="create-the-azure-ad-application"></a>De Azure AD-toepassing maken 
+
+
+Opmerking: Voordat u in MIM Sync de beheeragent voor de graph-connector, zorg ervoor dat u hebt gecontroleerd dat de handleiding voor het implementeren van de [Graph Connector](microsoft-identity-manager-2016-connector-graph.md), en een toepassing gemaakt met een client-ID en geheim.
+Zorg ervoor dat de toepassing is geautoriseerd voor ten minste één van deze machtigingen: `User.Read.All`, `User.ReadWrite.All`, `Directory.Read.All` of `Directory.ReadWrite.All`. 
+
+## <a name="create-the-new-management-agent"></a>De nieuwe-beheeragent maken
+
 
 Selecteer in de UI Synchronization Service Manager **Connectors** en **maken**.
-Selecteer **grafiek (Microsoft)** en wijs hieraan een beschrijvende naam
+Selecteer **Graph (Microsoft)** en wijs hieraan een beschrijvende naam.
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/d95c6b2cc7951b607388cbd25920d7d0.png)
 
 ### <a name="connectivity"></a>Connectiviteit
 
-Op de pagina Verbindingsmogelijkheden moet u de Graph API-versie productie-klaar is **V 1.0**, niet-productieve is **Beta**
+Op de pagina verbinding, moet u de Graph API-versie. Productie gereed PAI is **V 1.0**, niet-productie **Bèta**.
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/6fabfe20af0207f1556f0df18fd16f60.png)
 
-### <a name="capabilities"></a>Mogelijkheden
-
-Op de pagina Algemene Parameters, moet u de DN-naam naar de delta-wijzigingenlogboek en extra functies voor LDAP configureren. De pagina is al ingevuld met de informatie die wordt geleverd door de LDAP-server.
-
-![](media/microsoft-identity-manager-2016-graph-b2b-scenario/84c4dd62f63b82239cd0cf63d14fc671.png)
-
 ### <a name="global-parameters"></a>Globale Parameters
-
-Op de pagina Algemene Parameters, moet u de DN-naam naar de delta-wijzigingenlogboek en extra functies voor LDAP configureren. De pagina is al ingevuld met de informatie die wordt geleverd door de LDAP-server.
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/84c4dd62f63b82239cd0cf63d14fc671.png)
 
 ### <a name="configure-provisioning-hierarchy"></a>Hiërarchie inrichten configureren
 
-Deze pagina wordt gebruikt voor het onderdeel DN-naam, bijvoorbeeld OU toewijzen aan het objecttype dat moet worden ingericht, bijvoorbeeld organizationalUnit. Laat deze standaard klikt u op volgende
+Deze pagina wordt gebruikt om het onderdeel van de DN-naam, bijvoorbeeld organisatie-eenheid toewijzen aan het objecttype dat moet worden ingericht, bijvoorbeeld organizationalUnit. Dit is niet nodig voor dit scenario, dus laat dit als de standaardinstelling en klik op volgende.
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/80016dc45b50a0b1b08ea51ad8b37977.png)
 
 ### <a name="configure-partitions-and-hierarchies"></a>Partities en hiërarchieën configureren
 
-Selecteer op de pagina partities en hiërarchieën alle naamruimten met objecten die u wilt importeren en exporteren.
+Selecteer op de pagina partities en hiërarchieën, alle naamruimten met objecten die u van plan bent om te importeren en exporteren.
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/72f0adc789ed78c66d066768146fb874.png)
 
 #### <a name="select-object-types"></a>Selecteer het objecttype
 
-Selecteer op de pagina partities en hiërarchieën alle naamruimten met objecten die u wilt importeren en exporteren.
+Selecteer de objecttypen die u van plan bent om te importeren op de pagina van het type object. U moet ten minste selecteren 'User'.
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/e18921f65a0d0e4acf0775c8a01ac009.png)
 
 #### <a name="select-attributes"></a>Kenmerken selecteren
 
-Selecteer op het scherm kenmerken selecteren vereiste kenmerken voor het beheren van B2B-gebruikers. Het kenmerk 'id' is vereist
+Selecteer op het scherm kenmerken selecteren kenmerken van Azure AD die nodig zijn voor het beheren van B2B-gebruikers in AD. Het kenmerk 'ID' is vereist.  De kenmerken `userPrincipalName` en `userType` verderop in deze configuratie wordt gebruikt.  Overige kenmerken zijn optioneel, met inbegrip van
 
--   ID
+-   `displayName`
 
--   displayName
+-   `mail`
 
--   E-mail
+-   `givenName`
 
--   givenName
+-   `surname`
 
--   Achternaam
+-   `userPrincipalName`
 
--   userPrincipalName
-
--   userType
+-   `userType`
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/58da80f5475cf01a97a6843dd279385c.png)
 
 #### <a name="configure-anchors"></a>Ankers configureren
 
-Met het anker configureren is het anker configureren een vereiste stap. standaard gebruik van het kenmerk id voor de toewijzing.
+Op het scherm anker configureren is het kenmerk van bronanker configureren een vereiste stap. Standaard, gebruikt u de id-kenmerk voor de Gebruikerstoewijzing van de.
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/9377ab7b760221517a431384689c8c76.png)
 
 #### <a name="configure-connector-filter"></a>Connectorfilter configureren
 
-Op de configureren kunt Connectorfilter pagina, u filteren op basis van kenmerkfilter objecten. In dit scenario voor B2B, wordt het doel alleen op te zetten in gebruikers met het userType die gelijk is aan de Gast en geen lid is.
+Op de pagina van de Connectorfilter configureren kunt MIM u filteren op basis van kenmerkfilter objecten. In dit scenario voor B2B, het doel is alleen in te zetten voor gebruikers met de waarde van de `userType` kenmerk die gelijk is aan `Guest`, en niet voor gebruikers met het userType die gelijk is aan `member`.
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/d90691fce652ba41c7a98c9a863ee710.png)
 
 #### <a name="configure-join-and-projection-rules"></a>Lid worden en Projectieregels configureren
 
-Regels configureren lid worden en projectie worden verwerkt door de synchronisatieregel voor, niet nodig hebt om een lid worden en projectie op de connector zelf te identificeren. Laat de standaardinstelling en klik op ok.
+Deze handleiding wordt ervan uitgegaan dat u maakt een synchronisatieregel voor.  Als regels voor lid worden en projectie configureren door de synchronisatieregel worden verwerkt, is het niet nodig hebt om een lid worden en projectie van de connector zelf te identificeren. Laat de standaardinstelling en klik op ok.
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/34896440ae6ad404e824eb35d8629986.png)
 
 #### <a name="configure-attribute-flow"></a>Kenmerkstroom configureren
 
-Als het lid worden en projectie is niet nodig voor het definiëren van de kenmerkstroom omdat deze ingang door de synchronisatieregel die moet worden later maken. Laat de standaardinstelling en klik op ok.
+Deze handleiding wordt ervan uitgegaan dat u maakt een synchronisatieregel voor.  Projectie is niet nodig voor het definiëren van de kenmerkstroom in MIM-synchronisatie, zoals deze wordt verwerkt door de synchronisatieregel die later wordt gemaakt. Laat de standaardinstelling en klik op ok.
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/b7cd0d294d4f361f0551bf2cb774d5f5.png)
 
-#### <a name="configure-deprovision"></a>Configureren van identiteitsgegevens
+#### <a name="configure-deprovision"></a>Inrichting configureren
 
-Configureer deprovision kunt u het object verwijderen als metaverse-object is verwijderd. In deze test maken we ze disconnectors als het doel is te laat ze in Azure ook we niet exporteert naar azure omdat deze alleen importeren.
+De instelling van inrichting configureren kunt u voor het configureren van MIM sync als u wilt verwijderen van het object als het metaverse-object is verwijderd. In dit scenario maken we ze disconnectors als het doel is om in Azure AD laten staan. In dit scenario, zijn we iets niet exporteren naar Azure AD en de connector is geconfigureerd voor het importeren van alleen.
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/2394ad4d11546c6a5c69a6dad56fe6ca.png)
 
 #### <a name="configure-extensions"></a>Extensies configureren
 
-Uitbreidingen configureren op het gebied van deze agent is een optie maar niet vereist als we een synchronisatieregel gebruiken. Als we besloten voor een geavanceerde regel in de kenmerkstroom eerder is, zou dit een optie voor het definiëren van zijn.
+Extensies configureren op het gebied deze agent is een optie, maar niet vereist als u een regel voor synchronisatie. Als we besloten om een geavanceerde regel eerder in de kenmerkstroom gebruiken, zou dan er een optie voor het definiëren van de extensie regels.
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/74513d95b10f6ce47b7ac75fe7ab9889.png)
 
-## <a name="creating-mim-service-synchronization-rules"></a>Maken van synchronisatieregels voor MIM-Service
+## <a name="extending-the-metaverse-schema"></a>Het metaverse-schema uitbreiden
 
-we beginnen de toewijzing van Gast-account voor B2B en de kenmerkstroom in de onderstaande stappen. Bepaalde veronderstellingen hier dat u al het Active Directory Management Agent is geconfigureerd hebt en de FIM MA geconfigureerd om te communiceren met de MIM-Service en de portal.
 
-Voordat u de synchronisatieregel maakt, moet er een kenmerk met de naam gekoppeld aan de persoon-object op met de ontwerpfunctie MV userPrincipalName maken.
+Voordat u de synchronisatie-regel maakt, moet een kenmerk met de naam gekoppeld aan het object persoon met de ontwerpfunctie voor MV userPrincipalName maken.
 
-Selecteer in de client synchronisatie Metaverse Designer
+Selecteer in de synchronisatie-client, Metaverse-ontwerper
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/db3c1d353168a09aaa68678d39ea4f09.png)
 
-Selecteer het objecttype persoon
+Selecteer het objecttype van de persoon
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/b5e3db86398aed558a481dd64be4f5db.png)
 
-Klik vervolgens op kenmerk toevoegen onder Acties
+Klik daarna op kenmerk toevoegen onder Acties
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/47d0056eb496edd2e7b5da11a2c04718.png)
 
-Voltooi ten slotte de volgende details
+Voltooi de volgende details
 
-Kenmerknaam: **userPrincipalName**
+De naam van kenmerk: **userPrincipalName**
 
-Kenmerktype: **tekenreeks (worden geïndexeerd)**
+Kenmerktype: **tekenreeks (indexeerbare)**
 
 Geïndexeerde = **True**
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/9fba1ff9feefb17b82478ac7010edbfa.png)
 
+## <a name="creating-mim-service-synchronization-rules"></a>Het maken van synchronisatieregels voor MIM-Service
+
+we gaan de toewijzing van B2B-Gast-account en de kenmerkstroom in de onderstaande stappen. Bepaalde veronderstellingen hier: dat u al de Active Directory MA geconfigureerd hebt en de FIM MA geconfigureerd voor het onderbrengen van gebruikers tot de MIM-Service en -Portal.
+
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/e389ee78beac3bf469ddd97bddb5e9d5.png)
 
-De volgende stappen wordt de minimale configuratie van de configuratie van de FIM-Service Management Agent en de Active Directory Domain Services-beheeragent vereisen.
+De volgende stappen wordt het toevoegen van minimale configuratie voor de FIM MA en de AD MA vereisen.
 
-Meer informatie vindt u hier om de configuratie <https://technet.microsoft.com/library/ff686263(v=ws.10).aspx> -hoe kan ik gebruikers inrichten in AD DS
+Meer informatie vindt u hier voor de configuratie van <https://technet.microsoft.com/library/ff686263(v=ws.10).aspx> -hoe kan ik gebruikers inrichten voor AD DS
 
-### <a name="synchronization-rule-import-guest-user-to-mv-to-synchronization-service-metaverse-from-azure-active-directorybr"></a>Regel voor het synchroniseren: Gastgebruiker in MV voor synchronisatie Service Metaverse van Azure Active Directory importeren<br>
+### <a name="synchronization-rule-import-guest-user-to-mv-to-synchronization-service-metaverse-from-azure-active-directorybr"></a>Regel voor synchronisatie: Gastgebruiker in MV aan synchronisatie Service Metaverse uit Azure Active Directory importeren<br>
 
-Navigeer naar de MIM-Service en Portal en selecteer Sycronization regels en klik op Nieuw.
+Navigeer naar de MIM-Portal, selecteert u synchronisatieregels en klikt u op Nieuw.  Maak een regel voor inkomende synchronisatie voor de B2B-stroom via de graph-connector.
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/ba39855f54268aa824cd8d484bae83cf.png)
 
-![](media/microsoft-identity-manager-2016-graph-b2b-scenario/de059b93474c39763f0b27874b716e15.png) Selecteer 'Resource maken in FIM' ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/9bc4a92136be1557d3596fa2eaa63e61.png)
+![](media/microsoft-identity-manager-2016-graph-b2b-scenario/de059b93474c39763f0b27874b716e15.png)
+
+Zorg dat u selecteert u 'Bron maken in FIM' bij de stap van de criteria relatie.
+![](media/microsoft-identity-manager-2016-graph-b2b-scenario/9bc4a92136be1557d3596fa2eaa63e61.png)
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/0ac7f4d0fd55f4bffd9e6508b494aa74.png)
 
-Stroomregels:
+Configureer de volgende regels van de inkomende kenmerkstroom-stroom.  Zorg ervoor dat voor het vullen van de `accountName`, `userPrincipalName` en `uid` kenmerken zoals ze verderop in dit scenario worden gebruikt:
 
-| **Alleen de initiële stroom** | **Gebruik als de Test bestaan** | **Stroom (FIM waarde ⇒ bestemming kenmerk)**                          |
+| **Alleen initiële stroom** | **Gebruiken als Bestaanstest** | **Stroom (bron waarde ⇒ FIM-kenmerk)**                          |
 |-----------------------|---------------------------|-----------------------------------------------------------------------|
 |                       |                           | [displayName⇒displayName](javascript:void(0);)                        |
 |                       |                           | [Links (id 20) ⇒accountName](javascript:void(0);)                        |
@@ -215,9 +227,9 @@ Stroomregels:
 |                       |                           | [mail⇒mail](javascript:void(0);)                                      |
 |                       |                           | [mobilePhone⇒mobilePhone](javascript:void(0);)                        |
 
-### <a name="synchronization-rule-create-guest-user-account-to-active-directory"></a>Regel voor het synchroniseren: Gast-gebruikersaccount in Active Directory maken 
+### <a name="synchronization-rule-create-guest-user-account-to-active-directory"></a>Regel voor synchronisatie: Gast-gebruikersaccount in Active Directory maken 
 
-Deze synchronisatieregel maakt de gebruiker in active directory
+Deze synchronisatieregel wordt gemaakt van de gebruiker in Active Directory.  Zorg ervoor dat de stroom voor `dn` moet de gebruiker plaatsen in de organisatie-eenheid die is uitgesloten van Azure AD Connect.  De stroom voor ook bijwerken `unicodePwd` om te voldoen aan het wachtwoordbeleid van uw AD - de gebruiker niet moet het wachtwoord kennen.  Noteer de waarde van `262656` voor `userAccountControl` codeert de vlaggen `SMARTCARD_REQUIRED` en `NORMAL_ACCOUNT`.
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/3463e11aeb9fb566685e775d4e1b825c.png)
 
@@ -227,20 +239,24 @@ Deze synchronisatieregel maakt de gebruiker in active directory
 
 Stroomregels:
 
-| **Alleen de initiële stroom** | **Gebruik als de Test bestaan** | **Stroom (FIM waarde ⇒ bestemming kenmerk)**                          |
+| **Alleen initiële stroom** | **Gebruiken als Bestaanstest** | **Stroom (FIM voor waarde ⇒ Bestemmingskenmerk)**                          |
 |-----------------------|---------------------------|-----------------------------------------------------------------------|
 |                       |                           | [accountName⇒sAMAccountName](javascript:void(0);)                     |
 |                       |                           | [givenName⇒givenName](javascript:void(0);)                            |
 |                       |                           | [mail⇒mail](javascript:void(0);)                                      |
 |                       |                           | [sn⇒sn](javascript:void(0);)                                          |
 |                       |                           | [userPrincipalName⇒userPrincipalName](javascript:void(0);)            |
-| **Y**                 |                           | ["CN = '+ uid +', organisatie-eenheid B2BGuest, DC = = scontoso, DC = com" ⇒dn](javascript:void(0);) |
+| **Y**                 |                           | ["CN ="+ uid +", OE = B2BGuest, DC = contoso, DC = com" ⇒dn] (javascript:void(0);) |
 | **Y**                 |                           | [RandomNum (0,999) + userPrincipalName⇒unicodePwd](javascript:void(0);)  |
 | **Y**                 |                           | [262656⇒userAccountControl](javascript:void(0);)                      |
 
-### <a name="synchronization-rule-import-b2b-guest-user-objects-sid-to-allow-for-login-to-mim"></a>Regel voor het synchroniseren: Import B2B Gast objecten SID gebruiker voor aanmelding bij MIM 
+### <a name="optional-synchronization-rule-import-b2b-guest-user-objects-sid-to-allow-for-login-to-mim"></a>Optionele Synchronisatieregel: Importeren B2B-Gast gebruiker objecten SID om toe te staan voor aanmelden bij MIM 
 
-Deze synchronisatieregel maakt de gebruiker in active directory
+Deze synchronisatieregel voor binnenkomende gegevens voorziet in beveiligings-id-kenmerk van de gebruiker uit Active Directory weer in MIM, zodat de gebruiker toegang heeft tot de MIM-Portal.  De MIM-Portal vereist dat de gebruiker de kenmerken `samAccountName`, `domain` en `objectSid` ingevuld in de MIM-Service-database.
+
+Configureren van het externe systeem van de bron als het `ADMA`, als de `objectSid` kenmerk wordt automatisch door AD MIM wanneer de gebruiker maakt worden ingesteld.
+ 
+Houd er rekening mee dat als u gebruikers moet worden gemaakt in de MIM-Service configureren, zorg ervoor dat ze niet binnen het bereik van alle sets die bestemd zijn voor werknemer SSPR beheerbeleidsregels.  Mogelijk moet u uw definities om te voorkomen dat gebruikers die zijn gemaakt door de B2B-stroom wijzigen. 
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/263df23fd588c4229b958aee240071f3.png)
 
@@ -251,24 +267,35 @@ Deze synchronisatieregel maakt de gebruiker in active directory
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/80fb9d563ec088925477a645f19b0373.png)
 
-Ten slotte we nodigen van de gebruiker en voer vervolgens het beheer in de volgende volgorde:
 
--   Volledige Import en synchronisatie op de beheeragent MIMMA
+| **Alleen initiële stroom** | **Gebruiken als Bestaanstest** | **Stroom (bron waarde ⇒ FIM-kenmerk)**                          |
+|-----------------------|---------------------------|-----------------------------------------------------------------------|
+|                       |                           | [sAMAccountName⇒accountName](javascript:void(0);)                     |
+|                       |                           | ['CONTOSO' ⇒domain](javascript:void(0);)                            |
+|                       |                           | [objectSid⇒objectSid](javascript:void(0);)                                      |
 
--   Volledige Import en synchronisatie op de beheeragent ADMA_SCONTOSO_B2B
 
--   Volledige Import en synchronisatie op de beheeragent van de B2B-grafiek
+## <a name="run-the-synchronization-rules"></a>De synchronisatieregels die zijn uitgevoerd
 
--   Exporteren, Delta-Import en synchronisatie op de beheeragent ADMA_SCONTOSO_B2B
+Vervolgens wordt de gebruiker uitnodigen en voer vervolgens de management agent synchronisatieregels in de volgende volgorde:
 
--   Exporteren, Delta-Import en synchronisatie op de beheeragent MIMMA
+-   Volledige Import en synchronisatie op de `MIMMA` beheeragent.  Dit zorgt ervoor dat MIM Sync is de meest recente synchronisatieregels die zijn geconfigureerd.
+
+-   Volledige Import en synchronisatie op de `ADMA` beheeragent.  Dit zorgt ervoor dat de MIM- en Active Directory consistent zijn.  Op dit moment, wordt er nog niet worden geëxporteerd in behandeling voor gasten.
+
+-   Volledige Import en synchronisatie op de beheeragent van de B2B-grafiek.  Hiermee wordt in de gastgebruikers in de metaverse.  Op dit moment worden een of meer accounts exportbewerking `ADMA`.  Als er geen uitvoer in behandeling zijn, controleert u of gastgebruikers zijn geïmporteerd in het connectorgebied en dat de regels zijn geconfigureerd voor deze AD-accounts worden vermeld.
+
+-   Exporteren, Delta-Import en synchronisatie op de `ADMA` beheeragent.  Als de uitvoer is mislukt, Controleer de regelconfiguratie van de en bepalen of er ontbrekende schemavereisten zijn. 
+
+-   Exporteren, Delta-Import en synchronisatie op de `MIMMA` beheeragent.  Wanneer dit is voltooid, moet er niet meer worden geëxporteerd in behandeling.
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/506f0a093c8b58cbb62cc4341b251564.png)
 
-## <a name="finally-application-proxy-with-b2b-guest-and-logging-into-mim"></a>Ten slotte: Toepassingsproxy met B2B Gast en logboekregistratie in MIM
 
-Nu dat we de synchronisatieregels hebt gemaakt in MIM. In de App-proxyconfiguratie definieert het principe van de cloud gebruiken om toe te staan voor KCD op app-proxy.
-Ook, naast de gebruiker handmatig toegevoegd aan de gebruikers en groepen beheren. De opties weer te geven van de gebruiker totdat maken is opgetreden in MIM om toe te voegen op de Gast aan een groep eenmaal is ingericht met office vereist iets meer configuratie niet in dit document worden behandeld.
+## <a name="optional-application-proxy-for-b2b-guests-logging-into-mim-portal"></a>Optioneel: Toepassingsproxy voor B2B-gasten wordt aangemeld bij de MIM-Portal
+
+Nu dat we hebben de synchronisatieregels die zijn gemaakt in MIM. In de configuratie van de App-Proxy, definieert het cloud-principal gebruiken om toe te staan voor KCD op app-proxy.
+Ook, naast de gebruiker handmatig toegevoegd aan de gebruikers en groepen beheren. De opties niet weer te geven van de gebruiker tot het maken is opgetreden in MIM om toe te voegen de Gast aan een office-groep eenmaal ingericht iets meer configuratie niet in dit document behandeld nodig is.
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/d0f0b253dbbc5edaf22b22f30f94dd3b.png)
 
@@ -276,15 +303,8 @@ Ook, naast de gebruiker handmatig toegevoegd aan de gebruikers en groepen behere
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/0c2361d137f3efcad9139069c0abcb4d.png)
 
-| **Alleen de initiële stroom** | **Gebruik als de Test bestaan** | **Stroom (FIM waarde ⇒ bestemming kenmerk)**                          |
-|-----------------------|---------------------------|-----------------------------------------------------------------------|
-|                       |                           | [sAMAccountName⇒accountName](javascript:void(0);)                     |
-|                       |                           | ['CONTOSO' ⇒domain](javascript:void(0);)                            |
-|                       |                           | [objectSid⇒objectSid](javascript:void(0);)                                      |
 
-Zodra alle configureren
-
-Ten slotte B2B gebruikersaanmelding en de toepassing bekijken
+Zodra alle geconfigureerde, B2B-gebruikersaanmelding hebt en wordt de toepassing.
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/275fc989d20d2598df55cde4b4524dca.png)
 
@@ -297,6 +317,6 @@ Ten slotte B2B gebruikersaanmelding en de toepassing bekijken
 
 [Functiereferentie voor FIM 2010](https://technet.microsoft.com/library/ff800820(v=ws.10).aspx)
 
-[Het verstrekken van veilige externe toegang tot on-premises toepassingen](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started)
+[Het bieden van veilige externe toegang tot on-premises toepassingen](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started)
 
-[Microsoft Identity Manager-management-agent voor Microsoft Graph (preview) downloaden](http://go.microsoft.com/fwlink/?LinkId=717495)
+[Microsoft Identity Manager-connector voor Microsoft Graph downloaden](http://go.microsoft.com/fwlink/?LinkId=717495)
