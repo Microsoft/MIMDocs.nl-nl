@@ -7,17 +7,17 @@ ms.author: billmath
 manager: mtillman
 ms.date: 05/02/2018
 ms.topic: article
-ms.service: microsoft-identity-manager
+ms.prod: microsoft-identity-manager
 ms.technology: security
 ms.assetid: ccdd8a9f-02da-440a-81a8-354800dcd2a8
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: bd483ecb0abc3e4bb4444c87715971a3fba9820b
-ms.sourcegitcommit: 5405ed10fea6f50b711eca1153446c04d4faff7a
+ms.openlocfilehash: de00cc6da8c431519c9bdef3a2e97a8333cbb4ac
+ms.sourcegitcommit: ace4d997c599215e46566386a1a3d335e991d821
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36927184"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49332286"
 ---
 # <a name="microsoft-identity-manager-2016"></a>Microsoft Identity Manager 2016
 
@@ -26,7 +26,7 @@ Microsoft Identity Manager (MIM) 2016 bouwt voort op de mogelijkheden voor ident
 Naast de bestaande functionaliteit voor identiteitsbeheer opgenomen in [FIM](https://technet.microsoft.com/library/jj133868). MIM 2016 biedt nieuwe functies en verbeteringen, zoals:
 
 - Beschermde identiteitsbeheer
-- Nieuwe functionaliteit in Certificaatbeheer
+- Nieuwe functionaliteit in het beheren van certificaten
   - [Naslaginformatie voor REST API van Certificate Management](./reference/certificate-management-rest-api-reference.md)
   - Ondersteuning voor topologieën met meerdere forests.
   - [Een Windows-app voor de virtuele smartcard](working-with-mim-certificate-manager.md)
@@ -35,7 +35,7 @@ Naast de bestaande functionaliteit voor identiteitsbeheer opgenomen in [FIM](htt
 
 ## <a name="hybrid-experience"></a>Hybride-ervaring
 
-Microsoft Identity Manager 2016 werkt goed samen met [Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-whatis) geven u controle over de volledige omgeving. Met de hybride rapportage in Azure AD worden de cloud- en on-premises gegevens op één plek weergegeven. Ook de [wachtwoord opnieuw instellen in selfservice portal](working-with-self-service-password-reset.md) biedt ondersteuning voor Azure multi-factor authentication (MFA).
+Microsoft Identity Manager 2016 werkt goed samen met [Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-whatis) geven u controle over de volledige omgeving. Met de hybride rapportage in Azure AD worden de cloud- en on-premises gegevens op één plek weergegeven. Ook de [selfservice voor wachtwoordherstel portal](working-with-self-service-password-reset.md) biedt ondersteuning voor Azure multi-factor authentication (MFA).
 
 ## <a name="privileged-identity-management"></a>Beschermde identiteitsbeheer
 
@@ -47,4 +47,4 @@ MIM ondersteunt een on-premises Privileged Identity Management-oplossing voor he
 
 - Microsoft Identity Manager is nog nauw verwant aan diens voorganger Forefront Identity Manager. Zie [FIM 2010 R2 Documentation Roadmap](https://technet.microsoft.com/library/jj133885.aspx) (Engelstalig) als u FIM nog gebruikt of aanvullende documentatie wilt raadplegen.
 - [Aandachtspunten voor topologie voor het implementeren van MIM](topology-considerations.md) in dit artikel bevat meerdere implementatietopologieën die u implementeren overwegen kunt.
-- [Handleiding voor capaciteitsplanning](capacity-planning-guide.md) kunt u deze handleiding en testomgevingen om te begrijpen van het juiste bereik voor uw implementatie.
+- [Handleiding voor capaciteitsplanning](capacity-planning-guide.md) kunt u deze handleiding, samen met testomgevingen, om te begrijpen omvang die geschikt is voor uw implementatie.

@@ -7,18 +7,18 @@ ms.author: barclayn
 manager: barclayn
 ms.date: 09/13/2017
 ms.topic: article
-ms.service: microsoft-identity-manager
+ms.prod: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: ef605496-7ed7-40f4-9475-5e4db4857b4f
 ROBOTS: noindex,nofollow
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 81fe10b8fbf8ada08983c4bf3c58f85215cf1d66
-ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
+ms.openlocfilehash: 3f5ee3e2a6bdbd1ab203ffcf406b4ca3b991b6f5
+ms.sourcegitcommit: ace4d997c599215e46566386a1a3d335e991d821
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36290030"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49334003"
 ---
 # <a name="step-4--install-mim-components-on-pam-server-and-workstation"></a>Stap 4: MIM-onderdelen installeren op een PAM-server en -werkstation
 
@@ -60,7 +60,7 @@ Volg de richtlijnen van het installatieprogramma en voltooi de installatie.
 
 7. Stel *PAMSRV* in als het serveradres van de MIM-service.
 
-8. Stel *http://pamsrv.priv.contoso.local:82* URL als de SharePoint-siteverzameling.
+8. Stel *http://pamsrv.priv.contoso.local:82* site als de SharePoint-URL van de verzameling.
 
 9. Laat de URL voor de registratieportal leeg.
 
@@ -101,7 +101,7 @@ Nadat de installatie is voltooid, wordt de server opnieuw opgestart. Controleer 
 
 1. Nadat PAMSRV opnieuw is opgestart, meldt u zich aan als PRIV\Administrator.
 
-2. Start Internet Explorer en maak verbinding met de MIM-Portal op http://pamsrv.priv.contoso.local:82/identitymanagement. Er is mogelijk een korte vertraging wanneer voor de eerste keer naar deze pagina wordt gezocht.
+2. Start Internet Explorer en verbinding maken met de MIM-Portal op http://pamsrv.priv.contoso.local:82/identitymanagement. Er is mogelijk een korte vertraging wanneer voor de eerste keer naar deze pagina wordt gezocht.
 
 3. Meld u zo nodig aan als PRIV\Administrator voor Internet Explorer.
 
@@ -164,7 +164,7 @@ In deze sectie gaat u de voorbeeldwebtoepassing voor de MIM PAM REST API install
    iisreset
    ```
 
-7. (Optioneel) Controleer of de gebruiker bij de REST API kan worden geverifieerd. Open een webbrowser als de beheerder op PAMSRV.  Navigeer naar de website-URL http://pamsrv.priv.contoso.local:8086/api/pamresources/pamroles/zo nodig de verificatie en zorg ervoor dat een download wordt uitgevoerd.
+7. (Optioneel) Controleer of de gebruiker bij de REST API kan worden geverifieerd. Open een webbrowser als de beheerder op PAMSRV.  Navigeer naar de website-URL http://pamsrv.priv.contoso.local:8086/api/pamresources/pamroles/, indien nodig te verifiëren en ervoor te zorgen dat een download wordt uitgevoerd.
 
 ## <a name="install-the-mim-pam-requestor-cmdlets"></a>De aanvrager-cmdlets van MIM PAM installeren
 

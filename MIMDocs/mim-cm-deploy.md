@@ -1,53 +1,53 @@
 ---
 title: Microsoft Identity Manager Certificate Manager implementeren | Microsoft Docs
-description: Installeer Microsoft Identity Manager 2016 Certificate Manager
+description: Microsoft Identity Manager 2016 Certificate Manager installeren
 keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
 ms.date: 09/19/2017
 ms.topic: article
-ms.service: microsoft-identity-manager
+ms.prod: microsoft-identity-manager
 ms.technology: security
 ms.assetid: ''
-ms.openlocfilehash: 25a511dc590b02019c65a688c9b2c8dc821fff50
-ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
+ms.openlocfilehash: c10c36a4dde8643e067ca91c6911bb0aed6d53dd
+ms.sourcegitcommit: ace4d997c599215e46566386a1a3d335e991d821
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36290081"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49334428"
 ---
 # <a name="deploying-microsoft-identity-manager-certificate-manager-2016-mim-cm"></a>Microsoft Identity Manager Certificate Manager 2016 (MIM CM) implementeren
 
-De installatie van Microsoft Identity Manager Certificate Manager 2016 (MIM CM) omvat een aantal stappen. Als een manier om het proces zijn we de dingen analyseren. Er zijn voorbereidende stappen die moeten worden genomen voordat de werkelijke MIM CM-stappen. De installatie is zonder de voorafgaande werkzaamheden waarschijnlijk zal mislukken.
+De installatie van Microsoft Identity Manager Certificate Manager 2016 (MIM CM) omvat een aantal stappen. Als een manier om het proces te vereenvoudigen zijn we afbreken dingen. Er zijn voorbereidende stappen die moeten worden genomen voordat u de werkelijke MIM CM-stappen. De installatie is zonder de voorafgaande werk waarschijnlijk zal mislukken.
 
-Het volgende diagram toont een voorbeeld van het type van de omgeving die kan worden gebruikt. De systemen met nummers zijn opgenomen in de lijst onder het diagram en zijn vereist voor het voltooien van de stappen die in dit artikel. Ten slotte worden Windows 2016 Datacenter-Servers gebruikt:
+Het volgende diagram toont een voorbeeld van het type van de omgeving die kan worden gebruikt. De systemen met nummers zijn opgenomen in de lijst onder het diagram en zijn vereist voor het voltooien van de stappen in dit artikel besproken. Ten slotte worden Windows 2016 Datacenter-Servers gebruikt:
 
 ![Diagram van de omgeving](media/mim-cm-deploy/image001.png)
 
-1. CORPDC – domeincontroller
+1. CORPDC-domeincontroller
 2. CORPCM – MIM CM-Server
 3. CORPCA: de certificeringsinstantie
-4. CORPCMR – gebruikt voor later MIM CM Rest API-webservice – CM Portal-voor Rest-API:
+4. CORPCMR – MIM CM-Rest API-Web-CM Portal-voor Rest API: wordt gebruikt voor later
 5. CORPSQL1 – SQL 2016 SP1
-6. CORPWK1 – Windows 10-domein zijn gekoppeld
+6. CORPWK1: Windows 10 domein
 
-## <a name="deployment-overview"></a>Overzicht van de implementatie
+## <a name="deployment-overview"></a>Implementatie-overzicht
 
 - Basisbesturingssysteem installatie
 
-    De testomgeving bestaat uit windows 2016 Datacenter-servers.
+    In het lab bestaat uit windows 2016 Datacenter-servers.
 
     >[!NOTE]
-    >Voor meer informatie over de ondersteunde platforms voor MIM 2016 Kijk eens naar het artikel [ondersteunde platforms voor MIM 2016](/microsoft-identity-manager/microsoft-identity-manager-2016-supported-platforms.md)
+    >Voor meer informatie over de ondersteunde platforms voor MIM 2016 Kijk eens het artikel [ondersteunde platforms voor MIM 2016](/microsoft-identity-manager/microsoft-identity-manager-2016-supported-platforms.md)
 
 1. Stappen voorafgaand aan de implementatie
 
     - [Het schema uitbreiden](https://msdn.microsoft.com/library/ms676929(v=vs.85).aspx)
 
-    - Serviceaccounts maken
+    - Het maken van service-accounts
 
-    - [Certificaatsjablonen maken](https://technet.microsoft.com/library/cc753370(v=ws.11).aspx)
+    - [Het maken van certificaatsjablonen](https://technet.microsoft.com/library/cc753370(v=ws.11).aspx)
 
     - IIS
 
@@ -57,22 +57,22 @@ Het volgende diagram toont een voorbeeld van het type van de omgeving die kan wo
 
         - SQL-configuratievereisten
 
-        - Databasemachtigingen
+        - Machtigingen voor database
 
 2. Implementatie
 
 ## <a name="pre-deployment-steps"></a>Stappen voorafgaand aan de implementatie
 
-De MIM CM-configuratiewizard vereist informatie te verstrekken langs de manier om deze te voltooien.
+De MIM CM-configuratiewizard vereist dat gegevens worden opgegeven weg om deze te voltooien.
 
 ![Diagram](media/mim-cm-deploy/image003.png)
 
 ### <a name="extending-the-schema"></a>Het schema uitbreiden
 
-Het proces van uitbreiding van het schema is eenvoudig, maar moet worden gerealiseerd met waarschuwing vanwege de aard ervan niet ongedaan worden gemaakt.
+Het proces van uitbreiding van het schema is vrij eenvoudig, maar moet worden gerealiseerd met waarschuwing vanwege de aard niet ongedaan worden gemaakt.
 
 >[!NOTE]
->Deze stap is vereist dat het gebruikte account schema-Administrator-rechten heeft.
+>Deze stap vereist dat het account dat wordt gebruikt schema beheerdersrechten heeft.
 
 1. Blader naar de locatie van de MIM-media en navigeer naar \\Certificaatbeheer\\x64 map.
 
@@ -80,24 +80,24 @@ Het proces van uitbreiding van het schema is eenvoudig, maar moet worden gereali
 
     ![Diagram](media/mim-cm-deploy/image005.png)
 
-3. Voer het script resourceForestModifySchema.vbs één Forest scenario. Voer de scripts voor het scenario met bron-forest:
+3. Het script resourceForestModifySchema.vbs één Forest scenario uitvoeren. Voer de scripts voor de bron-forest-scenario:
    - DomeinA – gebruikers zich (userForestModifySchema.vbs)
    - ResourceForestB: locatie van CM-installatie (resourceForestModifySchema.vbs).
 
      >[!NOTE]
-     >Wijzigingen in het schema een eenrichtingsbewerking zijn en vereisen van een forest herstel terugdraaien dus zorg ervoor dat u de nodige back-ups hebben. Voor meer informatie over de wijzigingen aan het schema van deze bewerking Lees het artikel [Forefront Identity Manager 2010 Certificate Management-schemawijzigingen](https://technet.microsoft.com/library/jj159298(v=ws.10).aspx)
+     >Wijzigingen in het schema zijn een manier is een bewerking en vereist een forest recovery terugdraaien dus zorg ervoor dat u de nodige back-ups hebt. Voor meer informatie over de wijzigingen aan het schema van het uitvoeren van deze bewerking raadpleegt u het artikel [schemawijzigingen voor Forefront Identity Manager 2010 Certificate Management](https://technet.microsoft.com/library/jj159298(v=ws.10).aspx)
 
      ![Diagram](media/mim-cm-deploy/image007.png)
 
-4. Voer het script en het foutbericht is een geslaagde eenmaal bericht dat het script is voltooid.
+4. Voer het script en u ontvangt een succes bericht zodra het script is voltooid.
 
-    ![Bericht](media/mim-cm-deploy/image009.png)
+    ![Het bericht geslaagd](media/mim-cm-deploy/image009.png)
 
 Het schema in AD is nu uitgebreid ter ondersteuning van MIM CM.
 
-### <a name="creating-service-accounts-and-groups"></a>Service-accounts en groepen maken
+### <a name="creating-service-accounts-and-groups"></a>Het maken van service-accounts en groepen
 
-De volgende tabel ziet u de accounts en machtigingen die vereist zijn door MIM CM. U kunt de MIM CM worden de volgende accounts automatisch maken of u kunt ze maken voorafgaand aan installatie toestaan. De namen van de daadwerkelijke account kunnen worden gewijzigd. Als u de accounts zelf maakt, kunt u de gebruikersaccounts in deze opgeslagen eenvoudig overeenkomen met de naam van de gebruikersaccount de functie naming.
+De volgende tabel geeft een overzicht van de accounts en machtigingen die vereist zijn door MIM CM. U kunt de MIM CM maken de volgende accounts automatisch of u kunt ze maken voordat u kunt installeren. De accountnamen van de werkelijke kunnen worden gewijzigd. Als u de accounts zelf maakt, kunt u overwegen de gebruikersaccounts in deze onmiddellijk dat het is eenvoudig zodat deze overeenkomen met de naam van het gebruikersaccount van de functie naamgeving.
 
 Gebruikers:
 
@@ -105,27 +105,27 @@ Gebruikers:
 
 ![Diagram](media/mim-cm-deploy/image012.png)
 
-| **Rol**                   | **Aanmeldingsnaam gebruiker** |
+| **Rol**                   | **Gebruikerslogboek op de naam van** |
 |----------------------------|---------------------|
 | MIM CM-Agent               | MIMCMAgent          |
-| MIM CM-sleutelherstelagent  | MIMCMKRAgent        |
+| MIM CM-Key Recovery Agent  | MIMCMKRAgent        |
 | Autorisatie van MIM CM-Agent | MIMCMAuthAgent      |
 | MIM CM CA-beheeragent    | MIMCMManagerAgent   |
-| MIM CM Webpoolagent      | MIMCMWebAgent       |
-| MIM CM-Inschrijvingsagent    | MIMCMEnrollAgent    |
+| MIM CM Web Pool Agent      | MIMCMWebAgent       |
+| MIM CM Enrollment Agent    | MIMCMEnrollAgent    |
 | MIM CM-updateservice      | MIMCMService        |
-| MIM installeren Account        | MIMINSTALL          |
-| Help helpdesk Agent            | CMHelpdesk1 2       |
-| CM-Manager                 | CMManager1 2        |
-| Abonnee gebruiker            | CMUser1 2           |
+| MIM installeren-Account        | MIMINSTALL          |
+| Help helpdesk-Agent            | CMHelpdesk1-2       |
+| CM-Manager                 | CMManager1-2        |
+| Abonnee gebruiker            | CMUser1-2           |
 
 Groepen:
 
 | **Rol**               | **Groep**         |
 |------------------------|-------------------|
-| Leden van de Helpdesk CM    | MIMCM Helpdesk    |
-| Leden van de CM-Manager     | MIMCM Managers    |
-| Leden van CM | MIMCM-abonnees |
+| CM Helpdesk leden    | MIMCM-Helpdesk    |
+| Leden van de CM-Manager     | MIMCM-Managers    |
+| CM-abonnees leden | MIMCM-abonnees |
 
 PowerShell: Agent-Accounts:
 
@@ -182,18 +182,18 @@ Set-ADUser -Identity $_.Name -Enabled $true
 
 ### <a name="update-corpcm-server-local-policy-for-agent-accounts"></a>Update **CORPCM** Server lokaal beleid voor Agent-Accounts 
 
-| **Aanmeldingsnaam gebruiker** | **Beschrijving en machtigingen**   |
+| **Gebruikerslogboek op de naam van** | **Beschrijving en machtigingen**   |
 |------|---------------------|
-| MIMCMAgent          | Biedt de volgende services: </br>-Haalt versleutelde persoonlijke sleutels van de CA. </br>-Smartcard PINCODE-informatie in de FIM CM-database beveiligt. </br>-Communicatie tussen de CA en de FIM CM beveiligt. </br></br> Dit gebruikersaccount is vereist voor de volgende instellingen voor toegangsbeheer:</br>-   **Lokaal aanmelden toestaan** gebruikersrecht.</br>-   **Certificaten verlenen en beheren** gebruikersrecht. </br>-Lees- en schrijftoegang op de map Temp van de volgende locatie: % WINDIR %\\Temp.</br>-Er is een digitale handtekening en versleuteling certificaat uitgegeven en geïnstalleerd in de opslag van de gebruiker.
-|MIMCMKRAgent        | Hersteld gearchiveerd persoonlijke sleutels van de CA. Dit gebruikersaccount is vereist voor de volgende instellingen voor toegangsbeheer:</br> -   **Lokaal aanmelden toestaan** gebruikersrecht.</br>-Lidmaatschap van de lokale **beheerders** groep. </br>-Machtiging Inschrijven op de **KeyRecoveryAgent** certificaatsjabloon. </br>-De sleutelherstelagent certificaat wordt uitgegeven en geïnstalleerd in de opslag van de gebruiker. Het certificaat moet worden toegevoegd aan de lijst met de sleutelherstel-agents op de CA. </br>-De machtiging lezen en schrijven toegang tot de map Temp van de volgende locatie: ```%WINDIR%\\Temp.```                                                                                                                     |
-| MIMCMAuthAgent      | Bepaalt de rechten en machtigingen voor gebruikers en groepen. Dit gebruikersaccount is vereist voor de volgende instellingen voor toegangsbeheer: </br>-Lidmaatschap van de groep Pre-Windows 2000-compatibele toegang. </br> -Verleend de **Beveiligingscontrole genereren** gebruikersrecht.             |
-| MIMCMManagerAgent   | CA-beheeractiviteiten uitvoert. </br> Deze gebruiker moet worden toegewezen als de machtiging CA beheren.        |
-| MIMCMWebAgent       | Biedt de identiteit voor de IIS-toepassingsgroep. FIM CM binnen een Microsoft Win32® application programming interface proces dat wordt gebruikt de referenties van deze gebruiker wordt uitgevoerd. </br> Dit gebruikersaccount is vereist voor de volgende instellingen voor toegangsbeheer:</br> -Lidmaatschap van de lokale **IIS_WPG, windows 2016 IIS_IUSRS =** groep. </br>-Lidmaatschap van de lokale **beheerders** groep.</br>-Verleend de **Beveiligingscontrole genereren** gebruikersrecht. </br>-Verleend de **functioneren als deel van het besturingssysteem** gebruikersrecht. </br>-Verleend de **token op procesniveau vervangen** gebruikersrecht.</br>-Als de identiteit van de IIS-toepassingsgroep toegewezen **CLMAppPool**. </br>-Verleend leesrechten op de **HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\CLM\\v1.0\\Server\\WebUser** registersleutel. </br>-Dit account moet ook worden vertrouwd voor overdracht.|
-| MIMCMEnrollAgent    | Inschrijving namens een gebruiker uitvoert. Dit gebruikersaccount is vereist voor de volgende instellingen voor toegangsbeheer:</br>-Een inschrijvingsagentcertificaat dat wordt uitgegeven en geïnstalleerd in de opslag van de gebruiker.</br>-   **Lokaal aanmelden toestaan** gebruikersrecht. </br>-Machtiging Inschrijven op de **Inschrijvingsagent** certificaatsjabloon (of de aangepaste sjabloon, als dit wordt gebruikt).                 |
+| MIMCMAgent          | Biedt de volgende services: </br>-Haalt versleutelde persoonlijke sleutels van de CA. </br>-Smartcard PINCODE-informatie in de FIM CM-database beveiligt. </br>-Beveiliging voor communicatie tussen FIM CM en de CA. </br></br> Dit gebruikersaccount is vereist voor de volgende instellingen voor toegangsbeheer:</br>-   **Lokaal aanmelden toestaan** gebruikersrecht.</br>-   **Certificaten verlenen en beheren** gebruikersrecht. </br>-Lees- en schrijftoegang op de map Temp op de volgende locatie: % WINDIR %\\Temp.</br>-Er is een digitale handtekening en versleuteling certificaat uitgegeven en in het archief van de gebruiker geïnstalleerd.
+|MIMCMKRAgent        | Wordt hersteld gearchiveerde persoonlijke sleutels van de CA. Dit gebruikersaccount is vereist voor de volgende instellingen voor toegangsbeheer:</br> -   **Lokaal aanmelden toestaan** gebruikersrecht.</br>-Lidmaatschap van de lokale **beheerders** groep. </br>-Machtiging worden ingeschreven op de **KeyRecoveryAgent** certificaatsjabloon. </br>-Key Recovery Agent certificaat is uitgegeven en in het archief van de gebruiker geïnstalleerd. Het certificaat moet worden toegevoegd aan de lijst met de sleutelherstel-agents op de CA. </br>-De machtiging lezen en schrijven machtigingen op de map Temp op de volgende locatie: ```%WINDIR%\\Temp.```                                                                                                                     |
+| MIMCMAuthAgent      | Hiermee bepaalt u rechten en machtigingen voor gebruikers en groepen. Dit gebruikersaccount is vereist voor de volgende instellingen voor toegangsbeheer: </br>-Lidmaatschap van de groep Pre-Windows 2000-compatibele toegang. </br> -Verleend de **Beveiligingscontrole genereren** gebruikersrecht.             |
+| MIMCMManagerAgent   | CA-beheeractiviteiten uitvoert. </br> Deze gebruiker moet worden toegewezen als de machtiging van de CA beheren.        |
+| MIMCMWebAgent       | Biedt de identiteit voor de IIS-toepassingsgroep. FIM CM wordt uitgevoerd binnen een Microsoft Win32® application programming interface proces die gebruikmaakt van de referenties van deze gebruiker. </br> Dit gebruikersaccount is vereist voor de volgende instellingen voor toegangsbeheer:</br> -Lidmaatschap van de lokale **IIS_WPG, windows 2016 IIS_IUSRS =** groep. </br>-Lidmaatschap van de lokale **beheerders** groep.</br>-Verleend de **Beveiligingscontrole genereren** gebruikersrecht. </br>-Verleend de **functioneren als deel van het besturingssysteem** gebruikersrecht. </br>-Verleend de **token op procesniveau vervangen** gebruikersrecht.</br>-Toegewezen als de identiteit van de IIS-toepassingsgroep **CLMAppPool**. </br>-Verleend leesrechten op de **HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\CLM\\v1.0\\Server\\WebUser** registersleutel. </br>-Dit account moet ook worden vertrouwd voor overdracht.|
+| MIMCMEnrollAgent    | Inschrijving namens een gebruiker uitvoert. Dit gebruikersaccount is vereist voor de volgende instellingen voor toegangsbeheer:</br>-Een Enrollment Agent-certificaat dat is uitgegeven en in het archief van de gebruiker geïnstalleerd.</br>-   **Lokaal aanmelden toestaan** gebruikersrecht. </br>-Machtiging worden ingeschreven op de **Enrollment Agent** certificaatsjabloon (of de aangepaste sjabloon, als dit wordt gebruikt).                 |
 
 ### <a name="creating-certificate-templates-for-mim-cm-service-accounts"></a>Certificaatsjablonen voor MIM CM-serviceaccounts maken
 
-Drie van de serviceaccounts die worden gebruikt door MIM CM vereisen een certificaat en de configuratiewizard vereist dat u opgeeft dat de naam van de certificaatsjablonen die deze certificaten aanvragen voor deze moet gebruiken.
+Drie van de serviceaccounts die door MIM CM gebruikt een certificaat vereist en de configuratiewizard vereist dat u de naam van de certificaatsjablonen die moet worden gebruikt voor het aanvragen van certificaten voor hen opgeeft.
 
 De serviceaccounts die certificaten vereisen zijn:
 
@@ -203,40 +203,40 @@ De serviceaccounts die certificaten vereisen zijn:
 
 - MIMCMKRAgent: Dit account moet een **sleutelherstelagent** certificaat
 
-Er zijn al aanwezig in AD sjablonen, maar moeten we ons eigen versies werken met MIM CM maken. Als we nodig hebben om de wijziging van de oorspronkelijke basislijn-sjablonen te maken.
+Er zijn al aanwezig in AD sjablonen, maar moeten we onze eigen versies om te werken met MIM CM maken. We nodig hebben om de wijziging van de oorspronkelijke basislijn-sjablonen maken.
 
-Alle drie de bovenstaande accounts wordt wel verhoogde bevoegdheden hebben binnen uw organisatie en moeten zorgvuldig worden behandeld.
+Alle drie de bovenstaande accounts wordt verhoogde bevoegdheden binnen uw organisatie hebben en moet zorgvuldig worden verwerkt.
 
-#### <a name="create-the-mim-cm-signing-certificate-template"></a>Maken van de certificaatsjabloon MIM CM ondertekenen
+#### <a name="create-the-mim-cm-signing-certificate-template"></a>De sjabloon voor MIM CM-ondertekening certificaat maken
 
-1. Van **Systeembeheer**Open **certificeringsinstantie**.
+1. Van **Systeembeheer**Open **certificeringsinstantie (CA)**.
 
-2. In de **certificeringsinstantie** -console in de consolestructuur, vouw **Contoso CorpCA**, en klik vervolgens op **certificaatsjablonen**.
+2. In de **certificeringsinstantie (CA)** console in de structuur van de console, vouw **Contoso-CorpCA**, en klik vervolgens op **certificaatsjablonen**.
 
 3. Met de rechtermuisknop op **certificaatsjablonen**, en klik vervolgens op **beheren**.
 
-4. In de **Certificaatsjablonenconsole**, in de **details** deelvenster, selecteren en klik met de rechtermuisknop **gebruiker**, en klik vervolgens op **sjabloon dupliceren** .
+4. In de **Certificaatsjablonenconsole**, in de **details** deelvenster, selecteer en klik met de rechtermuisknop **gebruiker**, en klik vervolgens op **sjabloon dupliceren** .
 
-5. In de **sjabloon dupliceren** dialoogvenster, **Windows Server 2003 Enterprise**, en klik vervolgens op **OK**.
+5. In de **sjabloon dupliceren** in het dialoogvenster, selecteer **Windows Server 2003 Enterprise**, en klik vervolgens op **OK**.
 
-    ![Resulterende wijzigingen weergeven](media/mim-cm-deploy/image014.png)
+    ![De resulterende wijzigingen weergeven](media/mim-cm-deploy/image014.png)
 
     >[!NOTE]
-    >MIM CM werkt niet met de certificaten op basis van certificaatsjablonen van versie 3. U moet een certificaatsjabloon voor Windows Server® 2003 Enterprise (versie 2). Zie [V3 details](https://blogs.msdn.microsoft.com/ms-identity-support/2016/07/14/faq-for-fim-2010-to-support-sha2-kspcng-and-v3-certificate-templates-for-issuing-user-and-agent-certificates-and-mim-2016-upgrade) voor meer informatie.
+    >MIM CM werkt niet met certificaten op basis van certificaatsjablonen van versie 3. U moet een certificaatsjabloon voor Windows Server® 2003, Enterprise (versie 2) maken. Zie [V3 details](https://blogs.msdn.microsoft.com/ms-identity-support/2016/07/14/faq-for-fim-2010-to-support-sha2-kspcng-and-v3-certificate-templates-for-issuing-user-and-agent-certificates-and-mim-2016-upgrade) voor meer informatie.
 
-6. In de **eigenschappen van nieuwe sjabloon** in het dialoogvenster op de **algemene** tabblad, in de **weergavenaam van sjabloon** in het vak **MIM CM ondertekening**. Wijziging de **geldigheidsperiode** naar **2 jaar**, en schakel vervolgens de **certificaat in Active Directory publiceren** selectievakje.
+6. In de **eigenschappen van nieuwe sjabloon** dialoogvenster op de **algemene** tabblad, in de **weergavenaam van sjabloon** in het vak **MIM CM-ondertekening**. Wijziging de **geldigheidsperiode** naar **2 jaar**, en schakel vervolgens de **certificaat in Active Directory publiceren** selectievakje.
 
 7. Op de **afhandeling van aanvragen** tabblad, zorg ervoor dat de **persoonlijke sleutel exporteerbaar** selectievakje is ingeschakeld en klik vervolgens op **tabblad cryptografie**.
 
 8. In de **cryptografie selectie** in het dialoogvenster uitschakelen **Microsoft Enhanced Cryptographic Provider v1.0**, inschakelen **Microsoft Enhanced RSA and AES Cryptographic Provider**, en klik vervolgens op **OK**.
 
-9. Op de **onderwerpnaam** tabblad, schakel de **e-mailnaam opnemen in onderwerpnaam** en **e-mailnaam** selectievakjes uit.
+9. Op de **onderwerpnaam** tabblad, schakel de **e-mailnaam in onderwerpnaam opnemen** en **e-mailnaam** selectievakjes.
 
-10. Op de **extensies** tabblad, in de **extensies opgenomen in deze sjabloon** lijst **toepassingsbeleid** is geselecteerd en klik vervolgens op **bewerken** .
+10. Op de **extensies** tabblad, in de **extensies opgenomen in deze sjabloon** lijst, zorg ervoor dat **toepassingsbeleid** is geselecteerd en klik vervolgens op **bewerken** .
 
-11. In de **Toepassingenbeleidsuitbreiding bewerken** dialoogvenster, selecteer de **Encrypting File System** en de **beveiligde E-mail** toepassingsbeleid. Klik op **verwijderen**, en klik vervolgens op **OK**.
+11. In de **Toepassingenbeleidsuitbreiding bewerken** in het dialoogvenster, selecteer de **Encrypting File System** en de **beveiligde E-mail** toepassingsbeleid. Klik op **verwijderen**, en klik vervolgens op **OK**.
 
-12. Op de **beveiliging** tabblad de volgende stappen uitvoeren:
+12. Op de **Security** tabblad de volgende stappen uitvoeren:
 
     - Verwijder **beheerder**.
 
@@ -244,109 +244,109 @@ Alle drie de bovenstaande accounts wordt wel verhoogde bevoegdheden hebben binne
 
     - Verwijder **domeingebruikers**.
 
-    - Wijs alleen **lezen** en **schrijven** machtigingen voor **Ondernemingsadministrators**.
+    - Alleen toewijzen **lezen** en **schrijven** machtigingen **Ondernemingsadministrators**.
 
     - Voeg **MIMCMAgent.**
 
-    - Wijs **lezen** en **inschrijven** machtigingen voor **MIMCMAgent**.
+    - Toewijzen **lezen** en **inschrijven** machtigingen **MIMCMAgent**.
 
 13. In de **eigenschappen van nieuwe sjabloon** in het dialoogvenster, klikt u op **OK**.
 
 14. Laat de **Certificaatsjablonenconsole** openen.
 
-#### <a name="create-the-mim-cm-enrollment-agent-certificate-template"></a>De certificaatsjabloon van MIM CM-Inschrijvingsagent maken
+#### <a name="create-the-mim-cm-enrollment-agent-certificate-template"></a>De sjabloon van de MIM CM Enrollment Agent-certificaat maken
 
-1. In de **Certificaatsjablonenconsole**, in de **details** deelvenster, selecteren en klik met de rechtermuisknop **Inschrijvingsagent**, en klik vervolgens op **sjabloondupliceren**.
+1. In de **Certificaatsjablonenconsole**, in de **details** deelvenster, selecteer en klik met de rechtermuisknop **Enrollment Agent**, en klik vervolgens op **sjabloondupliceren**.
 
-2. In de **sjabloon dupliceren** dialoogvenster, **Windows Server 2003 Enterprise**, en klik vervolgens op **OK**.
+2. In de **sjabloon dupliceren** in het dialoogvenster, selecteer **Windows Server 2003 Enterprise**, en klik vervolgens op **OK**.
 
-3. In de **eigenschappen van nieuwe sjabloon** in het dialoogvenster op de **algemene** tabblad, in de **weergavenaam van sjabloon** in het vak **MIM CM-Inschrijvingsagent**. Zorg ervoor dat de **geldigheidsperiode** is **2 jaar**.
+3. In de **eigenschappen van nieuwe sjabloon** dialoogvenster op de **algemene** tabblad, in de **weergavenaam van sjabloon** in het vak **MIM CM Enrollment Agent**. Zorg ervoor dat de **geldigheidsperiode** is **2 jaar**.
 
 4. Op de **afhandeling van aanvragen** tabblad, schakelt u **persoonlijke sleutel exporteerbaar**, en klik vervolgens op **CSP's of tabblad cryptografie.**
 
 5. In de **CSP-selectie** in het dialoogvenster uitschakelen **Microsoft Base Cryptographic Provider v1.0**, uitschakelen **Microsoft Enhanced Cryptographic Provider v1.0**, inschakelen **Microsoft Enhanced RSA and AES Cryptographic Provider**, en klik vervolgens op **OK**.
 
-6. Op de **beveiliging** tabblad Voer de volgende stappen:
+6. Op de **Security** tabblad Voer de volgende stappen uit:
 
     - Verwijder **beheerder**.
 
     - Verwijder **Domeinadministrators**.
 
-    - Wijs alleen **lezen** en **schrijven** machtigingen voor **Ondernemingsadministrators**.
+    - Alleen toewijzen **lezen** en **schrijven** machtigingen **Ondernemingsadministrators**.
 
     - Voeg **MIMCMEnrollAgent**.
 
-    - Wijs **lezen** en **inschrijven** machtigingen voor **MIMCMEnrollAgent**.
+    - Toewijzen **lezen** en **inschrijven** machtigingen **MIMCMEnrollAgent**.
 
 7. In de **eigenschappen van nieuwe sjabloon** in het dialoogvenster, klikt u op **OK**.
 
 8. Laat de **Certificaatsjablonenconsole** openen.
 
-#### <a name="create-the-mim-cm-key-recovery-agent-certificate-template"></a>De MIM CM-sleutelherstelagent certificaatsjabloon maken
+#### <a name="create-the-mim-cm-key-recovery-agent-certificate-template"></a>De sjabloon van de MIM CM Key Recovery Agent-certificaat maken
 
-1. In de **certificaatsjablonen** -console, in de **details** deelvenster, selecteren en klik met de rechtermuisknop **sleutelherstelagent**, en klik vervolgens op **sjabloondupliceren**.
+1. In de **certificaatsjablonen** -console, in de **details** deelvenster, selecteer en klik met de rechtermuisknop **Key Recovery Agent**, en klik vervolgens op **sjabloondupliceren**.
 
-2. In de **sjabloon dupliceren** dialoogvenster, **Windows Server 2003 Enterprise**, en klik vervolgens op **OK**.
+2. In de **sjabloon dupliceren** in het dialoogvenster, selecteer **Windows Server 2003 Enterprise**, en klik vervolgens op **OK**.
 
-3. In de **eigenschappen van nieuwe sjabloon** in het dialoogvenster op de **algemene** tabblad, in de **weergavenaam van sjabloon** in het vak **MIM CM sleutelherstelagent**. Zorg ervoor dat de **geldigheidsperiode** is **2 jaar** op de **tabblad cryptografie.**
+3. In de **eigenschappen van nieuwe sjabloon** dialoogvenster op de **algemene** tabblad, in de **weergavenaam van sjabloon** in het vak **MIM CM Key Recovery Agent**. Zorg ervoor dat de **geldigheidsperiode** is **2 jaar** op de **tabblad cryptografie.**
 
 4. In de **Providers selectie** in het dialoogvenster uitschakelen **Microsoft Enhanced Cryptographic Provider v1.0**, inschakelen **Microsoft Enhanced RSA and AES Cryptographic Provider**, en klik vervolgens op **OK**.
 
 5. Op de **Uitgiftevereisten** tabblad, zorg ervoor dat **goedkeuring van de CA-certificaat** is **uitgeschakeld**.
 
-6. Op de **beveiliging** tabblad Voer de volgende stappen:
+6. Op de **Security** tabblad Voer de volgende stappen uit:
 
     - Verwijder **beheerder**.
 
     - Verwijder **Domeinadministrators**.
 
-    - Wijs alleen **lezen** en **schrijven** machtigingen voor **Ondernemingsadministrators**.
+    - Alleen toewijzen **lezen** en **schrijven** machtigingen **Ondernemingsadministrators**.
 
     - Voeg **MIMCMKRAgent**.
 
-    - Wijs **lezen** en **inschrijven** machtigingen voor **KRAgent**.
+    - Toewijzen **lezen** en **inschrijven** machtigingen **KRAgent**.
 
 7. In de **eigenschappen van nieuwe sjabloon** in het dialoogvenster, klikt u op **OK**.
 
 8. Sluit de **console Certificaatsjablonen**.
 
-#### <a name="publish-the-required-certificate-templates-at-the-certification-authority"></a>Publiceren van de vereiste certificaatsjablonen op de certificeringsinstantie
+#### <a name="publish-the-required-certificate-templates-at-the-certification-authority"></a>Het vereiste certificaatsjablonen op de certificeringsinstantie (CA) publiceren
 
-1. Herstel de **certificeringsinstantie** console.
+1. Herstel de **certificeringsinstantie (CA)** console.
 
-2. In de **certificeringsinstantie** -console in de consolestructuur met de rechtermuisknop op **certificaatsjablonen**, wijs **nieuw**, en klik vervolgens op **certificaat Sjabloon voor probleem**.
+2. In de **certificeringsinstantie (CA)** -console, in de consolestructuur met de rechtermuisknop op **certificaatsjablonen**, wijst u **nieuw**, en klik vervolgens op **certificaat Sjabloon voor het probleem**.
 
-3. In de **Certificaatsjablonen inschakelen** dialoogvenster, **MIM CM-Inschrijvingsagent**, **MIM CM-sleutelherstelagent**, en **MIM CM ondertekening**. Klik op **OK**.
+3. In de **Certificaatsjablonen inschakelen** in het dialoogvenster, selecteer **MIM CM Enrollment Agent**, **MIM CM Key Recovery Agent**, en **MIM CM ondertekening**. Klik op **OK**.
 
 4. Klik in de consolestructuur op **certificaatsjablonen**.
 
-5. Controleer of de drie nieuwe sjablonen worden weergegeven de **details** deelvenster en sluit **certificeringsinstantie**.
+5. Controleer of dat de drie nieuwe sjablonen worden weergegeven de **details** deelvenster hebben en sluit **certificeringsinstantie (CA)**.
 
     ![MIM CM-ondertekening](media/mim-cm-deploy/image016.png)
 
-6. Sluit alle vensters opent en meld u af.
+6. Sluit alle vensters openen en meld u af.
 
 ### <a name="iis-configuration"></a>IIS-configuratie
 
-Voor het hosten van de website voor CM, IIS installeren en configureren.
+Als u wilt hosten van de website voor CM, installeren en configureren van IIS.
 
 #### <a name="install-and-configure-iis"></a>IIS installeren en configureren
 
 1. Meld u aan bij **CORLog in** als **MIMINSTALL** account
 
     >[!IMPORTANT]
-    >De account van de installatie van de MIM moet een lokale beheerder
+    >Het account van de installatie van MIM moet een lokale beheerder
 
-2. Open PowerShell en voer de volgende opdracht
+2. Open PowerShell en voer de volgende opdracht uit
 
     `Install-WindowsFeature –ConfigurationFilePath`
 
 >[!NOTE]
->Een site met de naam Default Web Site wordt standaard geïnstalleerd in IIS 7. Als u die site is gewijzigd of verwijderd van een site met de naam van de moet standaardwebsite beschikbaar zijn voor de installatie van MIM CM.
+>Een site met de naam standaardwebsite is standaard geïnstalleerd in IIS 7. Als deze site is gewijzigd of verwijderd van een site met de naam moet Default Web Site beschikbaar zijn voor de installatie van MIM CM.
 
 #### <a name="configuring-kerberos"></a>Kerberos configureren
 
-Het account MIMCMWebAgent zal worden uitgevoerd als de MIM CM-portal. Standaard in IIS en omhoog kernel mode-verificatie in IIS standaard gebruikt. U Kerberos-kernelmodusverificatie uitschakelen en SPN's in plaats daarvan op het account MIMCMWebAgent configureren. Sommige opdracht wordt verhoogde machtigingen in active directory en CORPCM server nodig.
+Het account MIMCMWebAgent zal worden uitgevoerd als de MIM CM-portal. Standaard in IIS en van de kernel mode-verificatie standaard gebruikt in IIS. U Kerberos-kernelmodusverificatie uitschakelen en SPN's voor het account MIMCMWebAgent in plaats daarvan configureren. Sommige opdracht vereist verhoogde machtigingen in active directory en CORPCM-server.
 
 ![Diagram](media/mim-cm-deploy/image020.png)
 
@@ -371,32 +371,32 @@ Set-WebConfigurationProperty -Filter System.webServer/security/authentication/Wi
 ```
 
 >[!NOTE]
->U moet een DNS-A-Record voor de 'cm.contoso.com' toevoegen aan en wijs CORPCM IP
+>U moet een DNS A-Record voor de 'cm.contoso.com' toevoegen aan en wijs CORPCM IP
 
-#### <a name="requiring-ssl-on-the-mim-cm-portal"></a>SSL vereisen in de MIM CM-portal
+#### <a name="requiring-ssl-on-the-mim-cm-portal"></a>Dat SSL is vereist op de MIM CM-portal
 
-Het is raadzaam dat u SSL nodig hebt voor de MIM CM-portal. Als u dit zelfs zal de wizard niet over deze waarschuwing.
+Het is raadzaam dat u SSL nodig hebt voor de MIM CM-portal. Als u de wizard wordt dit nog niet over deze waarschuwing.
 
-1. Deelnemen aan het webcertificaat voor **cm.contoso.com** toewijzen aan de standaard-site
+1. Schrijf u in de webcertificaat voor **cm.contoso.com** toewijst aan standaard-site
 
-2. Open **IIS-beheer** en navigeer naar **Certificaatbeheer**
+2. Open **IIS-beheer** en navigeer naar **Certificate Management**
 
-3. Dubbelklik op SSL-instellingen in de weergave functies.
+3. Dubbelklik op SSL-instellingen in de weergave van de functies.
 
 4. Selecteer op de pagina SSL-instellingen **SSL vereisen**.
 
 5. Klik in het deelvenster Acties op **toepassen.**
 
-### <a name="database-configuration-corpsql-for-mim-cm"></a>Databaseconfiguratie **CORPSQL** voor MIM CM
+### <a name="database-configuration-corpsql-for-mim-cm"></a>Configuratie van de database **CORPSQL** voor MIM CM
 
-1. Zorg ervoor dat u met de Server CORPSQL01 verbonden bent.
+1. Zorg ervoor dat u met de CORPSQL01-Server verbonden bent.
 
 2. Zorg ervoor dat u bent aangemeld als SQL DBA.
 
-3. Voer het volgende T-SQL-script, zodat de CONTOSO\\MIMINSTALL-Account voor het maken van de database wanneer we gaat u naar de stap in de configuratie
+3. Voer het volgende T-SQL-script om toe te staan de CONTOSO\\MIMINSTALL-Account voor het maken van de database wanneer we de configuratiestap
 
     >[!NOTE]
-    >Moeten we keert u terug naar SQL wanneer we gereed voor de module beleid & afsluiten zijn
+    >We moeten keert u terug naar SQL wanneer we gereed voor de module Groepsbeleid & afsluiten zijn
 
     ```sql
     create login [CONTOSO\\MIMINSTALL] from windows;
@@ -406,66 +406,66 @@ Het is raadzaam dat u SSL nodig hebt voor de MIM CM-portal. Als u dit zelfs zal 
 
 ![MIM CM configuration wizard foutbericht](media/mim-cm-deploy/image024.png)
 
-## <a name="deployment-of-microsoft-identity-manager-2016-certificate-management"></a>Implementatie van Microsoft Identity Manager 2016 Certificate Management
+## <a name="deployment-of-microsoft-identity-manager-2016-certificate-management"></a>Implementatie van Microsoft Identity Manager 2016-Certificate Management
 
-1. Zorg ervoor dat u op de Server CORPCM en dat verbonden bent de **MIMINSTALL** account lid is van de **lokale beheerders** groep.
+1. Zorg ervoor dat u met de Server CORPCM en die verbonden bent de **MIMINSTALL** account is lid van de **lokale beheerders** groep.
 
 2. Zorg ervoor dat u bent aangemeld als Contoso\\MIMINSTALL.
 
-3. De Microsoft Identity Manager SP1 ISO koppelen.
+3. Koppel de ISO van Microsoft Identity Manager SP1.
 
 4. **Open** de **Certificaatbeheer\\x64** directory.
 
 5. In de **x64** venster met de rechtermuisknop op **Setup**, en klik vervolgens op **als administrator uitvoeren**.
 
-6. Klik op de pagina Welkom bij de installatiewizard voor Microsoft Identity Manager Certificate Management **volgende.**
+6. Klik op de pagina Welkom bij de installatiewizard voor Microsoft Identity Manager Certificate Management, **volgende.**
 
-7. Op de pagina Gebruiksrechtovereenkomst Lees de gebruiksrechtovereenkomst, schakel de ik ga akkoord met de voorwaarden in deze gebruiksrechtovereenkomst **selectievakje**, en klik op volgende.
+7. Op de pagina Gebruiksrechtovereenkomst Lees de gebruiksrechtovereenkomst, schakelt de ik ga akkoord met de voorwaarden van de gebruiksrechtovereenkomst **selectievakje**, en klik op volgende.
 
 8. Zorg ervoor dat op de pagina aangepaste installatie de **MIM CM-Portal** en **MIM CM-updateservice onderdelen** zijn ingesteld om te worden geïnstalleerd, en vervolgens **Klik op volgende**.
 
 9. Zorg ervoor dat de naam van de virtuele map is op de pagina virtuele webmap **CertificateManagement**, en vervolgens **Klik op volgende**.
 
-10. Op de pagina installeert Microsoft Identity Manager Certificate Management **Klik op installeren**.
+10. Op de pagina installatie van Microsoft Identity Manager Certificate Management **Klik op installeren**.
 
-11. Op de **voltooid** de installatiewizard voor Microsoft Identity Manager Certificate Management-pagina **klikt u op Voltooien**.
+11. Op de **voltooid** de installatiewizard voor Microsoft Identity Manager Certificate Management-pagina **Klik op Voltooien**.
 
-![MIM CM wizard is voltooid](media/mim-cm-deploy/image026.png)
+![MIM CM-wizard is voltooid](media/mim-cm-deploy/image026.png)
 
-### <a name="configuration-wizard-of-microsoft-identity-manager-2016-certificate-management"></a>De configuratiewizard van Microsoft Identity Manager 2016 Certificaatbeheer
+### <a name="configuration-wizard-of-microsoft-identity-manager-2016-certificate-management"></a>De configuratiewizard van Microsoft Identity Manager 2016-Certificate Management
 
-Voeg MIMINSTALL aan voordat u zich aanmeldt voor CORPCM **domain Admins, Schema-Administrators en lokale beheerders** groep voor configuratiewizard. Dit kan later worden verwijderd zodra de configuratie is voltooid.
+Toevoegen voordat u zich bij CORPCM MIMINSTALL naar **domain Admins, Schema-Administrators en de lokale groep administrators** groep voor de configuratiewizard. Dit kan later worden verwijderd zodra de configuratie voltooid is.
 
 ![Foutbericht](media/mim-cm-deploy/image028.png)
 
-1. Van de **Start** menu, klikt u op **Certificate Management-configuratiewizard**. En worden uitgevoerd als **beheerder**
+1. Uit de **Start** menu, klikt u op **Certificate Management-configuratiewizard**. En uit te voeren als **beheerder**
 
 2. Op de **Welkom bij de configuratiewizard** pagina, klikt u op **volgende**.
 
-3. Op de **CA-configuratie** pagina, zorg ervoor dat de geselecteerde CA **Contoso-CORPCA-CA**, zorg ervoor dat de geselecteerde server **CORPCA. CONTOSO.COM**, en klik vervolgens op **volgende**.
+3. Op de **CA-configuratie** pagina, zorg ervoor dat de geselecteerde CA wordt **Contoso-CORPCA-CA**, zorg ervoor dat de geselecteerde server **CORPCA. CONTOSO.COM**, en klik vervolgens op **volgende**.
 
-4. Op de **instellen van de Microsoft® SQL Server®-Database** pagina de **naam van SQL Server** in het vak **CORPSQL1** , schakel de **mijn referenties gebruiken om te maken de database** selectievakje en klik vervolgens op **volgende**.
+4. Op de **instellen van de Microsoft® SQL Server®-Database** pagina, in de **naam van SQL Server** in het vak **CORPSQL1** , schakelen de **mijn referenties gebruiken om te maken de database** selectievakje en klik vervolgens op **volgende**.
 
-5. Op de **Database-instellingen** pagina, accepteer de standaardnaam van de database van **FIMCertificateManagement**, zorg ervoor dat **SQL geïntegreerde verificatie** is geselecteerd, en vervolgens Klik op **volgende**.
+5. Op de **Database-instellingen** pagina, accepteer de standaardnaam van de database van **FIMCertificateManagement**, zorg ervoor dat **geïntegreerde SQL-verificatie** is geselecteerd, en vervolgens Klik op **volgende**.
 
-6. Op de **Active Directory instellen** pagina, accepteer de standaardnaam die is opgegeven voor het service connection point en klik vervolgens op **volgende**.
+6. Op de **Active Directory instellen** pagina, accepteer de standaardnaam die is opgegeven voor de service connection point en klik vervolgens op **volgende**.
 
 7. Op de **verificatiemethode** pagina bevestigen **windows geïntegreerde verificatie** is geselecteerd en klik vervolgens op **volgende**.
 
-8. Op de **Agents: FIM CM** pagina, schakel de **de standaardinstellingen van FIM CM gebruiken** selectievakje en klik vervolgens op **aangepaste Accounts**.
+8. Op de **agenten-FIM CM** pagina, schakel de **gebruik de standaardinstellingen van FIM CM** selectievakje en klik vervolgens op **aangepaste Accounts**.
 
-9. In de **Agents: FIM CM** in het dialoogvenster met meerdere tabbladen op elk tabblad, typ de volgende informatie:
+9. In de **agenten-FIM CM** in het dialoogvenster met meerdere tabbladen op elk tabblad, typt u de volgende informatie:
 
    - Gebruikersnaam: **Update**
 
    - Wachtwoord: **doorgeven\@word1**
 
-   - Bevestig het wachtwoord: **doorgeven\@word1**
+   - Wachtwoord bevestigen: **doorgeven\@word1**
 
    - Gebruik een bestaande gebruiker: **ingeschakeld**
 
      >[!NOTE]
-     >Deze accounts eerder is gemaakt. Zorg ervoor dat de procedures in stap 8 worden herhaald voor alle zes agent account tabbladen.
+     >We deze accounts eerder hebben gemaakt. Zorg ervoor dat de procedures in stap 8 worden herhaald voor alle zes agent account tabbladen.
 
      ![MIM CM-accounts](media/mim-cm-deploy/image030.png)
 
@@ -475,52 +475,52 @@ Voeg MIMINSTALL aan voordat u zich aanmeldt voor CORPCM **domain Admins, Schema-
 
 12. Op de **servercertificaten instellen** pagina, schakelt u de volgende certificaatsjablonen:
 
-    - Certificaatsjabloon die moet worden gebruikt voor de sleutelherstelagent van de herstelagent: **MIMCMKeyRecoveryAgent**.
+    - Certificaatsjabloon moet worden gebruikt voor de Key Recovery Agent van de herstelagent: **MIMCMKeyRecoveryAgent**.
 
     - Certificaatsjabloon die moet worden gebruikt voor het certificaat van de FIM CM-Agent: **MIMCMSigning**.
 
-    - Certificaatsjabloon die moet worden gebruikt voor het inschrijvingsagentcertificaat: **FIMCMEnrollmentAgent**.
+    - Certificaatsjabloon moet worden gebruikt voor het inschrijvingsagentcertificaat: **FIMCMEnrollmentAgent**.
 
-13. Op de **Set-up servercertificaten** pagina, klikt u op **volgende**.
+13. Op de **servercertificaten instellen** pagina, klikt u op **volgende**.
 
-14. Op de **Setup e-mailserver, Document afdrukken** pagina in de **Geef de naam van de SMTP-server die u gebruiken wilt voor registratiemeldingen** vak en klik vervolgens op **volgende.**
+14. Op de **Setup-e-mailserver, Document afdrukken** pagina, in de **Geef de naam van de SMTP-server die u wilt gebruiken voor het e-mailberichten registratie** vak en klik vervolgens op **volgende.**
 
 15. Op de **klaar om te configureren** pagina, klikt u op **configureren**.
 
-16. In de **configuratiewizard – Microsoft Forefront Identity Manager 2010 R2** waarschuwing in het dialoogvenster, klikt u op **OK** om te bevestigen dat SSL niet is ingeschakeld op de virtuele IIS-map.
+16. In de **configuratiewizard-Microsoft Forefront Identity Manager 2010 R2** waarschuwing in het dialoogvenster, klikt u op **OK** om te bevestigen dat SSL niet is ingeschakeld op de virtuele IIS-map.
 
     ![Media/image17.png](media/mim-cm-deploy/image032.png)
 
     >[!NOTE] 
-    >Klik niet op de knop voltooien voordat de uitvoering van de configuratiewizard voltooid is. Logboekregistratie voor wizard u hier vindt: **% programfiles %\\Microsoft Forefront Identity Management\\2010\\Certificaatbeheer\\config.log**
+    >Klik niet op de knop Voltooien totdat de uitvoering van de configuratiewizard voltooid is. Logboekregistratie voor wizard u hier vindt: **% programfiles %\\Microsoft Forefront Identity Management\\2010\\Certificaatbeheer\\config.log**
 
 17. Klik op **Voltooien**.
 
-    ![MIM CM wizard is voltooid](media/mim-cm-deploy/image033.png)
+    ![MIM CM-wizard is voltooid](media/mim-cm-deploy/image033.png)
 
-18. Sluit alle geopende vensters.
+18. Sluit alle geopende windows.
 
 19. Voeg https://cm.contoso.com/certificatemanagement aan de zone Lokaal intranet in uw browser.
 
-20. Gaat u naar de site van de server CORPCM https://cm.contoso.com/certificatemanagement  
+20. Ga naar de website van de server CORPCM https://cm.contoso.com/certificatemanagement  
 
     ![Diagram](media/mim-cm-deploy/image035.png)
 
-### <a name="verify-the-cng-key-isolation-service"></a>Controleer of de CNG-sleutel isolatie-Service
+### <a name="verify-the-cng-key-isolation-service"></a>Controleer of de Service CNG-sleutels isolatie
 
 1. Van **Systeembeheer**Open **Services**.
 
-2. In de **details** deelvenster, dubbelklikt u op **CNG-sleutel isolatie**.
+2. In de **details** deelvenster, dubbelklikt u op **CNG Key Isolation**.
 
 3. Op de **algemene** en wijzig de **opstarttype** naar **automatische**.
 
-4. Op de **algemene** tabblad, start de service als deze zich niet in een status gestart.
+4. Op de **algemene** tabblad, start de service als deze niet in de status van een gestart.
 
 5. Op de **algemene** tabblad **OK**.
 
 ### <a name="installing-and-configuring-the-ca-modules-"></a>Installeren en configureren van de CA-Modules:
 
-In deze stap wordt installeren en configureren van de FIM CM CA-modules op de certificeringsinstantie.
+In deze stap zullen we installeren en configureren van de FIM CM CA-modules op de certificeringsinstantie (CA).
 
 1. FIM CM alleen inspecteren gebruikersmachtigingen voor beheerbewerkingen configureren
 
@@ -533,37 +533,37 @@ In deze stap wordt installeren en configureren van de FIM CM CA-modules op de ce
 
 4. Wanneer het bestand wordt geopend, drukt u op CTRL + F.
 
-5. In de **zoeken en vervangen** het dialoogvenster de **zoeken naar** in het vak **UseUser**, en klik vervolgens op **volgende zoeken** drie keer.
+5. In de **zoeken en vervangen** in het dialoogvenster de **zoeken naar** in het vak **UseUser**, en klik vervolgens op **volgende zoeken** drie keer.
 
 6. Sluit de **zoeken en vervangen** in het dialoogvenster.
 
-7. U moet zich op de regel  **\<key="Clm.RequestSecurity.Flags toevoegen ' waarde"UseUser UseGroups"= /\>**. Wijzig de regel lezen  **\<key="Clm.RequestSecurity.Flags toevoegen ' waarde 'UseUser' = /\>**.
+7. U moet zich op de regel  **\<key="Clm.RequestSecurity.Flags toevoegen ' waarde ="UseUser, UseGroups"/\>**. Wijzig de regel lezen  **\<key="Clm.RequestSecurity.Flags toevoegen ' waarde ="UseUser"/\>**.
 
 8. Sluit het bestand, alle wijzigingen worden opgeslagen.
 
-9. Maak een account voor de CA-computer op de SQL server \<geen script\>
+9. Maak een account voor de CA-computer op de SQL-server \<geen script\>
 
 10. Zorg ervoor dat u met verbonden bent de **CORPSQL01** server.
 
 11. Zorg ervoor dat u bent aangemeld als **DBA**
 
-12. Van de **Start** menu, start **SQL Server Management Studio**.
+12. Uit de **Start** menu, start **SQL Server Management Studio**.
 
-13. In de **verbinding maken met Server** het dialoogvenster de **servernaam** in het vak **CORPSQL01,** en klik vervolgens op **Connect**.
+13. In de **verbinding maken met Server** in het dialoogvenster de **servernaam** in het vak **CORPSQL01,** en klik vervolgens op **Connect**.
 
-14. Vouw in de consolestructuur **beveiliging**, en klik vervolgens op **aanmeldingen**.
+14. Vouw in de consolestructuur **Security**, en klik vervolgens op **aanmeldingen**.
 
-15. Met de rechtermuisknop op **aanmeldingen**, en klik vervolgens op **New Login**.
+15. Met de rechtermuisknop op **aanmeldingen**, en klik vervolgens op **nieuwe aanmelding**.
 
-16. Op de **algemene** pagina in de **aanmeldingsnaam** in het vak **contoso\\CORPCA\$**. Selecteer **Windows-verificatie**. Standaard-database is **FIMCertificateManagement**.
+16. Op de **algemene** pagina, in de **aanmeldingsnaam** in het vak **contoso\\CORPCA\$**. Selecteer **Windows-verificatie**. Standaard-database is **FIMCertificateManagement**.
 
-17. Selecteer in het linkerdeelvenster **Gebruikerskoppeling**. Klik in het rechterdeelvenster op het selectievakje in de **kaart** kolom naast **FIMCertificateManagement**. In de **lidmaatschap databaserol voor: FIMCertificateManagement** lijst, schakelt u de **clmApp** rol.
+17. Selecteer in het linkerdeelvenster **Gebruikerstoewijzing**. Klik in het rechterdeelvenster op het selectievakje in de **kaart** kolom naast **FIMCertificateManagement**. In de **lidmaatschap databaserol voor: FIMCertificateManagement** weergeven, schakelt u de **clmApp** rol.
 
 18. Klik op **OK**.
 
-19. Sluit **Microsoft SQL Server Management Studio**.
+19. Sluiten **Microsoft SQL Server Management Studio**.
 
-### <a name="install-the-fim-cm-ca-modules-on-the-certification-authority"></a>De FIM CM CA-modules installeren op de certificeringsinstantie
+### <a name="install-the-fim-cm-ca-modules-on-the-certification-authority"></a>De FIM CM CA-modules installeren op de certificeringsinstantie (CA)
 
 1. Zorg ervoor dat u met verbonden bent de **CORPCA** server.
 
@@ -571,11 +571,11 @@ In deze stap wordt installeren en configureren van de FIM CM CA-modules op de ce
 
 3. Op de **Welkom bij de Wizard Setup van Microsoft Identity Manager Certificate Management** pagina, klikt u op **volgende**.
 
-4. Op de **gebruiksrechtovereenkomst** pagina, lees de gebruiksrechtovereenkomst. Selecteer de **ik ga akkoord met de voorwaarden in deze gebruiksrechtovereenkomst** selectievakje en klik vervolgens op **volgende**.
+4. Op de **gebruiksrechtovereenkomst** pagina, lees de gebruiksrechtovereenkomst. Selecteer de **ik ga akkoord met de voorwaarden van de gebruiksrechtovereenkomst** selectievakje en klik vervolgens op **volgende**.
 
-5. Op de **aangepaste installatie** pagina **MIM CM-Portal**, en klik vervolgens op **dit onderdeel kan niet worden**.
+5. Op de **aangepaste installatie** weergeeft, schakelt **MIM CM-Portal**, en klik vervolgens op **dit onderdeel kan niet worden**.
 
-6. Op de **aangepaste installatie** pagina **MIM CM-updateservice**, en klik vervolgens op **dit onderdeel kan niet worden**.
+6. Op de **aangepaste installatie** weergeeft, schakelt **MIM CM-updateservice**, en klik vervolgens op **dit onderdeel kan niet worden**.
 
     >[!Note]
     >Dit betekent dat de bestanden van MIM CM CA als de enige functie is ingeschakeld voor de installatie.
@@ -586,116 +586,116 @@ In deze stap wordt installeren en configureren van de FIM CM CA-modules op de ce
 
 9. Op de **voltooid de Wizard Setup van Microsoft Identity Manager Certificate Management** pagina, klikt u op **voltooien**.
 
-10. Sluit alle geopende vensters.
+10. Sluit alle geopende windows.
 
-### <a name="configure-the-mim-cm-exit-module"></a>De MIM CM uitgiftemodule configureren
+### <a name="configure-the-mim-cm-exit-module"></a>De MIM CM-uitgiftemodule configureren
 
-1. Van **Systeembeheer**Open **certificeringsinstantie**.
+1. Van **Systeembeheer**Open **certificeringsinstantie (CA)**.
 
 2. In de consolestructuur met de rechtermuisknop op **contoso-CORPCA-CA**, en klik vervolgens op **eigenschappen**.
 
 3. Op de **uitgiftemodule** tabblad **uitgiftemodule van FIM CM**, en klik vervolgens op **eigenschappen**.
 
-4. In de **Geef de verbindingsreeks van de CM-database** in het vak **Connect Timeout = 15; Beveiliginsinfo = True; Integrated Security = sspi; Initial Catalog = FIMCertificateManagement; Data Source = CORPSQL01**. Laat de **versleutelen van de verbindingsreeks** selectievakje is ingeschakeld en klik vervolgens op **OK**.
+4. In de **opgeven van de verbindingsreeks van de CM-database** in het vak **Connect Timeout = 15; Beveiliginsinfo = True; Geïntegreerde beveiliging = sspi; Initial Catalog = FIMCertificateManagement; Data Source = CORPSQL01**. Laat de **versleutel de verbindingsreeks** selectievakje is ingeschakeld en klik vervolgens op **OK**.
 5. In de **Microsoft FIM Certificate Management** dialoogvenster, klikt u op **OK**.
 
 6. In de **contoso-CORPCA-CA-eigenschappen** in het dialoogvenster, klikt u op **OK**.
 
-7. Met de rechtermuisknop op **contoso-CORPCA-CA** *,* wijs **alle taken**, en klik vervolgens op **Service stoppen**. Wacht totdat de Active Directory Certificate Services wordt gestopt.
+7. Met de rechtermuisknop op **contoso-CORPCA-CA** *,* verwijzen naar **alle taken**, en klik vervolgens op **-Service stoppen**. Wacht totdat de Active Directory Certificate Services is gestopt.
 
-8. Met de rechtermuisknop op **contoso-CORPCA-CA** *,* wijs **alle taken**, en klik vervolgens op **Service starten**.
+8. Met de rechtermuisknop op **contoso-CORPCA-CA** *,* verwijzen naar **alle taken**, en klik vervolgens op **Service starten**.
 
-9. Minimaliseer de **certificeringsinstantie** console.
+9. Minimaliseer de **certificeringsinstantie (CA)** console.
 
 10. Van **Systeembeheer**Open **logboeken**.
 
-11. Vouw in de consolestructuur **toepassings- en servicelogboeken**, en klik vervolgens op **FIM Certificate Management**.
+11. Vouw in de consolestructuur **logboeken toepassingen en Services**, en klik vervolgens op **FIM Certificate Management**.
 
-12. Controleer of dat de meest recente gebeurtenissen doen in de lijst met gebeurtenissen *niet* bevatten die **waarschuwing** of **fout** gebeurtenissen sinds de laatste keer opnieuw opstarten van Certificate Services.
+12. Controleer of dat de meest recente gebeurtenissen doen in de lijst met gebeurtenissen, *niet* bevatten **waarschuwing** of **fout** gebeurtenissen sinds de laatste keer opnieuw opstarten van Certificate Services.
 
     >[!NOTE] 
-    >De laatste gebeurtenis moet worden vermeld dat de uitgiftemodule geladen met de instellingen van: `SYSTEM\CurrentControlSet\Services\CertSvc\Configuration\ContosoRootCA\ExitModules\Clm.Exit`
+    >De laatste gebeurtenis die moet worden vermeld dat de uitgiftemodule geladen met de instellingen van: `SYSTEM\CurrentControlSet\Services\CertSvc\Configuration\ContosoRootCA\ExitModules\Clm.Exit`
 
 13. Minimaliseer de **logboeken**.
 
-### <a name="copy-the-mimcmagent-certificates-thumbprint-to-windows-clipboard"></a>De MIMCMAgent certificaatvingerafdruk naar Windows® Klembord kopiëren
+### <a name="copy-the-mimcmagent-certificates-thumbprint-to-windows-clipboard"></a>Vingerafdruk van het certificaat MIMCMAgent naar Windows® Klembord kopiëren
 
-1. Herstel de **certificeringsinstantie** console.
+1. Herstel de **certificeringsinstantie (CA)** console.
 
 2. Vouw in de consolestructuur **contoso-CORPCA-CA**, en klik vervolgens op **verleende certificaten**.
 
-3. In de **details** deelvenster, dubbelklikt u op het certificaat met **CONTOSO\\MIMCMAgent** in de **naam aanvrager** kolom en met **FIM CM Ondertekening** in de **certificaatsjabloon** kolom.
+3. In de **details** deelvenster, dubbelklikt u op het certificaat met **CONTOSO\\MIMCMAgent** in de **de naam van aanvrager** kolom en met **FIM CM Ondertekening** in de **certificaatsjabloon** kolom.
 
 4. Op de **Details** tabblad de **vingerafdruk** veld.
 
-5. Selecteer de vingerafdruk en druk op CTRL + C.
+5. De vingerafdruk van het selecteren en druk op CTRL + C.
 
     >[!NOTE]
-    >Voer **niet** de witruimte opnemen in de lijst met vingerafdruk tekens.
+    >Voer **niet** de witruimte in de lijst met de vingerafdruk van tekens bevatten.
 
 6. In de **certificaat** in het dialoogvenster, klikt u op **OK**.
 
-7. Van de **Start** menu, in de **programma's en bestanden zoeken** in het vak **Kladblok**, en druk op ENTER.
+7. Uit de **Start** menu in de **programma's en bestanden zoeken** in het vak **Kladblok**, en druk op ENTER.
 
 8. In **Kladblok**, uit de **bewerken** menu, klikt u op **plakken**.
 
-9. Van de **bewerken** menu, klikt u op **vervangen**.
+9. Uit de **bewerken** menu, klikt u op **vervangen**.
 
-10. In de **zoeken naar** vak, typt u een spatie en klik vervolgens op **Alles vervangen**.
+10. In de **zoeken naar** vak, typ een spatie en klik vervolgens op **vervangt alle**.
 
     >[!Note]
-    >Hiermee verwijdert u alle van de spaties tussen de tekens in de vingerafdruk.
+    >Hiermee verwijdert u alle van de afstand tussen de tekens in de vingerafdruk.
 
 11. In de **vervangen** in het dialoogvenster, klikt u op **annuleren**.
 
 12. Selecteer de geconverteerde *thumbprintstring*, en druk op CTRL + C.
 
-13. Sluit **Kladblok** zonder wijzigingen worden opgeslagen.
+13. Sluiten **Kladblok** zonder wijzigingen worden opgeslagen.
 
 ### <a name="configure-the-fim-cm-policy-module"></a>De FIM CM-beleidsmodule configureren
 
-1. Herstel de **certificeringsinstantie** console.
+1. Herstel de **certificeringsinstantie (CA)** console.
 
 2. Met de rechtermuisknop op **contoso-CORPCA-CA**, en klik vervolgens op **eigenschappen**.
 
-3. In de **contoso-CORPCA-CA-eigenschappen** in het dialoogvenster op de **beleidsmodule** tabblad **eigenschappen**.
+3. In de **contoso-CORPCA-CA-eigenschappen** dialoogvenster op de **beleidsmodule** tabblad **eigenschappen**.
 
-    - Op de **algemene** tabblad, zorg ervoor dat **FIM CM-aanvragen doorgeven aan de standaardbeleidsmodule voor verwerking** is geselecteerd.
+    - Op de **algemene** tabblad, zorg ervoor dat **niet - FIM CM-aanvragen doorgeven aan de standaardbeleidsmodule voor verwerking** is geselecteerd.
 
-    - Op de **handtekeningcertificaten** tabblad **toevoegen**.
+    - Op de **certificaten voor ondertekening** tabblad **toevoegen**.
 
     - Klik in het dialoogvenster certificaat met de rechtermuisknop op de **Geef hexadecimaal gecodeerde certificaat-hash** vak en klik vervolgens op **plakken**.
 
     - In de **certificaat** in het dialoogvenster, klikt u op **OK**.
 
         >[!Note]
-        >Als de **OK** knop niet is ingeschakeld, kunt u een verborgen teken in de tekenreeks vingerafdruk per ongeluk opgenomen wanneer u de vingerafdruk van het certificaat clmAgent gekopieerd. Herhaal de bovenstaande stappen vanaf **taak 4: de MIMCMAgent certificaatvingerafdruk naar Windows Klembord te kopiëren** in deze oefening.
+        >Als de **OK** knop niet is ingeschakeld, kunt u een verborgen teken in de vingerafdruk per ongeluk opgenomen wanneer u de vingerafdruk van het certificaat clmAgent gekopieerd. Herhaal de bovenstaande stappen vanaf **taak 4: de MIMCMAgent certificaatvingerafdruk naar Windows Klembord te kopiëren** in deze oefening.
 
-4. In de **configuratie-eigenschappen** dialoogvenster Zorg dat de vingerafdruk wordt weergegeven in de **geldige handtekeningcertificaten** lijst en klik vervolgens op **OK**.
+4. In de **configuratie-eigenschappen** dialoogvenster vak, zorg ervoor dat de vingerafdruk wordt weergegeven in de **geldige certificaten voor ondertekening** lijst en klik vervolgens op **OK**.
 
 5. In de **FIM Certificate Management** dialoogvenster, klikt u op **OK**.
 
 6. In de **contoso-CORPCA-CA-eigenschappen** in het dialoogvenster, klikt u op **OK**.
 
-7. Met de rechtermuisknop op **contoso-CORPCA-CA** *,* wijs **alle taken**, en klik vervolgens op **Service stoppen**.
+7. Met de rechtermuisknop op **contoso-CORPCA-CA** *,* verwijzen naar **alle taken**, en klik vervolgens op **-Service stoppen**.
 
-8. Wacht totdat de Active Directory Certificate Services wordt gestopt.
+8. Wacht totdat de Active Directory Certificate Services is gestopt.
 
-9. Met de rechtermuisknop op **contoso-CORPCA-CA** *,* wijs **alle taken**, en klik vervolgens op **Service starten**.
+9. Met de rechtermuisknop op **contoso-CORPCA-CA** *,* verwijzen naar **alle taken**, en klik vervolgens op **Service starten**.
 
-10. Sluit de **certificeringsinstantie** console.
+10. Sluit de **certificeringsinstantie (CA)** console.
 
-11. Sluit alle geopende vensters en meld u af.
+11. Sluit alle vensters openen en meld u af.
 
-**Laatste stap in de implementatie** is we willen zeker CONTOSO\\MIMCM Managers kunnen implementeren en sjablonen maken en configureren van het systeem zonder schema en Domeinadministrators. Het volgende script zal ACL de machtigingen voor de certificaatsjablonen dsacls gebruiken. Voer het met een account met volledige machtigingen voor het wijzigen van beveiliging lees- en schrijfmachtigingen heeft voor elke bestaande certificaatsjabloon in het forest.
+**Laatste stap in de implementatie** we willen er zeker van CONTOSO is\\MIMCM-Managers kunnen implementeren en sjablonen maken en configureren van het systeem zonder schema en de groep Domeinadministrators. Het volgende script zal ACL de machtigingen voor de certificaatsjablonen dsacls gebruiken. Voer met account dat volledige machtigingen voor het wijzigen van beveiliging heeft lees- en schrijfmachtigingen heeft voor elke bestaande certificaatsjabloon in het forest.
 
-Eerste stappen: **configureren van het Service Connection Point en machtigingen van de doelgroep & sjabloon Profielbeheer delegeren**
+Eerste stappen: **Service Connection Point en doelgroep machtigingen configureren & Profielsjabloonbeheer delegeren**
 
-1. Configureer machtigingen voor het service connection point (SCP).
+1. Configureer machtigingen voor de service connection point (SCP).
 
-2. Gedelegeerd beheer van sjabloon configureren.
+2. Gedelegeerde profielsjabloonbeheer configureren.
 
-3. Configureer machtigingen voor het service connection point (SCP). **\<geen script\>**
+3. Configureer machtigingen voor de service connection point (SCP). **\<geen script\>**
 
 4.   Zorg ervoor dat u met verbonden bent de **CORPDC** virtuele server.
 
@@ -703,18 +703,18 @@ Eerste stappen: **configureren van het Service Connection Point en machtigingen 
 
 6. Van **Systeembeheer**Open **Active Directory: gebruikers en Computers**.
 
-7. In **Active Directory: gebruikers en Computers**op de **weergave** menu ervoor te zorgen dat **geavanceerde functies** is ingeschakeld.
+7. In **Active Directory: gebruikers en Computers**op de **weergave** menu, zorg ervoor dat **geavanceerde functies** is ingeschakeld.
 
-8. Vouw in de consolestructuur **Contoso.com** \| **System** \| **Microsoft** \| **de levensduur van certificaat Manager**, en klik vervolgens op **CORPCM**.
+8. Vouw in de consolestructuur **Contoso.com** \| **System** \| **Microsoft** \| **Certificate Lifecycle Manager**, en klik vervolgens op **CORPCM**.
 
 9. Met de rechtermuisknop op **CORPCM**, en klik vervolgens op **eigenschappen**.
 
-10. In de **CORPCM eigenschappen** in het dialoogvenster op de **beveiliging** tabblad, voeg de volgende groepen met de bijbehorende machtigingen toe:
+10. In de **CORPCM eigenschappen** dialoogvenster op de **Security** tabblad, voegt u de volgende groepen met de bijbehorende machtigingen toe:
 
     | Groep          | Machtigingen      |
     |----------------|------------------|
-    | mimcm Managers | Raadplegen </br> FIM CM-Audit</br> FIM CM-Inschrijvingsagent</br> FIM CM-aanvraag registreren</br> FIM CM-aanvraag herstellen</br> FIM CM-aanvraag vernieuwen</br> FIM CM-aanvraag in te trekken </br> FIM CM-aanvraag deblokkeren via een smartcard |
-    | MIMCM Helpdesk | Raadplegen</br> FIM CM-Inschrijvingsagent</br> FIM CM-aanvraag in te trekken</br> FIM CM-aanvraag deblokkeren via een smartcard |
+    | mimcm-Managers | Raadplegen </br> FIM CM-Audit</br> FIM CM Enrollment Agent</br> Inschrijven voor FIM CM-aanvraag</br> FIM CM-aanvraag herstellen</br> FIM CM-aanvraag vernieuwen</br> FIM CM-aanvraag in te trekken </br> FIM CM-aanvraag deblokkeren via een smartcard |
+    | mimcm-HelpDesk | Raadplegen</br> FIM CM Enrollment Agent</br> FIM CM-aanvraag in te trekken</br> FIM CM-aanvraag deblokkeren via een smartcard |
 
 11. In de **CORPDC eigenschappen** in het dialoogvenster, klikt u op **OK**.
 
@@ -726,23 +726,23 @@ Eerste stappen: **configureren van het Service Connection Point en machtigingen 
 
 2. In de consolestructuur met de rechtermuisknop op **Contoso.com**, en klik vervolgens op **eigenschappen**.
 
-3. Op de **beveiliging** tabblad **Geavanceerd**.
+3. Op de **Security** tabblad **Geavanceerd**.
 
 4. In de **geavanceerde beveiligingsinstellingen voor Contoso** in het dialoogvenster, klikt u op **toevoegen**.
 
-5. In de **Selecteer gebruiker, Computer, serviceaccount of groep** het dialoogvenster de **Voer de naam van het object te selecteren** in het vak **mimcm Managers**, en klik vervolgens op **OK**.
+5. In de **Select User, Computer, serviceaccount of groep** in het dialoogvenster de **Enter the object named selecteren** in het vak **mimcm-Managers**, en klik vervolgens op **OK**.
 
-6. In de **Machtigingsvermelding voor Contoso** het dialoogvenster de **toepassen op** selecteert **Descendant gebruikersobjecten** en schakel vervolgens de **toestaan**selectievakje in voor de volgende **machtigingen**:
+6. In de **Machtigingsvermelding voor Contoso** in het dialoogvenster de **zijn van toepassing op** in de lijst met **Descendant gebruikersobjecten** en schakel vervolgens de **toestaan**selectievakjes in voor de volgende **machtigingen**:
 
     - **Alle eigenschappen lezen**
 
-    - **Machtigingen voor lezen**
+    - **De machtiging lezen**
 
     - **FIM CM-Audit**
 
-    - **FIM CM-Inschrijvingsagent**
+    - **FIM CM Enrollment Agent**
 
-    - **FIM CM-aanvraag registreren**
+    - **Inschrijven voor FIM CM-aanvraag**
 
     - **FIM CM-aanvraag herstellen**
 
@@ -756,15 +756,15 @@ Eerste stappen: **configureren van het Service Connection Point en machtigingen 
 
 8. In de **geavanceerde beveiligingsinstellingen voor Contoso** in het dialoogvenster, klikt u op **toevoegen**.
 
-9. In de **Selecteer gebruiker, Computer, serviceaccount of groep** het dialoogvenster de **Voer de naam van het object te selecteren** in het vak **mimcm HelpDesk**, en klik vervolgens op **OK**.
+9. In de **Select User, Computer, serviceaccount of groep** in het dialoogvenster de **Enter the object named selecteren** in het vak **mimcm-HelpDesk**, en klik vervolgens op **OK**.
 
-10. In de **Machtigingsvermelding voor Contoso** het dialoogvenster de **toepassen op** selecteert **Descendant gebruikersobjecten** en selecteer vervolgens de **toestaan**selectievakje in voor de volgende **machtigingen**:
+10. In de **Machtigingsvermelding voor Contoso** in het dialoogvenster de **zijn van toepassing op** in de lijst met **Descendant gebruikersobjecten** en selecteer vervolgens de **toestaan**selectievakjes in voor de volgende **machtigingen**:
 
     - **Alle eigenschappen lezen**
 
-    - **Machtigingen voor lezen**
+    - **De machtiging lezen**
 
-    - **FIM CM-Inschrijvingsagent**
+    - **FIM CM Enrollment Agent**
 
     - **FIM CM-aanvraag in te trekken**
 
@@ -784,23 +784,23 @@ Eerste stappen: **configureren van het Service Connection Point en machtigingen 
 
 2. In de consolestructuur met de rechtermuisknop op **Contoso.com**, en klik vervolgens op **eigenschappen**.
 
-3. Op de **beveiliging** tabblad **Geavanceerd**.
+3. Op de **Security** tabblad **Geavanceerd**.
 
 4. In de **geavanceerde beveiligingsinstellingen voor Contoso** in het dialoogvenster, klikt u op **toevoegen**.
 
-5. In de **Selecteer gebruiker, Computer, serviceaccount of groep** het dialoogvenster de **Voer de naam van het object te selecteren** in het vak **mimcm Managers**, en klik vervolgens op **OK**.
+5. In de **Select User, Computer, serviceaccount of groep** in het dialoogvenster de **Enter the object named selecteren** in het vak **mimcm-Managers**, en klik vervolgens op **OK**.
 
-6. In de **Machtigingsvermelding voor CONTOSO** het dialoogvenster de **toepassen op** selecteert **Descendant gebruikersobjecten** en schakel vervolgens de **toestaan**selectievakje in voor de volgende **machtigingen**:
+6. In de **Machtigingsvermelding voor CONTOSO** in het dialoogvenster de **zijn van toepassing op** in de lijst met **Descendant gebruikersobjecten** en schakel vervolgens de **toestaan**selectievakjes in voor de volgende **machtigingen**:
 
     - **Alle eigenschappen lezen**
 
-    - **Machtigingen voor lezen**
+    - **De machtiging lezen**
 
     - **FIM CM-Audit**
 
-    - **FIM CM-Inschrijvingsagent**
+    - **FIM CM Enrollment Agent**
 
-    - **FIM CM-aanvraag registreren**
+    - **Inschrijven voor FIM CM-aanvraag**
 
     - **FIM CM-aanvraag herstellen**
 
@@ -814,15 +814,15 @@ Eerste stappen: **configureren van het Service Connection Point en machtigingen 
 
 8. In de **geavanceerde beveiligingsinstellingen voor CONTOSO** in het dialoogvenster, klikt u op **toevoegen**.
 
-9. In de **Selecteer gebruiker, Computer, serviceaccount of groep** het dialoogvenster de **Voer de naam van het object te selecteren** in het vak **mimcm HelpDesk**, en klik vervolgens op **OK**.
+9. In de **Select User, Computer, serviceaccount of groep** in het dialoogvenster de **Enter the object named selecteren** in het vak **mimcm-HelpDesk**, en klik vervolgens op **OK**.
 
-10. In de **Machtigingsvermelding voor CONTOSO** het dialoogvenster de **toepassen op** selecteert **Descendant gebruikersobjecten** en selecteer vervolgens de **toestaan**selectievakje in voor de volgende **machtigingen**:
+10. In de **Machtigingsvermelding voor CONTOSO** in het dialoogvenster de **zijn van toepassing op** in de lijst met **Descendant gebruikersobjecten** en selecteer vervolgens de **toestaan**selectievakjes in voor de volgende **machtigingen**:
 
     - **Alle eigenschappen lezen**
 
-    - **Machtigingen voor lezen**
+    - **De machtiging lezen**
 
-    - **FIM CM-Inschrijvingsagent**
+    - **FIM CM Enrollment Agent**
 
     - **FIM CM-aanvraag in te trekken**
 
@@ -836,15 +836,15 @@ Eerste stappen: **configureren van het Service Connection Point en machtigingen 
 
 14. Laat **Active Directory: gebruikers en Computers** openen.
 
-Tweede stappen: **overdragen certificaat sjabloon beheermachtigingen \<script\>**
+Tweede stappen: **overdragen Management Certificaatsjabloonmachtigingen \<script\>**
 
-- Delegeren van machtigingen voor de container Certificaatsjablonen.
+- Het overdragen van machtigingen voor de container Certificaatsjablonen.
 
-- Delegeren van machtigingen voor de OID-container.
+- Het overdragen van machtigingen voor de OID-container.
 
-- Delegeren van machtigingen voor de bestaande certificaatsjablonen.
+- Het overdragen van machtigingen voor de bestaande certificaatsjablonen.
 
-Machtigingen voor de container Certificaatsjablonen definiëren:
+Het definiëren van machtigingen voor de container Certificaatsjablonen:
 
 1. Herstel de **Active Directory: Sites en Services** console.
 
@@ -856,35 +856,35 @@ Machtigingen voor de container Certificaatsjablonen definiëren:
 
 5. Op de **gebruikers of groepen** pagina, klikt u op **toevoegen**.
 
-6. In de **gebruikers, Computers, of groepen selecteren** het dialoogvenster de **Geef de objectnamen op** in het vak **mimcm Managers**, en klik vervolgens op **OK**.
+6. In de **Select Users, Computers of groepen** in het dialoogvenster de **Geef de objectnamen op** in het vak **mimcm-Managers**, en klik vervolgens op **OK**.
 
 7. Op de **gebruikers of groepen** pagina, klikt u op **volgende**.
 
-8. Op de **taken over te dragen** pagina, klikt u op **een aangepaste taak maken en overdragen**, en klik vervolgens op **volgende**.
+8. Op de **taken over te dragen** pagina, klikt u op **maken van een aangepaste taak om te delegeren**, en klik vervolgens op **volgende**.
 
 9.  Op de **Active Directory-objecttype** pagina, zorg ervoor dat **deze map, bestaande objecten in deze map en het maken van nieuwe objecten in deze map** is geselecteerd en klik vervolgens op **volgende**.
 
-10. Op de **machtigingen** pagina in de **machtigingen** lijst, selecteert de **volledig beheer** selectievakje en klik vervolgens op **volgende**.
+10. Op de **machtigingen** pagina, in de **machtigingen** in de lijst met de **volledig beheer** selectievakje en klik vervolgens op **volgende**.
 
 11. Op de **voltooien van de Wizard overdracht van beheer** pagina, klikt u op **voltooien**.
 
-Machtigingen voor de container OID definiëren:
+Het definiëren van machtigingen voor de container OID:
 
 1. In de consolestructuur met de rechtermuisknop op **OID**, en klik vervolgens op **eigenschappen**.
 
-2. In de **OID eigenschappen** in het dialoogvenster op de **beveiliging** tabblad **Geavanceerd**.
+2. In de **OID eigenschappen** dialoogvenster op de **Security** tabblad **Geavanceerd**.
 
 3. In de **geavanceerde beveiligingsinstellingen voor OID** in het dialoogvenster, klikt u op **toevoegen**.
 
-4. In de **Selecteer gebruiker, Computer, serviceaccount of groep** het dialoogvenster de **Voer de naam van het object te selecteren** in het vak **mimcm Managers**, en klik vervolgens op **OK**.
+4. In de **Select User, Computer, serviceaccount of groep** in het dialoogvenster de **Enter the object named selecteren** in het vak **mimcm-Managers**, en klik vervolgens op **OK**.
 
-5. In de **Machtigingsvermelding voor OID** dialoogvenster Zorg dat de machtigingen van toepassing op **dit object en alle onderliggende objecten**, klikt u op **volledig beheer**, en klik vervolgens op  **OK**.
+5. In de **Machtigingsvermelding voor OID** dialoogvenster vak, zorg ervoor dat de machtigingen van toepassing op **dit object en alle onderliggende objecten**, klikt u op **volledig beheer**, en klik vervolgens op  **OK**.
 
 6. In de **geavanceerde beveiligingsinstellingen voor OID** in het dialoogvenster, klikt u op **OK**.
 
 7. In de **OID eigenschappen** in het dialoogvenster, klikt u op **OK**.
 
-8. Sluit **Active Directory-Sites en Services**.
+8. Sluiten **Active Directory-Sites en Services**.
 
 **Scripts: Machtigingen voor de container OID, Profielsjabloon & certificaatsjablonen**
 
@@ -912,7 +912,7 @@ $acl.AddAccessRule($ace)
 }
 ```
 
-**Scripts: Machtigingen voor de bestaande certificaatsjablonen delegeren.**  
+**Scripts: Overdragen van machtigingen voor de bestaande certificaatsjablonen.**  
 
 ![Diagram](media/mim-cm-deploy/image039.png)
 

@@ -7,24 +7,24 @@ ms.author: barclayn
 manager: mbaldwin
 ms.date: 09/06/2017
 ms.topic: article
-ms.service: microsoft-identity-manager
+ms.prod: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 82a9085c-9667-4b3b-8079-657eab1d1e58
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: c53d8cc815f792d1a1246a7434350f1cfb087844
-ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
+ms.openlocfilehash: 751bad4dc8632fbffca8724056c8faff7a01caac
+ms.sourcegitcommit: ace4d997c599215e46566386a1a3d335e991d821
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36288959"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49334190"
 ---
 # <a name="hardware-and-software-requirements"></a>Hardware- en softwarevereisten
 
 Privileged Access Management heeft geen hardwarevereisten naast de vereisten van de onderliggende softwareplatforms. Zorg ervoor dat u voldoende geheugen of schijfruimte vrij hebt en beschikt over een netwerkverbinding.
 
 > [!IMPORTANT]
-> In dit artikel worden minimale vereisten vermeld voor een standaardimplementatie. Het is niet bedoeld ter illustratie van prestaties, schaalbaarheid of hoge beschikbaarheid. Dit vormt geen geen aanbevolen implementatietopologie voor grote ondernemingen of productieomgevingen.
+> In dit artikel worden minimale vereisten vermeld voor een standaardimplementatie. Het is niet bedoeld ter illustratie van prestaties, schaalbaarheid en hoge beschikbaarheid. Dit vertegenwoordigt geen aanbevolen implementatietopologie voor grote ondernemingen of productieomgevingen.
 
 ## <a name="installing-from-software-packages"></a>Installeren vanuit softwarepakketten
 
@@ -36,7 +36,7 @@ De volgende software kan worden gedownload van TechNet Evaluation Center of MSDN
 
 De volgende software kan worden gedownload van GitHub:
 
-- [PAMSamplePortal](https://github.com/Azure/identity-management-samples): Voorbeeldwebtoepassing voor de REST-API bevat
+- [PAMSamplePortal](https://github.com/Azure/identity-management-samples): bevat een Voorbeeldwebtoepassing voor de REST-API
 
 ## <a name="required-software"></a>Vereiste software
 

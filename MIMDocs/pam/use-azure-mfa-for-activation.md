@@ -8,15 +8,15 @@ ms.reviewer: fimguy
 manager: mtillman
 ms.date: 07/06/2018
 ms.topic: article
-ms.service: microsoft-identity-manager
+ms.prod: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 5134a112-f73f-41d0-a5a5-a89f285e1f73
-ms.openlocfilehash: ad47de279dd18239ff55d89c1b717ccafe16374f
-ms.sourcegitcommit: 0b6cb02d1d6e0d821b00c17090622ba354252188
+ms.openlocfilehash: 10c8d4246122daa507d79a3f2e26e945c6ab5709
+ms.sourcegitcommit: ace4d997c599215e46566386a1a3d335e991d821
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37895500"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49333715"
 ---
 # <a name="using-azure-mfa-for-activation"></a>Azure MFA gebruiken voor activering
 > [!IMPORTANT]
@@ -131,7 +131,7 @@ U kunt Azure MFA uitschakelen voor een rol door de parameter -MFAEnabled 0 op te
 
 De volgende gebeurtenissen vindt u in het gebeurtenislogboek voor Privileged Access Management:
 
-| Id  | Ernst | Gegenereerd door | Description |
+| Id  | Ernst | Gegenereerd door | Beschrijving |
 |-----|----------|--------------|-------------|
 | 101 | Fout       | MIM-service            | De gebruiker heeft Azure MFA niet voltooid (heeft bijvoorbeeld de telefoonoproep niet beantwoord) |
 | 103 | Informatie | MIM-service            | De gebruiker heeft Azure MFA voltooid tijdens de activering                       |

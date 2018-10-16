@@ -7,17 +7,17 @@ ms.author: barclayn
 manager: mbaldwin
 ms.date: 09/13/2017
 ms.topic: article
-ms.service: microsoft-identity-manager
+ms.prod: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 7b689eff-3a10-4f51-97b2-cb1b4827b63c
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 3a7359c664e1c4aeacbc571242c2b348be186a89
-ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
+ms.openlocfilehash: f449ca475d8b1fe72203bf4cd3b5dd3c65329d13
+ms.sourcegitcommit: ace4d997c599215e46566386a1a3d335e991d821
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36289581"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49332932"
 ---
 # <a name="step-6--transition-a-group-to-privileged-access-management"></a>Stap 6 – Een groep overzetten naar Privileged Access Management
 
@@ -66,10 +66,10 @@ De cmdlets moet eenmaal voor elke groep worden uitgevoerd en eenmaal voor elk li
 
     Ter referentie moeten voor de opdracht **New-PAMGroup** de volgende parameters worden gebruikt:
 
-     -   De domeinnaam van CORP-forest in NetBIOS-vorm  
-     -   De naam van de groep voor het kopiëren van dat domein  
+     -   De domeinnaam van CORP-forest in NetBIOS-formulier  
+     -   De naam van de groep om van dat domein te kopiëren  
      -   De CORP-forest Domain Controller NetBIOS-naam  
-     -   De referenties van een gebruiker met beheerdersrechten domein in het CORP-forest  
+     -   De referenties van de beheerder van een domein in het CORP-forest  
 
 5. (Optioneel) Verwijder op CORPDC het account van Jen uit de groep **CONTOSO CorpAdmins** als het account nog aanwezig is in deze groep.  Dit is alleen nodig voor demonstratiedoeleinden om duidelijk te maken hoe machtigingen kunnen worden gekoppeld met accounts die zijn gemaakt in het PRIV-forest.
 

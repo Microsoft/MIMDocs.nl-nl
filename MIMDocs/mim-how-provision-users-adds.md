@@ -7,15 +7,15 @@ ms.author: barclayn
 manager: mbaldwin
 ms.date: 08/18/2017
 ms.topic: article
-ms.service: microsoft-identity-manager
+ms.prod: microsoft-identity-manager
 ms.technology: security
 ms.assetid: ''
-ms.openlocfilehash: a12a8436d70b3ae866df0f615e10a3d76f791168
-ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
+ms.openlocfilehash: 032f3cb68214dcdb7008b4b771a8b66c05ebe890
+ms.sourcegitcommit: ace4d997c599215e46566386a1a3d335e991d821
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36290098"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49333969"
 ---
 # <a name="how-do-i-provision-users-to-ad-ds"></a>Hoe kan ik gebruikers inrichten voor AD DS?
 
@@ -195,7 +195,7 @@ In de volgende tabel worden de belangrijkste scenariospecifieke instellingen ver
 | Ontwerppagina voor beheeragenten | Configuration |
 |------------|------------------------------------|
 | Beheeragent maken | 1. **Beheeragent voor:** FIM-servicebeheerAgent <br/> 2. **Naam:** Fabrikam FIMMA |
-| Verbinding maken met database     | Gebruik de volgende instellingen: <br/> &#183; **Server:** localhost <br/> &#183; **Database:** FIMService <br/> &#183;**Basisadres van de FIM-Service:** http://localhost:5725 <br/> <br/> Geef de informatie op over het account dat u voor deze beheeragent hebt gemaakt. |
+| Verbinding maken met database     | Gebruik de volgende instellingen: <br/> &#183; **Server:** localhost <br/> &#183; **Database:** FIMService <br/> &#183;**Basisadres FIM-Service:** http://localhost:5725 <br/> <br/> Geef de informatie op over het account dat u voor deze beheeragent hebt gemaakt. |
 | Objecttypen selecteren                                     | Naast de reeds geselecteerde objecttypen selecteert u **Persoon.**   |
 | Objecttypetoewijzingen configureren                          | Voeg naast de al bestaande objecttypetoewijzingen een toewijzing toe voor het **Gegevensbronobjecttype** Persoon in het **Metaverseobjecttype** Persoon. |
 | Kenmerkstroom configureren                                | Voeg naast de al bestaande kenmerkstroomtoewijzingen de volgende kenmerkstroomtoewijzingen toe: <br/><br/> ![Kenmerkstroom](media/how-provision-users-adds/image018.jpg) |
@@ -244,7 +244,7 @@ Voor het scenario in deze handleiding moet u een inrichtingsbeleid voor inrichte
 
 Het doel van dit inrichtingsbeleid is om groepen binnen het bereik te brengen van de regel voor uitgaande synchronisatie van Active Directory-gebruikers. Als u de resource binnen het bereik van de synchronisatieregel hebt gebracht, schakelt u de synchronisatie-engine in om uw resource volgens uw configuratie in te richten voor AD DS.
 
-Voor het configureren van de FIM-Service, navigeert u in Windows Internet Explorer® naar http://localhost/identitymanagement. Als u het inrichtingsbeleid wilt maken, gaat u op de pagina van de MIM-portal naar de gerelateerde pagina's van de sectie Beheer. Verifieer de configuratie door het script uit te voeren in [Using Windows PowerShell to document your provisioning policy configuration](http://go.microsoft.com/FWLink/p/?LinkId=189661) (Windows PowerShell gebruiken om de configuratie voor het inrichtingsbeleid te documenteren).
+Voor het configureren van de FIM-Service, gaat u in Windows naar http://localhost/identitymanagement. Als u het inrichtingsbeleid wilt maken, gaat u op de pagina van de MIM-portal naar de gerelateerde pagina's van de sectie Beheer. Verifieer de configuratie door het script uit te voeren in [Using Windows PowerShell to document your provisioning policy configuration](http://go.microsoft.com/FWLink/p/?LinkId=189661) (Windows PowerShell gebruiken om de configuratie voor het inrichtingsbeleid te documenteren).
 
 ### <a name="step-6-create-the-synchronization-rule"></a>Stap 6: de synchronisatieregel maken
 
@@ -253,7 +253,7 @@ In de volgende tabellen wordt de configuratie getoond van de vereiste inrichting
 | Configuratie van de synchronisatieregel                                                                         |                                                                             |                                                           
 |------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------|-----------------------------------------------------------|
 | Naam                                                                                                       | Regel voor uitgaande synchronisatie van Active Directory-gebruiker                         |                                                          
-| Description                                                                                               |                                                                             |                                                           
+| Beschrijving                                                                                               |                                                                             |                                                           
 | Prioriteit                                                                                                | 2                                                                           |                                                           
 | Richting gegevensstroom   | Uitgaand             |       
 | Afhankelijkheid       |         |                                         
@@ -304,7 +304,7 @@ Het doel van de AD-inrichtingswerkstroom is om de inrichtingssynchronisatieregel
 | Werkstroomconfiguratie               |                                                                 |
 |--------------------------------------|-----------------------------------------------------------------|
 | Naam                                 | Inrichtingswerkstroom van Active Directory-gebruiker                     |
-| Description                          |                                                                 |
+| Beschrijving                          |                                                                 |
 | Werkstroomtype                        | Actie                                                          |
 | Uitvoeren bij beleidsupdates                 | False                                                           |
 
@@ -323,7 +323,7 @@ De vereiste MPR is van het type Setovergang en wordt getriggerd wanneer een reso
 | MPR-configuratie                    |                                                             |
 |--------------------------------------|-------------------------------------------------------------|
 | Naam                                 | Beheerbeleidsregel voor inrichting van AD-gebruikers                 |
-| Description                          |                                                             |
+| Beschrijving                          |                                                             |
 | Type                                 | Setovergang                                              |
 | Verleent toestemmingen                   | False                                                       |
 | Uitgeschakeld                             | False                                                       |
@@ -460,7 +460,7 @@ Voer de volgende uitvoerprofielen uit als u deze taken wilt verrichten.
 | Fabrikam FIMMA   | 1. Exporteren <br/> 2. Delta-Import       |
 
 
-Na het importeren van de FIM-servicedatabase, Britta Simon en het ExpectedRuleEntry-object dat koppelingen Britta aan de uitgaande Synchronisatieregel van AD-gebruiker in de ruimte van de connector Fabrikam FIMMA worden voorbereid. Wanneer u de Britta eigenschappen in het connectorgebied overgebracht, naast de kenmerkwaarden weer die u hebt geconfigureerd in de FIM-Portal, bekijkt vinden u ook een geldige verwijzing naar het verwachte-Regelvermelding-object. In de volgende schermopname ziet u hier een voorbeeld van.
+Na het importeren van de FIM-servicedatabase, Britta Simon en het object ExpectedRuleEntry, dat koppelingen Julia op de regel voor uitgaande synchronisatie van AD-gebruiker gefaseerd binnengebracht in het Fabrikam FIMMA-connectorgebied. Bij het controleren van Julia in het connectorgebied controleert, naast de kenmerkwaarden die u hebt geconfigureerd in de FIM-Portal, vindt u ook een geldige verwijzing naar het object verwachte-Regelvermelding. In de volgende schermopname ziet u hier een voorbeeld van.
 
 ![Eigenschappen van het object van het connectorgebied](media/how-provision-users-adds/image025.jpg)
 

@@ -1,26 +1,26 @@
 ---
-title: MIM-Services voor specifieke accounts voor meldingen en goedkeuringen bijwerken wanneer gMSA is ingeschakeld. | Microsoft Docs
-description: Onderwerp beschrijven de basisstappen voor het configureren van gMSA.
+title: Bijwerken van de MIM-Services voor specifieke accounts voor de melding en -goedkeuringen als gMSA is ingeschakeld | Microsoft Docs
+description: Dit onderwerp wordt de basisstappen voor het configureren van gMSA te beschrijven.
 author: fimguy
 ms.author: billmath
 manager: mtillman
 ms.date: 06/27/2018
 ms.topic: article
-ms.service: microsoft-identity-manager
+ms.prod: microsoft-identity-manager
 ms.technology: security
-ms.openlocfilehash: cc33293c0a836f9e5118fc372abc5d96c1a5373d
-ms.sourcegitcommit: c6cb2556bb9f2256b959a3c95db7ca5bbfc2b437
+ms.openlocfilehash: d989f9dc3a3b1dbde8290c2b4588a9beb8142949
+ms.sourcegitcommit: ace4d997c599215e46566386a1a3d335e991d821
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37065174"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49333255"
 ---
-# <a name="update-of-mim-specific-service-account-for-notifications-to-gmsa"></a>Bijwerken van de specifieke MIM-Service-account voor meldingen gMSA
+# <a name="update-of-mim-specific-service-account-for-notifications-to-gmsa"></a>Bijwerken van de specifieke MIM-Service-account voor meldingen aan gMSA
 ===========================================
 
-Update het wachtwoord voor-accounts, dat hieronder opgeslagen is het powershell klanten hoeft dus niet om uit te voeren modus wijzigen
+Update het wachtwoord voor accounts, opgeslagen onder is de powershell, zodat klanten niet hoeven te wijzigen voor de modus uitvoeren
 
-PowerShell: Office365 Account bijwerken:
+PowerShell: Office 365-Account bijwerken:
 
 ```powershell
 #O365update.ps1

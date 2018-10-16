@@ -7,17 +7,17 @@ ms.author: barclayn
 manager: MBaldwin
 ms.date: 08/18/2017
 ms.topic: article
-ms.service: microsoft-identity-manager
+ms.prod: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: b01980c020b1027c3b40eaf49b4431631ee041be
-ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
+ms.openlocfilehash: 53ffcd4832ded5dce0878715cc716559c3883d6a
+ms.sourcegitcommit: ace4d997c599215e46566386a1a3d335e991d821
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36289469"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49332983"
 ---
 # <a name="step-8-pam-deployment-verification"></a>Stap 8 Verificatie van PAM-implementatie
 
@@ -65,7 +65,7 @@ Stap 3:
 
 In deze stap moet u uw CORPAdmin-referenties opgeven. Zodra u deze hebt opgegeven, worden de juiste gebruikers toegevoegd aan de groepen Extern bureaubladgebruikers en Extern beheer-gebruikers.
 Gebruik op de CORP-client de volgende opdracht om PowerShell als de PRIV-gebruiker te openen die u valideert. </br></br>
-**Runas/u:<PRIV domain>\PRIV.pamRequestor powershell.exe**  </br></br>
+**Uitvoeren als u:<PRIV domain>\PRIV.pamRequestor powershell.exe**  </br></br>
 Typ in het PowerShell-venster het volgende:
 
 1. cd $env: SYSTEMDRIVE\PAM

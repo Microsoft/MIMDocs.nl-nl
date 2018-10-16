@@ -7,17 +7,17 @@ ms.author: barclayn
 manager: mbaldwin
 ms.date: 08/30/2017
 ms.topic: article
-ms.service: microsoft-identity-manager
+ms.prod: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: c6e3cd02-1e32-4194-a8ed-3a0b3d022a43
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: b6598857d5704accbee461366838bb8efb9b2fc0
-ms.sourcegitcommit: c049dceaf02ab8b6008fe440daae4d07b752ca2e
+ms.openlocfilehash: 0d4ae72b897af3c6e737b412b7f8971b249ffa23
+ms.sourcegitcommit: ace4d997c599215e46566386a1a3d335e991d821
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/31/2017
-ms.locfileid: "21942728"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49334241"
 ---
 # <a name="tier-model-for-partitioning-administrative-privileges"></a>Laagmodel voor het partitioneren van beheerdersbevoegdheden
 
@@ -25,7 +25,7 @@ In dit artikel wordt een beveiligingsmodel beschreven dat is bedoeld om u te bes
 
 ## <a name="elevation-of-privilege-in-active-directory-forests"></a>Onrechtmatige uitbreiding van toegangsrechten in Active Directory-forests
 
-Gebruikers, services of toepassingsaccounts waaraan permanente beheerdersbevoegdheden voor forests van Windows Server Active Directory (AD) worden verleend, vormen een aanzienlijke risico voor de missie en zakelijke activiteiten van de organisatie. Deze accounts richten zich vaak aanvallers omdat als ze verdacht zijn, de aanvaller rechten heeft om te verbinden met andere servers of toepassingen in het domein.
+Gebruikers, services of toepassingsaccounts waaraan permanente beheerdersbevoegdheden voor forests van Windows Server Active Directory (AD) worden verleend, vormen een aanzienlijke risico voor de missie en zakelijke activiteiten van de organisatie. Deze accounts zijn vaak gericht door aanvallers omdat als ze zijn aangetast, de aanvaller beschikt over rechten om verbinding te maken met andere servers of toepassingen in het domein.
 
 Met het laagmodel worden scheiding ingesteld tussen beheerders op basis van de resources die ze beheren. Beheerders die werkstations van gebruikers beheren, worden afgescheiden van beheerders die toepassingen of bedrijfsentiteiten beheren. Meer informatie over dit model vindt u in het [referentiemateriaal over het beveiligen van bevoegde toegang](http://aka.ms/tiermodel).
 
@@ -61,4 +61,4 @@ Aanmeldingsbeperkingen kunnen worden afgedwongen met:
 ## <a name="next-steps"></a>Volgende stappen
 
 - In het volgende artikel [Planning a bastion environment](planning-bastion-environment.md) (Een bastionomgeving plannen) wordt beschreven hoe u een toegewezen beheerforest voor Microsoft Identity Manager kunt toevoegen om beheerdersaccounts in te stellen.
-- [Priviledged Access workstations](https://docs.microsoft.com/windows-server/identity/securing-privileged-access/privileged-access-workstations) bieden een toegewijde besturingssysteem voor gevoelige taken die is beveiligd tegen aanvallen via Internet en bedreigingen met zich mee.
+- [Priviledged Access workstations](https://docs.microsoft.com/windows-server/identity/securing-privileged-access/privileged-access-workstations) vormen een speciaal besturingssysteem voor gevoelige taken die is beschermd tegen aanvallen via Internet en dreigingsvectoren.

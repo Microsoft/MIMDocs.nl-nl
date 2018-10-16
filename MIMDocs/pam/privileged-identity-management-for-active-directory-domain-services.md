@@ -7,17 +7,17 @@ ms.author: barclayn
 manager: mbaldwin
 ms.date: 08/30/2017
 ms.topic: article
-ms.service: microsoft-identity-manager
+ms.prod: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: cf3796f7-bc68-4cf7-b887-c5b14e855297
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 890e0f77219f6871de3fc43e3122fbc829c6adba
-ms.sourcegitcommit: c049dceaf02ab8b6008fe440daae4d07b752ca2e
+ms.openlocfilehash: f3c5a74966498264cd60033b2f7751622d111e2e
+ms.sourcegitcommit: ace4d997c599215e46566386a1a3d335e991d821
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/31/2017
-ms.locfileid: "21942711"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49333544"
 ---
 # <a name="privileged-access-management-for-active-directory-domain-services"></a>Privileged Access Management voor Active Directory Domain Services
 
@@ -35,17 +35,17 @@ Met Privileged Access Management kunnen twee doelen worden behaald:
 
 Een echt aandachtspunt voor moderne ondernemingen is toegang tot resources in een Active Directory-omgeving. Problemen zijn vooral zorgwekkend zijn:
 
-- Beveiligingsproblemen.
-- Niet-geautoriseerde bevoegdheid escalaties.
+- Door beveiligingslekken.
+- Niet-geautoriseerde bevoegdheden escalaties.
 - [Pass-the-hash](https://technet.microsoft.com/dn785092.aspx).
 - Pass-the-ticket.
 - spear phishing.
-- Kerberos-inbreuk.
+- Kerberos-compromissen.
 - Andere aanvallen.
 
 Het is tegenwoordig te gemakkelijk voor aanvallers om de accountreferenties van Domeinbeheerders te achterhalen en het is te moeilijk om deze aanvallen achteraf te detecteren. Het doel van PAM is om de mogelijkheden voor kwaadwillende gebruikers om toegang te krijgen te verminderen terwijl het beheer en het bewustzijn van de omgeving voor u worden vergroot.
 
-Dankzij PAM is het moeilijker voor kwaadwillende personen om door te dringen tot een netwerk en bevoorrechte accounttoegang te verkrijgen. Er wordt met PAM beveiliging toegevoegd aan bevoorrechte groepen waarmee de toegang wordt bepaald op verschillende computers die lid zijn van een domein en de toepassingen op deze computers. Deze voegt ook meer controle, meer zichtbaarheid en specifieke besturingselementen toegevoegd. Hierdoor kunnen organisaties om te zien wie de bevoorrechte beheerders zijn en wat ze doen. Dankzij PAM hebben organisaties meer inzicht in hoe beheerdersaccounts worden gebruikt in de omgeving.
+Dankzij PAM is het moeilijker voor kwaadwillende personen om door te dringen tot een netwerk en bevoorrechte accounttoegang te verkrijgen. Er wordt met PAM beveiliging toegevoegd aan bevoorrechte groepen waarmee de toegang wordt bepaald op verschillende computers die lid zijn van een domein en de toepassingen op deze computers. Ook wordt meer controle, meer zichtbaarheid en specifieke besturingselementen toegevoegd. Hierdoor kunnen organisaties om te zien wie de bevoorrechte beheerders zijn en wat ze doen. Dankzij PAM hebben organisaties meer inzicht in hoe beheerdersaccounts worden gebruikt in de omgeving.
 
 ## <a name="setting-up-pam"></a>Instellen van PAM
 

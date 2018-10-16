@@ -7,16 +7,15 @@ ms.author: barclayn
 manager: mbaldwin
 ms.date: 08/01/2017
 ms.topic: reference
-ms.prod: identity-manager-2016
-ms.service: microsoft-identity-manager
+ms.prod: microsoft-identity-manager
 ms.technology: security
 ms.assetid: ''
-ms.openlocfilehash: 86b8b9bdf5c6441d0708cd874742fa48b65177fa
-ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
+ms.openlocfilehash: def1be943b4f2f919a079e3fc4aa544af10463aa
+ms.sourcegitcommit: ace4d997c599215e46566386a1a3d335e991d821
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36289360"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49333388"
 ---
 # <a name="microsoft-identity-manager-2016-password-management"></a>Wachtwoordbeheer voor Microsoft Identity Manager 2016
 
@@ -150,7 +149,7 @@ In het ideale geval wordt een door de gebruiker gewijzigd wachtwoord foutloos ge
 
 Sommige fouten zijn dermate ernstig dat de bewerking ook na zeer veel nieuwe pogingen niet slaagt. In deze gevallen wordt er een foutgebeurtenis gelogd en wordt het proces beëindigd. De volgende gebeurtenissen worden niet opnieuw geprobeerd:
 
-| Gebeurtenis | Ernst    | Description                                                                                                                                                            |
+| Gebeurtenis | Ernst    | Beschrijving                                                                                                                                                            |
 |-------|-------------|-----------|
 | 6919  | Informatie | Een instelbewerking voor wachtwoordsynchronisatie wordt niet uitgevoerd omdat het tijdstempel verouderd is.                                                                      |
 | 6921  | Fout       | De instelbewerking voor wachtwoordsynchronisatie wordt niet verwerkt omdat wachtwoordbeheer niet is ingeschakeld op de doelbeheerserver.                                |

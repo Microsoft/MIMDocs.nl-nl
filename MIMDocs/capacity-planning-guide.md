@@ -7,17 +7,17 @@ ms.author: barclayn
 manager: mbaldwin
 ms.date: 10/12/2017
 ms.topic: article
-ms.service: microsoft-identity-manager
+ms.prod: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 3ac5b990-1678-4996-996d-cbd84b8426b4
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 32cdf03ffa0d0d282a6277af766f97e93e3a3f3a
-ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
+ms.openlocfilehash: 5a54cd60f8ccee51d3bdb9cdb4770ff659afe854
+ms.sourcegitcommit: ace4d997c599215e46566386a1a3d335e991d821
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36289010"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49333799"
 ---
 # <a name="capacity-planning-guide"></a>Handleiding voor capaciteitsplanning
 
@@ -29,22 +29,22 @@ Als u nog niet bekend bent met MIM 2016 en de bijbehorende onderdelen, kunt u he
 
 ## <a name="overview"></a>Overzicht
 
-Er zijn een aantal factoren die invloed hebben op de algehele capaciteit en prestaties van uw Microsoft Identity Manager-implementatie:
+Er zijn een aantal factoren die invloed hebben op de totale capaciteit en prestaties van uw Microsoft Identity Manager-implementatie:
 
 - De manieren waarop u de MIM-onderdelen (topologie) fysiek implementeert.
 - De hardware waarop deze onderdelen worden uitgevoerd.
-- Het aantal en de complexiteit van de MIM-beleidsconfiguratieobjecten zijn belangrijke factoren bij het plannen van capaciteit.
-- De verwachte schaal van de implementatie en de verwachte belasting zijn doorgaans duidelijker factoren die invloed hebben op prestaties en capaciteit.
+- Het aantal en de complexiteit van de MIM-beleidsconfiguratieobjecten zijn belangrijke factoren om te overwegen bij het plannen van capaciteit.
+- De verwachte schaal van de implementatie en de verwachte belasting zijn doorgaans duidelijkere factoren die invloed hebben op prestaties en capaciteit.
 
-De belangrijkste factoren die van invloed zijn op de capaciteit en prestaties van een MIM 2016-implementatie worden in de volgende tabel behandeld:
+De belangrijkste factoren die invloed hebben op capaciteit en prestaties van een MIM 2016-implementatie worden behandeld in de volgende tabel:
 
 | Ontwerpfactor | Aandachtspunten |
 | ------------- | -------------- |
 | Topologie | De distributie van de MIM-services op de computers in het netwerk. |
-| Hardware | De fysieke hardware (fysiek of virtueel) voor elk MIM-onderdeel zoals CPU, geheugen, netwerkadapter en de hardeschijfconfiguratie. |
+| Hardware | De fysieke hardware (fysiek of virtueel) voor elke MIM-onderdeel zoals CPU, geheugen, netwerkadapter en de configuratie van de harde schijf. |
 | MIM-beleidsconfiguratieobjecten | Het aantal en type MIM-beleidsconfiguratieobjecten, inclusief sets, beheerbeleidsregels (MPR's) en werkstromen. |
 | Schaal | De gebruikers, groepen, berekende groepen en aangepaste objecttypen die worden beheerd door MIM 2016. Houd tevens rekening met de complexiteit van dynamische groepen en het nesten van groepen. |
-| Werklast | De frequentie van gebruik. Bewerkingen zoals de nieuwe groep of gebruiker maken, instellen van wachtwoorden of portal bezoeken per minuut of uur. Houd er rekening mee dat de belasting in de loop van een uur, dag, week of jaar kan verschillen. Afhankelijk van het onderdeel kunt u kiezen voor een ontwerp voor piekbelasting of gemiddelde belasting. |
+| Werklast | De frequentie van gebruik. Bewerkingen zoals het nieuwe groep of gebruiker maken, wachtwoorden opnieuw instellen of portal bezoeken per minuut of uur. Houd er rekening mee dat de belasting in de loop van een uur, dag, week of jaar kan verschillen. Afhankelijk van het onderdeel kunt u kiezen voor een ontwerp voor piekbelasting of gemiddelde belasting. |
 
 ## <a name="hosting-microsoft-identity-manager-components"></a>Microsoft Identity Manager-onderdelen hosten
 
@@ -68,7 +68,7 @@ Het aantal gebruikers en groepen in uw omgeving is een typisch onderwerp dat u i
 
 ## <a name="expected-load-levels"></a>Verwachte belastingsniveaus
 
-U moet ook rekening houden met het type belasting dat op de MIM-onderdelen wordt geplaatst. U moet de belasting schatten door te kijken naar huidige programma's in uw omgeving. U moet onder andere rekening houden met de volgende relevante vragen:
+U moet ook rekening houden met het type belasting dat op de MIM-onderdelen wordt geplaatst. U moet het schatten van de belasting door te kijken naar huidige programma's in uw omgeving. U moet onder andere rekening houden met de volgende relevante vragen:
 
 - Hoe vaak verwacht u een aanvraag om lid te worden van een groep of deze te verlaten?
 
@@ -76,17 +76,17 @@ U moet ook rekening houden met het type belasting dat op de MIM-onderdelen wordt
 
 - Hoeveel niet door gebruikers geïnitieerde bewerkingen verwacht u, zoals de synchronisatie van wijzigingen in externe systemen? Zorg ervoor dat u rekening houdt met een belasting die wordt gegenereerd door het synchroniseren van identiteitsgegevens met externe systemen.
 
-- Wat voor soort scenario's wilt u implementeren? Verschillende scenario's dragen bij aan verschillende belastingpatronen. Valideren bijvoorbeeld clientcomputers waarop de MIM 2016-client geïnstalleerd periodiek of registratie vereist bij het aanmelden is.
+- Wat voor soort scenario's wilt u implementeren? Verschillende scenario's dragen bij aan verschillende belastingpatronen. Bijvoorbeeld, valideren client-computers waarop de MIM 2016-client geïnstalleerd periodiek of registratie vereist bij het aanmelden is.
 
-- Verwacht u grote verschillen in de belastingsniveaus, variërend van een normale belasting tot piekbelasting? Bijvoorbeeld, doorgaans worden er veel wachtwoorden opnieuw ingesteld na een vakantie. Zorg ervoor dat u uw systeemonderhoud en synchronisatieplanningen buiten de verwachte gebruikspieken plant. Als u nadenkt over capaciteitsplanning, moet u rekening houden met perioden van piekbelasting.
+- Verwacht u grote verschillen in de belastingsniveaus, variërend van een normale belasting tot piekbelasting? Bijvoorbeeld, doorgaans er veel wachtwoorden na de vakantie worden. Zorg ervoor dat u uw systeemonderhoud en synchronisatieplanningen buiten de verwachte gebruikspieken plant. Als u nadenkt over capaciteitsplanning, moet u rekening houden met perioden van piekbelasting.
 
 ## <a name="policy-configuration-objects"></a>Beleidsconfiguratieobjecten
 
-MIM-beleidsconfiguratieobjecten omvatten de MPR's, sets, werkstromen en synchronisatieregels voor een implementatie. MIM-implementaties zijn uniek voor elke klant omdat de beleidsconfiguratie verandert, afhankelijk van de behoeften van elke implementatie. Prestatie-overwegingen bij omvatten de volgende MIM-beleidsconfiguratieobjecten:
+MIM-beleidsconfiguratieobjecten omvatten de MPR's, sets, werkstromen en synchronisatieregels voor een implementatie. MIM-implementaties zijn uniek voor elke klant omdat de beleidsconfiguratie verandert, afhankelijk van de behoeften van elke implementatie. Belangrijke Prestatieoverwegingen zijn onder andere de volgende MIM-beleidsconfiguratieobjecten:
 
-- **Sets** Elke bewerking in het systeem moet worden geëvalueerd op basis van bestaande setlidmaatschappen en -updates die wijzigingen in het setlidmaatschap veroorzaken. Bijvoorbeeld, mag een wijziging in het nummer kantoor van een gebruiker, geen grote gevolgen hebben. Andere wijzigingen kunnen echter een trapsgewijze invloed, zoals de wijziging van een manager die van invloed kan zijn op meerdere objecten op meerdere niveaus.
+- **Sets** Elke bewerking in het systeem moet worden geëvalueerd op basis van bestaande setlidmaatschappen en -updates die wijzigingen in het setlidmaatschap veroorzaken. Een wijziging in het gebouw aantal office van een persoon, kan bijvoorbeeld geen grote gevolgen. Andere wijzigingen kunnen echter een trapsgewijze invloed, zoals de wijziging van een manager die van invloed kan zijn op meerdere objecten op meerdere niveaus.
 
-- **Beheerbeleidsregels** Met de beheerbeleidsregels (MPR’s) worden de toegangsbeheersregel beheerd en werkstromen geactiveerd. Het maken van beheerbeleidsregels maakt mogelijk moet het aantal sets zodat verschillende objecttransitietoestanden te kunnen vastleggen. Deze extra sets activeren mogelijk extra werkstromen, waarbij elke werkstroom wordt toegewezen aan unieke aanvragen in het systeem. Dit wordt vervolgens een extra onderwerp dat u in aanmerking moet nemen bij het plannen van capaciteit.
+- **Beheerbeleidsregels** Met de beheerbeleidsregels (MPR’s) worden de toegangsbeheersregel beheerd en werkstromen geactiveerd. Het maken van beheerbeleidsregels maakt mogelijk moet het aantal opgegeven zodat u kunt verschillende objecttransitietoestanden vastleggen. Deze extra sets activeren mogelijk extra werkstromen, waarbij elke werkstroom wordt toegewezen aan unieke aanvragen in het systeem. Dit wordt vervolgens een extra onderwerp dat u in aanmerking moet nemen bij het plannen van capaciteit.
 
 MIM-beleidsconfiguratie omvat tevens het nemen van beslissingen over het inrichten in uw omgeving. Zorg ervoor dat u over de volgende zaken nadenkt:
 
@@ -97,4 +97,4 @@ MIM-beleidsconfiguratie omvat tevens het nemen van beslissingen over het inricht
 ## <a name="next-steps"></a>Volgende stappen
 
 - [Aandachtspunten voor topologie voor een MIM-implementatie](topology-considerations.md)
-- De downloadbare [Planningshandleiding van Forefront Identity Manager (FIM) 2010 capaciteit](http://go.microsoft.com/fwlink/?LinkId=200180) biedt meer informatie over een testbuild en Prestatietestresultaten.
+- De downloadbare [Forefront Identity Manager (FIM) 2010 Capacity Planning Guide](http://go.microsoft.com/fwlink/?LinkId=200180) biedt meer informatie over een testbuild en Prestatietestresultaten.

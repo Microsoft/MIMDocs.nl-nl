@@ -7,21 +7,21 @@ ms.author: barclayn
 manager: mbaldwin
 ms.date: 10/16/2017
 ms.topic: article
-ms.service: microsoft-identity-manager
+ms.prod: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 66060045-d0be-4874-914b-5926fd924ede
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: bf655d451e86261ffd3043117a56f4daccb4b460
-ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
+ms.openlocfilehash: 304c030bc08be222a147373acbda8ba45e8f8cb5
+ms.sourcegitcommit: ace4d997c599215e46566386a1a3d335e991d821
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36289870"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49333936"
 ---
-# <a name="mim-certificate-manager-windows-store-application-deployment"></a>MIM Certificate Manager Windows store-toepassingsimplementatie
+# <a name="mim-certificate-manager-windows-store-application-deployment"></a>MIM Certificate Manager Windows opslaan toepassingsimplementatie
 
-Nadat u hebt de MIM 2016 en Certificate Manager actief en werkend, kunt u de MIM Certificate Manager Windows store-toepassing kunt implementeren. De windows store-toepassing kan uw gebruikers hun fysieke smartcards, virtuele smartcards en certificaten voor software-beheren. U kunt via de volgende stappen de MIM CM-app implementeren:
+Nadat u hebt de MIM 2016 en Certificate Manager actief en werkend, kunt u de MIM Certificate Manager Windows store-toepassing kunt implementeren. De windows store-toepassing kan uw gebruikers voor het beheren van hun fysieke smartcards, virtuele smartcards en certificaten voor software. U kunt via de volgende stappen de MIM CM-app implementeren:
 
 1. Maak een certificaatsjabloon.
 
@@ -35,11 +35,11 @@ Nadat u hebt de MIM 2016 en Certificate Manager actief en werkend, kunt u de MIM
 
 U maakt een certificaatsjabloon voor de CM-app op dezelfde manier als u normaal gesproken doet, alleen moet u ervoor zorgen dat de certificaatsjabloon versie 3 of hoger heeft.
 
-1. Aanmelden bij de server waarop AD CS (de certificaatserver) wordt uitgevoerd.
+1. Meld u aan bij de server met AD CS (de certificaatserver).
 
 2. Open MMC.
 
-3. Klik op **bestand &gt; toevoegen/verwijderen module**.
+3. Klik op **bestand &gt; toevoegen/verwijderen-module**.
 
 4. Klik in de lijst met beschikbare modules op **Certificaatsjablonen** en vervolgens op **Toevoegen**.
 
@@ -50,7 +50,7 @@ U maakt een certificaatsjabloon voor de CM-app op dezelfde manier als u normaal 
 7. Selecteer op het tabblad Compatibiliteit onder certificeringsinstantie Windows Server 2008. Selecteer onder ontvanger van certificaat Windows 8.1 / Windows Server 2012 R2. De versie van de sjabloon is de eerste keer dat u maken en opslaan van de certificaatsjabloon ingesteld. Als u op deze manier hebt gemaakt voor de certificaatsjabloon is er geen manier om deze te wijzigen naar de juiste versie.
 
    > [!NOTE]
-   >  Deze stap is cruciaal omdat hiermee u ervoor zorgt dat u een sjabloon van versie 3 (of hoger)-certificaat hebt. Alleen sjablonen van versie 3 samen met de app voor de certificaatbeheerder.
+   >  Deze stap is cruciaal omdat hiermee u ervoor zorgt dat u een sjabloon van versie 3 (of hoger)-certificaat hebt. Alleen sjablonen van versie 3 werken met de certificate manager-app.
 
 8. Typ op het tabblad **Algemeen** in het veld **Weergavenaam** de naam die moet worden weergeven in de gebruikersinterface van de app, zoals **Aanmelding met virtuele smartcard**.
 
@@ -79,7 +79,7 @@ Wanneer u een profielsjabloon maakt, moet u deze instellen op Virtuele smartcard
 
 1.  Meld u bij de CM-portal aan als gebruiker met beheerdersbevoegdheden.
 
-2.  Ga naar beheer &gt; profielsjablonen beheren. Zorg ervoor dat het selectievakje naast **MIM CM Smart Card voorbeeldlogboek voor Profielsjabloon** en klik vervolgens op kopiëren een geselecteerde Profielsjabloon.
+2.  Ga naar beheer &gt; profielsjablonen beheren. Zorg ervoor dat het selectievakje naast is ingeschakeld **MIM CM Smart Card voorbeeldlogboek voor Profielsjabloon** en klik vervolgens op kopiëren een geselecteerde Profielsjabloon.
 
 3.  Typ de naam van de profielsjabloon en klik op **OK**.
 
@@ -97,11 +97,11 @@ Wanneer u een profielsjabloon maakt, moet u deze instellen op Virtuele smartcard
 
 10. Klik in het linkerdeelvenster op **Beleid vernieuwen &gt; Algemene instellingen wijzigen**. Selecteer **Kaart opnieuw gebruiken bij het vernieuwen** en klik op **OK**.
 
-11. U moet gegevensverzamelingsitems voor elk beleid uitschakelen door op het beleid in het linkerdeelvenster te klikken. Vervolgens moet u het selectievakje naast **voorbeeldgegevensitem** klikt u op **gegevensverzamelingsitems verwijderen** en klik vervolgens op **OK**.
+11. U moet gegevensverzamelingsitems voor elk beleid uitschakelen door te klikken op het beleid in het linkerdeelvenster. Vervolgens moet u het selectievakje naast **voorbeeldgegevensitem** klikt u op **gegevensverzamelingsitems verwijderen** en klik vervolgens op **OK**.
 
 ## <a name="prepare-the-cm-app-for-deployment"></a>De CM-app voor de implementatie voorbereiden
 
-1. Voer in het opdrachtpromptvenster de volgende opdracht voor het uitpakken van de app. De opdracht wordt de inhoud in een nieuwe submap met de naam appx en een kopie maken zodat u het oorspronkelijke bestand niet wijzigt.
+1. Voer de volgende opdracht uit om het uitpakken van de app in het opdrachtpromptvenster. De opdracht wordt de inhoud uit te pakken in een nieuwe submap met de naam appx en een kopie maken zodat u het oorspronkelijke bestand niet wijzigen.
 
     ```cmd
     makeappx unpack /l /p <app package name>.appx /d ./appx
@@ -125,7 +125,7 @@ Wanneer u een profielsjabloon maakt, moet u deze instellen op Virtuele smartcard
    |      NonAdmin       |           U kunt dit instellen op Waar of Onwaar. Deze waarde is standaard ingesteld op Onwaar. Wijzig deze instelling alleen als u gebruikers die geen beheerder zijn op hun computer in staat wilt stellen om certificaten in te schrijven en te vernieuwen.            |
 
    > [!IMPORTANT]
-   > Er moet een waarde worden opgegeven voor de ADFS-URL. Als geen waarde opgeeft moderne App wordt fout af van het eerste gebruik.
+   > Voor de AD FS-URL moet een waarde worden opgegeven. Als er geen waarde is opgegeven de moderne App wordt fout afmelden bij eerste gebruik.
 4. Sla het bestand op en sluit de editor af.
 
 5. Met de ondertekening van het pakket wordt een handtekeningbestand gemaakt. U moet daarom het oorspronkelijke handtekeningbestand met de naam AppxSignature.p7x verwijderen.
@@ -257,7 +257,7 @@ Wanneer u een profielsjabloon maakt, moet u deze instellen op Virtuele smartcard
 
     - De serverFQDN is alleen de volledige computernaam van de MIMCM-server.
 
-    - Voor meer informatie over de **ConfigureMIimCMClientAndRelyingParty.ps1** -script uitvoeren: </br> 
+    - Voor meer informatie over de **ConfigureMIimCMClientAndRelyingParty.ps1** script uitvoeren: </br> 
       ```Powershell
       get-help  -detailed ConfigureMimCMClientAndRelyingParty.ps1
       ```
@@ -268,5 +268,5 @@ Wanneer u de CM-app instelt, moet u in het Downloadcentrum het bestand MIMDMMode
 
 ## <a name="next-steps"></a>Volgende stappen
 
-- [Profielsjablonen configureren](https://technet.microsoft.com/library/cc708656)
+- [Configuratieprofielsjablonen](https://technet.microsoft.com/library/cc708656)
 - [Smartcardtoepassingen beheren](https://technet.microsoft.com/library/cc708681)
