@@ -2,20 +2,19 @@
 title: Installatie van BHOLD-model generator | Microsoft Docs
 description: BHOLD-model kunt u gegevens van de structuur uit verschillende bronnen
 keywords: ''
-author: barclayn
-ms.author: barclayn
-manager: mbaldwin
+author: billmath
+ms.author: billmath
+manager: mtillman
 ms.date: 09/07/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.technology: security
 ms.assetid: ''
-ms.openlocfilehash: ddb49219b5f68ff060f9b15a9ab64cb85a035d98
-ms.sourcegitcommit: ace4d997c599215e46566386a1a3d335e991d821
+ms.openlocfilehash: 3d2510d6ea604dd88e56436812ed8bc975bc5c2b
+ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49333476"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49358519"
 ---
 # <a name="bhold-model-generator-installation"></a>Generator voor installatie van BHOLD-Model
 

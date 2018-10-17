@@ -4,18 +4,17 @@ author: fimguy
 description: Microsoft Identity Manager-connector voor Microsoft Graph kunnen externe gebruiker levenscyclusbeheer voor AD-account. In dit scenario, een organisatie is uitgenodigd voor gasten hun Azure AD-directory en wil deze gasten-toegang geven tot on-premises Windows-Integrated verificatie- of Kerberos-toepassingen
 keywords: ''
 ms.author: billmath
-manager: bhu
+manager: mtillman
 ms.date: 10/02/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.technology: security
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
-ms.openlocfilehash: 121b4f3759ef57a9b80d0c1f68c605542e72ae24
-ms.sourcegitcommit: ace4d997c599215e46566386a1a3d335e991d821
+ms.openlocfilehash: 2e376bcc88518b911f93ce9cd4ab920eb428815b
+ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49333595"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49358649"
 ---
 <a name="microsoft-identity-manager-connector-for-microsoft-graph"></a>Microsoft Identity Manager-connector voor Microsoft Graph
 =======================================================================================

@@ -3,21 +3,20 @@ title: De meldingsservice voor wachtwoordwijzigingen implementeren | Microsoft D
 description: Lees welke stappen u moet uitvoeren voor het installeren en configureren van de MIM-meldingsservice voor wachtwoordwijzigingen op uw domeincontroller.
 keywords: ''
 author: billmath
-ms.author: barclayn
-manager: mbaldwin
+ms.author: billmath
+manager: mtillman
 ms.date: 10/12/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.technology: security
 ms.assetid: 97edae12-6f86-4f9f-8620-a95a096e482a
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 5f9380b3bd9d77cc9e46b0af9b63141c940cc808
-ms.sourcegitcommit: ace4d997c599215e46566386a1a3d335e991d821
+ms.openlocfilehash: 4acc2f5cf9ec9c5f752d7d794570e7bc24cd36e8
+ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49334207"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49357873"
 ---
 # <a name="deploy-the-mim-password-change-notification-service-on-a-domain-controller"></a>De MIM-meldingsservice voor wachtwoordwijzigingen op een domeincontroller implementeren
 

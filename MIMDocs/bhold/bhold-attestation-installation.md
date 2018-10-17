@@ -2,20 +2,19 @@
 title: Installatie van BHOLD-attestation | Microsoft Docs
 description: BHOLD-attestation-module kunt u revisoren aanwijzen en uitvoeren van beoordelingen
 keywords: ''
-author: barclayn
-ms.author: barclayn
-manager: mbaldwin
+author: billmath
+ms.author: billmath
+manager: mtillman
 ms.date: 09/07/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.technology: security
 ms.assetid: ''
-ms.openlocfilehash: 45b650c726ddf423bb6ebc5ec34d4a57e41bb82e
-ms.sourcegitcommit: ace4d997c599215e46566386a1a3d335e991d821
+ms.openlocfilehash: e4c3a6248585d55fddbbca3153f33734d7c5c429
+ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49334122"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49358105"
 ---
 # <a name="bhold-attestation-installation"></a>Installatie van BHOLD-attestation
 

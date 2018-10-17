@@ -2,19 +2,18 @@
 title: Handleiding voor Microsoft BHOLD-Suite concepten | Microsoft Docs
 description: Ga aan de slag met de MIM 2016-onderdelen en installeer en configureer de synchronisatieservice.
 keywords: ''
-author: barclayn
-ms.author: barclayn
-manager: mbaldwin
+author: billmath
+ms.author: billmath
+manager: mtillman
 ms.date: 09/14/2017
-ms.technology: security
 ms.assetid: ''
 ms.prod: microsoft-identity-manager
-ms.openlocfilehash: bd468c30b64c512cea1f5b9c9e6d2dafab168a6d
-ms.sourcegitcommit: f8cbdd6439d395971a4daa563a96240bbbbf4369
+ms.openlocfilehash: 32bd77140cf70047eaa02d363a1348e73783f87a
+ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49336576"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49358836"
 ---
 # <a name="microsoft-bhold-suite-concepts-guide"></a>Handleiding voor Microsoft BHOLD-Suite concepten
 

@@ -3,21 +3,20 @@ title: De Microsoft Identity Manager-service en -portal installeren | Microsoft 
 description: Lees welke stappen u moet uitvoeren voor het configureren en installeren van de MIM-service en -portal voor Microsoft Identity Manager 2016
 keywords: ''
 author: billmath
-ms.author: barclayn
-manager: mbaldiwn
+ms.author: billmath
+manager: mtillman
 ms.date: 04/30/2018
 ms.topic: get-started-article
 ms.prod: microsoft-identity-manager
-ms.technology: security
 ms.assetid: b0b39631-66df-4c5f-80c9-a1774346f816
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: f975bf659f285418380d52db5724bcbb46bbcf46
-ms.sourcegitcommit: ace4d997c599215e46566386a1a3d335e991d821
+ms.openlocfilehash: 535c80fa2ff1b6250ae9a3f340cb514e58f390a9
+ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49333721"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49358615"
 ---
 # <a name="install-mim-2016-mim-service-and-portal"></a>MIM 2016 installeren: de MIM-service en -portal
 
