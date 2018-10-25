@@ -245,7 +245,7 @@ Stroomregels:
 |                       |                           | [mail⇒mail](javascript:void(0);)                                      |
 |                       |                           | [sn⇒sn](javascript:void(0);)                                          |
 |                       |                           | [userPrincipalName⇒userPrincipalName](javascript:void(0);)            |
-| **Y**                 |                           | ["CN ="+ uid +", OE = B2BGuest, DC = contoso, DC = com" ⇒dn] (javascript:void(0);) |
+| **Y**                 |                           | ["CN ="+ uid +", OE = B2BGuest, DC = contoso, DC = com" ⇒dn](javascript:void(0);) |
 | **Y**                 |                           | [RandomNum (0,999) + userPrincipalName⇒unicodePwd](javascript:void(0);)  |
 | **Y**                 |                           | [262656⇒userAccountControl](javascript:void(0);)                      |
 
