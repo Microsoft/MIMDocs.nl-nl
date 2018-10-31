@@ -2,22 +2,21 @@
 title: Stap 2 Het CORP-domein configureren
 description: In dit artikel wordt de tweede vereiste stap voor het configureren van het CORP-domein beschreven, waarmee een script wordt uitgevoerd nadat het bestand sids.txt is gekopieerd naar CORPDC
 keywords: ''
-author: barclayn
-ms.author: barclayn
-manager: MBaldwin
+author: billmath
+ms.author: billmath
+manager: mtillman
 ms.date: 08/18/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: b703dcfb4a4d59704fd4c33f4b891df54f9cdf77
-ms.sourcegitcommit: ace4d997c599215e46566386a1a3d335e991d821
+ms.openlocfilehash: 030ebf1f5d655cff712aac8acc393e7d3cc13696
+ms.sourcegitcommit: 44a2293ff17c50381a59053303311d7db8b25249
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49332728"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50379478"
 ---
 # <a name="step-2-configuring-the-corp-domain"></a>Stap 2 Het CORP-domein configureren
 

@@ -2,23 +2,22 @@
 title: PAM installeren - Stap 4 - MIM installeren | Microsoft Docs
 description: De MIM-service en -portal op uw Privileged Access Management-server en -werkstations installeren en configureren.
 keywords: ''
-author: barclayn
-ms.author: barclayn
-manager: barclayn
+author: billmath
+ms.author: billmath
+manager: mtillman
 ms.date: 09/13/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.technology: active-directory-domain-services
 ms.assetid: ef605496-7ed7-40f4-9475-5e4db4857b4f
 ROBOTS: noindex,nofollow
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 3f5ee3e2a6bdbd1ab203ffcf406b4ca3b991b6f5
-ms.sourcegitcommit: ace4d997c599215e46566386a1a3d335e991d821
+ms.openlocfilehash: 2b5340ef3f98ba94904e595c3526d09bdac3f95f
+ms.sourcegitcommit: 44a2293ff17c50381a59053303311d7db8b25249
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49334003"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50379919"
 ---
 # <a name="step-4--install-mim-components-on-pam-server-and-workstation"></a>Stap 4: MIM-onderdelen installeren op een PAM-server en -werkstation
 

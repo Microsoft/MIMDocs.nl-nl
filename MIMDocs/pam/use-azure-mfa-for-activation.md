@@ -9,14 +9,13 @@ manager: mtillman
 ms.date: 07/06/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.technology: active-directory-domain-services
 ms.assetid: 5134a112-f73f-41d0-a5a5-a89f285e1f73
-ms.openlocfilehash: 10c8d4246122daa507d79a3f2e26e945c6ab5709
-ms.sourcegitcommit: ace4d997c599215e46566386a1a3d335e991d821
+ms.openlocfilehash: 9cb1e37f966db5c663694aaccd71f2b4c799dd4b
+ms.sourcegitcommit: 44a2293ff17c50381a59053303311d7db8b25249
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49333715"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50379936"
 ---
 # <a name="using-azure-mfa-for-activation"></a>Azure MFA gebruiken voor activering
 > [!IMPORTANT]
@@ -43,7 +42,7 @@ Als u wilt gebruiken Azure MFA met MIM, hebt u het volgende nodig:
 
 ## <a name="creating-an-azure-mfa-provider"></a>Een Azure MFA-provider maken
 
-In deze sectie maakt instellen u de Azure MFA-provider in Microsoft Azure Active Directory.  Als u Azure MFA al gebruikt, als zelfstandige functie of geconfigureerd met Azure Active Directory Premium, gaat u door naar de volgende sectie.
+In deze sectie maakt instellen u de Azure MFA-provider in Microsoft Azure Active Directory.  Als u Azure MFA al gebruikt, als zelfstandige functie of geconfigureerd met Azure Active Directory Premium, gaat u door naar de volgende sectie.
 
 1.  Open een webbrowser en maak verbinding met de [klassieke Azure Portal](https://manage.windowsazure.com) als een Azure-abonnementsbeheerder.
 
@@ -71,7 +70,7 @@ Vervolgens gaat u een bestand genereren met de verificatiegegevens die nodig zij
 
 ![Multi-Factor Authentication SDK downloaden - schermafbeelding](media/PAM-Azure-MFA-Activation-Image-1.png)
 
-7.  Kopieer het betreffende ZIP-bestand naar elk systeem waarop de MIM-service is geïnstalleerd. 
+7.  Kopieer het betreffende ZIP-bestand naar elk systeem waarop de MIM-service is geïnstalleerd. 
 
 >[!NOTE]
 > Het ZIP-bestand bevat sleutelmateriaal dat wordt gebruikt bij de verificatie voor de Azure MFA-service.

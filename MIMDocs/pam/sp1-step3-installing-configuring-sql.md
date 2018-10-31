@@ -2,22 +2,21 @@
 title: Stap 3 SQL configureren
 description: Dit artikel is stap 3 van de serie artikelen over het configureren van Privileged Identity Manager met behulp van scripts. In het artikel worden de configuratiestappen voor de SQL-server besproken.
 keywords: ''
-author: barclayn
-ms.author: barclayn
-manager: MBaldwin
+author: billmath
+ms.author: billmath
+manager: mtillman
 ms.date: 08/18/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: b4fdc645f867fd3c3a20d9737690cf29eadaf50e
-ms.sourcegitcommit: ace4d997c599215e46566386a1a3d335e991d821
+ms.openlocfilehash: 69f86c5366f7b662f3a11fa4ac8d44159421f909
+ms.sourcegitcommit: 44a2293ff17c50381a59053303311d7db8b25249
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49333000"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50379394"
 ---
 # <a name="step-3-configuring-sql"></a>Stap 3 SQL configureren
 

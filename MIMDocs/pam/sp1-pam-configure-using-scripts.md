@@ -2,22 +2,21 @@
 title: PAM configureren met behulp van scripts
 description: Dit artikel is onderdeel van de serie artikelen over het configureren van PAM met behulp van scripts. In het artikel wordt de aanpassing behandeld van het XML-bestand dat wordt gebruikt voor de PAM-implementatiescripts.
 keywords: ''
-author: barclayn
-ms.author: barclayn
-manager: MBaldwin
+author: billmath
+ms.author: billmath
+manager: mtillman
 ms.date: 07/20/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: 3d10d8642694873512e9cc85cc90a75ce45c3361
-ms.sourcegitcommit: ace4d997c599215e46566386a1a3d335e991d821
+ms.openlocfilehash: 28e8f5c28cd38ad820c6a1f12385dffbd0641ddd
+ms.sourcegitcommit: 44a2293ff17c50381a59053303311d7db8b25249
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49332954"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50379530"
 ---
 # <a name="configure-pam-using-scripts"></a>PAM configureren met behulp van scripts
 

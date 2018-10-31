@@ -2,22 +2,21 @@
 title: Wat is PAM voor ADDS? | Microsoft Docs
 description: Met Privileged Access Management (PAM) kunnen organisaties bevoorrechte toegang in een bestaande Active Directory-omgeving beperken.
 keywords: ''
-author: barclayn
-ms.author: barclayn
-manager: mbaldwin
+author: billmath
+ms.author: billmath
+manager: mtillman
 ms.date: 03/13/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.technology: active-directory-domain-services
 ms.assetid: cf3796f7-bc68-4cf7-b887-c5b14e855297
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: ce5d168c429928ec46b090dec038f1b5bbe61666
-ms.sourcegitcommit: ace4d997c599215e46566386a1a3d335e991d821
+ms.openlocfilehash: 40ed05c1f77cace74b86dc3a5675855993d4bc56
+ms.sourcegitcommit: 44a2293ff17c50381a59053303311d7db8b25249
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49334411"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50379885"
 ---
 # <a name="privileged-access-management-for-active-directory-domain-services"></a>Privileged Access Management voor Active Directory Domain Services
 

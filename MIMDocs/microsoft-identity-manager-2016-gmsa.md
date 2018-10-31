@@ -7,12 +7,12 @@ manager: mtillman
 ms.date: 06/27/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.openlocfilehash: d3c0b6677c42d4f14d4f6255a2a661d3ef23661d
-ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
+ms.openlocfilehash: 63f2509d35355a8fe3a59b173756257298079a92
+ms.sourcegitcommit: 6374aa4f7d58b7218626d36d0fc2dc4b38cb8332
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49358292"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50237227"
 ---
 # <a name="conversion-of-mim-specific-services-to-gmsa"></a>Conversie van specifieke MIM-Services naar gMSA
 
@@ -82,9 +82,9 @@ Eerste stap op uw windows-domeincontroller
 
     -   Zoek op de Server waarop de synchronisatieservice is geïnstalleerd op het hulpprogramma voor synchronisatie-Service-Sleutelbeheer
 
-    -   Standaard de ** Export sleutel instellen ** is al geselecteerd
+    -   Standaard de **exporteren sleutelset** is al geselecteerd
 
-    -   Klik op **volgende**
+    -   Klik op **volgende**
 
     -   U wordt nu gevraagd om in te voeren van de bestaande synchronisatie-accountgegevens
 
@@ -96,13 +96,13 @@ Eerste stap op uw windows-domeincontroller
 
         -   Domein - domein dat de synchronisatie-serviceaccount gesplitst van is
 
-    -   Klik op **volgende**
+    -   Klik op **volgende**
 
     -   Als u iets niet juist ingevoerd, ontvangt u de volgende fout
 
     -   Nu u de accountgegevens correct hebt ingevoerd, u krijgt een optie voor het wijzigen van de bestemming (bestandslocatie exporteren) van de versleutelingssleutel voor de back-up
 
-        -   De locatie van de export is standaard **C:\\Windows\\system32**\\miiskeys 1.bin.
+        -   De locatie van de export is standaard **C:\\Windows\\system32**\\miiskeys 1.bin.
 
 4. Installeer Microsoft Identity Manager SP1-synchronisatieservice build 4.4.1302.0. u kunt u vinden op het Volume License-downloaden Center of MSDN-Site downloaden. Nadat u de installatie voltooid Zorg ervoor dat, u sleutelset miiskeys.bin opslaan.
 
@@ -152,7 +152,7 @@ Eerste stap op uw windows-domeincontroller
 
 ![](media/0201f0281325c80eb70f91cbf0ac4d5b.jpg)
 
-3.  **HOUD ER REKENING MEE**.  Bekend probleem waarbij de services die gebruikmaken van beheerd account vastlopen na het opnieuw opstarten-server vanwege Microsoft Key Distribution-Service is niet gestart nadat de Windows opnieuw is opgestart. Service kan niet worden gestart en kan Windows niet te worden gestart. Het probleem is ten minste reproduceerbare op Windows Server 2012 R2. Tijdelijke oplossing voor dit probleem wordt opdracht uitgevoerd 
+3.  **HOUD ER REKENING MEE**.  Bekend probleem waarbij de services die gebruikmaken van beheerd account vastlopen na het opnieuw opstarten-server vanwege Microsoft Key Distribution-Service is niet gestart nadat de Windows opnieuw is opgestart. Service kan niet worden gestart en kan Windows niet te worden gestart. Het probleem is ten minste reproduceerbare op Windows Server 2012 R2. Tijdelijke oplossing voor dit probleem wordt opdracht uitgevoerd 
 
 -   **SC triggerinfo kdssvc start/networkon**
 
