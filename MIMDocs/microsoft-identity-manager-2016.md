@@ -1,49 +1,49 @@
 ---
-title: Microsoft Identity Manager 2016 | Microsoft Docs
+title: Microsoft Identity Manager | Microsoft Docs
 description: MIM omvat de mogelijkheden voor toegangsbeheer van FIM 2010 en zorgt ervoor dat u gebruikers, referenties, beleidsregels en toegang in uw organisatie kunt beheren.
 keywords: ''
 author: billmath
 ms.author: billmath
 manager: mtillman
-ms.date: 05/02/2018
+ms.date: 11/05/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.assetid: ccdd8a9f-02da-440a-81a8-354800dcd2a8
-ms.reviewer: mwahl
-ms.suite: ems
-ms.openlocfilehash: abbd661fa1bef13ad92b916f8485934390905bf4
-ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
+ms.technology: security
+ms.openlocfilehash: b25819d864f773578ba8aa52217c7b27536b7327
+ms.sourcegitcommit: f73a83f424d7e32b0119e870bc0020c061e966f7
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49358309"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51265262"
 ---
-# <a name="microsoft-identity-manager-2016"></a>Microsoft Identity Manager 2016
+# <a name="microsoft-identity-manager-2016-news-and-updates"></a>Microsoft Identity Manager 2016 nieuws en updates
 
-Microsoft Identity Manager (MIM) 2016 bouwt voort op de mogelijkheden voor identiteits- en toegangsbeheer van [FIM 2010 R2](https://technet.microsoft.com/library/jj133885.aspx). Net als bij de voorganger kunt u met MIM de gebruikers, de referenties, het beleid en de toegang in uw organisatie beheren.  Daarnaast voegt MIM 2016 hieraan een hybride-ervaring, beheermogelijkheden voor bevoegde toegang en ondersteuning voor nieuwe platformen toe.
+Microsoft Identity Manager (MIM) 2016 bouwt voort op de beheermogelijkheden identiteits- en toegangsbeheer van Forefront Identity Manager. Net als bij de voorganger kunt u met MIM de gebruikers, de referenties, het beleid en de toegang in uw organisatie beheren.  Daarnaast voegt MIM 2016 hieraan een hybride-ervaring, beheermogelijkheden voor bevoegde toegang en ondersteuning voor nieuwe platformen toe.
 
-Naast de bestaande functionaliteit voor identiteitsbeheer opgenomen in [FIM](https://technet.microsoft.com/library/jj133868). MIM 2016 biedt nieuwe functies en verbeteringen, zoals:
+De huidige release onder algemene ondersteuning is MIM 2016 Service Pack 1 (SP1).  Deze release in augustus 2017 updates opgenomen in de MIM-Portal, PAM-scenario en ondersteuning toegevoegd voor nieuwe platformen.  Klanten met FIM of MIM versies vóór MIM 2016 SP1 moeten opwaarderen naar MIM 2016 SP1 of een latere hotfix.  Meer informatie over [naar MIM 2016 SP1](microsoft-identity-manager-2016-sp1-release-notes.md).
 
-- Beschermde identiteitsbeheer
-- Nieuwe functionaliteit in het beheren van certificaten
-  - [Naslaginformatie voor REST API van Certificate Management](./reference/certificate-management-rest-api-reference.md)
-  - Ondersteuning voor topologieën met meerdere forests.
-  - [Een Windows-app voor de virtuele smartcard](working-with-mim-certificate-manager.md)
-  - Bijgewerkte gebeurtenissen en mogelijkheden voor probleemoplossing. 
-- [Selfservicescenario's](working-with-self-service-password-reset.md) omvatten nu ontgrendelen van accounts en Azure MFA (Multi-factor authentication)-gate voor wachtwoord opnieuw instellen.
+## <a name="updates-since-mim-2016-sp1"></a>Updates sinds MIM 2016 SP1
 
-## <a name="hybrid-experience"></a>Hybride-ervaring
+Microsoft biedt regelmatig updates met MIM, met inbegrip van uitbreidingen voor aanvragen van klanten en oplossingen voor problemen, op basis van een doorlopende releasecyclus.
 
-Microsoft Identity Manager 2016 werkt goed samen met [Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-whatis) geven u controle over de volledige omgeving. Met de hybride rapportage in Azure AD worden de cloud- en on-premises gegevens op één plek weergegeven. Ook de [selfservice voor wachtwoordherstel portal](working-with-self-service-password-reset.md) biedt ondersteuning voor Azure multi-factor authentication (MFA).
+### <a name="major-new-and-updated-scenarios"></a>Belangrijke scenario's voor nieuwe en bijgewerkte
 
-## <a name="privileged-identity-management"></a>Beschermde identiteitsbeheer
+- [Azure AD B2B-samenwerking met MIM en Azure Application proxy is beschikbaar als preview](microsoft-identity-manager-2016-graph-b2b-scenario.md), laatst bijgewerkte April 2018
+- [Hybride rapportage van MIM is](https://cloudblogs.microsoft.com/enterprisemobility/2018/02/23/hybrid-mim-reporting-now-available-in-azure-active-directory/), laatst bijgewerkte februari 2018
+- [Lijst met afgeschafte functies MIM herzien](microsoft-identity-manager-2016-deprecated-features.md), laatst bijgewerkte februari 2018
 
-Met Privileged Identity Management regelt en beheert u de beheerderstoegang door middel van tijdelijke, taakgebaseerde toegang tot gevoelige resources. Dit betekent dat u aan gebruikers alleen de machtiging kunt toekennen die strikt noodzakelijk is. Hierdoor wordt de kans verkleind dat bij een cyberaanval de volledige beheerderstoegang wordt overgenomen. Daarnaast extraheert en isoleert u met Privileged Identity Management beheerdersaccounts uit bestaande Active Directory-forests.
+### <a name="recent-software-releases"></a>Recente softwareversies
 
-MIM ondersteunt een on-premises Privileged Identity Management-oplossing voor het beheer van Active Directory. Aan de slag gaan met [Privileged Access Management gebruiken](./pam/privileged-identity-management-for-active-directory-domain-services.md).
+- [MIM-Connector worden vrijgegeven](./reference/microsoft-identity-manager-2016-connector-version-history.md), laatst bijgewerkte maart 2018
+- [MIM Sync, Service, Portal, CM,-invoegtoepassingen en -client worden vrijgegeven](./reference/version-history.md) laatst bijgewerkt November 2017
+- [MIM BHOLD-modules worden vrijgegeven](./reference/version-bhold-history.md) laatst bijgewerkt September 2017
+
+
+
 
 ## <a name="related-topics"></a>Verwante onderwerpen
 
-- Microsoft Identity Manager is nog nauw verwant aan diens voorganger Forefront Identity Manager. Zie [FIM 2010 R2 Documentation Roadmap](https://technet.microsoft.com/library/jj133885.aspx) (Engelstalig) als u FIM nog gebruikt of aanvullende documentatie wilt raadplegen.
-- [Aandachtspunten voor topologie voor het implementeren van MIM](topology-considerations.md) in dit artikel bevat meerdere implementatietopologieën die u implementeren overwegen kunt.
-- [Handleiding voor capaciteitsplanning](capacity-planning-guide.md) kunt u deze handleiding, samen met testomgevingen, om te begrijpen omvang die geschikt is voor uw implementatie.
+Leer meer over scenario's toegevoegd in MIM 2016 en eerdere versies bij [Microsoft Identity manager 2016](microsoft-identity-manager-2016.md).
+
+Lees meer documentatie over het implementeren van MIM en de meest recente versie van de [MIM Documentation Roadmap](https://docs.microsoft.com/en-us/microsoft-identity-manager/).
+
