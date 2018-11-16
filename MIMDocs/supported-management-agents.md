@@ -11,12 +11,12 @@ ms.prod: microsoft-identity-manager
 ms.assetid: 8bc2f6d2-9f53-4db6-aee6-a937ae468163
 ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: 16dba460d9b5f9ce81076f8f883c352b1e8f4a81
-ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
+ms.openlocfilehash: 4c39b5e3ba651464989bd0bc1f600629c7e89a0f
+ms.sourcegitcommit: 3b514aba69af203f176b40cdb7c2a51c477c944a
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49358411"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51718242"
 ---
 # <a name="connect-to-your-directories"></a>Verbinding maken met uw adreslijsten
 
@@ -44,7 +44,7 @@ In dit artikel gaat over de connectors die zijn opgenomen en in MIM worden onder
 | [Windows PowerShell Connector voor FIM 2010 R2](https://msdn.microsoft.com/library/dn640417.aspx) | Windows PowerShell 2.0 of hoger |
 | [Microsoft Azure Active Directory Connector voor FIM 2010 R2](https://msdn.microsoft.com/library/dn511001.aspx) | Microsoft Azure Active Directory |
 | [Algemene LDAP-Connector voor FIM 2010 R2](https://msdn.microsoft.com/library/dn510997.aspx) | [LDAP v3-server (met RFC 4510)](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnectsync-connector-genericldap) |
-| [Algemene SQL Connector voor FIM 2010 R2 / MIM](https://msdn.microsoft.com/library/dn510997.aspx) | [De Connector wordt ondersteund met alle 64-bits ODBC-stuurprogramma 's](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnectsync-connector-genericsql) |
+| [Algemene SQL Connector voor FIM 2010 R2 / MIM](./reference/microsoft-identity-manager-2016-connector-genericsql.md) | [De Connector wordt ondersteund met alle 64-bits ODBC-stuurprogramma 's](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnectsync-connector-genericsql.md) |
 | [Connector voor Lotus Domino](https://msdn.microsoft.com/library/hh859750.aspx) | Lotus Notes Release v8.5.x |
 | [SharePoint Services Connector UPA](https://msdn.microsoft.com/library/dn511003.aspx) | SharePoint server 2013 of 2016 met servicetoepassing voor gebruikersprofielen (UPA) |
 | [Connector voor Web Services](https://www.microsoft.com/en-us/download/details.aspx?id=51495) | [SAP ECC 5.0 of 6.0; Oracle PeopleSoft 9.1; Oracle eBusiness 12.1](https://docs.microsoft.com/microsoft-identity-manager/reference/microsoft-identity-manager-2016-ma-ws) |

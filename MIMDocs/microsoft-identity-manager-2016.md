@@ -9,18 +9,18 @@ ms.date: 11/05/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.technology: security
-ms.openlocfilehash: b25819d864f773578ba8aa52217c7b27536b7327
-ms.sourcegitcommit: f73a83f424d7e32b0119e870bc0020c061e966f7
+ms.openlocfilehash: 67064d930935f0091c14c64bf271dd0e1ded6bb4
+ms.sourcegitcommit: 3b514aba69af203f176b40cdb7c2a51c477c944a
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51265262"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51718230"
 ---
 # <a name="microsoft-identity-manager-2016-news-and-updates"></a>Microsoft Identity Manager 2016 nieuws en updates
 
 Microsoft Identity Manager (MIM) 2016 bouwt voort op de beheermogelijkheden identiteits- en toegangsbeheer van Forefront Identity Manager. Net als bij de voorganger kunt u met MIM de gebruikers, de referenties, het beleid en de toegang in uw organisatie beheren.  Daarnaast voegt MIM 2016 hieraan een hybride-ervaring, beheermogelijkheden voor bevoegde toegang en ondersteuning voor nieuwe platformen toe.
 
-De huidige release onder algemene ondersteuning is MIM 2016 Service Pack 1 (SP1).  Deze release in augustus 2017 updates opgenomen in de MIM-Portal, PAM-scenario en ondersteuning toegevoegd voor nieuwe platformen.  Klanten met FIM of MIM versies vóór MIM 2016 SP1 moeten opwaarderen naar MIM 2016 SP1 of een latere hotfix.  Meer informatie over [naar MIM 2016 SP1](microsoft-identity-manager-2016-sp1-release-notes.md).
+De huidige release onder algemene ondersteuning is MIM 2016 Service Pack 1 (SP1).  Deze release in augustus 2017 updates opgenomen in de MIM-Portal, PAM-scenario en ondersteuning toegevoegd voor nieuwe platformen.  Klanten met FIM of MIM versies vóór MIM 2016 SP1 moeten opwaarderen naar MIM 2016 SP1 of een latere hotfix.  Meer informatie over [naar MIM 2016 SP1](./reference/version-history.md).
 
 ## <a name="updates-since-mim-2016-sp1"></a>Updates sinds MIM 2016 SP1
 

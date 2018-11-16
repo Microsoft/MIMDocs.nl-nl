@@ -12,12 +12,12 @@ ms.assetid: 4978f60d-044d-4e84-8d93-65801fce1144
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: mim
-ms.openlocfilehash: 0501dbeb279dc37655d1d9a5e99545b07eea0623
-ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
+ms.openlocfilehash: 077a0330e3a9169583331854525d19cee2d9eaf4
+ms.sourcegitcommit: 3b514aba69af203f176b40cdb7c2a51c477c944a
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49358681"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51718322"
 ---
 # <a name="supported-platforms-for-mim-2016"></a>Ondersteunde platformen voor MIM 2016
 
@@ -47,7 +47,7 @@ In deze tabel worden de ondersteunde platformen en versies voor elk onderdeel va
 | **MIM-portals voor wachtwoord opnieuw instellen en wachtwoordregistratie** | Windows Server | Windows Server 2008 R2 SP1<br/>Windows Server 2012<br/>Windows Server 2012 R2 <br/> Windows Server 2016 * |
 | | Webbrowser | Alle primaire ondersteunde browsers |
 | **MIM-invoegtoepassingen en -extensies** | Windows | Windows 7<br/>Windows 8<br/>Windows 8.1<br/>Windows 10 |
-| | Outlook-integratie (optioneel) | Outlook 2010<br/>Outlook 2013 <br/> Outlook 2016 (op Windows 10) * |
+| | Outlook-integratie (optioneel) | Outlook 2010 (op Windows, met uitzondering van de Klik-en-klaar)<br/>Outlook 2013 (op Windows, met uitzondering van de Klik-en-klaar) <br/> Outlook 2016 (op Windows 10, met uitzondering van de Klik-en-klaar) * |
 | | PAM PowerShell-aanvrager-cmdlets (optioneel) | Windows 8.1<br/>Windows 10 |
 | **MIM Certificate Management** (server- en CA-integratie) | Windows Server | Windows Server 2008 R2 SP1<br/>Windows Server 2012 R2 <br/> Windows Server 2016 * |
 | | Certificeringsinstantie | Windows Server 2008 R2 SP1<br/>Windows Server 2012<br/>Windows Server 2012 R2 <br/> Windows Server 2016 * |
