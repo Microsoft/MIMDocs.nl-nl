@@ -5,21 +5,23 @@ keywords: ''
 author: billmath
 ms.author: billmath
 manager: mtillman
-ms.date: 05/22/2018
+ms.date: 12/02/2018
 ms.topic: get-started-article
 ms.prod: microsoft-identity-manager
 ms.assetid: b0b39631-66df-4c5f-80c9-a1774346f816
 ms.suite: ems
-ms.openlocfilehash: 4102ffc450b993faaa62da66bb25f242b7e39280
-ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
+ms.openlocfilehash: f75eb69360852c9f629b60d4900638c8b51e068a
+ms.sourcegitcommit: 9e420840815adb133ac014a8694de9af4d307815
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49358717"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52825787"
 ---
 # <a name="microsoft-identity-manager-data-handling"></a>Verwerking van gegevens van Microsoft Identity Manager 
 
-In dit artikel vindt u richtlijnen voor hoe organisatie kan via het zoeken, verwijderen, bijwerken en rapporteren operations beslissingen voor die uw organisatie moet oefen of in veel verbonden gegevensbronnen te implementeren. Het huidige ontwerp en de configuratie van het systeem in uw identity manager (MIM) is essentieel voor het bepalen van de aanpak van het verwijderen of bijwerken van een goed begrip. Hieronder vindt u dat enkele scenario's-klanten hoeven te bespreken en de volgende vragen beantwoorden: 
+In dit artikel vindt u richtlijnen voor hoe organisaties de beslissingen die kunnen worden toegepast op veel verbonden gegevensbronnen kunnen maken.  Dit kan worden bereikt via het zoeken, verwijderen, bijwerken en bewerkingen.  Voordat u besluit uw benadering van het verwijderen of bijwerken, is een goed begrip van het huidige ontwerp en de configuratie van het systeem in uw identity manager (MIM) essentieel. 
+
+Hieronder vindt u dat enkele scenario's-klanten hoeven te bespreken en de volgende vragen beantwoorden: 
 
 - Welke gegevens moet u voor u Identiteitsbeheer met een bedrijfsproces?
 - Waar gaat actuele gegevens worden opgeslagen in MIM?
