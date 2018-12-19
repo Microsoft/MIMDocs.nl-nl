@@ -90,7 +90,7 @@ Als u in de laatste stap geen MIM-installatiepakket hebt ingesteld, gaat u terug
 
 ## <a name="configure-mim-password-reset-portal"></a>Het MIM-portal voor het opnieuw instellen van het wachtwoord configureren
 
-1. Stel de serviceaccountnaam voor SSPR-registratie in op *Contoso\MIMSSPR* en het bijbehorende wachtwoord op <em> Pass@word1 </em>.
+1. Stel de serviceaccountnaam voor SSPR-registratie in op *Contoso\MIMSSPR* en het bijbehorende wachtwoord op <em>Pass@word1</em>.
 
 2. Geef *passwordreset.contoso.com* als de hostnaam voor MIM wachtwoord opnieuw instellen-Portal, en stel de poort in op **80**. Schakel de optie **Poort in de firewall openen** in.
 
@@ -106,7 +106,7 @@ Wanneer alle definities voorafgaand aan de installatie gereed zijn, klikt u op *
 
 Nadat de installatie is voltooid, controleert u of de MIM-portal actief is.
 
-1. Start Internet Explorer en verbinding maken met de MIM-Portal op * http://mim.contoso.com/identitymanagement *. Er kan bij het eerste bezoek aan deze pagina een korte vertraging optreden.
+1. Start Internet Explorer en verbinding maken met de MIM-Portal op *http://mim.contoso.com/identitymanagement*. Er kan bij het eerste bezoek aan deze pagina een korte vertraging optreden.
 
     - Indien nodig geverifieerd als *contoso\miminstall* naar Internet Explorer.
 
