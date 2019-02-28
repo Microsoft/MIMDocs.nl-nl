@@ -11,14 +11,14 @@ ms.prod: microsoft-identity-manager
 ms.assetid: 2585e9c5-ce34-46c7-bdcf-8c08773901dc
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 1bc313a66776778fe3617969645076a6d2d10418
-ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
+ms.openlocfilehash: cec04cf430ba38ec40b61e4aad68fd8447d13c99
+ms.sourcegitcommit: 4f0b2883922bcb8fbef6b4284c35c6ca62c11565
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49357833"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56952176"
 ---
-# <a name="install-mim-2016-mim-synchronization-service"></a>MIM 2016: MIM-synchronisatieservice installeren
+# <a name="install-mim-2016-mim-synchronization-service"></a>MIM 2016 installeren: MIM-synchronisatieservice
 
 > [!div class="step-by-step"]
 > [« Exchange Server](prepare-server-exchange.md)
@@ -37,7 +37,7 @@ Stel eerst het installatiepakket in voordat u de Microsoft Identity Manager 2016
 
 1. Meld u als *contoso\miminstall* naar de server die u voor de server voor identiteitsbeheer synchronisatie gebruikt **corpsync**.
 
-2. Pak het MIM-installatiepakket uit of plaats de dvd met de MIM-installatiekopie.
+2. Pak het MIM-installatiepakket uit of plaats de dvd met de MIM-installatiekopie.  Als u deze DVD hebt, raadpleegt u [Microsoft Identity Manager-licentieverlening en downloads](microsoft-identity-manager-licensing.md).
 
 ## <a name="install-mim-2016-sp1-synchronization-service"></a>MIM 2016 SP1-synchronisatieservice installeren
 
@@ -57,15 +57,15 @@ Stel eerst het installatiepakket in voordat u de Microsoft Identity Manager 2016
 
 6. Selecteer het volgende in het configuratiescherm voor de Sync-servicedatabase:
 
-   1.  De SQL-Server bevindt zich op: **een externe computer** met de naam **corpsql.contoso.com**.
+   1.  De SQL-Server bevindt zich op: **Een externe computer** met de naam **corpsql.contoso.com**.
 
-   2.  De SQL Server-exemplaar is: **het standaardexemplaar**
+   2.  De SQL Server-exemplaar is: **Het standaardexemplaar**
 
    ![Afbeelding voor de databaseverbinding](media/install-mim-sync/MIM_Install3.png)
 
 7. Configureer het synchronisatieserviceaccount volgens het account dat u eerder hebt gemaakt:
 
-   1. Serviceaccount: *MIMSync*
+   1. Service-account: *MIMSync*
 
    2. Wachtwoord: <em>Pass@word1</em>
 
