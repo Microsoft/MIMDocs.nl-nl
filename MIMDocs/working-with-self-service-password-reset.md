@@ -5,27 +5,27 @@ keywords: ''
 author: billmath
 ms.author: billmath
 manager: mtillman
-ms.date: 08/30/2018
+ms.date: 05/11/2019
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
-ms.openlocfilehash: 3a86569a8de77f4cf4d5aeafe0cd01dab40232b3
-ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
+ms.openlocfilehash: 90452391170114270765e9a7fe08e98eea0747e4
+ms.sourcegitcommit: f58926a9e681131596a25b66418af410a028ad2c
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49358463"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67690702"
 ---
 # <a name="self-service-password-reset-deployment-options"></a>Selfservice voor wachtwoordherstel implementatieopties
 
-Voor nieuwe klanten die [een licentie voor Azure Active Directory Premium](https://docs.microsoft.com/azure/active-directory/authentication/concept-sspr-licensing), wordt u aangeraden [Azure AD Self-service voor wachtwoord opnieuw instellen](https://docs.microsoft.com/azure/active-directory/authentication/concept-sspr-howitworks.md) voor de eindgebruiker.  Azure AD-selfservice wachtwoord opnieuw instellen biedt een web- en geïntegreerde Windows-ervaring voor hun eigen wachtwoord opnieuw instellen van een gebruiker en biedt ondersteuning voor veel van dezelfde mogelijkheden als MIM, met inbegrip van alternatieve e-mailadres en Q & A-poorten.  Bij het implementeren van Azure AD selfservice voor wachtwoordherstel, Azure AD Connect ondersteunt [de nieuwe wachtwoorden terugschrijven naar AD DS](https://docs.microsoft.com/azure/active-directory/authentication/concept-sspr-writeback.md), en MIM [meldingsservice voor wachtwoordwijzigingen](deploying-mim-password-change-notification-service-on-domain-controller.md) kan worden gebruikt voor het doorsturen van de wachtwoorden van andere systemen, zoals een andere leverancier directory-server, evenals.  Implementeren van MIM voor [wachtwoordbeheer](infrastructure/mim2016-password-management.md) vereist niet de MIM-Service of de MIM-Self-service voor wachtwoord opnieuw instellen of de registratie-portals om te worden geïmplementeerd.  In plaats daarvan kunt u deze stappen volgen:
+Voor nieuwe klanten die [een licentie voor Azure Active Directory Premium](https://docs.microsoft.com/azure/active-directory/authentication/concept-sspr-licensing), wordt u aangeraden [Azure AD Self-service voor wachtwoord opnieuw instellen](/azure/active-directory/authentication/concept-sspr-howitworks) voor de eindgebruiker.  Azure AD-selfservice wachtwoord opnieuw instellen biedt een web- en geïntegreerde Windows-ervaring voor hun eigen wachtwoord opnieuw instellen van een gebruiker en biedt ondersteuning voor veel van dezelfde mogelijkheden als MIM, met inbegrip van alternatieve e-mailadres en Q & A-poorten.  Bij het implementeren van Azure AD selfservice voor wachtwoordherstel, Azure AD Connect ondersteunt [de nieuwe wachtwoorden terugschrijven naar AD DS](/azure/active-directory/authentication/concept-sspr-writeback), en MIM [meldingsservice voor wachtwoordwijzigingen](deploying-mim-password-change-notification-service-on-domain-controller.md) kan worden gebruikt voor het doorsturen van de wachtwoorden van andere systemen, zoals een andere leverancier directory-server, evenals.  Implementeren van MIM voor [wachtwoordbeheer](infrastructure/mim2016-password-management.md) vereist niet de MIM-Service of de MIM-Self-service voor wachtwoord opnieuw instellen of de registratie-portals om te worden geïmplementeerd.  In plaats daarvan kunt u deze stappen volgen:
 
 - Eerste, als u nodig hebt voor het verzenden van wachtwoorden voor mappen dan Azure AD en AD DS, MIM Sync met connectors voor Active Directory Domain Services en eventuele aanvullende doelsystemen implementeren, configureren van MIM voor [wachtwoordbeheer](infrastructure/mim2016-password-management.md) en implementeren de [meldingsservice voor wachtwoordwijzigingen](deploying-mim-password-change-notification-service-on-domain-controller.md).
-- Als u nodig hebt voor het verzenden van wachtwoorden voor mappen dan Azure AD, configureer vervolgens Azure AD Connect voor [de nieuwe wachtwoorden terugschrijven naar AD DS](https://docs.microsoft.com/azure/active-directory/authentication/concept-sspr-writeback.md).
-- U kunt desgewenst [schrijf gebruikers](https://docs.microsoft.com/azure/active-directory/authentication/howto-sspr-authenticationdata.md).
-- Ten slotte [implementatie van Azure AD Self-service voor wachtwoord opnieuw instellen voor uw eindgebruikers](https://docs.microsoft.com/azure/active-directory/authentication/howto-sspr-deployment.md).
+- Als u nodig hebt voor het verzenden van wachtwoorden voor mappen dan Azure AD, configureer vervolgens Azure AD Connect voor [de nieuwe wachtwoorden terugschrijven naar AD DS](/azure/active-directory/authentication/concept-sspr-writeback).
+- U kunt desgewenst [schrijf gebruikers](/azure/active-directory/authentication/howto-sspr-authenticationdata).
+- Ten slotte [implementatie van Azure AD Self-service voor wachtwoord opnieuw instellen voor uw eindgebruikers](/azure/active-directory/authentication/howto-sspr-deployment).
 
-Voor bestaande klanten die was eerder Forefront Identity Manager (FIM) geïmplementeerd voor selfservice voor wachtwoord opnieuw instellen en hebben een licentie voor Azure Active Directory Premium, wordt aangeraden planning overgang naar Azure AD Self-service voor wachtwoord opnieuw instellen.  U kunt overgaan eindgebruikers kunnen Azure AD Self-service voor wachtwoord opnieuw instellen zonder dat ze opnieuw registreren door [synchroniseren of hoe via PowerShell alternatieve e-mailadres van een gebruiker de waarde-adres of een mobiele telefoon](https://docs.microsoft.com/azure/active-directory/authentication/howto-sspr-authenticationdata.md). Nadat gebruikers zijn geregistreerd voor Azure AD Self-service voor wachtwoord opnieuw instelt, de FIM-portal voor het opnieuw instellen van wachtwoord kan worden genomen.
+Voor bestaande klanten die was eerder Forefront Identity Manager (FIM) geïmplementeerd voor selfservice voor wachtwoord opnieuw instellen en hebben een licentie voor Azure Active Directory Premium, wordt aangeraden planning overgang naar Azure AD Self-service voor wachtwoord opnieuw instellen.  U kunt overgaan eindgebruikers kunnen Azure AD Self-service voor wachtwoord opnieuw instellen zonder dat ze opnieuw registreren door [synchroniseren of hoe via PowerShell alternatieve e-mailadres van een gebruiker de waarde-adres of een mobiele telefoon](/azure/active-directory/authentication/howto-sspr-authenticationdata). Nadat gebruikers zijn geregistreerd voor Azure AD Self-service voor wachtwoord opnieuw instelt, de FIM-portal voor het opnieuw instellen van wachtwoord kan worden genomen.
 
 Voor klanten die nog niet hebben geïmplementeerd Azure AD Self-service voor wachtwoord opnieuw instellen voor hun gebruikers, bevat MIM ook Self-service voor wachtwoord opnieuw instellen van portals.  Vergeleken met de FIM, bevat MIM 2016 de volgende wijzigingen:
 
@@ -79,7 +79,7 @@ In de volgende sectie stelt u de Azure MFA-provider in Microsoft Azure Active Di
 
 ### <a name="register-your-multi-factor-authentication-provider-in-azure"></a>Uw provider voor meervoudige verificatie in Azure registreren
 
-1.  Maak een [MFA-provider](https://docs.microsoft.com/en-us/azure/multi-factor-authentication/multi-factor-authentication-get-started-auth-provider.md).
+1.  Maak een [MFA-provider](/azure/multi-factor-authentication/multi-factor-authentication-get-started-auth-provider).
 
 2. Een ondersteuningsaanvraag openen en de SDK direct aanvragen voor ASP.net 2.0 C#. De SDK wordt alleen worden opgegeven voor de huidige gebruikers van MIM met MFA omdat de direct SDK is afgeschaft. Nieuwe klanten moeten de volgende versie van MIM die kan worden geïntegreerd met MFA-server vast.
 
@@ -99,7 +99,7 @@ In de volgende sectie stelt u de Azure MFA-provider in Microsoft Azure Active Di
 
     ![Afbeelding van de code in pf_auth.cs](media/MIM-SSPR-pFile.png)
 
-6.  Open in **C:\Program Files\Microsoft Forefront Identity Manager\2010\Service** het bestand: **MfaSettings**.xml.
+6.  In **C:\Program Files\Microsoft Forefront Identity Manager\2010\Service**, open het bestand: **MfaSettings**.xml.
 
 7.  Kopieer de waarden van de parameters `LICENSE_KEY, GROUP_KEY, CERT_PASSWORD` in het bestand pf_aut.cs naar de overeenkomstige XML-elementen in het bestand MfaSettings.xml.
 
@@ -123,7 +123,9 @@ In de volgende sectie stelt u de Azure MFA-provider in Microsoft Azure Active Di
 
 3.  Klik op het tabblad **Activiteiten** en schuif vervolgens omlaag naar **Activiteit toevoegen**.
 
-4.  Selecteer **Telefoonpoort** of **SMS-gate voor OTP (eenmalig wachtwoord)**, klik op **Selecteren** en vervolgens op **OK**.
+4.  Selecteer **Telefoonpoort** of **SMS-gate voor OTP (eenmalig wachtwoord)** , klik op **Selecteren** en vervolgens op **OK**.
+
+Opmerking: als u Azure MFA-Server of een andere provider die het eenmalige wachtwoord zelf genereert, controleert u of het lengteveld geconfigureerd boven dezelfde lengte als die die zijn gegenereerd door de MFA-provider.  Deze lengte moet 6 voor Azure MFA-Server.  Azure MFA-Server wordt ook een eigen berichttekst gegenereerd zodat de SMS-bericht wordt genegeerd.
 
 Gebruikers in uw organisatie kunnen zich nu registreren voor het opnieuw instellen van het wachtwoord.  Bij de registratie voeren de gebruikers hun zakelijke telefoonnummer of mobiele telefoonnummer in zodat ze kunnen worden gebeld (of naar hen sms-berichten kunnen worden verzonden).
 

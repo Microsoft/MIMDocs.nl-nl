@@ -11,12 +11,12 @@ ms.prod: microsoft-identity-manager
 ms.assetid: c01487f2-3de6-4fc4-8c3a-7d62f7c2496c
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 466f5eb7d4aee27336948e15f96087d6ba898170
-ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
+ms.openlocfilehash: 5beee58388c12abbe8e3245ff610d3528b03786a
+ms.sourcegitcommit: f58926a9e681131596a25b66418af410a028ad2c
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49358632"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67690759"
 ---
 # <a name="set-up-an-identity-management-server-sharepoint"></a>Een server voor identiteitsbeheer instellen: SharePoint
 
@@ -45,7 +45,7 @@ Volg deze stappen voor het installeren van SharePoint 2016. Wanneer u de install
 
     -   Ga naar de map waar SharePoint is uitgepakt.
 
-    -   Typ de volgende opdracht:
+    -   Typ de volgende opdracht.
 
         ```
         .\prerequisiteinstaller.exe
@@ -70,7 +70,7 @@ Voer de stappen uit die in de **wizard Configuratie van SharePoint-producten** w
 2. Geef op deze server als de database-server, zoals **corpsql** voor de configuratiedatabase en *Contoso\SharePoint* als het account van de database-toegang voor SharePoint moet worden gebruikt.
 3. Maak een wachtwoord voor de wachtwoordzin van de farmbeveiliging.
 
-4. In de configuratie van de Wizard wordt u geadviseerd [MinRole](https://docs.microsoft.com/sharepoint/install/overview-of-minrole-server-roles-in-sharepoint-server-2016) type **front-end**
+4. In de configuratie van de Wizard wordt u geadviseerd [MinRole](/sharepoint/install/overview-of-minrole-server-roles-in-sharepoint-server) type **front-end**
 
 5. Wanneer configuratietaak 10 van 10 in de configuratiewizard is voltooid, klikt u op Voltooien en wordt er een web browser wordt geopend...
 

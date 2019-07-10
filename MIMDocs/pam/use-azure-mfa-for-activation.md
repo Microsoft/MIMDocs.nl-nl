@@ -10,16 +10,16 @@ ms.date: 07/06/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 5134a112-f73f-41d0-a5a5-a89f285e1f73
-ms.openlocfilehash: 9cb1e37f966db5c663694aaccd71f2b4c799dd4b
-ms.sourcegitcommit: 44a2293ff17c50381a59053303311d7db8b25249
+ms.openlocfilehash: 72dd1d3cf34e28567fa672b747a04347b150797e
+ms.sourcegitcommit: f58926a9e681131596a25b66418af410a028ad2c
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50379936"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67690785"
 ---
 # <a name="using-azure-mfa-for-activation"></a>Azure MFA gebruiken voor activering
 > [!IMPORTANT]
-> Vanwege de aankondiging van de afschaffing van Azure multi-factor Authentication Software Development Kit. De Azure MFA-SDK wordt ondersteund voor bestaande klanten tot de vervaldatum van 14 November 2018. Nieuwe klanten en huidige klanten zich niet kunnen downloaden van de SDK niet meer via de klassieke Azure portal. Als u wilt downloaden dat u moet contact opnemen met ondersteuning voor Azure-klant voor het ontvangen van de gegenereerde Servicereferenties voor de MFA-pakket. <br> Het Microsoft-ontwikkelteam werkt op wijzigingen in MFA door te integreren met MFA Server SDK.  Dit is opgenomen in een toekomstige hotfix Zie [versiegeschiedenis](/reference/version-history.md) aankondigingen. 
+> Vanwege de aankondiging van de afschaffing van Azure multi-factor Authentication Software Development Kit. De Azure MFA-SDK wordt ondersteund voor bestaande klanten tot de vervaldatum van 14 November 2018. Nieuwe klanten en huidige klanten zich niet kunnen downloaden van de SDK niet meer via de klassieke Azure portal. Als u wilt downloaden dat u moet contact opnemen met ondersteuning voor Azure-klant voor het ontvangen van de gegenereerde Servicereferenties voor de MFA-pakket. <br> Het Microsoft-ontwikkelteam werkt op wijzigingen in MFA door te integreren met MFA Server SDK.  Dit is opgenomen in een toekomstige hotfix Zie [versiegeschiedenis](../reference/version-history.md) aankondigingen. 
 
 
 Wanneer u een PAM-rol configureert, kunt u hoe gebruikers die een aanvragen voor activering van de rol verzenden, moeten worden geautoriseerd. Met de PAM-autorisatieactiviteit worden de volgende keuzen geïmplementeerd:
@@ -66,7 +66,7 @@ Vervolgens gaat u een bestand genereren met de verificatiegegevens die nodig zij
 
 5.  Klik in het venster **Azure Multi-Factor Authentication** op **SDK** bij **Downloads**.
 
-6.  Klik op de koppeling **Downloaden** in de kolom met ZIP-bestanden voor het bestand met de programmeertaal **SDK voor ASP.net 2.0 C\#**.
+6.  Klik op de koppeling **Downloaden** in de kolom met ZIP-bestanden voor het bestand met de programmeertaal **SDK voor ASP.net 2.0 C\#** .
 
 ![Multi-Factor Authentication SDK downloaden - schermafbeelding](media/PAM-Azure-MFA-Activation-Image-1.png)
 
@@ -126,11 +126,11 @@ Set-PAMRole (Get-PAMRole -DisplayName "R") -MFAEnabled 1
 
 U kunt Azure MFA uitschakelen voor een rol door de parameter -MFAEnabled 0 op te geven in de opdracht `Set-PAMRole`.
 
-## <a name="troubleshooting"></a>Probleemoplossing
+## <a name="troubleshooting"></a>Problemen oplossen
 
 De volgende gebeurtenissen vindt u in het gebeurtenislogboek voor Privileged Access Management:
 
-| Id  | Ernst | Gegenereerd door | Beschrijving |
+| Id  | Severity | Gegenereerd door | Description |
 |-----|----------|--------------|-------------|
 | 101 | Fout       | MIM-service            | De gebruiker heeft Azure MFA niet voltooid (heeft bijvoorbeeld de telefoonoproep niet beantwoord) |
 | 103 | Informatie | MIM-service            | De gebruiker heeft Azure MFA voltooid tijdens de activering                       |

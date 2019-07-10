@@ -9,12 +9,12 @@ manager: mtillman
 ms.date: 09/04/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.openlocfilehash: 750947d04f540e2c8317861c5826c2145deba1fd
-ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
+ms.openlocfilehash: 7fb111520f94541672fc56d0fd2ee95bfcd3a49e
+ms.sourcegitcommit: f58926a9e681131596a25b66418af410a028ad2c
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49358383"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67690749"
 ---
 # <a name="use-a-custom-multi-factor-authentication-provider-via-an-api-during-pam-role-activation-or-in-sspr"></a>Een aangepaste multi-factor Authentication-provider via een API te gebruiken tijdens de activering van PAM-rol of in selfservice voor Wachtwoordherstel
 
@@ -32,16 +32,16 @@ In dit artikel bevat een overzicht over het gebruik van MIM met een aangepaste m
 Als u wilt gebruiken een aangepaste API van de multi-factor Authentication-provider met MIM, hebt u het volgende nodig:
 
 - Telefoonnummers voor alle kandidaatgebruikers
-- MIM-hotfix [4.5.202.0](https://www.microsoft.com/download/details.aspx?id=57278) of hoger - Zie [versiegeschiedenis](/reference/version-history.md) voor aankondigingen
+- MIM-hotfix [4.5.202.0](https://www.microsoft.com/download/details.aspx?id=57278) of hoger - Zie [versiegeschiedenis](reference/version-history.md) voor aankondigingen
 - MIM-Service is geconfigureerd voor de self-service voor Wachtwoordherstel of PAM
 
 ## <a name="approach-using-custom-multi-factor-authentication-code"></a>Benadering met behulp van aangepaste multi-factor authenticatiecode
 
-### <a name="step-1-ensure-mim-service-is-at-version-452020-or-later"></a>Stap 1: Zorg ervoor dat versie 4.5.202.0 van MIM-Service is of hoger
+### <a name="step-1-ensure-mim-service-is-at-version-452020-or-later"></a>Stap 1: Zorg ervoor dat de MIM-Service is versie 4.5.202.0 of hoger
 
 Download en installeer de hotfix MIM [4.5.202.0](https://www.microsoft.com/download/details.aspx?id=57278) of een latere versie.
 
-### <a name="step-2-create-a-dll-which-implements-the-iphoneserviceprovider-interface"></a>Stap 2: Maak een DLL-bestand waarmee de IPhoneServiceProvider-interface wordt geïmplementeerd
+### <a name="step-2-create-a-dll-which-implements-the-iphoneserviceprovider-interface"></a>Stap 2: Maken van een DLL-bestand waarmee de IPhoneServiceProvider-interface wordt geïmplementeerd
 
 Het DLL-bestand moet bevatten een klasse, waarmee de drie methoden geïmplementeerd:
 
@@ -135,9 +135,9 @@ namespace CustomPhoneGate
     }
 }
 ```
-### <a name="step-3-backup-the-mfasettingsxml-located-in-the-cprogram-filesmicrosoft-forefront-identity-manager2010service"></a>Stap 3: Back-up van de MfaSettings.xml zich in de 'C:\Program Files\Microsoft Forefront Identity Manager\2010\Service"
+### <a name="step-3-backup-the-mfasettingsxml-located-in-the-cprogram-filesmicrosoft-forefront-identity-manager2010service"></a>Stap 3: Back-up de MfaSettings.xml zich in de 'C:\Program Files\Microsoft Forefront Identity Manager\2010\Service"
 
-### <a name="step-4-edit-the-mfasettingsxml-file"></a>Stap 4: Het bestand MfaSettings.xml bewerken
+### <a name="step-4-edit-the-mfasettingsxml-file"></a>Stap 4: Bewerk het bestand MfaSettings.xml
 
 Bijwerken of schakelt u de volgende regels:
 
