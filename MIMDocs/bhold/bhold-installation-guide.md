@@ -1,6 +1,6 @@
 ---
-title: SP1-installatie van BHOLD | Microsoft Docs
-description: Documentatie voor installatie van BHOLD SP1
+title: Installatie van BHOLD SP1 | Microsoft Docs
+description: Documentatie voor de installatie van BHOLD SP1
 keywords: ''
 author: billmath
 ms.author: billmath
@@ -9,107 +9,106 @@ ms.date: 09/11/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
-ms.openlocfilehash: d5edf4c16f32c401db32abb9bab1fa7e9e23e4a5
-ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
+ms.openlocfilehash: 05eb2afc0ddbf6104e27a5c24e121a55bd805292
+ms.sourcegitcommit: 4c4bc7aa42cd5984c838abdd302490355ddcb4ea
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49358498"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238907"
 ---
-# <a name="microsoft-bhold-suite-sp1-60-installation-guide"></a>Installatiehandleiding voor Microsoft BHOLD-Suite SP1 (6.0)
+# <a name="microsoft-bhold-suite-sp1-60-installation-guide"></a>Installatie handleiding voor micro soft BHOLD Suite SP1 (6,0)
 
-Microsoft® BHOLD-Suite Service Pack 1 (SP1) is een verzameling van toepassingen die, wanneer u met Microsoft Identity Manager 2016 SP1 (MIM) gebruikt, voegt effectieve rolbeheer, analyses en attestation met MIM. Microsoft BHOLD-Suite SP1 bestaat uit de volgende modules:
+Micro soft® BHOLD Suite Service Pack 1 (SP1) is een verzameling toepassingen die, in combi natie met Microsoft Identity Manager 2016 SP1 (MIM), effectief functie beheer, analyses en Attestation aan MIM toevoegen. Micro soft BHOLD Suite SP1 bestaat uit de volgende modules:
 
-- BHOLD-Core
-- Access Management-Connector
-- Integratie van BHOLD FIM/MIM
-- Generator voor BHOLD-Model
+- BHOLD-kern
+- Toegangs beheer connector
+- BHOLD FIM/MIM-integratie
+- BHOLD-model generator
 - BHOLD-analyse
-- BHOLD-rapportage
+- BHOLD rapportage
 - BHOLD-Attestation
 
 
 > [!NOTE]
-> **Is van toepassing op**: Microsoft Identity Manager 2016 SP1
+> **Van toepassing op**: Microsoft Identity Manager 2016 SP1
 
-## <a name="what-this-document-covers"></a>Wat in dit document bevat informatie over
+## <a name="what-this-document-covers"></a>Wat in dit document wordt behandeld
 
-Dit document wordt uitgelegd hoe u van plan bent uw implementatie BHOLD om te voldoen aan de behoeften van uw bedrijf en elke BHOLD-module installeren. Voor elke module-, relevante hardware-, infrastructuur- en softwarevereisten, vooraf netwerkconfiguratie, informatie nodig tijdens de installatie en postinstallation stappen, indien van toepassing, worden beschreven.
+In dit document wordt uitgelegd hoe u uw BHOLD-implementatie plant om te voldoen aan de behoeften van uw bedrijf en elke BHOLD-module te installeren. Voor elke module, relevante hardware, infra structuur en software vereisten, vooraf installatie netwerk configuratie, informatie vereist tijdens de installatie en postinstallation stappen, indien van toepassing, worden gedetailleerd beschreven.
 
 ## <a name="pre-requisite-knowledge"></a>Vereiste kennis
 
-Dit document wordt ervan uitgegaan dat u een basiskennis hebben van hoe u software installeren op server-computers. Ook wordt ervan uitgegaan dat u basiskennis van Active Directory® Domain Services, Microsoft Identity Manager SP1 (FIM) en Microsoft SQL Server 2008-database-software hebben. Een beschrijving van het instellen en configureren van afhankelijke technologieën zoals AD DS en FIM valt buiten het bereik van deze documentatie. Zie voor informatie over de functies die de Microsoft BHOLD-modules uitvoeren, [de handleiding Microsoft BHOLD-suite concepten](https://technet.microsoft.com/library/jj134102(v=ws.10).aspx).
+In dit document wordt ervan uitgegaan dat u een basis memorandum hebt van het installeren van software op Server computers. Ook wordt ervan uitgegaan dat u basis kennis hebt van Active Directory® Domain Services, Microsoft Identity Manager SP1 (FIM) en Microsoft SQL Server 2012-database software. Een beschrijving van het instellen en configureren van afhankelijke technologieën, zoals AD DS en FIM valt buiten het bereik van deze documentatie. Voor informatie over de functies die door de micro soft BHOLD-modules worden uitgevoerd, raadpleegt u [de hand leiding micro soft BHOLD Suite-concepten](https://technet.microsoft.com/library/jj134102(v=ws.10).aspx).
 
 ## <a name="audience"></a>Doelgroep
 
-Dit document is bedoeld voor IT-planners, systeemarchitecten, technologie besluitvormers, adviseurs, infrastructuur planners en IT-medewerkers die plan voor implementatie van BHOLD-Suite van Microsoft.
+Dit document is bedoeld voor IT-planners, systeem architecten, technologie besluit vormers, consultants, infrastructuur planners en IT-mede werkers die de implementatie van micro soft BHOLD Suite plannen.
 
-## <a name="bhold-infrastructure-considerations"></a>Overwegingen voor netwerkinfrastructuur van BHOLD
+## <a name="bhold-infrastructure-considerations"></a>Overwegingen voor BHOLD-infra structuur
 
-De BHOLD en FIM worden meestal gebruikt in een omgeving met grote infrastructuur. U kunt uw BHOLD en FIM-architectuur om te voldoen aan uw specifieke bedrijfsbehoeften kunt aanpassen. De volgende secties vindt u enkele mogelijke architectuur oplossingen. In dit overzicht is niet een uitgebreide lijst van alle mogelijke opties, maar suggesties u BHOLD kunt implementeren in uw netwerk.
+De BHOLD en FIM worden meestal gebruikt in een grote infrastructuur omgeving. U kunt uw BHOLD-en FIM-architectuur aanpassen om te voldoen aan uw specifieke bedrijfs behoeften. De volgende secties bevatten enkele mogelijke architectuur oplossingen. Dit overzicht is geen uitgebreide lijst met alle mogelijke opties, maar suggesties voor manieren om BHOLD in uw netwerk te implementeren.
  
-In deze sectie worden de volgende onderwerpen:
+In deze sectie komen de volgende onderwerpen aan bod:
 
 - Architectuur met één server
-- Dual-server-architectuur
+- Architectuur met twee servers
 - Architectuur met twee lagen
 - SQL Server-aanbevelingen
 
 ### <a name="single-server-architecture"></a>Architectuur met één server
 
-Voor de implementatie in kleine organisaties of voor ontwikkelingsdoeleinden, kunt u installeren BHOLD en FIM op dezelfde server als SQL Server en AD DS, zoals wordt weergegeven in de volgende afbeelding.
+Voor implementatie in kleine organisaties of voor ontwikkelings doeleinden kunt u BHOLD en FIM installeren op dezelfde server als SQL Server en AD DS, zoals wordt weer gegeven in de volgende afbeelding.
  
 ![Architectuur met één server](media/bhold-installation-guide/single.png)
 
-Wanneer BHOLD-Suite SP1 en de FIM-Portal zijn samen op één server geïnstalleerd, moet u andere host aliassen (CNAME- of A-records) in DNS maken voor BHOLD en voor FIM. Hiermee worden afzonderlijke service SPN-namen (SPN's) worden gemaakt voor de BHOLD en FIM-services. Zie voor meer informatie, [basisinstallatie van BHOLD](https://technet.microsoft.com/library/jj134095(v=ws.10).aspx).
-Zie voor instructies over het installeren van FIM in een configuratie met één server [algemene configuratie voor handleidingen aan de slag](https://technet.microsoft.com/library/ff575965.aspx) in de Microsoft TechNet Library.
+Wanneer BHOLD Suite SP1 en de FIM-Portal samen op één server zijn geïnstalleerd, moet u verschillende Host-aliassen (CNAME of A-records) in DNS maken voor BHOLD en voor FIM. Hierdoor kunnen afzonderlijke Spn's (Service Principal Names) worden gemaakt voor de BHOLD-en FIM-Services. Zie [BHOLD Core Installation](https://technet.microsoft.com/library/jj134095(v=ws.10).aspx)(Engelstalig) voor meer informatie.
+Zie [algemene configuratie voor aan de slag-hand leidingen](https://technet.microsoft.com/library/ff575965.aspx) in de micro soft TechNet-bibliotheek voor meer informatie over het installeren van FIM in een configuratie met één server.
 
-### <a name="dual-server-architecture"></a>Dual-server-architectuur
+### <a name="dual-server-architecture"></a>Architectuur met twee servers
 
-Installatie van BHOLD-Core en FIM op afzonderlijke servers biedt meer prestaties en flexibiliteit voor middelgrote organisaties die niet nodig voor een meer complexe implementatie, zoals opgegeven door architecturen met meerdere lagen hebt. De volgende afbeelding ziet u BHOLD en FIM geïnstalleerd op hun eigen servers. de FIM-server wordt ook SQL Server database-services om aan te bieden BHOLD en FIM uitgevoerd. De FIM-synchronisatieservice uitvoeren op de FIM-server worden gesynchroniseerd tussen de FIM- en BHOLD-databases. Houd er rekening mee dat als self-service door eindgebruikers vereist is, de integratie van BHOLD FIM-module moet worden geïnstalleerd op dezelfde server als de FIM-Service en de FIM-Portal. De integratie van BHOLD FIM-module vereist dat de FIM-Service en de integratie van BHOLD FIM-module op dezelfde server zijn geïnstalleerd.
+Het installeren van de BHOLD-kern en FIM op afzonderlijke servers biedt betere prestaties en flexibiliteit voor middel grote organisaties waarvoor geen complexe implementatie nodig is, zoals die van architecturen met meerdere lagen. In de volgende afbeelding ziet u BHOLD en FIM geïnstalleerd op hun eigen servers; de FIM-server wordt ook uitgevoerd SQL Server om database services te bieden aan BHOLD en FIM. De FIM-synchronisatie service die op de FIM-server wordt uitgevoerd, synchroniseert wijzigingen tussen de FIM-en BHOLD-data bases. Houd er rekening mee dat als selfservice voor eind gebruikers is vereist, de FIM-integratie module BHOLD moet zijn geïnstalleerd op dezelfde server als de FIM-service en de FIM-Portal. De FIM-integratie module van BHOLD vereist dat de FIM-service en de BHOLD FIM-integratie module op dezelfde server zijn geïnstalleerd.
 
-![Dual-server-architectuur](media/bhold-installation-guide/dual.png)
+![Architectuur met twee servers](media/bhold-installation-guide/dual.png)
 
 > [!IMPORTANT]
-> De rapportagefunctie van de integratie van BHOLD FIM-module vereist de BHOLD en FIM-databases worden geïnstalleerd op hetzelfde exemplaar van SQL Server en het BHOLD-serviceaccount moet toegangsrechten hebben voor de FIM-servicedatabase.
+> Voor de rapportage functie van de BHOLD FIM-integratie module moeten de BHOLD-en FIM-data bases op hetzelfde SQL Server-exemplaar zijn geïnstalleerd en moet het BHOLD-service account toegangs rechten hebben voor de FIM-service database.
 
 ### <a name="two-tier-architecture"></a>Architectuur met twee lagen
 
-In de meeste omgevingen, met name wanneer prestaties belangrijk is, moet u de BHOLD-Suite SP1, FIM en SQL Server uitvoeren op afzonderlijke servers (twee lagen architectuur). Met een architectuur met twee lagen, zijn geheugen en CPU-resources toegewezen voor elke laag. De volgende afbeelding toont een mogelijke manier voor het configureren van een architectuur met twee lagen. De FIM-synchronisatieservice uitvoeren op de FIM-server worden gesynchroniseerd tussen de FIM- en BHOLD-databases. Houd er rekening mee dat als self-service door eindgebruikers vereist is, de integratie van BHOLD FIM-module moet worden geïnstalleerd op dezelfde server als de FIM-Service en -Portal.
+In de meeste omgevingen, met name als de prestaties belang rijk zijn, moet u de BHOLD Suite SP1, FIM en SQL Server uitvoeren op afzonderlijke servers (architectuur met twee lagen). Met een architectuur met twee lagen zijn geheugen-en CPU-bronnen toegewezen voor elke laag. In de volgende afbeelding ziet u een mogelijke manier om een architectuur met twee lagen te configureren. De FIM-synchronisatie service die op de FIM-server wordt uitgevoerd, synchroniseert wijzigingen tussen de FIM-en BHOLD-data bases. Houd er rekening mee dat als selfservice voor eind gebruikers is vereist, de FIM-integratie module BHOLD moet zijn geïnstalleerd op dezelfde server als de FIM-service en-Portal.
 
 ![architectuur met twee lagen](media/bhold-installation-guide/two-tier.png)
 
 ### <a name="sql-server-recommendations"></a>SQL Server-aanbevelingen
 
-Als u BHOLD in een grote organisatie implementeert, is het raadzaam dat u volgt u deze richtlijnen voor het instellen van de Microsoft SQL Server-database:
+Als u BHOLD in een grote organisatie implementeert, wordt u ten zeerste aangeraden deze richt lijnen voor het instellen van de Microsoft SQL Server Data Base te volgen:
 
-- Implementeer SQL Server op een server gescheiden van FIM of BHOLD-services.
-- Isolatie van het logboekbestand van het bestand op het niveau van de fysieke schijf.
-- Als u van RAID gebruikmaakt voor redundantie van gegevensopslag, gebruikt u RAID-niveau 10 (1 + 0). Gebruik geen RAID-niveau 5.
-- Zorg ervoor dat de juiste instellingen configureren bij het gebruik van meer dan 2 GB fysiek geheugen voor de server waarop SQL Server wordt uitgevoerd.
-- Voor optimale prestaties van BHOLD, gebruikt u Microsoft SQL Server 2008 R2 of hoger.
+- Implementeer SQL Server op een server die losstaat van elke FIM-of BHOLD-service.
+- Isoleer het logboek bestand van het gegevens bestand op het niveau van de fysieke schijf.
+- Gebruik RAID-niveau 10 (1 + 0) als u gebruikmaakt van RAID om opslag redundantie te bieden. Gebruik niet RAID-niveau 5.
+- Zorg ervoor dat u de juiste instellingen configureert wanneer u meer dan 2 GB fysiek geheugen gebruikt voor de server met SQL Server.
 
-Zie voor meer informatie over aanbevolen procedures voor SQL Server, [opslag Top 10 aanbevolen procedures](https://www.microsoft.com/technet/prodtechnol/sql/bestpractice/storage-top-10.mspx) in de Microsoft TechNet Library.
+Zie [Top 10 best practices](https://www.microsoft.com/technet/prodtechnol/sql/bestpractice/storage-top-10.mspx) in de micro soft TechNet-bibliotheek voor meer informatie over SQL Server aanbevolen procedures.
 
-### <a name="trusted-certificates-list-update"></a>Vertrouwde certificaten lijst bijwerken
+### <a name="trusted-certificates-list-update"></a>Lijst met vertrouwde certificaten bijwerken
 
-Windows kan worden geconfigureerd voor het valideren van certificaatketens vóór het starten van een service. In dergelijke systemen starten een service niet als het uitvoerbare code van de service is ondertekend met een certificaat dat is niet in de lijst met vertrouwde certificaten (TCL) van de server. De SP1 van BHOLD-Suite van Microsoft-software is code die is ondertekend met behulp van een certificaatketen die afkomstig van het Microsoft Root Certificate Authority 2010-certificaat is voor codeondertekening.
-Windows kan worden geconfigureerd om op te halen basiscertificaten van Microsoft via een internetverbinding. Op een niet-verbonden systeem bevat Windows Server echter alleen de certificaten die aanwezig in het root-programma op een tijdstip waren voordat Windows werd uitgebracht. In de versies van Windows Server vóór Windows Server 2010, worden deze certificaten niet het basiscertificaat die nodig zijn voor het valideren van de certificaatketen voor codeondertekening van BHOLD-Suite SP1 opgenomen. Als u van plan bent een of meer Microsoft BHOLD-Suite SP1-modules installeren op een systeem dat een bijgewerkte TCL wellicht, moet u downloaden en installeren van het root-updatepakket of Groepsbeleid gebruiken voor het installeren van het root-updatepakket voordat u installeert een SP1 BHOLD-Suite -module. Zie voor meer informatie, [Windows root certificate program-leden](http://support.microsoft.com/kb/931125).
+Windows kan worden geconfigureerd voor het valideren van certificaat ketens voordat een service wordt gestart. Op dergelijke systemen kan een service niet worden gestart als de uitvoer bare code van de service is ondertekend met een certificaat dat niet voor komt in de lijst met vertrouwde certificaten (TCL) van de server. De micro soft BHOLD Suite SP1-software is code die is ondertekend met een certificaat keten voor ondertekening van programma code die afkomstig is van het certificaat van de micro soft-basis certificerings instantie 2010.
+Windows kan worden geconfigureerd om basis certificaten van micro soft op te halen via een Internet verbinding. Windows Server bevat op een niet-verbonden systeem echter alleen de certificaten die in het hoofd programma zijn opgenomen op het moment dat Windows werd uitgegeven. In versies van Windows Server ouder dan Windows Server 2010, bevatten deze certificaten niet het basis certificaat dat nodig is voor het valideren van de certificaat keten voor BHOLD Suite SP1-code ondertekening. Als u van plan bent een of meer micro soft BHOLD Suite SP1-modules te installeren op een systeem dat mogelijk geen actuele TCL heeft, moet u het root-update pakket downloaden en installeren, of groepsbeleid gebruiken om het root-update pakket te installeren voordat u een BHOLD Suite SP1 installeert programma. Zie [Windows Root Certificate Program-leden](http://support.microsoft.com/kb/931125)(Engelstalig) voor meer informatie.
 
-### <a name="installing-bhold-suite-sp1-on-windows-server-20122016-required-step"></a>Installatie van BHOLD-Suite SP1 op Windows Server 2012/2016 stap vereist 
+### <a name="installing-bhold-suite-sp1-on-windows-server-20122016-required-step"></a>BHOLD Suite SP1 installeren op Windows Server 2012/2016-stap vereist 
 
-![IIS installeren BHOLD](media/bhold-installation-guide/iis-install-bhold.png)
+![IIS-installatie BHOLD](media/bhold-installation-guide/iis-install-bhold.png)
 
-Als u SP1 voor BHOLD-Suite op Windows Server 2012 of 2016 installeert, de BHOLD-webpagina's wordt niet meer beschikbaar totdat u het bestand applicationHost.config in ```C:\Windows\System32\inetsrv\config```. In de ```<globalModules>``` sectie, voegt ```preCondition="bitness64``` naar het item dat begint ```<add name="SPNativeRequestModule"``` zodat deze als volgt wordt:
+Als u BHOLD Suite SP1 installeert op Windows Server 2012 of 2016, zijn de webpagina's van BHOLD niet beschikbaar totdat u het bestand applicationHost. config hebt gewijzigd in ```C:\Windows\System32\inetsrv\config```. Voeg in ```<globalModules>``` de sectie toe ```preCondition="bitness64``` aan de vermelding die begint ```<add name="SPNativeRequestModule"``` , zodat deze als volgt wordt gelezen:
 
 ```<add name="SPNativeRequestModule" image="C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\isapi\spnativerequestmodule.dll" preCondition="bitness64"/>```
 
-Na het bewerken en opslaan van het bestand, voert u de opdracht iisreset opnieuw instellen van de IIS-server.
+Nadat u het bestand hebt bewerkt en opgeslagen, voert u de opdracht iisreset uit om de IIS-server opnieuw in te stellen.
 
 
-## <a name="upgrading-bhold-suite"></a>Upgraden van BHOLD-Suite
+## <a name="upgrading-bhold-suite"></a>Upgrade uitvoeren voor BHOLD Suite
 
-U kunt een bestaande installatie van BHOLD-Suite niet bijwerken. In plaats daarvan moet u een bestaande installatie van BHOLD-Suite verwijderen voordat u BHOLD-modules kunt bijwerken. Als u een bestaand model voor BHOLD-rol hebt, kunt u de BHOLD-database bijwerken en dit gebruiken wanneer u de bijgewerkte BHOLD-Core-module installeren. Zie voor meer informatie, [vervangen van BHOLD-Suite met BHOLD-Suite SP1](https://technet.microsoft.com/library/jj874043(v=ws.10).aspx).
+U kunt geen upgrade uitvoeren van een bestaande installatie van de BHOLD-Suite. In plaats daarvan moet u een bestaande installatie van de BHOLD-Suite verwijderen voordat u BHOLD-modules kunt bijwerken. Als u een bestaand BHOLD-functie model hebt, kunt u de BHOLD-data base upgraden en deze gebruiken wanneer u de bijgewerkte kern module van BHOLD installeert. Zie [BHOLD Suite vervangen door BHOLD Suite SP1](https://technet.microsoft.com/library/jj874043(v=ws.10).aspx)voor meer informatie.
 
 
 ## <a name="next-steps"></a>Volgende stappen
