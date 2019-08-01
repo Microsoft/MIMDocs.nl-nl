@@ -1,49 +1,49 @@
 ---
-title: Configureren van WindowsServer 2016 voor MIM 2016 SP1 | Microsoft Docs
-description: Lees de stappen en de minimale vereisten voor het voorbereiden van Windows Server 2016 om te werken met MIM 2016 SP1.
+title: Windows Server 2016 configureren voor MIM 2016 SP1 | Microsoft Docs
+description: De stappen en minimale vereisten ophalen voor het voorbereiden van Windows Server 2016 voor gebruik met MIM 2016 SP1.
 keywords: ''
 author: billmath
 ms.author: billmath
 manager: mtillman
 ms.date: 04/26/2018
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.prod: microsoft-identity-manager
 ms.assetid: 51507d0a-2aeb-4cfd-a642-7c71e666d6cd
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: a0fa1e837fd73872043748ee73f19a29d1d1412f
-ms.sourcegitcommit: 3b514aba69af203f176b40cdb7c2a51c477c944a
+ms.openlocfilehash: 7348507593426ba112feef9d68686ee493a6391d
+ms.sourcegitcommit: 65e11fd639464ed383219ef61632decb69859065
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51718335"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68701399"
 ---
-# <a name="set-up-an-identity-management-server-windows-server-2016"></a>Een server voor identiteitsbeheer instellen: Windows Server 2016
+# <a name="set-up-an-identity-management-server-windows-server-2016"></a>Een server voor identiteits beheer instellen: Windows Server 2016
 
 > [!div class="step-by-step"]
-> [«Een domein voorbereiden](preparing-domain.md)
-> [SQL Server 2016»](prepare-server-sql2016.md)
+> [«Een domein](preparing-domain.md)
+> voorbereiden[SQL Server 2016»](prepare-server-sql2016.md)
 > 
 > [!NOTE]
 > In deze stapsgewijze instructies wordt gebruikgemaakt van voorbeeldnamen en -waarden van een bedrijf met de naam Contoso. Vervang deze door uw eigen namen en waarden. Bijvoorbeeld:
-> - Naam van de domeincontroller - **corpdc**
+> - Naam van domein controller- **corpdc**
 > - Domeinnaam: **contoso**
-> - Naam van de MIM-Service-Server - **corpservice**
-> - Naam van de MIM-synchronisatieserver - **corpsync**
-> - Naam van SQL Server - **corpsql**
+> - Naam van de MIM-service Server- **corpservice**
+> - Naam MIM-synchronisatie server- **corpsync**
+> - SQL Server naam- **corpsql**
 > - Wachtwoord - <strong>Pass@word1</strong>
 
 ## <a name="join-windows-server-2016-to-your-domain"></a>Windows Server 2016 toevoegen aan uw domein
 
-Beginnen met een computer met Windows Server 2016, met een minimum van 8 tot 12GB aan RAM-geheugen. Geef bij de installatie 'Windows Server 2016 Standard/Datacenter (Server met een GUI) x 64' edition.
+Begin met een Windows Server 2016-computer, met mini maal 8 GB RAM-geheugen. Geef bij de installatie de editie Windows Server 2016 Standard/Data Center (server met een GUI) x64 op.
 
 1. Meld u als beheerder aan bij de nieuwe computer.
 
-2. Geef in Configuratiescherm de computer een statisch IP-adres op het netwerk. Configureer de netwerkinterface voor het verzenden van DNS-query's naar het IP-adres van de domeincontroller in de vorige stap en stel de computernaam op **CORPSERVICE**.  Deze bewerking wordt een server opnieuw opstarten vereist.
+2. Geef in Configuratiescherm de computer een statisch IP-adres op het netwerk. Configureer die netwerk interface voor het verzenden van DNS-query's naar het IP-adres van de domein controller in de vorige stap en stel de computer naam in op **CORPSERVICE**.  Voor deze bewerking moet de server opnieuw worden opgestart.
 
-3. Open het Configuratiescherm en de computer koppelen aan het domein dat u hebt geconfigureerd in de laatste stap *contoso.com*.  Met deze bewerking bevat die de gebruikersnaam en referenties van een domeinbeheerder, zoals *Contoso\Administrator*.  Nadat het welkomstbericht wordt weergegeven, sluit u het dialoogvenster en start u deze server opnieuw op.
+3. Open het configuratie scherm en voeg de computer toe aan het domein dat u in de laatste stap hebt geconfigureerd, *contoso.com*.  Met deze bewerking wordt de gebruikers naam en referenties van een domein beheerder, zoals *Contoso\Administrator*, verstrekt.  Nadat het welkomstbericht wordt weergegeven, sluit u het dialoogvenster en start u deze server opnieuw op.
 
-4. Meld u aan bij de computer *CORPSERVICE* als een domeinaccount met de beheerder van de lokale computer, zoals *Contoso\MIMINSTALL*.
+4. Meld u aan bij de computer *CORPSERVICE* als een domein account met een lokale computer beheerder, zoals *Contoso\MIMINSTALL*.
 
 
 5. Start als beheerder een PowerShell-venster en typ de volgende opdracht om de computer bij te werken met de groepsbeleidsinstellingen.
@@ -69,29 +69,29 @@ Beginnen met een computer met Windows Server 2016, met een minimum van 8 tot 12G
 
 Stel het beveiligingsbeleid van de server zo in dat de zojuist gemaakte accounts als services kunnen worden uitgevoerd.
 > [!NOTE] 
-> Afhankelijk van uw configuratie, één server(all-in-one) of gedistribueerde servers u alleen hoeft toe te voegen, op basis van rol van de lidcomputer, zoals synchronisatieserver. 
+> Afhankelijk van uw configuratie, één server (alles-in-één) of gedistribueerde servers die u alleen moet toevoegen, op basis van de rol van de leden computer, zoals synchronisatie server. 
 
 1. Start het programma Lokaal beveiligingsbeleid
 
 2. Navigeer naar **Lokaal beleid > Toewijzing van gebruikersrechten**.
 
-3. In het detailvenster met de rechtermuisknop op **aanmelden als een service**, en selecteer **eigenschappen**.
+3. Klik in het detail venster met de rechter muisknop op **Aanmelden als service**en selecteer **Eigenschappen**.
 
     ![Afbeelding voor Lokaal beveiligingsbeleid](media/MIM-DeployWS3.png)
 
-4. Klik op **gebruiker of groep toevoegen**, en in het tekstvak te volgen op basis van rol `contoso\MIMSync; contoso\MIMMA; contoso\MIMService; contoso\SharePoint; contoso\SqlServer; contoso\MIMSSPR`, klikt u op **namen controleren**, en klikt u op **OK**.
+4. Klik op **gebruiker of groep toevoegen**, en typ in het tekstvak volgende op basis van `contoso\MIMSync; contoso\MIMMA; contoso\MIMService; contoso\SharePoint; contoso\SqlServer; contoso\MIMSSPR`rol, klik op **Namen controleren**en klik vervolgens op **OK**.
 
 5. Klik op **OK** om het venster **Aanmelden als service > Eigenschappen** te sluiten.
 
-6.  In het detailvenster met de rechtermuisknop op **toegang tot deze computer vanaf het netwerk weigeren**, en selecteer **eigenschappen**. >
+6.  Klik in het detail venster met de rechter muisknop op **toegang tot deze computer vanaf het netwerk weigeren**en selecteer **Eigenschappen**. >
 
-[!NOTE] Scheiden van de rol van servers, worden sommige functies, zoals SSPR verbroken.
+[!NOTE] Het scheiden van de functie servers verbreekt sommige functies, zoals SSPR.
 
 7. Klik op **Gebruiker of groep toevoegen**, typ `contoso\MIMSync; contoso\MIMService` in het tekstvak en klik op **OK**.
 
 8. Klik op **OK** om het venster **Toegang tot deze computer vanaf het netwerk weigeren > Eigenschappen** te sluiten.
 
-9. In het detailvenster met de rechtermuisknop op **lokaal aanmelden weigeren**, en selecteer **eigenschappen**.
+9. Klik in het detail venster met de rechter muisknop op **lokaal aanmelden weigeren**en selecteer **Eigenschappen**.
 
 10. Klik op **Gebruiker of groep toevoegen**, typ `contoso\MIMSync; contoso\MIMService` in het tekstvak en klik op **OK**.
 
@@ -100,7 +100,7 @@ Stel het beveiligingsbeleid van de server zo in dat de zojuist gemaakte accounts
 12. Sluit het venster Lokaal beveiligingsbeleid.
 
 
-## <a name="change-the-iis-windows-authentication-mode-if-needed"></a>Indien nodig, de Windows-verificatie voor IIS-modus wijzigen
+## <a name="change-the-iis-windows-authentication-mode-if-needed"></a>Wijzig indien nodig de Windows-verificatie modus voor IIS
 
 1.  Open een PowerShell-venster.
 
@@ -113,5 +113,5 @@ Stel het beveiligingsbeleid van de server zo in dat de zojuist gemaakte accounts
     ```
 
 > [!div class="step-by-step"]  
-> [«Een domein voorbereiden](preparing-domain.md)
-> [SQL Server 2016»](prepare-server-sql2016.md)
+> [«Een domein](preparing-domain.md)
+> voorbereiden[SQL Server 2016»](prepare-server-sql2016.md)

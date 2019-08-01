@@ -6,17 +6,17 @@ author: billmath
 ms.author: billmath
 manager: mtillman
 ms.date: 05/01/2018
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.prod: microsoft-identity-manager
 ms.assetid: 2585e9c5-ce34-46c7-bdcf-8c08773901dc
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: cec04cf430ba38ec40b61e4aad68fd8447d13c99
-ms.sourcegitcommit: 4f0b2883922bcb8fbef6b4284c35c6ca62c11565
+ms.openlocfilehash: fba7eb3caea1f00c37f00f3fd2bf67dfe3f12871
+ms.sourcegitcommit: 65e11fd639464ed383219ef61632decb69859065
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "56952176"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68701262"
 ---
 # <a name="install-mim-2016-mim-synchronization-service"></a>MIM 2016 installeren: MIM-synchronisatieservice
 
@@ -26,20 +26,20 @@ ms.locfileid: "56952176"
 > 
 > [!NOTE]
 > In deze stapsgewijze instructies wordt gebruikgemaakt van voorbeeldnamen en -waarden van een bedrijf met de naam Contoso. Vervang deze door uw eigen namen en waarden. Bijvoorbeeld:
-> - Naam van de domeincontroller - **corpdc**
+> - Naam van domein controller- **corpdc**
 > - Domeinnaam: **contoso**
-> - Naam van de MIM-Service-Server - **corpservice**
-> - Naam van de MIM-synchronisatieserver - **corpsync**
-> - Naam van SQL Server - **corpsql**
+> - Naam van de MIM-service Server- **corpservice**
+> - Naam MIM-synchronisatie server- **corpsync**
+> - SQL Server naam- **corpsql**
 > - Wachtwoord - <strong>Pass@word1</strong>
 
 Stel eerst het installatiepakket in voordat u de Microsoft Identity Manager 2016-onderdelen installeert.
 
-1. Meld u als *contoso\miminstall* naar de server die u voor de server voor identiteitsbeheer synchronisatie gebruikt **corpsync**.
+1. Meld u aan als *contoso\miminstall* voor de server die u gebruikt voor Identity Management synchronisatie server **corpsync**.
 
-2. Pak het MIM-installatiepakket uit of plaats de dvd met de MIM-installatiekopie.  Als u deze DVD hebt, raadpleegt u [Microsoft Identity Manager-licentieverlening en downloads](microsoft-identity-manager-licensing.md).
+2. Pak het MIM-installatiepakket uit of plaats de dvd met de MIM-installatiekopie.  Als u deze DVD niet hebt, raadpleegt u [Microsoft Identity Manager licenties en down loads](microsoft-identity-manager-licensing.md).
 
-## <a name="install-mim-2016-sp1-synchronization-service"></a>MIM 2016 SP1-synchronisatieservice installeren
+## <a name="install-mim-2016-sp1-synchronization-service"></a>MIM 2016 SP1-synchronisatie service installeren
 
 1. Navigeer in de uitgepakte MIM-installatiemap naar de map **Synchronisatieservice**.
 
@@ -57,15 +57,15 @@ Stel eerst het installatiepakket in voordat u de Microsoft Identity Manager 2016
 
 6. Selecteer het volgende in het configuratiescherm voor de Sync-servicedatabase:
 
-   1.  De SQL-Server bevindt zich op: **Een externe computer** met de naam **corpsql.contoso.com**.
+   1.  Het SQL Server bevindt zich op: **Een externe computer met de** naam **corpsql.contoso.com**.
 
-   2.  De SQL Server-exemplaar is: **Het standaardexemplaar**
+   2.  Het SQL Server-exemplaar is: **Het standaard exemplaar**
 
    ![Afbeelding voor de databaseverbinding](media/install-mim-sync/MIM_Install3.png)
 
 7. Configureer het synchronisatieserviceaccount volgens het account dat u eerder hebt gemaakt:
 
-   1. Service-account: *MIMSync*
+   1. Service account: *MIMSync*
 
    2. Wachtwoord: <em>Pass@word1</em>
 

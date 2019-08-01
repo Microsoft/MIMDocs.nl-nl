@@ -6,22 +6,22 @@ author: billmath
 ms.author: billmath
 manager: mtillman
 ms.date: 10/26/2017
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.prod: microsoft-identity-manager
 ms.assetid: 50345fda-56d7-4b6e-a861-f49ff90a8376
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: cbba7abe810fea0943e087206f7b0b6e3baa7cbb
-ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
+ms.openlocfilehash: 35845cc9bb4358f3f837b8a007de15da972c980d
+ms.sourcegitcommit: 65e11fd639464ed383219ef61632decb69859065
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49357870"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68701313"
 ---
 # <a name="set-up-a-domain"></a>Stel een domein in
 
 > [!div class="step-by-step"]
-> [WindowsServer 2016»](prepare-server-ws2016.md)
+> [Windows Server 2016»](prepare-server-ws2016.md)
 
 Microsoft Identity Manager (MIM) werkt samen met uw Active Directory-domein (AD). U moet AD al hebben geïnstalleerd en ervoor zorgen dat uw omgeving een domeincontroller bevat voor een domein dat u kunt beheren.
 
@@ -33,11 +33,11 @@ Alle onderdelen van uw MIM-implementatie hebben een eigen identiteit in het dome
 
 > [!NOTE]
 > In deze stapsgewijze instructies wordt gebruikgemaakt van voorbeeldnamen en -waarden van een bedrijf met de naam Contoso. Vervang deze door uw eigen namen en waarden. Bijvoorbeeld:
-> - Naam van de domeincontroller - **corpdc**
+> - Naam van domein controller- **corpdc**
 > - Domeinnaam: **contoso**
-> - Naam van de MIM-Service-Server - **corpservice**
-> - Naam van de MIM-synchronisatieserver - **corpsync**
-> - Naam van SQL Server - **corpsql**
+> - Naam van de MIM-service Server- **corpservice**
+> - Naam MIM-synchronisatie server- **corpsync**
+> - SQL Server naam- **corpsql**
 > - Wachtwoord - <strong>Pass@word1</strong>
 
 1. Meld u als domeinbeheerder (*bijvoorbeeld Contoso\Administrator*) aan bij de domeincontroller.
@@ -99,11 +99,11 @@ Alle onderdelen van uw MIM-implementatie hebben een eigen identiteit in het dome
     setspn -S FIMService/mim.contoso.com Contoso\MIMService
     setspn -S FIMService/corpservice.contoso.com Contoso\MIMService
     ```
-5.  Tijdens de installatie moeten we de volgende "A" DNS-records voor een juiste naamomzetting toevoegen
+5.  Tijdens de installatie moeten de volgende DNS-records worden toegevoegd voor de juiste naam omzetting
 
-- Mim.contoso.com punt corpservice fysieke IP-adres
-- PasswordReset.contoso.com punt corpservice fysieke IP-adres
-- passwordregistration.contoso.com punt corpservice fysieke IP-adres
+- mim.contoso.com Point naar corpservice fysiek IP-adres
+- passwordreset.contoso.com Point naar corpservice fysiek IP-adres
+- passwordregistration.contoso.com Point naar corpservice fysiek IP-adres
 
 > [!div class="step-by-step"]
-> [WindowsServer 2016»](prepare-server-ws2016.md)
+> [Windows Server 2016»](prepare-server-ws2016.md)

@@ -8,48 +8,47 @@ manager: mtillman
 ms.date: 11/05/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.technology: security
-ms.openlocfilehash: 60d40a622475351efee846d8510373ecdc565a24
-ms.sourcegitcommit: 486f860f0951413aed335138eb6ad4ce6c50ed4d
+ms.openlocfilehash: e1419f7b7ae49ec56f4294051d8e094846ac2ed0
+ms.sourcegitcommit: 65e11fd639464ed383219ef61632decb69859065
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56852626"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68701460"
 ---
 # <a name="microsoft-identity-manager-2016-news-and-updates"></a>Microsoft Identity Manager 2016 nieuws en updates
 
-Microsoft Identity Manager (MIM) 2016 bouwt voort op de beheermogelijkheden identiteits- en toegangsbeheer van Forefront Identity Manager. Net als bij de voorganger kunt u met MIM de gebruikers, de referenties, het beleid en de toegang in uw organisatie beheren.  Daarnaast voegt MIM 2016 hieraan een hybride-ervaring, beheermogelijkheden voor bevoegde toegang en ondersteuning voor nieuwe platformen toe.
+Microsoft Identity Manager (MIM) 2016 bouwt voort op de mogelijkheden voor identiteits-en toegangs beheer van Forefront Identity Manager. Net als bij de voorganger kunt u met MIM de gebruikers, de referenties, het beleid en de toegang in uw organisatie beheren.  Daarnaast voegt MIM 2016 hieraan een hybride-ervaring, beheermogelijkheden voor bevoegde toegang en ondersteuning voor nieuwe platformen toe.
 
 
-Met MIM, kan een organisatie vereenvoudigen van beheer van identiteitslevenscycli met geautomatiseerde werkstromen, bedrijfsregels en eenvoudige integratie met heterogene platforms in het datacenter. MIM kan de organisatie de juiste gebruikers hebben en toegangsrechten voor Active Directory voor on-premises apps en Azure AD Connect kunnen vervolgens beschikbaar maken in Azure AD voor Office 365 en cloud-gebaseerde apps. Algemene MIM-scenario's zijn onder andere:
- - Automatische identiteits- en groep inrichten op basis van bedrijfsbeleid en werkstroom gebaseerde inrichting
- - Integratie van de inhoud van de mappen met HR-systemen en andere bronnen van instantie
- - Synchroniseren van identiteiten tussen mappen, databases en on-premises toepassingen via algemene API's en -protocollen, connectors Microsoft geleverd en partner geleverd connectors
+Met MIM kan een organisatie het beheer van de identiteits levenscyclus vereenvoudigen met geautomatiseerde werk stromen, bedrijfs regels en eenvoudige integratie met heterogene platforms in het Data Center. Met MIM kan de organisatie beschikken over de juiste gebruikers-en toegangs rechten voor Active Directory voor on-premises apps en Azure AD Connect vervolgens beschikbaar maken in azure AD voor Office 365 en in de Cloud gehoste apps. Algemene MIM-scenario's zijn onder andere:
+ - Automatische identiteit en groep inrichten op basis van bedrijfs beleid en het inrichten van werk stromen
+ - Integratie van de inhoud van directory's met HR-systemen en andere bron instanties
+ - Identiteiten synchroniseren tussen directory's, data bases en on-premises toepassingen via algemene Api's en protocollen, door micro soft geleverde connectors en door partners geleverde connectors
 
-De huidige release onder algemene ondersteuning is MIM 2016 Service Pack 1 (SP1).  Deze release in augustus 2017 updates opgenomen in de MIM-Portal, PAM-scenario en ondersteuning toegevoegd voor nieuwe platformen.  Klanten met FIM of MIM versies vóór MIM 2016 SP1 moeten opwaarderen naar MIM 2016 SP1 of een latere hotfix.  Meer informatie over [naar MIM 2016 SP1](./reference/version-history.md).
+De huidige release onder mainstream ondersteuning is MIM 2016 Service Pack 1 (SP1).  In deze release in augustus 2017 zijn updates opgenomen in de MIM-Portal, het PAM-scenario en de toegevoegde ondersteuning voor nieuwe platforms.  Klanten die FIM of MIM-versies voorafgaand aan MIM 2016 SP1 uitvoeren, moeten een upgrade uitvoeren naar MIM 2016 SP1 of een latere hotfix.  Lees meer over [het upgraden naar MIM 2016 SP1](./reference/version-history.md).
 
 ## <a name="updates-since-mim-2016-sp1"></a>Updates sinds MIM 2016 SP1
 
-Microsoft biedt regelmatig updates met MIM, met inbegrip van uitbreidingen voor aanvragen van klanten en oplossingen voor problemen, op basis van een doorlopende releasecyclus.
+Micro soft levert regel matig updates aan MIM, inclusief verbeteringen voor klant aanvragen en probleem oplossingen, op een doorlopende versie cyclus.
 
-### <a name="major-new-and-updated-scenarios"></a>Belangrijke scenario's voor nieuwe en bijgewerkte
+### <a name="major-new-and-updated-scenarios"></a>Belang rijke nieuwe en bijgewerkte scenario's
 
-- [Azure AD B2B-samenwerking met MIM Graph-connector en de toepassingsproxy van Azure is algemeen beschikbaar](microsoft-identity-manager-2016-graph-b2b-scenario.md), laatst bijgewerkte April 2018
-- [Hybride rapportage van MIM is](https://cloudblogs.microsoft.com/enterprisemobility/2018/02/23/hybrid-mim-reporting-now-available-in-azure-active-directory/), laatst bijgewerkte februari 2018
-- [Lijst met afgeschafte functies MIM herzien](microsoft-identity-manager-2016-deprecated-features.md), laatst bijgewerkte februari 2018
+- [Azure AD B2B-samen werking met MIM Graph connector en Azure-toepassing proxy is ga](microsoft-identity-manager-2016-graph-b2b-scenario.md), laatst bijgewerkt: april 2018
+- [Hybrid MIM Reporting is ga](https://cloudblogs.microsoft.com/enterprisemobility/2018/02/23/hybrid-mim-reporting-now-available-in-azure-active-directory/), laatst bijgewerkt: februari 2018
+- [Herziene versie van MIM-onderdelen lijst herzien](microsoft-identity-manager-2016-deprecated-features.md), laatst bijgewerkt: februari 2018
 
-### <a name="recent-software-releases"></a>Recente softwareversies
+### <a name="recent-software-releases"></a>Recente software releases
 
-- [MIM-Connector worden vrijgegeven](./reference/microsoft-identity-manager-2016-connector-version-history.md), laatst bijgewerkte maart 2018
-- [MIM Sync, Service, Portal, CM,-invoegtoepassingen en -client worden vrijgegeven](./reference/version-history.md) laatst bijgewerkt November 2017
-- [MIM BHOLD-modules worden vrijgegeven](./reference/version-bhold-history.md) laatst bijgewerkt September 2017
+- [Release van MIM-connector](./reference/microsoft-identity-manager-2016-connector-version-history.md), laatst bijgewerkt: maart 2018
+- [MIM Sync, service, portal, cm, invoeg toepassingen en client releases](./reference/version-history.md) laatst bijgewerkt: november 2017
+- [MIM BHOLD modules-releases](./reference/version-bhold-history.md) laatst bijgewerkt op september 2017
 
 
 
 
 ## <a name="related-topics"></a>Verwante onderwerpen
 
-Leer meer over scenario's toegevoegd in MIM 2016 en eerdere versies bij [Microsoft Identity manager 2016](microsoft-identity-manager-2016.md).
+Meer informatie over scenario's die zijn toegevoegd in MIM 2016 en eerdere versies van [micro soft Identity manager 2016](microsoft-identity-manager-2016.md).
 
-Lees meer documentatie over het implementeren van MIM en de meest recente versie van de [MIM Documentation Roadmap](https://docs.microsoft.com/en-us/microsoft-identity-manager/).
+Meer informatie over het implementeren van MIM en de nieuwste versie vindt u in het [documentatie schema van MIM](https://docs.microsoft.com/en-us/microsoft-identity-manager/).
 

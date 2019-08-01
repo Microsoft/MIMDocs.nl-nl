@@ -6,19 +6,19 @@ author: billmath
 ms.author: billmath
 manager: mtillman
 ms.date: 04/26/2018
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.prod: microsoft-identity-manager
 ms.assetid: c01487f2-3de6-4fc4-8c3a-7d62f7c2496c
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 5beee58388c12abbe8e3245ff610d3528b03786a
-ms.sourcegitcommit: f58926a9e681131596a25b66418af410a028ad2c
+ms.openlocfilehash: 46080360dd0ad6c3554e2d9b3418ac518b75a5cd
+ms.sourcegitcommit: 65e11fd639464ed383219ef61632decb69859065
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67690759"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68701387"
 ---
-# <a name="set-up-an-identity-management-server-sharepoint"></a>Een server voor identiteitsbeheer instellen: SharePoint
+# <a name="set-up-an-identity-management-server-sharepoint"></a>Een server voor identiteits beheer instellen: SharePoint
 
 > [!div class="step-by-step"]
 > [«SQL Server 2016](prepare-server-sql2016.md)
@@ -26,22 +26,22 @@ ms.locfileid: "67690759"
 > 
 > [!NOTE]
 > In deze stapsgewijze instructies wordt gebruikgemaakt van voorbeeldnamen en -waarden van een bedrijf met de naam Contoso. Vervang deze door uw eigen namen en waarden. Bijvoorbeeld:
-> - Naam van de domeincontroller - **corpdc**
+> - Naam van domein controller- **corpdc**
 > - Domeinnaam: **contoso**
-> - Naam van de MIM-Service-Server - **corpservice**
-> - Naam van de MIM-synchronisatieserver - **corpsync**
-> - Naam van SQL Server - **corpsql**
+> - Naam van de MIM-service Server- **corpservice**
+> - Naam MIM-synchronisatie server- **corpsync**
+> - SQL Server naam- **corpsql**
 > - Wachtwoord - <strong>Pass@word1</strong>
 
 
-## <a name="install-sharepoint-2016"></a>Installeer **SharePoint 2016**
+## <a name="install-sharepoint-2016"></a>**Share point 2016** installeren
 
 > [!NOTE]
 > Voor het installatieprogramma is een internetverbinding vereist zodat de vereiste onderdelen hiervoor kunnen worden gedownload. Als de computer zich op een virtueel netwerk bevindt dat geen verbinding met internet heeft, voegt u een extra netwerkinterface toe aan de computer zodat deze verbinding met internet kan maken. Dit kan worden uitgeschakeld nadat de installatie is voltooid.
 
-Volg deze stappen voor het installeren van SharePoint 2016. Wanneer u de installatie hebt voltooid, wordt de server opnieuw gestart.
+Volg deze stappen om share point 2016 te installeren. Wanneer u de installatie hebt voltooid, wordt de server opnieuw gestart.
 
-1.  Start **PowerShell** als een domeinaccount met lokale beheerder op de **corpservice** en **sysadmin** op SQL database-server zullen worden gebruikt voor out **contoso\ miminstall**.
+1.  Start **Power shell** als een domein account met een lokale beheerder op de **corpservice** en **sysadmin** op SQL database server gaan we **contoso\miminstall**gebruiken.
 
     -   Ga naar de map waar SharePoint is uitgepakt.
 
@@ -51,7 +51,7 @@ Volg deze stappen voor het installeren van SharePoint 2016. Wanneer u de install
         .\prerequisiteinstaller.exe
         ```
 
-2.  Na **SharePoint** vereiste onderdelen zijn geïnstalleerd, installeert u **SharePoint 2016** door de volgende opdracht te typen:
+2.  Nadat de vereiste onderdelen voor **share point** zijn geïnstalleerd, installeert u **share point 2016** door de volgende opdracht te typen:
 
     ```
     .\setup.exe
@@ -67,16 +67,16 @@ Voer de stappen uit die in de **wizard Configuratie van SharePoint-producten** w
 
 1. Stel de gegevens op het tabblad **Verbinding met een serverfarm maken** in om een nieuwe serverfarm te maken.
 
-2. Geef op deze server als de database-server, zoals **corpsql** voor de configuratiedatabase en *Contoso\SharePoint* als het account van de database-toegang voor SharePoint moet worden gebruikt.
+2. Geef deze server op als de database server als **corpsql** voor de configuratie database en *Contoso\SharePoint* als het database toegangs account dat door share point moet worden gebruikt.
 3. Maak een wachtwoord voor de wachtwoordzin van de farmbeveiliging.
 
-4. In de configuratie van de Wizard wordt u geadviseerd [MinRole](/sharepoint/install/overview-of-minrole-server-roles-in-sharepoint-server) type **front-end**
+4. In de configuratie wizard raden we u aan om [MinRole](/sharepoint/install/overview-of-minrole-server-roles-in-sharepoint-server) type **front-end** te selecteren
 
-5. Wanneer configuratietaak 10 van 10 in de configuratiewizard is voltooid, klikt u op Voltooien en wordt er een web browser wordt geopend...
+5. Wanneer configuratie taak 10 van 10 door de configuratie wizard is voltooid, klikt u op volt ooien en wordt er een webbrowser geopend.
 
-6. Als u hierom wordt gevraagd de pop-up van Internet Explorer, verifiëren als *Contoso\miminstall* (of het equivalent administrator-account) om door te gaan.
+6. Als u wordt gevraagd om de pop-up van Internet Explorer, verifieer als *Contoso\miminstall* (of het equivalente beheerders account) om door te gaan.
 
-7. Klik in de webwizard (binnen de web-app) op **annuleren/overslaan**.
+7. Klik in de wizard Web (in de web-app) op **Annuleren/overs Laan**.
 
 
 ## <a name="prepare-sharepoint-to-host-the-mim-portal"></a>SharePoint voorbereiden om de MIM-portal te hosten
@@ -84,7 +84,7 @@ Voer de stappen uit die in de **wizard Configuratie van SharePoint-producten** w
 > [!NOTE]
 > In eerste instantie wordt SSL niet geconfigureerd. Configureer SSL of een vergelijkbaar protocol voordat u toegang tot deze portal inschakelt.
 
-1. Start **SharePoint 2016-beheershell** en voer de volgende PowerShell-script voor het maken van een **webtoepassing voor SharePoint 2016**.
+1. Start **share point 2016-beheer shell** en voer het volgende Power shell-script uit om een **share point 2016-webtoepassing**te maken.
 
     ```
     New-SPManagedAccount ##Will prompt for new account enter contoso\mimpool 
@@ -93,9 +93,9 @@ Voer de stappen uit die in de **wizard Configuratie van SharePoint-producten** w
     ```
 
     > [!NOTE]
-    > Er wordt een waarschuwing weergegeven waarin wordt vermeld dat de klassieke Windows-verificatiemethode wordt gebruikt en het kan enkele minuten duren voordat de laatste opdracht een waarde retourneert. Wanneer het script is voltooid, wordt in de uitvoer de URL van de nieuwe portal vermeld. Houd de **SharePoint 2016-beheershell** venster openen om te verwijzen naar later opnieuw.
+    > Er wordt een waarschuwing weergegeven waarin wordt vermeld dat de klassieke Windows-verificatiemethode wordt gebruikt en het kan enkele minuten duren voordat de laatste opdracht een waarde retourneert. Wanneer het script is voltooid, wordt in de uitvoer de URL van de nieuwe portal vermeld. Houd het **share point 2016 Management Shell-** venster geopend om later naar referentie te verwijzen.
 
-2. Open SharePoint 2016 Management Shell en voer de volgende PowerShell-script voor het maken een **SharePoint-siteverzameling** die zijn gekoppeld aan deze webtoepassing.
+2. Start share point 2016-beheer shell en voer het volgende Power shell-script uit om een **share point-site verzameling** te maken die aan die webtoepassing is gekoppeld.
 
    ```
     $t = Get-SPWebTemplate -compatibilityLevel 15 -Identity "STS#1"
@@ -106,9 +106,9 @@ Voer de stappen uit die in de **wizard Configuratie van SharePoint-producten** w
    ```
 
    > [!NOTE]
-   > Controleer het resultaat van de *compatibiliteitsniveau* variabele is '15'. Als het resultaat is dan '15', klikt u vervolgens de siteverzameling niet gemaakt de versie van de juiste ervaring; Verwijder de siteverzameling en maak deze opnieuw.
+   > Controleer of het resultaat van de variabele *compatibiliteits niveau* ' 15 ' is. Als het resultaat geen ' 15 ' is, is de site verzameling niet de juiste ervarings versie gemaakt. Verwijder de site verzameling en maak deze opnieuw.
 
-3. Uitschakelen **SharePoint Server-Side weergavestatus** en de SharePoint-taak 'Statusanalysetaak (elk uur, Microsoft SharePoint Foundation-Timer, alle Servers)' door het uitvoeren van de volgende PowerShell-opdrachten de  **SharePoint 2016-beheershell**:
+3. Schakel **weergave status van share Point server** en de share point-taak Health Analysis (elk uur, micro soft share point Foundation-timer, alle servers) uit door de volgende Power shell-opdrachten uit te voeren in de **share point 2016-beheer shell**:
 
    ```
    $contentService = [Microsoft.SharePoint.Administration.SPWebService]::ContentService;
@@ -117,9 +117,9 @@ Voer de stappen uit die in de **wizard Configuratie van SharePoint-producten** w
    Get-SPTimerJob hourly-all-sptimerservice-health-analysis-job | disable-SPTimerJob
    ```
 
-4. Open op uw server voor identiteitsbeheer, een nieuw tabblad in de webbrowser, gaat u naar http://mim.contoso.com/ en meld u aan als *contoso\miminstall*.  Er wordt een lege SharePoint-site met de naam *MIM-portal* weergegeven.
+4. Open een nieuw browser tabblad op de server voor identiteits beheer, ga naar http://mim.contoso.com/ en meld u aan als *contoso\miminstall*.  Er wordt een lege SharePoint-site met de naam *MIM-portal* weergegeven.
 
-    ![MIM-Portal op http://mim.contoso.com/ installatiekopie](media/prepare-server-sharepoint/MIM_DeploySP1new.png)
+    ![MIM-Portal http://mim.contoso.com/ op installatie kopie](media/prepare-server-sharepoint/MIM_DeploySP1new.png)
 
 5. Kopieer de URL en ga vervolgens in Internet Explorer naar **Internetopties**, open het tabblad **Beveiliging**, selecteer **Lokaal intranet** en klik op **Sites**.
 

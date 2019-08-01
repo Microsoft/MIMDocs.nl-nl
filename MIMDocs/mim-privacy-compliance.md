@@ -1,183 +1,183 @@
 ---
-title: Verwerking van gegevens van Microsoft Identity Manager | Microsoft Docs
-description: Informatie over Microsoft Identity Manager-gegevens verwerken om te herkennen en rapporteren van gegevens binnen de omgeving, actie ondernemen in de opgegeven systeem op basis van operationele taken en vereiste.
+title: Microsoft Identity Manager gegevens verwerking | Microsoft Docs
+description: Meer informatie over het verwerken van Microsoft Identity Manager gegevens voor herkennen en het rapporteren van gegevens binnen de omgeving, het uitvoeren van een actie in een bepaald systeem op basis van operationele functies en vereisten.
 keywords: ''
 author: billmath
 ms.author: billmath
 manager: mtillman
 ms.date: 12/02/2018
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.prod: microsoft-identity-manager
 ms.assetid: b0b39631-66df-4c5f-80c9-a1774346f816
 ms.suite: ems
-ms.openlocfilehash: f75eb69360852c9f629b60d4900638c8b51e068a
-ms.sourcegitcommit: 9e420840815adb133ac014a8694de9af4d307815
+ms.openlocfilehash: 6f861c5b1984de70a91edcac89276402f289e355
+ms.sourcegitcommit: 65e11fd639464ed383219ef61632decb69859065
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52825787"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68701484"
 ---
-# <a name="microsoft-identity-manager-data-handling"></a>Verwerking van gegevens van Microsoft Identity Manager 
+# <a name="microsoft-identity-manager-data-handling"></a>Verwerking van Microsoft Identity Manager gegevens 
 
-In dit artikel vindt u richtlijnen voor hoe organisaties de beslissingen die kunnen worden toegepast op veel verbonden gegevensbronnen kunnen maken.  Dit kan worden bereikt via het zoeken, verwijderen, bijwerken en bewerkingen.  Voordat u besluit uw benadering van het verwijderen of bijwerken, is een goed begrip van het huidige ontwerp en de configuratie van het systeem in uw identity manager (MIM) essentieel. 
+In dit artikel vindt u richt lijnen voor de manier waarop organisaties beslissingen kunnen nemen die kunnen worden toegepast op veel verbonden gegevens bronnen.  Dit kan worden bereikt via de bewerkingen voor zoeken, verwijderen, bijwerken en rapporteren.  Voordat u besluit om te verwijderen of bij te werken, is het belang rijk dat u een goed idee hebt van het huidige ontwerp en de configuratie van uw Identity Manager-systeem (MIM). 
 
-Hieronder vindt u dat enkele scenario's-klanten hoeven te bespreken en de volgende vragen beantwoorden: 
+Hieronder volgen enkele scenario's die klanten moeten overwegen en de volgende vragen kunnen beantwoorden: 
 
-- Welke gegevens moet u voor u Identiteitsbeheer met een bedrijfsproces?
-- Waar gaat actuele gegevens worden opgeslagen in MIM?
-- Hoe wordt gebruikt u deze gegevens in het systeem?
-- Deelt u deze gegevens met een externe partners gegevens sources(Exporting)
-- Wat is de gezaghebbende bron voor de gegevens en de verwerking van?
-- Wat wordt uw bewaren van gegevens en het verwijderen van gegevens plannen in plaats?
-- Hebt u geïdentificeerd met de technologie die u nodig hebt om te verwerken en beheren van gegevens?
+- Welke gegevens hebt u nodig voor identiteits beheer om te helpen bij het bedrijfs proces?
+- Waar worden huidige gegevens opgeslagen in MIM?
+- Hoe gaat u deze gegevens in het systeem gebruiken?
+- Deelt u deze gegevens met gegevens bronnen voor externe partners (exporteren)
+- Wat is de gezaghebbende bron voor de gegevens en de verwerking ervan?
+- Wat gebeurt er met het Bewaar plan voor gegevens en het verwijderen van gegevens?
+- Hebt u alle technologie geïdentificeerd die u nodig hebt om gegevens te verwerken en te beheren?
 
-U kunt het volgende uit om te documenteren van uw MIM-omgeving of delegeren aan uw implementatie Ontwerpdocumenten gebruiken zodat u inzicht in de huidige MIM-omgeving.
-- [MIM Documentor - kunnen aan de huidige configuratie exporteren](https://github.com/Microsoft/MIMConfigDocumenter)
+Om u te helpen inzicht te krijgen in een huidige MIM-omgeving, kunt u het volgende hulp programma gebruiken om uw MIM-omgeving te documenteren of uw ontwerp documenten voor de implementatie uit te stellen.
+- [MIM-document functie: Hiermee staat u de huidige configuratie toe](https://github.com/Microsoft/MIMConfigDocumenter)
 
-## <a name="searching-for-and-identifying-personal-data"></a>Zoeken naar en het identificeren van persoonlijke gegevens
-Zoeken naar gegevens in MIM zijn afhankelijk van de configuratie en installatie. De meeste omgevingen onderling verbonden zijn, maar voor de duidelijkheid we ze heeft overtreden uit door op hoog niveau onderdeel.
+## <a name="searching-for-and-identifying-personal-data"></a>Zoeken naar en identificeren van persoons gegevens
+Het zoeken van gegevens binnen MIM is afhankelijk van de configuratie en de installatie. De meeste omgevingen hebben een onderlinge verbinding, maar voor de duidelijkheid zijn deze op hoog niveau afgebroken.
 
 ### <a name="synchronization-service"></a>Synchronisatieservice
 
-Alle gegevens in MIM die is gekoppeld aan gebruikers wordt afgeleid van Active Directory (AD) en HR-gegevensbronnen. Bij het zoeken naar persoonlijke gegevens, is de eerste plaats waar u rekening met het zoeken naar houden moet AD of verbonden gegevensbronnen. 
+Alle gegevens in MIM die betrekking hebben op gebruikers, zijn afgeleid van Active Directory (AD) en HR-gegevens bronnen. Wanneer u zoekt naar persoons gegevens, kunt u het beste zoeken in AD of verbonden gegevens bronnen. 
 
-Als u niet zeker weet de bron van de instantie kunt u deze gebruiker bijhouden van de MIM Synchronization Service Manager-console, klik op de balk Metaverse zoeken om de persoonlijke gegevens worden opgeslagen in de database weer te geven. Gebruikers kunnen zoeken voor een specifieke gebruiker of het kenmerk.
+Als u niet zeker weet dat u deze gebruiker kunt volgen vanuit de MIM Synchronization Service Manager-console, klikt u op de omgekeerde zoek balk om de Identificeer bare persoons gegevens weer te geven die zijn opgeslagen in de-data base. Gebruikers kunnen zoeken naar een specifieke gebruiker of een specifiek kenmerk.
 
-- Om uit te voeren een controle of zoekopdracht van gegevens van de objecten gebruiker
-    - Open de service-client voor synchronisatie
-        - Met behulp van de metaverse designer kunt u om te zien van de kenmerkstroom worden geïmporteerd en prioriteit.
-![Mim-privacy-compliance_1.PNG](media/mim-privacy-compliance/mim-privacy-compliance_1.PNG)
-        - Met behulp van de metaverse search kunt u zoeken op een object en het kenmerk in de database ![mim-privacy-compliance_2.PNG](media/mim-privacy-compliance/mim-privacy-compliance_2.PNG)
+- Gegevens van gebruikers objecten controleren of zoeken
+    - De client voor de synchronisatie service openen
+        - U kunt met behulp van de functie voor inverse-invoer kenmerk stroom importeren en prioriteiten weer geven.
+![MIM-privacy-compliance_1. PNG](media/mim-privacy-compliance/mim-privacy-compliance_1.PNG)
+        - Met behulp van de omgekeerde zoek opdracht kunt u zoeken naar een wille keurig object ![en kenmerk in de data base MIM-privacy-compliance_2. png](media/mim-privacy-compliance/mim-privacy-compliance_2.PNG)
  
-Nadat het object zoeken, wordt te klikken op het object geopend de gebruikersprofielpagina. De objectdetails van het biedt u met de uitgebreide informatie over het object, de kenmerken ervan, het laatst is gewijzigd en autoriteitsbron en gerelateerde verbonden gegevensbron afgeleid van management agent configuratievoorbeeld hieronder.
+Nadat u het object hebt gevonden, wordt de pagina gebruikers profiel geopend wanneer u op het object klikt. De object Details bieden u de uitgebreide details over het object, de kenmerken, het laatst gewijzigde en de bron van de instantie en gerelateerde verbonden gegevens bron afgeleid van de beheer agent configuratie voor beeld hieronder.
 
-![Mim-privacy-naleving. PNG](media/mim-privacy-compliance/mim-privacy-compliance.PNG)
+![MIM-privacy-naleving. PNG](media/mim-privacy-compliance/mim-privacy-compliance.PNG)
 
-### <a name="service-and-portal--pam"></a>Service en -Portal / PAM
-Als u een exemplaar van de Service en Portal of de PAM wordt geïnstalleerd is kunnen zoeken naar gebruikers het belangrijk. 
+### <a name="service-and-portal--pam"></a>Service en Portal/PAM
+Als er een exemplaar van de service en de portal of PAM-module zijn geïnstalleerd, is het belang rijk dat u gebruikers kunt zoeken. 
 
-Als u de Portal hebt geïnstalleerd, kunt u de gebruikersinterface om op een kenmerk of de query voor een bepaalde gebruiker te zoeken.
+Als u de portal hebt geïnstalleerd, kunt u de gebruikers interface gebruiken om te zoeken naar een wille keurig kenmerk of query voor een bepaalde gebruiker.
 
-Als u alleen de-server (zonder de gebruikersinterface van Portal) geïnstalleerd hebt u een search-syntaxis op basis van de [FIMAutomation PSSnapin] kunt uitvoeren, voorbeeld gevonden [hier](https://social.technet.microsoft.com/wiki/contents/articles/22713.fim-portals-use-powershell-to-find-all-users-without-a-manager.aspx).
+Als u alleen de service Server (zonder de portal-gebruikers interface) hebt geïnstalleerd, kunt u een zoek syntaxis uitvoeren op basis van de [FIMAutomation PSSnapin], zoals [hier](https://social.technet.microsoft.com/wiki/contents/articles/22713.fim-portals-use-powershell-to-find-all-users-without-a-manager.aspx)wordt gevonden.
 
-PAM bovenstaande dezelfde syntaxis kunt gebruiken of kunt u de [MIMPAM Module](https://docs.microsoft.com/powershell/module/mimpam/get-pamuser?view=idm-ps-2016sp1) specifiek de cmdlet get-pamuser om te zoeken naar de gebruiker in de PAM-omgeving.
+PAM kan dezelfde syntaxis gebruiken of u kunt de [MIMPAM-module](https://docs.microsoft.com/powershell/module/mimpam/get-pamuser?view=idm-ps-2016sp1) gebruiken met name de Get-pamuser-cmdlet om te zoeken naar de gebruiker in de pam-omgeving.
 
-Er is een andere reporting opties om te zoeken naar beschikbare gegevens in de service en -portal.
+Andere rapportage opties voor het zoeken naar beschik bare gegevens bevinden zich in de service en de portal.
 - [Hybride rapportage](https://docs.microsoft.com/microsoft-identity-manager/identity-manager-hybrid-reporting-azure)
 - [Rapportage met SCSM](https://docs.microsoft.com/previous-versions/mim/jj133853%28v%3dws.10%29)
 
 ### <a name="bhold"></a>BHOLD
-Bhold-Core-service heeft een gebruikersinterface waarmee u wilt zoeken voor een gebruiker of kenmerken. 
+De Bhold core-service heeft een gebruikers interface waarmee u naar een gebruiker of kenmerken kunt zoeken. 
 
 ![bhold zoeken](media/mim-privacy-compliance/mim-privacy-compliance-bhold.PNG)
 
-Als u met BHOLD met synchroniseert [toegang management-connector](https://docs.microsoft.com/microsoft-identity-manager/bhold/bhold-access-management-connector-install) voor synchronisatieservice kunt u zich om te zien dat de objecten gebruiker verbinding en de kenmerken uw verzenden naar BHOLD-core.
+Als u BHOLD synchroniseert met [Access Management connector](https://docs.microsoft.com/microsoft-identity-manager/bhold/bhold-access-management-connector-install) voor synchronisatie service, kunt u de verbonden gebruikers objecten en de kenmerken die uw verzenden naar BHOLD core zien.
 
-U kunt ook de rapportage van BHOLD-module laden.
+U kunt ook de BHOLD-rapportage module laden.
 
-- [BHOLD-rapportage](https://docs.microsoft.com/microsoft-identity-manager/bhold/bhold-concepts-guide#reporting)
+- [BHOLD rapportage](https://docs.microsoft.com/microsoft-identity-manager/bhold/bhold-concepts-guide#reporting)
 
 ### <a name="certificate-management"></a>Certificaatbeheer
-Zoeken in Certificate management-service is ingebouwd in de gebruikersinterface. De beheerder wordt starten en selecteer de 'gebruiker en de weergave of het beheren van gegevens'  
+Zoek opdracht van de certificaat beheer service is ingebouwd in de gebruikers interface. De beheerder wordt gestart en selecteert de informatie gebruiker zoeken en weer geven of beheren  
 
 ![cm zoeken](media/mim-privacy-compliance/mim-privacy-compliance-cm.PNG)
 
 ## <a name="exporting-personal-data"></a>Exporteren van persoonlijke gegevens
-Omdat de gegevens die betrekking hebben op entiteiten in MIM is afgeleid van meerdere bronnen, worden de meeste gegevens worden opgeslagen in de Synchronization Service-database. Daarom moet u de object-gerelateerde gegevens exporteren uit MIM Sync of kunt u de eigenaar van deze gegevens bepalen.
+Omdat de gegevens met betrekking tot entiteiten in MIM worden afgeleid van meerdere bronnen, worden de meeste gegevens opgeslagen in de data base van de synchronisatie service. Daarom moet u aan object gerelateerde gegevens van MIM Sync exporteren of kunt u de eigenaar van deze gegevens bepalen.
 
 ### <a name="synchronization-service"></a>Synchronisatieservice
-Synchronisatieservices voor het exporteren van gegevens selecteert u de gegevens van de gebruikersinterface van de zoekopdracht en kopieer en plak in een CSV- of een door u gewenste indeling. Een andere manier om deze gegevens te exporteren is het maken van een MA op basis van bestanden om te verwijderen van huidige gegevens die nodig zijn over een gemarkeerde gebruiker van belang zijn. Een voorbeeld van het gebruik van MA op basis van bestanden vindt [hier](https://blogs.msdn.microsoft.com/connector_space/2016/11/17/management-agent-configuration-part-4-delimited-text-file-management-agent/).
+Synchronisatie Services voor het exporteren van gegevens selecteert u de gegevens in de zoek GEBRUIKERSINTERFACE en kopieert en plakt u in een CSV-of voorkeurs indeling. Een andere manier om deze gegevens te exporteren, is door een op bestanden gebaseerde MA te maken om de huidige gegevens te verwijderen die nodig zijn voor een gemarkeerde gebruiker van belang. [Hier](https://blogs.msdn.microsoft.com/connector_space/2016/11/17/management-agent-configuration-part-4-delimited-text-file-management-agent/)vindt u een voor beeld van het gebruik van op bestanden gebaseerde ma.
 
 
-### <a name="service-and-portal--pam"></a>Service en -Portal / PAM
-Service en portal samen met PAM kunt u deze gegevens uitvoert een zoeksyntaxis op basis van de [FIMAutomation PSSnapin] exporteren, voorbeeld gevonden [hier](https://social.technet.microsoft.com/wiki/contents/articles/22713.fim-portals-use-powershell-to-find-all-users-without-a-manager.aspx) en doorgeven aan [csv](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/export-csv?view=powershell-6).
+### <a name="service-and-portal--pam"></a>Service en Portal/PAM
+Service en Portal samen met PAM u kunt deze gegevens exporteren een zoek syntaxis uitvoeren op basis van de [FIMAutomation PSSnapin], voor beeld dat [hier](https://social.technet.microsoft.com/wiki/contents/articles/22713.fim-portals-use-powershell-to-find-all-users-without-a-manager.aspx) is gevonden en deze naar [CSV](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/export-csv?view=powershell-6)door sluizen.
 
-PAM bovenstaande dezelfde syntaxis kunt gebruiken of kunt u de [MIMPAM Module](https://docs.microsoft.com/powershell/module/mimpam/get-pamuser?view=idm-ps-2016sp1) specifiek de get-pamuser om te zoeken voor de gebruiker in de PAM-omgeving en deze doorgeven aan een csv.
+PAM kan dezelfde syntaxis gebruiken of u kunt de [MIMPAM-module](https://docs.microsoft.com/powershell/module/mimpam/get-pamuser?view=idm-ps-2016sp1) gebruiken met name de Get-pamuser om de gebruiker te zoeken in de pam-omgeving en deze naar een CSV te pipeen.
 
-- [Voorbeeld van query's van de MIM-Service met behulp van PowerShell](https://gallery.technet.microsoft.com/Querying-The-FIMMIM-dcb82de3)
+- [Voor beeld van het uitvoeren van Query's in de MIM-service met Power shell](https://gallery.technet.microsoft.com/Querying-The-FIMMIM-dcb82de3)
 
 ### <a name="bhold"></a>BHOLD
-Bhold-gegevens kunnen worden geëxporteerd met behulp van de bhold module rapporteren aan de door u gewenste indeling.
+Bhold gegevens kunnen worden geëxporteerd met behulp van de Bhold-rapportage module naar de gewenste indeling.
 
 ### <a name="certificate-management"></a>Certificaatbeheer
-Certificate management-gegevens met betrekking tot persoonlijke gegevens is verbonden met active directory. Een beheerder kan deze gegevens met behulp van powershell voor Active Directory kunt exporteren.
+Certificaat beheer gegevens met betrekking tot persoonlijke gegevens zijn verbonden met Active Directory. Een beheerder kan deze gegevens exporteren met behulp van Active Directory Power shell.
 
 ## <a name="updating-personal-data"></a>Het bijwerken van persoonlijke gegevens
 
-Persoonlijke gegevens over gebruikers- of objecten in de MIM-oplossingen is gewoonlijk afgeleid van het gebruikersobject in de verbonden gegevensbronnen van uw organisatie. Omdat alle wijzigingen aan het gebruikersprofiel in de HR-bron- of een andere gezaghebbende systeem van records, zoals AD worden vervolgens doorgevoerd in de MIM-synchronisatieservice.
+Persoonlijke gegevens over gebruikers of objecten in MIM-oplossingen worden doorgaans afgeleid van het object van de gebruiker in de verbonden gegevens bronnen van uw organisatie. Omdat wijzigingen in het gebruikers profiel in de HR-bron of een ander gezaghebbend systeem van record, zoals AD, vervolgens worden weer gegeven in de MIM-synchronisatie service.
 
 ### <a name="synchronization-service"></a>Synchronisatieservice
 
-Beheerbewerkingen wilt uitvoeren, beheerders moeten deel uitmaken van synchronisatiebewerkingen of beheerder gedefinieerd [hier](https://docs.microsoft.com/previous-versions/mim/jj590183(v%3dws.10)).
+Beheerders moeten deel uitmaken van synchronisatie bewerkingen of de door de [beheerder gedefinieerde definitie](https://docs.microsoft.com/previous-versions/mim/jj590183(v%3dws.10))om beheer bewerkingen uit te voeren.
 
-Bijwerken van gegevens wordt gedaan door het definiëren van regels uit de bron van de instantie. Beheerconsole helpt bij het identificeren van de bron van de instantie bij te werken op de bronlocatie. Een andere optie is synchronisatieregel of de extensie van de regel voor het beheren van de gegevens bijwerken als bron, zoals HR-gegevens nog steeds nodig heeft om te blijven maken. Dit zijn de opties voor avialible ondersteund.
+Het bijwerken van gegevens wordt uitgevoerd door regels te definiëren uit de bron van de autoriteit. De beheer console helpt bij het identificeren van de bron van de autoriteit om deze bij de bron bij te werken. Een andere optie is het maken van een synchronisatie regel of regel uitbrei ding voor het beheren van de gegevens die moeten worden bijgewerkt als de bron, zoals HR-gegevens, nog steeds moet blijven. Dit zijn avialible ondersteunde opties.
 
-Zie hieronder voor meer informatie over verschillende manieren om bij te werken kenmerk. 
+Zie hieronder voor meer informatie over verschillende manieren om het kenmerk bij te werken. 
 
-- [Met behulp van Regeluitbreidingen](https://msdn.microsoft.com/library/windows/desktop/ms698810(v=vs.100).aspx)
+- [Regel uitbreidingen gebruiken](https://msdn.microsoft.com/library/windows/desktop/ms698810(v=vs.100).aspx)
 - [Meer informatie over gegevenssynchronisatie met externe systemen](https://docs.microsoft.com/previous-versions/mim/jj133850(v%3dws.10))
 
-### <a name="service-and-portal--pam"></a>Service en -Portal / PAM
+### <a name="service-and-portal--pam"></a>Service en Portal/PAM
 
-Service en Portal voor het opnemen van PAM-gegevens kunnen worden bijgewerkt met de FIMAutomation of de PAM-cmdlets. Als u de Portal hebt, kunt u ook rechtstreeks bijwerken door te zoeken naar en het object wijzigen. Eén ding opmerking en, afhankelijk van de configuratie bij te werken vanuit de portal betekent niet dat blijft. Als de bron van de instantie is sterk afhankelijk van de algehele-configuratie.
+Service en portal voor het toevoegen van PAM-gegevens kunnen worden bijgewerkt met behulp van de FIMAutomation-of PAM-cmdlets. Als u de portal hebt, kunt u ook rechtstreeks bijwerken door het object te zoeken en te wijzigen. Het is een goed om te noteren en afhankelijk van de configuratie die u gewoon bijwerkt vanuit de portal, heeft dit geen effect. Als bron van de autoriteit is zeer afhankelijk van de algehele configuratie.
 
 ### <a name="bhold"></a>BHOLD
 
-Gebruikers kunnen rechtstreeks worden bijgewerkt met de gebruikersinterface van BHOLD-Core of de toegang management-connector.
+Gebruikers kunnen rechtstreeks worden bijgewerkt met de BHOLD-kern gebruikers interface of de toegangs beheer connector.
 
 ### <a name="certificate-management"></a>Certificaatbeheer
 
-Gebruikers in de certificate management-service zijn een weerspiegeling van active directory. Gebruik Active Directory voor het wijzigen van objectdetails bijwerken.
+Gebruikers in de certificaat beheer service zijn allemaal een reflectie van Active Directory. Gebruik Active Directory om de object gegevens te wijzigen.
 
 ## <a name="deleting-personal-data"></a>Het verwijderen van persoonlijke gegevens
 
 >[!Note] 
-> In dit artikel bevat richtlijnen voor manieren om te verwijderen van persoonlijke gegevens van Microsoft Identity Manager en kan worden gebruikt voor de ondersteuning van uw verplichtingen onder de AVG. Zie de [AVG-sectie van Service Trust Portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted) voor algemene informatie over de AVG.
+> Dit artikel bevat richt lijnen voor het verwijderen van persoonlijke gegevens uit Microsoft Identity Manager en kan worden gebruikt ter ondersteuning van uw verplichtingen onder het AVG. Zie de [AVG-sectie van Service Trust Portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted) voor algemene informatie over de AVG.
 
-Gegevens in MIM is gesynchroniseerd en altijd bijgewerkt van de verbonden gegevensbron. Wanneer een object in het doel wordt verwijderd, kunnen de gegevens van het object in MIM ten behoeve van beveiligingsonderzoek worden beheerd. Verwijderen van objecten is geconfigureerd per met elkaar verbonden gegevensbron regels of regel extension(code) en/of regels voor Object verwijderen.
+Gegevens in MIM worden gesynchroniseerd en worden altijd bijgewerkt vanuit de gekoppelde gegevens bron. Wanneer een object in het doel wordt verwijderd, kunnen de gegevens van het object in MIM worden onderhouden voor beveiligings onderzoek. Het verwijderen van objecten is geconfigureerd per verbonden gegevens bron regels of regel extensie (code) en/of verwijderings regels voor objecten.
 
 ### <a name="synchronization-service"></a>Synchronisatieservice
-Synchronisatie-Service zo veel manieren om te verwerken van gegevens of verwijder gegevens, afhankelijk van bedrijfsprocessen. Om te begrijpen, vindt hieronder u enkele artikelen voor meer informatie over opties voor verwijderen en bijwerken van kenmerken: 
+Synchronisatie service zoveel manieren om gegevens af te handelen of gegevens te verwijderen, afhankelijk van de bedrijfs processen. Hieronder vindt u een aantal artikelen voor meer informatie over de opties voor het verwijderen en bijwerken van kenmerken: 
 
 - [Meer informatie over ongedaan maken van de inrichting](https://social.technet.microsoft.com/wiki/contents/articles/1270.understanding-deprovisioning-in-fim.aspx)
-- [Met behulp van Regeluitbreidingen](https://msdn.microsoft.com/library/windows/desktop/ms698810(v=vs.100).aspx)
+- [Regel uitbreidingen gebruiken](https://msdn.microsoft.com/library/windows/desktop/ms698810(v=vs.100).aspx)
 - [Aanbevolen procedures voor MIM](https://docs.microsoft.com/microsoft-identity-manager/mim-best-practices)
 
-### <a name="service-and-portal--pam"></a>Service en -Portal / PAM
+### <a name="service-and-portal--pam"></a>Service en Portal/PAM
 
-Het is raadzaam voor de Service en Portal dat u de standaard 30 dagen configuratie van systeembronbehoud houden. Hiermee wordt de service aangegeven wanneer deze wordt verwijderd, niet alleen gegevens van aanvragen, maar ook een willekeurig object dat moet worden gewist van het systeem. Zodra het proces optreedt, worden alle gegevens die zijn gekoppeld aan dit object is verwijderd dit omvat alle gegevens voor SSPR-registratie. Dit speelt in de bovenstaande voor configuratie van object verwijderen. We hebben wel één tabel zijn we slaan de guid van de objecten. Om te beperken van de totale grootte van de tabel in de build 4.4.1459 er is een proces genaamd FIM_DeleteExpiredSystemObjectsJob meer informatie over dit proces vindt toegevoegd [hier](https://support.microsoft.com/en-us/help/4012498/hotfix-rollup-package-build-4-4-1459-0-is-available-for-microsoft-iden).
+Het wordt aanbevolen voor de service & Portal dat u de standaard configuratie voor de Bewaar periode van 30 dagen voor systeem bronnen behoudt. Dit vertelt de service wanneer deze wordt verwijderd, niet alleen gegevens aanvragen, maar ook voor objecten die moeten worden gewist uit het systeem. Zodra het proces is uitgevoerd, worden alle gegevens die aan dit object zijn gekoppeld, verwijderd, inclusief alle SSPR registratie gegevens. Hiermee wordt de configuratie voor object verwijdering hierboven afgespeeld. We hebben één tabel die de GUID van de objecten opslaat. Als u de totale grootte van de tabel in Build 4.4.1459 wilt reduceren, kunt u [hier](https://support.microsoft.com/en-us/help/4012498/hotfix-rollup-package-build-4-4-1459-0-is-available-for-microsoft-iden)een proces toevoegen met de naam FIM_DeleteExpiredSystemObjectsJob Details van dit proces.
 
-![Mim-privacy-naleving-srrc. PNG](media/mim-privacy-compliance/mim-privacy-compliance-srrc.PNG)
+![MIM-privacy-naleving-srrc. PNG](media/mim-privacy-compliance/mim-privacy-compliance-srrc.PNG)
 
 
 ### <a name="bhold"></a>BHOLD
 
-Bhold, zoals de meeste systemen die zijn verbonden met de synchronisatieservice kan worden geconfigureerd als u wilt verwijderen nadat het bronobject zoals HR wordt verwijderd. Dit is geconfigureerd op de beheeragent. en beheerd door de regels van het verwijderen van objecten zoals beschreven onder de servicefuncties synchronisaties.
+Bhold als de meeste systemen die zijn verbonden met de synchronisatie service, kunnen worden geconfigureerd om te verwijderen zodra het bron object, zoals HR, wordt verwijderd. Dit wordt geconfigureerd in de beheer agent. en worden beheerd door de regels voor het verwijderen van objecten zoals beschreven onder de functies synchronisaties service.
 
-Een andere optie is om te verwijderen van het gebruikersobject rechtstreeks vanuit de gebruikersinterface van BHOLD Core. Afhankelijk van instellingen kan dit werkt goed, maar houd er rekening mee inrichting logica kan deze gebruiker opnieuw maken als dit niet verwijderd op de bronlocatie.
-![Mim-privacy-naleving-bholdr. PNG](media/mim-privacy-compliance/mim-privacy-compliance-bholdr.PNG)
+Een andere mogelijkheid is om het gebruikers object rechtstreeks te verwijderen uit de BHOLD core-gebruikers interface. Afhankelijk van de installatie kan dit goed werken, maar Opmerking inrichten logica kan deze gebruiker opnieuw maken als deze niet wordt verwijderd uit de bron.
+![MIM-privacy-naleving-bholdr. PNG](media/mim-privacy-compliance/mim-privacy-compliance-bholdr.PNG)
 
 
 ### <a name="certificate-management"></a>Certificaatbeheer
-Als u wilt verwijderen van een gebruiker van CM, zich Verwijder de gebruiker in active directory.
+Als u een gebruiker uit CM wilt verwijderen, moet u de gebruiker in Active Directory verwijderen.
 
-Certificaatbeheer zoals deze wordt alleen de uid profiel van certificaatservices met domein sAMAccountName opslaan. Zodra de gebruiker wordt verwijderd uit de cache van de gebruiker geldt alleen voor de certificaten AD veren die ze hebben ingeschreven. We raden niet alles in de database te verwijderen, dit leiden algemene schade voor de werking van de omgeving tot kan.
+Met certificaat beheer wordt alleen de profiel-UID van Certificate Services met het domein sAMAccountName opgeslagen. Zodra de gebruiker uit AD is verwijderd, is de gebruikers cache alleen aanwezig voor de certificaten, veren deze zijn Inge schreven. Het is niet raadzaam om niets in de data base te verwijderen, omdat dit kan leiden tot een algehele beschadiging van de werking van de omgeving.
 
-## <a name="opt-out-of-telemetry"></a>Opt-out van telemetrie
-Vorige builds FIM/MIM gebruikt voor het verzamelt geanonimiseerde telemetriegegevens over elke implementatie en verzendt deze gegevens via HTTPS met Microsoft-servers. Deze gegevens is door Microsoft gebruikt voor het verbeteren van toekomstige versies van FIM/MIM in het verleden.
+## <a name="opt-out-of-telemetry"></a>Niet-telemetrie
+Eerdere versies van FIM/MIM worden gebruikt voor het verzamelen van geanonimiseerd-telemetrie over elke implementatie en verzendt deze gegevens via HTTPS naar micro soft-servers. Deze gegevens zijn door micro soft gebruikt om toekomstige versies van FIM/MIM in het verleden te helpen verbeteren.
 
 >[!Note] 
-> In latere releases van 4.5.x.x of meer gegevens wordt verzameling uitgeschakeld.
+> In latere releases van versie 4.5. x. x-of meer gegevens verzameling wordt uitgeschakeld.
 
-Om uit te schakelen van gegevens verzameling in de vorige versie uitvoeren modus wijzigen en schakel het volgende bericht:
+Als u het verzamelen van gegevens in de vorige versie wilt uitschakelen, voert u de modus wijzigen uit en schakelt u de volgende prompt uit:
 
-![Mim-privacy-naleving-programma voor kwaliteitsverbetering. PNG](media/mim-privacy-compliance/mim-privacy-compliance-ceip.PNG)
+![MIM-privacy-naleving-CEIP. PNG](media/mim-privacy-compliance/mim-privacy-compliance-ceip.PNG)
 
-of het register te bewerken en de waarde instelt op 0: (onderdeel) programma voor Kwaliteitsverbetering HKLM\SOFTWARE\Microsoft\Forefront identiteit Manager\2010
+of bewerk het REGI ster en stel de waarde in op 0: Onderdeel CEIP HKLM\SOFTWARE\Microsoft\Forefront identiteit Manager\2010
 
-![Mim-privacy-naleving-ceip2. PNG](media/mim-privacy-compliance/mim-privacy-compliance-ceip2.PNG)
+![MIM-privacy-naleving-ceip2. PNG](media/mim-privacy-compliance/mim-privacy-compliance-ceip2.PNG)
 
 ## <a name="next-steps"></a>Volgende stappen 
-- [Voor SQL-gerelateerde privacy richtlijnen](https://docs.microsoft.com/sql/relational-databases/security/microsoft-sql-and-the-gdpr-requirements?view=sql-server-2017)
-- [GDPR-sectie van de Service Trust-portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted)
-- [Archiveren van FIM 2010: Ramp Up - implementatie van Forefront Identity Manager 2010](https://social.technet.microsoft.com/wiki/contents/articles/35789.fim-2010-archive-ramp-up-implementing-forefront-identity-manager-2010.aspx)
+- [Voor aan SQL gerelateerde privacy-richt lijnen](https://docs.microsoft.com/sql/relational-databases/security/microsoft-sql-and-the-gdpr-requirements?view=sql-server-2017)
+- [De sectie AVG van de service Trust-Portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted)
+- [FIM 2010-archief: Een platform voor het implementeren van Forefront Identity Manager 2010](https://social.technet.microsoft.com/wiki/contents/articles/35789.fim-2010-archive-ramp-up-implementing-forefront-identity-manager-2010.aspx)

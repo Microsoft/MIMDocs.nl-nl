@@ -6,19 +6,19 @@ author: billmath
 ms.author: billmath
 manager: mtillman
 ms.date: 04/30/2018
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.prod: microsoft-identity-manager
 ms.assetid: b0b39631-66df-4c5f-80c9-a1774346f816
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: fc70a0edb610fcb862d85902dd5e611e65f6e689
-ms.sourcegitcommit: 9e420840815adb133ac014a8694de9af4d307815
+ms.openlocfilehash: ca2a9a4a646387b044e3a504c19eae904b2a6be1
+ms.sourcegitcommit: 65e11fd639464ed383219ef61632decb69859065
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52825804"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68701289"
 ---
-# <a name="install-mim-2016-mim-service-and-portal"></a>MIM 2016 installeren: de MIM-service en -portal
+# <a name="install-mim-2016-mim-service-and-portal"></a>MIM 2016 installeren: MIM-service en -portal
 
 > [!div class="step-by-step"]
 > [« MIM-synchronisatieservice](install-mim-sync.md)
@@ -50,7 +50,7 @@ Als u in de laatste stap geen MIM-installatiepakket hebt ingesteld, gaat u terug
 
     ![Afbeelding voor het configureren van de MIM-databaseverbinding](media/install-mim-service-portal/MIM_Install10.png)
 
-7. Op de **mailserververbinding configureren**, voer de naam van uw Exchange-server als **e-mailserver** of kunt u **O365 Postvak**. Als u geen mailserver hebt geconfigureerd, gebruikt u **localhost** als de naam van de mailserver en schakelt u de twee bovenste selectievakjes uit. Klik op **Volgende**.
+7. Voer op de **e-mail server verbinding configureren**de naam van uw Exchange-server in als **e-mail server** of u kunt het **O365-postvak**gebruiken. Als u geen mailserver hebt geconfigureerd, gebruikt u **localhost** als de naam van de mailserver en schakelt u de twee bovenste selectievakjes uit. Klik op **Volgende**.
 
     ![Afbeelding van Configureren van de e-mailserververbinding](media/install-mim-service-portal/MIM_Install11.png)
 
@@ -62,17 +62,17 @@ Als u in de laatste stap geen MIM-installatiepakket hebt ingesteld, gaat u terug
 
 10. Er kan een waarschuwing worden weergegeven dat het serviceaccount niet is beveiligd in de huidige configuratie.
 
-11. Accepteer de standaardwaarden voor de locatie van de synchronisatieserver en geef het account van de MIM-beheeragent als *contoso\MIMMA*.
+11. Accepteer de standaard waarden voor de locatie van de synchronisatie server en geef het account van de MIM-beheer agent op als *contoso\MIMMA*.
 
     ![Afbeelding voor het configureren van de MIM-service en -portal](media/install-mim-service-portal/MIM_Install13.png)
 
 12. Geef *CORPIDM* (de naam van deze computer) op als het serveradres van de MIM-service voor de MIM-portal.
 
-13. Geef `*http://mim.contoso.com*` site als de SharePoint-URL van de verzameling.
+13. Geef `* http://mim.contoso.com*` de URL van de share point-site verzameling op.
 
-14. Geef `*http://passwordregistration.contoso.com*` als de URL-Wachtwoordregistratie poort 80, het beste later bijwerken met een SSL-certificaat op 443.
+14. Opgeven `* http://passwordregistration.contoso.com*` als de URL-poort 80 van de wachtwoord registratie, raadt u aan om later te updaten met SSL-certificaten op 443.
 
-15. Geef `*http://passwordreset.contoso.com*` als de URL voor wachtwoord opnieuw instellen van poort 80, het beste later bijwerken met een SSL-certificaat op 443.
+15. Opgeven `* http://passwordreset.contoso.com*` als de URL-poort 80 voor het opnieuw instellen van het wacht woord, raadt u aan later te updaten met SSL-certificaat op 443.
 
 16. Schakel het selectievakje in om de poorten 5725 en 5726 in de firewall te openen en schakel het selectievakje in om alle geverifieerde gebruikers toegang te verlenen tot de MIM-portal.
 
@@ -80,25 +80,25 @@ Als u in de laatste stap geen MIM-installatiepakket hebt ingesteld, gaat u terug
 
 1. Stel de serviceaccountnaam voor SSPR-registratie in op *contoso\MIMSSPR* en het bijbehorende wachtwoord op <em>Pass@word1</em>.
 
-2. Geef *passwordregistration.contoso.com* als de hostnaam voor de MIM-Wachtwoordregistratie en stel de poort in op **80**. Schakel de optie **Poort in de firewall openen** in.
+2. Geef *passwordregistration.contoso.com* op als de HOSTNAAM voor MIM-wachtwoord registratie en stel de poort in op **80**. Schakel de optie **Poort in de firewall openen** in.
 
    ![Afbeelding voor het invoeren van de configuratiegegevens die worden gebruikt door IIS](media/install-mim-service-portal/MIM_Install14.png)
 
 3. Er wordt een waarschuwing weergegeven: lees deze en klik op **Volgende**.
 
-4. Geef in het volgende scherm in de configuratie van MIM-Portal voor Wachtwoordregistratie, *mim.contoso.com* als het serveradres van MIM-Service voor de Portal voor Wachtwoordregistratie.
+4. Geef in het volgende MIM-configuratie scherm voor wachtwoord registratie *mim.contoso.com* op als het MIM-service Server adres voor de portal voor wachtwoord registratie.
 
 ## <a name="configure-mim-password-reset-portal"></a>Het MIM-portal voor het opnieuw instellen van het wachtwoord configureren
 
-1. Stel de serviceaccountnaam voor SSPR-registratie in op *Contoso\MIMSSPR* en het bijbehorende wachtwoord op <em>Pass@word1</em>.
+1. Stel de service accountnaam voor SSPR-registratie in op *Contoso\MIMSSPR* en het <em>Pass@word1</em>bijbehorende wacht woord in.
 
-2. Geef *passwordreset.contoso.com* als de hostnaam voor MIM wachtwoord opnieuw instellen-Portal, en stel de poort in op **80**. Schakel de optie **Poort in de firewall openen** in.
+2. Geef *PasswordReset.contoso.com* op als de HOSTNAAM voor MIM-portal voor wachtwoord herstel en stel de poort in op **80**. Schakel de optie **Poort in de firewall openen** in.
 
    ![Afbeelding voor het invoeren van de configuratiegegevens die worden gebruikt door IIS](media/install-mim-service-portal/MIM_Install15.png)
 
 3. Er wordt een waarschuwing weergegeven: lees deze en klik op **Volgende**.
 
-4. Geef in het volgende scherm in de configuratie van MIM-Portal voor Wachtwoordregistratie, *mim.contoso.com* als het serveradres van MIM-Service voor de Portal voor wachtwoord opnieuw instellen.
+4. Geef in het volgende MIM-configuratie scherm voor wachtwoord registratie *mim.contoso.com* op als het MIM-service Server adres voor de portal voor het opnieuw instellen van wacht woorden.
 
 ## <a name="install-mim-service-and-portal"></a>De MIM-service en -portal installeren
 
@@ -106,9 +106,9 @@ Wanneer alle definities voorafgaand aan de installatie gereed zijn, klikt u op *
 
 Nadat de installatie is voltooid, controleert u of de MIM-portal actief is.
 
-1. Start Internet Explorer en verbinding maken met de MIM-Portal op *http://mim.contoso.com/identitymanagement*. Er kan bij het eerste bezoek aan deze pagina een korte vertraging optreden.
+1. Start Internet Explorer en verbinding maken met de MIM-Portal op *http://mim.contoso.com/identitymanagement* . Er kan bij het eerste bezoek aan deze pagina een korte vertraging optreden.
 
-    - Indien nodig geverifieerd als *contoso\miminstall* naar Internet Explorer.
+    - Als dat nodig is, kunt u als *contoso\miminstall* verifiëren bij Internet Explorer.
 
 2. Ga in Internet Explorer naar **Internetopties**, open het tabblad **Beveiliging** en voeg de site toe aan de zone **Lokaal intranet** als de site hier nog niet wordt weergegeven.  Sluit het dialoogvenster **Internetopties**.
 
@@ -116,7 +116,7 @@ Nadat de installatie is voltooid, controleert u of de MIM-portal actief is.
 
     1.  Ga in Internet Explorer naar de **MIM-portal** en klik op **Beheerbeleidsregels**.
 
-    2.  Zoek naar de beheerbeleidsregel **Gebruikersbeheer: gebruikers kunnen hun eigen kenmerken lezen**.
+    2.  Zoek naar de beheer beleidsregel, **gebruikers beheer: Gebruikers kunnen hun eigen**kenmerken lezen.
 
     3.  Selecteer deze beheerbeleidsregel en schakel het selectievakje **Beleid is uitgeschakeld** uit.
 
@@ -143,7 +143,7 @@ Nadat de installatie is voltooid, controleert u of de MIM-portal actief is.
     7.  Sluit **Configuratiescherm**.
 
 > [!NOTE]
-> Optioneel: op dit moment kunt u MIM-invoegtoepassingen en -uitbreidingen installeren.
+> Optioneel: Op dit moment kunt u MIM-invoeg toepassingen en-extensies installeren.
 > 
 > [!div class="step-by-step"]  
 > [« MIM-synchronisatieservice](install-mim-sync.md)
