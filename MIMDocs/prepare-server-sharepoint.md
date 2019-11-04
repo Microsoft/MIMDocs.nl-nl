@@ -11,19 +11,23 @@ ms.prod: microsoft-identity-manager
 ms.assetid: c01487f2-3de6-4fc4-8c3a-7d62f7c2496c
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 46080360dd0ad6c3554e2d9b3418ac518b75a5cd
-ms.sourcegitcommit: 65e11fd639464ed383219ef61632decb69859065
+ms.openlocfilehash: 46320c8c2d1ae7c530c4670159e393ee1be7165c
+ms.sourcegitcommit: b09a8c93983d9d92ca4871054650b994e9996ecf
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68701387"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73329450"
 ---
-# <a name="set-up-an-identity-management-server-sharepoint"></a>Een server voor identiteits beheer instellen: SharePoint
+# <a name="set-up-an-identity-management-server-sharepoint"></a>Een server voor identiteitsbeheer instellen: SharePoint
 
 > [!div class="step-by-step"]
-> [«SQL Server 2016](prepare-server-sql2016.md)
+> [«SQL Server](prepare-server-sql2016.md)
 > [Exchange Server»](prepare-server-exchange.md)
 > 
+
+> [!NOTE]
+De installatie procedure van share Point server 2019 verschilt niet van de installatie procedure van share Point server 2016 **, met uitzonde ring** van een extra stap die moet worden uitgevoerd voor het deblokkeren van de bestanden die worden gebruikt door de MIM-Portal
+
 > [!NOTE]
 > In deze stapsgewijze instructies wordt gebruikgemaakt van voorbeeldnamen en -waarden van een bedrijf met de naam Contoso. Vervang deze door uw eigen namen en waarden. Bijvoorbeeld:
 > - Naam van domein controller- **corpdc**
@@ -45,15 +49,14 @@ Volg deze stappen om share point 2016 te installeren. Wanneer u de installatie h
 
     -   Ga naar de map waar SharePoint is uitgepakt.
 
-    -   Typ de volgende opdracht.
-
-        ```
-        .\prerequisiteinstaller.exe
-        ```
+    -   Typ de volgende opdracht:
+    ```CMD
+    .\prerequisiteinstaller.exe
+    ```
 
 2.  Nadat de vereiste onderdelen voor **share point** zijn geïnstalleerd, installeert u **share point 2016** door de volgende opdracht te typen:
 
-    ```
+    ```CMD
     .\setup.exe
     ```
 
@@ -86,7 +89,7 @@ Voer de stappen uit die in de **wizard Configuratie van SharePoint-producten** w
 
 1. Start **share point 2016-beheer shell** en voer het volgende Power shell-script uit om een **share point 2016-webtoepassing**te maken.
 
-    ```
+    ```PowerShell
     New-SPManagedAccount ##Will prompt for new account enter contoso\mimpool 
     $dbManagedAccount = Get-SPManagedAccount -Identity contoso\mimpool
     New-SpWebApplication -Name "MIM Portal" -ApplicationPool "MIMAppPool" -ApplicationPoolAccount $dbManagedAccount -AuthenticationMethod "Kerberos" -Port 80 -URL http://mim.contoso.com
@@ -96,30 +99,42 @@ Voer de stappen uit die in de **wizard Configuratie van SharePoint-producten** w
     > Er wordt een waarschuwing weergegeven waarin wordt vermeld dat de klassieke Windows-verificatiemethode wordt gebruikt en het kan enkele minuten duren voordat de laatste opdracht een waarde retourneert. Wanneer het script is voltooid, wordt in de uitvoer de URL van de nieuwe portal vermeld. Houd het **share point 2016 Management Shell-** venster geopend om later naar referentie te verwijzen.
 
 2. Start share point 2016-beheer shell en voer het volgende Power shell-script uit om een **share point-site verzameling** te maken die aan die webtoepassing is gekoppeld.
-
-   ```
+   ```PowerShell
     $t = Get-SPWebTemplate -compatibilityLevel 15 -Identity "STS#1"
     $w = Get-SPWebApplication http://mim.contoso.com/
     New-SPSite -Url $w.Url -Template $t -OwnerAlias contoso\miminstall -CompatibilityLevel 15 -Name "MIM Portal"
     $s = SpSite($w.Url)
     $s.CompatibilityLevel
    ```
-
    > [!NOTE]
    > Controleer of het resultaat van de variabele *compatibiliteits niveau* ' 15 ' is. Als het resultaat geen ' 15 ' is, is de site verzameling niet de juiste ervarings versie gemaakt. Verwijder de site verzameling en maak deze opnieuw.
 
+    > [!IMPORTANT]
+Share Point server 2019 maakt gebruik van een andere eigenschap voor een webtoepassing om een lijst met geblokkeerde bestands extensies te gebruiken. Daarom kunt u de blok kering opheffen. ASHX-bestanden die worden gebruikt door de MIM-Portal drie extra opdrachten moeten hand matig worden uitgevoerd vanuit de share point-beheer shell.
+<br/>
+    **Voer de volgende drie opdrachten alleen uit voor share point 2019:**
+
+   ```PowerShell
+    $w.BlockedASPNetExtensions.Remove("ashx")
+    $w.Update()
+    $w.BlockedASPNetExtensions
+   ```
+   > [!NOTE]
+   > Controleer of de *BlockedASPNetExtensions* -lijst geen ashx-extensie bevat, anders kunnen niet meerdere MIM-Portal pagina's correct worden weer gegeven.
+
+
 3. Schakel **weergave status van share Point server** en de share point-taak Health Analysis (elk uur, micro soft share point Foundation-timer, alle servers) uit door de volgende Power shell-opdrachten uit te voeren in de **share point 2016-beheer shell**:
 
-   ```
+   ```PowerShell
    $contentService = [Microsoft.SharePoint.Administration.SPWebService]::ContentService;
    $contentService.ViewStateOnServer = $false;
    $contentService.Update();
    Get-SPTimerJob hourly-all-sptimerservice-health-analysis-job | disable-SPTimerJob
    ```
 
-4. Open een nieuw browser tabblad op de server voor identiteits beheer, ga naar http://mim.contoso.com/ en meld u aan als *contoso\miminstall*.  Er wordt een lege SharePoint-site met de naam *MIM-portal* weergegeven.
+4. Open op uw server voor identiteits beheer een nieuw tabblad in de webbrowser, navigeer naar http://mim.contoso.com/ en meld u aan als *contoso\miminstall*.  Er wordt een lege SharePoint-site met de naam *MIM-portal* weergegeven.
 
-    ![MIM-Portal http://mim.contoso.com/ op installatie kopie](media/prepare-server-sharepoint/MIM_DeploySP1new.png)
+    ![MIM-Portal op http://mim.contoso.com/ -installatie kopie](media/prepare-server-sharepoint/MIM_DeploySP1new.png)
 
 5. Kopieer de URL en ga vervolgens in Internet Explorer naar **Internetopties**, open het tabblad **Beveiliging**, selecteer **Lokaal intranet** en klik op **Sites**.
 
@@ -130,5 +145,5 @@ Voer de stappen uit die in de **wizard Configuratie van SharePoint-producten** w
 7. Open het programma **Systeembeheer**, ga naar **Services** en vervolgens naar de SharePoint-beheerservice en start deze op als deze nog niet wordt uitgevoerd.
 
 > [!div class="step-by-step"]  
-> [«SQL Server 2016](prepare-server-sql2016.md)
+> [«SQL Server](prepare-server-sql2016.md)
 > [Exchange Server»](prepare-server-exchange.md)

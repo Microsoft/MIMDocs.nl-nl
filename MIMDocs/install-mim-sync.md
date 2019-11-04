@@ -5,25 +5,25 @@ keywords: ''
 author: billmath
 ms.author: billmath
 manager: mtillman
-ms.date: 05/01/2018
+ms.date: 10/18/2019
 ms.topic: conceptual
 ms.prod: microsoft-identity-manager
 ms.assetid: 2585e9c5-ce34-46c7-bdcf-8c08773901dc
-ms.reviewer: mwahl
+ms.reviewer: markwahl-msft
 ms.suite: ems
-ms.openlocfilehash: fba7eb3caea1f00c37f00f3fd2bf67dfe3f12871
-ms.sourcegitcommit: 65e11fd639464ed383219ef61632decb69859065
+ms.openlocfilehash: 0a8fd7fb4d36beffde86b020522ccd52287b5806
+ms.sourcegitcommit: b09a8c93983d9d92ca4871054650b994e9996ecf
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68701262"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73329274"
 ---
-# <a name="install-mim-2016-mim-synchronization-service"></a>MIM 2016 installeren: MIM-synchronisatieservice
+# <a name="install-mim-2016-mim-synchronization-service"></a>MIM 2016: MIM-synchronisatieservice installeren
 
 > [!div class="step-by-step"]
 > [« Exchange Server](prepare-server-exchange.md)
 > [MIM-service en -portal »](install-mim-service-portal.md)
-> 
+ 
 > [!NOTE]
 > In deze stapsgewijze instructies wordt gebruikgemaakt van voorbeeldnamen en -waarden van een bedrijf met de naam Contoso. Vervang deze door uw eigen namen en waarden. Bijvoorbeeld:
 > - Naam van domein controller- **corpdc**
@@ -57,19 +57,24 @@ Stel eerst het installatiepakket in voordat u de Microsoft Identity Manager 2016
 
 6. Selecteer het volgende in het configuratiescherm voor de Sync-servicedatabase:
 
-   1.  Het SQL Server bevindt zich op: **Een externe computer met de** naam **corpsql.contoso.com**.
+   1.  De SQL Server bevindt zich op: **een externe computer met de** naam **corpsql.contoso.com**.
 
-   2.  Het SQL Server-exemplaar is: **Het standaard exemplaar**
+   2.  Het SQL Server-exemplaar is: **het standaardexemplaar**
 
    ![Afbeelding voor de databaseverbinding](media/install-mim-sync/MIM_Install3.png)
 
+    3. *Mim 2016 SP2 en hoger*: de naam van de MIM-synchronisatie service-data base configureren
+
 7. Configureer het synchronisatieserviceaccount volgens het account dat u eerder hebt gemaakt:
 
-   1. Service account: *MIMSync*
+   1. Serviceaccount: *MIMSync*
 
    2. Wachtwoord: <em>Pass@word1</em>
 
    3. Serviceaccountdomein of naam van de lokale computer: *contoso*
+
+    >[!NOTE]
+MIM 2016 SP2 en hoger: voor beheerde service accounts voor groepen, controleert u of het **$** -teken aan het einde van de naam van het service account is, bijvoorbeeld MIMSync $, en laat het veld wacht woord leeg.
 
    ![Afbeelding voor het serviceaccount](media/install-mim-sync/MIM_Install4.png)
 
@@ -97,7 +102,7 @@ Stel eerst het installatiepakket in voordat u de Microsoft Identity Manager 2016
 
     3. Er wordt een bericht weergegeven over het maken van een back-up voor de versleutelingssleutel: klik op **OK**, selecteer vervolgens een map waarin de back-up voor de versleutelingssleutel moet worden opgeslagen.
 
-        ![Afbeelding voor het bericht over de back-up voor de versleutelingssleutel voor MIM Sync](media/MIM-Install7.png)
+    ![Afbeelding voor het bericht over de back-up voor de versleutelingssleutel voor MIM Sync](media/MIM-Install7.png)
 
     4. Wanneer de installatie is voltooid met het installatieprogramma, klikt u op **Voltooien**.
 

@@ -1,29 +1,34 @@
 ---
-title: Windows Server 2016 configureren voor MIM 2016 SP1 | Microsoft Docs
-description: De stappen en minimale vereisten ophalen voor het voorbereiden van Windows Server 2016 voor gebruik met MIM 2016 SP1.
+title: Windows Server 2016 of 2019 configureren voor MIM 2016 SP2 | Microsoft Docs
+description: De stappen en minimale vereisten ophalen voor het voorbereiden van Windows Server 2016 of 2019 voor gebruik met MIM 2016 SP2.
 keywords: ''
 author: billmath
 ms.author: billmath
 manager: mtillman
-ms.date: 04/26/2018
+ms.date: 10/18/2019
 ms.topic: conceptual
 ms.prod: microsoft-identity-manager
 ms.assetid: 51507d0a-2aeb-4cfd-a642-7c71e666d6cd
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 7348507593426ba112feef9d68686ee493a6391d
-ms.sourcegitcommit: 65e11fd639464ed383219ef61632decb69859065
+ms.openlocfilehash: 66011b135d575ce09d916be7c528accb230b343b
+ms.sourcegitcommit: b09a8c93983d9d92ca4871054650b994e9996ecf
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68701399"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73329430"
 ---
-# <a name="set-up-an-identity-management-server-windows-server-2016"></a>Een server voor identiteits beheer instellen: Windows Server 2016
+# <a name="set-up-an-identity-management-server-windows-server-2016-or-2019"></a>Een server voor identiteits beheer instellen: Windows Server 2016 of 2019
 
 > [!div class="step-by-step"]
-> [«Een domein](preparing-domain.md)
-> voorbereiden[SQL Server 2016»](prepare-server-sql2016.md)
+> [«Voorbereiden van een domein](preparing-domain.md)
+> [SQL Server»](prepare-server-sql2016.md)
 > 
+
+> [!NOTE]
+De installatie procedure van Windows Server 2019 verschilt niet van de installatie procedure van Windows Server 2016.
+
+
 > [!NOTE]
 > In deze stapsgewijze instructies wordt gebruikgemaakt van voorbeeldnamen en -waarden van een bedrijf met de naam Contoso. Vervang deze door uw eigen namen en waarden. Bijvoorbeeld:
 > - Naam van domein controller- **corpdc**
@@ -79,9 +84,9 @@ Stel het beveiligingsbeleid van de server zo in dat de zojuist gemaakte accounts
 
     ![Afbeelding voor Lokaal beveiligingsbeleid](media/MIM-DeployWS3.png)
 
-4. Klik op **gebruiker of groep toevoegen**, en typ in het tekstvak volgende op basis van `contoso\MIMSync; contoso\MIMMA; contoso\MIMService; contoso\SharePoint; contoso\SqlServer; contoso\MIMSSPR`rol, klik op **Namen controleren**en klik vervolgens op **OK**.
+4. Klik op **gebruiker of groep toevoegen**, en typ in het tekstvak volgende op basis van rol `contoso\MIMSync; contoso\MIMMA; contoso\MIMService; contoso\SharePoint; contoso\SqlServer; contoso\MIMSSPR`, klik op **Namen controleren**en klik vervolgens op **OK**.
 
-5. Klik op **OK** om het venster **Aanmelden als service > Eigenschappen** te sluiten.
+5. Klik op **OK** om het venster **Aanmelden als service &gt; Eigenschappen** te sluiten.
 
 6.  Klik in het detail venster met de rechter muisknop op **toegang tot deze computer vanaf het netwerk weigeren**en selecteer **Eigenschappen**. >
 
@@ -89,16 +94,29 @@ Stel het beveiligingsbeleid van de server zo in dat de zojuist gemaakte accounts
 
 7. Klik op **Gebruiker of groep toevoegen**, typ `contoso\MIMSync; contoso\MIMService` in het tekstvak en klik op **OK**.
 
-8. Klik op **OK** om het venster **Toegang tot deze computer vanaf het netwerk weigeren > Eigenschappen** te sluiten.
+8. Klik op **OK** om het venster **Toegang tot deze computer vanaf het netwerk weigeren &gt; Eigenschappen** te sluiten.
 
 9. Klik in het detail venster met de rechter muisknop op **lokaal aanmelden weigeren**en selecteer **Eigenschappen**.
 
 10. Klik op **Gebruiker of groep toevoegen**, typ `contoso\MIMSync; contoso\MIMService` in het tekstvak en klik op **OK**.
 
-11. Klik op **OK** om het venster **Lokaal aanmelden weigeren > Eigenschappen** te sluiten.
+11. Klik op **OK** om het venster **Lokaal aanmelden weigeren &gt; Eigenschappen** te sluiten.
 
 12. Sluit het venster Lokaal beveiligingsbeleid.
 
+## <a name="software-prerequisites"></a>Software vereisten
+
+Voordat u MIM 2016 SP2-onderdelen installeert, moet u alle software vereisten installeren:
+
+13. Installeer [Visual C++ 2013 Redistributable packages](https://www.microsoft.com/download/details.aspx?id=40784).
+
+14. Installeer .NET Framework 4,6.
+
+15. Op de server die als host dient voor de MIM-synchronisatie service, is voor de MIM-synchronisatie service [SQL Server Native Client](https://www.microsoft.com/download/details.aspx?id=50402)vereist.
+
+16. Op de server waarop de MIM-service wordt gehost, is voor de MIM-service .NET Framework 3,5 vereist.
+
+17. Als u TLS 1,2 of FIPS-modus gebruikt, raadpleegt u [MIM 2016 SP2 in ' tls 1,2 only ' of FIPS-modus omgevingen](preparing-tls.md).
 
 ## <a name="change-the-iis-windows-authentication-mode-if-needed"></a>Wijzig indien nodig de Windows-verificatie modus voor IIS
 
@@ -113,5 +131,5 @@ Stel het beveiligingsbeleid van de server zo in dat de zojuist gemaakte accounts
     ```
 
 > [!div class="step-by-step"]  
-> [«Een domein](preparing-domain.md)
-> voorbereiden[SQL Server 2016»](prepare-server-sql2016.md)
+> [«Voorbereiden van een domein](preparing-domain.md)
+> [SQL Server»](prepare-server-sql2016.md)

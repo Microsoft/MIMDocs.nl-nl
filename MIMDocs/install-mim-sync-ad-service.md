@@ -11,14 +11,14 @@ ms.prod: microsoft-identity-manager
 ms.assetid: 5e532b67-64a6-4af6-a806-980a6c11a82d
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 69698721b0fbabc78cf5bb4c1032ab8fc2613772
-ms.sourcegitcommit: 65e11fd639464ed383219ef61632decb69859065
+ms.openlocfilehash: 1627bae6aecdfc3d57261485de04a78feb264013
+ms.sourcegitcommit: b09a8c93983d9d92ca4871054650b994e9996ecf
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68701205"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73329328"
 ---
-# <a name="install-mim-2016-synchronize-active-directory-and-mim-service"></a>MIM 2016 installeren: Active Directory-en MIM-service synchroniseren
+# <a name="install-mim-2016-synchronize-active-directory-and-mim-service"></a>MIM 2016 installeren: Active Directory en de MIM-service synchroniseren
 
 > [!div class="step-by-step"]
 > [« MIM-service en -portal](install-mim-service-portal.md)
@@ -37,7 +37,7 @@ De MIM-beheeragent (MA) is een connector voor MIM Sync met de MIM-service. Als u
 Wanneer u een MIM-beheeragent configureert, moet u een gebruikersaccount opgeven. In dit document wordt **MIMMA** gebruikt als de naam voor dit account.
 
 > [!NOTE]
-> Het account dat u voor de MIM-beheeragent gebruikt, moet hetzelfde account zijn als het account dat u tijdens de installatie van de MIM-service hebt opgegeven.
+> Het account dat u voor de MIM-beheeragent gebruikt, moet hetzelfde account zijn als het account dat u tijdens de installatie van de MIM-service hebt opgegeven. Als u de functie MIMSync-account gebruiken wilt inschakelen, moet de MIM-synchronisatie service worden geïnstalleerd met een door een groep beheerd service account.
 
 ### <a name="to-create-the-mim-ma"></a>De MIM-beheeragent maken
 
@@ -47,19 +47,18 @@ Wanneer u een MIM-beheeragent configureert, moet u een gebruikersaccount opgeven
 
 3.  Geef op de pagina **Beheeragent maken** de volgende instellingen op en klik vervolgens op **Volgende**.
 
-    -   Beheer agent voor: Beheer agent van FIM-service
+    -   Beheeragent voor: beheeragent voor de FIM-service
 
     -   Naam: MIMMA
 
 4.  Geef op de pagina **Verbinding maken met de database** de volgende instellingen op en klik vervolgens op **Volgende**
-
     -   Server: localhost
 
     -   Database: FIMService
 
     -   Basis adres van de MIM-service: http://localhost:5725
 
-    -   Verificatie modus: Geïntegreerde Windows-verificatie
+    -   Verificatiemodus: met Windows geïntegreerde verificatie
 
     -   Gebruikersnaam: mimma
 
@@ -75,7 +74,7 @@ Wanneer u een MIM-beheeragent configureert, moet u een gebruikersaccount opgeven
 
     -   Groep
 
-    -   Person
+    -   Persoon
 
     -   SynchronizationRule
 
@@ -115,7 +114,7 @@ Wanneer u een MIM-beheeragent configureert, moet u een gebruikersaccount opgeven
     | AccountName | Exporteren | accountName |
     | DisplayName | Exporteren | displayName |
     | Domein | Exporteren | domein |
-    | Email | Exporteren | E-mail |
+    | E-mail | Exporteren | E-mail |
     | Werknemer-id | Exporteren | employeeID |
     | EmployeeType | Exporteren | employeeType |
     | FirstName | Exporteren | firstName |
@@ -141,12 +140,12 @@ Wanneer u een MIM-beheeragent configureert, moet u een gebruikersaccount opgeven
     | AccountName | Exporteren | accountName |
     | DisplayName | Exporteren | displayName |
     | Domein | Exporteren | domein |
-    | Email | Exporteren | mail |
+    | E-mail | Exporteren | E-mail |
     | MailNickName | Exporteren | mailNickName |
     | Lid | Exporteren | lid |
     | ObjectSID | Exporteren | objectSid |
     | Scope | Exporteren | bereik |
-    | type | Exporteren | type |
+    | Type | Exporteren | Type |
     | MembershipAddWorkflow | Exporteren | membershipAddWorkflow |
     | MembershipLocked | Exporteren | membershipLocked |
     | AccountName | Importeren | accountName |
@@ -155,7 +154,7 @@ Wanneer u een MIM-beheeragent configureert, moet u een gebruikersaccount opgeven
     | MailNickName | Importeren | mailNickName |
     | Lid | Importeren | lid |
     | Scope | Importeren | bereik |
-    | type | Importeren | Type |
+    | Type | Importeren | Type |
 
 10.  Klik op de pagina **Ongedaan maken van de inrichting configureren** op **Volgende**
 
@@ -168,7 +167,7 @@ De Active Directory-beheeragent is een connector voor AD-domeinservices. Als u d
 
 2. Geef op de pagina **Beheeragent maken** de volgende instellingen op en klik vervolgens op **Volgende**:
 
-    - Beheer agent voor: Active Directory Domain Services
+    - Beheeragent voor: Active Directory-domeinservices
     - Naam: ADMA
 
 3. Geef op de pagina **Verbinding maken met Active Directory-forest** de volgende instellingen op en klik vervolgens op **Volgende**
@@ -196,7 +195,7 @@ De Active Directory-beheeragent is een connector voor AD-domeinservices. Als u d
 
 7. Selecteer op de pagina **Kenmerken selecteren** de optie **Alles weergeven**, selecteer de volgende kenmerken en klik op **Volgende**:
 
-    -   Bedrijf
+    -   bedrijf
     -   displayName
     -   employeeID
     -   employeeType
@@ -208,7 +207,7 @@ De Active Directory-beheeragent is een connector voor AD-domeinservices. Als u d
     -   objectSid
     -   sAMAccountName
     -   sAMAccountType
-    -   SN
+    -   sn
     -   unicodePwd
     -   userAccountControl
 
@@ -231,7 +230,7 @@ Uitvoerings profielen maken voor de ADMA-en MIMMA-connectors.
 
 In de volgende tabel worden de vijf uitvoeringsprofielen weergegeven die u voor de ADMA-connector kunt maken:
 
-| Name | type |
+| Naam | Type |
 | ---- | ---- |
 | Profiel1 | Volledige import (alleen faseren) |
 | Profiel2 | Volledige synchronisatie |
@@ -263,7 +262,7 @@ Uitvoeringsprofielen maken voor de ADMA-connector:
 
 In de volgende tabel worden de vijf overeenkomstige uitvoeringsprofielen weergegeven voor de MIMMA-connector:
 
-| Name | type |
+| Naam | Type |
 | -------- | -------- |
 | Profiel1 | Volledige import (alleen faseren) |
 | Profiel2 | Volledige synchronisatie |
@@ -305,8 +304,8 @@ U kunt als volgt de synchronisatieregel voor binnenkomende gegevens van de AD-ge
 
 4. Geef op het tabblad **Algemeen** de volgende gegevens op en klik vervolgens op **Volgende**:
 
-    -   Weergave naam: Inkomende synchronisatie regel voor AD-gebruiker
-    -   Richting van gegevens stroom: Inkomend
+    -   Weergavenaam: synchronisatieregel voor binnenkomende gegevens van de AD-gebruiker
+    -   Gegevensstroomrichting: binnenkomend
 
 5. Geef op het tabblad **Bereik** de volgende gegevens op en klik vervolgens op **Volgende**:
 
@@ -322,14 +321,14 @@ U kunt als volgt de synchronisatieregel voor binnenkomende gegevens van de AD-ge
 
 7. Geef op de pagina **Binnenkomende kenmerkstroom** de volgende gegevens op en klik vervolgens op **Volgende**:
 
-    | Stroomregel | Source | Bestemming |
+    | Stroomregel | Bron | Bestemming |
     |-|-|-|
     |Regel 1|samAccountName|accountName|
     |Regel 2|displayName|displayName|
     |Regel 3|EmployeeType|employeeType|
     |Regel 4|givenName|firstName|
     |Regel 5|sn|lastName|
-    |Regel 6|Manager|beheerder|
+    |Regel 6|Manager|manager|
     |Regel 7|objectSID|ObjectSID|
     |Regel 8|Contoso|domein|
 
