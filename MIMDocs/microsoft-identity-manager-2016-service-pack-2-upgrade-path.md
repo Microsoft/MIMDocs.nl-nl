@@ -11,12 +11,12 @@ ms.prod: microsoft-identity-manager
 ms.assetid: 9471ccc1-bafe-46ee-b169-1464262380e1
 ms.reviewer: markwahl-msft
 ms.suite: ems
-ms.openlocfilehash: 35c4dc2aa3c933a729d3503527eca03c68bf02b5
-ms.sourcegitcommit: b09a8c93983d9d92ca4871054650b994e9996ecf
+ms.openlocfilehash: bdf34be4841b1a911fdb61673e5a3855e66e7320
+ms.sourcegitcommit: 323c2748dcc6b6991b1421dd8e3721588247bc17
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73383959"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73568063"
 ---
 # <a name="mim-2016-sp2-upgrade--from-forefront-identity--or-microsoft-identity-manager"></a>MIM 2016 SP2 upgrade van Forefront Identity of Microsoft Identity Manager
 
@@ -30,7 +30,7 @@ Er zijn verschillende upgrade opties beschikbaar. Als u MIM 2016 al uitvoert en 
 ## <a name="upgrade-from-fim-2010-r2-sp1-or-later-fim-builds"></a>Upgrade van FIM 2010 R2 SP1 of hoger FIM-builds
 
 > [!NOTE]
-De mini maal ondersteunde versie van Forefront Identity Manager die rechtstreeks kan worden bijgewerkt naar MIM 2016 SP2 is FIM 2010 R2 SP1 (build 4.1.3419.0). Directe upgrade naar MIM 2016 SP2 van eerdere versies van FIM wordt niet ondersteund. Als u gebruikmaakt van FIM-builds die ouder zijn dan 4.1.3419.0, moet u een upgrade uitvoeren naar FIM 2010 R2 SP1 voordat u een upgrade uitvoert naar MIM 2016 SP2.
+> De mini maal ondersteunde versie van Forefront Identity Manager die rechtstreeks kan worden bijgewerkt naar MIM 2016 SP2 is FIM 2010 R2 SP1 (build 4.1.3419.0). Directe upgrade naar MIM 2016 SP2 van eerdere versies van FIM wordt niet ondersteund. Als u gebruikmaakt van FIM-builds die ouder zijn dan 4.1.3419.0, moet u een upgrade uitvoeren naar FIM 2010 R2 SP1 voordat u een upgrade uitvoert naar MIM 2016 SP2.
 
 1. **Optie 1: volledige installatie met behulp van bestaande data bases**
     1. Maak een back-up van uw FIMSynchronizationService-en FIMService-data bases.
@@ -69,6 +69,6 @@ De mini maal ondersteunde versie van Forefront Identity Manager die rechtstreeks
     1. Voer een upgrade uit van MIM 2016-invoeg toepassingen en-clients voor wacht woord opnieuw instellen en geef nieuwe naam van de MIM-service Server op als de naam van de MIM-service
 
 > [!NOTE]
-Taal pakketten worden bijgewerkt nadat MIM 2016 SP2 wordt gedistribueerd als hotfixes (MSP-bestanden), waardoor het niet nodig is om taal pakketten te verwijderen en opnieuw te installeren.
+> Taal pakketten worden bijgewerkt nadat MIM 2016 SP2 wordt gedistribueerd als hotfixes (MSP-bestanden), waardoor het niet nodig is om taal pakketten te verwijderen en opnieuw te installeren.
 
 Meer gedetailleerde informatie over de back-upprocedureen voor upgrades en data bases vindt u in het artikel [upgrade naar fim 2010 R2](https://docs.microsoft.com/previous-versions/mim/jj134291%28v%3dws.10%29) , dat van toepassing is op alle FIM-of MIM-upgrade processen.

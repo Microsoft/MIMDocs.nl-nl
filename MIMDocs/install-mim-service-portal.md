@@ -11,12 +11,12 @@ ms.prod: microsoft-identity-manager
 ms.assetid: b0b39631-66df-4c5f-80c9-a1774346f816
 ms.reviewer: markwahl-msft
 ms.suite: ems
-ms.openlocfilehash: d579de0957efb6027f7061e67aa4d1f1ddff2395
-ms.sourcegitcommit: b09a8c93983d9d92ca4871054650b994e9996ecf
+ms.openlocfilehash: 1f7aa8e257ef4fd1d97ee602a4e0f3f878d8c1b6
+ms.sourcegitcommit: 323c2748dcc6b6991b1421dd8e3721588247bc17
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73329365"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73568070"
 ---
 # <a name="install-mim-2016-mim-service-and-portal"></a>MIM 2016 installeren: de MIM-service en -portal
 
@@ -58,8 +58,7 @@ Als u in de laatste stap geen MIM-installatiepakket hebt ingesteld, gaat u terug
 
 9. Geef de serviceaccountnaam op die moet worden gebruikt, bijvoorbeeld *MIMService*, en het serviceaccountwachtwoord, bijvoorbeeld <em>Pass@word1</em>. Geef daarnaast uw serviceaccountdomein, bijvoorbeeld *contoso*, en het e-mailaccount voor de service, bijvoorbeeld *contoso*, op.
     >[!NOTE]
-MIM 2016 SP2 en hoger: als u gebruikmaakt van door groepen beheerde service accounts, moet u ervoor zorgen dat het **$** teken aan het einde van de naam van het service account staat, bijvoorbeeld MIMService $, en laat het veld wacht woord voor service account leeg.
-
+    >MIM 2016 SP2 en hoger: als u gebruikmaakt van door groepen beheerde service accounts, moet u ervoor zorgen dat het **$** teken aan het einde van de naam van het service account staat, bijvoorbeeld MIMService $, en laat het veld wacht woord voor service account leeg.
 
     ![Afbeelding van Het MIM-serviceaccount configureren](media/install-mim-service-portal/MIM_Install12.png)
 
@@ -67,7 +66,7 @@ MIM 2016 SP2 en hoger: als u gebruikmaakt van door groepen beheerde service acco
 
 11. Accepteer de standaard waarden voor de locatie van de synchronisatie server en geef het account van de MIM-beheer agent op als *contoso\MIMMA*.
     >[!NOTE]
-MIM 2016 SP2 en hoger: als u van plan bent om het beheerde service account van de MIM-synchronisatie service te gebruiken in MIM Sync, en de functie MIM-synchronisatie account gebruiken in te scha kelen, voert u de naam van de MIM-synchronisatie service gMSA in als het MIM MA-account, bijvoorbeeld *beheeragentaccount $* .
+    >MIM 2016 SP2 en hoger: als u van plan bent om het beheerde service account van de MIM-synchronisatie service te gebruiken in MIM Sync, en de functie MIM-synchronisatie account gebruiken in te scha kelen, voert u de naam van de MIM-synchronisatie service gMSA in als het MIM MA-account, bijvoorbeeld *beheeragentaccount $* .
 
     ![Afbeelding voor het configureren van de MIM-service en -portal](media/install-mim-service-portal/MIM_Install13.png)
 

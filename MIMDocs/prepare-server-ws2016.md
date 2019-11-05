@@ -11,12 +11,12 @@ ms.prod: microsoft-identity-manager
 ms.assetid: 51507d0a-2aeb-4cfd-a642-7c71e666d6cd
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 66011b135d575ce09d916be7c528accb230b343b
-ms.sourcegitcommit: b09a8c93983d9d92ca4871054650b994e9996ecf
+ms.openlocfilehash: c6d5d5081f0e932b9c60d8f2025b54e47dc352d5
+ms.sourcegitcommit: 323c2748dcc6b6991b1421dd8e3721588247bc17
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73329430"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73568040"
 ---
 # <a name="set-up-an-identity-management-server-windows-server-2016-or-2019"></a>Een server voor identiteits beheer instellen: Windows Server 2016 of 2019
 
@@ -26,7 +26,7 @@ ms.locfileid: "73329430"
 > 
 
 > [!NOTE]
-De installatie procedure van Windows Server 2019 verschilt niet van de installatie procedure van Windows Server 2016.
+> De installatie procedure van Windows Server 2019 verschilt niet van de installatie procedure van Windows Server 2016.
 
 
 > [!NOTE]
@@ -89,8 +89,6 @@ Stel het beveiligingsbeleid van de server zo in dat de zojuist gemaakte accounts
 5. Klik op **OK** om het venster **Aanmelden als service &gt; Eigenschappen** te sluiten.
 
 6.  Klik in het detail venster met de rechter muisknop op **toegang tot deze computer vanaf het netwerk weigeren**en selecteer **Eigenschappen**. >
-
-[!NOTE] Het scheiden van de functie servers verbreekt sommige functies, zoals SSPR.
 
 7. Klik op **Gebruiker of groep toevoegen**, typ `contoso\MIMSync; contoso\MIMService` in het tekstvak en klik op **OK**.
 
