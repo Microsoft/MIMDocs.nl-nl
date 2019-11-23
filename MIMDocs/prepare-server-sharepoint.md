@@ -134,7 +134,7 @@ Voer de stappen uit die in de **wizard Configuratie van SharePoint-producten** w
 
 4. Open op uw server voor identiteits beheer een nieuw tabblad in de webbrowser, navigeer naar http://mim.contoso.com/ en meld u aan als *contoso\miminstall*.  Er wordt een lege SharePoint-site met de naam *MIM-portal* weergegeven.
 
-    ![MIM-Portal op http://mim.contoso.com/ -installatie kopie](media/prepare-server-sharepoint/MIM_DeploySP1new.png)
+    ![MIM-Portal op http://mim.contoso.com/-installatie kopie](media/prepare-server-sharepoint/MIM_DeploySP1new.png)
 
 5. Kopieer de URL en ga vervolgens in Internet Explorer naar **Internetopties**, open het tabblad **Beveiliging**, selecteer **Lokaal intranet** en klik op **Sites**.
 

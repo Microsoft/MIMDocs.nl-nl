@@ -110,7 +110,7 @@ Wanneer alle definities voorafgaand aan de installatie gereed zijn, klikt u op *
 
 Nadat de installatie is voltooid, controleert u of de MIM-portal actief is.
 
-1. Start Internet Explorer en maak verbinding met de MIM-Portal op *http://mim.contoso.com/identitymanagement* . Houd er rekening mee dat er een korte vertraging kan optreden op het eerste bezoek aan deze pagina.
+1. Start Internet Explorer en verbinding maken met de MIM-Portal op *http://mim.contoso.com/identitymanagement* . Houd er rekening mee dat er een korte vertraging kan optreden op het eerste bezoek aan deze pagina.
     - Als dat nodig is, kunt u als *contoso\miminstall* verifiëren bij Internet Explorer.
 
 2. Ga in Internet Explorer naar **Internetopties**, open het tabblad **Beveiliging** en voeg de site toe aan de zone **Lokaal intranet** als de site hier nog niet wordt weergegeven.  Sluit het dialoogvenster **Internetopties**.
