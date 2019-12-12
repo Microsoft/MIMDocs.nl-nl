@@ -13,10 +13,10 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: mim
 ms.openlocfilehash: f69566c9d6abc6b7c54cc875a958b66a112c3111
-ms.sourcegitcommit: b09a8c93983d9d92ca4871054650b994e9996ecf
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/31/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73329362"
 ---
 # <a name="supported-platforms-for-mim-2016"></a>Ondersteunde platformen voor MIM 2016
@@ -26,24 +26,24 @@ In deze tabel worden de ondersteunde platformen en versies voor elk onderdeel va
 
 | **MIM-onderdeel** | **Platform** | **Versie** |
 |-------------------|--------------|--------------|
-| **MIM-synchronisatie** | Windows Server | Windows Server 2008 R2 SP1 (NR.)<br/>Windows Server 2012 (NR.)<br/>Windows Server 2012 R2<br/>Windows Server 2016 *<br/>Windows Server 2019 * * |
-| | Active Directory functionaliteits niveau voor gebruikers inrichten, PCNS en GAL-synchronisatie | Windows 2000 (NR.)<br/>Windows Server 2003<br/>Windows Server 2008<br/>Windows Server 2008 R2<br/>Windows Server 2012<br/>Windows Server 2012 R2<br/>Windows Server 2016 *
+| **MIM-synchronisatie** | Windows Server | Windows Server 2008 R2 SP1 (NR.)<br/>Windows Server 2012 (NR)<br/>Windows Server 2012 R2<br/>Windows Server 2016 *<br/>Windows Server 2019 * * |
+| | Active Directory functionaliteits niveau voor gebruikers inrichten, PCNS en GAL-synchronisatie | Windows 2000 (NR)<br/>Windows Server 2003<br/>Windows Server 2008<br/>Windows Server 2008 R2<br/>Windows Server 2012<br/>Windows Server 2012 R2<br/>Windows Server 2016 *
 | | MIM-synchronisatiedatabase | SQL Server 2008 R2 SP3 (NR.)<br/>SQL Server 2012 SP4 (NR.)<br/>SQL Server 2014 SP3 (NR.) <br/>SQL Server 2016 SP2 *<br/>SQL Server 2017 * * |
 | | Active Directory voor het inrichten van gebruikers, PCNS en GAL-synchronisatie (optioneel)|Windows Server 2008 R2 SP1<br/>Windows Server 2012<br/>Windows Server 2012 R2 <br/> Windows Server 2016 *<br/> Windows Server 2019 * * |
 | | Exchange voor postvakinrichting en GAL Sync (optioneel)|Exchange Server 2010 SP3 (NR.)<br/>Exchange Server 2013 SP1<br/>Exchange Server 2016 *<br/>Exchange Server 2019 * * |
 | | Ontwikkelomgeving (optioneel) | Visual Studio 2012<br/>Visual Studio 2013 <br/> Visual Studio 2015 <br/> Visual Studio 2017 * |
 | | Aanvullend verbonden systeem (optioneel) | Active Directory Domain Services<br/>Active Directory<br/>Lightweight Directory Services<br/>SQL Server 2008 of hoger<br/>SharePoint Server 2013<br/> SharePoint Server 2016 *<br/> Share Point server 2019 * * <br/> Andere producten van derden |
-| **MIM-service en -portal** | Windows Server | Windows Server 2008 R2 SP1 (NR.)<br/>Windows Server 2012 (NR.)<br/>Windows Server 2012 R2 <br/> Windows Server 2016 *<br/> Windows Server 2019 * * |
-| |PAM-scenario: Windows Server | Windows Server 2012 R2 (NR.) <br/> Windows Server 2016 * |
-| |PAM-scenario: Active Directory voor Bastion Environment PAM-forest | Windows Server 2012 R2 (NR.) <br/> Windows Server 2016 * |
+| **MIM-service en -portal** | Windows Server | Windows Server 2008 R2 SP1 (NR.)<br/>Windows Server 2012 (NR)<br/>Windows Server 2012 R2 <br/> Windows Server 2016 *<br/> Windows Server 2019 * * |
+| |PAM-scenario: Windows Server | Windows Server 2012 R2 (NR) <br/> Windows Server 2016 * |
+| |PAM-scenario: Active Directory voor Bastion Environment PAM-forest | Windows Server 2012 R2 (NR) <br/> Windows Server 2016 * |
 | |PAM-scenario: Active Directory voor de bestaande (CORP) forests van het PAM-scenario | Windows Server 2008 <br/> Windows Server 2008 R2 * <br/> Windows Server 2012 * <br/> Windows Server 2012 R2 * <br/> Windows Server 2016 * |
 | | MIM-servicedatabases | SQL Server 2008 R2 SP3 (NR.)<br/>SQL Server 2012 SP4 (NR.)<br/>SQL Server 2014 SP3 (NR.) <br/> SQL Server 2016 SP2 *<br/> SQL Server 2017 * * |
-| | SharePoint | Share point Foundation 2010 (NR.)<br/>Share point Foundation 2013 SP1 (NR.) <br/> SharePoint 2016 *<br/> Share point 2019 * * |
+| | SharePoint | SharePoint Foundation 2010 (NR)<br/>Share point Foundation 2013 SP1 (NR.) <br/> SharePoint 2016 *<br/> Share point 2019 * * |
 | | Mailserver voor goedkeuring van de MIM-service en e-mailberichten voor groepsbeheer (optioneel) | Exchange Server 2010 SP3 (NR.)<br/>Exchange Server 2013 SP1 <br/> Exchange Server 2016 *<br/> Exchange Server 2019 * * <br/> Exchange Online * (alleen melding voor build [4.4.1749.0](https://docs.microsoft.com/microsoft-identity-manager/reference/version-history#version-4417490)) |
 | | Browser | Alle belang rijke ondersteunde browsers * (beperkt mobiele apparaten)|
-| **MIM-servicerapportages** | Windows Server |  Windows Server 2008 R2 SP1 (NR.)<br/>Windows Server 2012 (NR.) <br/>Windows Server 2012 R2 <br/> Windows Server 2016 *<br/> Windows Server 2019 * * |
+| **MIM-servicerapportages** | Windows Server |  Windows Server 2008 R2 SP1 (NR.)<br/>Windows Server 2012 (NR) <br/>Windows Server 2012 R2 <br/> Windows Server 2016 *<br/> Windows Server 2019 * * |
 | | Datawarehouse | System Center 2012 Service Manager <br/> System Center 2012 R2 Service Manager <br/> System Center 2016 Service Manager * (met 4.4.1459)<br/> System Center 2019 Service Manager * * |
-| **MIM-portals voor wachtwoord opnieuw instellen en wachtwoordregistratie** | Windows Server | Windows Server 2008 R2 SP1 (NR.)<br/>Windows Server 2012 (NR.)<br/>Windows Server 2012 R2 <br/> Windows Server 2016 *<br/> Windows Server 2019 * * |
+| **MIM-portals voor wachtwoord opnieuw instellen en wachtwoordregistratie** | Windows Server | Windows Server 2008 R2 SP1 (NR.)<br/>Windows Server 2012 (NR)<br/>Windows Server 2012 R2 <br/> Windows Server 2016 *<br/> Windows Server 2019 * * |
 | | Webbrowser | Alle hoofd browsers die worden ondersteund |
 | **MIM-invoegtoepassingen en -extensies** | Windows | Windows 7<br/>Windows 8<br/>Windows 8.1<br/>Windows 10 |
 | | Outlook-integratie (optioneel) | Outlook 2010 (in Windows, met uitzonde ring van klik-en-klaar)<br/>Outlook 2013 (in Windows, met uitzonde ring van klik-en-klaar) <br/> Outlook 2016 (in Windows 10, behalve klik-en-klaar) *<br/>Office 365 Outlook (in Windows 10, inclusief klik-en-klaar) * * |

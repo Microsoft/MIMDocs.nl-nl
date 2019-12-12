@@ -1,6 +1,6 @@
 ---
-title: Een alternatieve multi-factor Authentication-provider via een API om PAM te activeren of in scenario SSPR | Microsoft Docs
-description: Instellen van aangepaste MFA-API als een tweede beveiligingslaag wanneer uw gebruikers rollen in Privileged Access Management activeren en gebruiken van de selfservice voor wachtwoordherstel.
+title: Gebruik een alternatieve Multi-Factor Authentication provider via een API om PAM of het SSPR-scenario te activeren | Microsoft Docs
+description: Stel aangepaste MFA API in als een tweede beveiligingslaag wanneer uw gebruikers rollen activeren in Privileged Access Management en self-service voor wachtwoord herstel gebruiken.
 keywords: ''
 author: billmath
 ms.author: billmath
@@ -10,50 +10,50 @@ ms.date: 09/04/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.openlocfilehash: 7fb111520f94541672fc56d0fd2ee95bfcd3a49e
-ms.sourcegitcommit: f58926a9e681131596a25b66418af410a028ad2c
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/09/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "67690749"
 ---
-# <a name="use-a-custom-multi-factor-authentication-provider-via-an-api-during-pam-role-activation-or-in-sspr"></a>Een aangepaste multi-factor Authentication-provider via een API te gebruiken tijdens de activering van PAM-rol of in selfservice voor Wachtwoordherstel
+# <a name="use-a-custom-multi-factor-authentication-provider-via-an-api-during-pam-role-activation-or-in-sspr"></a>Een aangepaste Multi-Factor Authentication provider gebruiken via een API tijdens de activering van de PAM-rol of in SSPR
 
-Klanten van Azure AD Premium of Azure MFA kunnen Azure MFA integreren in twee MIM-scenario's - activering van rollen voor Privileged Access Management (PAM) en selfservice wachtwoord opnieuw instellen (SSPR).
+Klanten van Azure AD Premium of Azure MFA kunnen Azure MFA integreren in twee MIM-scenario's-Privileged Access Management (PAM)-rol activering en self-service voor wachtwoord herstel (SSPR).
 
 MIM-klanten hebben twee extra opties:
 
- - Gebruik een aangepaste levering van een eenmalig wachtwoord-provider die van toepassing alleen in het scenario voor MIM SSPR en gedocumenteerd in de handleiding voor het is [configureren selfservice voor wachtwoordherstel met OTP-SMS-Gate](https://docs.microsoft.com/en-us/previous-versions/mim/hh824692(v=ws.10))
- - Gebruik een aangepaste multi-factor authentication-provider telephony. Dit is van toepassing in de MIM SSPR en de PAM-scenario's die worden beschreven in dit artikel
+ - Gebruik een aangepaste provider voor eenmalige wacht woorden, die alleen van toepassing is op het MIM SSPR-scenario en wordt beschreven in hand leiding voor het [configureren van self-service voor wachtwoord herstel met otp SMS gate](https://docs.microsoft.com/en-us/previous-versions/mim/hh824692(v=ws.10))
+ - Gebruik een aangepaste telefoonservice provider voor multi-factor Authentication. Dit is van toepassing in zowel de MIM SSPR-als de PAM-scenario's, zoals beschreven in dit artikel
 
-In dit artikel bevat een overzicht over het gebruik van MIM met een aangepaste multi-factor authentication-provider, via een API en een integratie SDK die zijn ontwikkeld door de klant.  
+In dit artikel wordt uitgelegd hoe u MIM kunt gebruiken met een aangepaste multi-factor Authentication-provider, via een API en een integratie-SDK die is ontwikkeld door de klant.  
 
 ## <a name="prerequisites"></a>Vereisten
 
-Als u wilt gebruiken een aangepaste API van de multi-factor Authentication-provider met MIM, hebt u het volgende nodig:
+Als u een aangepaste provider-API voor Multi-Factor Authentication met MIM wilt gebruiken, hebt u het volgende nodig:
 
 - Telefoonnummers voor alle kandidaatgebruikers
-- MIM-hotfix [4.5.202.0](https://www.microsoft.com/download/details.aspx?id=57278) of hoger - Zie [versiegeschiedenis](reference/version-history.md) voor aankondigingen
-- MIM-Service is geconfigureerd voor de self-service voor Wachtwoordherstel of PAM
+- MIM-hotfix [4.5.202.0](https://www.microsoft.com/download/details.aspx?id=57278) of hoger-Zie [versie geschiedenis](reference/version-history.md) voor aankondigingen
+- MIM-service geconfigureerd voor SSPR of PAM
 
-## <a name="approach-using-custom-multi-factor-authentication-code"></a>Benadering met behulp van aangepaste multi-factor authenticatiecode
+## <a name="approach-using-custom-multi-factor-authentication-code"></a>Benadering van het gebruik van aangepaste multi-factor Authentication-Code
 
-### <a name="step-1-ensure-mim-service-is-at-version-452020-or-later"></a>Stap 1: Zorg ervoor dat de MIM-Service is versie 4.5.202.0 of hoger
+### <a name="step-1-ensure-mim-service-is-at-version-452020-or-later"></a>Stap 1: Zorg ervoor dat de MIM-service de versie 4.5.202.0 of hoger heeft
 
-Download en installeer de hotfix MIM [4.5.202.0](https://www.microsoft.com/download/details.aspx?id=57278) of een latere versie.
+Down load en installeer de MIM-hotfix [4.5.202.0](https://www.microsoft.com/download/details.aspx?id=57278) of een latere versie.
 
-### <a name="step-2-create-a-dll-which-implements-the-iphoneserviceprovider-interface"></a>Stap 2: Maken van een DLL-bestand waarmee de IPhoneServiceProvider-interface wordt geïmplementeerd
+### <a name="step-2-create-a-dll-which-implements-the-iphoneserviceprovider-interface"></a>Stap 2: Maak een DLL-bestand dat de IPhoneServiceProvider-interface implementeert
 
-Het DLL-bestand moet bevatten een klasse, waarmee de drie methoden geïmplementeerd:
+Het DLL-bestand moet een klasse bevatten die drie methoden implementeert:
 
-- `InitiateCall`: De MIM-Service wordt deze methode worden aangeroepen. De service doorgegeven de telefoon aantal en de aanvraag-ID als parameters.  De methode moet retourneren een `PhoneCallStatus` waarde van `Pending`, `Success` of `Failed`.
-- `GetCallStatus`: Als een eerdere aanroep `initiateCall` geretourneerd `Pending`, de MIM-Service met deze methode wordt aangeroepen. Deze methode retourneert ook `PhoneCallStatus` waarde van `Pending`, `Success` of `Failed`.
-- `GetFailureMessage`: Als een eerdere aanroep van `InitiateCall` of `GetCallStatus` geretourneerd `Failed`, de MIM-Service met deze methode wordt aangeroepen. Deze methode retourneert een diagnostisch bericht.
+- `InitiateCall`: de MIM-service roept deze methode aan. Met de service worden het telefoon nummer en de aanvraag-ID als para meters door gegeven.  De-methode moet een `PhoneCallStatus` waarde van `Pending`, `Success` of `Failed`retour neren.
+- `GetCallStatus`: als een eerdere aanroep naar `initiateCall` geretourneerd `Pending`, wordt deze methode door de MIM-service aangeroepen. Deze methode retourneert ook `PhoneCallStatus` waarde van `Pending`, `Success` of `Failed`.
+- `GetFailureMessage`: als er een eerdere aanroep van `InitiateCall` of `GetCallStatus` retourneert `Failed`, wordt deze methode door de MIM-service aangeroepen. Met deze methode wordt een diagnostisch bericht geretourneerd.
 
-De implementaties van deze methoden moet thread-veilig is, en daarnaast de uitvoering van de `GetCallStatus` en `GetFailureMessage` moet niet vanuit gegaan dat ze worden aangeroepen door de dezelfde thread als een eerdere aanroep `InitiateCall`.
+De implementaties van deze methoden moeten thread-safe zijn en daarnaast moet de implementatie van de `GetCallStatus` en `GetFailureMessage` niet aannemen dat ze worden aangeroepen door dezelfde thread als een eerdere aanroep van `InitiateCall`.
 
-Store van het DLL-bestand in de `C:\Program Files\Microsoft Forefront Identity Manager\2010\Service\` directory.
+Sla het DLL-bestand op in de `C:\Program Files\Microsoft Forefront Identity Manager\2010\Service\` Directory.
 
-Voorbeeld van code, die worden kan gecompileerd met behulp van Visual Studio 2010 of hoger.
+Voorbeeld code, die kan worden gecompileerd met Visual Studio 2010 of hoger.
 
 ```csharp
 using System;
@@ -135,27 +135,27 @@ namespace CustomPhoneGate
     }
 }
 ```
-### <a name="step-3-backup-the-mfasettingsxml-located-in-the-cprogram-filesmicrosoft-forefront-identity-manager2010service"></a>Stap 3: Back-up de MfaSettings.xml zich in de 'C:\Program Files\Microsoft Forefront Identity Manager\2010\Service"
+### <a name="step-3-backup-the-mfasettingsxml-located-in-the-cprogram-filesmicrosoft-forefront-identity-manager2010service"></a>Stap 3: back-up maken van bestand mfasettings. XML, dat zich bevindt in de map C:\Program Files\Microsoft Forefront Identity Manager\2010\Service
 
-### <a name="step-4-edit-the-mfasettingsxml-file"></a>Stap 4: Bewerk het bestand MfaSettings.xml
+### <a name="step-4-edit-the-mfasettingsxml-file"></a>Stap 4: het bestand bestand mfasettings. xml bewerken
 
-Bijwerken of schakelt u de volgende regels:
+De volgende regels bijwerken of wissen:
 
-- Alle regels voor configuratie-items verwijderen/wissen 
+- Alle regels voor configuratie vermeldingen verwijderen/wissen 
 
-- Bijwerken of de volgende regels toevoegen aan de volgende MfaSettings.xml met uw provider aangepast telefoonnummer <br>
+- Update of Voeg de volgende regels aan het volgende toe voor bestand mfasettings. XML met uw aangepaste telefoon provider <br>
 `<CustomPhoneProvider>C:\Program Files\Microsoft Forefront Identity Manager\2010\Service\CustomPhoneGate.dll</CustomPhoneProvider>`
 
-### <a name="step-5-restart-mim-service"></a>Stap 5: MIM-Service opnieuw starten
+### <a name="step-5-restart-mim-service"></a>Stap 5: de MIM-service opnieuw starten
 
-Nadat de service opnieuw is opgestart, gebruikt u SSPR en/of de PAM-functionaliteit met de aangepaste id-provider te valideren.
+Nadat de service opnieuw is opgestart, gebruikt u SSPR en/of PAM om de functionaliteit te valideren met de aangepaste ID-provider.
 
 > [!NOTE] 
-> Als u wilt terugkeren instelling MfaSettings.xml vervangen door uw back-upbestand in stap 3
+> Als u de instelling wilt herstellen, vervangt u bestand mfasettings. XML door het back-upbestand in stap 3
 
 
 ## <a name="next-steps"></a>Volgende stappen
 
-- [Aan de slag met de Azure multi-factor Authentication-Server](https://docs.microsoft.com/en-us/azure/active-directory/authentication/howto-mfaserver-deploy)
-- [Wat is Azure multi-factor Authentication](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication)
-- [Versiegeschiedenis van MIM](./reference/version-history.md)
+- [Aan de slag met de Azure Multi-Factor Authentication-server](https://docs.microsoft.com/en-us/azure/active-directory/authentication/howto-mfaserver-deploy)
+- [Wat is Azure Multi-Factor Authentication](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication)
+- [Release geschiedenis van MIM-versie](./reference/version-history.md)

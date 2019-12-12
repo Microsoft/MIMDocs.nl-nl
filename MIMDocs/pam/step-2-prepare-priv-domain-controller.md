@@ -12,11 +12,11 @@ ms.assetid: 0e9993a0-b8ae-40e2-8228-040256adb7e2
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: 0364b0d14d08ab3af32010675e0ba80d39404342
-ms.sourcegitcommit: 44a2293ff17c50381a59053303311d7db8b25249
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50380048"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "64518082"
 ---
 # <a name="step-2---prepare-the-first-priv-domain-controller"></a>Stap 2: de eerste PRIV-domeincontroller voorbereiden
 
@@ -260,7 +260,7 @@ Voer de volgende stappen uit op PRIVDC als een domeinbeheerder.
     - **Alle onderliggende objecten verwijderen**
     - **Alle eigenschappen lezen**
     - **Alle eigenschappen schrijven**
-    - **SID-geschiedenis migreren** klikt u op **volgende** vervolgens **voltooien**.
+    - **Sid-geschiedenis migreren** Klik op **volgende** en vervolgens op **volt ooien**.
 
 11. Klik nog één keer met de rechtermuisknop op het domein **priv.contoso.local** en selecteer **Beheer delegeren**.  
 12. Klik op het tabblad Geselecteerde gebruikers en groepen op **Toevoegen**.  

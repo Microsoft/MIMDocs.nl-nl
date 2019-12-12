@@ -12,18 +12,18 @@ ms.assetid: 82a9085c-9667-4b3b-8079-657eab1d1e58
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: 4838e9e8a495866902a78e713bb3b226eaf9def1
-ms.sourcegitcommit: 44a2293ff17c50381a59053303311d7db8b25249
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50379808"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "64518833"
 ---
 # <a name="hardware-and-software-requirements"></a>Hardware- en softwarevereisten
 
 Privileged Access Management heeft geen hardwarevereisten naast de vereisten van de onderliggende softwareplatforms. Zorg ervoor dat u voldoende geheugen of schijfruimte vrij hebt en beschikt over een netwerkverbinding.
 
 > [!IMPORTANT]
-> In dit artikel worden minimale vereisten vermeld voor een standaardimplementatie. Het is niet bedoeld ter illustratie van prestaties, schaalbaarheid en hoge beschikbaarheid. Dit vertegenwoordigt geen aanbevolen implementatietopologie voor grote ondernemingen of productieomgevingen.
+> In dit artikel worden minimale vereisten vermeld voor een standaardimplementatie. Het is niet bedoeld om prestaties, schaal baarheid of hoge Beschik baarheid te demonstreren. Dit vertegenwoordigt geen aanbevolen implementatie topologie voor grote ondernemingen of productie omgevingen.
 
 ## <a name="installing-from-software-packages"></a>Installeren vanuit softwarepakketten
 
@@ -35,7 +35,7 @@ De volgende software kan worden gedownload van TechNet Evaluation Center of MSDN
 
 De volgende software kan worden gedownload van GitHub:
 
-- [PAMSamplePortal](https://github.com/Azure/identity-management-samples): bevat een Voorbeeldwebtoepassing voor de REST-API
+- [PAMSamplePortal](https://github.com/Azure/identity-management-samples): bevat een voor beeld-webtoepassing voor de rest API
 
 ## <a name="required-software"></a>Vereiste software
 

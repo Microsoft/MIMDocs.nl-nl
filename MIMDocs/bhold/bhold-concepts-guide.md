@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.assetid: ''
 ms.prod: microsoft-identity-manager
 ms.openlocfilehash: 3749b74fd867601ee05f8e45d273ad2de9144b5b
-ms.sourcegitcommit: 65e11fd639464ed383219ef61632decb69859065
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/01/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "68701429"
 ---
 # <a name="microsoft-bhold-suite-concepts-guide"></a>Hand leiding micro soft BHOLD Suite-concepten
@@ -24,14 +24,14 @@ Micro soft BHOLDe Suite breidt deze mogelijkheden van MIM uit door op rollen geb
 
 Deze hand leiding helpt u te begrijpen hoe BHOLD Suite werkt met MIM en bevat de volgende onderwerpen:
 
-- Op rollen gebaseerd toegangsbeheer
+- Toegangsbeheer op basis van rollen
 - Attestation
 - Analyse
 - Rapporten
 - Toegangs beheer connector
 - MIM-integratie
 
-## <a name="role-based-access-control"></a>Op rollen gebaseerd toegangsbeheer
+## <a name="role-based-access-control"></a>Toegangsbeheer op basis van rollen
 
 De meest voorkomende methode voor het beheren van gebruikers toegang tot gegevens en toepassingen is via DAC (Discretionary Access Control). In de meeste voorkomende implementaties heeft elk significant object een geïdentificeerde eigenaar. De eigenaar heeft de mogelijkheid om toegang tot het object toe te kennen of te weigeren aan anderen op basis van individuele identiteit of groepslid maatschap. In de praktijk resulteert DAC doorgaans in een verdwaald van beveiligings groepen, wat een organisatie structuur weerspiegelt, anderen die functionele groeperingen vertegenwoordigen (zoals taak typen of project toewijzingen), en andere die bestaan uit makeshift-verzamelingen van gebruikers en apparaten die zijn gekoppeld voor meer tijdelijke doel einden. Naarmate organisaties groeien, is lidmaatschap van deze groepen steeds moeilijker te beheren. Als een werk nemer bijvoorbeeld van het ene naar het andere project wordt overgezet, moeten de groepen die worden gebruikt om de toegang tot de project activa te beheren, hand matig worden bijgewerkt. In dergelijke gevallen is het niet ongebruikelijk dat fouten optreden, fouten die de project beveiliging of productiviteit kunnen belemmeren.
 
@@ -48,7 +48,7 @@ Een extra voor deel van RBAC is de mogelijkheid om schei ding van taken (SoD) te
 Met BHOLD Suite kunt u rollen binnen uw organisatie opgeven en organiseren, gebruikers aan rollen toewijzen en de juiste machtigingen toewijzen aan rollen. Deze structuur wordt een rollen model genoemd en bevat en verbindt vijf typen objecten: 
 
 - Organisatie-eenheden
-- Gebruikers
+- Users
 - Rollen
 - Machtigingen
 - Toepassingen
@@ -74,7 +74,7 @@ In dit voor beeld zou elke verkoop medewerker behoren tot twee organisatie-eenhe
 
 OrgUnits kan in BHOLD Suite worden gemaakt met behulp van de BHOLD core-webportal of met behulp van de model Generator van het BHOLD.
 
-#### <a name="users"></a>Gebruikers
+#### <a name="users"></a>Users
 
 Zoals hierboven vermeld, moet elke gebruiker tot ten minste één organisatie-eenheid (OrgUnit) behoren. Omdat organisatie-eenheden het hoofd mechanisme zijn voor het koppelen van een gebruiker met rollen, in het meren deel van organisaties van een bepaalde gebruiker tot meerdere OrgUnits, zodat het eenvoudiger is om rollen met die gebruiker te koppelen. In sommige gevallen kan het echter nodig zijn om een rol te koppelen aan een gebruiker gescheiden van een OrgUnits waartoe de gebruiker behoort. Daarom kan een gebruiker rechtstreeks aan een rol worden toegewezen en kunnen ze rollen ophalen van de OrgUnits waartoe de gebruiker behoort.
 
@@ -138,7 +138,7 @@ Nadat model Generator deze rollen in het-roltype heeft gemaakt, kunt u het Role 
 In de vorige secties zijn de basis functies van het toegangs beheer op basis van rollen (RBAC) in BHOLD beschreven. In deze sectie vindt u een overzicht van de aanvullende functies in BHOLD die verbeterde beveiliging en flexibiliteit kunnen bieden voor de implementatie van RBAC van uw organisatie. In deze sectie vindt u overzichten van de volgende BHOLD-functies:
 
 - Kardinaliteit
-- Schei ding van taken
+- Gescheiden taken
 - Context aanpas bare machtigingen
 - Verificatie op basis van een kenmerk
 - Flexibele kenmerk typen
@@ -164,7 +164,7 @@ U kunt een gebruiker configureren om het volgende te beperken:
 - Het maximum aantal rollen dat aan de gebruiker kan worden gekoppeld
 - Het maximum aantal machtigingen dat kan worden toegewezen aan de gebruiker via roltoewijzingen
 
-#### <a name="separation-of-duties"></a>Schei ding van taken
+#### <a name="separation-of-duties"></a>Gescheiden taken
 
 Schei ding van taken (SoD) is een bedrijfs principe waarmee wordt voor komen dat personen de mogelijkheid krijgen om acties uit te voeren die niet voor één persoon beschikbaar moeten zijn. Een werk nemer kan bijvoorbeeld geen betaling aanvragen en de betaling autoriseren. Het principe van SoD stelt organisaties in staat om een systeem van controles en saldo's te implementeren om de bloot stelling van werknemers fouten of een ernstige storing te minimaliseren.
 
@@ -214,7 +214,7 @@ De BHOLD Analytics Portal biedt u de mogelijkheid om Rule sets te maken die best
 
 Een regel kan een van de volgende element sets testen:
 
-- Gebruikers
+- Users
 - Organisatie-eenheden
 - Rollen
 - Machtigingen
@@ -225,7 +225,7 @@ In het volgende diagram ziet u een eenvoudige regel die bestaat uit twee deel ve
 
 ![](media/bhold-concepts-guide/rules.png)
 
-Let op het verschil in het effect van het mislukken van een subset filter en het mislukken van een regel filter: Als u een subset filter uitschakelt, wordt een object element verwijderd uit het testen op volgende filters, terwijl bij het mislukken van een regel filter wordt aangegeven dat het object niet aan het beleid voldoet. Alleen de objecten die alle subset filters door geven en alle regel filters worden als compatibel gerapporteerd.
+Let op het verschil in het effect van het mislukken van een subset-filter en het mislukken van een regel filter: als u een subset filter uitschakelt, wordt een element object verwijderd uit het testen op volgende filters, terwijl bij het mislukken van een regel filter wordt aangegeven dat het object niet aan het beleid voldoet. Alleen de objecten die alle subset filters door geven en alle regel filters worden als compatibel gerapporteerd.
 
 Elk filter bestaat uit een type, een operator (die van type is afhankelijk), een sleutel (een van de elementen) en een waarde waarmee de sleutel door de operator wordt getest. Met het volgende filter wordt bijvoorbeeld getest of het aantal gebruikers in een element deel uitmaakt van meer dan 10:
 
@@ -233,7 +233,7 @@ Elk filter bestaat uit een type, een operator (die van type is afhankelijk), een
 |   |   |   |   |   |
 |---|---|---|---|---|
 |**Type:**   | Aantal   |
-| **Prestatie**  | Gebruikers  |
+| **Prestatie**  | Users  |
 | **Operator**  | >  |
 | **Waarde:** | 10 |
 
@@ -242,7 +242,7 @@ De regel filters kunnen uit drie typen bestaan en Opera tors die specifiek zijn 
 - Kenmerk
   - < en >
   - = en! =
-  - **Daarin**
+  - **Contains**
   - **Bevat niet**
 - Aantal
   - < en >
@@ -261,7 +261,7 @@ Als u bijvoorbeeld wilt testen van de implementatie van een SoD-beleid (schei di
 |   |  |
 |---|--|
 |Naam:| Test betalings SoD|
-|ElementName| Gebruikers|
+|ElementName| Users|
 |Subset-filter:| Een betaling met toestemming aanvragen|
 |Regel filter: | Kan geen machtiging voor betaling goed keuren|
 
@@ -277,7 +277,7 @@ Als uw bedrijfs beleid bijvoorbeeld beheerders nodig heeft om de machtiging voor
 |  |  |
 |--|--|
 |Naam: | Betalings SoDe test wijzigen|
-|ElementName | Gebruikers |
+|ElementName | Users |
 |Subset-filter: | Een rollen beheerder hebben|
 | Regel filters: |U moet een machtiging hebben om de betaling te wijzigen </br> U moet een machtiging hebben om de betaling goed te keuren|
 
@@ -288,7 +288,7 @@ In tegens telling tot andere opera tors **hebben** **alle** Opera tors alleen de
 |  |  |
 |--|--|
 |Naam: | Goedkeurings test controleren|
-|ElementName | Gebruikers|
+|ElementName | Users|
 | Subset-filter: | Een rollen beheerder hebben
 |Regel filter: | Zonder goed keuring van toestemming|
 
@@ -313,7 +313,7 @@ De volgende categorieën zijn opgenomen in de ingebouwde rapporten:
 - Access Control naar binnen
 - Logboekregistratie
 - Model
-- Autoriteiten
+- Statistieken
 - Werkstroom
 
 U kunt rapporten maken en toevoegen aan deze categorieën, maar u kunt ook uw eigen categorieën definiëren waarin u aangepaste en ingebouwde rapporten kunt plaatsen.

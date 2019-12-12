@@ -12,11 +12,11 @@ ms.assetid: 9471ccc1-bafe-46ee-b169-1464262380e1
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: 36b5e97675d5900bf3b5348ad4857827c426e60e
-ms.sourcegitcommit: 4f0b2883922bcb8fbef6b4284c35c6ca62c11565
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "56952159"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "64519453"
 ---
 # <a name="upgrade-from-forefront-identity-manager-2010-r2"></a>Upgrade uitvoeren in Forefront Identity Manager 2010 R2
 
@@ -41,7 +41,7 @@ In deze gids wordt verondersteld dat u het volgende al hebt ingesteld.
 
 2.  Meld u op elke server waarop FIM 2010 R2-onderdelen zijn geïnstalleerd, bijvoorbeeld *CORPIDM*, aan als Contoso\Administrator. In dit implementatievoorbeeld moet u over beheerdersrechten beschikken om de upgrade van FIM 2010 R2 naar **MIM** uit te voeren.
 
-3.  Download de MIM-software of pak deze uit.  Als u deze software niet hebt, raadpleegt u [Microsoft Identity Manager-licentieverlening en downloads](microsoft-identity-manager-licensing.md).
+3.  Download de MIM-software of pak deze uit.  Als u deze software niet hebt, raadpleegt u [Microsoft Identity Manager licenties en down loads](microsoft-identity-manager-licensing.md).
 
 ## <a name="upgrade-the-synchronization-service"></a>De upgrade van de synchronisatieservice uitvoeren
 
@@ -197,6 +197,6 @@ In deze gids wordt verondersteld dat u het volgende al hebt ingesteld.
 
 4. Controleer of de **Forefront Identity Manager-service** opnieuw is opgestart.
 
-Opmerking: Als de FIM-invoegtoepassingen en -extensies momenteel zijn geïmplementeerd op de computers van gebruikers voor SSPR, stel de nieuwe MFA-telefoonpoorten voor wachtwoordherstel pas nadat alle FIM-invoegtoepassingen en uitbreidingen zijn bijgewerkt naar MIM 2016 niet.  Omdat de FIM 2010 en FIM 2010 R2-invoegtoepassingen en -extensies de nieuwe poorten niet herkennen, wordt hierdoor een fout veroorzaakt en kan een gebruiker wachtwoordherstel niet voltooien.
+Opmerking: Als de FIM-invoegtoepassingen en -extensies momenteel zijn geïmplementeerd op de computers van gebruikers voor SSPR, configureert u de nieuwe MFA-telefoonpoorten voor wachtwoordherstel pas nadat de upgrade voor alle FIM-invoegtoepassingen en -uitbreidingen voor MIM 2016 is uitgevoerd.  Omdat de FIM 2010 en FIM 2010 R2-invoegtoepassingen en -extensies de nieuwe poorten niet herkennen, wordt hierdoor een fout veroorzaakt en kan een gebruiker wachtwoordherstel niet voltooien.
 
 Zie [Microsoft Identity Manager 2016 Service Pack 1 update package](https://blogs.technet.microsoft.com/iamsupport/2016/11/08/microsoft-identity-manager-2016-service-pack-1-update-package/) (Upgradepakket voor Microsoft Identity Manager 2016 SP1) voor richtlijnen voor de update naar Microsoft Identity Manager 2016 SP1

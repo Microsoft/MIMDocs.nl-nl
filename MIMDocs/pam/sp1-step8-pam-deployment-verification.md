@@ -12,11 +12,11 @@ ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: ''
 ms.suite: ems
 ms.openlocfilehash: d6b0327b39a76799b2943565dd0c3e00f55f745f
-ms.sourcegitcommit: 44a2293ff17c50381a59053303311d7db8b25249
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50379953"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "64518123"
 ---
 # <a name="step-8-pam-deployment-verification"></a>Stap 8 Verificatie van PAM-implementatie
 
@@ -47,7 +47,7 @@ Stap 2:
 
 1. Meld u aan bij de PAM-Server als MIMAdmin
 2. Voer PowerShell uit als Administrator
-3. cd $env:SYSTEMDRIVE\PAM
+3. cd $env: SYSTEMDRIVE\PAM
 4. import-module .\PAMValidation.psm1
 5. move-PAMVAlidationUsersToPAM
 
@@ -57,14 +57,14 @@ Stap 3:
 
 1. Meld u aan bij de client CORP als lokale administrator
 2. Voer PowerShell uit als Administrator
-3. cd $env:SYSTEMDRIVE\PAM
+3. cd $env: SYSTEMDRIVE\PAM
 4. import-module .\PAMValidation.psm1
 5. Enable-PAMUsersCORPClientRemote
 
 
 In deze stap moet u uw CORPAdmin-referenties opgeven. Zodra u deze hebt opgegeven, worden de juiste gebruikers toegevoegd aan de groepen Extern bureaubladgebruikers en Extern beheer-gebruikers.
 Gebruik op de CORP-client de volgende opdracht om PowerShell als de PRIV-gebruiker te openen die u valideert. </br></br>
-**Uitvoeren als u:<PRIV domain>\PRIV.pamRequestor powershell.exe**  </br></br>
+**Runas/u:<PRIV domain>\Priv.pamrequestor-gebruiker Power shell. exe**  </br></br>
 Typ in het PowerShell-venster het volgende:
 
 1. cd $env: SYSTEMDRIVE\PAM

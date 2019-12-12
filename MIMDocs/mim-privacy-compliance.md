@@ -11,10 +11,10 @@ ms.prod: microsoft-identity-manager
 ms.assetid: b0b39631-66df-4c5f-80c9-a1774346f816
 ms.suite: ems
 ms.openlocfilehash: 6f861c5b1984de70a91edcac89276402f289e355
-ms.sourcegitcommit: 65e11fd639464ed383219ef61632decb69859065
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/01/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "68701484"
 ---
 # <a name="microsoft-identity-manager-data-handling"></a>Verwerking van Microsoft Identity Manager gegevens 
@@ -34,7 +34,7 @@ Hieronder volgen enkele scenario's die klanten moeten overwegen en de volgende v
 Om u te helpen inzicht te krijgen in een huidige MIM-omgeving, kunt u het volgende hulp programma gebruiken om uw MIM-omgeving te documenteren of uw ontwerp documenten voor de implementatie uit te stellen.
 - [MIM-document functie: Hiermee staat u de huidige configuratie toe](https://github.com/Microsoft/MIMConfigDocumenter)
 
-## <a name="searching-for-and-identifying-personal-data"></a>Zoeken naar en identificeren van persoons gegevens
+## <a name="searching-for-and-identifying-personal-data"></a>Persoonsgegevens zoeken en identificeren
 Het zoeken van gegevens binnen MIM is afhankelijk van de configuratie en de installatie. De meeste omgevingen hebben een onderlinge verbinding, maar voor de duidelijkheid zijn deze op hoog niveau afgebroken.
 
 ### <a name="synchronization-service"></a>Synchronisatieservice
@@ -47,7 +47,7 @@ Als u niet zeker weet dat u deze gebruiker kunt volgen vanuit de MIM Synchroniza
     - De client voor de synchronisatie service openen
         - U kunt met behulp van de functie voor inverse-invoer kenmerk stroom importeren en prioriteiten weer geven.
 ![MIM-privacy-compliance_1. PNG](media/mim-privacy-compliance/mim-privacy-compliance_1.PNG)
-        - Met behulp van de omgekeerde zoek opdracht kunt u zoeken naar een wille keurig object ![en kenmerk in de data base MIM-privacy-compliance_2. png](media/mim-privacy-compliance/mim-privacy-compliance_2.PNG)
+        - Met behulp van de omgekeerde zoek opdracht kunt u zoeken naar een wille keurig object en kenmerk in de data base ![MIM-privacy-compliance_2. PNG](media/mim-privacy-compliance/mim-privacy-compliance_2.PNG)
  
 Nadat u het object hebt gevonden, wordt de pagina gebruikers profiel geopend wanneer u op het object klikt. De object Details bieden u de uitgebreide details over het object, de kenmerken, het laatst gewijzigde en de bron van de instantie en gerelateerde verbonden gegevens bron afgeleid van de beheer agent configuratie voor beeld hieronder.
 
@@ -145,7 +145,7 @@ Synchronisatie service zoveel manieren om gegevens af te handelen of gegevens te
 
 ### <a name="service-and-portal--pam"></a>Service en Portal/PAM
 
-Het wordt aanbevolen voor de service & Portal dat u de standaard configuratie voor de Bewaar periode van 30 dagen voor systeem bronnen behoudt. Dit vertelt de service wanneer deze wordt verwijderd, niet alleen gegevens aanvragen, maar ook voor objecten die moeten worden gewist uit het systeem. Zodra het proces is uitgevoerd, worden alle gegevens die aan dit object zijn gekoppeld, verwijderd, inclusief alle SSPR registratie gegevens. Hiermee wordt de configuratie voor object verwijdering hierboven afgespeeld. We hebben één tabel die de GUID van de objecten opslaat. Als u de totale grootte van de tabel in Build 4.4.1459 wilt reduceren, kunt u [hier](https://support.microsoft.com/en-us/help/4012498/hotfix-rollup-package-build-4-4-1459-0-is-available-for-microsoft-iden)een proces toevoegen met de naam FIM_DeleteExpiredSystemObjectsJob Details van dit proces.
+Het wordt aanbevolen voor de service & Portal dat u de standaard configuratie voor de Bewaar periode van 30 dagen voor systeem bronnen behoudt. Dit vertelt de service wanneer deze wordt verwijderd, niet alleen gegevens aanvragen, maar ook voor objecten die moeten worden gewist uit het systeem. Zodra het proces is uitgevoerd, worden alle gegevens die aan dit object zijn gekoppeld, verwijderd, inclusief alle SSPR registratie gegevens. Hiermee wordt de configuratie voor object verwijdering hierboven afgespeeld. We hebben één tabel die de GUID van de objecten opslaat. Om de totale grootte van de tabel in Build 4.4.1459 te verkleinen, kunt u [hier](https://support.microsoft.com/en-us/help/4012498/hotfix-rollup-package-build-4-4-1459-0-is-available-for-microsoft-iden)een proces toevoegen met de naam FIM_DeleteExpiredSystemObjectsJob Details van dit proces.
 
 ![MIM-privacy-naleving-srrc. PNG](media/mim-privacy-compliance/mim-privacy-compliance-srrc.PNG)
 
@@ -155,7 +155,7 @@ Het wordt aanbevolen voor de service & Portal dat u de standaard configuratie vo
 Bhold als de meeste systemen die zijn verbonden met de synchronisatie service, kunnen worden geconfigureerd om te verwijderen zodra het bron object, zoals HR, wordt verwijderd. Dit wordt geconfigureerd in de beheer agent. en worden beheerd door de regels voor het verwijderen van objecten zoals beschreven onder de functies synchronisaties service.
 
 Een andere mogelijkheid is om het gebruikers object rechtstreeks te verwijderen uit de BHOLD core-gebruikers interface. Afhankelijk van de installatie kan dit goed werken, maar Opmerking inrichten logica kan deze gebruiker opnieuw maken als deze niet wordt verwijderd uit de bron.
-![MIM-privacy-naleving-bholdr. PNG](media/mim-privacy-compliance/mim-privacy-compliance-bholdr.PNG)
+![MIM-privacy-naleving-bholdr. PNG-](media/mim-privacy-compliance/mim-privacy-compliance-bholdr.PNG)
 
 
 ### <a name="certificate-management"></a>Certificaatbeheer
@@ -173,11 +173,11 @@ Als u het verzamelen van gegevens in de vorige versie wilt uitschakelen, voert u
 
 ![MIM-privacy-naleving-CEIP. PNG](media/mim-privacy-compliance/mim-privacy-compliance-ceip.PNG)
 
-of bewerk het REGI ster en stel de waarde in op 0: Onderdeel CEIP HKLM\SOFTWARE\Microsoft\Forefront identiteit Manager\2010
+of bewerk het REGI ster en stel de waarde in op 0: (onderdeel) CEIP HKLM\SOFTWARE\Microsoft\Forefront identiteit Manager\2010
 
 ![MIM-privacy-naleving-ceip2. PNG](media/mim-privacy-compliance/mim-privacy-compliance-ceip2.PNG)
 
 ## <a name="next-steps"></a>Volgende stappen 
 - [Voor aan SQL gerelateerde privacy-richt lijnen](https://docs.microsoft.com/sql/relational-databases/security/microsoft-sql-and-the-gdpr-requirements?view=sql-server-2017)
 - [De sectie AVG van de service Trust-Portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted)
-- [FIM 2010-archief: Een platform voor het implementeren van Forefront Identity Manager 2010](https://social.technet.microsoft.com/wiki/contents/articles/35789.fim-2010-archive-ramp-up-implementing-forefront-identity-manager-2010.aspx)
+- [FIM 2010-archief: het implementeren van Forefront Identity Manager 2010](https://social.technet.microsoft.com/wiki/contents/articles/35789.fim-2010-archive-ramp-up-implementing-forefront-identity-manager-2010.aspx)

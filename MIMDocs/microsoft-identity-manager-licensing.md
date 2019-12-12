@@ -12,10 +12,10 @@ ms.assetid: ''
 ms.reviewer: billmath
 ms.suite: ems
 ms.openlocfilehash: e0bfd868345b8e7dcc6a02e745d3ccbf632a6c58
-ms.sourcegitcommit: b09a8c93983d9d92ca4871054650b994e9996ecf
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/31/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73329289"
 ---
 # <a name="microsoft-identity-manager-2016-licensing-and-downloads"></a>Microsoft Identity Manager 2016-licenties en-down loads
@@ -24,13 +24,13 @@ In dit artikel vindt u een overzicht van de benaderingen voor licentie Microsoft
 
 ## <a name="licensing-mim-for-your-organization"></a>Licentie MIM voor uw organisatie
 
-Microsoft Identity Manager 2016 wordt per gebruiker in licentie gegeven.  De details van licenties zijn opgenomen in de product termen en gerelateerde documenten, die kunnen worden gedownload via de pagina [licentie voorwaarden](https://www.microsoft.com/licensing/product-licensing/products.aspx) .
+Licenties voor Microsoft Identity Manager 2016 worden per gebruiker verstrekt.  De details van licenties zijn opgenomen in de product termen en gerelateerde documenten, die kunnen worden gedownload via de pagina [licentie voorwaarden](https://www.microsoft.com/licensing/product-licensing/products.aspx) .
 
 ### <a name="licensing-for-azure-ad-premium-customers"></a>Licentie verlening voor Azure AD Premium klanten
 
 Microsoft Identity Manager 2016 is opgenomen in Azure Active Directory Premium (P1 en P2), die deel uitmaakt van Enterprise Mobility + Security.
 
-Azure AD Premium is beschikbaar via een [micro soft-Enterprise Agreement](https://www.microsoft.com/licensing/licensing-programs/enterprise.aspx), het [Open Volume License-programma](https://www.microsoft.com/licensing/licensing-programs/open-license.aspx)en het programma [Cloud Solution Providers](https://go.microsoft.com/fwlink/?LinkId=614968&clcid=0x409) . Abonnees van Azure en Office 365 kunnen Azure Active Directory Premium P1 en P2 ook online aanschaffen.  Meer informatie over [Azure Active Directory prijzen](https://azure.microsoft.com/pricing/details/active-directory/).
+Azure AD Premium is beschikbaar via een [micro soft-Enterprise Agreement](https://www.microsoft.com/licensing/licensing-programs/enterprise.aspx), het [Open Volume License-programma](https://www.microsoft.com/licensing/licensing-programs/open-license.aspx)en het programma [Cloud Solution Providers](https://go.microsoft.com/fwlink/?LinkId=614968&clcid=0x409) . Azure- en Office 365-abonnees kunnen Active Directory Premium P1 en P2 ook online aanschaffen.  Meer informatie over [Azure Active Directory prijzen](https://azure.microsoft.com/pricing/details/active-directory/).
 
 ### <a name="mim-cals"></a>MIM-Cal's
 
@@ -57,8 +57,8 @@ Als u een nieuwe installatie start, moet u de installatie bestanden downloaden v
 | Selfservice | Invoeg toepassingen en extensies | Nee | `Add-ins and extensions` | Geïnstalleerd op computers van eind gebruikers |
 | Selfservice | SCSM rapportage | Nee | `Data Warehouse Support Scripts` | |
 | Selfservice | Hybrid Reporting agent | Nee | N/A | Gedistribueerd via download centrum |
-| Selfservice | Taal pakketten | Nee | `LANGUAGE Packs` | |
-| Certificaatbeheer | BEDRAAGT | Yes | `Certificate Management` | |
+| Selfservice | Taalpakketten | Nee | `LANGUAGE Packs` | |
+| Certificaatbeheer | CM | Yes | `Certificate Management` | |
 | Certificaatbeheer | CM bulk client | Nee | `CM Bulk Client` | |
 | Certificaatbeheer | CM Client | Nee | `CM Client`  | |
 | Certificaatbeheer | CM-app voor Windows | Nee | `FIMCMModernApp*` | | |
@@ -84,12 +84,12 @@ Om te bepalen welke update bestanden nodig zijn, bevat deze tabel de onderdelen 
 
 | Scenario | Onderdeel | Naam van DVD ISO-map | Bestands naam van de bijbehorende update patch |
 |----------|-----------|-   |-------------------|----------|--------------|
-|Synchronisatie| Synchronisatie service | `Synchronization Service` | `MIMSyncService_x64*.msp` |
+|Synchronisatie| Synchronisatieservice | `Synchronization Service` | `MIMSyncService_x64*.msp` |
 | Selfservice | MIM-service, MIM-Portal | `Service and Portal` | `MIMService_x64*msp` |
 | Selfservice | Invoeg toepassingen en extensies | `Add-ins and extensions` | `MIMAddinsExtensions*msp` |
-| Selfservice | Taal pakketten | `LANGUAGE Packs` | `LANGUAGE Packs.zip` |
+| Selfservice | Taalpakketten | `LANGUAGE Packs` | `LANGUAGE Packs.zip` |
 | Toegangs beheer (BHOLD) | BHOLD | `BHOLD` | `AccessManagementConnector.msi`, `BHOLD*.msi` |
-| Certificaatbeheer | BEDRAAGT |  `Certificate Management` | `MIMCM*.msp` |
+| Certificaatbeheer | CM |  `Certificate Management` | `MIMCM*.msp` |
 | Certificaatbeheer | CM bulk client |  `CM Bulk Client` |`MIMCMBulkClient*msp` |
 | Certificaatbeheer | CM Client | `CM Client` |`MIMCMClient*msp` |
 

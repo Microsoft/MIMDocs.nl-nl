@@ -1,6 +1,6 @@
 ---
-title: Bijwerken van de MIM-Services voor specifieke accounts voor de melding en -goedkeuringen als gMSA is ingeschakeld | Microsoft Docs
-description: Dit onderwerp wordt de basisstappen voor het configureren van gMSA te beschrijven.
+title: MIM-specifieke Services-accounts voor meldingen en goed keuringen bijwerken wanneer gMSA is ingeschakeld | Microsoft Docs
+description: Onderwerp met een beschrijving van de basis stappen voor het configureren van gMSA.
 author: billmath
 ms.author: billmath
 manager: mtillman
@@ -8,18 +8,18 @@ ms.date: 06/27/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.openlocfilehash: af293106b11651dfd720c03165938f8079a3e49b
-ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49358213"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "64518852"
 ---
-# <a name="update-of-mim-specific-service-account-for-notifications-to-gmsa"></a>Bijwerken van de specifieke MIM-Service-account voor meldingen aan gMSA
+# <a name="update-of-mim-specific-service-account-for-notifications-to-gmsa"></a>Update van een MIM-specifiek service account voor meldingen naar gMSA
 ===========================================
 
-Update het wachtwoord voor accounts, opgeslagen onder is de powershell, zodat klanten niet hoeven te wijzigen voor de modus uitvoeren
+Werk het wacht woord bij naar opgeslagen accounts. Hieronder ziet u de Power shell, zodat klanten de modus wijzigen niet hoeven uit te voeren
 
-PowerShell: Office 365-Account bijwerken:
+Power shell: Office365-account update:
 
 ```powershell
 #O365update.ps1
@@ -110,11 +110,11 @@ else
     Write-host "Changing Exchange Online password for service running under normal account" -ForegroundColor Green
     Write-host "You should be logged as FIMService service account to encrypt the pwd" -ForegroundColor Green
     Write-host "If account don't have rights to write in registry login as someone with local admin privilege to set the value" -ForegroundColor Green
-    ## RUNAS  /user:contoso\MIMService "powershell"
+    ## RUNAS  /user:contoso\MIMService "powershell"
     #Login as mimservice account and then impersonate to update office365 login
     #We need to do the following:
-    #1.    Login as FIMService service account to encrypt the pwd
-    #2.    Login as someone with local admin privilege to set the value in registry
+    #1.    Login as FIMService service account to encrypt the pwd
+    #2.    Login as someone with local admin privilege to set the value in registry
     ###############################
     Add-Type -AssemblyName System.Security
     #$o365user = Read-Host "Please enter office 365 email"

@@ -12,10 +12,10 @@ ms.assetid: c01487f2-3de6-4fc4-8c3a-7d62f7c2496c
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: 62ef8796717dbcaea18d21bc3d28248efdeef92e
-ms.sourcegitcommit: 323c2748dcc6b6991b1421dd8e3721588247bc17
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73568111"
 ---
 # <a name="set-up-an-identity-management-server-sharepoint"></a>Een server voor identiteitsbeheer instellen: SharePoint
@@ -134,7 +134,7 @@ Voer de stappen uit die in de **wizard Configuratie van SharePoint-producten** w
 
 4. Open op uw server voor identiteits beheer een nieuw tabblad in de webbrowser, navigeer naar http://mim.contoso.com/ en meld u aan als *contoso\miminstall*.  Er wordt een lege SharePoint-site met de naam *MIM-portal* weergegeven.
 
-    ![MIM-Portal op http://mim.contoso.com/-installatie kopie](media/prepare-server-sharepoint/MIM_DeploySP1new.png)
+    ![MIM-Portal op http://mim.contoso.com/ -installatie kopie](media/prepare-server-sharepoint/MIM_DeploySP1new.png)
 
 5. Kopieer de URL en ga vervolgens in Internet Explorer naar **Internetopties**, open het tabblad **Beveiliging**, selecteer **Lokaal intranet** en klik op **Sites**.
 

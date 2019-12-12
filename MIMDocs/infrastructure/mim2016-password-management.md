@@ -10,11 +10,11 @@ ms.topic: reference
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
 ms.openlocfilehash: 45b46ed10f7eda506fe1fc1af94c4be06a1a37b9
-ms.sourcegitcommit: 44a2293ff17c50381a59053303311d7db8b25249
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50380189"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "64516586"
 ---
 # <a name="microsoft-identity-manager-2016-password-management"></a>Wachtwoordbeheer voor Microsoft Identity Manager 2016
 
@@ -67,13 +67,13 @@ De PCNS wordt uitgevoerd op elke Active Directory domeincontroller. De systemen 
 
 Bij de wachtwoordsynchronisatie zijn de volgende onderdelen betrokken:
 
--   **Meldingsservice voor wachtwoordwijzigingen (Pcnssvc.exe)**: de meldingsservice voor wachtwoordwijzigingen wordt uitgevoerd op een domeincontroller en is verantwoordelijk voor het ontvangen van meldingen voor wachtwoordwijzigingen van het lokale wachtwoordfilter, het in de wachtrij plaatsen van de meldingen voor de doelserver waarop MIM wordt uitgevoerd, en het gebruik van RPC voor het bezorgen van de meldingen. De service versleutelt het wachtwoord en zorgt ervoor dat het wachtwoord beveiligd blijft totdat het is bezorgd bij de doelserver waarop MIM wordt uitgevoerd.
+-   **Meldingsservice voor wachtwoordwijzigingen (Pcnssvc.exe)** : de meldingsservice voor wachtwoordwijzigingen wordt uitgevoerd op een domeincontroller en is verantwoordelijk voor het ontvangen van meldingen voor wachtwoordwijzigingen van het lokale wachtwoordfilter, het in de wachtrij plaatsen van de meldingen voor de doelserver waarop MIM wordt uitgevoerd, en het gebruik van RPC voor het bezorgen van de meldingen. De service versleutelt het wachtwoord en zorgt ervoor dat het wachtwoord beveiligd blijft totdat het is bezorgd bij de doelserver waarop MIM wordt uitgevoerd.
 
--   **SPN (Service Principal Name)**: de SPN is een eigenschap van het accountobject in Active Directory die door het Kerberos-protocol wordt gebruikt om de PCNS en het doel wederzijds te verifiëren. De SPN zorgt ervoor dat de PCNS wordt geverifieerd voor de juiste server waarop MIM wordt uitgevoerd en dat de meldingen voor wachtwoordwijzigingen niet door een andere service worden ontvangen. De SPN wordt gemaakt en toegewezen met behulp van het hulpprogramma setspn.exe. Zie Using Password Synchronization (Wachtwoordsynchronisatie gebruiken) voor meer informatie over het configureren van de SPN.
+-   **SPN (Service Principal Name)** : de SPN is een eigenschap van het accountobject in Active Directory die door het Kerberos-protocol wordt gebruikt om de PCNS en het doel wederzijds te verifiëren. De SPN zorgt ervoor dat de PCNS wordt geverifieerd voor de juiste server waarop MIM wordt uitgevoerd en dat de meldingen voor wachtwoordwijzigingen niet door een andere service worden ontvangen. De SPN wordt gemaakt en toegewezen met behulp van het hulpprogramma setspn.exe. Zie Using Password Synchronization (Wachtwoordsynchronisatie gebruiken) voor meer informatie over het configureren van de SPN.
 
--   **Filter voor meldingen van wachtwoordwijzigingen (Pcnsflt.dll)**: het wachtwoordfilter wordt gebruikt om wachtwoorden in platte tekst vanuit Active Directory te verkrijgen. Het filter wordt door de LSA (Local Security Authority) geladen op elke Windows Server-domeincontroller die deelneemt aan het distribueren van wachtwoorden naar een doelserver waarop MIM wordt uitgevoerd. Als het filter is geïnstalleerd en de domeincontroller opnieuw is gestart, kan het filter meldingen voor wachtwoordwijzigingen ontvangen die afkomstig zijn van die domeincontroller. Het filter voor wachtwoordwijzigingen wordt gelijktijdig met andere filters op de domeincontrollers uitgevoerd.
+-   **Filter voor meldingen van wachtwoordwijzigingen (Pcnsflt.dll)** : het wachtwoordfilter wordt gebruikt om wachtwoorden in platte tekst vanuit Active Directory te verkrijgen. Het filter wordt door de LSA (Local Security Authority) geladen op elke Windows Server-domeincontroller die deelneemt aan het distribueren van wachtwoorden naar een doelserver waarop MIM wordt uitgevoerd. Als het filter is geïnstalleerd en de domeincontroller opnieuw is gestart, kan het filter meldingen voor wachtwoordwijzigingen ontvangen die afkomstig zijn van die domeincontroller. Het filter voor wachtwoordwijzigingen wordt gelijktijdig met andere filters op de domeincontrollers uitgevoerd.
 
--   **Hulpprogramma voor de configuratie van de meldingsservice voor wachtwoordwijzigingen (Pcnscfg.exe)**: het hulpprogramma pcnscfg.exe wordt gebruikt voor het beheren en onderhouden van de configuratieparameters van de meldingsservice voor wachtwoordwijzigingen die in Active Directory zijn opgeslagen. Deze configuratieparameters (bijvoorbeeld voor het definiëren van de doelservers, het interval voor nieuwe pogingen voor de wachtrij met wachtwoorden, en het in- of uitschakelen van een doelserver), worden gebruikt tijdens het verifiëren en verzenden van wachtwoordmeldingen naar de doelserver waarop MIM wordt uitgevoerd.
+-   **Hulpprogramma voor de configuratie van de meldingsservice voor wachtwoordwijzigingen (Pcnscfg.exe)** : het hulpprogramma pcnscfg.exe wordt gebruikt voor het beheren en onderhouden van de configuratieparameters van de meldingsservice voor wachtwoordwijzigingen die in Active Directory zijn opgeslagen. Deze configuratieparameters (bijvoorbeeld voor het definiëren van de doelservers, het interval voor nieuwe pogingen voor de wachtrij met wachtwoorden, en het in- of uitschakelen van een doelserver), worden gebruikt tijdens het verifiëren en verzenden van wachtwoordmeldingen naar de doelserver waarop MIM wordt uitgevoerd.
     De serviceconfiguratie wordt opgeslagen in Active Directory, zodat slechts de configuratie op één domeincontroller hoeft te worden bijgewerkt. In Active Directory wordt de wijziging gerepliceerd naar alle andere domeincontrollers.
 
 -   **RPC-server (server voor externe procedureaanroepen) op de server waarop MIM wordt uitgevoerd**: als wachtwoordsynchronisatie is ingeschakeld, wordt de RPC-server gestart op de server waarop MIM wordt uitgevoerd. Daardoor kan de RPC-server meldingen ontvangen van de meldingsservice voor wachtwoordwijzigingen. Het te gebruiken bereik van poorten wordt dynamisch door RPC geselecteerd. Als MIM via een firewall met de Active Directory-forest dient te communiceren, moet u een bereik van poorten openen.
@@ -109,7 +109,7 @@ Zie Using Password Synchronization (Wachtwoordsynchronisatie gebruiken) voor mee
 
 Het proces van het synchroniseren van een aanvraag voor een wachtwoordwijziging vanuit een Active Directory-domeincontroller naar overige verbonden gegevensbronnen wordt in het volgende diagram weergegeven:
 
-1.  De gebruiker start de aanvraag voor het wijzigen van een wachtwoord door op Ctrl+Alt+Del te drukken. De aanvraag wordt samen met het nieuwe wachtwoord naar de dichtstbijzijnde domeincontroller verzonden.
+1.  De gebruiker initieert de aanvraag voor het wijzigen van het wacht woord door op CTRL + ALT + DEL te drukken. De aanvraag voor het wijzigen van het wacht woord, met inbegrip van het nieuwe wacht woord, wordt verzonden naar de dichtstbijzijnde domein controller.
 
 2.  De domeincontroller registreert de aanvraag voor de wachtwoordwijziging en stelt het filter voor meldingen van wachtwoordwijzigingen (Pcnsflt.dll) op de hoogte.
 
@@ -148,7 +148,7 @@ In het ideale geval wordt een door de gebruiker gewijzigd wachtwoord foutloos ge
 
 Sommige fouten zijn dermate ernstig dat de bewerking ook na zeer veel nieuwe pogingen niet slaagt. In deze gevallen wordt er een foutgebeurtenis gelogd en wordt het proces beëindigd. De volgende gebeurtenissen worden niet opnieuw geprobeerd:
 
-| Gebeurtenis | Ernst    | Beschrijving                                                                                                                                                            |
+| Gebeurtenis | Ernst    | Description                                                                                                                                                            |
 |-------|-------------|-----------|
 | 6919  | Informatie | Een instelbewerking voor wachtwoordsynchronisatie wordt niet uitgevoerd omdat het tijdstempel verouderd is.                                                                      |
 | 6921  | Fout       | De instelbewerking voor wachtwoordsynchronisatie wordt niet verwerkt omdat wachtwoordbeheer niet is ingeschakeld op de doelbeheerserver.                                |

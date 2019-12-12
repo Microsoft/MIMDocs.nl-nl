@@ -8,10 +8,10 @@ ms.date: 10/29/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.openlocfilehash: 90ef2ab63be3914d1d48c7319821177e7e62f9e0
-ms.sourcegitcommit: 65e11fd639464ed383219ef61632decb69859065
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/01/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "68701304"
 ---
 # <a name="mim-sp1-4414360--service-dynamic-logging"></a>MIM SP1 (4.4.1436.0)-service dynamische logboekregistratie
@@ -31,7 +31,7 @@ De dynamische logboekregistratieniveaus kunt u [hier](https://msdn.microsoft.com
 - Critical = standaardniveau waarbij service alleen kritieke gebeurtenissen schrijft
 - Werk regel 8 (dynamicLogging mode="true" loggingLevel="Critical") bij met de voorkeurswaarde voor logboekregistratie
 
-Configuratie van dynamische logboek registratie bevindt zich op regel 266: Micro soft. ResourceManagement. service. exe. config
+Configuratie van Dynamic logging bevindt zich op regel 266: micro soft. ResourceManagement. service. exe. config
 
 ![In de gemarkeerde secties worden de regels met de verschillende gebieden voor logboekregistratie weergegeven](media/mim-service-dynamic-logging/screen02.png)
 
@@ -49,7 +49,7 @@ Als u de tracering wilt bekijken, kunt u het [hulp programma Service Trace Viewe
 
  ![Schermafbeelding van viewer voor servicetraceringen](media/mim-service-dynamic-logging/screen04.png)
 
-# <a name="updates-build-45xx-or-greater"></a>Updates Build 4.5. x. x of hoger
+# <a name="updates-build-45xx-or-greater"></a>Updates: Build 4,5. x. x of hoger
 
 In Build 4.5. x. x hebben we de functie logboek registratie voor het opgeven van het standaard logboek registratie niveau **' waarschuwing '** aangepast. De service schrijft berichten in twee bestanden ("00" en "01" indexen worden toegevoegd vóór extensie). De bestanden bevinden zich in de map C:\Program Files\Microsoft Forefront Identity Manager\2010\Service. Wanneer het bestand de maximale grootte overschrijdt, wordt de service in een ander bestand geschreven. Als er een ander bestand bestaat, wordt dit overschreven. De standaard maximale grootte van het bestand is 1 GB. Als u de standaard maximale grootte wilt wijzigen, moet u de para meter **' maxOutputFileSizeKB '** toevoegen met de waarde Max file size in kB in de listener (Zie het onderstaande voor beeld) en de MIM-service opnieuw starten. Wanneer de service wordt gestart, voegt het Logboeken toe aan het meest recente bestand (als de limiet van de ruimte wordt overschreden, wordt het oudste bestand overschreven). 
 

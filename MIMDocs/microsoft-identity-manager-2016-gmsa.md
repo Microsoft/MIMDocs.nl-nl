@@ -1,6 +1,6 @@
 ---
 title: Conversie van specifieke MIM-Services naar gMSA | Microsoft Docs
-description: Dit onderwerp wordt de basisstappen voor het configureren van gMSA te beschrijven.
+description: Onderwerp met een beschrijving van de basis stappen voor het configureren van gMSA.
 author: billmath
 ms.author: billmath
 manager: mtillman
@@ -8,210 +8,210 @@ ms.date: 06/27/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.openlocfilehash: 96d375d82a71a21f0be444d628f387c4e1ffdd09
-ms.sourcegitcommit: 9e420840815adb133ac014a8694de9af4d307815
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52825770"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "64520552"
 ---
 # <a name="conversion-of-mim-specific-services-to-gmsa"></a>Conversie van specifieke MIM-Services naar gMSA
 
-Deze handleiding wordt stapsgewijs door de basisstappen voor het configureren van gMSA voor ondersteunde services. Het proces moet worden geconverteerd naar gMSA is eenvoudig uw omgeving vooraf zijn geconfigureerd.
+In deze hand leiding worden de basis stappen beschreven voor het configureren van gMSA voor ondersteunde services. Het proces dat u wilt converteren naar gMSA is eenvoudig nadat u uw omgeving vooraf hebt geconfigureerd.
 
-De hotfix is vereist: \<koppeling naar de meest recente KB\>
+Vereiste hotfix: \<koppeling naar de meest recente KB-\>
 
 Ondersteund:
 
--   MIM-synchronisatieservice service(FIMSynchronizationService)
--   MIM Service(FIMService)
--   MIM-Wachtwoordregistratie
--   MIM-wachtwoord opnieuw instellen
--   PAM-bewaking Service(PamMonitoringService)
--   PAM Component-Service (PrivilegeManagementComponentService)
+-   MIM-synchronisatie service (FIMSynchronizationService)
+-   MIM-service (FIMService)
+-   MIM-wachtwoord registratie
+-   MIM-wacht woord opnieuw instellen
+-   PAM-bewakings service (PamMonitoringService)
+-   PAM component-service (PrivilegeManagementComponentService)
 
 Niet ondersteund:
 
--   MIM-Portal wordt niet ondersteund. het deel uitmaakt van de sharepoint-omgeving en moet u implementeren in de farmmodus en [automatisch veranderen van wachtwoorden in SharePointServer configureren](https://docs.microsoft.com/sharepoint/administration/configure-automatic-password-change)
--   Alle Beheeragents
--   Microsoft Certificate Management
+-   De MIM-portal wordt niet ondersteund. deze maakt deel uit van de share point-omgeving en u moet in de farm modus implementeren en [Automatische wachtwoord wijziging configureren in SharePointServer](https://docs.microsoft.com/sharepoint/administration/configure-automatic-password-change)
+-   Alle beheer agenten
+-   Micro soft certificaat beheer
 -   BHOLD
 
-<a name="general-information"></a>Algemene gegevens 
+<a name="general-information"></a>Algemene informatie 
 --------------------
 
-Lezen die nodig zijn voor installatie is voltooid en begrijpen
+Lezen vereist om de installatie te volt ooien en inzicht te krijgen in
 
--   [Overzicht van de groep beheerde Service-Accounts](https://docs.microsoft.com/windows-server/security/group-managed-service-accounts/group-managed-service-accounts-overview)
+-   [Overzicht van door groepen beheerde service accounts](https://docs.microsoft.com/windows-server/security/group-managed-service-accounts/group-managed-service-accounts-overview)
 
 -   <https://docs.microsoft.com/powershell/module/addsadministration/new-adserviceaccount?view=win10-ps>
 
 -   <https://technet.microsoft.com/library/jj128430(v=ws.11).aspx>
 
-Eerste stap op uw windows-domeincontroller
+Eerste stap op uw Windows-domein controller
 
-1.  Maak de basissleutel van sleutel distributie Services(KDS) (slechts één keer per domein), indien nodig. Hoofd-sleutel wordt gebruikt door de KDS-service op DC's (samen met andere informatie) voor het genereren van wachtwoorden.
+1.  Maak, indien nodig, de hoofd sleutel distributie Services (KDS) (slechts eenmaal per domein). De basis sleutel wordt door de KDS-service op Dc's (samen met andere informatie) gebruikt voor het genereren van wacht woorden.
 
-    -   Toevoegen-KDSRootKey – EffectiveImmediately
+    -   Add-KDSRootKey – EffectiveImmediately
 
-    -   "– EffectiveImmediately ' betekent dat wacht tot \~10 uur / wilt repliceren naar alle DC. Dit is ongeveer 1 uur voor twee domeincontrollers.
+    -   "– EffectiveImmediately" houdt in dat \~tien uur per seconde moet worden gerepliceerd naar alle domein controllers. Dit was ongeveer 1 uur voor twee domein controllers.
 
 ![](media/7fbdf01a847ea0e330feeaf062e30668.png)
 
 ## <a name="synchronization-service"></a>Synchronisatieservice
 -----------------------
 
-1.  Maak een groep met de naam 'MIMSync_Servers' en alle synchronisatie-servers toevoegen aan deze groep.
+1.  Maak een groep met de naam MIMSync_Servers en voeg alle synchronisatie servers toe aan deze groep.
 
 ![](media/a4dc3f6c0cb1f715ba690744f54dce5c.png)
 
-2.  Van windows PowerShell, Voer onderstaande opdracht als domeinadministrator met computeraccount al toegevoegd aan het domein
+2.  Vanuit Windows Power shell, voert u de onderstaande opdracht uit als domein beheerder met computer account dat al is toegevoegd aan het domein
 
-    -   Nieuwe-ADServiceAccount-naam MIMSyncGMSAsvc - DNSHostName MIMSyncGMSAsvc.contoso.com - PrincipalsAllowedToRetrieveManagedPassword "MIMSync_Servers"
+    -   New-ADServiceAccount-name MIMSyncGMSAsvc-DNSHostName MIMSyncGMSAsvc.contoso.com-PrincipalsAllowedToRetrieveManagedPassword "MIMSync_Servers"
 
 ![](media/f6deb0664553e01bcc6b746314a11388.png)
 
--   Details van de GSMA ophalen voor synchronisatie:
+-   Details van de GSMA voor synchronisatie ophalen:
 
 ![](media/c80b0a7ed11588b3fb93e6977b384be4.png)
 
--   Als de PCNS-Service uitgevoerd, moet u de overdracht bijwerken
+-   Als u de PCNS-service uitvoert, moet u de overdracht bijwerken
 
-    -   Set-ADServiceAccount-identiteit MIMSyncGMSAsvc - ServicePrincipalNames \@{Add="PCNSCLNT/mimsync.contoso.com"}
+    -   Set-ADServiceAccount-Identity MIMSyncGMSAsvc-ServicePrincipalNames \@{add = "PCNSCLNT/mimsync. contoso. com"}
 
-3. Vervolgens bij de synchronisatie moet services u back-up van de versleutelingssleutel als wordt gevraagd bij installatie in de modus wijzigen
+3. Bij de synchronisatie Services moet u een back-up maken van de versleutelings sleutel, zoals deze wordt gevraagd wanneer de modus wijzigen is geïnstalleerd
 
-    -   Zoek op de Server waarop de synchronisatieservice is geïnstalleerd op het hulpprogramma voor synchronisatie-Service-Sleutelbeheer
+    -   Op de server waarop de synchronisatie service is geïnstalleerd, zoekt u het hulp programma voor sleutel beheer van synchronisatie service
 
-    -   Standaard de **exporteren sleutelset** is al geselecteerd
-
-    -   Klik op **volgende**
-
-    -   U wordt nu gevraagd om in te voeren van de bestaande synchronisatie-accountgegevens
-
-    -   Geef en controleer of de FIM-Sync-accountgegevens
-
-        -   Accountnaam - accountnaam van de synchronisatie-serviceaccount gebruikt tijdens de initiële installatie
-
-        -   Wachtwoord - wachtwoord van serviceaccount voor synchronisatie
-
-        -   Domein - domein dat de synchronisatie-serviceaccount gesplitst van is
+    -   Standaard is de **sleutel set exporteren** al geselecteerd
 
     -   Klik op **volgende**
 
-    -   Als u iets niet juist ingevoerd, ontvangt u de volgende fout
+    -   U wordt nu gevraagd om de bestaande synchronisatie-account gegevens in te voeren
 
-    -   Nu u de accountgegevens correct hebt ingevoerd, u krijgt een optie voor het wijzigen van de bestemming (bestandslocatie exporteren) van de versleutelingssleutel voor de back-up
+    -   De gegevens van het FIM Sync-account invoeren en verifiëren
 
-        -   De locatie van de export is standaard **C:\\Windows\\system32**\\miiskeys 1.bin.
+        -   Account naam-account naam van het synchronisatie service account dat wordt gebruikt tijdens de eerste installatie
 
-4. Installeer Microsoft Identity Manager SP1-synchronisatieservice build 4.4.1302.0. u kunt u vinden op het Volume License-downloaden Center of MSDN-Site downloaden. Nadat u de installatie voltooid Zorg ervoor dat, u sleutelset miiskeys.bin opslaan.
+        -   Wacht woord-wacht woord van synchronisatie service account
+
+        -   Domein-domein waarvan de synchronisatie service account is opsplitst
+
+    -   Klik op **volgende**
+
+    -   Als u iets onjuist hebt ingevoerd, wordt de volgende fout weer gegeven:
+
+    -   Nu u de account gegevens hebt ingevoerd, krijgt u een optie om de bestemming (locatie van het export bestand) van de back-versleutelings sleutel te wijzigen
+
+        -   De locatie van het export bestand is standaard **C:\\Windows\\system32**\\miiskeys-1. bin.
+
+4. Installeer Microsoft Identity Manager SP1-4.4.1302.0 voor de synchronisatie service. u kunt dit vinden op het Download centrum voor volume licenties of via de MSDN-download site. Nadat u de installatie hebt voltooid, moet u de sleutel miiskeys. bin opslaan.
 
 ![](media/ef5f16085ec1b2b1637fa3d577a95dbf.png)
 
 
-5. Installeer de meest recente [hotfix 4.5.x.x](https://docs.microsoft.com/microsoft-identity-manager/reference/version-history) of hoger.
+5. Installeer de meest recente [hotfix 4.5. x. x](https://docs.microsoft.com/microsoft-identity-manager/reference/version-history) of hoger.
 
-- Zodra een patch uitgevoerd stoppen FIM-synchronisatieservice.
-- Besturingselement van het Configuratiescherm en functies Microsoft Identity Manager
-- Synchronisatieservice wijzigen -\> volgende -\> configureren -\> volgende
+- Zodra patched is de FIM-synchronisatie service gestopt.
+- Program Ma's en onderdelen van het configuratie scherm Microsoft Identity Manager
+- Synchronisatie service wijzigen-\> volgende\> configureren-\> volgende
 
 ![](media/dc98c011bec13a33b229a0e792b78404.png)
 
--  De naam van het wissen
--  Naam van het type serviceaccount **MIMSyncGMSA** met \$ symbool zoals op de
-- schermopname. Wachtwoord leeg laten.
+-  De account naam wissen
+-  Typ de naam van het service account **MIMSyncGMSA** met \$-symbool, zoals op de
+- Afdruk. Wacht woord leeg laten.
 
 ![](media/38df9369bf13e1c3066a49ed20e09041.png)
 
-- Volgende -\> volgende -\> installeren
-- Sleutelset herstellen vanuit het .bin-bestand opgeslagen.
+- Volgende\> installatie\>
+- Herstel de sleutelset uit het. bin-bestand dat is opgeslagen.
 
 ![](media/44cd474323584feb6d8b48b80cfceb9b.png)
 
 ![](media/03e7762f34750365e963f0b90e43717c.png)
 > [!NOTE]
-> SQL-machtiging toegevoegd is-account is gemaakt voor de aanmelding dus u moet de gebruiker toestaan toepassen modus wijzigingsmachtiging-account en dbo toevoegen op de database van de synchronisatie-service
+> Het account dat is toegevoegd aan de SQL-machtiging is voor aanmelding gemaakt. Daarom moet u toestaan dat de gebruiker de machtiging voor wijzigen van de modus voor het toevoegen van accounts en dbo op de synchronisatie service database toestaat.
 
 ## <a name="mim-service"></a>MIM-service
 -----------
 
 >[!IMPORTANT]
->Het volgende proces moet worden gebruikt bij het converteren van de MIM-Service eerst accounts dat moet worden gMSA-accounts. De PowerShell-cmdlets die u hebt genoteerd in de bijlage kan alleen worden gebruikt om de accountgegevens wijzigen nadat de eerste configuratie done.* is
+>Het volgende proces moet worden gebruikt wanneer de aan de MIM-service gerelateerde accounts eerst worden geconverteerd naar gMSA-accounts. De Power shell-cmdlets die in de bijlage worden vermeld, kunnen alleen worden gebruikt om de account gegevens te wijzigen zodra de initiële configuratie is uitgevoerd. *
 
-1.  Maken van de groep beheerde Accounts voor MIM-Service, PAM Rest API, PAM-controleservice, PAM Component-Service, SSPR-Registratieportal, SSPR-Portal opnieuw instellen.
+1.  Groeps-beheerde accounts maken voor de MIM-service, PAM rest API, PAM-bewakings service, PAM component-service, SSPR registratie Portal, SSPR reset Portal.
 
-    -   Zorg ervoor dat u gMSA-overdracht en SPN bijwerken
-        -   Set-ADServiceAccount-identiteit \<account\> - ServicePrincipalNames \@{toevoegen = "\<SPN\>"}
+    -   Zorg ervoor dat u gMSA-overdracht en SPN bijwerkt
+        -   Set-ADServiceAccount-Identity \<account\>-ServicePrincipalNames \@{add = "\<SPN-\>"}
         -   Overdracht
-            -   Set-ADServiceAccount-identiteit \<gsmaaccount\> - TrustedForDelegation \$true
-        -   Beperkte delegering
-            -   \$delspns = ' http/mim', 'http/mim.contoso.com'
-            -   Nieuwe-ADServiceAccount-naam \<gsmaaccount\> - DNSHostName \<gsmaaccount\>. contoso.com - PrincipalsAllowedToRetrieveManagedPassword \<groep\> - ServicePrincipalNames \$SPN's - OtherAttributes \@{'msDS-AllowedToDelegateTo' =\$delspns}
+            -   Set-ADServiceAccount-Identity \<gsmaaccount\>-TrustedForDelegation \$True
+        -   Beperkte overdracht
+            -   \$delspns = ' http/Mim ', ' http/mim. contoso. com '
+            -   New-ADServiceAccount-name \<gsmaaccount\>-DNSHostName \<gsmaaccount\>. contoso.com-PrincipalsAllowedToRetrieveManagedPassword \<groep\>-ServicePrincipalNames \$spn's-OtherAttributes \@{' msDS-AllowedToDelegateTo ' =\$delspns}
 
-2.  Account voor MIM-Service in synchronisatiegroepen toevoegen. Dit is nodig voor self-service voor Wachtwoordherstel.
+2.  Voeg account toe voor de MIM-service in synchronisatie groepen. Het is vereist voor SSPR.
 
 ![](media/0201f0281325c80eb70f91cbf0ac4d5b.jpg)
 
-3.  **HOUD ER REKENING MEE**.  Bekend probleem waarbij de services die gebruikmaken van beheerd account vastlopen na het opnieuw opstarten-server vanwege Microsoft Key Distribution-Service is niet gestart nadat de Windows opnieuw is opgestart. Service kan niet worden gestart en kan Windows niet te worden gestart. Het probleem is ten minste reproduceerbare op Windows Server 2012 R2. Tijdelijke oplossing voor dit probleem wordt opdracht uitgevoerd 
+3.  **Opmerking**.  Bekend probleem dat services die gebruikmaken van beheerde accounts, vastlopen na het opnieuw opstarten van de server omdat de micro soft Key Distribution-service niet is gestart na het opnieuw opstarten van de Windows. De service kan niet worden gestart en Windows kan niet opnieuw worden gestart. Het probleem is ten minste reproduceerbaar op Windows Server 2012 R2. Tijdelijke oplossing voor dit probleem is de opdracht uitvoeren 
 
 -   **SC triggerinfo kdssvc start/networkon**
 
-    de Microsoft Key Distribution-Service starten wanneer het netwerk is op (meestal vroeg in de opstartcyclus).
+    Als u de micro soft Key Distribution-service wilt starten wanneer het netwerk aan is (doorgaans vroegtijdig in de opstart cyclus).
 
-    Zie de beschrijving over soortgelijk probleem: <https://social.technet.microsoft.com/Forums/a290c5c0-3112-409f-8cb0-ff23e083e5d1/ad-fs-windows-2012-r2-adfssrv-hangs-in-starting-mode?forum=winserverDS>
+    Zie de bespreking over soortgelijk probleem: <https://social.technet.microsoft.com/Forums/a290c5c0-3112-409f-8cb0-ff23e083e5d1/ad-fs-windows-2012-r2-adfssrv-hangs-in-starting-mode?forum=winserverDS>
 
-4.  Uitvoeren met verhoogde bevoegdheid MSI-bestand van de MIM-Service en selecteer wijzigen.
+4.  Voer een verhoogde MSI uit van de MIM-service en selecteer wijzigen.
 
-5.  Schakel selectievakje 'Ander account gebruiken voor Exchange (voor beheerde accounts)' op 'Hoofdserver-verbindingspagina configureren'. Hier hebt u een optie voor het gebruik van het oude account dat een postvak is of gebruik van cloud postvak.
+5.  Schakel het selectie vakje ander account gebruiken voor Exchange (voor beheerde accounts) in op de pagina hoofd server verbinding configureren. Hier hebt u een optie om het oude account te gebruiken dat een postvak heeft of een Cloud postvak gebruikt.
 
 ![](media/0cd8ce521ed7945c43bef6100f8eb222.png)
 
-6.  Op 'Configureren MIM-Service-account' pagina type serviceaccount met \$ symbool aan het einde. Wachtwoord van serviceaccount e-mailadres ook typen. Wachtwoord van serviceaccount moet worden uitgeschakeld.
+6.  Op het pagina type service account voor MIM-Services configureren met \$ symbool aan het einde. Typ ook wacht woord voor service-e-mail account. Het wacht woord voor het service account moet worden uitgeschakeld.
 
 ![](media/db0d543df6e1b0174a47135617c23fcb.png)
 
-7.  Als de functie LogonUser voor beheerde accounts niet werkt, worden volgende pagina waarschuwing "Controleer of Service-Account beveiligd in de huidige configuratie is".
+7.  Omdat de functie LogonUser niet werkt voor beheerde accounts, wordt de volgende pagina waarschuwing weer gegeven: Controleer of het service account is beveiligd in de huidige configuratie.
 
-![CID:image007.PNG\@01D36EB7.562E6CF0](media/d350bc13751b2d0a884620db072ed019.png)
+![Cid: image007. png\@01D36EB 7.562 E6CF0](media/d350bc13751b2d0a884620db072ed019.png)
 
-8.  Typ op de pagina 'Configureren van Privileged Access Management REST API', naam groep van toepassingen rekening met \$ symbool aan het einde en wachtwoordveld leeg laten.
+8.  Typ op de pagina Privileged Access Management REST API configureren de naam van het groeps account van de toepassing met \$ symbool aan het einde en laat het veld wacht woord leeg.
 
 ![](media/88db2f6f291fff8bcdd0da5d538aafc6.png)
 
-9.  Typ op de pagina 'Configureren van PAM Component-Service' naam van het serviceaccount met \$ symbool aan het einde en wachtwoordveld leeg laten.
+9.  Op het pagina type service accountnaam van de PAM-component configureren met \$ symbool aan het einde en wacht woord leeg laten.
 
 ![](media/93cfbcefb4d17635dd35c5ead690fd1e.png)
 
-![CID:image010.PNG\@01D36EB8. A295A3F0](media/9d2b52f6faed10601e7e2166a339fb47.png)
+![Cid: image010. png\@01D36EB8. A295A3F0](media/9d2b52f6faed10601e7e2166a339fb47.png)
 
-10.  Typ op de pagina 'Configureren Privileged Access Management Monitoring Service' naam van het serviceaccount met \$ symbool aan het einde en wachtwoordveld leeg laten.
+10.  Schakel op het pagina type service accountnaam van de Privileged Access Management monitoring-service configureren met \$ symbool aan het einde in en laat het veld wacht woord leeg.
 
 ![](media/d1e824248edf12a77fc9ffb011475164.png)
 
-11.  Typ op de pagina "Configureren van MIM-Portal voor Wachtwoordregistratie" accountnaam met \$ symbool aan het einde en wachtwoordveld leeg laten.
+11.  Op de pagina Type portal voor wachtwoord registratie configureren met \$ symbool aan het einde en laat het veld wacht woord leeg.
 
 ![](media/601e935cdfda298b61ae753a2a152996.png)
 
-12.  Typ op de pagina configureren van MIM wachtwoord opnieuw instellen-Portal' accountnaam met \$ symbool aan het einde en wachtwoordveld leeg laten.
+12.  Op de pagina Type account voor MIM-wacht woord opnieuw instellen configureren met \$ symbool aan het einde en wacht woord leeg laten.
 
 ![](media/10c8cfa8ff2b6d703d14bd0b7ddc6949.png)
 
-13.  Installatie voltooid.
+13.  Voltooi de installatie.
 
 Opmerking:
 
--  Na de installatie worden twee nieuwe sleutels gemaakt in het register door pad
-    - "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Forefront Identity
-    - Manager\\2010\\Service ' voor het opslaan van versleutelde Exchange-wachtwoord. Een voor
-    - Exchange Online en andere voor Exchange on-premises (een van deze moet
+-  Na de installatie worden twee nieuwe sleutels in het REGI ster gemaakt op basis van het pad
+    - "HKEY_LOCAL_MACHINE\\-SOFTWARE\\micro soft\\Forefront Identity
+    - Manager\\2010\\-service ' voor het opslaan van een versleuteld Exchange-wacht woord. Een voor
+    - Exchange Online en een andere voor Exchange on-premises (een van beide moet
     - leeg).
 
-![CID:image014.jpg\@01D36F53.303D5190](media/73e2b8a3c149a4ec6bacb4db2c749946.jpg)
+![Cid: image014. jpg\@01D36F 53.303 D5190](media/73e2b8a3c149a4ec6bacb4db2c749946.jpg)
 
-- Voor het bijwerken van het wachtwoord, zijn er een script beschikbaar [download hier](microsoft-identity-manager-2016-gmsascript.md) , zodat klanten geen om uit te voeren modus wijzigen
+- Om het wacht woord bij te werken, hebben we [hier een down load](microsoft-identity-manager-2016-gmsascript.md) voor het script ontvangen, zodat de gebruiker de wijzigings modus niet hoeft uit te voeren
 
-- Voor het versleutelen van de Exchange-wachtwoord het installatieprogramma maakt extra service en
-    - uitgevoerd onder het beheerde account. Worden volgende berichten toegevoegd
-    - Gebeurtenislogboek van toepassing tijdens de installatie.
+- Exchange-wacht woord versleutelen het installatie programma maakt aanvullende service en
+    - wordt uitgevoerd onder het beheerde account. De volgende berichten worden toegevoegd in
+    - Toepassings gebeurtenis logboek tijdens de installatie.
 
-![CID:image016.jpg\@01D36F53.303D5190](media/95b315454705cd4d939b55ac5ad910f5.jpg)
+![Cid: image016. jpg\@01D36F 53.303 D5190](media/95b315454705cd4d939b55ac5ad910f5.jpg)

@@ -13,11 +13,11 @@ ROBOTS: noindex,nofollow
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: e306748e982eb2eb123246bc7f309465823eaf35
-ms.sourcegitcommit: 44a2293ff17c50381a59053303311d7db8b25249
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50379902"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "64518215"
 ---
 # <a name="step-3--prepare-a-pam-server"></a>Stap 3 – Een PAM-server voorbereiden
 
@@ -82,7 +82,7 @@ Configureer het beveiligingsbeleid van de server zodanig dat de zojuist gemaakte
 12. Sluit het venster Lokaal beveiligingsbeleid.  
 
 13. Open Configuratiescherm en schakel over naar **Gebruikersaccounts**.
-14. Klik op **Andere gebruikers toegang tot deze computer geven**.
+14. Klik op **Andere gebruikers toegang tot deze computer geven** .
 15. Klik op **Toevoegen**, voer de gebruiker *MIMADMIN* in het domein *PRIV* in en klik in het volgende scherm van de wizard op **Deze gebruiker toevoegen als beheerder**.  
 16. Klik op **Toevoegen**, voer de gebruiker *SharePoint* in het domein *PRIV* in en klik in het volgende scherm van de wizard op **Deze gebruiker toevoegen als beheerder**.  
 17. Sluit Configuratiescherm.
@@ -204,7 +204,7 @@ Vervolgens moet u een SharePoint-siteverzameling maken die is gekoppeld aan deze
 ## <a name="set-the-website-as-the-local-intranet"></a>De website instellen als het lokale intranet
 
 1. Start Internet Explorer en open een nieuw tabblad in de webbrowser.
-2. Navigeer naar http://pamsrv.priv.contoso.local:82/ en meld u aan als PRIV\MIMAdmin.  Er wordt een lege SharePoint-site met de naam MIM-portal weergegeven.  
+2. Ga naar http://pamsrv.priv.contoso.local:82/ en meld u aan als PRIV\MIMAdmin.  Er wordt een lege SharePoint-site met de naam MIM-portal weergegeven.  
 3. Open in Internet Explorer het gedeelte **Internetopties**, ga naar het tabblad **Beveiliging**, selecteer **Lokaal intranet** en voeg de URL `http://pamsrv.priv.contoso.local:82/` toe.
 
 Als het aanmelden mislukt, moeten de Kerberos-SPN-namen die eerder zijn gemaakt in [stap 2](step-2-prepare-priv-domain-controller.md), mogelijk worden bijgewerkt.

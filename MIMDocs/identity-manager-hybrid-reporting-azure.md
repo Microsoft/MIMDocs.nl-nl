@@ -1,6 +1,6 @@
 ---
-title: Wat is hybride rapportage in Azure AD? | Microsoft Docs
-description: Hybride controleactiviteitenrapporten in Azure Active Directory kunt u de gecontroleerde gebeurtenissen weergeven in de cloud en de on-premises.
+title: Wat is hybride rapportage in azure AD? | Microsoft Docs
+description: Met de hybride controle activiteiten rapporten in Azure Active Directory kunt u gecontroleerde gebeurtenissen in zowel de Cloud als on-premises bekijken.
 keywords: ''
 author: billmath
 ms.author: billmath
@@ -11,39 +11,39 @@ ms.prod: microsoft-identity-manager
 ms.assetid: 7320f014-8b60-4866-92de-cfbd3e6edc48
 ms.suite: ems
 ms.openlocfilehash: dd87f00fb3faded60671a47a0ba1dab7e4c2a531
-ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49358173"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "64516764"
 ---
-# <a name="hybrid-identity-management-audit-reporting-in-azure-active-directory"></a>Beheer van hybride identiteit controleren rapportage in Azure Active Directory
-Met Azure Active Directory (Azure AD) activiteit controlerapportage, u kunt identity management-activiteit controleren on-premises of in de cloud. Door het beheer van al uw identiteits- en gegevens in een rapport, kunt u tijd besparen en de totale kosten te verlagen.
+# <a name="hybrid-identity-management-audit-reporting-in-azure-active-directory"></a>Controle rapportage voor Hybrid Identity Management in Azure Active Directory
+Met Azure Active Directory (Azure AD) rapportage van controle activiteiten kunt u de activiteiten voor identiteits beheer on-premises of in de Cloud bewaken. Door al uw identiteiten en toegang tot gegevens in één rapport te beheren, kunt u tijd besparen en de totale kosten verlagen.
 
 ## <a name="what-is-azure-active-directory-hybrid-reporting"></a>Wat is hybride rapportage van Azure Active Directory?
-Hybride controle en rapportage helpt IT-professionals uitdagingen algemene identiteitsbeheer rapportage, zoals:
+Hybrid audit Reporting helpt IT-professionals bij het oplossen van veelvoorkomende problemen met identiteits beheer, zoals:
 
-* **Identiteitsbeheer verzamelen over verschillende systemen**. In hybride rapporten worden activiteit op het gebied van identiteitsbeheer uit Azure AD en Identity Manager weergegeven.
+* **Activiteiten voor identiteits beheer op verschillende systemen verzamelen**. In hybride rapporten worden activiteit op het gebied van identiteitsbeheer uit Azure AD en Identity Manager weergegeven.
 
-* **Rapportage van gegevens en het maken van aangepaste rapporten exporteert**. Naast uw rapporten weergeven in de Azure-portal, kunt u de gegevens voor het genereren van uw eigen aangepaste weergaven exporteren.
+* **Rapport gegevens exporteren en aangepaste rapporten maken**. Naast het weer geven van uw rapporten in de Azure Portal, kunt u de gegevens exporteren om uw eigen aangepaste weer gaven te genereren.
 
-* **Infrastructuur voor rapportagesystemen verminderen**. Hybride rapportage in de cloud betekent dat u de kosten die gekoppeld aan uw on-premises, datawarehouse-infrastructuur zijn kunt voorkomen.
+* De **rapportage systeem infrastructuur kosten te verlagen**. Met hybride rapportage in de cloud kunt u de kosten verwijderen die zijn gekoppeld aan uw on-premises, Data Warehouse-infra structuur.
 
 ## <a name="how-does-it-work"></a>Hoe werkt dit?
 
-Als u de on-premises gegevens wilt verzamelen, moet u eerst een rapportageagent installeren op uw Identity Manager 2016-server. [Downloaden van de hybride van Microsoft Identity Manager-Rapportageagent](https://www.microsoft.com/download/details.aspx?id=55112).
+Als u de on-premises gegevens wilt verzamelen, moet u eerst een rapportageagent installeren op uw Identity Manager 2016-server. [Down load de Microsoft Identity Manager Hybrid Reporting agent](https://www.microsoft.com/download/details.aspx?id=55112).
 
 Hybride rapportage ondergaat het volgende proces:
-1. Nadat u de agent voor rapportage installeert, wordt de activiteitsgegevens van Identity Manager verzonden naar de Windows-gebeurtenislogboek.
-2. De rapportageagent verwerkt de delta-gebeurtenissen om de 10 minuten of wanneer de Windows Event Log-service opnieuw wordt opgestart. De agent uploadt vervolgens de gebeurtenissen naar de Azure-portal.
-3. De ontvangen gegevens verwerkt in de Azure portal binnen een uur na ontvangst van het.
+1. Nadat u de Reporting agent hebt geïnstalleerd, worden de activiteit gegevens van Identity Manager verzonden naar het Windows-gebeurtenis logboek.
+2. De rapportage agent verwerkt de Delta gebeurtenissen elke 10 minuten of wanneer de Windows Event Log-service opnieuw wordt gestart. De agent uploadt de gebeurtenissen vervolgens naar de Azure Portal.
+3. Het Azure Portal verwerkt de ontvangen gegevens binnen één uur nadat deze zijn ontvangen.
 4. De activiteitsgegevens worden gedurende één maand opgeslagen in Azure.
-5. De Azure portal haalt de rapportagegegevens voor controle en geeft deze weer in het venster Azure controleren Reporting.
+5. De Azure Portal haalt de controle rapport gegevens op en geeft deze weer in het Azure audit Reporting-venster.
 
 ## <a name="next-steps"></a>Volgende stappen
 Meer informatie over:
 - [Werken met hybride rapportage van Identity Manager](working-with-identity-manager-hybrid-reporting.md)
 - [Controleactiviteitenrapporten in de Azure Active Directory-portal](https://docs.microsoft.com/azure/active-directory/active-directory-reporting-activity-audit-logs)
-- [Bewaarbeleid voor rapportage](https://docs.microsoft.com/azure/active-directory/active-directory-reporting-retention)
-- [Microsoft Azure-Logboekintegratie (SIEM)](https://docs.microsoft.com/azure/security/security-azure-log-integration-overview)
-- [Azure Active Directory reporting API](https://docs.microsoft.com/azure/active-directory/active-directory-reporting-api-getting-started)
+- [Bewaar beleid voor rapporten](https://docs.microsoft.com/azure/active-directory/active-directory-reporting-retention)
+- [Microsoft Azure-logboek integratie (SIEM)](https://docs.microsoft.com/azure/security/security-azure-log-integration-overview)
+- [Rapportage-API Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-reporting-api-getting-started)

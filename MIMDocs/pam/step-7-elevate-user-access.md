@@ -9,11 +9,11 @@ ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 5325fce2-ae35-45b0-9c1a-ad8b592fcd07
 ms.openlocfilehash: d00eaa284f1d54a1cbe2e0f8b936bbc41c19caea
-ms.sourcegitcommit: 44a2293ff17c50381a59053303311d7db8b25249
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50379616"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "64517860"
 ---
 # <a name="step-7--elevate-a-users-access"></a>Stap 7 – De toegangsrechten van een gebruiker uitbreiden
 
@@ -36,10 +36,10 @@ Zonder verhoogde bevoegdheden heeft Jen geen toegang tot de bevoorrechte resourc
 ## <a name="request-privileged-access-from-mim"></a>Bevoorrechte toegang aanvragen bij MIM
 
 > [!NOTE]
-> Het wordt aanbevolen dat het werkstation een bevoegde workstation(PAW).  Zie voor meer informatie [PAW](https://docs.microsoft.com/windows-server/identity/securing-privileged-access/privileged-access-workstations).
+> Het is raadzaam dat het werk station een beschermd werk station (PAW) is.  Zie [paw](https://docs.microsoft.com/windows-server/identity/securing-privileged-access/privileged-access-workstations)voor meer informatie.
 
-1. Op PRIVWKSTN, zich aanmelden als PRIV\priv.jen.
-2. Klik op **Start**, **uitvoeren**, en voer **PowerShell.exe**.
+1. Meld u op PRIVWKSTN aan als PRIV\priv.jen.
+2. Klik op **Start**, **Voer uit**en voer **Power shell. exe**in.
 3. Typ de volgende opdracht:
 
     ```cmd
@@ -90,7 +90,7 @@ U kunt de activering uitvoeren door bevoorrechte toegang aan te vragen via de PA
     ```
 
 3. Typ het wachtwoord voor het account PRIV.Jen als u hierom wordt gevraagd. Er wordt een nieuw browservenster weergegeven.
-4. Navigeer naar http://pamsrv.priv.contoso.local:8090 en zorg ervoor dat een webpagina op de voorbeeldportal zichtbaar is.
+4. Ga naar http://pamsrv.priv.contoso.local:8090 en controleer of een webpagina van de voorbeeld Portal zichtbaar is.
 5. Selecteer in Internet Explorer **Extra** > **Internetopties** en klik op het tabblad **Beveiliging**.
 6. Klik op **Lokale intranetzone** > **Sites** > **Geavanceerd** en voeg vervolgens de website toe aan de zone.
 7. Sluit de dialoogvensters van **Internetopties**.

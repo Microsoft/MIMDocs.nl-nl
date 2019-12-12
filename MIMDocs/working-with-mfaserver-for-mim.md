@@ -1,6 +1,6 @@
 ---
-title: SDK voor Azure multi-factor Authentication-Server gebruiken om PAM of scenario's voor self-service voor Wachtwoordherstel te activeren | Microsoft Docs
-description: Instellen van de SDK van Azure multi-factor Authentication-Server als een tweede beveiligingslaag wanneer uw gebruikers rollen in Privileged Access Management en selfservice voor wachtwoordherstel activeren.
+title: Azure Multi-Factor Authentication-server SDK gebruiken om PAM-of SSPR-Scenario's te activeren | Microsoft Docs
+description: Stel Azure Multi-Factor Authentication-server SDK in als een tweede beveiligingslaag wanneer uw gebruikers rollen activeren in Privileged Access Management en self-service voor het opnieuw instellen van wacht woorden.
 keywords: ''
 author: billmath
 ms.author: billmath
@@ -10,86 +10,86 @@ ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
 ms.openlocfilehash: 69b7f8f4b94f9f94b2aef6afd9573ad8173e148e
-ms.sourcegitcommit: 44a2293ff17c50381a59053303311d7db8b25249
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50379791"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "64517725"
 ---
-# <a name="use-azure-multi-factor-authentication-server-to-activate-pam-or-sspr"></a>Azure multi-factor Authentication-Server gebruiken om PAM of self-service voor Wachtwoordherstel te activeren
-Het volgende document wordt beschreven hoe u de Azure MFA-server instellen als een tweede beveiligingslaag wanneer uw gebruikers rollen in de bevoegdheid Access Management of selfservice voor wachtwoordherstel activeren.
+# <a name="use-azure-multi-factor-authentication-server-to-activate-pam-or-sspr"></a>Azure Multi-Factor Authentication-server gebruiken om PAM-of SSPR te activeren
+In het volgende document wordt beschreven hoe u de Azure MFA-server instelt als een tweede beveiligingslaag wanneer uw gebruikers rollen activeren in bevoegdheid toegangs beheer of selfservice voor het opnieuw instellen van wacht woorden.
 
 > [!IMPORTANT]
-> Vanwege de aankondiging van de afschaffing van Azure multi-factor Authentication Software Development Kit. De Azure MFA-SDK wordt ondersteund voor bestaande klanten tot de vervaldatum van 14 November 2018. Nieuwe klanten en huidige klanten zich niet kunnen downloaden van de SDK niet meer via de klassieke Azure portal. Als u wilt downloaden dat u moet contact opnemen met ondersteuning voor Azure-klant voor het ontvangen van de gegenereerde Servicereferenties voor de MFA-pakket. <br> Het Microsoft-ontwikkelteam werkt op wijzigingen in MFA door te integreren met de SDK van Azure multi-factor Authentication-Server.
+> Vanwege de aankondiging van de afschaffing van Azure Multi-Factor Authentication Software Development Kit. De Azure MFA SDK wordt ondersteund voor bestaande klanten tot de datum van beëindiging van 14 november 2018. Nieuwe klanten en huidige klanten kunnen SDK niet meer downloaden via de klassieke Azure-Portal. Als u wilt downloaden, moet u contact op met de klanten service van Azure om uw gegenereerde pakket met MFA-service referenties te ontvangen. <br> Het micro soft-ontwikkel team werkt aan wijzigingen in MFA door te integreren met Azure Multi-Factor Authentication-server SDK.
 
-Het onderstaande artikel wordt de configuratie-update en de stappen om in te schakelen voor een eenvoudige switch een overzicht van Azure MFA-SDK voor Azure multi-factor Authentication-Server SDK wanneer zoals dit zal worden opgenomen in een toekomstige hotfix uitgebracht Zie [versiegeschiedenis ](./reference/version-history.md) voor meldingen. 
+In het onderstaande artikel vindt u een overzicht van de configuratie-updates en de stappen die u kunt inschakelen voor een eenvoudige switch van de Azure MFA SDK naar Azure Multi-Factor Authentication-server SDK wanneer deze wordt uitgebracht, omdat deze wordt opgenomen in een aanstaande hotfix. Raadpleeg de [versie geschiedenis](./reference/version-history.md) voor aankondigingen. 
 
 ## <a name="prerequisites"></a>Vereisten
 
-Als u wilt gebruiken de Azure multi-factor Authentication-Server met MIM, hebt u het volgende nodig:
+Als u Azure Multi-Factor Authentication-server met MIM wilt gebruiken, hebt u het volgende nodig:
 
-- Toegang tot Internet vanaf elke MIM-Service of de MFA-Server bieden PAM en SSPR, neem contact op met de Azure MFA-service
+- Internet toegang van elke MIM-service of MFA-server die PAM-en SSPR biedt om contact op te nemen met de Azure MFA-service
 - Een Azure-abonnement
-- Installatie maakt al gebruik van Azure MFA-SDK
+- De Azure MFA-SDK wordt al gebruikt voor de installatie
 - Azure Active Directory Premium-licenties voor kandidaatgebruikers of een alternatieve methode voor Azure MFA-licentieverlening
 - Telefoonnummers voor alle kandidaatgebruikers
-- MIM-hotfix 4.5. of hoger Zie [versiegeschiedenis](./reference/version-history.md) voor aankondigingen
+- MIM-hotfix 4,5. of hoger Zie de [versie geschiedenis](./reference/version-history.md) voor aankondigingen
 
-## <a name="azure-multi-factor-authentication-server-configuration"></a>Configuratie van de Azure multi-factor Authentication-Server 
+## <a name="azure-multi-factor-authentication-server-configuration"></a>Configuratie van Azure Multi-Factor Authentication-server 
 > [!NOTE] 
-> In de configuratie moet u een geldig SSL-certificaat voor de SDK is geïnstalleerd. 
+> In de configuratie hebt u een geldig SSL-certificaat nodig dat is geïnstalleerd voor de SDK. 
 
-### <a name="step-1-download-azure-multi-factor-authentication-server-from-the-azure-portal"></a>Stap 1: Azure multi-factor Authentication-Server downloaden via de azure portal 
-Aanmelden bij de [Azure-portal](https://portal.azure.com/) en de Azure MFA-server te downloaden.
-![werkmap-met-mfaserver-voor-mim_downloadmfa](media/working-with-mfaserver-for-mim/working-with-mfaserver-for-mim_downloadmfa.PNG)
+### <a name="step-1-download-azure-multi-factor-authentication-server-from-the-azure-portal"></a>Stap 1: down load Azure Multi-Factor Authentication-server vanuit Azure Portal 
+Meld u aan bij het [Azure Portal](https://portal.azure.com/) en down load de Azure MFA-server.
+![Working-with-mfaserver-for-mim_downloadmfa](media/working-with-mfaserver-for-mim/working-with-mfaserver-for-mim_downloadmfa.PNG)
 
-### <a name="step-2-generate-activation-credentials"></a>Stap 2: Activeringsreferenties genereren
-Gebruik de **activeringsreferenties om gebruik te starten genereren** koppeling naar de activeringsreferenties genereren. Eenmaal gegenereerd opslaan voor later gebruik.
+### <a name="step-2-generate-activation-credentials"></a>Stap 2: activerings referenties genereren
+Gebruik de koppeling **activerings referenties genereren voor het initiëren** van het maken van activerings referenties. Zodra de opslag is gegenereerd voor later gebruik.
 
-### <a name="step-3-install-the-azure-multi-factor-authentication-server"></a>Stap 3: De Azure multi-factor Authentication-Server installeren
-Nadat u de server hebt gedownload [installeren](https://docs.microsoft.com/en-us/azure/active-directory/authentication/howto-mfaserver-deploy#install-and-configure-the-mfa-server) deze.  Uw activeringsreferenties is vereist. 
+### <a name="step-3-install-the-azure-multi-factor-authentication-server"></a>Stap 3: de Azure-Multi-Factor Authentication-server installeren
+Nadat u de server hebt gedownload, [installeert](https://docs.microsoft.com/en-us/azure/active-directory/authentication/howto-mfaserver-deploy#install-and-configure-the-mfa-server) u deze.  U moet referenties voor activering opgeven. 
 
-### <a name="step-4-create-your-iis-web-application-that-will-host-the-sdk"></a>Stap 4: Uw IIS-webtoepassing die als voor de SDK host maken
-1. Open IIS-beheer ![werken-met-mfaserver-voor-mim_iis. PNG](media/working-with-mfaserver-for-mim/working-with-mfaserver-for-mim_iis.PNG)
-2.  Nieuwe Website aanroep 'MIM MFASDK' maken, koppelen aan een lege map ![werken-met-mfaserver-voor-mim_sdkweb. PNG](media/working-with-mfaserver-for-mim/working-with-mfaserver-for-mim_sdkweb.PNG)
-3. Multi-factor Authentication-Console openen en klik op de Web Service SDK ![werken-met-mfaserver-voor-mim_sdkinstall. PNG](media/working-with-mfaserver-for-mim/working-with-mfaserver-for-mim_sdkinstall.PNG)
-4. Zodra de wizards is klik door config, selecteer "MIM MFASDK' en app-pool
+### <a name="step-4-create-your-iis-web-application-that-will-host-the-sdk"></a>Stap 4: de IIS-webtoepassing maken die als host fungeert voor de SDK
+1. Open IIS-beheer ![Working-with-mfaserver-for-mim_iis. PNG-](media/working-with-mfaserver-for-mim/working-with-mfaserver-for-mim_iis.PNG)
+2.  Maak een nieuwe website ' MIM MFASDK ' en koppel deze aan een lege directory ![Working-with-mfaserver-for-mim_sdkweb. PNG-](media/working-with-mfaserver-for-mim/working-with-mfaserver-for-mim_sdkweb.PNG)
+3. Open Multi-Factor Authentication-console en klik op Web Service SDK ![werken-met-mfaserver-for-mim_sdkinstall. PNG-](media/working-with-mfaserver-for-mim/working-with-mfaserver-for-mim_sdkinstall.PNG)
+4. Zodra de wizards zijn ingeklikt, klikt u op configuratie en selecteert u ' MIM MFASDK ' en de groep van toepassingen
 
 > [!NOTE] 
-> Wizard moet een beheerdersgroep moet worden gemaakt. Meer informatie vindt u in de Azure >> MFA Azure multi-factor Authentication-Server-documentatie.
+> De wizard vereist dat er een beheerders groep wordt gemaakt. Meer informatie vindt u op de Azure > > MFA Azure Multi-Factor Authentication-server-documentatie.
 
-5. Vervolgens moeten we voor het importeren van de MIM-Service-account openen multi-factor Authentication-Console selecteren 'Gebruikers' een. Klik op 'Importeren uit Active Directory' b. Ga naar serviceaccount, ook wel 'contoso\mimservice' c. Klik op "Importeren" en "Afsluiten" ![werken-met-mfaserver-voor-mim_importmimserviceaccount. PNG](media/working-with-mfaserver-for-mim/working-with-mfaserver-for-mim_importmimserviceaccount.PNG) 
-6. Bewerk het account van de MIM-Service inschakelen in multi-factor Authentication-Console voor ![werken-met-mfaserver-voor-mim_enableserviceaccount. PNG](media/working-with-mfaserver-for-mim/working-with-mfaserver-for-mim_enableserviceaccount.PNG)
-7. Werk de IIS-verificatie op de website 'MIM MFASDK'. Eerst wordt uitgeschakeld. de 'Anonieme verificatie' vervolgens naar het Windows-verificatie inschakelen' ![werken-met-mfaserver-voor-mim_iisconfig. PNG](media/working-with-mfaserver-for-mim/working-with-mfaserver-for-mim_iisconfig.PNG)
-8. Laatste stap: De MIM-serviceaccount toevoegen aan de 'PhoneFactor Admins' ![werken-met-mfaserver-voor-mim_addservicetomfaadmin. PNG](media/working-with-mfaserver-for-mim/working-with-mfaserver-for-mim_addservicetomfaadmin.PNG)
+5. Vervolgens moet u het MIM-service account importeren open Multi-Factor Authentication-console Selecteer ' gebruikers ' a. Klik op importeren uit Active Directory b. Navigeer naar Service account ook wel "contoso\mimservice" c. Klik op importeren en sluiten ![werken-met-mfaserver-for-mim_importmimserviceaccount. PNG-](media/working-with-mfaserver-for-mim/working-with-mfaserver-for-mim_importmimserviceaccount.PNG) 
+6. Bewerk het MIM-service account om in Multi-Factor Authentication console in te scha kelen ![Working-with-mfaserver-for-mim_enableserviceaccount. PNG-](media/working-with-mfaserver-for-mim/working-with-mfaserver-for-mim_enableserviceaccount.PNG)
+7. Werk de IIS-verificatie op de website ' MIM MFASDK ' bij. Eerst wordt de ' anonieme verificatie ' uitgeschakeld en vervolgens Windows-verificatie inschakelen ![Working-with-mfaserver-for-mim_iisconfig. PNG-](media/working-with-mfaserver-for-mim/working-with-mfaserver-for-mim_iisconfig.PNG)
+8. Laatste stap: Voeg het MIM-service account toe aan de Phone factor-beheerders ![Working-with-mfaserver-for-mim_addservicetomfaadmin. PNG-](media/working-with-mfaserver-for-mim/working-with-mfaserver-for-mim_addservicetomfaadmin.PNG)
 
-## <a name="configuring-the-mim-service-for-azure-multi-factor-authentication-server"></a>De MIM-Service voor Azure multi-factor Authentication-Server configureren 
+## <a name="configuring-the-mim-service-for-azure-multi-factor-authentication-server"></a>De MIM-service voor Azure Multi-Factor Authentication-server configureren 
 
-### <a name="step-1-patch-server-to-452020"></a>Stap 1: Patch Server 4.5.202.0
+### <a name="step-1-patch-server-to-452020"></a>Stap 1: patch server to 4.5.202.0
  
-### <a name="step-2-backup-and-open-the-mfasettingsxml-located-in-the-cprogram-filesmicrosoft-forefront-identity-manager2010service"></a>Stap 2: Back-up en Open de MfaSettings.xml zich in de 'C:\Program Files\Microsoft Forefront Identity Manager\2010\Service"
+### <a name="step-2-backup-and-open-the-mfasettingsxml-located-in-the-cprogram-filesmicrosoft-forefront-identity-manager2010service"></a>Stap 2: back-up maken en de bestand mfasettings. XML openen die zich bevindt in de map C:\Program Files\Microsoft Forefront Identity Manager\2010\Service
 
-### <a name="step-3-update-the-following-lines"></a>Stap 3: De volgende regels bijwerken
-1. De volgende regels van de configuratie-items verwijderen/wissen <br>
-&LT; LICENTIECODE &GT;&LT; / LICENTIECODE &GT;<br>
-&LT; GROUP_KEY &GT;&LT; / GROUP_KEY &GT;<br>
-&LT; CERT_PASSWORD &GT;&LT; / CERT_PASSWORD &GT;<br>
+### <a name="step-3-update-the-following-lines"></a>Stap 3: de volgende regels bijwerken
+1. De volgende regels voor configuratie vermeldingen verwijderen/wissen <br>
+< LICENSE_KEY > </LICENSE_KEY ><br>
+< GROUP_KEY > </GROUP_KEY ><br>
+< CERT_PASSWORD > </CERT_PASSWORD ><br>
 <CertFilePath></CertFilePath><br>
 
-2. Bijwerken of de volgende regels toevoegen aan de volgende MfaSettings.xml <br>
+2. Werk de volgende regels bij of voeg ze toe aan bestand mfasettings. XML: <br>
 `<Username>mimservice@contoso.com</Username>` <br>
 `<LOCMFA>true</LOCMFA>`<br>
 `<LOCMFASRV>https://CORPSERVICE.contoso.com:9999/MultiFactorAuthWebServiceSdk/PfWsSdk.asmx</LOCMFASRV>`
 
-3. MIM-Service opnieuw starten en test-functionaliteit met Azure multi-factor Authentication-Server.
+3. De MIM-service opnieuw starten en de functionaliteit testen met Azure Multi-Factor Authentication-server.
 
 > [!NOTE] 
-> Als u wilt terugkeren instelling MfaSettings.xml vervangen door uw back-upbestand in stap 2
+> Als u de instelling wilt herstellen, vervangt u bestand mfasettings. XML door het back-upbestand in stap 2
 
 
 ## <a name="next-steps"></a>Volgende stappen
 
--    [Aan de slag met de Azure multi-factor Authentication-Server](https://docs.microsoft.com/en-us/azure/active-directory/authentication/howto-mfaserver-deploy)
-- [Wat is Azure multi-factor Authentication](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication)
-- [Aangepaste multi-factor Authentication-API gebruiken voor PAM of SSPR activeren](Working-with-custommfaserver-for-mim.md)
-- [Versiegeschiedenis van MIM](./reference/version-history.md)
+-    [Aan de slag met de Azure Multi-Factor Authentication-server](https://docs.microsoft.com/en-us/azure/active-directory/authentication/howto-mfaserver-deploy)
+- [Wat is Azure Multi-Factor Authentication](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication)
+- [Aangepaste Multi-Factor Authentication-API gebruiken om PAM-of SSPR te activeren](Working-with-custommfaserver-for-mim.md)
+- [Release geschiedenis van MIM-versie](./reference/version-history.md)

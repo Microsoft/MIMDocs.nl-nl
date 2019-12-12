@@ -10,10 +10,10 @@ ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
 ms.openlocfilehash: 05eb2afc0ddbf6104e27a5c24e121a55bd805292
-ms.sourcegitcommit: 4c4bc7aa42cd5984c838abdd302490355ddcb4ea
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "68238907"
 ---
 # <a name="microsoft-bhold-suite-sp1-60-installation-guide"></a>Installatie handleiding voor micro soft BHOLD Suite SP1 (6,0)
@@ -99,7 +99,7 @@ Windows kan worden geconfigureerd om basis certificaten van micro soft op te hal
 
 ![IIS-installatie BHOLD](media/bhold-installation-guide/iis-install-bhold.png)
 
-Als u BHOLD Suite SP1 installeert op Windows Server 2012 of 2016, zijn de webpagina's van BHOLD niet beschikbaar totdat u het bestand applicationHost. config hebt gewijzigd in ```C:\Windows\System32\inetsrv\config```. Voeg in ```<globalModules>``` de sectie toe ```preCondition="bitness64``` aan de vermelding die begint ```<add name="SPNativeRequestModule"``` , zodat deze als volgt wordt gelezen:
+Als u BHOLD Suite SP1 installeert op Windows Server 2012 of 2016, zijn de webpagina's van BHOLD niet beschikbaar totdat u het bestand applicationHost. config wijzigt dat zich bevindt in ```C:\Windows\System32\inetsrv\config```. Voeg in de sectie ```<globalModules>``` ```preCondition="bitness64``` toe aan de vermelding die begint ```<add name="SPNativeRequestModule"```, zodat deze als volgt wordt gelezen:
 
 ```<add name="SPNativeRequestModule" image="C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\isapi\spnativerequestmodule.dll" preCondition="bitness64"/>```
 

@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: microsoft-identity-manager
 ms.assetid: 50345fda-56d7-4b6e-a861-f49ff90a8376
 ms.openlocfilehash: 5704e978734bea13f1a362aeb203810f3864205a
-ms.sourcegitcommit: 65e11fd639464ed383219ef61632decb69859065
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/01/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "68701477"
 ---
 # <a name="supported-languages"></a>Ondersteunde talen
@@ -25,7 +25,7 @@ In dit artikel vindt u een overzicht van de ondersteunde talen en de toewijzing 
 Het taal pakket voor de micro soft MIM-service en-Portal biedt ondersteuning voor de volgende talen 33 talen.  
 
 > [!NOTE]
-> In [4.4.1642.0](https://support.microsoft.com/en-us/help/4021562/hotfix-rollup-package-build-4-4-1642-0-is-available-for-microsoft) is een register sleutel toegevoegd met de naam ' OverrideDefaultUILocale ' in het taal pakket voor MIM-invoeg toepassingen en-extensies wordt geprobeerd alle vergelijk bare talen toe te wijzen aan de versie die wordt ondersteund. Als de Windows-weergave taal bijvoorbeeld es-LC (Spaans) of een wille keurige es\*is, probeert deze dan toe te wijzen aan es-es (Spaans Spanje).
+> In [4.4.1642.0](https://support.microsoft.com/en-us/help/4021562/hotfix-rollup-package-build-4-4-1642-0-is-available-for-microsoft) is een register sleutel toegevoegd met de naam ' OverrideDefaultUILocale ' in het taal pakket voor MIM-invoeg toepassingen en-extensies wordt geprobeerd alle vergelijk bare talen toe te wijzen aan de versie die wordt ondersteund. Als de Windows-weergave taal bijvoorbeeld ES-LC (Spaans, Chili) of ES-\*is, probeert deze dan toe te wijzen aan ES-ES (Spaans Spanje).
 
 > [!IMPORTANT]
 > De tekst in de SSPR-invoeg toepassing en de portal wordt gelokaliseerd, maar de vragen zijn niet zonder extra werk. U moet verificatie werk stromen (en bijbehorende sets en beheer beleidsregels) maken om vragen in elke taal te richten op de doel locatie.
@@ -35,31 +35,31 @@ Het taal pakket voor de micro soft MIM-service en-Portal biedt ondersteuning voo
 |       Bulgaars       |          bg-BG           |      bg      |
 | Chinees (vereenvoudigd)  |          zh-CN           |   zh-hans    |
 |   Chinees (Taiwan)    |          zh-TW           |   zh-hant    |
-|       Kroatisch        |          hr-HR           |      afdeling      |
-|         Tsjechisch         |          cs-CZ           |      Support      |
-|        Deens         |          da-DK           |      da      |
-|         Nederlands         |          NL-NL           |      nl      |
+|       Kroatisch        |          hr-HR           |      uur      |
+|         Tsjechisch         |          cs-CZ           |      cs      |
+|        Danish         |          da-DK           |      da      |
+|         Dutch         |          NL-NL           |      nl      |
 |       Estisch        |          et-EE           |      et      |
-|        Frans         |          fr-FR           |      fr      |
-|        Fins        |          fi-FI           |      fi      |
-|        Duits         |          de-DE           |      de      |
-|         Grieks         |          el GR           |      ei      |
-|         Hindi         |          hi-IN           |      Hallo      |
+|        French         |          fr-FR           |      fr      |
+|        Finnish        |          fi-FI           |      fi      |
+|        German         |          de-DE           |      de      |
+|         Grieks         |          el GR           |      el      |
+|         Hindi         |          hi-IN           |      hi      |
 |       Hongaars       |          hu-HU           |      hu      |
-|        Italiaans        |          IT-IT           |      it      |
-|       Japans        |          ja-JP           |      ja      |
-|        Koreaans         |          ko-KR           |      ko      |
+|        Italian        |          IT-IT           |      it      |
+|       Japanese        |          ja-JP           |      ja      |
+|        Korean         |          ko-KR           |      ko      |
 |      Litouws       |          lt-LT           |      lt      |
 |        Lets        |          lv-LV           |      lv      |
-|       Noors       |          nb-NO           |    nb-NO     |
-|        Pools         |          pl-PL           |      pl      |
+|       Norwegian       |          nb-NO           |    nb-NO     |
+|        Polish         |          pl-PL           |      pl      |
 | Portugees (Portugal) |          pt-PT           |      pt      |
 |  Portugees (Brazilië)  |          pt-BR           |    pt-BR     |
-|        Russisch        |          ru-RU           |      ru      |
-|       Roemeens        |          ro-RO           |      Roll      |
-|        Spaans        |          es-ES           |      Ja      |
+|        Russian        |          ru-RU           |      ru      |
+|       Roemeens        |          ro-RO           |      ro      |
+|        Spanish        |          es-ES           |      Ja      |
 |        Slowaaks         |          sk-SK           |      SK      |
-|        Zweeds        |          SV-SE           |      sv      |
+|        Swedish        |          SV-SE           |      sv      |
 |       Sloveens       |          sl-SI           |      lineaire      |
 |   Servisch-Servië    |  sr-Latn-CS (verouderd)  |  sr-Latn-RS  |
 |         Thais          |          e-e           |      e      |
@@ -73,43 +73,43 @@ Het micro soft Certificate Management ondersteunt de volgende negen talen.
 |-----|-----|-----|-----|
 |Chinees (vereenvoudigd)|zh-CN|zh-hans|
 |Chinees (Taiwan)|zh-TW|zh-hant|
-|Nederlands|NL-NL|nl|
-|Frans|fr-FR|fr|
-|Duits|de-DE|de|
-|Italiaans|IT-IT|it|
-|Japans|ja-JP|ja|
+|Dutch|NL-NL|nl|
+|French|fr-FR|fr|
+|German|de-DE|de|
+|Italian|IT-IT|it|
+|Japanese|ja-JP|ja|
 |Portugees (Portugal)|pt-PT|pt-PT|
-|Spaans|es-ES|Ja|
+|Spanish|es-ES|Ja|
 
 ## <a name="certificate-management-modern-application"></a>Moderne toepassing voor certificaat beheer  
 De micro soft Certificate Management moderne-toepassing ondersteunt de volgende 33 talen. 
 
 |Taal | [1.0.225.104](https://www.microsoft.com/en-us/download/details.aspx?id=54954) | |
 |-----|-----|-----|-----|
-|Nederlands|NL-NL|nl|
+|Dutch|NL-NL|nl|
 |Chinees (vereenvoudigd)|zh-CN|zh-hans|
 |Chinees (Taiwan)|zh-TW|zh-hant|
-|Tsjechisch|cs-CZ|Support|
-|Deens|da-DK|da|
-|Frans|fr-FR|fr|
-|Fins|fi-FI|fi|
-|Duits|de-DE|de|
-|Grieks|el GR|ei|
+|Tsjechisch|cs-CZ|cs|
+|Danish|da-DK|da|
+|French|fr-FR|fr|
+|Finnish|fi-FI|fi|
+|German|de-DE|de|
+|Grieks|el GR|el|
 |Hongaars|hu-HU|hu|
-|Italiaans|IT-IT|it|
-|Japans|ja-JP|ja|
-|Koreaans|ko-KR|ko|
-|Noors|nb-NO|nb-NO|
-|Pools|pl-PL|pl|
+|Italian|IT-IT|it|
+|Japanese|ja-JP|ja|
+|Korean|ko-KR|ko|
+|Norwegian|nb-NO|nb-NO|
+|Polish|pl-PL|pl|
 |Portugees (Portugal)|pt-PT|pt|
 |Portugees (Brazilië)|pt-BR|pt-BR|
-|Russisch|ru-RU|ru|
-|Roemeens|ro-RO|Roll|
-|Spaans|es-ES|Ja|
-|Zweeds|SV-SE|sv|
+|Russian|ru-RU|ru|
+|Roemeens|ro-RO|ro|
+|Spanish|es-ES|Ja|
+|Swedish|SV-SE|sv|
 |Turks|tr-TR|formulieren|
 
 ## <a name="next-steps"></a>Volgende stappen
 
 - [Eerste implementatie](microsoft-identity-manager-deploy.md)
-- [Versie geschiedenis](reference/version-history.md)
+- [Versiegeschiedenis](reference/version-history.md)

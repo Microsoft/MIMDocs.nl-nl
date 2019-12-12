@@ -13,11 +13,11 @@ ROBOTS: noindex,nofollow
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: 2b5340ef3f98ba94904e595c3526d09bdac3f95f
-ms.sourcegitcommit: 44a2293ff17c50381a59053303311d7db8b25249
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50379919"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "64518494"
 ---
 # <a name="step-4--install-mim-components-on-pam-server-and-workstation"></a>Stap 4: MIM-onderdelen installeren op een PAM-server en -werkstation
 
@@ -59,7 +59,7 @@ Volg de richtlijnen van het installatieprogramma en voltooi de installatie.
 
 7. Stel *PAMSRV* in als het serveradres van de MIM-service.
 
-8. Stel *http://pamsrv.priv.contoso.local:82* site als de SharePoint-URL van de verzameling.
+8. *http://pamsrv.priv.contoso.local:82* instellen als de URL van de share point-site verzameling.
 
 9. Laat de URL voor de registratieportal leeg.
 
@@ -100,7 +100,7 @@ Nadat de installatie is voltooid, wordt de server opnieuw opgestart. Controleer 
 
 1. Nadat PAMSRV opnieuw is opgestart, meldt u zich aan als PRIV\Administrator.
 
-2. Start Internet Explorer en verbinding maken met de MIM-Portal op http://pamsrv.priv.contoso.local:82/identitymanagement. Er is mogelijk een korte vertraging wanneer voor de eerste keer naar deze pagina wordt gezocht.
+2. Start Internet Explorer en maak verbinding met de MIM-Portal op http://pamsrv.priv.contoso.local:82/identitymanagement. Er is mogelijk een korte vertraging wanneer voor de eerste keer naar deze pagina wordt gezocht.
 
 3. Meld u zo nodig aan als PRIV\Administrator voor Internet Explorer.
 
@@ -143,7 +143,7 @@ In deze sectie gaat u de voorbeeldwebtoepassing voor de MIM PAM REST API install
    New-WebSite -Name "MIM Privileged Access Management Example Portal" -Port 8090   -PhysicalPath "C:\Program Files\Microsoft Forefront Identity Manager\2010\Privileged Access Management Portal\"
    ```
 
-4. Stel de voorbeeldwebtoepassing zo in dat gebruikers worden omgeleid naar de MIM PAM REST API. Bewerk het bestand **C:\Program Files\Microsoft Forefront Identity Manager\2010\Privileged Access Management REST API\web.config** met een teksteditor zoals Kladblok. Voeg in de sectie **< system.webServer >** de volgende regels toe:
+4. Stel de voorbeeldwebtoepassing zo in dat gebruikers worden omgeleid naar de MIM PAM REST API. Bewerk het bestand **C:\Program Files\Microsoft Forefront Identity Manager\2010\Privileged Access Management rest API\web.config**in een tekst editor, zoals Klad blok. Voeg in de sectie **< System. webserver >** de volgende regels toe:
 
    ```XML
    <httpProtocol>
@@ -155,7 +155,7 @@ In deze sectie gaat u de voorbeeldwebtoepassing voor de MIM PAM REST API install
    </httpProtocol>
    ```
 
-5. Configureer de voorbeeldwebtoepassing. Bewerk het bestand **C:\Program Files\Microsoft Forefront Identity Manager\2010\Privileged Access Management Portal\js\utils.js** met een teksteditor zoals Kladblok. Stel de waarde van **pamRespApiUrl** naar *http://pamsrv.priv.contoso.local:8086/api/pamresources/*.
+5. Configureer de voorbeeldwebtoepassing. Bewerk het bestand **C:\Program Files\Microsoft Forefront Identity Manager\2010\Privileged Access Management Portal\js\utils.js** met een teksteditor zoals Kladblok. Stel de waarde van **pamrespapiurl in** in op *http://pamsrv.priv.contoso.local:8086/api/pamresources/* .
 
 6. Start IIS opnieuw met de volgende opdracht om deze wijzigingen door te voeren.
 
@@ -163,7 +163,7 @@ In deze sectie gaat u de voorbeeldwebtoepassing voor de MIM PAM REST API install
    iisreset
    ```
 
-7. (Optioneel) Controleer of de gebruiker bij de REST API kan worden geverifieerd. Open een webbrowser als de beheerder op PAMSRV.  Navigeer naar de website-URL http://pamsrv.priv.contoso.local:8086/api/pamresources/pamroles/, indien nodig te verifiëren en ervoor te zorgen dat een download wordt uitgevoerd.
+7. (Optioneel) Controleer of de gebruiker bij de REST API kan worden geverifieerd. Open een webbrowser als de beheerder op PAMSRV.  Ga naar de website-URL http://pamsrv.priv.contoso.local:8086/api/pamresources/pamroles/, verifieer indien nodig en zorg ervoor dat er een down load wordt uitgevoerd.
 
 ## <a name="install-the-mim-pam-requestor-cmdlets"></a>De aanvrager-cmdlets van MIM PAM installeren
 

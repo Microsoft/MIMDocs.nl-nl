@@ -1,6 +1,6 @@
 ---
-title: Installatie van BHOLD-analyse | Microsoft Docs
-description: BHOLD-analyse-module biedt toegang tot gegevens op basis van een regel testen
+title: Installatie van BHOLD Analytics | Microsoft Docs
+description: De BHOLD Analytics-module biedt op regels gebaseerde tests van gegevens toegang
 keywords: ''
 author: billmath
 ms.author: billmath
@@ -10,43 +10,43 @@ ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
 ms.openlocfilehash: ec7069156aa033b33a139ae83e26abcdea7b482a
-ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49358326"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "64516878"
 ---
-# <a name="bhold-analytics-installation"></a>Installatie van BHOLD-analyse
+# <a name="bhold-analytics-installation"></a>Installatie van BHOLD Analytics
 
-De BHOLD-analyse-module biedt toegang tot de gegevens om ervoor te zorgen dat uw organisatie toegang tot de gegevens effectief beheren en aan de toegangsvereisten voor interne en externe voldoet op basis van regels testen. De geautomatiseerde impactanalyse gegenereerd door de module BHOLD-analyse geeft een overzicht waarin het aantal gebruikers dat wordt beïnvloed door het afdwingen van een voorgestelde regel, zowel die zou voldoen aan de regel en degenen die de regel schendt. De BHOLD-analyse-module biedt ook een gedetailleerd overzicht van de gebruikers die u wilt voldoen aan de regel en degenen die de regel schendt.
+De module BHOLD Analytics biedt op regels gebaseerde tests van gegevens toegang om ervoor te zorgen dat uw organisatie de toegang tot de gegevens effectief kan beheren en voldoet aan de interne en externe toegangs vereisten. De automatische impact analyse die wordt gegenereerd door de module BHOLD Analytics geeft u een overzicht van het aantal gebruikers dat wordt beïnvloed door het afdwingen van een voorgestelde regel, beide die zouden kunnen voldoen aan de regel en degenen die de regel zouden schenden. De BHOLD Analytics-module kan ook een gedetailleerde lijst bevatten met de gebruikers die voldoen aan de regel en degenen die de regel zouden schenden.
 
-## <a name="bhold-analytics-installation-requirements"></a>Vereisten voor installatie van BHOLD-analyse
+## <a name="bhold-analytics-installation-requirements"></a>Installatie vereisten voor BHOLD Analytics
 
-Voordat u de BHOLD-analyse-module installeert, moet u de BHOLD-Core-module installeren op de server waarop u van plan bent om de BHOLD-analyse-module te installeren. Zie voor meer informatie over het installeren van de module BHOLD Core [basisinstallatie van BHOLD](https://technet.microsoft.com/library/jj134095(v=ws.10).aspx).
+Voordat u de BHOLD Analytics-module installeert, moet u de BHOLD-kern module installeren op de server waarop u van plan bent de BHOLD Analytics-module te installeren. Zie [BHOLD Core-installatie](https://technet.microsoft.com/library/jj134095(v=ws.10).aspx)voor meer informatie over het installeren van de BHOLD core-module.
 
 ## <a name="before-you-begin"></a>Voordat u begint
 
-Voordat u begint met de BHOLD-analyse-module installeren, moet u worden voorbereid voor de informatie die de wizard Setup van BHOLD-analyse is vereist om de installatie te voltooien. Het werkblad voor het volgende kunt u gegevens vastleggen, zodat u klaar om aan te geven wanneer dat nodig is.
+Voordat u begint met het installeren van de BHOLD Analytics-module, moet u voor bereid zijn om de informatie op te geven die de wizard BHOLD Analytics Setup nodig heeft om de installatie te volt ooien. Het volgende werk blad helpt u bij het vastleggen van die informatie, zodat u deze kunt opgeven wanneer dat nodig is.
 
 | **Item**                                    | **Beschrijving**                                                                                                                                                                                                           | **Waarde**                                                                                                                                                                                                                                                                                                            |
 |---------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Security Provider worden gebruikt op de computer aan het domein /** | Als er hebt geselecteerd, geeft de Active Directory Domain Services-beveiliging wordt toegangsbeheer voor BHOLD-Core.                                                                                                                | Schakel het selectievakje in. **Belangrijk:** mislukt de installatie als dit selectievakje niet is geselecteerd.                                                                                                                                                                                                                   |
-| **Domein**                                  | Hiermee geeft u het domein met het serviceaccount dat u hebt gemaakt bij de installatie van BHOLD-Core. Zie voor meer informatie, [basisinstallatie van BHOLD](https://technet.microsoft.com/library/jj134095(v=ws.10).aspx). | Naam van het domein wordt automatisch opgegeven door de wizard. De naam alleen wijzigen als dit onjuist is. **Belangrijk:** de domeinnaam opgeven met behulp van de naam van de NetBIOS-(kort), niet de volledig gekwalificeerde domeinnaam (FQDN). Bijvoorbeeld, als de FQDN-naam van het domein fabrikam.com, de domeinnaam opgeven als FABRIKAM. |
-| **Gebruiker**                                    | Hiermee geeft u de naam van het gebruikersaccount van BHOLD-Core-service.                                                                                                                                                          | Schrijf hier de accountnaam van de gebruiker:                                                                                                                                                                                                                                                                                    |
-| **Wachtwoord**                                | Hiermee geeft u het wachtwoord van het serviceaccount van de gebruiker.                                                                                                                                                                       | Schrijf hier het wachtwoord: **belangrijk:** Zorg ervoor dat dit wachtwoord in een verborgen, een veilige locatie.                                                                                                                                                                                                                  |
+| **Beveiligings provider op domein/computer gebruiken** | Hiermee geeft u op dat Active Directory Domain Services beveiliging de toegang tot BHOLD core beheert.                                                                                                                | Schakel het selectievakje in. **Belang rijk:** Als dit selectie vakje niet is ingeschakeld, mislukt de installatie.                                                                                                                                                                                                                   |
+| **Domein**                                  | Hiermee geeft u het domein op dat het service account bevat dat u hebt gemaakt bij het installeren van de BHOLD-kern. Zie [BHOLD Core Installation](https://technet.microsoft.com/library/jj134095(v=ws.10).aspx)(Engelstalig) voor meer informatie. | De domein naam wordt automatisch geleverd door de wizard. Wijzig de naam alleen als deze onjuist is. **Belang rijk:** Geef de domein naam op met behulp van de NetBIOS (korte) naam, niet de Fully Qualified Domain Name (FQDN). Als de FQDN van het domein bijvoorbeeld fabrikam.com is, geeft u de domein naam op als FABRIKAM. |
+| **Gebruiker**                                    | Hiermee geeft u de aanmeldings naam van het gebruikers account van de BHOLD-basis service.                                                                                                                                                          | Schrijf hier de naam van het gebruikers account:                                                                                                                                                                                                                                                                                    |
+| **Wachtwoord**                                | Hiermee geeft u het wacht woord van het Service gebruikers account.                                                                                                                                                                       | Schrijf hier het wacht woord: **belang rijk:** zorg ervoor dat u dit wacht woord op een verborgen, veilige locatie blijft.                                                                                                                                                                                                                  |
 
-## <a name="bhold-analytics-installation"></a>Installatie van BHOLD-analyse
+## <a name="bhold-analytics-installation"></a>Installatie van BHOLD Analytics
 
-Meld u aan als een lid van de groep Domeinadministrators, downloadt u het volgende bestand voor het installeren van de module BHOLD-analyse, en als administrator uitvoeren op de server die u van plan bent de BHOLD-analyse-module installeren op:
+Als u de BHOLD Analytics-module wilt installeren, meldt u zich aan als lid van de groep domein Administrators, downloadt u het volgende bestand en voert u het uit als beheerder op de server waarop u de BHOLD Analytics-module wilt installeren:
 
-- BholdAnalytics<em>\<versie\></em>\_Release.msi
+- BholdAnalytics<em>\<versie\></em>\_release. msi
 
-Vervang *\<versie\>* met het versienummer van de release van BHOLD-analyse die u installeert.
+Vervang *\<versie\>* door het versie nummer van de BHOLD-analyse versie die u installeert.
 
-Als u wilt het programmabestand uitvoeren als beheerder, met de rechtermuisknop op het bestand en klik vervolgens op **als administrator uitvoeren**.
+Als u het programma bestand als beheerder wilt uitvoeren, klikt u met de rechter muisknop op het bestand en klikt u vervolgens op **als administrator uitvoeren**.
 
 # <a name="next-steps"></a>Volgende stappen
 
-- [Basisinstallatie van BHOLD](https://technet.microsoft.com/library/jj134095(v=ws.10).aspx)
-- [Handleiding voor BHOLD-installatie](bhold-installation-guide.md)
+- [BHOLD Core-installatie](https://technet.microsoft.com/library/jj134095(v=ws.10).aspx)
+- [Installatie handleiding voor BHOLD](bhold-installation-guide.md)
 - [Versiegeschiedenis van BHOLD](../reference/version-bhold-history.md)

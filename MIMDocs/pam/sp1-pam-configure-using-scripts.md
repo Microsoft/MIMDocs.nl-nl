@@ -12,11 +12,11 @@ ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: ''
 ms.suite: ems
 ms.openlocfilehash: 28e8f5c28cd38ad820c6a1f12385dffbd0641ddd
-ms.sourcegitcommit: 44a2293ff17c50381a59053303311d7db8b25249
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50379530"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "64518319"
 ---
 # <a name="configure-pam-using-scripts"></a>PAM configureren met behulp van scripts
 
@@ -41,9 +41,9 @@ stappen:
 
 ## <a name="deployment-worksheet"></a>Werkblad voor implementatie
 
-Voordat u verdergaat de PAMDeploymentConfig.xml bijwerken en het bijgewerkte exemplaar op alle computers plaatsen.
+Voordat u doorgaat, gaat u verder met het bijwerken van PAMDeploymentConfig. XML en plaatst u de bijgewerkte kopie op alle machines.
 
-### <a name="setup"></a>Setup
+### <a name="setup"></a>instellen
 
 |Machine   | Uitvoeren als   |Opdrachten   |
 |---|---|---|

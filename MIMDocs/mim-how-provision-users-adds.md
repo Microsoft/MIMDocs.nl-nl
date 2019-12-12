@@ -1,5 +1,5 @@
 ---
-title: Microsoft Identity Manager 2016 gebruikersinrichting met AD | Microsoft Docs
+title: Microsoft Identity Manager 2016-gebruikers inrichting voor AD | Microsoft Docs
 description: Bekijk het proces om gebruikers te maken in AD DS met Microsoft Identity Manager 2016
 keywords: ''
 author: billmath
@@ -10,11 +10,11 @@ ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
 ms.openlocfilehash: 5e259df617c5a95fcd54f49c9cbb70f9cd0c36a4
-ms.sourcegitcommit: 486f860f0951413aed335138eb6ad4ce6c50ed4d
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56852660"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "64519956"
 ---
 # <a name="how-do-i-provision-users-to-ad-ds"></a>Hoe kan ik gebruikers inrichten voor AD DS?
 
@@ -45,7 +45,7 @@ In dit document wordt ervan uitgegaan dat u een exemplaar van MIM kunt uitvoeren
 
 De inhoud van dit document dient als een uitbreiding op deze inleidende documenten.
 
-### <a name="scope"></a>Bereik
+### <a name="scope"></a>Scope
 
 
 Het scenario dat in dit document wordt beschreven is vereenvoudigd om tegemoet te komen aan de vereisten van een technische basisomgeving. Het document is erop gericht de lezer kennis bij te brengen over de hier besproken concepten en technologieën.
@@ -102,7 +102,7 @@ In de volgende lijst vindt u de componenten die onderdeel uitmaken van het scena
 | ![Beheeragents en uitvoerprofielen](media/how-provision-users-adds/image007.jpg)  | Beheeragents en uitvoerprofielen | &#183; **Fabrikam ADMA**: beheeragent die gegevens uitwisselt met AD DS. <br/> &#183; Fabrikam FIMMA: beheeragent die gegevens uitwisselt met MIM.                                                                                 |
 | ![Synchronisatieregels](media/how-provision-users-adds/image008.jpg)  | Synchronisatieregels              | Regel voor uitgaande synchronisatie van Fabrikam-groep: regel voor uitgaande synchronisatie die gebruikers inricht voor AD DS.                                     |
 | ![Sets](media/how-provision-users-adds/image009.jpg)   | Sets                               | Alle contractanten: set met dynamisch lidmaatschap voor alle objecten met een EmployeeType-kenmerkwaarde van Contractant.                                |
-| ![Workflows](media/how-provision-users-adds/image010.jpg)  | Werkstromen                          | AD-inrichtingswerkstroom: werkstroom om de MIM-gebruiker binnen het bereik te brengen van de AD-regel voor uitgaande synchronisatie.                                |
+| ![Werkstromen](media/how-provision-users-adds/image010.jpg)  | Werkstromen                          | AD-inrichtingswerkstroom: werkstroom om de MIM-gebruiker binnen het bereik te brengen van de AD-regel voor uitgaande synchronisatie.                                |
 | ![Regels voor Informatiebeheerbeleid](media/how-provision-users-adds/image011.jpg)   | Regels voor Informatiebeheerbeleid            | Beheerbeleidsregel voor AD-inrichting: beheerbeleidsregel (MPR) die wordt getriggerd als een resource lid wordt van de set Alle contractanten. |
 | ![MIM-gebruikers](media/how-provision-users-adds/image012.jpg) | MIM-gebruikers                          | Julia Steen: MIM-gebruiker die u inricht voor AD DS.                                                                                             |
 
@@ -121,14 +121,14 @@ Het scenario dat in deze handleiding wordt beschreven, bestaat uit de bouwstenen
 
 In deze sectie vindt u instructies voor de resources die u moet maken en die buiten de MIM-omgeving aanwezig zijn.
 
-### <a name="step-1-create-the-ou"></a>Stap 1: De organisatie-eenheid maken
+### <a name="step-1-create-the-ou"></a>Stap 1: de OE maken
 
 
 De OE dient als container voor de ingerichte voorbeeldgebruiker. Zie [Create a New Organizational Unit](http://go.microsoft.com/FWLink/p/?LinkId=189655) (Een nieuwe organisatie-eenheid maken) voor meer informatie.
 
 Maak in de AD DS een OE met de naam MIMObjects.
 
-### <a name="step-2-create-the-active-directory-user-accounts"></a>Stap 2: De Active Directory-gebruikersaccounts maken
+### <a name="step-2-create-the-active-directory-user-accounts"></a>Stap 2: Active Directory-gebruikersaccounts maken
 
 Voor het scenario in deze handleiding hebt u twee Active Directory-gebruikersaccounts nodig:
 
@@ -152,7 +152,7 @@ Voor het scenario in deze handleiding moet u twee beheeragents maken:
 
 -   **Fabrikam FIMMA**: beheeragent voor de FIM-servicebeheeragent.
 
-### <a name="step-3-create-the-fabrikam-adma-management-agent"></a>Stap 3: De Fabrikam ADMA-beheeragent maken
+### <a name="step-3-create-the-fabrikam-adma-management-agent"></a>Stap 3: de Fabrikam ADMA-beheeragent maken
 
 Als u een beheeragent configureert voor AD DS, moet u een account opgeven dat wordt gebruikt door de beheeragent in de gegevensuitwisseling met AD DS. Gebruik een normaal gebruikersaccount. Maar als u gegevens importeert vanuit AD DS, moet het account rechten hebben om wijzigingen vanuit het DirSync-besturingselement te peilen. Als u de beheeragent gegevens naar AD DS wilt laten exporteren, moet u het account voldoende rechten geven op de doel-OE's. Zie [Configuring the ADMA Account](http://go.microsoft.com/FWLink/p/?LinkId=189657) (Het ADMA-account configureren) voor meer informatie.
 
@@ -167,12 +167,12 @@ Als u een wachtwoord instelt voor AD DS-accounts, moet u ook een account maken a
 
 In de volgende tabel worden de belangrijkste scenariospecifieke instellingen vermeld die u moet configureren.
 
-| Ontwerppagina voor beheeragenten                          | Configuratie                                                  |
+| Ontwerppagina voor beheeragenten                          | Configuration                                                  |
 |---------------------------------------------------------|----------------------------------------------------------------|
-| Beheeragent maken                                 | 1. **Beheeragent voor:** AD DS  <br/> 2.  **Naam:** Fabrikam ADMA |
-| Verbinding maken met een Active Directory-forest                      | 1. **Selecteer mappartities:** “DC=Fabrikam,DC=com”   <br/>   2. Klik op **Containers** om het dialoogvenster **Select Containers** te openen om te controleren dat **MIMObjects** de enige geselecteerde OE is.        |
+| Beheeragent maken                                 | 1. **beheer agent voor:** AD DS  <br/> 2. **naam:** fabrikam ADMA |
+| Verbinding maken met een Active Directory-forest                      | 1. **Selecteer Directory partities:** DC = FABRIKAM, DC = com   <br/>   2. Klik op **containers** om het dialoog venster **containers selecteren** te openen en zorg ervoor dat **MIMObjects** de enige organisatie-eenheid is die is geselecteerd.        |
 | Objecttypen selecteren                                     | Naast de reeds geselecteerde objecttypen selecteert u **gebruiker.** |
-| Kenmerken selecteren                                       | 1. Klik op **Alles weergeven.** <br/>   2. Selecteer de volgende kenmerken: <br/> &nbsp;&nbsp;&nbsp;&#176; **displayName** <br/> &nbsp;&nbsp;&nbsp;&#176; **givenName** <br/> &nbsp;&nbsp;&nbsp;&#176;  **sn** <br/> &nbsp;&nbsp;&nbsp;&#176;  **SamAccountName** <br/> &nbsp;&nbsp;&nbsp;&#176;  **unicodePwd** <br/> &nbsp;&nbsp;&nbsp;&#176;  **userAccountControl**     
+| Kenmerken selecteren                                       | 1. Klik op **alles weer geven.** <br/>   2. Selecteer de volgende kenmerken: <br/> &nbsp;&nbsp;&nbsp;&#176; **displayName** <br/> &nbsp;&nbsp;&nbsp;&#176; **givenName** <br/> &nbsp;&nbsp;&nbsp;&#176;  **sn** <br/> &nbsp;&nbsp;&nbsp;&#176;  **SamAccountName** <br/> &nbsp;&nbsp;&nbsp;&#176;  **unicodePwd** <br/> &nbsp;&nbsp;&nbsp;&#176;  **userAccountControl**     
 
 Zie de volgende onderwerpen in de Help voor meer informatie:
 - Een beheeragent maken
@@ -183,7 +183,7 @@ Zie de volgende onderwerpen in de Help voor meer informatie:
 > [!Note]
 > Zorg dat u een importkenmerkstroomregel hebt geconfigureerd voor het kenmerk ExpectedRulesList.
 
-### <a name="step-4-create-the-fabrikam-fimma-management-agent"></a>Stap 4: De Fabrikam FIMMA-beheeragent maken
+### <a name="step-4-create-the-fabrikam-fimma-management-agent"></a>Stap 4: de Fabrikam FIMMA-beheeragent maken
 
 Als u een FIM-servicebeheeragent configureert, moet u een account opgeven dat wordt gebruikt door de beheeragent in de gegevensuitwisseling met de FIM-service.
 
@@ -191,10 +191,10 @@ Gebruik een normaal gebruikersaccount. Het account moet hetzelfde zijn als het a
 
 In de volgende tabel worden de belangrijkste scenariospecifieke instellingen vermeld die u moet configureren. Maak de beheeragent op basis van de informatie in de onderstaande tabel.  
 
-| Ontwerppagina voor beheeragenten | Configuratie |
+| Ontwerppagina voor beheeragenten | Configuration |
 |------------|------------------------------------|
-| Beheeragent maken | 1. **Beheeragent voor:** FIM-Servicebeheeragent <br/> 2. **Naam:** Fabrikam FIMMA |
-| Verbinding maken met database     | Gebruik de volgende instellingen: <br/> &#183; **Server:** localhost <br/> &#183;**Database:** FIMService <br/> &#183;**Basisadres FIM-Service:** http://localhost:5725 <br/> <br/> Geef de informatie op over het account dat u voor deze beheeragent hebt gemaakt. |
+| Beheeragent maken | 1. **beheer agent voor:** FIM-Service beheer agent <br/> 2. **naam** fabrikam FIMMA |
+| Verbinding maken met database     | Gebruik de volgende instellingen: <br/> &#183; **Server:** localhost <br/> &#183; **Database:** FIMService <br/> &#183;**Basis adres van FIM-service:** http://localhost:5725 <br/> <br/> Geef de informatie op over het account dat u voor deze beheeragent hebt gemaakt. |
 | Objecttypen selecteren                                     | Naast de reeds geselecteerde objecttypen selecteert u **Persoon.**   |
 | Objecttypetoewijzingen configureren                          | Voeg naast de al bestaande objecttypetoewijzingen een toewijzing toe voor het **Gegevensbronobjecttype** Persoon in het **Metaverseobjecttype** Persoon. |
 | Kenmerkstroom configureren                                | Voeg naast de al bestaande kenmerkstroomtoewijzingen de volgende kenmerkstroomtoewijzingen toe: <br/><br/> ![Kenmerkstroom](media/how-provision-users-adds/image018.jpg) |
@@ -214,14 +214,14 @@ Zie de volgende onderwerpen in de Help voor meer informatie:
 > [!NOTE]
 >  Zorg dat u een importkenmerkstroomregel hebt geconfigureerd voor het kenmerk ExpectedRulesList.
 
-### <a name="step-5-create-the-run-profiles"></a>Stap 5: De uitvoerprofielen maken
+### <a name="step-5-create-the-run-profiles"></a>Stap 5: de uitvoerprofielen maken
 
 In de volgende tabel worden de uitvoerprofielen vermeld die u moet maken voor het scenario in deze handleiding.
 
 | Beheeragent  | Uitvoerprofiel     |
 |-------------------|--------------------------------------|
-| Fabrikam ADMA     | 1. Volledig importbewerking  <br/> 2. Volledige synchronisatie <br/> 3. Delta-import <br/> 4. Deltasynchronisatie <br/> 5. Exporteren                                                                    |
-| Fabrikam FIMMA   | 1. Volledig importbewerking <br> 2. Volledige synchronisatie <br/> 3. Delta-Import <br/> 4. Deltasynchronisatie <br/> 5. Exporteren|                                                                                                                                                                                   
+| Fabrikam ADMA     | 1. volledige import bewerking  <br/> 2. volledige synchronisatie <br/> 3. Delta-import <br/> 4. Delta synchronisatie <br/> 5. exporteren                                                                    |
+| Fabrikam FIMMA   | 1. volledige import bewerking <br> 2. volledige synchronisatie <br/> 3. Delta-import <br/> 4. Delta synchronisatie <br/> 5. exporteren|                                                                                                                                                                                   
 
 Maak aan de hand van de vorige tabel uitvoerprofielen voor elke beheeragent.
 
@@ -231,7 +231,7 @@ Maak aan de hand van de vorige tabel uitvoerprofielen voor elke beheeragent.
 > 
 > 
 > [!Important]
->  Controleer of het inrichten in uw omgeving is ingeschakeld. U kunt dit doen door het uitvoeren van het script, met behulp van Windows PowerShell voor het inrichten van inschakelen (http://go.microsoft.com/FWLink/p/?LinkId=189660).
+>  Controleer of het inrichten in uw omgeving is ingeschakeld. U kunt dit doen door het script uit te voeren met Windows Power shell om inrichting (http://go.microsoft.com/FWLink/p/?LinkId=189660) in te scha kelen.
 
 
 ## <a name="configuring-the-fim-service"></a>De FIM-service configureren
@@ -243,22 +243,22 @@ Voor het scenario in deze handleiding moet u een inrichtingsbeleid voor inrichte
 
 Het doel van dit inrichtingsbeleid is om groepen binnen het bereik te brengen van de regel voor uitgaande synchronisatie van Active Directory-gebruikers. Als u de resource binnen het bereik van de synchronisatieregel hebt gebracht, schakelt u de synchronisatie-engine in om uw resource volgens uw configuratie in te richten voor AD DS.
 
-Voor het configureren van de FIM-Service, gaat u in Windows naar http://localhost/identitymanagement. Als u het inrichtingsbeleid wilt maken, gaat u op de pagina van de MIM-portal naar de gerelateerde pagina's van de sectie Beheer. Verifieer de configuratie door het script uit te voeren in [Using Windows PowerShell to document your provisioning policy configuration](http://go.microsoft.com/FWLink/p/?LinkId=189661) (Windows PowerShell gebruiken om de configuratie voor het inrichtingsbeleid te documenteren).
+Als u de FIM-service wilt configureren, navigeert u in Windows Internet Explorer® naar http://localhost/identitymanagement. Als u het inrichtingsbeleid wilt maken, gaat u op de pagina van de MIM-portal naar de gerelateerde pagina's van de sectie Beheer. Verifieer de configuratie door het script uit te voeren in [Using Windows PowerShell to document your provisioning policy configuration](http://go.microsoft.com/FWLink/p/?LinkId=189661) (Windows PowerShell gebruiken om de configuratie voor het inrichtingsbeleid te documenteren).
 
-### <a name="step-6-create-the-synchronization-rule"></a>Stap 6: De synchronisatieregel maken
+### <a name="step-6-create-the-synchronization-rule"></a>Stap 6: de synchronisatieregel maken
 
 In de volgende tabellen wordt de configuratie getoond van de vereiste inrichtingssynchronisatieregel van Fabrikam. Maak de synchronisatieregel aan de hand van de gegevens in de volgende tabellen.
 
 | Configuratie van de synchronisatieregel                                                                         |                                                                             |                                                           
 |------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------|-----------------------------------------------------------|
-| Name                                                                                                       | Regel voor uitgaande synchronisatie van Active Directory-gebruiker                         |                                                          
+| Naam                                                                                                       | Regel voor uitgaande synchronisatie van Active Directory-gebruiker                         |                                                          
 | Description                                                                                               |                                                                             |                                                           
 | Prioriteit                                                                                                | 2                                                                           |                                                           
-| Richting gegevensstroom   | Uitgaande             |       
+| Richting gegevensstroom   | Uitgaand             |       
 | Afhankelijkheid       |         |                                         
 
 
-| Bereik |                                                                             |                                                           
+| Scope |                                                                             |                                                           
 |--------|-------|
 | Resourcetype voor de metaverse | persoon |                                                         
 | Extern systeem                   |Fabrikam ADMA                                                               |                                                       
@@ -280,16 +280,16 @@ In de volgende tabellen wordt de configuratie getoond van de vereiste inrichting
 |-------------------|---------------------- |---------------|
 | Null-waarden toestaan                 | Bestemming                                                                 | Bron                                                    |
 | onjuist                       | dn                                                                          | \+("CN=",displayName,",OU=MIMObjects,DC=fabrikam,DC=com") |
-| false                       | userAccountControl                                                          | **Constante:** 512                                         |
-| false                                                                     | unicodePwd                    | Constante: P\@\$\$W0rd                                    |
+| onjuist                       | userAccountControl                                                          | **Constant:** 512                                         |
+| onjuist                                                                     | unicodePwd                    | Constant: P\@\$\$W0rd                                    |
 
 | Permanente uitgaande kenmerkstromen  |                                                                     |                                                           |
 |--------------------------------------|---------------------------------------------------------------------|-----------------------------------------------------------|
 | Null-waarden toestaan                                                                                                | Bestemming                                                                 | Bron                                                    |
-| false                                                                                                      | sAMAccountName                                                              | accountName                                               |
-| false                                                                                                      | displayName                                                                 | displayName                                               |
-| false                                                                                                      | givenName                                                                   | firstName                                                 |
-| false                                                                                                      | SN                                                                          | lastName                                                  |
+| onjuist                                                                                                      | sAMAccountName                                                              | accountName                                               |
+| onjuist                                                                                                      | displayName                                                                 | displayName                                               |
+| onjuist                                                                                                      | givenName                                                                   | firstName                                                 |
+| onjuist                                                                                                      | sn                                                                          | lastName                                                  |
 
 
 
@@ -302,26 +302,26 @@ Het doel van de AD-inrichtingswerkstroom is om de inrichtingssynchronisatieregel
 
 | Werkstroomconfiguratie               |                                                                 |
 |--------------------------------------|-----------------------------------------------------------------|
-| Name                                 | Inrichtingswerkstroom van Active Directory-gebruiker                     |
+| Naam                                 | Inrichtingswerkstroom van Active Directory-gebruiker                     |
 | Description                          |                                                                 |
-| Werkstroomtype                        | Bewerking                                                          |
+| Werkstroomtype                        | Actie                                                          |
 | Uitvoeren bij beleidsupdates                 | False                                                           |
 
 | Synchronisatieregel                 |                                                                 |
 |--------------------------------------|-----------------------------------------------------------------|
-| Name                                 | Regel voor uitgaande synchronisatie van Active Directory-gebruiker             |
+| Naam                                 | Regel voor uitgaande synchronisatie van Active Directory-gebruiker             |
 | Actie                               | Toevoegen                                                             |
 
 
 
 
-### <a name="step-8-create-the-mpr"></a>Stap 8: De MPR maken
+### <a name="step-8-create-the-mpr"></a>Stap 8: de MPR maken
 
 De vereiste MPR is van het type Setovergang en wordt getriggerd wanneer een resource lid wordt van de set Alle contractanten. In de volgende tabellen wordt de configuratie vermeld.  Maak een MPR aan de hand van de gegevens in de onderstaande tabellen.
 
 | MPR-configuratie                    |                                                             |
 |--------------------------------------|-------------------------------------------------------------|
-| Name                                 | Beheerbeleidsregel voor inrichting van AD-gebruikers                 |
+| Naam                                 | Beheerbeleidsregel voor inrichting van AD-gebruikers                 |
 | Description                          |                                                             |
 | Type                                 | Setovergang                                              |
 | Verleent toestemmingen                   | False                                                       |
@@ -334,7 +334,7 @@ De vereiste MPR is van het type Setovergang en wordt getriggerd wanneer een reso
 
 | Beleidswerkstromen                     |                                                             |
 |--------------------------------------|-------------------------------------------------------------|
-| Type                                 | Bewerking                                                      |
+| Type                                 | Actie                                                      |
 | Weergavenaam                         | Inrichtingswerkstroom van Active Directory-gebruiker                 |
 
 
@@ -349,11 +349,11 @@ De doelstelling van de initialisatiefase is als volgt:
 
 -   Breng de Active Directory-structuur over naar het Active Directory-connectorgebied.
 
-### <a name="step-9-run-the-run-profiles"></a>Stap 9: Voer het uitvoerprofiel uit
+### <a name="step-9-run-the-run-profiles"></a>Stap 9: de uitvoerprofielen uitvoeren
 
 In de volgende tabellen worden de uitvoerprofielen vermeld die onderdeel zijn van de initialisatiefase.  Voer de uitvoerprofielen uit aan de hand van de onderstaande tabel.
 
-| Voer                                                                                                           | Beheeragent                                      | Uitvoerprofiel          |
+| Uitvoeren                                                                                                           | Beheeragent                                      | Uitvoerprofiel          |
 |---------------------------------------------------------------------------------------------------------------|-------------------------------------------------------|----------------------|
 | 1                                                                                                             | Fabrikam FIMMA                                        | Volledig importbewerking          |
 | 2                                                                                                             |                                                       | Volledige synchronisatie |
@@ -381,12 +381,12 @@ Het doel van deze sectie is het testen van de feitelijke configuratie. Voor het 
 
 4.  Controleer of de gebruiker aanwezig is in AD DS.
 
-### <a name="step-10-create-a-sample-user-in-mim"></a>Stap 10: Een voorbeeldgebruiker maken in MIM
+### <a name="step-10-create-a-sample-user-in-mim"></a>Stap 10: een voorbeeldgebruiker maken in MIM
 
 
 In de volgende tabel worden de eigenschappen van de voorbeeldgebruiker vermeld. Maak een voorbeeldgebruiker aan de hand van de gegevens in de onderstaande tabel.
 
-| Kenmerk                              | Waarde                                                          |
+| Kenmerk                              | Value                                                          |
 |----------------------------------------|----------------------------------------------------------------|
 | Voornaam                             | Julia                                                         |
 | Achternaam                              | Steen                                                          |
@@ -406,16 +406,16 @@ Als u de voorbeeldgebruiker wilt inrichten voor AD DS, moet aan twee voorwaarden
 
 2.  De gebruiker van de set moet binnen het bereik zijn van de regel voor uitgaande synchronisatie.
 
-### <a name="step-11-verify-the-user-is-a-member-of-all-contractors"></a>Stap 11: Controleer of de gebruiker lid is van alle contractanten
+### <a name="step-11-verify-the-user-is-a-member-of-all-contractors"></a>Stap 11: controleren of de gebruiker lid is van Alle contractanten
 
 Als u wilt controleren of de gebruiker lid is van de set Alle contractanten, opent u de set en klikt u op Leden weergeven.
 
 ![Controleren of de gebruiker lid is van alle contractanten](media/how-provision-users-adds/image022.jpg)
 
 
-### <a name="step-12-verify-the-user-is-in-the-scope-of-the-outbound-synchronization-rule"></a>Stap 12: Controleer of de gebruiker in het bereik van de regel voor uitgaande synchronisatie
+### <a name="step-12-verify-the-user-is-in-the-scope-of-the-outbound-synchronization-rule"></a>Stap 12: controleren of de gebruiker binnen het bereik is van de regel voor uitgaande synchronisatie
 
-Als u wilt controleren of de gebruiker binnen het bereik is van de regel voor uitgaande synchronisatie, opent u de eigenschappenpagina van de gebruiker en controleert u het kenmerk Lijst met verwachte regels op het tabblad Inrichten. Het kenmerk Lijst met verwachte regels moet de AD-gebruiker vermelden
+Als u wilt controleren of de gebruiker zich binnen het bereik van de synchronisatie regel bevindt, opent u de eigenschappen pagina van de gebruiker en bekijkt u het kenmerk lijst met verwachte regels op het tabblad inrichten. Het kenmerk lijst met verwachte regels moet de AD-gebruiker vermelden
 
 Regel voor uitgaande synchronisatie. In de volgende schermopname wordt een voorbeeld getoond van het kenmerk Lijst met verwachte regels.
 
@@ -425,7 +425,7 @@ Op dit punt in het proces is de status van de synchronisatieregel In wachtrij. D
 
 
 
-### <a name="step-13-synchronize-the-sample-group"></a>Stap 13: De voorbeeldgroep synchroniseren
+### <a name="step-13-synchronize-the-sample-group"></a>Stap 13: de voorbeeldgroep synchroniseren
 
 
 Voordat u met de eerste synchronisatiecyclus voor een testobject begint, dient u de verwachte toestand van het object te volgen na het uitvoeren van een uitvoerprofiel in een testschema. Het testschema moet naast de algemene toestand van het object (gemaakt, bijgewerkt of verwijderd) ook de kenmerkwaarden bevatten die u verwacht.
@@ -455,11 +455,11 @@ Voer de volgende uitvoerprofielen uit als u deze taken wilt verrichten.
 
 | Beheeragent | Uitvoerprofiel  |
 |------------------|--------------|
-| Fabrikam FIMMA   | 1. Delta-import <br/> 2. Deltasynchronisatie <br/> 3. Exporteren <br/> 4. Delta-import |
-| Fabrikam FIMMA   | 1. Exporteren <br/> 2. Delta-Import       |
+| Fabrikam FIMMA   | 1. Delta-import <br/> 2. Delta synchronisatie <br/> 3. exporteren <br/> 4. Delta-import |
+| Fabrikam FIMMA   | 1. exporteren <br/> 2. Delta-import       |
 
 
-Na het importeren van de FIM-servicedatabase, Britta Simon en het object ExpectedRuleEntry, dat koppelingen Julia op de regel voor uitgaande synchronisatie van AD-gebruiker gefaseerd binnengebracht in het Fabrikam FIMMA-connectorgebied. Bij het controleren van Julia in het connectorgebied controleert, naast de kenmerkwaarden die u hebt geconfigureerd in de FIM-Portal, vindt u ook een geldige verwijzing naar het object verwachte-Regelvermelding. In de volgende schermopname ziet u hier een voorbeeld van.
+Na het importeren uit de data base van de FIM-service, worden Julia Simon en het ExpectedRuleEntry-object waarmee Julia aan de regel voor uitgaande synchronisatie van AD-gebruiker wordt gekoppeld, klaargezet in de fabrikam FIMMA-connector ruimte. Wanneer u de eigenschappen van de Julia in de connector ruimte bekijkt, naast de kenmerk waarden die u hebt geconfigureerd in de FIM-Portal, vindt u ook een geldige verwijzing naar het verwachte object voor regel invoer. In de volgende schermopname ziet u hier een voorbeeld van.
 
 ![Eigenschappen van het object van het connectorgebied](media/how-provision-users-adds/image025.jpg)
 
@@ -493,7 +493,7 @@ Voer het uitvoerprofiel uit volgens de instructies in deze sectie.
 > [!IMPORTANT]
 > Elk uitvoerprofiel moet zonder fouten worden voltooid.
 
-### <a name="step-14-verify-the-provisioned-user-in-ad-ds"></a>Stap 14: Controleer of de ingerichte gebruiker in AD DS
+### <a name="step-14-verify-the-provisioned-user-in-ad-ds"></a>Stap 14: de ingerichte gebruiker in AD DS inrichten
 
 Open de OE FIMObjects om te controleren dat de voorbeeldgebruiker is ingericht voor AD DS. Julia Steen moet zich in de OE FIMObjects bevinden.
 
@@ -515,7 +515,7 @@ De accountnaam, het domein en de objectSID-kenmerken zijn vereist als u een gebr
 <a name="see-also"></a>Zie ook
 =========
 
-<a name="other-resources"></a>Andere resources
+<a name="other-resources"></a>Andere bronnen
 ---------------
 
 [Using FIM to Enable or Disable Accounts in Active Directory](http://go.microsoft.com/FWLink/p/?LinkId=189670) (FIM gebruiken voor het in- of uitschakelen van accounts in Active Directory)
@@ -524,7 +524,7 @@ De accountnaam, het domein en de objectSID-kenmerken zijn vereist als u een gebr
 
 [How Can I Manage My FIM MA Account](http://go.microsoft.com/FWLink/p/?LinkId=189672) (Mijn FIM MA-account beheren)
 
-[Detecteren van niet-bindende Accounts – Part 1: Visie ontwikkelen voor](http://go.microsoft.com/FWLink/p/?LinkId=189673)
+[Detecting Nonauthoritative Accounts – Part 1: Envisioning](http://go.microsoft.com/FWLink/p/?LinkId=189673) (Niet-gezaghebbende accounts detecteren. Deel 1: planning)
 
 [The Poor Man’s Version of a Connector Detection Mechanism](http://go.microsoft.com/FWLink/p/?LinkId=189674) (De uitgeklede versie van een mechanisme voor het detecteren van connectors)
 

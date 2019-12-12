@@ -12,11 +12,11 @@ ms.assetid: c6e3cd02-1e32-4194-a8ed-3a0b3d022a43
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: 8e7b7217714f0ef74c1d959eb51dac07018d6e77
-ms.sourcegitcommit: 44a2293ff17c50381a59053303311d7db8b25249
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50379720"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "64517844"
 ---
 # <a name="tier-model-for-partitioning-administrative-privileges"></a>Laagmodel voor het partitioneren van beheerdersbevoegdheden
 
@@ -24,7 +24,7 @@ In dit artikel wordt een beveiligingsmodel beschreven dat is bedoeld om u te bes
 
 ## <a name="elevation-of-privilege-in-active-directory-forests"></a>Onrechtmatige uitbreiding van toegangsrechten in Active Directory-forests
 
-Gebruikers, services of toepassingsaccounts waaraan permanente beheerdersbevoegdheden voor forests van Windows Server Active Directory (AD) worden verleend, vormen een aanzienlijke risico voor de missie en zakelijke activiteiten van de organisatie. Deze accounts zijn vaak gericht door aanvallers omdat als ze zijn aangetast, de aanvaller beschikt over rechten om verbinding te maken met andere servers of toepassingen in het domein.
+Gebruikers, services of toepassingsaccounts waaraan permanente beheerdersbevoegdheden voor forests van Windows Server Active Directory (AD) worden verleend, vormen een aanzienlijke risico voor de missie en zakelijke activiteiten van de organisatie. Deze accounts zijn vaak gericht op aanvallers, omdat de aanvaller rechten heeft om verbinding te maken met andere servers of toepassingen in het domein.
 
 Met het laagmodel worden scheiding ingesteld tussen beheerders op basis van de resources die ze beheren. Beheerders die werkstations van gebruikers beheren, worden afgescheiden van beheerders die toepassingen of bedrijfsentiteiten beheren. Meer informatie over dit model vindt u in het [referentiemateriaal over het beveiligen van bevoegde toegang](http://aka.ms/tiermodel).
 
@@ -60,4 +60,4 @@ Aanmeldingsbeperkingen kunnen worden afgedwongen met:
 ## <a name="next-steps"></a>Volgende stappen
 
 - In het volgende artikel [Planning a bastion environment](planning-bastion-environment.md) (Een bastionomgeving plannen) wordt beschreven hoe u een toegewezen beheerforest voor Microsoft Identity Manager kunt toevoegen om beheerdersaccounts in te stellen.
-- [Priviledged Access workstations](https://docs.microsoft.com/windows-server/identity/securing-privileged-access/privileged-access-workstations) vormen een speciaal besturingssysteem voor gevoelige taken die is beschermd tegen aanvallen via Internet en dreigingsvectoren.
+- [Priviledged-toegangs werkstations](https://docs.microsoft.com/windows-server/identity/securing-privileged-access/privileged-access-workstations) bieden een speciaal besturings systeem voor gevoelige taken die worden beschermd tegen aanvallen via internet en bedreigings vectoren.

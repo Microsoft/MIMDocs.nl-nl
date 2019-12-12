@@ -11,12 +11,14 @@ ms.prod: microsoft-identity-manager
 ms.assetid: cf3796f7-bc68-4cf7-b887-c5b14e855297
 ms.reviewer: mwahl
 ms.suite: ems
+experimental: true
+experiment_id: kgremban_images
 ms.openlocfilehash: 3855842f0339e2611c75761484de9c059eec6fa0
-ms.sourcegitcommit: 44a2293ff17c50381a59053303311d7db8b25249
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50380031"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "64518794"
 ---
 # <a name="privileged-access-management-for-active-directory-domain-services"></a>Privileged Access Management voor Active Directory Domain Services
 
@@ -32,23 +34,23 @@ Met Privileged Access Management kunnen twee doelen worden behaald:
 
 ## <a name="what-problems-does-pam-help-solve"></a>Welke problemen kunnen worden opgelost met PAM?
 
-Een echt aandachtspunt voor moderne ondernemingen is toegang tot resources in een Active Directory-omgeving. Problemen zijn vooral zorgwekkend zijn:
+Een echt aandachtspunt voor moderne ondernemingen is toegang tot resources in een Active Directory-omgeving. Bijzonder zorgwekkend zijn:
 
-- Door beveiligingslekken.
-- Niet-geautoriseerde bevoegdheden escalaties.
+- Kwetsbaar.
+- Escalatie van bevoegdheden voor onbevoegden.
 - [Pass-the-hash](https://technet.microsoft.com/dn785092.aspx).
 - Pass-the-ticket.
 - spear phishing.
-- Kerberos-compromissen.
+- Kerberos-inbreuken.
 - Andere aanvallen.
 
 Het is tegenwoordig te gemakkelijk voor aanvallers om de accountreferenties van Domeinbeheerders te achterhalen en het is te moeilijk om deze aanvallen achteraf te detecteren. Het doel van PAM is om de mogelijkheden voor kwaadwillende gebruikers om toegang te krijgen te verminderen terwijl het beheer en het bewustzijn van de omgeving voor u worden vergroot.
 
-Dankzij PAM is het moeilijker voor kwaadwillende personen om door te dringen tot een netwerk en bevoorrechte accounttoegang te verkrijgen. Er wordt met PAM beveiliging toegevoegd aan bevoorrechte groepen waarmee de toegang wordt bepaald op verschillende computers die lid zijn van een domein en de toepassingen op deze computers. Ook wordt meer controle, meer zichtbaarheid en specifieke besturingselementen toegevoegd. Hierdoor kunnen organisaties om te zien wie de bevoorrechte beheerders zijn en wat ze doen. Dankzij PAM hebben organisaties meer inzicht in hoe beheerdersaccounts worden gebruikt in de omgeving.
+Dankzij PAM is het moeilijker voor kwaadwillende personen om door te dringen tot een netwerk en bevoorrechte accounttoegang te verkrijgen. Er wordt met PAM beveiliging toegevoegd aan bevoorrechte groepen waarmee de toegang wordt bepaald op verschillende computers die lid zijn van een domein en de toepassingen op deze computers. U kunt hiermee ook meer controle, meer zicht baarheid en meer nauw keurige besturings elementen toevoegen. Hierdoor kunnen organisaties zien wie hun bevoegde beheerders zijn en wat ze doen. Dankzij PAM hebben organisaties meer inzicht in hoe beheerdersaccounts worden gebruikt in de omgeving.
 
-## <a name="setting-up-pam"></a>Instellen van PAM
+## <a name="setting-up-pam"></a>PAM instellen
 
-PAM borduurt voort op het principe van Just-In-Time-beheer; [Just Enough Administration (JEA)](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2014/DCIM-B362). JEA is een Windows PowerShell-toolkit waarmee een reeks opdrachten voor het uitvoeren van bevoorrechte activiteiten definieert. Het is een eindpunt waar beheerders autorisatie kunnen verkrijgen voor opdrachten uitvoeren. In JEA besluit een beheerder dat gebruikers met een bepaalde bevoegdheid een bepaalde taak kunnen uitvoeren. Elke keer dat een in aanmerking komende gebruiker deze taak moet uitvoeren, wordt deze machtiging ingeschakeld. De machtigingen verlopen na een opgegeven periode, zodat een kwaadwillende gebruiker de toegang niet kan stelen.
+PAM borduurt voort op het principe van Just-In-Time-beheer; [Just Enough Administration (JEA)](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2014/DCIM-B362). JEA is een Windows Power shell-Toolkit die een reeks opdrachten definieert voor het uitvoeren van geprivilegieerde activiteiten. Het is een eind punt waar beheerders autorisatie kunnen krijgen om opdrachten uit te voeren. In JEA besluit een beheerder dat gebruikers met een bepaalde bevoegdheid een bepaalde taak kunnen uitvoeren. Elke keer dat een in aanmerking komende gebruiker deze taak moet uitvoeren, wordt deze machtiging ingeschakeld. De machtigingen verlopen na een opgegeven periode, zodat een kwaadwillende gebruiker de toegang niet kan stelen.
 
 De installatie en het gebruik van PAM bestaat uit vier stappen.
 
@@ -108,5 +110,5 @@ Deze werkstroom is specifiek bedoeld voor deze beheerdersaccounts. Beheerders (o
 
 ## <a name="next-steps"></a>Volgende stappen
 
-- [Beperkende Pass-the-Hash (PtH) aanvallen en andere Referentiediefstal, versie 1 en 2](https://www.microsoft.com/download/details.aspx?id=36036)
+- [Pass-the-hash-aanvallen (PtH) en andere referentie diefstal, versie 1 en 2 beperken](https://www.microsoft.com/download/details.aspx?id=36036)
 - [Privileged Access Management-cmdlets](https://docs.microsoft.com/powershell/identitymanager/mimpam/vlatest/mimpam)

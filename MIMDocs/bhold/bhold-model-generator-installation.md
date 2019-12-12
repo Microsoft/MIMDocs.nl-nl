@@ -1,6 +1,6 @@
 ---
-title: Installatie van BHOLD-model generator | Microsoft Docs
-description: BHOLD-model kunt u gegevens van de structuur uit verschillende bronnen
+title: Installatie van BHOLD model generator | Microsoft Docs
+description: Met BHOLD-model kunt u gegevens uit verschillende bronnen structureren
 keywords: ''
 author: billmath
 ms.author: billmath
@@ -10,71 +10,71 @@ ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
 ms.openlocfilehash: 3d2510d6ea604dd88e56436812ed8bc975bc5c2b
-ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49358519"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "64516735"
 ---
-# <a name="bhold-model-generator-installation"></a>Generator voor installatie van BHOLD-Model
+# <a name="bhold-model-generator-installation"></a>Installatie van BHOLD-model generator
 
-Met behulp van de module Generator van BHOLD-Model, kunt u gegevens uit gezaghebbende bronnen met gebruikers- en organisatiegegevens, samen met toegangsbeheerlijsten (ACL's) in een model dat kan worden gebruikt bij het beheren van BHOLD structureren.
+Met behulp van de module BHOLD model generator kunt u gegevens van gezaghebbende bronnen die gebruikers-en organisatie gegevens bevatten samen met toegangs beheer lijsten (Acl's), structureren in een model dat kan worden gebruikt bij het beheren van BHOLD.
 
-## <a name="bhold-model-generator-installation-requirements"></a>Vereisten voor installatie van BHOLD-Model Generator 
+## <a name="bhold-model-generator-installation-requirements"></a>Installatie vereisten voor BHOLD model generator 
 
-Voordat u de Generator voor BHOLD-Model-module installeert, moet u de volgende installeren:
+Voordat u de BHOLD-model Generator module installeert, moet u het volgende installeren:
 
-1. BHOLD-Core-module op de server waarop u van plan bent om de Generator voor BHOLD-Model-module te installeren. Zie voor meer informatie over het installeren van de module BHOLD Core [basisinstallatie van BHOLD](https://technet.microsoft.com/library/jj134095(v=ws.10).aspx).
+1. BHOLD core-module op de server waarop u de BHOLD model Generator-module wilt installeren. Zie [BHOLD Core-installatie](https://technet.microsoft.com/library/jj134095(v=ws.10).aspx)voor meer informatie over het installeren van de BHOLD core-module.
 
-2. De Microsoft OLE DB-Provider voor Microsoft Jet moet worden geïnstalleerd. Zie voor meer informatie [in dit artikel](http://support.microsoft.com/kb/271908).
+2. De micro soft OLE DB-provider voor micro soft Jet moet zijn geïnstalleerd. Raadpleeg [dit artikel](http://support.microsoft.com/kb/271908)voor meer informatie.
 
 > [!WARNING]
-> Moet de Generator voor BHOLD-Model niet installeren in uw productienetwerk. Generator voor BHOLD-Model is bedoeld om offline in een faseringsomgeving worden gebruikt voor het maken van een genormaliseerde rol-model dat u in het model van uw enterprise-functie importeren kunt. Generator voor BHOLD-Model uitgevoerd in uw productienetwerk kan leiden tot verlies van het model van uw bestaande functie.
+> Installeer BHOLD model generator niet in uw productie netwerk. BHOLD model Generator is bedoeld om offline te worden gebruikt in een faserings omgeving om een genormaliseerd rolcentrum te maken dat u in uw bedrijfsfunctie model kunt importeren. Het uitvoeren van BHOLD-model generator in uw productie netwerk kan leiden tot verlies van uw bestaande rollen model.
 
 ## <a name="before-you-begin"></a>Voordat u begint
 
-Voordat u de Generator voor BHOLD-Model-module installeert, moet u worden voorbereid voor de informatie die de installatiewizard van BHOLD-Model Generator is vereist om de installatie te voltooien. Het werkblad voor het volgende kunt u gegevens vastleggen, zodat u klaar om aan te geven wanneer dat nodig is. U moet ook om ervoor te zorgen
+Voordat u de BHOLD-model Generator module installeert, moet u voor bereid zijn om de informatie op te geven die door de installatie wizard van de BHOLD-model generator moet worden uitgevoerd om de installatie te volt ooien. Het volgende werk blad helpt u bij het vastleggen van die informatie, zodat u deze kunt opgeven wanneer dat nodig is. U moet er ook voor zorgen dat
 
-Microsoft Access-Database-Engine 2010 Redistributable installeren
+Micro soft Access-data base-engine 2010 Redistributable
 
- 
+ 
 
-*Van \<*<http://daipvstf:8080/tfs/ActiveDirectory/IAM/_workitems>*\>*
+*Van \<* <http://daipvstf:8080/tfs/ActiveDirectory/IAM/_workitems> *\>*
 
- 
+ 
 
 <https://www.microsoft.com/en-us/download/confirmation.aspx?id=13255>
 
-**Accountinstellingen**
+**Account instellingen**
 
 | **Item**                                    | **Beschrijving**                                                                                                                                                                                                           | **Waarde**                                                                                                                                                                                                                                                                                                            |
 |---------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Security Provider worden gebruikt op de computer aan het domein /** | Als er hebt geselecteerd, geeft de Active Directory Domain Services-beveiliging wordt toegangsbeheer voor BHOLD-Core.                                                                                                                | Schakel het selectievakje in. **Belangrijk:** mislukt de installatie als dit selectievakje niet is geselecteerd.                                                                                                                                                                                                                   |
-| **Domein**                                  | Hiermee geeft u het domein met het serviceaccount dat u hebt gemaakt bij de installatie van BHOLD-Core. Zie voor meer informatie, [basisinstallatie van BHOLD](https://technet.microsoft.com/library/jj134095(v=ws.10).aspx). | Naam van het domein wordt automatisch opgegeven door de wizard. De naam alleen wijzigen als dit onjuist is. **Belangrijk:** de domeinnaam opgeven met behulp van de naam van de NetBIOS-(kort), niet de volledig gekwalificeerde domeinnaam (FQDN). Bijvoorbeeld, als de FQDN-naam van het domein fabrikam.com, de domeinnaam opgeven als FABRIKAM. |
-| **Gebruiker**                                    | Hiermee geeft u de naam van het gebruikersaccount van BHOLD-Core-service.                                                                                                                                                          | Schrijf hier de accountnaam van de gebruiker:                                                                                                                                                                                                                                                                                    |
-| **Wachtwoord**                                | Hiermee geeft u het wachtwoord van het serviceaccount van de gebruiker.                                                                                                                                                                       | Schrijf hier het wachtwoord: **belangrijk:** Zorg ervoor dat dit wachtwoord in een verborgen, een veilige locatie.                                                                                                                                                                                                                  |
+| **Beveiligings provider op domein/computer gebruiken** | Hiermee geeft u op dat Active Directory Domain Services beveiliging de toegang tot BHOLD core beheert.                                                                                                                | Schakel het selectievakje in. **Belang rijk:** Als dit selectie vakje niet is ingeschakeld, mislukt de installatie.                                                                                                                                                                                                                   |
+| **Domein**                                  | Hiermee geeft u het domein op dat het service account bevat dat u hebt gemaakt bij het installeren van de BHOLD-kern. Zie [BHOLD Core Installation](https://technet.microsoft.com/library/jj134095(v=ws.10).aspx)(Engelstalig) voor meer informatie. | De domein naam wordt automatisch geleverd door de wizard. Wijzig de naam alleen als deze onjuist is. **Belang rijk:** Geef de domein naam op met behulp van de NetBIOS (korte) naam, niet de Fully Qualified Domain Name (FQDN). Als de FQDN van het domein bijvoorbeeld fabrikam.com is, geeft u de domein naam op als FABRIKAM. |
+| **Gebruiker**                                    | Hiermee geeft u de aanmeldings naam van het gebruikers account van de BHOLD-basis service.                                                                                                                                                          | Schrijf hier de naam van het gebruikers account:                                                                                                                                                                                                                                                                                    |
+| **Wachtwoord**                                | Hiermee geeft u het wacht woord van het Service gebruikers account.                                                                                                                                                                       | Schrijf hier het wacht woord: **belang rijk:** zorg ervoor dat u dit wacht woord op een verborgen, veilige locatie blijft.                                                                                                                                                                                                                  |
 
-**Back-database-instellingen**
+**Instellingen voor back-updatabase**
 
-| Item                                        | Beschrijving                                                                                                                                                                                                                                                                                                                                                                                                                  | Waarde                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| Item                                        | Description                                                                                                                                                                                                                                                                                                                                                                                                                  | Value                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 |---------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Geïntegreerde beveiliging gebruiken**                 | Hiermee geeft u op dat Windows-verificatie wordt gebruikt voor toegang tot de database.                                                                                                                                                                                                                                                                                                                                                        | Selecteer het selectievakje in als Windows-verificatie wordt gebruikt om verbinding maken met de SQL-Server. Schakel dit selectievakje uit als SQL Server-verificatie wordt gebruikt. De database moet zijn gemaakt voordat het uitvoeren van BHOLD Core Setup als SQL Server-verificatie wordt gebruikt. **Opmerking:** als Windows-verificatie wordt gebruikt, u moet zijn aangemeld met een account met de serverrol sysadmin op de database-server. **Belangrijk:** Gebruik SQL Server-verificatie alleen in een testomgeving. Microsoft raadt het gebruik van Windows-verificatie in productie-implementaties. |
-| **Databasegebruiker** en **databasewachtwoord** | Hiermee geeft u de gebruikersnaam en wachtwoord van een gebruiker met de serverrol sysadmin op de databaseserver. Deze waarden worden geleverd alleen wanneer SQL Server-verificatie wordt gebruikt.                                                                                                                                                                                                                                                  | Schrijf hier de gebruikersnaam van de SQL Server: SQL Server-gebruikerswachtwoord hier schrijven: </br></br> **Belangrijk:** Zorg ervoor dat dit wachtwoord in een verborgen, een veilige locatie.                                                                                                                                                                                                                                                                                                                                                                                                           |
-| **Databaseserver** en **databasenaam**   | Hiermee geeft u de NetBIOS-naam van de database-server en de naam van de back-up die BHOLD Model Generator door Setup wordt gemaakt. Als u niet het standaardexemplaar van de database-server gebruikt, geeft u de database-server-exemplaar in de notatie  *\<server\>*\\*\<exemplaar\>* .  Microsoft raadt aan dat u de back-database met behulp van de naam van de Core BHOLD-database gevolgd door de naam \_back-up, bijvoorbeeld B1_BACKUP. | De server (of server en exemplaar) naam hier schrijven: </br> Schrijf hier de naam van de database:
+| **Geïntegreerde beveiliging gebruiken**                 | Hiermee geeft u op dat Windows-verificatie wordt gebruikt voor toegang tot de data base.                                                                                                                                                                                                                                                                                                                                                        | Schakel het selectie vakje in als Windows-verificatie wordt gebruikt om verbinding te maken met de SQL Server. Schakel het selectie vakje uit als SQL Server verificatie wordt gebruikt. De data base moet zijn gemaakt voordat u de BHOLD-installatie uitvoert als SQL Server verificatie wordt gebruikt. **Opmerking:** Als Windows-verificatie wordt gebruikt, moet u zijn aangemeld met een account dat beschikt over de serverrol sysadmin op de database server. **Belang rijk:** Gebruik SQL Server verificatie alleen in test omgevingen. Micro soft raadt u ten zeerste aan om Windows-verificatie te gebruiken in productie-implementaties. |
+| **Database gebruiker** en **database wachtwoord** | Hiermee geeft u de gebruikers naam en het wacht woord van een gebruiker met de serverrol sysadmin op de database server. Deze waarden worden alleen opgegeven als SQL Server verificatie wordt gebruikt.                                                                                                                                                                                                                                                  | Schrijf hier de SQL Server gebruikers naam: Schrijf hier het SQL Server gebruikers wachtwoord: </br></br> **Belang rijk:** Zorg ervoor dat u dit wacht woord op een verborgen, veilige locatie blijft.                                                                                                                                                                                                                                                                                                                                                                                                           |
+| **Database server** -en **database naam**   | Hiermee geeft u de NetBIOS-naam van de database server en de naam van de back-updatabase op die door de installatie van de BHOLD-model generator wordt gemaakt. Als u geen gebruik maakt van het standaard exemplaar van de database server, geeft u het Database Server exemplaar op in het formulier *\<server\>* \\ *\<-exemplaar\>* .  Micro soft raadt u aan de back-updatabase te benoemen met de naam van de BHOLD Core-Data Base, gevolgd door \_back-up, bijvoorbeeld B1_BACKUP. | Schrijf hier de naam van de server (of de server en het exemplaar): </br> Schrijf de naam van de data base hier:
 
-## <a name="bhold-model-generator-setup"></a>Installatie van BHOLD-Model Generator
+## <a name="bhold-model-generator-setup"></a>Setup van BHOLD-model generator
 
-Als u wilt de Generator voor BHOLD-Model-module installeert, meld u aan als een lid van de groep Domeinadministrators, het volgende bestand downloaden en als administrator uitvoeren op de server die u van plan bent de BHOLD-Core-module installeren op:
+Als u de module BHOLD-model generator wilt installeren, meldt u zich aan als lid van de groep domein Administrators, downloadt u het volgende bestand en voert u het uit als beheerder op de server waarop u de BHOLD-kern module wilt installeren:
 
-- BholdModelGenerator  *\<versie\>*\_Release.msi
+- BholdModelGenerator *\<versie\>* \_release. msi
 
-Vervang *\<versie\>* met het versienummer van de release van BHOLD-Model Generator die u installeert.
+Vervang *\<versie\>* door het versie nummer van de release van de BHOLD-model generator die u installeert.
 
-Als u wilt het programmabestand uitvoeren als beheerder, met de rechtermuisknop op het bestand en klik vervolgens op **als administrator uitvoeren**.
+Als u het programma bestand als beheerder wilt uitvoeren, klikt u met de rechter muisknop op het bestand en klikt u vervolgens op **als administrator uitvoeren**.
 
 ## <a name="next-steps"></a>Volgende stappen
 
-- Voor informatie over het maken van de invoerbestanden [technische naslaginformatie voor Microsoft BHOLD-Suite](https://technet.microsoft.com/library/jj134935(v=ws.10).aspx)
-- [Handleiding voor BHOLD-installatie](bhold-installation-guide.md)
+- Voor informatie over het maken van invoer bestanden met [technische documentatie over micro soft BHOLD Suite](https://technet.microsoft.com/library/jj134935(v=ws.10).aspx)
+- [Installatie handleiding voor BHOLD](bhold-installation-guide.md)
 - [BHOLD-referentie voor ontwikkelaars](../reference/mim2016-bhold-developer-reference.md)
 - [Versiegeschiedenis van BHOLD](../reference/version-bhold-history.md)

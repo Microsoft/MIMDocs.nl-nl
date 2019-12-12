@@ -11,15 +11,15 @@ ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 5134a112-f73f-41d0-a5a5-a89f285e1f73
 ms.openlocfilehash: 72dd1d3cf34e28567fa672b747a04347b150797e
-ms.sourcegitcommit: f58926a9e681131596a25b66418af410a028ad2c
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/09/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "67690785"
 ---
 # <a name="using-azure-mfa-for-activation"></a>Azure MFA gebruiken voor activering
 > [!IMPORTANT]
-> Vanwege de aankondiging van de afschaffing van Azure multi-factor Authentication Software Development Kit. De Azure MFA-SDK wordt ondersteund voor bestaande klanten tot de vervaldatum van 14 November 2018. Nieuwe klanten en huidige klanten zich niet kunnen downloaden van de SDK niet meer via de klassieke Azure portal. Als u wilt downloaden dat u moet contact opnemen met ondersteuning voor Azure-klant voor het ontvangen van de gegenereerde Servicereferenties voor de MFA-pakket. <br> Het Microsoft-ontwikkelteam werkt op wijzigingen in MFA door te integreren met MFA Server SDK.  Dit is opgenomen in een toekomstige hotfix Zie [versiegeschiedenis](../reference/version-history.md) aankondigingen. 
+> Vanwege de aankondiging van de afschaffing van Azure Multi-Factor Authentication Software Development Kit. De Azure MFA SDK wordt ondersteund voor bestaande klanten tot de datum van beëindiging van 14 november 2018. Nieuwe klanten en huidige klanten kunnen SDK niet meer downloaden via de klassieke Azure-Portal. Als u wilt downloaden, moet u contact op met de klanten service van Azure om uw gegenereerde pakket met MFA-service referenties te ontvangen. <br> Het micro soft-ontwikkel team werkt met wijzigingen aan MFA door te integreren met de MFA-Server SDK.  Dit wordt opgenomen in een aanstaande hotfix Raadpleeg de [versie geschiedenis](../reference/version-history.md) voor aankondigingen. 
 
 
 Wanneer u een PAM-rol configureert, kunt u hoe gebruikers die een aanvragen voor activering van de rol verzenden, moeten worden geautoriseerd. Met de PAM-autorisatieactiviteit worden de volgende keuzen geïmplementeerd:
@@ -29,11 +29,11 @@ Wanneer u een PAM-rol configureert, kunt u hoe gebruikers die een aanvragen voor
 
 Als geen van beide opties is ingeschakeld, worden kandidaatgebruikers automatisch geactiveerd voor de betreffende rol.
 
-Microsoft Azure Multi-Factor Authentication (MFA) is een verificatieservice waarbij gebruikers zich bij het aanmelden moeten verifiëren via een mobiele app, telefonische oproep of een tekstbericht. De service is beschikbaar voor gebruik met Microsoft Azure Active Directory en kan worden ingezet als service voor bedrijfstoepassingen in de cloud en on-premises. Voor het PAM-scenario biedt Azure MFA een aanvullende verificatiemethode. Azure MFA kan worden gebruikt voor autorisatie, ongeacht hoe een gebruiker wordt geverifieerd op het Windows PRIV-domein.
+Microsoft Azure Multi-Factor Authentication (MFA) is een verificatieservice waarbij gebruikers zich bij het aanmelden moeten verifiëren via een mobiele app, telefonische oproep of een tekstbericht. De service is beschikbaar voor gebruik met Microsoft Azure Active Directory en kan worden ingezet als service voor bedrijfstoepassingen in de cloud en on-premises. Voor het PAM-scenario biedt Azure MFA een extra verificatie methode. Azure MFA kan worden gebruikt voor autorisatie, ongeacht hoe een gebruiker wordt geverifieerd op het Windows PRIV-domein.
 
 ## <a name="prerequisites"></a>Vereisten
 
-Als u wilt gebruiken Azure MFA met MIM, hebt u het volgende nodig:
+Als u Azure MFA met MIM wilt gebruiken, hebt u het volgende nodig:
 
 - Internettoegang voor elke MIM-service waarmee PAM wordt geleverd voor de communicatie met Azure MFA
 - Een Azure-abonnement
@@ -42,7 +42,7 @@ Als u wilt gebruiken Azure MFA met MIM, hebt u het volgende nodig:
 
 ## <a name="creating-an-azure-mfa-provider"></a>Een Azure MFA-provider maken
 
-In deze sectie maakt instellen u de Azure MFA-provider in Microsoft Azure Active Directory.  Als u Azure MFA al gebruikt, als zelfstandige functie of geconfigureerd met Azure Active Directory Premium, gaat u door naar de volgende sectie.
+In deze sectie stelt u de Azure MFA-provider in Microsoft Azure Active Directory.  Als u Azure MFA al gebruikt, hetzij zelfstandig als geconfigureerd met Azure Active Directory Premium, gaat u verder met de volgende sectie.
 
 1.  Open een webbrowser en maak verbinding met de [klassieke Azure Portal](https://manage.windowsazure.com) als een Azure-abonnementsbeheerder.
 
@@ -81,11 +81,11 @@ Vervolgens gaat u een bestand genereren met de verificatiegegevens die nodig zij
 
 2.  Maak een nieuwe map in de map waar de MIM-service is geïnstalleerd, bijvoorbeeld ```C:\Program Files\Microsoft Forefront Identity Manager\2010\Service\MfaCerts```.
 
-3.  Navigeer in Windows Verkenner naar de ```pf\certs``` map van het ZIP-bestand in de vorige sectie hebt gedownload. Kopieer het bestand ```cert\_key.p12``` naar de nieuwe map.
+3.  Navigeer in Windows Verkenner naar de map ```pf\certs``` van het ZIP-bestand dat u in de vorige sectie hebt gedownload. Kopieer het bestand ```cert\_key.p12``` naar de nieuwe map.
 
-4.  Navigeer in Windows Verkenner naar de ```pf``` map van het ZIP-bestand en open het bestand ```pf\_auth.cs``` in een teksteditor zoals Wordpad.
+4.  Navigeer in Windows Verkenner naar de map ```pf``` van de ZIP en open het bestand ```pf\_auth.cs``` in een tekst editor zoals WordPad.
 
-5. Zoek de volgende drie parameters: ```LICENSE\_KEY```, ```GROUP\_KEY```, ```CERT\_PASSWORD```.
+5. Deze drie para meters zoeken: ```LICENSE\_KEY```, ```GROUP\_KEY``````CERT\_PASSWORD```.
 
 ![Waarden kopiëren uit het bestand pf\_auth.cs - schermafbeelding](media/PAM-Azure-MFA-Activation-Image-2.png)
 
@@ -118,7 +118,7 @@ Set-PAMUser (Get-PAMUser -SourceDisplayName Jen) -SourcePhoneNumber 12135551212
 
 ## <a name="configure-pam-roles-for-azure-mfa"></a>PAM-rollen configureren voor Azure MFA
 
-Nadat de telefoonnummers van alle kandidaatgebruikers voor een PAM-rol zijn opgeslagen in de database van de MIM-service, kan de rol worden geconfigureerd voor het vereisen van Azure MFA. Hiervoor kunt u de opdracht `New-PAMRole` of `Set-PAMRole` gebruiken. Bijvoorbeeld:
+Nadat de telefoonnummers van alle kandidaatgebruikers voor een PAM-rol zijn opgeslagen in de database van de MIM-service, kan de rol worden geconfigureerd voor het vereisen van Azure MFA. Hiervoor kunt u de opdracht `New-PAMRole` of `Set-PAMRole` gebruiken. Zo vereisen
 
 ```PowerShell
 Set-PAMRole (Get-PAMRole -DisplayName "R") -MFAEnabled 1
@@ -126,11 +126,11 @@ Set-PAMRole (Get-PAMRole -DisplayName "R") -MFAEnabled 1
 
 U kunt Azure MFA uitschakelen voor een rol door de parameter -MFAEnabled 0 op te geven in de opdracht `Set-PAMRole`.
 
-## <a name="troubleshooting"></a>Problemen oplossen
+## <a name="troubleshooting"></a>Probleemoplossing
 
 De volgende gebeurtenissen vindt u in het gebeurtenislogboek voor Privileged Access Management:
 
-| Id  | Severity | Gegenereerd door | Description |
+| ID  | Ernst | Gegenereerd door | Description |
 |-----|----------|--------------|-------------|
 | 101 | Fout       | MIM-service            | De gebruiker heeft Azure MFA niet voltooid (heeft bijvoorbeeld de telefoonoproep niet beantwoord) |
 | 103 | Informatie | MIM-service            | De gebruiker heeft Azure MFA voltooid tijdens de activering                       |
@@ -152,5 +152,5 @@ U kunt ook een rapport van Azure MFA weergeven of downloaden voor meer informati
 
 ## <a name="next-steps"></a>Volgende stappen
 
-- [Wat is Azure multi-factor Authentication](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication)
+- [Wat is Azure Multi-Factor Authentication](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication)
 - [Maak vandaag nog uw gratis Azure-account](https://azure.microsoft.com/free/)

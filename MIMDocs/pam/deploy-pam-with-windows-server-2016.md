@@ -10,16 +10,16 @@ ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
 ms.openlocfilehash: 347eda5872792872a9bb30357c45835303f92e01
-ms.sourcegitcommit: 44a2293ff17c50381a59053303311d7db8b25249
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50379747"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "64518525"
 ---
 # <a name="deploy-mim-pam-with-windows-server-2016"></a>MIM PAM implementeren met Windows Server 2016
 
 
-Met dit scenario kunt u met MIM 2016 SP1 functies van Windows Server 2016 gebruiken als domeincontroller voor het PRIV-forest.  Als dit scenario is geconfigureerd, wordt voor een Kerberos-ticket van een gebruiker een tijdslimiet ingesteld voor de resterende tijd van de activeringen van de rol. 
+Met dit scenario kunt u met MIM 2016 SP1 functies van Windows Server 2016 gebruiken als domeincontroller voor het PRIV-forest.  Wanneer dit scenario is geconfigureerd, wordt het Kerberos-ticket van een gebruiker beperkt tot de resterende tijd van de activeringen van hun rollen. 
 
 > [!Note]
 > Eerdere technische preview-versies van Windows Server 2016 voor Technical Preview 5 kunnen niet met deze MIM-versie worden gebruikt.

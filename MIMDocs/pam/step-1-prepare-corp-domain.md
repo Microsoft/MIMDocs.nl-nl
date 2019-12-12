@@ -12,11 +12,11 @@ ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: dda6a05337e9a9778135fc7d833a38369540b3e0
-ms.sourcegitcommit: 44a2293ff17c50381a59053303311d7db8b25249
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50379987"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "64518188"
 ---
 # <a name="step-1---prepare-the-host-and-the-corp-domain"></a>Stap 1: de host en het domein CORP voorbereiden
 
@@ -35,7 +35,7 @@ In dit gedeelte wordt beschreven hoe u een domeincontroller voor een CORP-domein
 
 Installeer Windows Server 2012 R2 of Windows Server 2016 Technical Preview 4 of hoger op een virtuele machine om een computer te maken met de naam *CORPDC*.
 
-1. Kies **Windows Server 2012 R2 Standard (server met een GUI) x64** of **Windows Server 2016 Technical Preview (server met bureaubladbelevenis)**.
+1. Kies **Windows Server 2012 R2 Standard (server met een GUI) x64** of **Windows Server 2016 Technical Preview (server met bureaubladbelevenis)** .
 
 2. Lees en accepteer de licentievoorwaarden.
 
@@ -66,13 +66,13 @@ In dit gedeelte voegt u de functies Active Directory Domain Services (AD DS), DN
 
    Hierdoor wordt u gevraagd een beheerderswachtwoord voor de veilige modus op te geven. Houd er rekening mee dat waarschuwingsberichten voor DNS-delegatie- en cryptografie-instellingen worden weergegeven. Dit is normaal.
 
-3. Meld u af nadat het maken van het forest voltooid is. De server wordt automatisch opnieuw opgestart.
+3. Meld u af nadat het maken van het forest is voltooid. De server wordt automatisch opnieuw opgestart.
 
 4. Wanneer de server opnieuw is opgestart, meldt u zich aan bij CORPDC als beheerder van het domein. Dit is doorgaans de gebruiker CONTOSO\\-beheerder, die het wachtwoord heeft dat is gemaakt bij het installeren van Windows op CORPDC.
 
 ### <a name="create-a-group"></a>Een groep maken
 
-Een groep maken voor controledoeleinden door Active Directory, als deze groep nog niet bestaat. De naam van de groep moet de NetBIOS-domeinnaam zijn, gevolgd door drie dollartekens, bijvoorbeeld *CONTOSO$$$*.
+Een groep maken voor controledoeleinden door Active Directory, als deze groep nog niet bestaat. De naam van de groep moet de NetBIOS-domeinnaam zijn, gevolgd door drie dollartekens, bijvoorbeeld *CONTOSO$$$* .
 
 Meld u bij elk domein aan bij een domeincontroller als een domeinbeheerder en voer de volgende stappen uit:
 

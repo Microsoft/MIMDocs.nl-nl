@@ -12,11 +12,11 @@ ms.assetid: 7b689eff-3a10-4f51-97b2-cb1b4827b63c
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: 0473ea9e01a44aeb4acbebe01e6e6f989c8581d0
-ms.sourcegitcommit: 44a2293ff17c50381a59053303311d7db8b25249
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50379308"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "64517829"
 ---
 # <a name="step-6--transition-a-group-to-privileged-access-management"></a>Stap 6 – Een groep overzetten naar Privileged Access Management
 
@@ -65,10 +65,10 @@ De cmdlets moet eenmaal voor elke groep worden uitgevoerd en eenmaal voor elk li
 
     Ter referentie moeten voor de opdracht **New-PAMGroup** de volgende parameters worden gebruikt:
 
-     -   De domeinnaam van CORP-forest in NetBIOS-formulier  
-     -   De naam van de groep om van dat domein te kopiëren  
-     -   De CORP-forest Domain Controller NetBIOS-naam  
-     -   De referenties van de beheerder van een domein in het CORP-forest  
+     -   De domein naam van het CORP-forest in NetBIOS-vorm  
+     -   De naam van de groep die uit het domein moet worden gekopieerd  
+     -   De NetBIOS-naam van de domein controller van het CORP-forest  
+     -   De referenties van een domein beheerder-gebruiker in het CORP-forest  
 
 5. (Optioneel) Verwijder op CORPDC het account van Jen uit de groep **CONTOSO CorpAdmins** als het account nog aanwezig is in deze groep.  Dit is alleen nodig voor demonstratiedoeleinden om duidelijk te maken hoe machtigingen kunnen worden gekoppeld met accounts die zijn gemaakt in het PRIV-forest.
 
