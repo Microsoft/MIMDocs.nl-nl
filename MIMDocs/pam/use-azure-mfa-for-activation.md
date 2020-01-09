@@ -10,16 +10,18 @@ ms.date: 07/06/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 5134a112-f73f-41d0-a5a5-a89f285e1f73
-ms.openlocfilehash: 72dd1d3cf34e28567fa672b747a04347b150797e
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: 6c3a2d87037a818a9a8784b0d4a7b86227fcaef4
+ms.sourcegitcommit: 28a20aaa1f08b428cc1ae0eae43ae47de4d9d22a
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "67690785"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684054"
 ---
 # <a name="using-azure-mfa-for-activation"></a>Azure MFA gebruiken voor activering
 > [!IMPORTANT]
-> Vanwege de aankondiging van de afschaffing van Azure Multi-Factor Authentication Software Development Kit. De Azure MFA SDK wordt ondersteund voor bestaande klanten tot de datum van beëindiging van 14 november 2018. Nieuwe klanten en huidige klanten kunnen SDK niet meer downloaden via de klassieke Azure-Portal. Als u wilt downloaden, moet u contact op met de klanten service van Azure om uw gegenereerde pakket met MFA-service referenties te ontvangen. <br> Het micro soft-ontwikkel team werkt met wijzigingen aan MFA door te integreren met de MFA-Server SDK.  Dit wordt opgenomen in een aanstaande hotfix Raadpleeg de [versie geschiedenis](../reference/version-history.md) voor aankondigingen. 
+> Vanwege de aankondiging van de afschaffing van Azure Multi-Factor Authentication Software Development Kit, wordt de Azure MFA SDK ondersteund voor bestaande klanten tot de datum van uittreding van 14 november 2018. Nieuwe klanten en huidige klanten kunnen Azure MFA SDK niet meer downloaden via de klassieke Azure-Portal. Zie voor meer informatie over het gebruik van Azure MFA server [Azure MFA server gebruiken in pam of SSPR](../working-with-mfaserver-for-mim.md).
+
+
 
 
 Wanneer u een PAM-rol configureert, kunt u hoe gebruikers die een aanvragen voor activering van de rol verzenden, moeten worden geautoriseerd. Met de PAM-autorisatieactiviteit worden de volgende keuzen geïmplementeerd:
@@ -54,7 +56,11 @@ In deze sectie stelt u de Azure MFA-provider in Microsoft Azure Active Directory
 
 ## <a name="downloading-the-azure-mfa-service-credentials"></a>De referenties voor de Azure MFA-service downloaden
 
-Vervolgens gaat u een bestand genereren met de verificatiegegevens die nodig zijn voor PAM om met Azure MFA verbinding te maken.
+> [!IMPORTANT]
+> De Azure MFA SDK is niet meer beschikbaar. Zie voor meer informatie over het gebruik van Azure MFA-server [Azure MFA server gebruiken in pam of SSPR](../working-with-mfaserver-for-mim.md) in plaats daarvan.
+
+
+Voorheen zou u een bestand genereren dat het verificatie materiaal voor PAM bevat om contact op te nemen met Azure MFA.
 
 1. Open een webbrowser en maak verbinding met de [klassieke Azure Portal](https://manage.windowsazure.com) als een Azure-abonnementsbeheerder.
 

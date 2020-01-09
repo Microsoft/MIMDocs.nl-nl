@@ -1,6 +1,6 @@
 ---
-title: Azure Multi-Factor Authentication-server SDK gebruiken om PAM-of SSPR-Scenario's te activeren | Microsoft Docs
-description: Stel Azure Multi-Factor Authentication-server SDK in als een tweede beveiligingslaag wanneer uw gebruikers rollen activeren in Privileged Access Management en self-service voor het opnieuw instellen van wacht woorden.
+title: Azure Multi-Factor Authentication-server gebruiken om PAM-of SSPR-Scenario's te activeren | Microsoft Docs
+description: Stel Azure Multi-Factor Authentication-server in als een tweede beveiligingslaag wanneer uw gebruikers rollen activeren in Privileged Access Management en self-service voor het opnieuw instellen van wacht woorden.
 keywords: ''
 author: billmath
 ms.author: billmath
@@ -9,20 +9,20 @@ ms.date: 10/29/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
-ms.openlocfilehash: 69b7f8f4b94f9f94b2aef6afd9573ad8173e148e
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: 39ebec3002f488077cfda28a5780b0c78c19f363
+ms.sourcegitcommit: 28a20aaa1f08b428cc1ae0eae43ae47de4d9d22a
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "64517725"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684088"
 ---
 # <a name="use-azure-multi-factor-authentication-server-to-activate-pam-or-sspr"></a>Azure Multi-Factor Authentication-server gebruiken om PAM-of SSPR te activeren
-In het volgende document wordt beschreven hoe u de Azure MFA-server instelt als een tweede beveiligingslaag wanneer uw gebruikers rollen activeren in bevoegdheid toegangs beheer of selfservice voor het opnieuw instellen van wacht woorden.
+In het volgende document wordt beschreven hoe u de Azure MFA-server instelt als een tweede beveiligingslaag wanneer uw gebruikers rollen activeren in Privileged Access Management of selfservice voor het opnieuw instellen van wacht woorden.
 
 > [!IMPORTANT]
-> Vanwege de aankondiging van de afschaffing van Azure Multi-Factor Authentication Software Development Kit. De Azure MFA SDK wordt ondersteund voor bestaande klanten tot de datum van beëindiging van 14 november 2018. Nieuwe klanten en huidige klanten kunnen SDK niet meer downloaden via de klassieke Azure-Portal. Als u wilt downloaden, moet u contact op met de klanten service van Azure om uw gegenereerde pakket met MFA-service referenties te ontvangen. <br> Het micro soft-ontwikkel team werkt aan wijzigingen in MFA door te integreren met Azure Multi-Factor Authentication-server SDK.
+> Vanwege de aankondiging van de afschaffing van Azure Multi-Factor Authentication Software Development Kit, wordt de Azure MFA SDK ondersteund voor bestaande klanten tot de datum van uittreding van 14 november 2018. Nieuwe klanten en huidige klanten kunnen SDK niet meer downloaden via de klassieke Azure-Portal. Als u wilt downloaden, moet u contact op met de klanten service van Azure om uw gegenereerde pakket met MFA-service referenties te ontvangen.
 
-In het onderstaande artikel vindt u een overzicht van de configuratie-updates en de stappen die u kunt inschakelen voor een eenvoudige switch van de Azure MFA SDK naar Azure Multi-Factor Authentication-server SDK wanneer deze wordt uitgebracht, omdat deze wordt opgenomen in een aanstaande hotfix. Raadpleeg de [versie geschiedenis](./reference/version-history.md) voor aankondigingen. 
+In het onderstaande artikel vindt u een overzicht van de configuratie-updates en de stappen voor het verplaatsen van de Azure MFA-SDK naar Azure Multi-Factor Authentication-server.
 
 ## <a name="prerequisites"></a>Vereisten
 
@@ -47,7 +47,7 @@ Meld u aan bij het [Azure Portal](https://portal.azure.com/) en down load de Azu
 Gebruik de koppeling **activerings referenties genereren voor het initiëren** van het maken van activerings referenties. Zodra de opslag is gegenereerd voor later gebruik.
 
 ### <a name="step-3-install-the-azure-multi-factor-authentication-server"></a>Stap 3: de Azure-Multi-Factor Authentication-server installeren
-Nadat u de server hebt gedownload, [installeert](https://docs.microsoft.com/en-us/azure/active-directory/authentication/howto-mfaserver-deploy#install-and-configure-the-mfa-server) u deze.  U moet referenties voor activering opgeven. 
+Nadat u de server hebt gedownload, [installeert](https://docs.microsoft.com/azure/active-directory/authentication/howto-mfaserver-deploy#install-and-configure-the-mfa-server) u deze.  U moet referenties voor activering opgeven. 
 
 ### <a name="step-4-create-your-iis-web-application-that-will-host-the-sdk"></a>Stap 4: de IIS-webtoepassing maken die als host fungeert voor de SDK
 1. Open IIS-beheer ![Working-with-mfaserver-for-mim_iis. PNG-](media/working-with-mfaserver-for-mim/working-with-mfaserver-for-mim_iis.PNG)
@@ -87,9 +87,9 @@ Nadat u de server hebt gedownload, [installeert](https://docs.microsoft.com/en-u
 > Als u de instelling wilt herstellen, vervangt u bestand mfasettings. XML door het back-upbestand in stap 2
 
 
-## <a name="next-steps"></a>Volgende stappen
+## <a name="see-also"></a>Zie tevens
 
--    [Aan de slag met de Azure Multi-Factor Authentication-server](https://docs.microsoft.com/en-us/azure/active-directory/authentication/howto-mfaserver-deploy)
+-    [Aan de slag met de Azure Multi-Factor Authentication-server](https://docs.microsoft.com/azure/active-directory/authentication/howto-mfaserver-deploy)
 - [Wat is Azure Multi-Factor Authentication](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication)
 - [Aangepaste Multi-Factor Authentication-API gebruiken om PAM-of SSPR te activeren](Working-with-custommfaserver-for-mim.md)
 - [Release geschiedenis van MIM-versie](./reference/version-history.md)
