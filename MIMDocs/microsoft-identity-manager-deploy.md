@@ -11,12 +11,12 @@ ms.prod: microsoft-identity-manager
 ms.assetid: fa0af422-b5e9-4599-9d9b-cb6c18ea07f9
 ms.reviewer: markwahl-msft
 ms.suite: ems
-ms.openlocfilehash: 8216dc144dd7cee2ccb30d89198f6d2bb3a726c1
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: ea9caef07c2496c5d2e040f5d88764938231220b
+ms.sourcegitcommit: 80cdfd782cc6e2a4c4698decd54342f0e1460f5f
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73329443"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75756166"
 ---
 # <a name="deploy-microsoft-identity-manager-2016-sp2"></a>Microsoft Identity Manager 2016 SP2 implementeren
 In de artikelen in deze sectie vindt u stapsgewijze instructies voor het implementeren van Microsoft Identity Manager (MIM) 2016 voor selfservicescenario's voor eindgebruikers op een nieuwe server waarop niet eerder FIM of MIM is geïmplementeerd.
@@ -30,7 +30,8 @@ Het proces voor het implementeren van MIM lijkt sterk op het proces voor de voor
 
 ## <a name="first-prepare-a-domain"></a>Eerste stap: een domein voorbereiden
 MIM werkt met Active Directory (AD). Volg daarom onderstaande stappen om de AD-domeincontroller te configureren.
-- [Domeininstelling](preparing-domain.md)
+- [Domein installatie](preparing-domain.md) of
+- [Domein instelling voor door groep beheerde service accounts](preparing-domain-gmsa.md)
 
 
 ## <a name="next-prepare-an-identity-management-servers"></a>Volgende: een server voor identiteits beheer voorbereiden
@@ -49,4 +50,3 @@ Nadat u het domein en de server hebt ingesteld, kunt u nu de MIM-onderdelen inst
 - [MIM-synchronisatieservice](install-mim-sync.md)
 - [MIM-service en -portal](install-mim-service-portal.md)
 - [Active Directory en de databases voor de MIM-service synchroniseren](install-mim-sync-ad-service.md)
-
