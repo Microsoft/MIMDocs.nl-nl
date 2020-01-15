@@ -4,12 +4,12 @@ ms.topic: landing-page
 ms.prod: microsoft-identity-manager
 title: Documentatie voor Microsoft Identity Manager | Microsoft Docs
 description: Meer informatie over het gebruik van Microsoft Identity Manager.
-ms.openlocfilehash: fb89ce57b751cf150306f0a10d2e051377fa1181
-ms.sourcegitcommit: 2d4eeaec83199473d987fed9fae557ecefe7c1bd
+ms.openlocfilehash: b117b5226ab5181f3a4a2999bae9a7067beeec42
+ms.sourcegitcommit: 8c23165aa69f26f484b9a01482cd4e990fe783d9
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/20/2018
-ms.locfileid: "49474175"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75955926"
 ---
 # <a name="microsoft-identity-manager-documentation"></a>Documentatie voor Microsoft Identity Manager
 
@@ -76,7 +76,6 @@ Microsoft Identity Manager 2016 verbindt de Identity & Access Management-oplossi
 > [!WARNING]
 > Algemene ondersteuning voor Forefront Identity Manager (FIM) is beëindigd op 10-10-2017. <a href="microsoft-identity-manager-2016-upgrade-from-fim-2010-r2.md" data-raw-source="[upgrade](microsoft-identity-manager-2016-upgrade-from-fim-2010-r2.md)">Voer een upgrade uit</a> naar Microsoft Identity Manager 2016. Meer informatie: 
 > - Informatie over de levenscyclus van FIM is <a href="https://support.microsoft.com/lifecycle/search?alpha=Microsoft%20Forefront%20Identity%20Manager%202010%20R2%20Service%20Pack%201,Microsoft%20Identity%20Manager%202016,Microsoft%20Forefront%20Identity%20Manager%202010" data-raw-source="[here](https://support.microsoft.com/lifecycle/search?alpha=Microsoft%20Forefront%20Identity%20Manager%202010%20R2%20Service%20Pack%201,Microsoft%20Identity%20Manager%202016,Microsoft%20Forefront%20Identity%20Manager%202010)">hier</a> beschikbaar 
-> - Lees voor informatie over openbare releases van identiteitsproducten de post met de titel <a href="https://blogs.technet.microsoft.com/iamsupport/idmbuildversions/" data-raw-source="[Microsoft Identity Software: Public Release Build Versions](https://blogs.technet.microsoft.com/iamsupport/idmbuildversions/)">Microsoft Identity Software: Public Release Build Versions</a> (Microsoft Identity-software: openbare releaseversies)
 
 <h2>Verwijzing</h2>
 <ul class="panelContent cardsFTitle">

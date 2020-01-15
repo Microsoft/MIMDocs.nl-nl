@@ -92,7 +92,6 @@
 ### [Prestatiehandleiding exporteren](https://technet.microsoft.com/library/hh322883)
 ## Rapporten
 ### [Rapportage van aangepaste rapporten en uitbreidbaarheid](https://technet.microsoft.com/library/jj133861)
-## [Microsoft-identiteitssoftware: openbare buildversies](https://blogs.technet.microsoft.com/iamsupport/idmbuildversions/)
 # [Verwijzing](./reference/microsoft-identity-manager-2016-developer-reference.md)
 ## Referentie voor ontwikkelaars
 ### [MIM 2016-referentie voor ontwikkelaars](./reference/microsoft-identity-manager-2016-developer-reference.md)

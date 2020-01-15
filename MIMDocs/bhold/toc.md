@@ -17,8 +17,8 @@
 ### [Installatie van de server: SQL](../prepare-server-sql2016.md)
 ### [Installatie van de server: SharePoint](../prepare-server-sharepoint.md)
 ### [Installatie van de server: Exchange](../prepare-server-exchange.md)
-### [MIM installeren: synchronisatie](../install-mim-sync.md)
-### [MIM installeren: service en portal](../install-mim-service-portal.md)
+### [MIM installeren: Synchronisatie](../install-mim-sync.md)
+### [MIM installeren: Service en portal](../install-mim-service-portal.md)
 ### [MIM installeren: databases synchroniseren](../install-mim-sync-ad-service.md)
 ## [Upgrade uitvoeren in Forefront Identity Manager 2010 R2](../microsoft-identity-manager-2016-upgrade-from-fim-2010-R2.md)
 ## [MIM Certificate Management installeren](../mim-cm-deploy.md)
@@ -82,7 +82,6 @@
 ### [Prestatiehandleiding exporteren](https://technet.microsoft.com/library/hh322883)
 ## Rapporten
 ### [Rapportage van aangepaste rapporten en uitbreidbaarheid](https://technet.microsoft.com/library/jj133861)
-## [Microsoft Identity-software: buildversies van openbare versie](https://blogs.technet.microsoft.com/iamsupport/idmbuildversions/)
 # [Verwijzing](../reference/microsoft-identity-manager-2016-developer-reference.md)
 ## Referentie voor ontwikkelaars
 ### [MIM 2016-referentie voor ontwikkelaars](../reference/microsoft-identity-manager-2016-developer-reference.md)
