@@ -9,12 +9,12 @@ manager: mtillman
 ms.date: 09/04/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.openlocfilehash: 7fb111520f94541672fc56d0fd2ee95bfcd3a49e
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: 9ce531fb3f6f9c831ecdb716f006f947611871e6
+ms.sourcegitcommit: 1ca298d61f6020623f1936f86346b47ec5105d44
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "67690749"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76256594"
 ---
 # <a name="use-a-custom-multi-factor-authentication-provider-via-an-api-during-pam-role-activation-or-in-sspr"></a>Een aangepaste Multi-Factor Authentication provider gebruiken via een API tijdens de activering van de PAM-rol of in SSPR
 
@@ -22,7 +22,7 @@ Klanten van Azure AD Premium of Azure MFA kunnen Azure MFA integreren in twee MI
 
 MIM-klanten hebben twee extra opties:
 
- - Gebruik een aangepaste provider voor eenmalige wacht woorden, die alleen van toepassing is op het MIM SSPR-scenario en wordt beschreven in hand leiding voor het [configureren van self-service voor wachtwoord herstel met otp SMS gate](https://docs.microsoft.com/en-us/previous-versions/mim/hh824692(v=ws.10))
+ - Gebruik een aangepaste provider voor eenmalige wacht woorden, die alleen van toepassing is op het MIM SSPR-scenario en wordt beschreven in hand leiding voor het [configureren van self-service voor wachtwoord herstel met otp SMS gate](https://docs.microsoft.com/previous-versions/mim/hh824692(v=ws.10))
  - Gebruik een aangepaste telefoonservice provider voor multi-factor Authentication. Dit is van toepassing in zowel de MIM SSPR-als de PAM-scenario's, zoals beschreven in dit artikel
 
 In dit artikel wordt uitgelegd hoe u MIM kunt gebruiken met een aangepaste multi-factor Authentication-provider, via een API en een integratie-SDK die is ontwikkeld door de klant.  
@@ -32,7 +32,7 @@ In dit artikel wordt uitgelegd hoe u MIM kunt gebruiken met een aangepaste multi
 Als u een aangepaste provider-API voor Multi-Factor Authentication met MIM wilt gebruiken, hebt u het volgende nodig:
 
 - Telefoonnummers voor alle kandidaatgebruikers
-- MIM-hotfix [4.5.202.0](https://www.microsoft.com/download/details.aspx?id=57278) of hoger-Zie [versie geschiedenis](reference/version-history.md) voor aankondigingen
+- MIM-hotfix 4.5.202.0 of hoger-Zie [versie geschiedenis](reference/version-history.md) voor aankondigingen
 - MIM-service geconfigureerd voor SSPR of PAM
 
 ## <a name="approach-using-custom-multi-factor-authentication-code"></a>Benadering van het gebruik van aangepaste multi-factor Authentication-Code
@@ -156,6 +156,6 @@ Nadat de service opnieuw is opgestart, gebruikt u SSPR en/of PAM om de functiona
 
 ## <a name="next-steps"></a>Volgende stappen
 
-- [Aan de slag met de Azure Multi-Factor Authentication-server](https://docs.microsoft.com/en-us/azure/active-directory/authentication/howto-mfaserver-deploy)
+- [Aan de slag met de Azure Multi-Factor Authentication-server](https://docs.microsoft.com/azure/active-directory/authentication/howto-mfaserver-deploy)
 - [Wat is Azure Multi-Factor Authentication](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication)
 - [Release geschiedenis van MIM-versie](./reference/version-history.md)

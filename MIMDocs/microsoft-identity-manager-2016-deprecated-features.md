@@ -9,12 +9,12 @@ ms.date: 2/28/2018
 ms.topic: reference
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
-ms.openlocfilehash: fcf9ec8387761b6f154a95d6100ef54a12d4caf8
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: dd023e2152693f56dd9a86dc66d9c1a8ef4ec64e
+ms.sourcegitcommit: 1ca298d61f6020623f1936f86346b47ec5105d44
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "64518949"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76256577"
 ---
 # <a name="deprecated-features"></a>Afgeschafte functies
 
@@ -27,7 +27,7 @@ In dit artikel worden de afgeschafte functies van Microsoft Identity Manager 201
 
 ## <a name="bhold"></a>BHOLD 
 
-Micro soft raadt klanten niet aan nieuwe implementaties van de onderdelen van micro soft BHOLD Suite te starten. Bestaande implementaties van BHOLD worden nog steeds ondersteund. Azure AD biedt nu [toegangs beoordelingen](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-azure-ad-controls-access-reviews-overview) waarmee een aantal van de functies van de BHOLD Attestation-campagne worden vervangen.
+Micro soft raadt klanten niet aan nieuwe implementaties van de onderdelen van micro soft BHOLD Suite te starten. Bestaande implementaties van BHOLD worden nog steeds ondersteund. Azure AD biedt nu [toegangs beoordelingen](https://docs.microsoft.com/azure/active-directory/active-directory-azure-ad-controls-access-reviews-overview) waarmee een aantal van de functies van de BHOLD Attestation-campagne worden vervangen.
 
 ## <a name="certificate-management"></a>Certificaatbeheer 
 
@@ -47,7 +47,7 @@ Micro soft raadt klanten niet aan nieuwe implementaties van de onderdelen van mi
 | **Categorie**                | **Afgeschafte functie**              | **Vervangen en opmerkingen**           |
 |-----------------------------|-------------------------------------|----------------------------------------------|
 | Programmatische configuratie | Configuratie-interface van webservice | De mogelijkheid om de FIM-synchronisatie service via de FIM-service te configureren, wordt verwijderd in een volgende versie.                                                          |
-| Beheer agenten           | Ingebouwde MAs                        | De volgende MAs zijn verwijderd in MIM 2016: </br> 1. * * MA voor FIM-certificaat beheer </br>2. * * MA voor Lotus Notes</br> 3. * * MA voor SAP R/3 </br> De Lotus Notes-en SAP R/3-MAs zijn vervangen door nieuwe versies. Zie voor meer informatie [nieuwste connector versie release geschiedenis & downloaden](https://docs.microsoft.com/en-us/azure/active-directory/connect/active-directory-aadconnectsync-connector-version-history)                                                                                                                                                                                                                                              |
+| Beheer agenten           | Ingebouwde MAs                        | De volgende MAs zijn verwijderd in MIM 2016: </br> 1. * * MA voor FIM-certificaat beheer </br>2. * * MA voor Lotus Notes</br> 3. * * MA voor SAP R/3 </br> De Lotus Notes-en SAP R/3-MAs zijn vervangen door nieuwe versies. Zie voor meer informatie [nieuwste connector versie release geschiedenis & downloaden](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnectsync-connector-version-history)                                                                                                                                                                                                                                              |
 | Beheer agenten           | ECMA1                               | Het ECMA1/XMA Extensibility Framework is vervangen door de ECMA 2,0. Het bijwerken van bestaande ECMA1-beheer agenten met ECMA 2.0-connectors is vereist.                                                                                                                                          |
 | Beheer agenten           | Connectors out-of-process uitvoeren      | Deze functie wordt niet vervangen. De synchronisatie service roept de connector in hetzelfde proces altijd aan. Het is de verantwoordelijkheid van de connector om het andere proces te starten en te beheren. |
 | Beheer agenten           | Weergave naam van partitie configureren    | Deze functie wordt niet vervangen. Deze optie is alleen gebruikt om een alternatieve naam op te geven voor een partitie in de WMI-interfaces.                                                                                                                                                                       |
