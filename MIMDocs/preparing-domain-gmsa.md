@@ -11,12 +11,12 @@ ms.prod: microsoft-identity-manager
 ms.assetid: 50345fda-56d7-4b6e-a861-f49ff90a8376
 ms.reviewer: markwahl-msft
 ms.suite: ems
-ms.openlocfilehash: a74f4074d9a0cf8378fd4972b7f51f723bd2f1c6
-ms.sourcegitcommit: 80cdfd782cc6e2a4c4698decd54342f0e1460f5f
+ms.openlocfilehash: be5dc1e8615f56d3157a78891e80897e446eafab
+ms.sourcegitcommit: 32c7a46b2f8ed3f2f9ebc6f79a4ecb0019fe62e0
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75756272"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77527919"
 ---
 # <a name="configure-a-domain-for-group-managed-service-accounts-gmsa-scenario"></a>Een domein configureren voor een gMSA-scenario (Group managed service accounts)
 
@@ -28,7 +28,7 @@ ms.locfileid: "75756272"
 
 Microsoft Identity Manager (MIM) werkt samen met uw Active Directory-domein (AD). U moet AD al hebben geïnstalleerd en ervoor zorgen dat uw omgeving een domeincontroller bevat voor een domein dat u kunt beheren.  In dit artikel wordt beschreven hoe u door de groep beheerde service accounts in dat domein instelt voor gebruik door MIM.
 
-## <a name="overview"></a>Overview
+## <a name="overview"></a>Overzicht
 
 Groep beheerde service accounts elimineren de nood zaak om wacht woorden van service accounts niet regel matig te wijzigen. Met de release van MIM 2016 SP2 kunnen voor de volgende MIM-onderdelen gMSA-accounts worden geconfigureerd die moeten worden gebruikt tijdens het installatie proces:
 
@@ -109,7 +109,7 @@ Alle onderdelen van uw MIM-implementatie hebben een eigen identiteit in het dome
 4.  Voeg SPN's toe om Kerberos-verificatie voor serviceaccounts mogelijk te maken
 
     ```PowerShell
-    Set-ADServiceAccount -Identity svcMIMAppPool -ServicePrincipalNames @{Add="http/mim.contoso.com"}
+    setspn -S http/mim.contoso.com contoso\svcMIMAppPool
     ```
 
 5.  Zorg ervoor dat u de volgende DNS-records voor de juiste naam omzetting registreert (ervan uitgaande dat de MIM-service, de MIM-Portal, de wachtwoord herstel-en wachtwoord registratie websites op dezelfde computer worden gehost)

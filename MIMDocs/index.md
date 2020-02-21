@@ -4,12 +4,12 @@ ms.topic: landing-page
 ms.prod: microsoft-identity-manager
 title: Documentatie voor Microsoft Identity Manager | Microsoft Docs
 description: Meer informatie over het gebruik van Microsoft Identity Manager.
-ms.openlocfilehash: b117b5226ab5181f3a4a2999bae9a7067beeec42
-ms.sourcegitcommit: 8c23165aa69f26f484b9a01482cd4e990fe783d9
+ms.openlocfilehash: d73275383fef6de6ad3d4697c55cc9f60b2ef7dd
+ms.sourcegitcommit: 32c7a46b2f8ed3f2f9ebc6f79a4ecb0019fe62e0
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75955926"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77527885"
 ---
 # <a name="microsoft-identity-manager-documentation"></a>Documentatie voor Microsoft Identity Manager
 
@@ -17,13 +17,13 @@ Microsoft Identity Manager 2016 verbindt de Identity & Access Management-oplossi
 
 <ul class="panelContent cardsFTitle">
     <li>
-        <a href="/microsoft-identity-manager/reference/version-history">
+        <a href="reference/version-history.md">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="/media/index/i_whats-new.svg" alt="" />
+                            <img src="/MIMDocs/media/index/i_whats-new.svg" alt="" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -35,13 +35,13 @@ Microsoft Identity Manager 2016 verbindt de Identity & Access Management-oplossi
         </a>
     </li>
     <li>
-        <a href="/microsoft-identity-manager/microsoft-identity-manager-2016">
+        <a href="microsoft-identity-manager-2016.md">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="/media/index/i_learn-about.svg" alt="" />
+                            <img src=/MIMDocs/media/index/i_learn-about.svg" alt="" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -52,13 +52,13 @@ Microsoft Identity Manager 2016 verbindt de Identity & Access Management-oplossi
         </a>
     </li>
     <li>
-        <a href="/microsoft-identity-manager/microsoft-identity-manager-deploy">
+        <a href="microsoft-identity-manager-deploy.md">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="/media/index/i_deploy.svg" alt="" />
+                            <img src=/MIMDocs/media/index/i_deploy.svg" alt="" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -86,7 +86,7 @@ Microsoft Identity Manager 2016 verbindt de Identity & Access Management-oplossi
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="/media/index/i_reference.svg" alt="" />
+                            <img src=/MIMDocs/media/index/i_reference.svg" alt="" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -104,7 +104,7 @@ Microsoft Identity Manager 2016 verbindt de Identity & Access Management-oplossi
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="/media/index/i_reference.svg" alt="" />
+                            <img src=/MIMDocs/media/index/i_reference.svg" alt="" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -122,7 +122,7 @@ Microsoft Identity Manager 2016 verbindt de Identity & Access Management-oplossi
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="/media/index/i_blog.svg" alt="" />
+                            <img src="/MIMDocs/media/index/i_blog.svg" alt="" />
                         </div>
                     </div>
                     <div class="cardText">
