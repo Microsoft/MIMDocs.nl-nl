@@ -1,24 +1,24 @@
 ---
 title: Conversie van specifieke MIM-Services naar gMSA | Microsoft Docs
 description: Onderwerp met een beschrijving van de basis stappen voor het configureren van gMSA.
-author: billmath
-ms.author: billmath
-manager: mtillman
+author: EugeneSergeev
+ms.author: esergeev
+manager: aashiman
 ms.date: 06/27/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.openlocfilehash: 96d375d82a71a21f0be444d628f387c4e1ffdd09
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: 49216a2d2077dd1be83f17719e996a20abb61cf8
+ms.sourcegitcommit: d98a76d933d4d7ecb02c72c30d57abe3e7f5d015
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "64520552"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78289503"
 ---
 # <a name="conversion-of-mim-specific-services-to-gmsa"></a>Conversie van specifieke MIM-Services naar gMSA
 
 In deze hand leiding worden de basis stappen beschreven voor het configureren van gMSA voor ondersteunde services. Het proces dat u wilt converteren naar gMSA is eenvoudig nadat u uw omgeving vooraf hebt geconfigureerd.
 
-Vereiste hotfix: \<koppeling naar de meest recente KB-\>
+Vereiste hotfix: [4.5.26.0 of hoger](https://docs.microsoft.com/microsoft-identity-manager/reference/version-history)
 
 Ondersteund:
 
@@ -36,7 +36,7 @@ Niet ondersteund:
 -   Micro soft certificaat beheer
 -   BHOLD
 
-<a name="general-information"></a>Algemene informatie 
+<a name="general-information"></a>Algemene gegevens 
 --------------------
 
 Lezen vereist om de installatie te volt ooien en inzicht te krijgen in
@@ -144,7 +144,7 @@ Eerste stap op uw Windows-domein controller
         -   Set-ADServiceAccount-Identity \<account\>-ServicePrincipalNames \@{add = "\<SPN-\>"}
         -   Overdracht
             -   Set-ADServiceAccount-Identity \<gsmaaccount\>-TrustedForDelegation \$True
-        -   Beperkte overdracht
+        -   Beperkte delegering
             -   \$delspns = ' http/Mim ', ' http/mim. contoso. com '
             -   New-ADServiceAccount-name \<gsmaaccount\>-DNSHostName \<gsmaaccount\>. contoso.com-PrincipalsAllowedToRetrieveManagedPassword \<groep\>-ServicePrincipalNames \$spn's-OtherAttributes \@{' msDS-AllowedToDelegateTo ' =\$delspns}
 
@@ -163,7 +163,9 @@ Eerste stap op uw Windows-domein controller
 4.  Voer een verhoogde MSI uit van de MIM-service en selecteer wijzigen.
 
 5.  Schakel het selectie vakje ander account gebruiken voor Exchange (voor beheerde accounts) in op de pagina hoofd server verbinding configureren. Hier hebt u een optie om het oude account te gebruiken dat een postvak heeft of een Cloud postvak gebruikt.
-
+    >[!NOTE]
+    >Wanneer u de optie **Exchange Online gebruiken** hebt geselecteerd, moet u de register sleutel HKLM\SYSTEM\CurrentControlSet\Services\FIMService waarde PollExchangeEnabled instellen op 1 na de installatie om de MIM-service in te scha kelen voor het verwerken van goedkeurings reacties van de MIM Outlook-invoeg toepassing.
+    
 ![](media/0cd8ce521ed7945c43bef6100f8eb222.png)
 
 6.  Op het pagina type service account voor MIM-Services configureren met \$ symbool aan het einde. Typ ook wacht woord voor service-e-mail account. Het wacht woord voor het service account moet worden uitgeschakeld.

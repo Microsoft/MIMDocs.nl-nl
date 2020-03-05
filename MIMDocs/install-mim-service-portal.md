@@ -2,21 +2,21 @@
 title: De Microsoft Identity Manager-service en -portal installeren | Microsoft Docs
 description: Lees welke stappen u moet uitvoeren voor het configureren en installeren van de MIM-service en -portal voor Microsoft Identity Manager 2016
 keywords: ''
-author: billmath
-ms.author: billmath
-manager: mtillman
+author: EugeneSergeev
+ms.author: esergeev
+manager: aashiman
 ms.date: 10/18/2019
 ms.topic: conceptual
 ms.prod: microsoft-identity-manager
 ms.assetid: b0b39631-66df-4c5f-80c9-a1774346f816
 ms.reviewer: markwahl-msft
 ms.suite: ems
-ms.openlocfilehash: 1f7aa8e257ef4fd1d97ee602a4e0f3f878d8c1b6
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: 4604c17d3e58c57f9819aaa036dc12a669aed55d
+ms.sourcegitcommit: d98a76d933d4d7ecb02c72c30d57abe3e7f5d015
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73568070"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78289493"
 ---
 # <a name="install-mim-2016-mim-service-and-portal"></a>MIM 2016 installeren: de MIM-service en -portal
 
@@ -51,6 +51,11 @@ Als u in de laatste stap geen MIM-installatiepakket hebt ingesteld, gaat u terug
     ![Afbeelding voor het configureren van de MIM-databaseverbinding](media/install-mim-service-portal/MIM_Install10.png)
 
 7. Voer op de **e-mail server verbinding configureren**de naam van uw Exchange-server in als **e-mail server** of u kunt het **O365-postvak**gebruiken. Als u geen mailserver hebt geconfigureerd, gebruikt u **localhost** als de naam van de mailserver en schakelt u de twee bovenste selectievakjes uit. Klik op **Volgende**.
+    >[!NOTE]
+    >MIM 2016 SP2 en hoger: als u gebruikmaakt van door groepen beheerde service accounts, moet u het selectie vakje **andere gebruiker voor Exchange gebruiken** inschakelen, zelfs als u niet van plan bent om Exchange te gebruiken.
+    
+    >[!NOTE]
+    >Wanneer u de optie **Exchange Online gebruiken** hebt geselecteerd, moet u de register sleutel HKLM\SYSTEM\CurrentControlSet\Services\FIMService waarde PollExchangeEnabled instellen op 1 na de installatie om de MIM-service in te scha kelen voor het verwerken van goedkeurings reacties van de MIM Outlook-invoeg toepassing.
 
     ![Afbeelding van Configureren van de e-mailserververbinding](media/install-mim-service-portal/MIM_Install11.png)
 
@@ -110,7 +115,7 @@ Wanneer alle definities voorafgaand aan de installatie gereed zijn, klikt u op *
 
 Nadat de installatie is voltooid, controleert u of de MIM-portal actief is.
 
-1. Start Internet Explorer en verbinding maken met de MIM-Portal op *http://mim.contoso.com/identitymanagement* . Houd er rekening mee dat er een korte vertraging kan optreden op het eerste bezoek aan deze pagina.
+1. Start Internet Explorer en maak verbinding met de MIM-Portal op *http://mim.contoso.com/identitymanagement* . Houd er rekening mee dat er een korte vertraging kan optreden op het eerste bezoek aan deze pagina.
     - Als dat nodig is, kunt u als *contoso\miminstall* verifiëren bij Internet Explorer.
 
 2. Ga in Internet Explorer naar **Internetopties**, open het tabblad **Beveiliging** en voeg de site toe aan de zone **Lokaal intranet** als de site hier nog niet wordt weergegeven.  Sluit het dialoogvenster **Internetopties**.
