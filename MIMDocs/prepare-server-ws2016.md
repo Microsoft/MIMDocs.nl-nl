@@ -12,11 +12,11 @@ ms.assetid: 51507d0a-2aeb-4cfd-a642-7c71e666d6cd
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: c6d5d5081f0e932b9c60d8f2025b54e47dc352d5
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.sourcegitcommit: d98a76d933d4d7ecb02c72c30d57abe3e7f5d015
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73568040"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78853547"
 ---
 # <a name="set-up-an-identity-management-server-windows-server-2016-or-2019"></a>Een server voor identiteits beheer instellen: Windows Server 2016 of 2019
 
@@ -86,19 +86,19 @@ Stel het beveiligingsbeleid van de server zo in dat de zojuist gemaakte accounts
 
 4. Klik op **gebruiker of groep toevoegen**, en typ in het tekstvak volgende op basis van rol `contoso\MIMSync; contoso\MIMMA; contoso\MIMService; contoso\SharePoint; contoso\SqlServer; contoso\MIMSSPR`, klik op **Namen controleren**en klik vervolgens op **OK**.
 
-5. Klik op **OK** om het venster **Aanmelden als service &gt; Eigenschappen** te sluiten.
+5. Klik op **OK** om het venster **Aanmelden als service > Eigenschappen** te sluiten.
 
 6.  Klik in het detail venster met de rechter muisknop op **toegang tot deze computer vanaf het netwerk weigeren**en selecteer **Eigenschappen**. >
 
 7. Klik op **Gebruiker of groep toevoegen**, typ `contoso\MIMSync; contoso\MIMService` in het tekstvak en klik op **OK**.
 
-8. Klik op **OK** om het venster **Toegang tot deze computer vanaf het netwerk weigeren &gt; Eigenschappen** te sluiten.
+8. Klik op **OK** om het venster **Toegang tot deze computer vanaf het netwerk weigeren > Eigenschappen** te sluiten.
 
 9. Klik in het detail venster met de rechter muisknop op **lokaal aanmelden weigeren**en selecteer **Eigenschappen**.
 
 10. Klik op **Gebruiker of groep toevoegen**, typ `contoso\MIMSync; contoso\MIMService` in het tekstvak en klik op **OK**.
 
-11. Klik op **OK** om het venster **Lokaal aanmelden weigeren &gt; Eigenschappen** te sluiten.
+11. Klik op **OK** om het venster **Lokaal aanmelden weigeren > Eigenschappen** te sluiten.
 
 12. Sluit het venster Lokaal beveiligingsbeleid.
 
