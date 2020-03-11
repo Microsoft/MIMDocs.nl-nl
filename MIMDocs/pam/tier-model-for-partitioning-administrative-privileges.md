@@ -4,19 +4,19 @@ description: Meer informatie over het laagmodel dat uw systeem scheidt op basis 
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 08/30/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: c6e3cd02-1e32-4194-a8ed-3a0b3d022a43
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 8e7b7217714f0ef74c1d959eb51dac07018d6e77
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: 4fb5689400d170adc19f15cbbc2d45915cb39fe3
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "64517844"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79043593"
 ---
 # <a name="tier-model-for-partitioning-administrative-privileges"></a>Laagmodel voor het partitioneren van beheerdersbevoegdheden
 
@@ -26,7 +26,7 @@ In dit artikel wordt een beveiligingsmodel beschreven dat is bedoeld om u te bes
 
 Gebruikers, services of toepassingsaccounts waaraan permanente beheerdersbevoegdheden voor forests van Windows Server Active Directory (AD) worden verleend, vormen een aanzienlijke risico voor de missie en zakelijke activiteiten van de organisatie. Deze accounts zijn vaak gericht op aanvallers, omdat de aanvaller rechten heeft om verbinding te maken met andere servers of toepassingen in het domein.
 
-Met het laagmodel worden scheiding ingesteld tussen beheerders op basis van de resources die ze beheren. Beheerders die werkstations van gebruikers beheren, worden afgescheiden van beheerders die toepassingen of bedrijfsentiteiten beheren. Meer informatie over dit model vindt u in het [referentiemateriaal over het beveiligen van bevoegde toegang](http://aka.ms/tiermodel).
+Met het laagmodel worden scheiding ingesteld tussen beheerders op basis van de resources die ze beheren. Beheerders die werkstations van gebruikers beheren, worden afgescheiden van beheerders die toepassingen of bedrijfsentiteiten beheren. Meer informatie over dit model vindt u in het [referentiemateriaal over het beveiligen van bevoegde toegang](https://aka.ms/tiermodel).
 
 ## <a name="restricting-credential-exposure-with-logon-restrictions"></a>Weergave van referenties beperken met aanmeldingsbeperkingen
 

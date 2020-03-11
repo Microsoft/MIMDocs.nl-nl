@@ -4,17 +4,17 @@ description: In dit artikel worden afgeschafte functies van MIM Identity Manager
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 2/28/2018
 ms.topic: reference
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
-ms.openlocfilehash: dd023e2152693f56dd9a86dc66d9c1a8ef4ec64e
-ms.sourcegitcommit: 1ca298d61f6020623f1936f86346b47ec5105d44
+ms.openlocfilehash: 009d0e99e2da445d4df35dc9de81b297a65fe2a3
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76256577"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79044222"
 ---
 # <a name="deprecated-features"></a>Afgeschafte functies
 
@@ -59,7 +59,7 @@ Micro soft raadt klanten niet aan nieuwe implementaties van de onderdelen van mi
 
 | **Categorie**                | **Afgeschafte functie**              | **Vervangen en opmerkingen**           |
 |--------|-------|---|    
-| Kenmerkprioriteit | Meerdere masters/gelijke prioriteit                       | De gelijke prioriteit wordt verwijderd. Er is geen vervanging voor deze functie. U moet in plaats daarvan hand matige prioriteit configureren. U kunt deze functie blijven gebruiken als in uw omgeving een FIM-Service beheer agent is geïmplementeerd. Deze beheer agent biedt geen hand matige prioriteit om te voor komen dat export-not-broncel voor declaratief inrichten is. |
+| Kenmerk prioriteit | Meerdere masters/gelijke prioriteit                       | De gelijke prioriteit wordt verwijderd. Er is geen vervanging voor deze functie. U moet in plaats daarvan hand matige prioriteit configureren. U kunt deze functie blijven gebruiken als in uw omgeving een FIM-Service beheer agent is geïmplementeerd. Deze beheer agent biedt geen hand matige prioriteit om te voor komen dat export-not-broncel voor declaratief inrichten is. |
 | Regels voor samen voegen           | Toevoegen aan object type                             | Deze functie wordt niet vervangen. Alle regels voor samen voegen moeten expliciet het object type van de tekst voor de regel die ze proberen samen te stellen.       |
 | Kenmerk stromen      | Selectie van Null-waarden toestaan ongewijzigd laten            | Deze functie wordt niet vervangen. "Null-waarden toestaan" wordt altijd geselecteerd. Zorg ervoor dat u ' null-waarden toestaan ' hebt geselecteerd in uw huidige omgeving.  |
 | Kenmerk stromen      | "Geen kenmerken intrekken"                            | Deze functie wordt niet vervangen. Kenmerken worden altijd ingetrokken, wat de best practice is.  |

@@ -4,25 +4,25 @@ description: ''
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 09/13/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: bfc7cb64-60c7-4e35-b36a-bbe73b99444b
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: f8fd71d2244760d3a6561c6f55bf676e6f42561a
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: 3b99bd6d8f10c993d65e026bab23deeb65c547e9
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "64518877"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79043950"
 ---
 # <a name="planning-a-bastion-environment"></a>Een bastionomgeving plannen
 
 Door het toevoegen van een bastionomgeving met een specifiek beheerforest aan Active Directory kunnen organisaties gemakkelijk beheerdersaccounts, werkstations en groepen beheren in een omgeving die sterkere beveiligingsmechanismen heeft dan hun bestaande productieomgeving.
 
-Deze architectuur maakt een aantal besturingselementen mogelijk die in een architectuur met één forest niet mogelijk zijn of niet eenvoudig kunnen worden geconfigureerd. Dit omvat het inrichten van accounts als standaardgebruiker zonder beheerdersmogelijkheden in het beheerforest, die in de productieomgeving over uitgebreide beheerdersmogelijkheden beschikken. Hierdoor is betere technische afdwinging van governance mogelijk. Deze architectuur biedt ook de mogelijkheid van het gebruik van de functie Selectieve verificatie van een vertrouwensrelatie als een manier om aanmeldingen (en referentieblootstelling) te beperken tot alleen geautoriseerde hosts. In situaties waarin een hoger assurantieniveau voor het productieforest is vereist zonder de kosten en complexiteit van het bouwen van een geheel nieuwe architectuur, kan een beheerforest voorzien in een omgeving die het assurantieniveau van de productieomgeving verhoogt.
+Deze architectuur maakt een aantal besturingselementen mogelijk die in een architectuur met één forest niet mogelijk zijn of niet eenvoudig kunnen worden geconfigureerd. Dit omvat het inrichten van accounts als standaardgebruiker zonder beheerdersmogelijkheden in het beheerforest, die in de productieomgeving over uitgebreide beheerdersmogelijkheden beschikken. Hierdoor is betere technische afdwinging van governance mogelijk. Deze architectuur maakt het ook mogelijk de functie selectieve verificatie van een vertrouwensrelatie te gebruiken om aanmeldingen (en referentieblootstelling) te beperken tot alleen geautoriseerde hosts. In situaties waarin een hoger niveau van controle is gewenst voor het productieforest zonder de extra kosten en complexiteit van een volledig nieuwe installatie, kan een beheerforest een omgeving bieden waarin de controle van de productieomgeving wordt verhoogd.
 
 Naast het toegewezen beheerforest kunnen aanvullende technieken worden gebruikt. Hieronder vallen het beperken van blootstelling van beheerdersreferenties, hete beperken van rolbevoegdheden van gebruikers in die forest en het waarborgen dat administratieve taken niet worden uitgevoerd op hosts die worden gebruikt voor standaard gebruikersactiviteiten (bijvoorbeeld e-mailen en surfen op internet).
 
@@ -40,9 +40,9 @@ Volgens het [lagenmodel](tier-model-for-partitioning-administrative-privileges.m
 
 ### <a name="restricted-trust"></a>Beperkt vertrouwen
 
-Het productieforest *CORP* moet het beheerforest *PRIV* vertrouwen, maar niet andersom. Dit kan een domeinvertrouwen of een forestvertrouwen zijn. Het beheersforestdomein hoeft de beheerde domeinen en forests niet te vertrouwen om de Active Directory te beheren. Voor aanvullende toepassingen is mogelijk wel een wederzijdse vertrouwensrelatie, beveiligingsvalidatie en test vereist.
+Het productieforest *CORP* moet het beheerforest *PRIV* vertrouwen, maar niet andersom. Dit kan een domeinvertrouwen of een forestvertrouwensrelatie zijn. Het beheersforestdomein hoeft de beheerde domeinen en forests niet te vertrouwen om de Active Directory te beheren. Voor aanvullende toepassingen is mogelijk wel een wederzijdse vertrouwensrelatie, beveiligingsvalidatie en test vereist.
 
-Selectieve verificatie moet worden gebruikt om ervoor te zorgen dat accounts in het beheerforest alleen de juiste productiehosts gebruiken. Voor het onderhoud van domeincontrollers en het delegeren van rechten in Active Directory, is doorgaans het toekennen van het recht 'Allowed to logon' (Aanmelden toegestaan) vereist voor domeincontrollers in aangewezen beheerdersaccounts in laag 0 van het beheerforest. Zie [Configuring Selective Authentication Settings](http://technet.microsoft.com/library/cc816580.aspx) (Selectieve verificatie-instellingen configureren) voor meer informatie.
+Selectieve verificatie moet worden gebruikt om ervoor te zorgen dat accounts in het beheerforest alleen de juiste productiehosts gebruiken. Voor het onderhoud van domeincontrollers en het delegeren van rechten in Active Directory, is doorgaans het toekennen van het recht 'Allowed to logon' (Aanmelden toegestaan) vereist voor domeincontrollers in aangewezen beheerdersaccounts in laag 0 van het beheerforest. Zie [Configuring Selective Authentication Settings](https://technet.microsoft.com/library/cc816580.aspx) (Selectieve verificatie-instellingen configureren) voor meer informatie.
 
 ## <a name="maintain-logical-separation"></a>Logische scheiding behouden
 
@@ -76,11 +76,11 @@ Houd er tijdens de overgang van het beheer van toepassingen naar de bastionomgev
 
 Het beheerforest moet zijn geconfigureerd voor de minimale bevoegdheden op basis van de vereisten voor Active Directory-beheer.
 
-- Accounts in het beheerforest die worden gebruikt voor het beheer van de productieomgeving mogen geen administratorbevoegdheden krijgen voor het beheerforest of voor de domeinen of werkstations in het forest.
+- Aan accounts in het beheerforest die worden gebruikt voor het beheer van de productieomgeving, mogen geen beheerdersbevoegdheden worden verleend voor de beheerforest, of voor domeinen of werkstations in dit forest.
 
-- Beheerdersbevoegdheden voor het beheerforest moeten strikt worden beheerd door een offlineproces om de mogelijkheid te reduceren van een aanval of het wissen van controlelogboeken door een kwaadwillende insider. Dit zorgt er ook voor dat werknemers met administratoraccounts in de productieomgeving de beperkingen voor hun account niet kunnen verminderen en zo het risico voor de organisatie verhogen.
+- Beheerdersbevoegdheden voor het beheerforest moeten strikt worden beheerd door een offlineproces om de mogelijkheid te reduceren van een aanval of het wissen van controlelogboeken door een kwaadwillende insider. Zo voorkomt u ook dat personeel met beheerdersaccounts op productieniveau de beperkingen voor hun account kunnen versoepelen en het risico voor de organisatie verhogen.
 
-- Het beheerforest moet de SCM-configuraties (Microsoft Security Compliance Manager) voor het domein volgen, waaronder sterke configuraties voor verificatieprotocollen.
+- Het beheerforest moet voldoen aan de Microsoft Security Compliance Manager-configuraties voor het domein, met inbegrip van sterke configuraties voor de verificatieprotocollen.
 
 Bij het maken van de bastionomgeving, en voordat u Microsoft Identity Manager installeert, identificeert en maakt u de accounts die worden gebruikt voor beheer in deze omgeving. Dit omvat:
 
@@ -96,7 +96,7 @@ Op alle hosts, waaronder domeincontrollers, servers en werkstations die zijn gek
 
 - De toepassingen die zijn vereist voor het uitvoeren van beheer moeten vooraf worden geïnstalleerd op werkstations, zodat de accounts waarmee ze worden zich niet in de lokale beheerdersgroep hoeven te bevinden om deze toepassingen te installeren. Onderhoud aan de Domain Controller kan doorgaans worden uitgevoerd met RDP en externe-serverbeheerprogramma's.
 
-- Hosts in beheerforests moeten automatisch worden bijgewerkt met beveiligingsupdates. Hoewel dit betekent dat onderhoudsbewerkingen voor domaincontrollers kunnen worden onderbroken, biedt het ook een belangrijke beperking van beveiligingsrisico's door niet-opgeloste beveiligingsproblemen.
+- Hosts voor beheerforest moeten automatisch worden bijgewerkt met beveiligingsupdates. Hierdoor ontstaat weliswaar het risico dat de domeincontroller wordt onderbroken door onderhoudsbewerkingen, maar het biedt een belangrijke beperking van beveiligingsrisico’s door niet-verholpen beveiligingsproblemen.
 
 ### <a name="identify-administrative-hosts"></a>Hosts met een beheerderrol identificeren
 

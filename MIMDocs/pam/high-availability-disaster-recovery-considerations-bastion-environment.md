@@ -4,25 +4,25 @@ description: Meer informatie over het configureren van Privileged Access Managem
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 09/13/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 03e521cd-cbf0-49f8-9797-dbc284c63018
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 0d0d55d4007ab88df4c2f3b5a30ca0fdedea9fe2
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: 67ce70e6bc0603a991731cf1e5fb95751f5016c6
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "64518661"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79043967"
 ---
 # <a name="high-availability-and-disaster-recovery-considerations-for-the-bastion-environment"></a>Overwegingen voor hoge beschikbaarheid en herstel na noodgevallen voor de bastionomgeving
 
 In dit artikel worden de overwegingen beschreven voor hoge beschikbaarheid en herstel na noodgevallen bij de implementatie van Active Directory Domain Services (AD DS) en Microsoft Identity Manager 2016 (MIM) voor Privileged Access Management PAM.
 
-Ondernemingen concentreren zich op hoge beschikbaarheid en herstel na noodgevallen voor werkbelastingen in Windows Server, SQL Server en Active Directory. Maar de betrouwbare beschikbaarheid van de bastionomgeving voor Privileged Access Management is ook belangrijk. De bastionomgeving speelt een cruciale rol in de IT-infrastructuur van de onderneming omdat gebruikers communiceren met de onderdelen om beheerdersrollen te kunnen aannemen. U kunt het technische document [Microsoft High Availability Overview](http://download.microsoft.com/download/3/B/5/3B51A025-7522-4686-AA16-8AE2E536034D/Microsoft%20High%20Availability%20Strategy%20White%20Paper.doc) (Overzicht van hoge beschikbaarheid van Microsoft) voor meer informatie over maximale beschikbaarheid in het algemeen.
+Ondernemingen concentreren zich op hoge beschikbaarheid en herstel na noodgevallen voor werkbelastingen in Windows Server, SQL Server en Active Directory. Maar de betrouwbare beschikbaarheid van de bastionomgeving voor Privileged Access Management is ook belangrijk. De bastionomgeving speelt een cruciale rol in de IT-infrastructuur van de onderneming omdat gebruikers communiceren met de onderdelen om beheerdersrollen te kunnen aannemen. U kunt het technische document [Microsoft High Availability Overview](https://download.microsoft.com/download/3/B/5/3B51A025-7522-4686-AA16-8AE2E536034D/Microsoft%20High%20Availability%20Strategy%20White%20Paper.doc) (Overzicht van hoge beschikbaarheid van Microsoft) voor meer informatie over maximale beschikbaarheid in het algemeen.
 
 ## <a name="high-availability-and-disaster-recovery-scenarios"></a>Scenario’s voor hoge beschikbaarheid en herstel na noodgevallen
 
@@ -214,7 +214,7 @@ De MIM-Service is vereist voor het verwerken van activeringsaanvragen.  Een comp
 
 #### <a name="preparation"></a>Voorbereiding
 U kunt het beste de MIM-service op meerdere servers implementeren die zijn toegevoegd aan het PRIV-domein.
-Raadpleeg de documentatie van Windows Server voor [Hardwarevereisten en opslagmoeilijkheden voor failoverclustering](https://technet.microsoft.com/library/jj612869.aspx) en [Failoverclusters maken in Windows Server 2012](http://blogs.msdn.com/b/clustering/archive/2012/05/01/10299698.aspx) voor hoge beschikbaarheid.
+Raadpleeg de documentatie van Windows Server voor [Hardwarevereisten en opslagmoeilijkheden voor failoverclustering](https://technet.microsoft.com/library/jj612869.aspx) en [Failoverclusters maken in Windows Server 2012](https://blogs.msdn.com/b/clustering/archive/2012/05/01/10299698.aspx) voor hoge beschikbaarheid.
 
 Voor de productie-implementatie op meerdere servers kunt u netwerktaakverdeling gebruiken om de verwerkingsbelasting te verdelen.  U moet ook beschikken over één alias (bijvoorbeeld: A of CNAME-records) zodat de gebruiker een algemene naam te zien krijgt.
 

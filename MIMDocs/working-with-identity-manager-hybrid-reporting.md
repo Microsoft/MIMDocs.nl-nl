@@ -4,18 +4,18 @@ description: Informatie over het combineren van on-premises en cloudgegevens in 
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 2/20/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 68df2817-2040-407d-b6d2-f46b9a9a3dbb
 ms.suite: ems
-ms.openlocfilehash: 18e4127b1d854a53734142bb58442627619491ef
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: fd0efd3e3d5c42f4b67d0abd42f6dab8254573e5
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "64517496"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79044341"
 ---
 # <a name="work-with-hybrid-reporting-in-identity-manager"></a>Werken met hybride rapportage in Identity Manager
 
@@ -51,12 +51,12 @@ De eerste drie Microsoft Identity Manager rapporten die beschikbaar zijn in Azur
 De vereisten voor het gebruik van Hybrid Reporting van Identity Manager worden weer gegeven in de volgende tabel:
 
 
-|                                         Vereiste                                         |                                                                                                                                                                                                                                                                                    Description                                                                                                                                                                                                                                                                                     |
+|                                         Vereiste                                         |                                                                                                                                                                                                                                                                                    Beschrijving                                                                                                                                                                                                                                                                                     |
 |---------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |                                      Azure AD Premium                                       |                                                                                                        Hybride rapportage is een Azure AD Premium functie en vereist Azure AD Premium. </br>Zie [aan de slag met Azure AD Premium](https://docs.microsoft.com/azure/active-directory/active-directory-get-started-premium)voor meer informatie. </br>Ontvang een [gratis proef versie van 30 dagen van Azure AD Premium](https://azure.microsoft.com/trial/get-started-active-directory/).                                                                                                         |
 |                     U moet een globale beheerder van uw Azure AD zijn                     |                                                                   Standaard kunnen alleen globale beheerders de agents installeren en configureren om aan de slag te gaan, de portal openen en bewerkingen uitvoeren binnen Azure. </br>**Belang rijk**: het account dat u gebruikt wanneer u de agents installeert, moet een werk-of school account zijn. Dit mag geen Microsoft-account zijn. Zie [registreren voor Azure als organisatie](https://docs.microsoft.com/azure/active-directory/sign-up-organization)voor meer informatie.                                                                   |
 | Hybride agent voor Identity Manager is geïnstalleerd op elke doel server van de identiteits Manager-service |                                                                                                                                                                                                       Voor hybride rapportage moeten de agents worden geïnstalleerd en geconfigureerd op de doel servers om de gegevens te kunnen ontvangen en bewakings-en analyse mogelijkheden te bieden.  </br>                                                                                                                                                                                                       |
-|                    Uitgaande verbinding met de service-eindpunten van Azure                     | Tijdens de installatie en runtime moet de agent verbinding hebben met service-eindpunten van Azure. Als uitgaande connectiviteit wordt geblokkeerd door firewalls, moet u ervoor zorgen dat de volgende eind punten worden toegevoegd aan de lijst toegestaan:<ul><li>\*.blob.core.windows.net </li><li>\*.servicebus.windows.net - Port: 5671 </li><li>\*.adhybridhealth.azure.com/</li><li><https://management.azure.com> </li><li><https://policykeyservice.dc.ad.msft.net/></li><li><https://login.windows.net></li><li><https://login.microsoftonline.com></li><li><https://secure.aadcdn.microsoftonline-p.com></li></ul> |
+|                    Uitgaande verbinding met de service-eindpunten van Azure                     | Tijdens de installatie en runtime moet de agent verbinding hebben met service-eindpunten van Azure. Als uitgaande connectiviteit wordt geblokkeerd door firewalls, moet u ervoor zorgen dat de volgende eind punten worden toegevoegd aan de lijst toegestaan:<ul><li>\*. blob.core.windows.net </li><li>\*. servicebus.windows.net-poort: 5671 </li><li>\*. adhybridhealth.azure.com/</li><li><https://management.azure.com> </li><li><https://policykeyservice.dc.ad.msft.net/></li><li><https://login.windows.net></li><li><https://login.microsoftonline.com></li><li><https://secure.aadcdn.microsoftonline-p.com></li></ul> |
 |                         Uitgaande verbindingen op basis van IP-adressen                         |                                                                                                                                                                                                                      Voor IP-adressen op basis van filteren op firewalls, raadpleegt u de [Azure IP-bereiken](https://www.microsoft.com/download/details.aspx?id=41653).                                                                                                                                                                                                                      |
 |                 SSL-inspectie voor uitgaand verkeer wordt gefilterd of uitgeschakeld                 |                                                                                                                                                                                                               De agent registratie stap of bewerkingen voor het uploaden van gegevens kunnen mislukken als er een SSL-inspectie of beëindiging voor uitgaand verkeer op de netwerklaag is.                                                                                                                                                                                                                |
 |                      Firewall poorten op de server waarop de-agent wordt uitgevoerd                       |                                                                                                                                                                                                          Om te communiceren met de Azure-service-eind punten, moeten de volgende firewall poorten zijn geopend voor de agent:<ul><li>TCP-poort 443</li><li>TCP-poort 5671</li></ul>                                                                                                                                                                                                          |
@@ -101,7 +101,7 @@ Nadat de rapportage agent is geïnstalleerd, worden de gegevens uit Identity Man
 
 3.  Selecteer in de lijst met beschik bare mappen voor uw abonnement de map Tenant.
 
-4.  Selecteer **Auditlogboeken**.
+4.  Selecteer **audit logboeken**.
 
 5.  Zorg ervoor dat de **MIM-service** is geselecteerd in de vervolg keuzelijst **categorie** .
 
@@ -114,7 +114,7 @@ Als u wilt stoppen met het uploaden van rapport controle gegevens van Identity M
 ## <a name="windows-events-used-for-hybrid-reporting"></a>Windows-gebeurtenissen die worden gebruikt voor hybride rapportage
 Gebeurtenissen die door Identity Manager worden gegenereerd, worden opgeslagen in het Windows-gebeurtenis logboek. U kunt de gebeurtenissen weer geven in de **Logboeken** door **Logboeken van de toepassing en Services** te selecteren > **aanvraag logboek van Identity Manager**. Elke aanvraag voor Identity Manager wordt geëxporteerd als een gebeurtenis in het Windows-gebeurtenis logboek in de JSON-structuur. U kunt het resultaat exporteren naar uw SIEM-systeem (Security Information and Event Management).
 
-|Gebeurtenistype|ID|Details van gebeurtenis|
+|Gebeurtenistype|Id|Details van gebeurtenis|
 |--------------|------|-----------------|
 |Informatie|4121|De identiteits Manager-gebeurtenis gegevens die alle gegevens van de aanvraag bevatten.|
 |Informatie|4137|De id-extensie van het Identity Manager-gebeurtenis 4121 als er te veel gegevens zijn voor één gebeurtenis. De koptekst in deze gebeurtenis wordt weer gegeven in de volgende indeling: `"Request: <GUID> , message <xxx> out of <xxx>`.|

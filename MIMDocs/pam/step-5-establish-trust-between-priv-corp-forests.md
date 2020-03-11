@@ -4,19 +4,19 @@ description: Vertrouwensrelatie tussen de PRIV- en CORP-forests instellen zodat 
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 11/29/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: eef248c4-b3b6-4b28-9dd0-ae2f0b552425
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 04195febdb721291e9dcf72f5bbda04923075596
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: 0cf952c93c0a7b95fd41939efc767e9e8c20be5e
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "64518274"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79043644"
 ---
 # <a name="step-5--establish-trust-between-priv-and-corp-forests"></a>Stap 5 –Een vertrouwensrelatie tussen het PRIV- en CORP-forest instellen
 
@@ -87,7 +87,7 @@ Voor elk bestaand forest moet u voor PRIV-beheerders en de controleservice leest
     ```
     In de uitvoer met **SID-geschiedenis wordt ingeschakeld voor deze vertrouwensrelatie** of **SID-geschiedenis is al ingeschakeld voor deze vertrouwensrelatie** worden weergegeven.
 
-    Ook moet **Filteren op SID's is niet ingeschakeld voor deze vertrouwensrelatie** worden weergegeven in de uitvoer. Zie [Disable SID filter quarantining](http://technet.microsoft.com/library/cc772816.aspx) (In quarantaine plaatsen voor SID-filters uitschakelen) voor meer informatie.
+    Ook moet **Filteren op SID's is niet ingeschakeld voor deze vertrouwensrelatie** worden weergegeven in de uitvoer. Zie [Disable SID filter quarantining](https://technet.microsoft.com/library/cc772816.aspx) (In quarantaine plaatsen voor SID-filters uitschakelen) voor meer informatie.
 
 ## <a name="start-the-monitoring-and-component-services"></a>De services voor controle en onderdelen starten
 

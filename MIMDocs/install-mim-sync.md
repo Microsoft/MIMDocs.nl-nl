@@ -4,19 +4,19 @@ description: Ga aan de slag met de MIM 2016-onderdelen en installeer en configur
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 10/18/2019
 ms.topic: conceptual
 ms.prod: microsoft-identity-manager
 ms.assetid: 2585e9c5-ce34-46c7-bdcf-8c08773901dc
 ms.reviewer: markwahl-msft
 ms.suite: ems
-ms.openlocfilehash: b9bc580710a13b3a0868b0580d55469a753e7f33
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: 8e4371c8d3caac06f7200d8439b30b7aa978a336
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73568082"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79042454"
 ---
 # <a name="install-mim-2016-mim-synchronization-service"></a>MIM 2016: MIM-synchronisatieservice installeren
 
@@ -59,7 +59,7 @@ Stel eerst het installatiepakket in voordat u de Microsoft Identity Manager 2016
 
    1.  De SQL Server bevindt zich op: **een externe computer met de** naam **corpsql.contoso.com**.
 
-   2.  Het SQL Server-exemplaar is: **het standaardexemplaar**
+   2.  Het SQL Server-exemplaar is: **het standaard exemplaar**
 
    ![Afbeelding voor de databaseverbinding](media/install-mim-sync/MIM_Install3.png)
 

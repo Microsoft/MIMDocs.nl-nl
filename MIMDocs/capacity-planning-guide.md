@@ -4,19 +4,19 @@ description: Met de informatie in deze handleiding leert u de variabelen te begr
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 10/12/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 3ac5b990-1678-4996-996d-cbd84b8426b4
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: b14066543c036eb4ec8a350843743b87902a13a1
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: 15eb35d01ed5c5c6e125c45f238bb2f7a7c564d7
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73636984"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79042114"
 ---
 # <a name="capacity-planning-guide"></a>Handleiding voor capaciteitsplanning
 
@@ -26,7 +26,7 @@ Voordat u aan de slag gaat met MIM kunt u deze handleiding, samen met testomgevi
 
 Als u nog niet bekend bent met MIM 2016 en de bijbehorende onderdelen, kunt u het beste informatie over [Microsoft Identity Manager 2016](microsoft-identity-manager-2016.md) lezen voor u doorgaat.
 
-## <a name="overview"></a>Overview
+## <a name="overview"></a>Overzicht
 
 Er zijn een aantal factoren die van invloed kunnen zijn op de totale capaciteit en prestaties van uw Microsoft Identity Manager-implementatie:
 
@@ -37,7 +37,7 @@ Er zijn een aantal factoren die van invloed kunnen zijn op de totale capaciteit 
 
 De belangrijkste factoren die van invloed zijn op de capaciteit en prestaties van een MIM 2016-implementatie, worden in de volgende tabel behandeld:
 
-| Ontwerpfactor | Aandachtspunten |
+| Ontwerpfactor | Overwegingen |
 | ------------- | -------------- |
 | Topologie | De distributie van de MIM-services op de computers in het netwerk. |
 | Hardware | De fysieke hardware (fysiek of virtueel) voor elk MIM-onderdeel, inclusief CPU, geheugen, netwerk adapter en configuratie van harde schijven. |

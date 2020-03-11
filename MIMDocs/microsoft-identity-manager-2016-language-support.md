@@ -4,17 +4,17 @@ description: Een lijst met talen die worden ondersteund door Microsoft Identity 
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 05/23/2018
 ms.topic: conceptual
 ms.prod: microsoft-identity-manager
 ms.assetid: 50345fda-56d7-4b6e-a861-f49ff90a8376
-ms.openlocfilehash: 5704e978734bea13f1a362aeb203810f3864205a
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: 2caf9f06067c229d585019f912a7ff4e00fad3e6
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68701477"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79044120"
 ---
 # <a name="supported-languages"></a>Ondersteunde talen
 
@@ -33,33 +33,33 @@ Het taal pakket voor de micro soft MIM-service en-Portal biedt ondersteuning voo
 |       Taal        | FIM (4.3. x. x)/MIM (4.4. xx) | MIM (4.5. x. x) |
 |-----------------------|--------------------------|--------------|
 |       Bulgaars       |          bg-BG           |      bg      |
-| Chinees (vereenvoudigd)  |          zh-CN           |   zh-hans    |
+| Chinees (Vereenvoudigd)  |          zh-CN           |   zh-hans    |
 |   Chinees (Taiwan)    |          zh-TW           |   zh-hant    |
-|       Kroatisch        |          hr-HR           |      uur      |
-|         Tsjechisch         |          cs-CZ           |      cs      |
-|        Danish         |          da-DK           |      da      |
-|         Dutch         |          NL-NL           |      nl      |
+|       Kroatisch        |          hr-HR           |      afdeling      |
+|         Tsjechisch         |          cs-CZ           |      Support      |
+|        Deens         |          da-DK           |      da      |
+|         Nederlands         |          NL-NL           |      nl      |
 |       Estisch        |          et-EE           |      et      |
-|        French         |          fr-FR           |      fr      |
-|        Finnish        |          fi-FI           |      fi      |
-|        German         |          de-DE           |      de      |
-|         Grieks         |          el GR           |      el      |
-|         Hindi         |          hi-IN           |      hi      |
+|        Frans         |          fr-FR           |      nl      |
+|        Fins        |          fi-FI           |      spanning      |
+|        German         |          de-DE           |      normalis      |
+|         Grieks         |          el GR           |      ei      |
+|         Hindi         |          hi-IN           |      Hallo      |
 |       Hongaars       |          hu-HU           |      hu      |
-|        Italian        |          IT-IT           |      it      |
-|       Japanese        |          ja-JP           |      ja      |
-|        Korean         |          ko-KR           |      ko      |
+|        Italian        |          IT-IT           |      ,      |
+|       Japans        |          ja-JP           |      Japan      |
+|        Koreaans         |          ko-KR           |      ko      |
 |      Litouws       |          lt-LT           |      lt      |
 |        Lets        |          lv-LV           |      lv      |
-|       Norwegian       |          nb-NO           |    nb-NO     |
-|        Polish         |          pl-PL           |      pl      |
+|       Noors       |          nb-NO           |    nb-NO     |
+|        Pools         |          pl-PL           |      pl      |
 | Portugees (Portugal) |          pt-PT           |      pt      |
 |  Portugees (Brazilië)  |          pt-BR           |    pt-BR     |
-|        Russian        |          ru-RU           |      ru      |
-|       Roemeens        |          ro-RO           |      ro      |
-|        Spanish        |          es-ES           |      Ja      |
+|        Russisch        |          ru-RU           |      ru      |
+|       Roemeens        |          ro-RO           |      Roll      |
+|        Spaans        |          es-ES           |      s      |
 |        Slowaaks         |          sk-SK           |      SK      |
-|        Swedish        |          SV-SE           |      sv      |
+|        Zweeds        |          SV-SE           |      SV      |
 |       Sloveens       |          sl-SI           |      lineaire      |
 |   Servisch-Servië    |  sr-Latn-CS (verouderd)  |  sr-Latn-RS  |
 |         Thais          |          e-e           |      e      |
@@ -71,45 +71,45 @@ Het micro soft Certificate Management ondersteunt de volgende negen talen.
 
 |Taal|FIM (4.3. x. x)/MIM (4.4. xx)|Nieuwe MIM (4.5. x. x)
 |-----|-----|-----|-----|
-|Chinees (vereenvoudigd)|zh-CN|zh-hans|
+|Chinees (Vereenvoudigd)|zh-CN|zh-hans|
 |Chinees (Taiwan)|zh-TW|zh-hant|
-|Dutch|NL-NL|nl|
-|French|fr-FR|fr|
-|German|de-DE|de|
-|Italian|IT-IT|it|
-|Japanese|ja-JP|ja|
+|Nederlands|NL-NL|nl|
+|Frans|fr-FR|nl|
+|German|de-DE|normalis|
+|Italian|IT-IT|,|
+|Japans|ja-JP|Japan|
 |Portugees (Portugal)|pt-PT|pt-PT|
-|Spanish|es-ES|Ja|
+|Spaans|es-ES|s|
 
 ## <a name="certificate-management-modern-application"></a>Moderne toepassing voor certificaat beheer  
 De micro soft Certificate Management moderne-toepassing ondersteunt de volgende 33 talen. 
 
 |Taal | [1.0.225.104](https://www.microsoft.com/en-us/download/details.aspx?id=54954) | |
 |-----|-----|-----|-----|
-|Dutch|NL-NL|nl|
-|Chinees (vereenvoudigd)|zh-CN|zh-hans|
+|Nederlands|NL-NL|nl|
+|Chinees (Vereenvoudigd)|zh-CN|zh-hans|
 |Chinees (Taiwan)|zh-TW|zh-hant|
-|Tsjechisch|cs-CZ|cs|
-|Danish|da-DK|da|
-|French|fr-FR|fr|
-|Finnish|fi-FI|fi|
-|German|de-DE|de|
-|Grieks|el GR|el|
+|Tsjechisch|cs-CZ|Support|
+|Deens|da-DK|da|
+|Frans|fr-FR|nl|
+|Fins|fi-FI|spanning|
+|German|de-DE|normalis|
+|Grieks|el GR|ei|
 |Hongaars|hu-HU|hu|
-|Italian|IT-IT|it|
-|Japanese|ja-JP|ja|
-|Korean|ko-KR|ko|
-|Norwegian|nb-NO|nb-NO|
-|Polish|pl-PL|pl|
+|Italian|IT-IT|,|
+|Japans|ja-JP|Japan|
+|Koreaans|ko-KR|ko|
+|Noors|nb-NO|nb-NO|
+|Pools|pl-PL|pl|
 |Portugees (Portugal)|pt-PT|pt|
 |Portugees (Brazilië)|pt-BR|pt-BR|
-|Russian|ru-RU|ru|
-|Roemeens|ro-RO|ro|
-|Spanish|es-ES|Ja|
-|Swedish|SV-SE|sv|
+|Russisch|ru-RU|ru|
+|Roemeens|ro-RO|Roll|
+|Spaans|es-ES|s|
+|Zweeds|SV-SE|SV|
 |Turks|tr-TR|formulieren|
 
 ## <a name="next-steps"></a>Volgende stappen
 
 - [Eerste implementatie](microsoft-identity-manager-deploy.md)
-- [Versiegeschiedenis](reference/version-history.md)
+- [Versie geschiedenis](reference/version-history.md)

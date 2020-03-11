@@ -4,17 +4,17 @@ description: BHOLD Integration-module Voeg Self-Service Role Management toe aan 
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 09/12/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
-ms.openlocfilehash: 317c9ae4c940a509b6ac328cd5bb7cd7baa4dde9
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: 3005e06606ec4b3b6854003213c712770376b35d
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "64516037"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79042199"
 ---
 # <a name="bhold-fimmim-integration-installation"></a>Installatie van BHOLD FIM/MIM-integratie
 
@@ -45,7 +45,7 @@ Bovendien moet u voor bereid zijn om de informatie op te geven die door de insta
 
 | **Item**                            | **Beschrijving**                                                                                                                                                                                                               | **Waarde**                                                                                                                                                                                                                                                                                                            |
 |-------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Beveiligings provider op domein gebruiken** | Hiermee geeft u op dat Active Directory Domain Services beveiliging de toegang tot BHOLD core beheert.                                                                                                                    | Schakel het selectievakje in. **Belang rijk:** Als dit selectie vakje niet is ingeschakeld, mislukt de installatie.                                                                                                                                                                                                                   |
+| **Beveiligings provider op domein gebruiken** | Hiermee geeft u op dat Active Directory Domain Services beveiliging de toegang tot BHOLD core beheert.                                                                                                                    | Schakel het selectie vakje in. **Belang rijk:** Als dit selectie vakje niet is ingeschakeld, mislukt de installatie.                                                                                                                                                                                                                   |
 | **Domein**                          | Hiermee geeft u het domein op dat het **Service account** bevat dat u hebt gemaakt bij het installeren van de BHOLD-kern. Zie [BHOLD Core Installation](https://technet.microsoft.com/library/jj134095(v=ws.10).aspx)(Engelstalig) voor meer informatie. | De domein naam wordt automatisch geleverd door de wizard. Wijzig de naam alleen als deze onjuist is. **Belang rijk:** Geef de domein naam op met behulp van de NetBIOS (korte) naam, niet de Fully Qualified Domain Name (FQDN). Als de FQDN van het domein bijvoorbeeld fabrikam.com is, geeft u de domein naam op als FABRIKAM. |
 | **Gebruikersnaam**                        | Hiermee geeft u de aanmeldings naam van het gebruikers account van de BHOLD-basis service.                                                                                                                                                              | Schrijf hier de naam van het gebruikers account:                                                                                                                                                                                                                                                                                    |
 | **Wachtwoord**                        | Hiermee geeft u het wacht woord van het Service gebruikers account.                                                                                                                                                                           | Schrijf hier het wacht woord: **belang rijk:** zorg ervoor dat u dit wacht woord op een verborgen, veilige locatie blijft.                                                                                                                                                                                                                  |
@@ -95,7 +95,7 @@ Voor een juiste werking moet de BHOLD-service account voor BHOLD FIM-integratie 
 
 2.  Klik op **Start**en klik vervolgens op **Internet-Exporer**.
 
-3.  Typ in de adresbalk <https://localhost> als SharePoint is geconfigureerd voor gebruik van SSL-beveiliging, anders typt <http://localhost>.
+3.  In de adres balk typt u <https://localhost> als share point is geconfigureerd voor het gebruik van SSL-beveiliging, anders typt u <http://localhost>.
 
 4.  Klik aan de linkerkant van de pagina **team site** op **personen en groepen**.
 
@@ -115,27 +115,27 @@ Als de FIM-Portal is geconfigureerd voor het gebruik van SSL-beveiliging, moet u
 
 De volgende tabel bevat de bestanden en de oorspronkelijke en gewijzigde versies van de teken reeksen die moeten worden bewerkt.
 
-| **File**                  | **Oorspronkelijke teken reeks**                                                                                                                   | **Gewijzigde teken reeks**                                                                                                                                |
+| **Bestand**                  | **Oorspronkelijke teken reeks**                                                                                                                   | **Gewijzigde teken reeks**                                                                                                                                |
 |---------------------------|---------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
 | Analytics. aspx            |   http://< BHOLD_Server >/bhold/Analytics/index_fim. html | https://< BHOLD_Server_FQDN >/bhold/Analytics/index_fim. html       |
 | AttestationCampaigns. aspx |    http://< BHOLD_Server >/bhold/Attestation/Campaigns.aspx? hideMenu = 1 | https://< BHOLD_Server_FQDN >/bhold/Attestation/Campaigns.aspx? hideMenu = 1 | 
 | AttestationMain. aspx      |  http://< BHOLD_Server >/bhold/Attestation/Dashboard.aspx? hideMenu = 1        | https://< BHOLD_Server_FQDN >/bhold/Attestation/Dashboard.aspx? hideMenu = 1 |
 | Reporting. aspx            | http://< BHOLD_Server >/bhold/Reporting/index_fim. html |  https://< BHOLD_Server_FQDN >/bhold/Reporting/index_fim. html |
-| Selfservice. aspx          | RoleExchangePoint=http://\<*FIM_Server*\>: \<*FIM_Port*\>/BHOLD RoleExchangePoint/BHOLDRoleExchangePoint.svc,TransportMode=Transport | RoleExchangePoint=https://\<*FIM_Server_FQDN*\>: \<*FIM_SSL_Port\>* \>/BHOLD/RoleExchangePoint/ BHOLDRoleExchangePoint.svc,TransportMode=Transport |
+| Selfservice. aspx          | RoleExchangePoint = http://\<*FIM_Server*\>: \<*FIM_Port*\>/BHOLD/RoleExchangePoint/BHOLDRoleExchangePoint. SVC, TransportMode = Trans Port | RoleExchangePoint = https://\<*FIM_Server_FQDN*\>: \<*FIM_SSL_Port*\>\>/BHOLD/RoleExchangePoint/BHOLDRoleExchangePoint. SVC, TransportMode = Trans Port |
 
 Waarbij:
 
--   *\<BHOLD_Server\>* geeft de naam van de server BHOLD zoals gevonden in de oorspronkelijke versie van het bestand
+-   *\<BHOLD_Server\>* specificeert de naam van de BHOLD-server, zoals gevonden in de oorspronkelijke versie van het bestand
 
--   *\<MIM_Server\>* geeft de naam van de FIM-server zoals gevonden in de oorspronkelijke versie van het bestand
+-   *\<MIM_Server\>* specificeert de naam van de FIM-server, zoals gevonden in de oorspronkelijke versie van het bestand
 
--   *\<BHOLD_Server_FQDN\>* Hiermee geeft u de volledig gekwalificeerde domeinnaam (FQDN) van de BHOLD-server
+-   *\<BHOLD_Server_FQDN\>* specificeert de Fully QUALIFIED domain name (FQDN) van de BHOLD-server
 
--   *\<MIM_Port\>* geeft u het poortnummer van de FIM-server zoals gevonden in de oorspronkelijke versie van het bestand
+-   *\<MIM_Port\>* Hiermee geeft u het poort nummer van de FIM-server op, zoals gevonden in de oorspronkelijke versie van het bestand.
 
--   *\<MIM_Server_FQDN\>* geeft de FQDN van de FIM-server
+-   *\<MIM_Server_FQDN\>* Hiermee geeft u de FQDN-naam van de FIM-server op
 
--   *\<MIM_SSL_Port\>* geeft een andere poort voor gebruik met SSL op de FIM-server
+-   *\<MIM_SSL_Port\>* een andere poort opgeeft voor gebruik met SSL op de FIM-server
 
 ### <a name="enable-approval-workflows-in-bhold-core"></a>Goedkeurings werk stromen inschakelen in BHOLD core
 
@@ -157,7 +157,7 @@ Als een goed keurder voor een Self-Service Role-aanvraag niet wordt opgegeven do
 
 2.  Klik op **Start**en vervolgens op **Internet Explorer**.
 
-3.  Typ in de adresbalk van Internet Explorer <http://localhost:5151/bhold/core>, en druk vervolgens op ENTER.
+3.  Typ <http://localhost:5151/bhold/core>in de adres balk van Internet Explorer en druk op ENTER.
 
 4.  Klik op de start pagina van de BHOLD-kern onder **kenmerk def**op **kenmerk typen**.
 
@@ -189,7 +189,7 @@ Als een goed keurder voor een Self-Service Role-aanvraag niet wordt opgegeven do
 
 18. Klik op de pagina **organisatie-eenheid/root** op **wijzigen**.
 
-19. Op de **pagina kenmerken van organisatie-eenheid wijzigen/hoofd niveau** , in **goed keurder**, typt u het domein en de gebruikers naam van de gebruiker die aanvragen voor het toewijzen van rollen moet goed keuren, in de indeling *\<domein\>* \\ *\<gebruikers\>* , waarbij *\<domein\>* de aanmeldings naam van de *gebruiker is.*
+19. Op de **pagina kenmerken van organisatie-eenheid wijzigen/hoofd niveau** , in **goed keurder**, typt u het domein en de gebruikers naam van de gebruiker die aanvragen voor het toewijzen van rollen moet goed keuren, in de indeling *\<domein\>* \\ *\<gebruikers\>* , waarbij *\<domein\>* de aanmeldings naam van de *gebruiker is.* \<\>
 20. Klik op **OK**.
 
 > [!IMPORTANT]

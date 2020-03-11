@@ -4,19 +4,19 @@ description: De PRIV-domeincontroller voorbereiden voor de bastionomgeving waari
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 09/14/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 0e9993a0-b8ae-40e2-8228-040256adb7e2
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 0364b0d14d08ab3af32010675e0ba80d39404342
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: 97b425fc4444b241ddce99e7d5e3abf564daf245
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "64518082"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79043695"
 ---
 # <a name="step-2---prepare-the-first-priv-domain-controller"></a>Stap 2: de eerste PRIV-domeincontroller voorbereiden
 
@@ -34,7 +34,7 @@ In dit gedeelte stelt u een virtuele machine in om te fungeren als een domeincon
 
 Installeer Windows Server 2012 R2 op een andere nieuwe virtuele machine waarop geen software is geïnstalleerd om een computer 'PRIVDC' te maken.
 
-1. Selecteer deze optie om een aangepaste installatie (niet een upgrade) van Windows Server uit te voeren. Geef bij de installatie de editie **Windows Server 2012 R2 Standard x64 (server met een GUI)** op. _Selecteer niet_ **datacentrum of serverkern**.
+1. Selecteer deze optie om een aangepaste installatie (niet een upgrade) van Windows Server uit te voeren. Wanneer u installeert, geeft u **Windows Server 2012 R2 Standard (server met een GUI)** op. _Selecteer niet_ **Data Center of Server Core**.
 
 2. Lees en accepteer de licentievoorwaarden.
 
@@ -237,7 +237,7 @@ Configureer met PowerShell op PRIVDC het doorsturen van de DNS-naam zodat het PR
    ```
 
 > [!NOTE]
-> In de volgende stappen van dit document wordt beschreven hoe u MIM 2016-serveronderdelen op één computer installeert. Als u van plan bent een andere server toe te voegen voor maximale beschikbaarheid, moet u Kerberos extra configureren zoals beschreven in [FIM 2010: Kerberos Authentication Setup](http://social.technet.microsoft.com/wiki/contents/articles/3385.fim-2010-kerberos-authentication-setup.aspx) (FIM 2010: Kerberos-verificatie instellen).
+> In de volgende stappen van dit document wordt beschreven hoe u MIM 2016-serveronderdelen op één computer installeert. Als u van plan bent een andere server toe te voegen voor maximale beschikbaarheid, moet u Kerberos extra configureren zoals beschreven in [FIM 2010: Kerberos Authentication Setup](https://social.technet.microsoft.com/wiki/contents/articles/3385.fim-2010-kerberos-authentication-setup.aspx) (FIM 2010: Kerberos-verificatie instellen).
 
 ### <a name="configure-delegation-to-give-mim-service-accounts-access"></a>Delegatie configureren om MIM-serviceaccounts toegang te geven
 

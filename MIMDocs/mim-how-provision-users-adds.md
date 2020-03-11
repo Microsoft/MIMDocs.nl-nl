@@ -4,17 +4,17 @@ description: Bekijk het proces om gebruikers te maken in AD DS met Microsoft Ide
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 08/18/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
-ms.openlocfilehash: 77f1eb5d8355472c7aee7bc9f389ca8b24ab76a9
-ms.sourcegitcommit: 1ca298d61f6020623f1936f86346b47ec5105d44
+ms.openlocfilehash: 149339a6e1029f01378a518a98029c1d588de6f9
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76256611"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79044171"
 ---
 # <a name="how-do-i-provision-users-to-ad-ds"></a>Hoe kan ik gebruikers inrichten voor AD DS?
 
@@ -45,7 +45,7 @@ In dit document wordt ervan uitgegaan dat u een exemplaar van MIM kunt uitvoeren
 
 De inhoud van dit document dient als een uitbreiding op deze inleidende documenten.
 
-### <a name="scope"></a>Scope
+### <a name="scope"></a>Bereik
 
 
 Het scenario dat in dit document wordt beschreven is vereenvoudigd om tegemoet te komen aan de vereisten van een technische basisomgeving. Het document is erop gericht de lezer kennis bij te brengen over de hier besproken concepten en technologieën.
@@ -231,7 +231,7 @@ Maak aan de hand van de vorige tabel uitvoerprofielen voor elke beheeragent.
 > 
 > 
 > [!Important]
->  Controleer of het inrichten in uw omgeving is ingeschakeld. U kunt dit doen door het script uit te voeren met Windows Power shell om inrichting (https://go.microsoft.com/FWLink/p/?LinkId=189660) in te scha kelen.
+>  Controleer of het inrichten in uw omgeving is ingeschakeld. U kunt dit doen door het script uit te voeren met Windows Power shell om inrichting (https://go.microsoft.com/FWLink/p/?LinkId=189660)in te scha kelen.
 
 
 ## <a name="configuring-the-fim-service"></a>De FIM-service configureren
@@ -251,14 +251,14 @@ In de volgende tabellen wordt de configuratie getoond van de vereiste inrichting
 
 | Configuratie van de synchronisatieregel                                                                         |                                                                             |                                                           
 |------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------|-----------------------------------------------------------|
-| Name                                                                                                       | Regel voor uitgaande synchronisatie van Active Directory-gebruiker                         |                                                          
-| Description                                                                                               |                                                                             |                                                           
+| Naam                                                                                                       | Regel voor uitgaande synchronisatie van Active Directory-gebruiker                         |                                                          
+| Beschrijving                                                                                               |                                                                             |                                                           
 | Prioriteit                                                                                                | 2                                                                           |                                                           
 | Richting gegevensstroom   | Uitgaand             |       
 | Afhankelijkheid       |         |                                         
 
 
-| Scope |                                                                             |                                                           
+| Bereik |                                                                             |                                                           
 |--------|-------|
 | Resourcetype voor de metaverse | persoon |                                                         
 | Extern systeem                   |Fabrikam ADMA                                                               |                                                       
@@ -268,7 +268,7 @@ In de volgende tabellen wordt de configuratie getoond van de vereiste inrichting
 
 | Relatie ||
 |------------|---------|
-| Resource maken in extern systeem                                                                         | Waar                                                                        |                                                           
+| Resource maken in extern systeem                                                                         | True                                                                        |                                                           
 | Ongedaan maken van inrichting inschakelen                                                                                      | False                                                                       |                                                           
 
 | Criteria voor relatie                                                                                      | |
@@ -302,14 +302,14 @@ Het doel van de AD-inrichtingswerkstroom is om de inrichtingssynchronisatieregel
 
 | Werkstroomconfiguratie               |                                                                 |
 |--------------------------------------|-----------------------------------------------------------------|
-| Name                                 | Inrichtingswerkstroom van Active Directory-gebruiker                     |
-| Description                          |                                                                 |
+| Naam                                 | Inrichtingswerkstroom van Active Directory-gebruiker                     |
+| Beschrijving                          |                                                                 |
 | Werkstroomtype                        | Actie                                                          |
 | Uitvoeren bij beleidsupdates                 | False                                                           |
 
 | Synchronisatieregel                 |                                                                 |
 |--------------------------------------|-----------------------------------------------------------------|
-| Name                                 | Regel voor uitgaande synchronisatie van Active Directory-gebruiker             |
+| Naam                                 | Regel voor uitgaande synchronisatie van Active Directory-gebruiker             |
 | Actie                               | Toevoegen                                                             |
 
 
@@ -321,8 +321,8 @@ De vereiste MPR is van het type Setovergang en wordt getriggerd wanneer een reso
 
 | MPR-configuratie                    |                                                             |
 |--------------------------------------|-------------------------------------------------------------|
-| Name                                 | Beheerbeleidsregel voor inrichting van AD-gebruikers                 |
-| Description                          |                                                             |
+| Naam                                 | Beheerbeleidsregel voor inrichting van AD-gebruikers                 |
+| Beschrijving                          |                                                             |
 | Type                                 | Setovergang                                              |
 | Verleent toestemmingen                   | False                                                       |
 | Uitgeschakeld                             | False                                                       |
@@ -386,7 +386,7 @@ Het doel van deze sectie is het testen van de feitelijke configuratie. Voor het 
 
 In de volgende tabel worden de eigenschappen van de voorbeeldgebruiker vermeld. Maak een voorbeeld gebruiker op basis van de gegevens in de onderstaande tabel.
 
-| Kenmerk                              | Value                                                          |
+| Kenmerk                              | Waarde                                                          |
 |----------------------------------------|----------------------------------------------------------------|
 | Voornaam                             | Julia                                                         |
 | Achternaam                              | Steen                                                          |
@@ -499,8 +499,8 @@ Open de OE FIMObjects om te controleren dat de voorbeeldgebruiker is ingericht v
 
 ![de gebruiker verifiëren in de OE FIMObjects](media/how-provision-users-adds/image033.jpg)
 
-<a name="summary"></a>Samenvatting
-=======
+## <a name="summary"></a>Samenvatting
+
 
 Het doel van dit document is u een inleiding te geven tot de belangrijkste bouwstenen voor het synchroniseren van een gebruiker in MIM met AD DS. Voor de initiële test moet u beginnen met het minimaal aantal vereiste kenmerken om een taak te voltooien. U voegt meer kenmerken aan het scenario toe als de algemene stappen werken zoals verwacht. Door de complexiteit tot een minimum te beperken, wordt het oplossen van problemen vereenvoudigd.
 
@@ -512,11 +512,7 @@ Zie [A Method to Remove Orphaned ExpectedRuleEntry Objects from Your Environment
 In een typisch synchronisatiescenario met AD DS als synchronisatiedoel, is MIM niet gezaghebbend voor alle kenmerken van een object. Als u bijvoorbeeld gebruikersobjecten in AD DS beheert door middel van FIM, moeten ten minste het domein en de objectSID-kenmerken worden bijgedragen door de AD DS-beheeragent.
 De accountnaam, het domein en de objectSID-kenmerken zijn vereist als u een gebruiker in staat wil stellen zich aan te melden bij de FIM-portal. Als u deze kenmerken vanuit AD DS wilt invullen, is er een aanvullende regel voor inkomende synchronisatie voor het AD DS-connectorgebied vereist. Als u objecten met meerdere bronnen voor kenmerkwaarden beheert, moet u ervoor zorgen dat de prioriteit van de kenmerkstroom correct wordt geconfigureerd. Als de prioriteit van de kenmerkstroom niet correct wordt geconfigureerd, blokkeert de synchronisatie-engine het invullen van kenmerkwaarden. In het artikel [Prioriteit kenmerkstroom](https://go.microsoft.com/FWLink/p/?LinkId=189675) vindt u meer informatie over prioriteit van de kenmerkstroom.
 
-<a name="see-also"></a>Zie ook
-=========
-
-<a name="other-resources"></a>Andere resources
----------------
+## <a name="next-steps"></a>Volgende stappen
 
 [Using FIM to Enable or Disable Accounts in Active Directory](https://go.microsoft.com/FWLink/p/?LinkId=189670) (FIM gebruiken voor het in- of uitschakelen van accounts in Active Directory)
 

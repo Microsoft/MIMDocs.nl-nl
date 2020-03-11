@@ -4,17 +4,17 @@ description: Kern document van de installatie van de BHOLD-Suite
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 09/07/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
-ms.openlocfilehash: e4b18d3caa866767524c56ce184e787a190e9390
-ms.sourcegitcommit: 8ba50298cef65e8cc90402282e88410fad86b4d9
+ms.openlocfilehash: c4dfb4184292ba1b5da8c4e3e176d53e6a885ed8
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 12/18/2019
-ms.locfileid: "75187324"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79042267"
 ---
 # <a name="bhold-core-installation"></a>BHOLD Core-installatie
 
@@ -30,10 +30,10 @@ De BHOLD-kern module vormt de basis van micro soft BHOLD Suite. U moet de BHOLD-
 
 |          |        |          |
 |----------|--------|----------|
-|**Component** |**Minimum** | **Aanbevolen** |
+|**Component** |**Maal** | **Aanbevelingen** |
 |Processor | 64-bits processor | Multicore 64-bits processor |
 | Geheugen |3 GB | 6 GB of meer |
-|Opslag| 30 GB beschikbaar |Is afhankelijk van de implementatie grootte |
+|Volgende| 30 GB beschikbaar |Is afhankelijk van de implementatie grootte |
 |Netwerk adapter| 100 Mbps-verbinding met SQL en Forefront Identity Manager (FIM)-server | 1 Gbps-verbinding met SQL-en FIM-server|
 
 Deze aanbevelingen zijn gebaseerd op typische implementaties en nemen geen rekening met andere toepassingen die op de server worden uitgevoerd. Mogelijk moet u op basis van uw specifieke omgeving hogere onderdelen gebruiken.
@@ -70,7 +70,7 @@ De BHOLD-kern module moet kunnen worden aangemeld bij het domein met een gebruik
 
 3.  Typ in het dialoog venster **Nieuw object – groep** , in **groeps naam**, de naam van de groep (BHOLD standaard: BHOLDApplicationGroup) en klik vervolgens op **OK**.
 
-4.  Klik met de rechter muisknop op **gebruikers**, wijs **Nieuw**aan en klik vervolgens op **gebruiker**.
+4.  Klik met de rechtermuisknop op **Gebruikers**, wijs **Nieuw** aan en klik op **Gebruiker**.
 
 5.  Typ bij **volledige naam**een naam die u helpt bij het identificeren van het account, bijvoorbeeld BHOLD Core-Service account.
 
@@ -96,7 +96,7 @@ Voordat u begint met het installeren van de BHOLD-kern module, moet u voor berei
 
 | **Item**                                    | **Beschrijving**                                                                                                                                                                                                                                                                                             | **Waarde**                                                                                                                                                          |
 |---------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Beveiligings provider op domein/computer gebruiken** | Hiermee geeft u op dat Active Directory Domain Services beveiliging de toegang tot BHOLD core beheert.                                                                                                                                                                                                  | Schakel het selectievakje in. **Belang rijk:** Als dit selectie vakje niet is ingeschakeld, mislukt de installatie.                                                                 |
+| **Beveiligings provider op domein/computer gebruiken** | Hiermee geeft u op dat Active Directory Domain Services beveiliging de toegang tot BHOLD core beheert.                                                                                                                                                                                                  | Schakel het selectie vakje in. **Belang rijk:** Als dit selectie vakje niet is ingeschakeld, mislukt de installatie.                                                                 |
 | **Domein**                                  | Hiermee geeft u het domein op dat de BHOLD-server, het service account en de toepassings groep bevat. **Belang rijk:** Geef de domein naam op met behulp van de NetBIOS (korte) naam, niet de Fully Qualified Domain Name (FQDN). Als de FQDN van het domein bijvoorbeeld fabrikam.com is, geeft u de domein naam op als CONTOSO. | Schrijf hier de domein naam:                                                                                                                                        |
 | **Toepassings groep**                       | Hiermee geeft u de naam van de beveiligings groep die u eerder hebt gemaakt in de [vereiste gebruiker en groep](https://technet.microsoft.com/library/jj134095(v=ws.10).aspx#rug).                                                                                                                                  | Schrijf hier de groeps naam:                                                                                                                                         |
 | **Service gebruiker**                            | Hiermee geeft u de aanmeldings naam op van het Service gebruikers account dat u eerder hebt gemaakt in de [vereiste gebruiker en groep](https://technet.microsoft.com/library/jj134095(v=ws.10).aspx#rug).                                                                                                                      | Schrijf hier de naam van het gebruikers account:                                                                                                                                  |
@@ -171,13 +171,13 @@ Als de netwerk naam die wordt gebruikt om verbinding te maken met de BHOLD-websi
 > [!IMPORTANT]
 > Als de BHOLD-kern module is geïnstalleerd op dezelfde computer als de FIM-Portal, moet u DNS-bron records (CNAME of A) met verschillende hostnamen maken voor de servers met BHOLD core en de server waarop de FIM-Portal wordt uitgevoerd. Er kan slechts één SPN tot stand worden gebracht voor een bepaald service-type/server-alias paar, waardoor BHOLD core en de FIM-Portal afzonderlijke Spn's vereisen, omdat deze doorgaans onder verschillende accounts worden uitgevoerd. De opdracht setspn meldt een fout melding als er al een SPN is ingesteld onder een ander account.
 
-Lidmaatschap van **Domeinadministrators**, of gelijkwaardig, is de minimale vereiste om deze procedure te voltooien.
+Lidmaatschap van **Domeinadministrators**, of gelijkwaardig is vereist als u deze procedure wilt uitvoeren.
 
 #### <a name="to-establish-the-spn-of-the-bhold-website"></a>De SPN van de BHOLD-website maken
 
 1.  Klik op de Active Directory Domain Services domein controller op **Start**, klik op **alle Program ma's**, klik op **accessoires**, klik met de rechter muisknop op **opdracht prompt**en klik vervolgens op **als administrator uitvoeren**.
 
-2.  Typ de volgende opdracht achter de opdrachtprompt en druk op ENTER: setspn – S HTTP/ *\<networkalias\> \<domein\>* \\ *\<accountname\>* waar:
+2.  Typ de volgende opdracht bij de opdracht prompt en druk vervolgens op ENTER: Setspn-S HTTP/ *\<networkalias\> \<domein\>* \\ *\<accountnaam\>* waar:
 
     -   *\<networkalias\>* is het adres dat clients gebruiken om contact op te nemen met de BHOLD-website
 
@@ -196,7 +196,7 @@ Als u wilt controleren of de installatie van de BHOLD-kern module is voltooid, o
 | **Dagen tussen ABA-uitvoering**     | Stel in op een geheel getal van twee cijfers om het interval (in dagen) op te geven tussen twee op kenmerken gebaseerde autorisatie (ABA) wordt uitgevoerd. Als u bijvoorbeeld wilt opgeven dat ABA-uitvoeringen worden gescheiden door twee dagen, typt u 02.                                                                                                                     |
 | **Begin uur van ABA-uitvoering**    | Stel in op een geheel getal van twee cijfers om het uur van de dag op te geven wanneer een op kenmerken gebaseerde autorisatie wordt uitgevoerd. Als u bijvoorbeeld wilt opgeven dat de ABA wordt uitgevoerd om 11:00 uur (23:00), Type 23.                                                                                                             |
 | **Systeem kardinaliteit**       | Stel in op N als u geen systeem kardinaliteit wilt controleren in BHOLD. De standaard waarde is Y.                                                                                                                                                                                                                             |
-| **Logboekregistratie**                  | Stel in op N als u niet wilt dat wijzigingen worden vastgelegd. De standaard waarde is Y.                                                                                                                                                                                                                                            |
+| **Userenv**                  | Stel in op N als u niet wilt dat wijzigingen worden vastgelegd. De standaard waarde is Y.                                                                                                                                                                                                                                            |
 | **SystemQueue-verwerking**   | Stel in op N als u niet wilt dat de systeem wachtrij wordt verwerkt. Wijzig deze waarde alleen als dit wordt gedaan door de product ondersteuning.                                                                                                                                                                                           |
 
 U moet zijn aangemeld als lid van de groep domein Administrators om deze procedure te kunnen uitvoeren.

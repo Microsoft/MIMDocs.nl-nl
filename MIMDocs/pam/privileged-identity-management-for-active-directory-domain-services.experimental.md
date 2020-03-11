@@ -4,7 +4,7 @@ description: Met Privileged Access Management (PAM) kunnen organisaties bevoorre
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 03/13/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
@@ -12,12 +12,12 @@ ms.assetid: cf3796f7-bc68-4cf7-b887-c5b14e855297
 ms.reviewer: mwahl
 ms.suite: ems
 experiment_id: kgremban_images
-ms.openlocfilehash: 40ed05c1f77cace74b86dc3a5675855993d4bc56
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: acec45a2843febd3821d9045336098cdeb4ddcf7
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "64518354"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79043933"
 ---
 # <a name="privileged-access-management-for-active-directory-domain-services"></a>Privileged Access Management voor Active Directory Domain Services
 
@@ -43,7 +43,7 @@ Dankzij PAM is het moeilijker voor kwaadwillende personen om door te dringen tot
 
 ## <a name="how-is-pam-set-up"></a>Hoe wordt PAM ingesteld?
 
-PAM borduurt voort op het principe van Just-In-Time-beheer; [Just Enough Administration (JEA)](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2014/DCIM-B362). JEA is een Windows PowerShell-toolkit waarmee een reeks opdrachten wordt gedefinieerd voor het uitvoeren van bevoorrechte activiteiten en een eindpunt waar beheerders autorisatie kunnen verkrijgen voor het uitvoeren van deze opdrachten. In JEA besluit een beheerder dat gebruikers met een bepaalde bevoegdheid een bepaalde taak kunnen uitvoeren. Elke keer dat een in aanmerking komende gebruiker deze taak moet uitvoeren, wordt deze machtiging ingeschakeld. De machtigingen verlopen na een opgegeven periode, zodat een kwaadwillende gebruiker de toegang niet kan stelen.
+PAM borduurt voort op het principe van Just-In-Time-beheer; [Just Enough Administration (JEA)](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2014/DCIM-B362). JEA is een Windows PowerShell-toolkit waarmee een reeks opdrachten wordt gedefinieerd voor het uitvoeren van bevoorrechte activiteiten en een eindpunt waar beheerders autorisatie kunnen verkrijgen voor het uitvoeren van deze opdrachten. In JEA besluit een beheerder dat gebruikers met een bepaalde bevoegdheid een bepaalde taak kunnen uitvoeren. Elke keer dat een in aanmerking komende gebruiker deze taak moet uitvoeren, wordt deze machtiging ingeschakeld. De machtigingen verlopen na een opgegeven periode, zodat een kwaadwillende gebruiker de toegang niet kan stelen.
 
 De installatie en het gebruik van PAM bestaat uit vier stappen.
 

@@ -4,19 +4,19 @@ description: Bepalen welke bevoorrechte rollen moeten worden beheerd en het behe
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 08/31/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 1a368e8e-68e1-4f40-a279-916e605581bc
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 38a9fc174c037e5d7c3ea17b46dcf9f6ea924822
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: f05769a7d1db38ecde200e18e45c6ca29a75b756
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "64518597"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79044035"
 ---
 # <a name="define-roles-for-privileged-access-management"></a>Rollen voor Privileged Access Management definiëren
 
@@ -114,7 +114,7 @@ Maak in plaats van standaard groepen als domein Administrators nieuwe beveiligin
 
 In de volgende tabel worden voorbeelden gegeven van machtigingen die geschikt zijn voor opname in rollen voor het beheer van AD.
 
-| Functie | Description |
+| Rol | Beschrijving |
 | ---- | ---- |
 | Domein/DC-onderhoud | Lidmaatschap van de groep Domain\Administrators maakt het mogelijk om problemen op te lossen en het besturings systeem van de domein controller te wijzigen. Bewerkingen, zoals het promo veren van een nieuwe domein controller in een bestaand domein in het forest en de delegatie van AD-rollen.
 |Virtuele DC's beheren | Domeincontrollers en virtuele machines beheren met de software voor virtualisatiebeheer. Deze bevoegdheid kan worden verleend via volledig beheer van alle virtuele machines in het beheerhulpprogramma of de functie voor op rollen gebaseerde toegang. |
@@ -130,7 +130,7 @@ In de volgende tabel worden voorbeelden gegeven van machtigingen die geschikt zi
 
 De volgende tabel bevat voor beelden van machtigingen die relevant zijn voor de functies voor het beheren of gebruiken van de gegevens die in AD zijn opgeslagen.
 
-| Functie | Description |
+| Rol | Beschrijving |
 | ---- | ---- |
 | Organisatie-eenheid op het niveau tier 1 voor beheer wijzigen                 | Organisatie-eenheden met beheerobjecten op het niveau tier 1 in Active Directory wijzigen |
 | Organisatie-eenheid op het niveau tier 2 voor beheer wijzigen                 | Organisatie-eenheden met beheerobjecten op het niveau tier 2 in Active Directory wijzigen |

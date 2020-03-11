@@ -4,19 +4,19 @@ description: In dit artikel vindt u een overzicht van de benaderingen voor licen
 keywords: ''
 author: markwahl-msft
 ms.author: mwahl
-manager: femila
+manager: daveba
 ms.date: 10/18/2019
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
 ms.reviewer: billmath
 ms.suite: ems
-ms.openlocfilehash: e0bfd868345b8e7dcc6a02e745d3ccbf632a6c58
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: 62a6b936dc30b8593c8758a6158244d0f6dbbc4f
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73329289"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79043015"
 ---
 # <a name="microsoft-identity-manager-2016-licensing-and-downloads"></a>Microsoft Identity Manager 2016-licenties en-down loads
 
@@ -24,13 +24,13 @@ In dit artikel vindt u een overzicht van de benaderingen voor licentie Microsoft
 
 ## <a name="licensing-mim-for-your-organization"></a>Licentie MIM voor uw organisatie
 
-Licenties voor Microsoft Identity Manager 2016 worden per gebruiker verstrekt.  De details van licenties zijn opgenomen in de product termen en gerelateerde documenten, die kunnen worden gedownload via de pagina [licentie voorwaarden](https://www.microsoft.com/licensing/product-licensing/products.aspx) .
+Microsoft Identity Manager 2016 wordt per gebruiker in licentie gegeven.  De details van licenties zijn opgenomen in de product termen en gerelateerde documenten, die kunnen worden gedownload via de pagina [licentie voorwaarden](https://www.microsoft.com/licensing/product-licensing/products.aspx) .
 
 ### <a name="licensing-for-azure-ad-premium-customers"></a>Licentie verlening voor Azure AD Premium klanten
 
 Microsoft Identity Manager 2016 is opgenomen in Azure Active Directory Premium (P1 en P2), die deel uitmaakt van Enterprise Mobility + Security.
 
-Azure AD Premium is beschikbaar via een [micro soft-Enterprise Agreement](https://www.microsoft.com/licensing/licensing-programs/enterprise.aspx), het [Open Volume License-programma](https://www.microsoft.com/licensing/licensing-programs/open-license.aspx)en het programma [Cloud Solution Providers](https://go.microsoft.com/fwlink/?LinkId=614968&clcid=0x409) . Azure- en Office 365-abonnees kunnen Active Directory Premium P1 en P2 ook online aanschaffen.  Meer informatie over [Azure Active Directory prijzen](https://azure.microsoft.com/pricing/details/active-directory/).
+Azure AD Premium is beschikbaar via een [micro soft-Enterprise Agreement](https://www.microsoft.com/licensing/licensing-programs/enterprise.aspx), het [Open Volume License-programma](https://www.microsoft.com/licensing/licensing-programs/open-license.aspx)en het programma [Cloud Solution Providers](https://go.microsoft.com/fwlink/?LinkId=614968&clcid=0x409) . Abonnees van Azure en Office 365 kunnen Azure Active Directory Premium P1 en P2 ook online aanschaffen.  Meer informatie over [Azure Active Directory prijzen](https://azure.microsoft.com/pricing/details/active-directory/).
 
 ### <a name="mim-cals"></a>MIM-Cal's
 
@@ -47,7 +47,7 @@ Voordat u een nieuwe installatie van MIM of een upgrade van een eerdere versie s
 Als u een nieuwe installatie start, moet u de installatie bestanden downloaden voor elk MIM-onderdeel dat relevant is voor uw scenario. Down load vervolgens alle updates voor deze bestanden en down load vervolgens alle extra onderdelen die afzonderlijk worden gedownload via het Download centrum.
 
 
-| Scenario | Onderdeel | Vereist voor scenario? | Naam van DVD ISO-map | Opmerkingen |
+| Scenario | Component | Vereist voor scenario? | Naam van DVD ISO-map | Opmerkingen |
 |----------|-----------|---------------------   |-------------------|----------|--------------|
 |Synchronisatie| Synchronisatie service (inclusief connector naar AD) | Yes | `Synchronization Service` | |
 | Synchronisatie | PCNS | Nee | `Password Change Notification Service` |  Te worden geïnstalleerd op domein controllers |
@@ -82,9 +82,9 @@ Controleer de [release geschiedenis van de versie Manager](./reference/version-h
 
 Om te bepalen welke update bestanden nodig zijn, bevat deze tabel de onderdelen en de naam van het bijbehorende patch bestand (MSP) in een update.
 
-| Scenario | Onderdeel | Naam van DVD ISO-map | Bestands naam van de bijbehorende update patch |
+| Scenario | Component | Naam van DVD ISO-map | Bestands naam van de bijbehorende update patch |
 |----------|-----------|-   |-------------------|----------|--------------|
-|Synchronisatie| Synchronisatieservice | `Synchronization Service` | `MIMSyncService_x64*.msp` |
+|Synchronisatie| Synchronisatie service | `Synchronization Service` | `MIMSyncService_x64*.msp` |
 | Selfservice | MIM-service, MIM-Portal | `Service and Portal` | `MIMService_x64*msp` |
 | Selfservice | Invoeg toepassingen en extensies | `Add-ins and extensions` | `MIMAddinsExtensions*msp` |
 | Selfservice | Taalpakketten | `LANGUAGE Packs` | `LANGUAGE Packs.zip` |

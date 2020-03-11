@@ -4,17 +4,17 @@ description: Meer informatie over de implementatie van Privileged Access Managem
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 08/18/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
-ms.openlocfilehash: 347eda5872792872a9bb30357c45835303f92e01
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: 521b96c3ef9cae5a5f9151ddf125cfb534ae0332
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "64518525"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79044018"
 ---
 # <a name="deploy-mim-pam-with-windows-server-2016"></a>MIM PAM implementeren met Windows Server 2016
 
@@ -50,7 +50,7 @@ Voer de installatie uit, zoals beschreven in de [introductiehandleiding](privile
 
   - De wijzigingen die zijn beschreven in 'Controle configureren' (item 8) en 'Registerinstellingen configureren' (item 10) zijn **aanbevolen maar niet vereist** als zowel CORP- als PRIV-domeincontrollers zich op het functionele domeinniveau van Windows Server 2016 bevinden.
 
-- Als u Windows Server 2012 R2 gebruikt als het besturingssysteem voor CORPDC, moet u de hotfixes 2919442 en 2919355 installeren [en 3155495 bijwerken](http://support.microsoft.com/kb/3156418) op CORPDC.
+- Als u Windows Server 2012 R2 gebruikt als het besturingssysteem voor CORPDC, moet u de hotfixes 2919442 en 2919355 installeren [en 3155495 bijwerken](https://support.microsoft.com/kb/3156418) op CORPDC.
 
 - Volg de instructies in [Stap 2: PRIV-domeincontroller voorbereiden](step-2-prepare-priv-domain-controller.md), met uitzondering van de volgende aanpassingen:
 

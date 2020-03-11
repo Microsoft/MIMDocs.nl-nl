@@ -4,17 +4,17 @@ description: ''
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 01/05/2018
 ms.topic: reference
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
-ms.openlocfilehash: 8987bc53af37b32b95b00c3df67d9581d4e47120
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: 72b77034d5591d0bc2ab420f185acee719fe8324
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "64518778"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79042998"
 ---
 # <a name="microsoft-identity-manager-2016-best-practices"></a>Aanbevolen procedures voor Microsoft Identity Manager 2016
 
@@ -358,7 +358,7 @@ SSL implementeren:
 
 29. Klik op http://servername.
 
-30. Wijzig http://servername in https://servername en klik vervolgens op OK.
+30. Wijzig http://servername in https://servernameen klik vervolgens op OK.
 
 31. Klik op Start, klik op Uitvoeren, typ iisreset en klik vervolgens op OK.
 
@@ -550,7 +550,7 @@ Er zijn 13 kernkenmerken aan alle resourcetypen toegewezen. U mag de relatie van
 
 -   DeletedTime
 
--   Description
+-   Beschrijving
 
 -   DetectedRulesList • DisplayName
 

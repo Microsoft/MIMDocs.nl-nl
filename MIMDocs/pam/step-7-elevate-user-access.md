@@ -3,17 +3,17 @@ title: PAM implementeren - Stap 7 - Gebruikerstoegang | Microsoft Docs
 description: Als laatste stap moet u tijdelijke bevoorrechte gebruikerstoegang opgeven om aan te tonen dat de Privileged Access Management-implementatie is gelukt.
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 01/17/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 5325fce2-ae35-45b0-9c1a-ad8b592fcd07
-ms.openlocfilehash: d00eaa284f1d54a1cbe2e0f8b936bbc41c19caea
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: 05e05966bf90700885e67ba16f10ab0d7864cf10
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "64517860"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79043610"
 ---
 # <a name="step-7--elevate-a-users-access"></a>Stap 7 – De toegangsrechten van een gebruiker uitbreiden
 

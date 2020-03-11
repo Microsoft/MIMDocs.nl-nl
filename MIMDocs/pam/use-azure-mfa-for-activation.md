@@ -5,17 +5,17 @@ keywords: ''
 author: billmath
 ms.author: billmath
 ms.reviewer: fimguy
-manager: mtillman
+manager: daveba
 ms.date: 07/06/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 5134a112-f73f-41d0-a5a5-a89f285e1f73
-ms.openlocfilehash: 6c3a2d87037a818a9a8784b0d4a7b86227fcaef4
-ms.sourcegitcommit: 28a20aaa1f08b428cc1ae0eae43ae47de4d9d22a
+ms.openlocfilehash: 512a1887329f9ec5c93fd69f0ce0b22495ba009c
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75684054"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79043542"
 ---
 # <a name="using-azure-mfa-for-activation"></a>Azure MFA gebruiken voor activering
 > [!IMPORTANT]
@@ -124,7 +124,7 @@ Set-PAMUser (Get-PAMUser -SourceDisplayName Jen) -SourcePhoneNumber 12135551212
 
 ## <a name="configure-pam-roles-for-azure-mfa"></a>PAM-rollen configureren voor Azure MFA
 
-Nadat de telefoonnummers van alle kandidaatgebruikers voor een PAM-rol zijn opgeslagen in de database van de MIM-service, kan de rol worden geconfigureerd voor het vereisen van Azure MFA. Hiervoor kunt u de opdracht `New-PAMRole` of `Set-PAMRole` gebruiken. Zo vereisen
+Nadat de telefoonnummers van alle kandidaatgebruikers voor een PAM-rol zijn opgeslagen in de database van de MIM-service, kan de rol worden geconfigureerd voor het vereisen van Azure MFA. Hiervoor kunt u de opdracht `New-PAMRole` of `Set-PAMRole` gebruiken. Bijvoorbeeld:
 
 ```PowerShell
 Set-PAMRole (Get-PAMRole -DisplayName "R") -MFAEnabled 1
@@ -136,7 +136,7 @@ U kunt Azure MFA uitschakelen voor een rol door de parameter -MFAEnabled 0 op te
 
 De volgende gebeurtenissen vindt u in het gebeurtenislogboek voor Privileged Access Management:
 
-| ID  | Ernst | Gegenereerd door | Description |
+| Id  | Ernst | Gegenereerd door | Beschrijving |
 |-----|----------|--------------|-------------|
 | 101 | Fout       | MIM-service            | De gebruiker heeft Azure MFA niet voltooid (heeft bijvoorbeeld de telefoonoproep niet beantwoord) |
 | 103 | Informatie | MIM-service            | De gebruiker heeft Azure MFA voltooid tijdens de activering                       |

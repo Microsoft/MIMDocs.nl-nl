@@ -4,19 +4,19 @@ description: Krijg inzicht in de MIM 2016-onderdelen en profiteer van tips voor 
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 10/12/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 735dc357-dfba-4f68-a5b3-d66d6c018803
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: d9d749029d52c7e685e581ffe603aca63752ca3e
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: 7f2d78b487e3c20fbd656aad37b67a6382b67df0
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73636994"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79044324"
 ---
 # <a name="topology-considerations"></a>Aandachtspunten voor topologie
 U kunt Microsoft Identity Manager-onderdelen (MIM) op dezelfde server of op meerdere servers in verschillende configuraties implementeren. De topologie die u hebt geselecteerd voor uw implementatie, is van invloed op de prestaties van MIM. Dit artikel bevat meerdere implementatietopologieën die u kunt overwegen voor uw implementatie.

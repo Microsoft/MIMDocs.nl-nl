@@ -4,19 +4,19 @@ description: Informatie over het registreren van smartcards voor gebruikers die 
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 10/12/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: bfabc562-a2f0-4cff-ac31-36927f41e102
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 4d66c566912f186bce175dde9f16346942afd72e
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: 91409b0272c0b21cac90dbc4c162e5bf4d9f8464
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "64516654"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79042131"
 ---
 # <a name="enroll-smart-cards-for-non-administrators"></a>Smartcards voor niet-beheerders registreren
 Gebruikers die geen lokale beheerder zijn van hun computer, kunnen standaard geen smartcard registreren op hun eigen computer. Dit probleem kunt u met de volgende procedure omzeilen.
@@ -69,7 +69,7 @@ Gebruikers die geen lokale beheerder zijn van hun computer, kunnen standaard gee
 
     1.  Meld u bij de CM-portal aan als gebruiker met beheerdersbevoegdheden.
 
-    2.  Ga naar **Beheer** &gt; **Profielsjablonen beheren**. Controleer of het selectievakje is ingeschakeld naast de profielsjabloon die u zojuist hebt gemaakt en klik op Een geselecteerde profielsjabloon kopiëren.
+    2.  Ga naar **beheer** &gt; **Profiel sjablonen beheren** en zorg ervoor dat het selectie vakje is ingeschakeld naast de profiel sjabloon die u hebt gemaakt en klik vervolgens op een geselecteerde profiel sjabloon kopiëren.
 
     3.  Typ de naam van de profielsjabloon, voeg nonAdmin toe en klik op **OK**.
 

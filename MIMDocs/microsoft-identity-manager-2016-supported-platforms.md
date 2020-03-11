@@ -4,7 +4,7 @@ description: De producten en versies zoeken die compatibel met elk van de MIM 20
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 10/19/2019
 ms.topic: article
 ms.prod: microsoft-identity-manager
@@ -12,12 +12,12 @@ ms.assetid: 4978f60d-044d-4e84-8d93-65801fce1144
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: mim
-ms.openlocfilehash: f69566c9d6abc6b7c54cc875a958b66a112c3111
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: 40a79d234e702ca8f98349b13687a7262ffc4a27
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73329362"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79044069"
 ---
 # <a name="supported-platforms-for-mim-2016"></a>Ondersteunde platformen voor MIM 2016
 

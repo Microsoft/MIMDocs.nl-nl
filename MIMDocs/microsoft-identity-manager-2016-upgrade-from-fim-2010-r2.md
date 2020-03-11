@@ -4,19 +4,19 @@ description: Informatie over het uitvoeren van een upgrade van uw FIM 2010 R2-on
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 10/12/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 9471ccc1-bafe-46ee-b169-1464262380e1
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 36b5e97675d5900bf3b5348ad4857827c426e60e
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: 7df1a4ca7a33aa2a00ac0b2c3ef24056c9720b5b
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "64519453"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79043236"
 ---
 # <a name="upgrade-from-forefront-identity-manager-2010-r2"></a>Upgrade uitvoeren in Forefront Identity Manager 2010 R2
 
@@ -109,11 +109,11 @@ In deze gids wordt verondersteld dat u het volgende al hebt ingesteld.
 
     4.  **MIM-portal voor wachtwoordherstel:** dit onderdeel is nodig voor wachtwoordherstel.
 
-7.  Geef details op van de SQL Server die wordt gebruikt voor de FIM-servicedatabase. Selecteer de optie voor het opnieuw gebruiken van de bestaande database en het behouden van de gegevens. Klik op **Volgende** om door te gaan.
+7.  Geef details op van de SQL Server die wordt gebruikt voor de FIM-servicedatabase. Selecteer de optie voor het opnieuw gebruiken van de bestaande database en het behouden van de gegevens. Klik op **Volgende** om verder te gaan.
 
 8. Als de optie voor het opnieuw gebruiken van de bestaande database is geselecteerd, wordt een herinnering weergegeven voor het maken van een back-up van de database.
 
-9. Voer de details van de e-mailserver in. Als de e-mailserver zich op de huidige server bevindt, voert u localhost in als locatie van de mail-server. Klik op **Volgende** om door te gaan.
+9. Voer de details van de e-mailserver in. Als de e-mailserver zich op de huidige server bevindt, voert u localhost in als locatie van de mail-server. Klik op **Volgende** om verder te gaan.
 
     ![Afbeelding van Configureren van de e-mailserververbinding](media/MIM-UpgSP6.png)
 

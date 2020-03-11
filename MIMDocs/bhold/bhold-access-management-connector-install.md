@@ -4,17 +4,17 @@ description: De BHOLD-connector module ondersteunt de initiële en actieve synch
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 09/07/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
-ms.openlocfilehash: 60886a84c6105e94a2cd3d42f17b86b2d69c8c0a
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: ae9cc0bb4c63089c6733c06b7b035b2b9566fdd0
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "64516061"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79041860"
 ---
 # <a name="access-management-connector-installation"></a>Installatie van toegangs beheer connector
 
@@ -22,7 +22,7 @@ De BHOLD Suite Access Management connector-module ondersteunt zowel initiële al
 
 ## <a name="access-management-connector-software-requirements"></a>Software vereisten voor toegangs beheer connector
 
-Voordat u de module Access Management connector kunt installeren, moet u Microsoft .NET Framework 4 installeren. Ga voor meer informatie over .NET Framework 4 en installatie-instructies naar de [Start pagina van Microsoft .net](http://www.microsoft.com/net).
+Voordat u de module Access Management connector kunt installeren, moet u Microsoft .NET Framework 4 installeren. Ga voor meer informatie over .NET Framework 4 en installatie-instructies naar de [Start pagina van Microsoft .net](https://www.microsoft.com/net).
 U moet de Access Management-connector installeren op een computer met de FIM-synchronisatie service van MIM.
 
 ## <a name="access-management-connector-setup"></a>Setup van toegangs beheer connector

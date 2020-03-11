@@ -4,17 +4,17 @@ description: Documentatie voor de installatie van BHOLD SP1
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 09/11/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
-ms.openlocfilehash: 05eb2afc0ddbf6104e27a5c24e121a55bd805292
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: fb3cf6e5b00c1bd0c01d86aff474dc2ff28c2815
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68238907"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79042250"
 ---
 # <a name="microsoft-bhold-suite-sp1-60-installation-guide"></a>Installatie handleiding voor micro soft BHOLD Suite SP1 (6,0)
 
@@ -93,7 +93,7 @@ Zie [Top 10 best practices](https://www.microsoft.com/technet/prodtechnol/sql/be
 ### <a name="trusted-certificates-list-update"></a>Lijst met vertrouwde certificaten bijwerken
 
 Windows kan worden geconfigureerd voor het valideren van certificaat ketens voordat een service wordt gestart. Op dergelijke systemen kan een service niet worden gestart als de uitvoer bare code van de service is ondertekend met een certificaat dat niet voor komt in de lijst met vertrouwde certificaten (TCL) van de server. De micro soft BHOLD Suite SP1-software is code die is ondertekend met een certificaat keten voor ondertekening van programma code die afkomstig is van het certificaat van de micro soft-basis certificerings instantie 2010.
-Windows kan worden geconfigureerd om basis certificaten van micro soft op te halen via een Internet verbinding. Windows Server bevat op een niet-verbonden systeem echter alleen de certificaten die in het hoofd programma zijn opgenomen op het moment dat Windows werd uitgegeven. In versies van Windows Server ouder dan Windows Server 2010, bevatten deze certificaten niet het basis certificaat dat nodig is voor het valideren van de certificaat keten voor BHOLD Suite SP1-code ondertekening. Als u van plan bent een of meer micro soft BHOLD Suite SP1-modules te installeren op een systeem dat mogelijk geen actuele TCL heeft, moet u het root-update pakket downloaden en installeren, of groepsbeleid gebruiken om het root-update pakket te installeren voordat u een BHOLD Suite SP1 installeert programma. Zie [Windows Root Certificate Program-leden](http://support.microsoft.com/kb/931125)(Engelstalig) voor meer informatie.
+Windows kan worden geconfigureerd om basis certificaten van micro soft op te halen via een Internet verbinding. Windows Server bevat op een niet-verbonden systeem echter alleen de certificaten die in het hoofd programma zijn opgenomen op het moment dat Windows werd uitgegeven. In versies van Windows Server ouder dan Windows Server 2010, bevatten deze certificaten niet het basis certificaat dat nodig is voor het valideren van de certificaat keten voor BHOLD Suite SP1-code ondertekening. Als u van plan bent een of meer micro soft BHOLD Suite SP1-modules te installeren op een systeem dat mogelijk geen actuele TCL heeft, moet u het root-update pakket downloaden en installeren, of groepsbeleid gebruiken om het root-update pakket te installeren voordat u een BHOLD Suite SP1 installeert programma. Zie [Windows Root Certificate Program-leden](https://support.microsoft.com/kb/931125)(Engelstalig) voor meer informatie.
 
 ### <a name="installing-bhold-suite-sp1-on-windows-server-20122016-required-step"></a>BHOLD Suite SP1 installeren op Windows Server 2012/2016-stap vereist 
 

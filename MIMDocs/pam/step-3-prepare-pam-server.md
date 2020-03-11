@@ -4,7 +4,7 @@ description: Een PAM-server voorbereiden die fungeert als host voor SQL en Share
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 09/13/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
@@ -12,12 +12,12 @@ ms.assetid: 68ec2145-6faa-485e-b79f-2b0c4ce9eff7
 ROBOTS: noindex,nofollow
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: e306748e982eb2eb123246bc7f309465823eaf35
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: 7a0a0437e767f793150d875bcaf31213a7fdf627
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "64518215"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79043661"
 ---
 # <a name="step-3--prepare-a-pam-server"></a>Stap 3 – Een PAM-server voorbereiden
 
@@ -67,7 +67,7 @@ Voeg de functies van de webserver (IIS) en de toepassingsserver, de onderdelen v
 Configureer het beveiligingsbeleid van de server zodanig dat de zojuist gemaakte accounts als services kunnen worden uitgevoerd.
 
 1.  Start het programma **Lokaal beveiligingsbeleid**.   
-2.  Navigeer naar **Lokaal beleid**  > **Toewijzing van gebruikersrechten**.  
+2.  Navigeer naar **Lokaal beleid** > **Toewijzing van gebruikersrechten**.  
 3.  Klik in het detailvenster met de rechtermuisknop op **Aanmelden als service** en selecteer **Eigenschappen**.  
 4.  Klik op **Gebruiker of groep toevoegen** en voer bij Gebruiker en groepsnamen *priv\mimmonitor; priv\MIMService; priv\SharePoint; priv\mimcomponent; priv\SqlServer* in. Klik op **Namen controleren** en vervolgens op **OK**.  
 

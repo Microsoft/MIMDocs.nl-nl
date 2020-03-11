@@ -4,18 +4,18 @@ description: Meer informatie over het verwerken van Microsoft Identity Manager g
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 12/02/2018
 ms.topic: conceptual
 ms.prod: microsoft-identity-manager
 ms.assetid: b0b39631-66df-4c5f-80c9-a1774346f816
 ms.suite: ems
-ms.openlocfilehash: 6f861c5b1984de70a91edcac89276402f289e355
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: e95cf26b62e582eaa3c07c40e551bc5930d3b1b0
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68701484"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79044103"
 ---
 # <a name="microsoft-identity-manager-data-handling"></a>Verwerking van Microsoft Identity Manager gegevens 
 
@@ -34,7 +34,7 @@ Hieronder volgen enkele scenario's die klanten moeten overwegen en de volgende v
 Om u te helpen inzicht te krijgen in een huidige MIM-omgeving, kunt u het volgende hulp programma gebruiken om uw MIM-omgeving te documenteren of uw ontwerp documenten voor de implementatie uit te stellen.
 - [MIM-document functie: Hiermee staat u de huidige configuratie toe](https://github.com/Microsoft/MIMConfigDocumenter)
 
-## <a name="searching-for-and-identifying-personal-data"></a>Persoonsgegevens zoeken en identificeren
+## <a name="searching-for-and-identifying-personal-data"></a>Zoeken naar en identificeren van persoons gegevens
 Het zoeken van gegevens binnen MIM is afhankelijk van de configuratie en de installatie. De meeste omgevingen hebben een onderlinge verbinding, maar voor de duidelijkheid zijn deze op hoog niveau afgebroken.
 
 ### <a name="synchronization-service"></a>Synchronisatieservice

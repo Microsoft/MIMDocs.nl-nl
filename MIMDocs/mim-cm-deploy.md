@@ -4,17 +4,17 @@ description: Microsoft Identity Manager 2016-certificaat beheerder installeren
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 09/19/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
-ms.openlocfilehash: 9a9e00f7dca118627a5140967a104d13273cbc26
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: 35fe08363b6964bf6d264ab1e60cd9751aa7b6aa
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "67690806"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79043032"
 ---
 # <a name="deploying-microsoft-identity-manager-certificate-manager-2016-mim-cm"></a>Microsoft Identity Manager Certificate Manager 2016 (MIM CM) implementeren
 
@@ -31,7 +31,7 @@ In het onderstaande diagram ziet u een voor beeld van het type omgeving dat kan 
 5. CORPSQL1 – SQL 2016 SP1
 6. CORPWK1: Windows 10-domein toegevoegd
 
-## <a name="deployment-overview"></a>Implementatie-overzicht
+## <a name="deployment-overview"></a>Implementatie overzicht
 
 - Basis installatie van het besturings systeem
 
@@ -64,7 +64,7 @@ In het onderstaande diagram ziet u een voor beeld van het type omgeving dat kan 
 
 De configuratie wizard voor MIM CM vereist dat er informatie wordt verstrekt, zodat deze correct kan worden voltooid.
 
-![schema](media/mim-cm-deploy/image003.png)
+![diagram](media/mim-cm-deploy/image003.png)
 
 ### <a name="extending-the-schema"></a>Het schema uitbreiden
 
@@ -77,7 +77,7 @@ Het proces om het schema uit te breiden, is eenvoudig, maar moet voorzichtig wor
 
 2. Kopieer de schemamappartitie naar CORPDC en navigeer naar de map.
 
-    ![schema](media/mim-cm-deploy/image005.png)
+    ![diagram](media/mim-cm-deploy/image005.png)
 
 3. Voer het script resourceForestModifySchema. vbs single forest uit. Voer de scripts uit voor het scenario van het resource-forest:
    - DomeinA: gebruikers gevonden (userForestModifySchema. vbs)
@@ -86,7 +86,7 @@ Het proces om het schema uit te breiden, is eenvoudig, maar moet voorzichtig wor
      >[!NOTE]
      >Schema wijzigingen zijn een eenrichtings bewerking en vereisen dat een forest recovery wordt teruggedraaid. Zorg er dus voor dat u de benodigde back-ups hebt. Raadpleeg het artikel [Forefront Identity Manager 2010 Certificate Management schema-wijzigingen](https://technet.microsoft.com/library/jj159298(v=ws.10).aspx) voor meer informatie over de wijzigingen die in het schema zijn aangebracht door deze bewerking uit te voeren.
 
-     ![schema](media/mim-cm-deploy/image007.png)
+     ![diagram](media/mim-cm-deploy/image007.png)
 
 4. Voer het script uit en u ontvangt een bericht zodra het script is voltooid.
 
@@ -98,7 +98,7 @@ Het schema in AD is nu uitgebreid ter ondersteuning van MIM CM.
 
 De volgende tabel bevat een overzicht van de accounts en machtigingen die vereist zijn voor MIM CM. U kunt de MIM CM de volgende accounts automatisch maken of u kunt deze maken vóór de installatie. De werkelijke account namen kunnen worden gewijzigd. Als u de accounts zelf maakt, kunt u de gebruikers accounts in een hand omdraai een naam geven, zodat de gebruikers account naam eenvoudig kan worden vergeleken met de functie.
 
-Gebruikers:
+Bezoekers
 
 ![Diagram](media/mim-cm-deploy/image010.png)
 
@@ -120,7 +120,7 @@ Gebruikers:
 
 Groepen:
 
-| **Rol**               | **Groep**         |
+| **Rol**               | **Gegroepeerd**         |
 |------------------------|-------------------|
 | IB-leden van de Help Desk    | MIMCM-Helpdesk    |
 | Leden van CM Manager     | MIMCM-managers    |
@@ -212,7 +212,7 @@ Alle drie de bovenstaande accounts hebben verhoogde rechten binnen uw organisati
 
 2. Vouw **Contoso-CorpCA**uit in de console structuur van de **certificerings instantie** en klik op **certificaat sjablonen**.
 
-3. Klik met de rechter muisknop op **certificaat sjablonen**en klik vervolgens op **beheren**.
+3. Klik met de rechtermuisknop op **Certificaatsjablonen** en klik op **Beheren**.
 
 4. Selecteer in de **certificaat sjablonen-console**in het **detail** venster, klik met de rechter muisknop op **gebruiker**en klik vervolgens op **sjabloon dupliceren**.
 
@@ -233,7 +233,7 @@ Alle drie de bovenstaande accounts hebben verhoogde rechten binnen uw organisati
 
 10. Controleer op het tabblad **extensies** in de lijst **extensies die in deze sjabloon zijn opgenomen** of **toepassingen beleid** is geselecteerd en klik vervolgens op **bewerken**.
 
-11. Selecteer in het dialoog venster **toepassingen beleids uitbreiding bewerken** zowel de **Encrypting File System** als het toepassings beleid voor **beveiligde e-mail** . Klik op **verwijderen**en vervolgens op **OK**.
+11. Selecteer in het dialoog venster **toepassingen beleids uitbreiding bewerken** zowel de **Encrypting File System** als het toepassings beleid voor **beveiligde e-mail** . Klik op **Verwijderen** en klik vervolgens op **OK**.
 
 12. Voer op het tabblad **beveiliging** de volgende stappen uit:
 
@@ -359,7 +359,7 @@ Get-ADUser CONTOSO\MIMCMWebAgent | Set-ADObject -Add @{"msDS-AllowedToDelegateTo
 
 **IIS bijwerken op CORPCM**
 
-![schema](media/mim-cm-deploy/image022.png)
+![diagram](media/mim-cm-deploy/image022.png)
 
 ```powershell
 add-pssnapin WebAdministration
@@ -484,7 +484,7 @@ Voordat u zich aanmeldt bij CORPCM, moet u MIMINSTALL toevoegen aan **domein Adm
 
 14. Op de pagina **e-mail server instellen, document afdrukken** klikt u in het vak **Geef de naam op van de SMTP-server die u wilt gebruiken voor het registreren van registratie meldingen** en klik vervolgens op **Volgende.**
 
-15. Klik op de pagina **Gereed om te configureren** op **Configureren**.
+15. Klik op de pagina **gereed voor configuratie** op **configureren**.
 
 16. Klik in het dialoog venster **configuratie wizard – micro soft Forefront Identity Manager 2010 R2** -waarschuwing op **OK** om te bevestigen dat SSL niet is ingeschakeld op de virtuele IIS-map.
 
@@ -503,7 +503,7 @@ Voordat u zich aanmeldt bij CORPCM, moet u MIMINSTALL toevoegen aan **domein Adm
 
 20. Ga naar de site van de server CORPCM `https://cm.contoso.com/certificatemanagement`  
 
-    ![schema](media/mim-cm-deploy/image035.png)
+    ![diagram](media/mim-cm-deploy/image035.png)
 
 ### <a name="verify-the-cng-key-isolation-service"></a>De isolatie service voor CNG-sleutels controleren
 
@@ -552,7 +552,7 @@ In deze stap zullen we de FIM CM-CA-modules installeren en configureren op de ce
 
 14. Vouw **beveiliging**uit in de console structuur en klik vervolgens op **aanmeldingen**.
 
-15. Met de rechtermuisknop op **aanmeldingen**, en klik vervolgens op **nieuwe aanmelding**.
+15. Klik met de rechter muisknop op **aanmeldingen**en klik vervolgens op **nieuwe aanmelding**.
 
 16. Typ op de pagina **Algemeen** in het vak **aanmeldings naam** **Contoso\\CORPCA\$** . Selecteer **Windows-verificatie**. De standaard database is **FIMCertificateManagement**.
 
@@ -560,7 +560,7 @@ In deze stap zullen we de FIM CM-CA-modules installeren en configureren op de ce
 
 18. Klik op **OK**.
 
-19. Sluiten **Microsoft SQL Server Management Studio**.
+19. Sluit **Microsoft SQL Server Management Studio**.
 
 ### <a name="install-the-fim-cm-ca-modules-on-the-certification-authority"></a>De FIM CM-CA-modules installeren op de certificerings instantie
 
@@ -887,7 +887,7 @@ Machtigingen voor de OID-container definiëren:
 
 **Scripts: machtigingen voor de OID, profiel sjabloon & container certificaat sjablonen**
 
-![schema](media/mim-cm-deploy/image021.png)
+![diagram](media/mim-cm-deploy/image021.png)
 
 ```powershell
 import-module activedirectory
@@ -913,7 +913,7 @@ $acl.AddAccessRule($ace)
 
 **Scripts: de machtigingen voor de bestaande certificaat sjablonen delegeren.**  
 
-![schema](media/mim-cm-deploy/image039.png)
+![diagram](media/mim-cm-deploy/image039.png)
 
 ```shell
 dsacls "CN=Administrator,CN=Certificate Templates,CN=Public Key
