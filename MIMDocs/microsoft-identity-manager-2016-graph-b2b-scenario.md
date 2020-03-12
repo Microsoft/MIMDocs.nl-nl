@@ -4,17 +4,17 @@ author: billmath
 description: Microsoft Graph-connector is het beheer van de levens cyclus van externe gebruikers in een AD-account. In dit scenario heeft een organisatie uitgenodigd voor gasten in hun Azure AD-adres lijst en hen hen toegang te geven tot on-premises Windows-geïntegreerde verificatie of op Kerberos gebaseerde toepassingen
 keywords: ''
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 10/02/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
-ms.openlocfilehash: ba70cd299f2ebec31555bb40b935a6b54779d198
-ms.sourcegitcommit: 1ca298d61f6020623f1936f86346b47ec5105d44
+ms.openlocfilehash: 2f91a5c24df5475130755574c77b536f57e64d24
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76256628"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79044239"
 ---
 <a name="azure-ad-business-to-business-b2b-collaboration-with-microsoft-identity-managermim-2016-sp1-with-azure-application-proxy"></a>Azure AD Business-to-Business (B2B)-samen werking met Microsoft Identity Manager (MIM) 2016 SP1 met Azure-toepassing proxy
 ============================================================================================================================
@@ -84,7 +84,7 @@ Op de pagina connectiviteit moet u de Graph API versie opgeven. Gereed voor prod
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/6fabfe20af0207f1556f0df18fd16f60.png)
 
-### <a name="global-parameters"></a>Globale parameters
+### <a name="global-parameters"></a>Algemene para meters
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/84c4dd62f63b82239cd0cf63d14fc671.png)
 
@@ -100,7 +100,7 @@ Selecteer op de pagina partities en hiërarchieën alle naam ruimten met objecte
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/72f0adc789ed78c66d066768146fb874.png)
 
-#### <a name="select-object-types"></a>Objecttypes selecteren
+#### <a name="select-object-types"></a>Object typen selecteren
 
 Selecteer op de pagina object typen de object typen die u wilt importeren. U moet ten minste ' gebruiker ' selecteren.
 
@@ -130,19 +130,19 @@ In het scherm voor het configureren van het anker is het configureren van het an
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/9377ab7b760221517a431384689c8c76.png)
 
-#### <a name="configure-connector-filter"></a>Connectorfilter configureren
+#### <a name="configure-connector-filter"></a>Connector filter configureren
 
 Op de pagina connector filter configureren kunt u met MIM objecten filteren op basis van kenmerk filter. In dit scenario voor B2B is het doel om alleen gebruikers te brengen met de waarde van het `userType` kenmerk dat gelijk is aan `Guest`en niet gebruikers met de User type die gelijk zijn aan `member`.
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/d90691fce652ba41c7a98c9a863ee710.png)
 
-#### <a name="configure-join-and-projection-rules"></a>Regels voor lid worden en projectie configureren
+#### <a name="configure-join-and-projection-rules"></a>De regels voor samen voegen en projectie configureren
 
 In deze hand leiding wordt ervan uitgegaan dat u een synchronisatie regel maakt.  Als het configureren van de samen Voeg-en projectie regels worden verwerkt door de synchronisatie regel, hoeft het niet nodig zijn om een koppeling en projectie te identificeren op de connector zelf. Geef de standaard waarde op en klik op OK.
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/34896440ae6ad404e824eb35d8629986.png)
 
-#### <a name="configure-attribute-flow"></a>Kenmerkstroom configureren
+#### <a name="configure-attribute-flow"></a>Kenmerk stroom configureren
 
 In deze hand leiding wordt ervan uitgegaan dat u een synchronisatie regel maakt.  Er is geen projectie vereist voor het definiëren van de kenmerk stroom in de MIM-synchronisatie, omdat deze wordt verwerkt door de synchronisatie regel die later wordt gemaakt. Geef de standaard waarde op en klik op OK.
 
@@ -243,9 +243,9 @@ Stroom regels:
 |                       |                           | [mail⇒mail](javascript:void(0);)                                      |
 |                       |                           | [sn⇒sn](javascript:void(0);)                                          |
 |                       |                           | [userPrincipalName⇒userPrincipalName](javascript:void(0);)            |
-| **Y**                 |                           | ["CN ="+ uid +", OE = B2BGuest, DC = contoso, DC = com" ⇒dn](javascript:void(0);) |
-| **Y**                 |                           | [RandomNum (0,999) + userPrincipalName⇒unicodePwd](javascript:void(0);)  |
-| **Y**                 |                           | [262656⇒userAccountControl](javascript:void(0);)                      |
+| **Vorig**                 |                           | ["CN ="+ uid +", OE = B2BGuest, DC = contoso, DC = com" ⇒dn](javascript:void(0);) |
+| **Vorig**                 |                           | [RandomNum (0,999) + userPrincipalName⇒unicodePwd](javascript:void(0);)  |
+| **Vorig**                 |                           | [262656⇒userAccountControl](javascript:void(0);)                      |
 
 ### <a name="optional-synchronization-rule-import-b2b-guest-user-objects-sid-to-allow-for-login-to-mim"></a>Optionele synchronisatie regel: Importeer B2B gast User Objects SID om u aan te melden bij MIM 
 
@@ -314,6 +314,6 @@ Als alle configuraties zijn geconfigureerd, hebben B2B-gebruikers zich aangemeld
 
 [Functiereferentie voor FIM 2010](https://technet.microsoft.com/library/ff800820(v=ws.10).aspx)
 
-[How to provide secure remote access to on-premises applications](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started) (Beveiligde externe toegang bieden voor on-premises toepassingen)
+[Veilige externe toegang bieden tot on-premises toepassingen](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started)
 
 [Microsoft Identity Manager connector voor Microsoft Graph downloaden](https://go.microsoft.com/fwlink/?LinkId=717495)
