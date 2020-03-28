@@ -11,12 +11,12 @@ ms.prod: microsoft-identity-manager
 ms.assetid: c01487f2-3de6-4fc4-8c3a-7d62f7c2496c
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 7fb65eec7a42da94c4f27a30e59c09739279e882
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.openlocfilehash: 6597a7b364c1b7fa023e78bef917163ea2c19dac
+ms.sourcegitcommit: 87f94edf26fdb7f2c65c06c22cd0bc80d2f20450
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "79043525"
+ms.lasthandoff: 03/28/2020
+ms.locfileid: "80374296"
 ---
 # <a name="set-up-an-identity-management-server-sharepoint"></a>Een server voor identiteitsbeheer instellen: SharePoint
 
@@ -132,7 +132,7 @@ Voer de stappen uit die in de **wizard Configuratie van SharePoint-producten** w
    Get-SPTimerJob hourly-all-sptimerservice-health-analysis-job | disable-SPTimerJob
    ```
 
-4. Open op uw server voor identiteits beheer een nieuw tabblad in de webbrowser, navigeer naar http://mim.contoso.com/ en meld u aan als *contoso\miminstall*.  Er wordt een lege SharePoint-site met de naam *MIM-portal* weergegeven.
+4. Open op uw server voor identiteits beheer een nieuw tabblad in de webbrowser, navigeer naar `http://mim.contoso.com/` en meld u aan als *contoso\miminstall*.  Er wordt een lege SharePoint-site met de naam *MIM-portal* weergegeven.
 
     ![MIM-Portal op http://mim.contoso.com/-installatie kopie](media/prepare-server-sharepoint/MIM_DeploySP1new.png)
 
