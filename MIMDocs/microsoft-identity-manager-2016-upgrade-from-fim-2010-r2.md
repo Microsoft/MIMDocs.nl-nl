@@ -12,10 +12,10 @@ ms.assetid: 9471ccc1-bafe-46ee-b169-1464262380e1
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: 7df1a4ca7a33aa2a00ac0b2c3ef24056c9720b5b
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79043236"
 ---
 # <a name="upgrade-from-forefront-identity-manager-2010-r2"></a>Upgrade uitvoeren in Forefront Identity Manager 2010 R2
@@ -49,7 +49,7 @@ In deze gids wordt verondersteld dat u het volgende al hebt ingesteld.
 
 2.  Zorg ervoor dat u een back-up maakt van uw database voordat u deze procedure start.
 
-3.  Open de console **Services**, zoek de **Forefront Identity Manager-synchronisatieservice**  en stop deze.
+3.  Open de console **Services**, zoek de **Forefront Identity Manager-synchronisatieservice ** en stop deze.
 
     ![Afbeelding van de console Services](media/MIM-UpgFIM1.PNG)
 
@@ -85,7 +85,7 @@ In deze gids wordt verondersteld dat u het volgende al hebt ingesteld.
 
 1.  Meld u aan als beheerder op een server waarop de FIM 2010 R2-service en -portal zijn geïmplementeerd.
 
-2.  Open de console **Services**, zoek de **Forefront Identity Manager-service**  en stop deze service.
+2.  Open de console **Services**, zoek de **Forefront Identity Manager-service ** en stop deze service.
 
     ![Afbeelding van de console Services](media/MIM-UpgFIM9.PNG)
 
@@ -109,11 +109,11 @@ In deze gids wordt verondersteld dat u het volgende al hebt ingesteld.
 
     4.  **MIM-portal voor wachtwoordherstel:** dit onderdeel is nodig voor wachtwoordherstel.
 
-7.  Geef details op van de SQL Server die wordt gebruikt voor de FIM-servicedatabase. Selecteer de optie voor het opnieuw gebruiken van de bestaande database en het behouden van de gegevens. Klik op **Volgende** om verder te gaan.
+7.  Geef details op van de SQL Server die wordt gebruikt voor de FIM-servicedatabase. Selecteer de optie voor het opnieuw gebruiken van de bestaande database en het behouden van de gegevens. Klik op **Volgende** om door te gaan.
 
 8. Als de optie voor het opnieuw gebruiken van de bestaande database is geselecteerd, wordt een herinnering weergegeven voor het maken van een back-up van de database.
 
-9. Voer de details van de e-mailserver in. Als de e-mailserver zich op de huidige server bevindt, voert u localhost in als locatie van de mail-server. Klik op **Volgende** om verder te gaan.
+9. Voer de details van de e-mailserver in. Als de e-mailserver zich op de huidige server bevindt, voert u localhost in als locatie van de mail-server. Klik op **Volgende** om door te gaan.
 
     ![Afbeelding van Configureren van de e-mailserververbinding](media/MIM-UpgSP6.png)
 

@@ -12,17 +12,17 @@ ms.assetid: 2585e9c5-ce34-46c7-bdcf-8c08773901dc
 ms.reviewer: markwahl-msft
 ms.suite: ems
 ms.openlocfilehash: 8e4371c8d3caac06f7200d8439b30b7aa978a336
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79042454"
 ---
 # <a name="install-mim-2016-mim-synchronization-service"></a>MIM 2016: MIM-synchronisatieservice installeren
 
 > [!div class="step-by-step"]
-> [« Exchange Server](prepare-server-exchange.md)
-> [MIM-service en -portal »](install-mim-service-portal.md)
+> [«Exchange Server](prepare-server-exchange.md)
+> [MIM-service en-Portal»](install-mim-service-portal.md)
  
 > [!NOTE]
 > In deze stapsgewijze instructies wordt gebruikgemaakt van voorbeeldnamen en -waarden van een bedrijf met de naam Contoso. Vervang deze door uw eigen namen en waarden. Bijvoorbeeld:
@@ -31,7 +31,7 @@ ms.locfileid: "79042454"
 > - Naam van de MIM-service Server- **corpservice**
 > - Naam MIM-synchronisatie server- **corpsync**
 > - SQL Server naam- **corpsql**
-> - Wachtwoord - <strong>Pass@word1</strong>
+> - Wacht woord<strong>Pass@word1</strong>
 
 Stel eerst het installatiepakket in voordat u de Microsoft Identity Manager 2016-onderdelen installeert.
 
@@ -59,7 +59,7 @@ Stel eerst het installatiepakket in voordat u de Microsoft Identity Manager 2016
 
    1.  De SQL Server bevindt zich op: **een externe computer met de** naam **corpsql.contoso.com**.
 
-   2.  Het SQL Server-exemplaar is: **het standaard exemplaar**
+   2.  Het SQL Server-exemplaar is: **het standaardexemplaar**
 
    ![Afbeelding voor de databaseverbinding](media/install-mim-sync/MIM_Install3.png)
 
@@ -69,12 +69,12 @@ Stel eerst het installatiepakket in voordat u de Microsoft Identity Manager 2016
 
    1. Serviceaccount: *MIMSync*
 
-   2. Wachtwoord: <em>Pass@word1</em>
+   2. Wacht woord<em>Pass@word1</em>
 
    3. Serviceaccountdomein of naam van de lokale computer: *contoso*
 
     >[!NOTE]
-    >MIM 2016 SP2 en hoger: voor beheerde service accounts voor groepen, controleert u of het **$** -teken aan het einde van de naam van het service account is, bijvoorbeeld MIMSync $, en laat het veld wacht woord leeg.
+    >MIM 2016 SP2 en hoger: voor beheerde service accounts voor groepen, controleert **$** u of het teken aan het einde van de naam van het service account is, bijvoorbeeld MIMSync $, en laat u het veld wacht woord leeg.
 
     ![Afbeelding voor het serviceaccount](media/install-mim-sync/MIM_Install4.png)
 
@@ -109,5 +109,5 @@ Stel eerst het installatiepakket in voordat u de Microsoft Identity Manager 2016
     5. U moet zich afmelden en weer aanmelden om de wijzigingen voor een groepslidmaatschap door te voeren. Klik op **Ja** om u af te melden.
 
 > [!div class="step-by-step"]  
-> [« Exchange Server](prepare-server-exchange.md)
-> [MIM-service en -portal »](install-mim-service-portal.md)
+> [«Exchange Server](prepare-server-exchange.md)
+> [MIM-service en-Portal»](install-mim-service-portal.md)

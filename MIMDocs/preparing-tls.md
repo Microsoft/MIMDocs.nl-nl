@@ -12,10 +12,10 @@ ms.assetid: 50345fda-56d7-4b6e-a861-f49ff90a8376
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: f8d0be0cb9ffa0f32415f11b407954cb0c985024
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79043440"
 ---
 # <a name="planning-mim-2016-sp2-in-tls-12-or-fips-mode-environments"></a>MIM 2016 SP2 plannen in TLS 1,2-en FIPS-modus omgevingen
@@ -25,7 +25,7 @@ ms.locfileid: "79043440"
 > Dit artikel is alleen van toepassing op MIM 2016 SP2
 
 Wanneer u MIM 2016 SP2 installeert in de vergrendelde omgeving met alle versleutelings protocollen, maar TLS 1,2 is uitgeschakeld, gelden de volgende vereisten:
-- Als u de MIM-onderdelen beveiligde TLS 1,2-verbinding wilt maken, moeten de meest recente updates voor Windows Server en .NET Framework waarmee TLS 1,2-ondersteuning in .NET 3,5 Framework wordt geïnstalleerd. Afhankelijk van de configuratie van uw server moet u mogelijk [SystemDefaultTlsVersions inschakelen voor .NET Framework](https://support.microsoft.com/help/3154520/support-for-tls-system-default-versions-included-in-the-net-framework) en/of [alle SCHANNEL-protocollen behalve TLS 1,2](https://docs.microsoft.com/windows-server/security/tls/tls-registry-settings) in het REGI ster in de *client* -en *Server* subsleutels uitschakelen.
+- Als u de MIM-onderdelen beveiligde TLS 1,2-verbinding wilt maken, moeten de meest recente updates voor Windows Server en .NET Framework waarmee TLS 1,2-ondersteuning in .NET 3,5 Framework wordt geïnstalleerd. Afhankelijk van de configuratie van uw server *might* moet u mogelijk [SystemDefaultTlsVersions inschakelen voor .NET Framework](https://support.microsoft.com/help/3154520/support-for-tls-system-default-versions-included-in-the-net-framework) en/of [alle SCHANNEL-protocollen behalve TLS 1,2](https://docs.microsoft.com/windows-server/security/tls/tls-registry-settings) in het REGI ster in de *client* -en *Server* subsleutels uitschakelen.
 
 ## <a name="mim-synchronization-service-sql-ma"></a>MIM-synchronisatie service, SQL MA
 

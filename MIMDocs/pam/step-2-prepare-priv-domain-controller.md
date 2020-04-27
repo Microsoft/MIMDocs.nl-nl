@@ -12,17 +12,17 @@ ms.assetid: 0e9993a0-b8ae-40e2-8228-040256adb7e2
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: 97b425fc4444b241ddce99e7d5e3abf564daf245
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79043695"
 ---
 # <a name="step-2---prepare-the-first-priv-domain-controller"></a>Stap 2: de eerste PRIV-domeincontroller voorbereiden
 
 > [!div class="step-by-step"]
-> [« Stap 1](step-1-prepare-corp-domain.md)
-> [Stap 3 »](step-3-prepare-pam-server.md)
+> [«Stap 1](step-1-prepare-corp-domain.md)
+> [stap 3»](step-3-prepare-pam-server.md)
 
 In deze stap maakt u een nieuw domein dat de bastionomgeving biedt voor verificatie door de beheerder.  Dit forest moet ten minste één domeincontroller hebben, en ten minste één lidserver. De lidserver worden geconfigureerd in de volgende stap.
 
@@ -34,11 +34,11 @@ In dit gedeelte stelt u een virtuele machine in om te fungeren als een domeincon
 
 Installeer Windows Server 2012 R2 op een andere nieuwe virtuele machine waarop geen software is geïnstalleerd om een computer 'PRIVDC' te maken.
 
-1. Selecteer deze optie om een aangepaste installatie (niet een upgrade) van Windows Server uit te voeren. Wanneer u installeert, geeft u **Windows Server 2012 R2 Standard (server met een GUI)** op. _Selecteer niet_ **Data Center of Server Core**.
+1. Selecteer deze optie om een aangepaste installatie (niet een upgrade) van Windows Server uit te voeren. Geef bij de installatie de editie **Windows Server 2012 R2 Standard x64 (server met een GUI)** op. _Selecteer niet_ **datacentrum of serverkern**.
 
 2. Lees en accepteer de licentievoorwaarden.
 
-3. Omdat de schijf leeg is, selecteert u **Aangepast: alleen Windows installeren** en gebruikt u de niet-geïnitialiseerde schijfruimte.
+3. Omdat de schijf leeg is, selecteert u **aangepast: alleen Windows installeren** en de niet-geïnitialiseerde schijf ruimte gebruiken.
 
 4. Meld u na de installatie van de besturingssysteemversie bij deze nieuwe computer aan als de nieuwe beheerder. Gebruik Configuratiescherm om de computernaam in te stellen op *PRIVDC*, wijs hieraan een statisch IP-adres op het virtuele netwerk toe en configureer de DNS-server als de DNS-server van de domeincontroller die is geïnstalleerd in de vorige stap. Hiervoor moet de server opnieuw worden opgestart.
 
@@ -165,25 +165,25 @@ U moet de controle instellen zodat de PAM-configuratie tot stand kan worden gebr
 
 1. Zorg ervoor dat u bent aangemeld als domeinbeheerder (PRIV\\Administrator).
 
-2. Ga naar **Start** > **Systeembeheer** > **Groepsbeleidsbeheer**.
+2. Ga naar **Start** > **systeem beheer** > **Groepsbeleid beheer**.
 
-3. Navigeer naar **Forest: priv.contoso.local** > **domeinen** > **priv.contoso.local** > **domeincontrollers** > **Standaardbeleid voor domeincontrollers**. Er wordt een waarschuwing weergegeven.
+3. Navigeer naar **forest: Priv. contoso. local** > **domeinen** > **Priv. contoso. local** > **domein controllers** > **standaard beleid voor domein controllers**. Er wordt een waarschuwing weergegeven.
 
 4. Klik met de rechtermuisknop op **Standaardbeleid voor domeincontrollers** en selecteer **Bewerken**.
 
-5. Navigeer in de structuur van de consolestructuur van Groepsbeleidsbeheer-editor naar **Computerconfiguratie** > **Beleidsregels** > **Windows-instellingen** > **Beveiligingsinstellingen** > **Lokale beleidsregels** > **Controlebeleid**.
+5. Navigeer in de console structuur van Groepsbeleidsbeheer-editor naar **computer configuratie** > **beleid** > **Windows-instellingen** > **beveiligings instellingen** > **lokale beleids regels** > **controle beleid**.
 
 6. Klik in het detailvenster met de rechtermuisknop op **Accountbeheer controleren** en selecteer **Eigenschappen**. Klik op **Deze beleidsinstellingen vastleggen**, schakel het selectievakje **Geslaagd** in, schakel het selectievakje **Fout** in, klik op **Toepassen** en vervolgens op **OK**.
 
 7. Klik in het detailvenster met de rechtermuisknop op **Directoryservicetoegang controleren** en selecteer **Eigenschappen**. Klik op **Deze beleidsinstellingen vastleggen**, schakel het selectievakje **Geslaagd** in, schakel het selectievakje **Fout** in, klik op **Toepassen** en vervolgens op **OK**.
 
-8. Navigeer naar **Computerconfiguratie** > **Beleidsregels** > **Windows-instellingen** > **Beveiligingsinstellingen** > **Beleidsregels van account** > **Kerberos-beleid**.
+8. Ga naar **computer configuratie** > **beleid** > **Windows-instellingen** > **beveiligings instellingen** > **account beleid** > **Kerberos-beleid**.
 
 9. Klik in het detailvenster met de rechtermuisknop op **Maximale levensduur van gebruikersticket** en selecteer **Eigenschappen**. Klik op **Deze beleidsinstellingen vastleggen**, stel het aantal uren in op *1*, klik op **Toepassen** en vervolgens op **OK**. Houd er rekening mee dat andere instellingen in het venster ook worden gewijzigd.
 
 10. Selecteer in het venster Groepsbeleidsbeheer **Standaard domeinbeleid**, klik er met de rechtermuisknop op en selecteer **Bewerken**.
 
-11. Vouw **Computerconfiguratie** > **Beleidsregels** > **Windows-instellingen** > **Beveiligingsinstellingen** > **Lokale beleidsregels** uit en selecteer **Toewijzing van gebruiksrechten**.
+11. Uitvouwen **computer configuratie** > **beleid** > **Windows-instellingen** > **beveiligings instellingen** > **lokaal beleid** en selecteer **toewijzing van gebruikers rechten**.
 
 12. Klik in het detailvenster met de rechtermuisknop op **Aanmelden als batchtaak weigeren** en selecteer **Eigenschappen**.
 
@@ -246,12 +246,12 @@ Voer de volgende stappen uit op PRIVDC als een domeinbeheerder.
 1. Start **Active Directory: gebruikers en computers**.
 2. Klik met de rechtermuisknop op het domein **priv.contoso.local** en selecteer **Beheer delegeren**.
 3. Klik op het tabblad Geselecteerde gebruikers en groepen op **Toevoegen**.
-4. Typ in het venster Gebruikers, computers, of groepen selecteren *mimcomponent; mimmonitor; mimservice* en klik op **Namen controleren**. Nadat de namen zijn onderstreept, klikt u op **OK** en vervolgens op **Volgende**.
+4. Typ in het venster Gebruikers, computers, of groepen selecteren *mimcomponent; mimmonitor; mimservice* en klik op **Namen controleren**. Nadat de namen zijn onderstreept, klikt u op **OK** en vervolgens op **volgende**.
 5. Selecteer in de lijst met algemene taken **Gebruikersaccounts maken, verwijderen en beheren** en **Lidmaatschap van een groep wijzigen**, klik vervolgens op **Volgende** en **Voltooien**.
 
 6. Klik nogmaals met de rechtermuisknop op het domein **priv.contoso.local** en selecteer **Beheer delegeren**.
 7. Klik op het tabblad Geselecteerde gebruikers en groepen op **Toevoegen**.  
-8. Voer in het venster Gebruikers, computers, of groepen selecteren *MIMAdmin* in en klik op **Namen controleren**. Nadat de namen zijn onderstreept, klikt u op **OK** en vervolgens op **Volgende**.
+8. Voer in het venster Gebruikers, computers, of groepen selecteren *MIMAdmin* in en klik op **Namen controleren**. Nadat de namen zijn onderstreept, klikt u op **OK** en vervolgens op **volgende**.
 9. Selecteer **Aangepaste taak**, van toepassing op **Deze map**, met **Algemene machtigingen**.
 10. Selecteer het volgende in de lijst met bevoegdheden:
     - **Lezen**
@@ -304,5 +304,5 @@ Zie voor meer informatie [securing privileged access workstations](https://techn
 In de volgende stap bereidt u een PAM-server voor.
 
 > [!div class="step-by-step"]
-> [« Stap 1](step-1-prepare-corp-domain.md)
-> [Stap 3 »](step-3-prepare-pam-server.md)
+> [«Stap 1](step-1-prepare-corp-domain.md)
+> [stap 3»](step-3-prepare-pam-server.md)

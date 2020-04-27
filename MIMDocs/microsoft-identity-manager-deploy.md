@@ -12,10 +12,10 @@ ms.assetid: fa0af422-b5e9-4599-9d9b-cb6c18ea07f9
 ms.reviewer: markwahl-msft
 ms.suite: ems
 ms.openlocfilehash: 5a80718b038a10bb8d746a86856b87d016783fd6
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79043185"
 ---
 # <a name="deploy-microsoft-identity-manager-2016-sp2"></a>Microsoft Identity Manager 2016 SP2 implementeren
@@ -42,7 +42,7 @@ Zie [ondersteunde platforms voor MIM 2016 of hoger](microsoft-identity-manager-2
  Het volgende moet hiervoor worden ingesteld:
 - [Windows Server](prepare-server-ws2016.md)
 - [SQL Server](prepare-server-sql2016.md)
-- [Share Point-server](prepare-server-sharepoint.md)
+- [SharePoint Server](prepare-server-sharepoint.md)
 - [Exchange Server](prepare-server-exchange.md) (optioneel)
 
 ## <a name="finally-install-microsoft-identity-manager-2016-sp2-components"></a>Ten slotte: Installeer Microsoft Identity Manager 2016 SP2-onderdelen

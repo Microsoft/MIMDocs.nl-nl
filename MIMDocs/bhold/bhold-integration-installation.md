@@ -10,10 +10,10 @@ ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
 ms.openlocfilehash: 3005e06606ec4b3b6854003213c712770376b35d
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79042199"
 ---
 # <a name="bhold-fimmim-integration-installation"></a>Installatie van BHOLD FIM/MIM-integratie
@@ -45,9 +45,9 @@ Bovendien moet u voor bereid zijn om de informatie op te geven die door de insta
 
 | **Item**                            | **Beschrijving**                                                                                                                                                                                                               | **Waarde**                                                                                                                                                                                                                                                                                                            |
 |-------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Beveiligings provider op domein gebruiken** | Hiermee geeft u op dat Active Directory Domain Services beveiliging de toegang tot BHOLD core beheert.                                                                                                                    | Schakel het selectie vakje in. **Belang rijk:** Als dit selectie vakje niet is ingeschakeld, mislukt de installatie.                                                                                                                                                                                                                   |
-| **Domein**                          | Hiermee geeft u het domein op dat het **Service account** bevat dat u hebt gemaakt bij het installeren van de BHOLD-kern. Zie [BHOLD Core Installation](https://technet.microsoft.com/library/jj134095(v=ws.10).aspx)(Engelstalig) voor meer informatie. | De domein naam wordt automatisch geleverd door de wizard. Wijzig de naam alleen als deze onjuist is. **Belang rijk:** Geef de domein naam op met behulp van de NetBIOS (korte) naam, niet de Fully Qualified Domain Name (FQDN). Als de FQDN van het domein bijvoorbeeld fabrikam.com is, geeft u de domein naam op als FABRIKAM. |
-| **Gebruikersnaam**                        | Hiermee geeft u de aanmeldings naam van het gebruikers account van de BHOLD-basis service.                                                                                                                                                              | Schrijf hier de naam van het gebruikers account:                                                                                                                                                                                                                                                                                    |
+| **Beveiligings provider op domein gebruiken** | Hiermee geeft u op dat Active Directory Domain Services beveiliging de toegang tot BHOLD core beheert.                                                                                                                    | Schakel het selectievakje in. **Belang rijk:** Als dit selectie vakje niet is ingeschakeld, mislukt de installatie.                                                                                                                                                                                                                   |
+| **Domain**                          | Hiermee geeft u het domein op dat het **Service account** bevat dat u hebt gemaakt bij het installeren van de BHOLD-kern. Zie [BHOLD Core Installation](https://technet.microsoft.com/library/jj134095(v=ws.10).aspx)(Engelstalig) voor meer informatie. | De domein naam wordt automatisch geleverd door de wizard. Wijzig de naam alleen als deze onjuist is. **Belang rijk:** Geef de domein naam op met behulp van de NetBIOS (korte) naam, niet de Fully Qualified Domain Name (FQDN). Als de FQDN van het domein bijvoorbeeld fabrikam.com is, geeft u de domein naam op als FABRIKAM. |
+| **Gebruikers**                        | Hiermee geeft u de aanmeldings naam van het gebruikers account van de BHOLD-basis service.                                                                                                                                                              | Schrijf hier de naam van het gebruikers account:                                                                                                                                                                                                                                                                                    |
 | **Wachtwoord**                        | Hiermee geeft u het wacht woord van het Service gebruikers account.                                                                                                                                                                           | Schrijf hier het wacht woord: **belang rijk:** zorg ervoor dat u dit wacht woord op een verborgen, veilige locatie blijft.                                                                                                                                                                                                                  |
 
 ### <a name="fim-service-settings"></a>FIM-service-instellingen
@@ -63,7 +63,7 @@ Bovendien moet u voor bereid zijn om de informatie op te geven die door de insta
 
 | **Item**               | **Beschrijving**                                                                                                                                                                                                                                                                                                                                                                               | **Waarde**                                                                                           |
 |------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
-| **Domein**             | Hiermee geeft u de naam op van het domein van het account dat is opgegeven in **gebruiker**, hieronder. Geef het domein op in de indeling NetBIOS (korte).                                                                                                                                                                                                                                                                   | De domein naam van het gebruikers account hier schrijven?                                                            |
+| **Domain**             | Hiermee geeft u de naam op van het domein van het account dat is opgegeven in **gebruiker**, hieronder. Geef het domein op in de indeling NetBIOS (korte).                                                                                                                                                                                                                                                                   | De domein naam van het gebruikers account hier schrijven?                                                            |
 | **Gebruiker**               | Hiermee geeft u de aanmeldings naam op van het account van **een BHOLD-gebruiker die een super Visor is** van alle gebruikers en rollen en toestemming heeft om gebruikers rollen te koppelen en ontkoppelen. Micro soft raadt u ten zeerste aan het account dat is gekoppeld aan de hoofd gebruiker in BHOLD core (standaard het account dat wordt gebruikt voor het installeren van BHOLD core) niet te gebruiken. Dit account kan hetzelfde account zijn dat u gebruikt om verbinding te maken met FIM | Schrijf hier de naam van het gebruikers account:                                                                   |
 | **Wachtwoord**           | Hiermee geeft u het wacht woord van het gebruikers account dat is opgegeven in de **gebruiker**.                                                                                                                                                                                                                                                                                                                             | Schrijf hier het wacht woord: **belang rijk:** zorg ervoor dat u dit wacht woord op een verborgen, veilige locatie blijft. |
 | **IP/machine adres** | Hiermee geeft u het IP-adres op van de BHOLD core-website server. Gebruik niet de server naam.                                                                                                                                                                                                                                                                                                        | Schrijf hier het IP-adres:                                                                          |
@@ -73,9 +73,9 @@ Bovendien moet u voor bereid zijn om de informatie op te geven die door de insta
 
 Als u de BHOLD FIM-integratie module wilt installeren, meldt u zich aan als lid van de groep domein Administrators, downloadt u het volgende bestand en voert u het uit als beheerder op de server waarop u de BHOLD FIM-integratie module wilt installeren:
 
-- BholdFIMIntegration<em>\<versie\></em>\_release. msi
+- Release. msi van BholdFIMIntegration\_<em>\<-versie\></em>
 
-Vervang *\<versie\>* door het versie nummer van de BHOLD FIM-integratie versie die u installeert.
+Vervang * \<versie\> * door het versie nummer van de BHOLD FIM-integratie versie die u installeert.
 
 Als u het programma bestand als beheerder wilt uitvoeren, klikt u met de rechter muisknop op het bestand en klikt u vervolgens op **als administrator uitvoeren**.
 
@@ -95,7 +95,7 @@ Voor een juiste werking moet de BHOLD-service account voor BHOLD FIM-integratie 
 
 2.  Klik op **Start**en klik vervolgens op **Internet-Exporer**.
 
-3.  In de adres balk typt u <https://localhost> als share point is geconfigureerd voor het gebruik van SSL-beveiliging, anders typt u <http://localhost>.
+3.  Typ <https://localhost> in de adres balk of share point is geconfigureerd voor het gebruik van SSL-beveiliging <http://localhost>, anders typt u.
 
 4.  Klik aan de linkerkant van de pagina **team site** op **personen en groepen**.
 
@@ -111,31 +111,31 @@ Voor een juiste werking moet de BHOLD-service account voor BHOLD FIM-integratie 
 
 ### <a name="configuring-bhold-to-support-ssl"></a>BHOLD configureren voor ondersteuning van SSL
 
-Als de FIM-Portal is geconfigureerd voor het gebruik van SSL-beveiliging, moet u bestanden op de FIM-server wijzigen zodat koppelingen naar BHOLD-pagina's worden geopend. De bestanden bevinden zich in de volgende map: ```C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\12\TEMPLATE\LAYOUTS\BHOLD```.
+Als de FIM-Portal is geconfigureerd voor het gebruik van SSL-beveiliging, moet u bestanden op de FIM-server wijzigen zodat koppelingen naar BHOLD-pagina's worden geopend. De bestanden bevinden zich in de volgende map ```C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\12\TEMPLATE\LAYOUTS\BHOLD```:.
 
 De volgende tabel bevat de bestanden en de oorspronkelijke en gewijzigde versies van de teken reeksen die moeten worden bewerkt.
 
 | **Bestand**                  | **Oorspronkelijke teken reeks**                                                                                                                   | **Gewijzigde teken reeks**                                                                                                                                |
 |---------------------------|---------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
-| Analytics. aspx            |   http://< BHOLD_Server >/bhold/Analytics/index_fim. html | https://< BHOLD_Server_FQDN >/bhold/Analytics/index_fim. html       |
-| AttestationCampaigns. aspx |    http://< BHOLD_Server >/bhold/Attestation/Campaigns.aspx? hideMenu = 1 | https://< BHOLD_Server_FQDN >/bhold/Attestation/Campaigns.aspx? hideMenu = 1 | 
-| AttestationMain. aspx      |  http://< BHOLD_Server >/bhold/Attestation/Dashboard.aspx? hideMenu = 1        | https://< BHOLD_Server_FQDN >/bhold/Attestation/Dashboard.aspx? hideMenu = 1 |
-| Reporting. aspx            | http://< BHOLD_Server >/bhold/Reporting/index_fim. html |  https://< BHOLD_Server_FQDN >/bhold/Reporting/index_fim. html |
-| Selfservice. aspx          | RoleExchangePoint = http://\<*FIM_Server*\>: \<*FIM_Port*\>/BHOLD/RoleExchangePoint/BHOLDRoleExchangePoint. SVC, TransportMode = Trans Port | RoleExchangePoint = https://\<*FIM_Server_FQDN*\>: \<*FIM_SSL_Port*\>\>/BHOLD/RoleExchangePoint/BHOLDRoleExchangePoint. SVC, TransportMode = Trans Port |
+| Analytics. aspx            |   http://<BHOLD_Server>/bhold/Analytics/index_fim.html | https://<BHOLD_Server_FQDN>/bhold/Analytics/index_fim.html       |
+| AttestationCampaigns. aspx |    http://<BHOLD_Server>/bhold/Attestation/Campaigns.aspx? hideMenu = 1 | https://<BHOLD_Server_FQDN>/bhold/Attestation/Campaigns.aspx? hideMenu = 1 | 
+| AttestationMain. aspx      |  http://<BHOLD_Server>/bhold/Attestation/Dashboard.aspx? hideMenu = 1        | https://<BHOLD_Server_FQDN>/bhold/Attestation/Dashboard.aspx? hideMenu = 1 |
+| Reporting. aspx            | http://<BHOLD_Server>/bhold/Reporting/index_fim.html |  https://<BHOLD_Server_FQDN>/bhold/Reporting/index_fim.html |
+| Selfservice. aspx          | RoleExchangePoint = http://\<*FIM_Server*\>: \< *FIM_Port*\>/BHOLD/RoleExchangePoint/BHOLDRoleExchangePoint. SVC, TransportMode = Trans Port | RoleExchangePoint = https://\<*FIM_Server_FQDN*\>: \< *FIM_SSL_Port\>*\>/BHOLD/RoleExchangePoint/BHOLDRoleExchangePoint. SVC, TransportMode = Trans Port |
 
-Waarbij:
+Waar:
 
--   *\<BHOLD_Server\>* specificeert de naam van de BHOLD-server, zoals gevonden in de oorspronkelijke versie van het bestand
+-   BHOLD_Server geeft de naam aan van de BHOLD-server, zoals deze in de oorspronkelijke versie van het bestand is gevonden * \<\> *
 
--   *\<MIM_Server\>* specificeert de naam van de FIM-server, zoals gevonden in de oorspronkelijke versie van het bestand
+-   MIM_Server geeft de naam van de FIM-server op, zoals gevonden in de oorspronkelijke versie van het bestand * \<\> *
 
--   *\<BHOLD_Server_FQDN\>* specificeert de Fully QUALIFIED domain name (FQDN) van de BHOLD-server
+-   BHOLD_Server_FQDN Hiermee wordt de Fully Qualified Domain Name (FQDN) van de BHOLD-server opgegeven * \<\> *
 
--   *\<MIM_Port\>* Hiermee geeft u het poort nummer van de FIM-server op, zoals gevonden in de oorspronkelijke versie van het bestand.
+-   MIM_Port geeft het poort nummer van de FIM-server op, zoals gevonden in de oorspronkelijke versie van het bestand * \<\> *
 
--   *\<MIM_Server_FQDN\>* Hiermee geeft u de FQDN-naam van de FIM-server op
+-   MIM_Server_FQDN Hiermee wordt de FQDN-naam van de FIM-server opgegeven * \<\> *
 
--   *\<MIM_SSL_Port\>* een andere poort opgeeft voor gebruik met SSL op de FIM-server
+-   MIM_SSL_Port geeft een andere poort op voor gebruik met SSL op de FIM-server * \<\> *
 
 ### <a name="enable-approval-workflows-in-bhold-core"></a>Goedkeurings werk stromen inschakelen in BHOLD core
 
@@ -157,7 +157,7 @@ Als een goed keurder voor een Self-Service Role-aanvraag niet wordt opgegeven do
 
 2.  Klik op **Start**en vervolgens op **Internet Explorer**.
 
-3.  Typ <http://localhost:5151/bhold/core>in de adres balk van Internet Explorer en druk op ENTER.
+3.  Typ <http://localhost:5151/bhold/core>in de adres balk van Internet Explorer en druk op de Enter-toets.
 
 4.  Klik op de start pagina van de BHOLD-kern onder **kenmerk def**op **kenmerk typen**.
 
@@ -189,7 +189,7 @@ Als een goed keurder voor een Self-Service Role-aanvraag niet wordt opgegeven do
 
 18. Klik op de pagina **organisatie-eenheid/root** op **wijzigen**.
 
-19. Op de **pagina kenmerken van organisatie-eenheid wijzigen/hoofd niveau** , in **goed keurder**, typt u het domein en de gebruikers naam van de gebruiker die aanvragen voor het toewijzen van rollen moet goed keuren, in de indeling *\<domein\>* \\ *\<gebruikers\>* , waarbij *\<domein\>* de aanmeldings naam van de *gebruiker is.* \<\>
+19. Op de pagina **kenmerken van organisatie-eenheid wijzigen/hoofd niveau** , in **goed keurder**, typt u het domein en de gebruikers naam van de gebruiker die aanvragen voor roltoewijzing goedkeurt, in de indeling * \<\>domein**\<\>*\\gebruiker, waarbij * \<domein\> * de NetBIOS (Short) domein naam is en * \<de gebruiker\> * de aanmeldings naam van de gebruiker is.
 20. Klik op **OK**.
 
 > [!IMPORTANT]
@@ -207,7 +207,7 @@ Ter verbetering van de beveiliging van werk stromen, naast goed keurders, moet u
 
 - melding<em>\<n\></em>
 
-waarbij *\<n\>* een optioneel numeriek achtervoegsel aangeeft om meerdere kenmerken van hetzelfde type te bieden.
+waarbij * \<n\> * een optioneel numeriek achtervoegsel aangeeft om meerdere kenmerken van hetzelfde type te bieden.
 
 ### <a name="verify-approval-workflows-configured-in-the-fim-service"></a>Goedkeurings werk stromen verifiëren die zijn geconfigureerd in de FIM-service
 

@@ -12,10 +12,10 @@ ms.assetid: ''
 ms.reviewer: billmath
 ms.suite: ems
 ms.openlocfilehash: 62a6b936dc30b8593c8758a6158244d0f6dbbc4f
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79043015"
 ---
 # <a name="microsoft-identity-manager-2016-licensing-and-downloads"></a>Microsoft Identity Manager 2016-licenties en-down loads
@@ -47,18 +47,18 @@ Voordat u een nieuwe installatie van MIM of een upgrade van een eerdere versie s
 Als u een nieuwe installatie start, moet u de installatie bestanden downloaden voor elk MIM-onderdeel dat relevant is voor uw scenario. Down load vervolgens alle updates voor deze bestanden en down load vervolgens alle extra onderdelen die afzonderlijk worden gedownload via het Download centrum.
 
 
-| Scenario | Component | Vereist voor scenario? | Naam van DVD ISO-map | Opmerkingen |
+| Scenario | Onderdeel | Vereist voor scenario? | Naam van DVD ISO-map | Opmerkingen |
 |----------|-----------|---------------------   |-------------------|----------|--------------|
-|Synchronisatie| Synchronisatie service (inclusief connector naar AD) | Yes | `Synchronization Service` | |
+|Synchronisatie| Synchronisatie service (inclusief connector naar AD) | Ja | `Synchronization Service` | |
 | Synchronisatie | PCNS | Nee | `Password Change Notification Service` |  Te worden geïnstalleerd op domein controllers |
-| Synchronisatie | Connectors voor LDAP, SQL, Web Services, Power shell, Lotus Domino, Graph | Nee | N/A | Gedistribueerd via download centrum |
-| Privileged Access Management | MIM-service | Yes | `Service and Portal` | |
-| Selfservice | MIM-service, MIM-Portal | Yes | `Service and Portal` | |
+| Synchronisatie | Connectors voor LDAP, SQL, Web Services, Power shell, Lotus Domino, Graph | Nee | N.v.t. | Gedistribueerd via download centrum |
+| Privileged Access Management (Windows en Microsoft Active Directory beveiligen met beheer van bevoegde toegang) | MIM-service | Ja | `Service and Portal` | |
+| Selfservice | MIM-service, MIM-Portal | Ja | `Service and Portal` | |
 | Selfservice | Invoeg toepassingen en extensies | Nee | `Add-ins and extensions` | Geïnstalleerd op computers van eind gebruikers |
 | Selfservice | SCSM rapportage | Nee | `Data Warehouse Support Scripts` | |
-| Selfservice | Hybrid Reporting agent | Nee | N/A | Gedistribueerd via download centrum |
+| Selfservice | Hybrid Reporting agent | Nee | N.v.t. | Gedistribueerd via download centrum |
 | Selfservice | Taalpakketten | Nee | `LANGUAGE Packs` | |
-| Certificaatbeheer | CM | Yes | `Certificate Management` | |
+| Certificaatbeheer | CM | Ja | `Certificate Management` | |
 | Certificaatbeheer | CM bulk client | Nee | `CM Bulk Client` | |
 | Certificaatbeheer | CM Client | Nee | `CM Client`  | |
 | Certificaatbeheer | CM-app voor Windows | Nee | `FIMCMModernApp*` | | |
@@ -82,7 +82,7 @@ Controleer de [release geschiedenis van de versie Manager](./reference/version-h
 
 Om te bepalen welke update bestanden nodig zijn, bevat deze tabel de onderdelen en de naam van het bijbehorende patch bestand (MSP) in een update.
 
-| Scenario | Component | Naam van DVD ISO-map | Bestands naam van de bijbehorende update patch |
+| Scenario | Onderdeel | Naam van DVD ISO-map | Bestands naam van de bijbehorende update patch |
 |----------|-----------|-   |-------------------|----------|--------------|
 |Synchronisatie| Synchronisatie service | `Synchronization Service` | `MIMSyncService_x64*.msp` |
 | Selfservice | MIM-service, MIM-Portal | `Service and Portal` | `MIMService_x64*msp` |

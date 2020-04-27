@@ -10,10 +10,10 @@ ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
 ms.openlocfilehash: 0d5f970168934f3fcc4c721aad0a439e2babcfe7
-ms.sourcegitcommit: c214bb0b1373b65b1c9c215379fd820ab0c13f0f
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/14/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79381502"
 ---
 <a name="azure-ad-business-to-business-b2b-collaboration-with-microsoft-identity-managermim-2016-sp1-with-azure-application-proxy"></a>Azure AD Business-to-Business (B2B)-samen werking met Microsoft Identity Manager (MIM) 2016 SP1 met Azure-toepassing proxy
@@ -36,7 +36,7 @@ Enkele hypo Thesen die zijn gemaakt in de configuratie van B2B met MIM en Azure 
 
 -   U hebt al een of meer toepassingen gepubliceerd, die afhankelijk zijn van geïntegreerde Windows-verificatie of individuele AD-accounts via Azure AD-app proxy
 
--   U hebt uitgenodigd om een of meer gasten uit te nodigen, waardoor een of meer gebruikers hebben geresulteerd in azure AD <https://docs.microsoft.com/azure/active-directory/active-directory-b2b-self-service-portal>
+-   U hebt uitgenodigd om een of meer gasten uit te nodigen, wat heeft geresulteerd in een of meer gebruikers die zijn gemaakt in azure AD<https://docs.microsoft.com/azure/active-directory/active-directory-b2b-self-service-portal>
 
 
 
@@ -44,7 +44,7 @@ Enkele hypo Thesen die zijn gemaakt in de configuratie van B2B met MIM en Azure 
 
 Deze hand leiding is gebaseerd op het volgende scenario:
 
-Contoso farmaceutische werken met Trey Research Inc. als onderdeel van hun R & D-afdeling. Trey Research-mede werkers moeten toegang hebben tot de rapportage toepassing voor onderzoek van Contoso farmaceutische bedrijven.
+Contoso farmaceutische werken met Trey Research Inc. als onderdeel van hun R&D-afdeling. Trey Research-mede werkers moeten toegang hebben tot de rapportage toepassing voor onderzoek van Contoso farmaceutische bedrijven.
 
 -   Contoso farmaceutische bedrijven bevinden zich in hun eigen Tenant, om een aangepast domein te configureren.
 
@@ -68,7 +68,7 @@ Meer informatie vindt [u in azure AD Connect Sync: filters configureren](https:/
 
 
 Opmerking: voordat u een MIM-verbinding maakt, moet u ervoor zorgen dat u de hand leiding voor het implementeren van de [Graph](microsoft-identity-manager-2016-connector-graph.md)-connector hebt gelezen en een toepassing met een client-id en geheim hebt gemaakt.
-Zorg ervoor dat de toepassing ten minste een van de volgende machtigingen heeft: `User.Read.All`, `User.ReadWrite.All`, `Directory.Read.All` of `Directory.ReadWrite.All`. 
+Zorg ervoor dat de toepassing ten minste een van de volgende machtigingen heeft: `User.Read.All`, `User.ReadWrite.All` `Directory.Read.All` of `Directory.ReadWrite.All`. 
 
 ## <a name="create-the-new-management-agent"></a>De nieuwe beheer agent maken
 
@@ -84,7 +84,7 @@ Op de pagina connectiviteit moet u de Graph API versie opgeven. Gereed voor prod
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/6fabfe20af0207f1556f0df18fd16f60.png)
 
-### <a name="global-parameters"></a>Algemene para meters
+### <a name="global-parameters"></a>Globale parameters
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/84c4dd62f63b82239cd0cf63d14fc671.png)
 
@@ -100,7 +100,7 @@ Selecteer op de pagina partities en hiërarchieën alle naam ruimten met objecte
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/72f0adc789ed78c66d066768146fb874.png)
 
-#### <a name="select-object-types"></a>Object typen selecteren
+#### <a name="select-object-types"></a>Objecttypes selecteren
 
 Selecteer op de pagina object typen de object typen die u wilt importeren. U moet ten minste ' gebruiker ' selecteren.
 
@@ -108,7 +108,7 @@ Selecteer op de pagina object typen de object typen die u wilt importeren. U moe
 
 #### <a name="select-attributes"></a>Kenmerken selecteren
 
-Selecteer in het scherm kenmerken selecteren de optie kenmerken van Azure AD die nodig zijn voor het beheren van B2B-gebruikers in AD. Het kenmerk ' ID ' is vereist.  De kenmerken `userPrincipalName` en `userType` worden verderop in deze configuratie gebruikt.  Andere kenmerken zijn optioneel, waaronder
+Selecteer in het scherm kenmerken selecteren de optie kenmerken van Azure AD die nodig zijn voor het beheren van B2B-gebruikers in AD. Het kenmerk ' ID ' is vereist.  De kenmerken `userPrincipalName` en `userType` worden later in deze configuratie gebruikt.  Andere kenmerken zijn optioneel, waaronder
 
 -   `displayName`
 
@@ -130,19 +130,19 @@ In het scherm voor het configureren van het anker is het configureren van het an
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/9377ab7b760221517a431384689c8c76.png)
 
-#### <a name="configure-connector-filter"></a>Connector filter configureren
+#### <a name="configure-connector-filter"></a>Connectorfilter configureren
 
-Op de pagina connector filter configureren kunt u met MIM objecten filteren op basis van kenmerk filter. In dit scenario voor B2B is het doel om alleen gebruikers te brengen met de waarde van het `userType` kenmerk dat gelijk is aan `Guest`en niet gebruikers met de User type die gelijk zijn aan `member`.
+Op de pagina connector filter configureren kunt u met MIM objecten filteren op basis van kenmerk filter. In dit scenario voor B2B is het doel om alleen gebruikers te meenemen met de waarde van het `userType` kenmerk dat gelijk `Guest`is aan en niet aan gebruikers met de User type die gelijk `member`is aan.
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/d90691fce652ba41c7a98c9a863ee710.png)
 
-#### <a name="configure-join-and-projection-rules"></a>De regels voor samen voegen en projectie configureren
+#### <a name="configure-join-and-projection-rules"></a>Regels voor lid worden en projectie configureren
 
 In deze hand leiding wordt ervan uitgegaan dat u een synchronisatie regel maakt.  Als het configureren van de samen Voeg-en projectie regels worden verwerkt door de synchronisatie regel, hoeft het niet nodig zijn om een koppeling en projectie te identificeren op de connector zelf. Geef de standaard waarde op en klik op OK.
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/34896440ae6ad404e824eb35d8629986.png)
 
-#### <a name="configure-attribute-flow"></a>Kenmerk stroom configureren
+#### <a name="configure-attribute-flow"></a>Kenmerkstroom configureren
 
 In deze hand leiding wordt ervan uitgegaan dat u een synchronisatie regel maakt.  Er is geen projectie vereist voor het definiëren van de kenmerk stroom in de MIM-synchronisatie, omdat deze wordt verwerkt door de synchronisatie regel die later wordt gemaakt. Geef de standaard waarde op en klik op OK.
 
@@ -195,7 +195,7 @@ in de onderstaande stappen beginnen we met het toewijzen van het B2B-gast accoun
 
 Voor de volgende stappen is het toevoegen van een minimale configuratie aan de FIM-MA en de AD-MA vereist.
 
-Meer informatie vindt u hier voor de configuratie <https://technet.microsoft.com/library/ff686263(v=ws.10).aspx>-hoe kan ik gebruikers inrichten voor AD DS
+Meer informatie vindt u hier voor de configuratie <https://technet.microsoft.com/library/ff686263(v=ws.10).aspx> : hoe kan ik gebruikers inrichten voor AD DS
 
 ### <a name="synchronization-rule-import-guest-user-to-mv-to-synchronization-service-metaverse-from-azure-active-directorybr"></a>Synchronisatie regel: gast gebruiker importeren naar MV naar de synchronisatie service van Azure Active Directory<br>
 
@@ -209,24 +209,24 @@ Zorg ervoor dat u in de stap relatie criteria de optie ' resource maken in FIM '
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/0ac7f4d0fd55f4bffd9e6508b494aa74.png)
 
-Configureer de volgende regels voor binnenkomende kenmerk stromen.  Zorg ervoor dat u de kenmerken `accountName`, `userPrincipalName` en `uid` opgeeft, zoals ze later in dit scenario zullen worden gebruikt:
+Configureer de volgende regels voor binnenkomende kenmerk stromen.  Zorg ervoor dat u de `accountName`kenmerken `userPrincipalName` , `uid` en hebt ingevuld, zoals ze later in dit scenario worden gebruikt:
 
 | **Alleen eerste stroom** | **Gebruiken als bestaans test** | **Flow (bron waarde ⇒ FIM-kenmerk)**                          |
 |-----------------------|---------------------------|-----------------------------------------------------------------------|
-|                       |                           | [displayName⇒displayName](javascript:void(0);)                        |
-|                       |                           | [Links (id 20) ⇒accountName](javascript:void(0);)                        |
-|                       |                           | [id⇒uid](javascript:void(0);)                                         |
-|                       |                           | [userType⇒employeeType](javascript:void(0);)                          |
-|                       |                           | [givenName⇒givenName](javascript:void(0);)                            |
-|                       |                           | [surname⇒sn](javascript:void(0);)                                     |
-|                       |                           | [userPrincipalName⇒userPrincipalName](javascript:void(0);)            |
-|                       |                           | [id⇒cn](javascript:void(0);)                                          |
-|                       |                           | [mail⇒mail](javascript:void(0);)                                      |
-|                       |                           | [mobilePhone⇒mobilePhone](javascript:void(0);)                        |
+|                       |                           | [displayName ⇒ displayName] (Java script: void (0);)                        |
+|                       |                           | [Left (id, 20) ⇒ AccountName] (Java script: void (0);)                        |
+|                       |                           | [id ⇒ uid] (Java script: void (0);)                                         |
+|                       |                           | [User type ⇒ Employee type] (Java script: void (0);)                          |
+|                       |                           | [voor gegeven ⇒ OpgegevenNaam] (Java script: void (0);)                            |
+|                       |                           | [Achternaam ⇒ sn] (Java script: void (0);)                                     |
+|                       |                           | [userPrincipalName ⇒ userPrincipalName] (Java script: void (0);)            |
+|                       |                           | [id ⇒ CN] (Java script: void (0);)                                          |
+|                       |                           | [e-mail ⇒ mail] (Java script: void (0);)                                      |
+|                       |                           | [mobilePhone⇒mobilePhone] (Java script: void (0);)                        |
 
 ### <a name="synchronization-rule-create-guest-user-account-to-active-directory"></a>Synchronisatie regel: gast gebruikers account maken voor Active Directory 
 
-Met deze synchronisatie regel maakt u de gebruiker in Active Directory.  Zorg ervoor dat de stroom voor `dn` de gebruiker in de organisatie-eenheid moet plaatsen die is uitgesloten van Azure AD Connect.  Werk de stroom voor `unicodePwd` ook bij om te voldoen aan uw AD-wachtwoord beleid. de gebruiker hoeft het wacht woord niet te weten.  Let op de waarde van `262656` voor `userAccountControl` de vlaggen `SMARTCARD_REQUIRED` en `NORMAL_ACCOUNT`codeert.
+Met deze synchronisatie regel maakt u de gebruiker in Active Directory.  Zorg ervoor dat de stroom `dn` voor de gebruiker in de organisatie-eenheid die is uitgesloten van Azure AD Connect, moet worden geplaatst.  Werk ook de stroom voor `unicodePwd` om te voldoen aan uw AD-wachtwoord beleid. de gebruiker hoeft het wacht woord niet te weten.  Let op de waarde `262656` voor `userAccountControl` voor het coderen van `SMARTCARD_REQUIRED` de `NORMAL_ACCOUNT`vlaggen en.
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/3463e11aeb9fb566685e775d4e1b825c.png)
 
@@ -238,20 +238,20 @@ Stroom regels:
 
 | **Alleen eerste stroom** | **Gebruiken als bestaans test** | **Flow (FIM-waarde ⇒-doel kenmerk)**                          |
 |-----------------------|---------------------------|-----------------------------------------------------------------------|
-|                       |                           | [accountName⇒sAMAccountName](javascript:void(0);)                     |
-|                       |                           | [givenName⇒givenName](javascript:void(0);)                            |
-|                       |                           | [mail⇒mail](javascript:void(0);)                                      |
-|                       |                           | [sn⇒sn](javascript:void(0);)                                          |
-|                       |                           | [userPrincipalName⇒userPrincipalName](javascript:void(0);)            |
-| **Vorig**                 |                           | ["CN ="+ uid +", OE = B2BGuest, DC = contoso, DC = com" ⇒dn](javascript:void(0);) |
-| **Vorig**                 |                           | [RandomNum (0,999) + userPrincipalName⇒unicodePwd](javascript:void(0);)  |
-| **Vorig**                 |                           | [262656⇒userAccountControl](javascript:void(0);)                      |
+|                       |                           | [AccountName ⇒ sAMAccountName] (Java script: void (0);)                     |
+|                       |                           | [voor gegeven ⇒ OpgegevenNaam] (Java script: void (0);)                            |
+|                       |                           | [e-mail ⇒ mail] (Java script: void (0);)                                      |
+|                       |                           | [sn ⇒ sn] (Java script: void (0);)                                          |
+|                       |                           | [userPrincipalName ⇒ userPrincipalName] (Java script: void (0);)            |
+| **Y**                 |                           | ["CN =" + UID + ", OE = B2BGuest, DC = contoso, DC = com" ⇒ DN] (Java script: void (0);) |
+| **Y**                 |                           | [RandomNum (0999) + userPrincipalName ⇒ unicodePwd] (Java script: void (0);)  |
+| **Y**                 |                           | [262656 ⇒ userAccountControl] (Java script: void (0);)                      |
 
 ### <a name="optional-synchronization-rule-import-b2b-guest-user-objects-sid-to-allow-for-login-to-mim"></a>Optionele synchronisatie regel: Importeer B2B gast User Objects SID om u aan te melden bij MIM 
 
-Met deze regel voor binnenkomende synchronisatie wordt het SID-kenmerk van de gebruiker weer gegeven van Active Directory terug naar MIM, zodat de gebruiker toegang kan krijgen tot de MIM-Portal.  De MIM-Portal vereist dat de gebruiker de kenmerken `samAccountName`, `domain` en `objectSid` heeft ingevuld in de data base van de MIM-service.
+Met deze regel voor binnenkomende synchronisatie wordt het SID-kenmerk van de gebruiker weer gegeven van Active Directory terug naar MIM, zodat de gebruiker toegang kan krijgen tot de MIM-Portal.  De MIM- `samAccountName` `domain` Portal vereist dat de gebruiker de kenmerken heeft en `objectSid` ingevuld is in de data base van de MIM-service.
 
-Configureer het externe bron systeem als `ADMA`, aangezien het kenmerk `objectSid` automatisch wordt ingesteld door AD wanneer MIM de gebruiker maakt.
+Configureer het externe bron systeem als de `ADMA`, omdat het `objectSid` kenmerk automatisch wordt ingesteld door AD wanneer MIM de gebruiker maakt.
  
 Houd er rekening mee dat als u gebruikers configureert om te worden gemaakt in de MIM-service, ervoor moet zorgen dat ze niet binnen het bereik vallen van de sets die zijn bedoeld voor SSPR beheer beleidsregels voor werk nemers.  Mogelijk moet u de ingestelde definities wijzigen om gebruikers uit te sluiten die zijn gemaakt door de B2B-stroom. 
 
@@ -267,24 +267,24 @@ Houd er rekening mee dat als u gebruikers configureert om te worden gemaakt in d
 
 | **Alleen eerste stroom** | **Gebruiken als bestaans test** | **Flow (bron waarde ⇒ FIM-kenmerk)**                          |
 |-----------------------|---------------------------|-----------------------------------------------------------------------|
-|                       |                           | [sAMAccountName⇒accountName](javascript:void(0);)                     |
-|                       |                           | ['CONTOSO' ⇒domain](javascript:void(0);)                            |
-|                       |                           | [objectSid⇒objectSid](javascript:void(0);)                                      |
+|                       |                           | [sAMAccountName ⇒ accountnaam] (Java script: void (0);)                     |
+|                       |                           | ["CONTOSO" ⇒-domein] (Java script: void (0);)                            |
+|                       |                           | [objectSid ⇒ objectSid] (Java script: void (0);)                                      |
 
 
 ## <a name="run-the-synchronization-rules"></a>De synchronisatie regels uitvoeren
 
 Daarna nodigen we de gebruiker uit en voeren ze de beheer agent synchronisatie regels in de volgende volg orde uit:
 
--   Volledige import en synchronisatie op de `MIMMA` beheer agent.  Dit zorgt ervoor dat de MIM-synchronisatie de meest recente synchronisatie regels heeft geconfigureerd.
+-   Volledige import en synchronisatie in de `MIMMA` beheer agent.  Dit zorgt ervoor dat de MIM-synchronisatie de meest recente synchronisatie regels heeft geconfigureerd.
 
--   Volledige import en synchronisatie op de `ADMA` beheer agent.  Dit zorgt ervoor dat MIM en Active Directory consistent zijn.  Op dit moment is er nog geen export voor gasten in behandeling.
+-   Volledige import en synchronisatie in de `ADMA` beheer agent.  Dit zorgt ervoor dat MIM en Active Directory consistent zijn.  Op dit moment is er nog geen export voor gasten in behandeling.
 
--   Volledige import en synchronisatie in de B2B Graph Management-Agent.  Hiermee worden de gast gebruikers omgezet in de tekst.  Op dit moment worden een of meer accounts in afwachting van de export voor `ADMA`.  Als er geen uitvoer in behandeling is, controleert u of gast gebruikers zijn geïmporteerd in de connector ruimte en of de regels zijn geconfigureerd om AD-accounts te krijgen.
+-   Volledige import en synchronisatie in de B2B Graph Management-Agent.  Hiermee worden de gast gebruikers omgezet in de tekst.  Op dit moment worden een of meer accounts geëxporteerd voor `ADMA`.  Als er geen uitvoer in behandeling is, controleert u of gast gebruikers zijn geïmporteerd in de connector ruimte en of de regels zijn geconfigureerd om AD-accounts te krijgen.
 
--   Exporteren, Delta-import en synchronisatie op de `ADMA` beheer agent.  Als de export is mislukt, controleert u de regel configuratie en bepaalt u of er ontbrekende schema vereisten zijn. 
+-   Exporteren, Delta-import en synchronisatie in de `ADMA` beheer agent.  Als de export is mislukt, controleert u de regel configuratie en bepaalt u of er ontbrekende schema vereisten zijn. 
 
--   Exporteren, Delta-import en synchronisatie op de `MIMMA` beheer agent.  Wanneer dit is voltooid, moeten er geen export bewerkingen meer in behandeling zijn.
+-   Exporteren, Delta-import en synchronisatie in de `MIMMA` beheer agent.  Wanneer dit is voltooid, moeten er geen export bewerkingen meer in behandeling zijn.
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/506f0a093c8b58cbb62cc4341b251564.png)
 
@@ -310,10 +310,10 @@ Als alle configuraties zijn geconfigureerd, hebben B2B-gebruikers zich aangemeld
 <a name="next-steps"></a>Volgende stappen
 ----------
 
-[Gebruikers inrichten voor AD DS](https://technet.microsoft.com/library/ff686263(v=ws.10).aspx)
+[Hoe kan ik gebruikers inrichten voor AD DS?](https://technet.microsoft.com/library/ff686263(v=ws.10).aspx)
 
 [Functiereferentie voor FIM 2010](https://technet.microsoft.com/library/ff800820(v=ws.10).aspx)
 
-[Veilige externe toegang bieden tot on-premises toepassingen](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started)
+[How to provide secure remote access to on-premises applications](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started) (Beveiligde externe toegang bieden voor on-premises toepassingen)
 
 [Microsoft Identity Manager connector voor Microsoft Graph downloaden](https://go.microsoft.com/fwlink/?LinkId=717495)

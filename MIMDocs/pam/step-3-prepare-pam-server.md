@@ -13,17 +13,17 @@ ROBOTS: noindex,nofollow
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: 7a0a0437e767f793150d875bcaf31213a7fdf627
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79043661"
 ---
 # <a name="step-3--prepare-a-pam-server"></a>Stap 3 – Een PAM-server voorbereiden
 
 > [!div class="step-by-step"]
-> [« Stap 2](step-2-prepare-priv-domain-controller.md)
-> [Stap 4 »](step-4-install-mim-components-on-pam-server.md)
+> [«Stap 2](step-2-prepare-priv-domain-controller.md)
+> [stap 4»](step-4-install-mim-components-on-pam-server.md)
 
 ## <a name="install-windows-server-2012-r2"></a>Windows Server 2012 R2 installeren
 
@@ -66,23 +66,23 @@ Voeg de functies van de webserver (IIS) en de toepassingsserver, de onderdelen v
 
 Configureer het beveiligingsbeleid van de server zodanig dat de zojuist gemaakte accounts als services kunnen worden uitgevoerd.
 
-1.  Start het programma **Lokaal beveiligingsbeleid**.   
-2.  Navigeer naar **Lokaal beleid** > **Toewijzing van gebruikersrechten**.  
+1.  Start het programma **lokaal beveiligings beleid** .   
+2.  Navigeer naar **lokaal beleid** > **toewijzing van gebruikers rechten**.  
 3.  Klik in het detailvenster met de rechtermuisknop op **Aanmelden als service** en selecteer **Eigenschappen**.  
 4.  Klik op **Gebruiker of groep toevoegen** en voer bij Gebruiker en groepsnamen *priv\mimmonitor; priv\MIMService; priv\SharePoint; priv\mimcomponent; priv\SqlServer* in. Klik op **Namen controleren** en vervolgens op **OK**.  
 
-5.  Klik op **OK** om het venster Eigenschappen te sluiten.
+5.  Klik op **OK** om de venster Eigenschappen te sluiten.
 6.  Klik in het detailvenster met de rechtermuisknop op **Toegang tot deze computer vanaf het netwerk weigeren** en selecteer **Eigenschappen**.  
 7.  Klik op **Gebruiker of groep toevoegen**, voer bij Gebruiker en groepsnamen *priv\mimmonitor; priv\MIMService; priv\mimcomponent* in en klik op **OK**.  
-8.  Klik op **OK** om het venster Eigenschappen te sluiten.
+8.  Klik op **OK** om het eigenschappenvenster te sluiten.
 
 9. Klik in het detailvenster met de rechtermuisknop op **Lokaal aanmelden weigeren** en selecteer **Eigenschappen**.  
 10. Klik op **Gebruiker of groep toevoegen**, voer bij Gebruiker en groepsnamen *priv\mimmonitor; priv\MIMService; priv\mimcomponent* in en klik op **OK**.  
-11. Klik op **OK** om het venster Eigenschappen te sluiten.  
+11. Klik op **OK** om het eigenschappenvenster te sluiten.  
 12. Sluit het venster Lokaal beveiligingsbeleid.  
 
 13. Open Configuratiescherm en schakel over naar **Gebruikersaccounts**.
-14. Klik op **Andere gebruikers toegang tot deze computer geven** .
+14. Klik op **Andere gebruikers toegang tot deze computer geven **.
 15. Klik op **Toevoegen**, voer de gebruiker *MIMADMIN* in het domein *PRIV* in en klik in het volgende scherm van de wizard op **Deze gebruiker toevoegen als beheerder**.  
 16. Klik op **Toevoegen**, voer de gebruiker *SharePoint* in het domein *PRIV* in en klik in het volgende scherm van de wizard op **Deze gebruiker toevoegen als beheerder**.  
 17. Sluit Configuratiescherm.
@@ -115,7 +115,7 @@ Als SQL Server nog niet aanwezig is in de bastionomgeving, installeert u SQL Ser
 1. Zorg dat u bent aangemeld als MIMAdmin.
 2. Klik met de rechtermuisknop op PowerShell en selecteer **Als administrator uitvoeren**.
 3. Ga naar de map met het installatieprogramma van SQL Server.  
-4. Typ de volgende opdracht:  
+4. Typ de volgende opdracht.  
     ```
     .\setup.exe /Q /IACCEPTSQLSERVERLICENSETERMS /ACTION=install /FEATURES=SQL,SSMS /INSTANCENAME=MSSQLSERVER /SQLSVCACCOUNT="PRIV\SqlServer" /SQLSVCPASSWORD="Pass@word1" /AGTSVCSTARTUPTYPE=Automatic /AGTSVCACCOUNT="NT AUTHORITY\Network Service" /SQLSYSADMINACCOUNTS="PRIV\MIMAdmin"
     ```
@@ -136,14 +136,14 @@ Nadat de vereiste onderdelen voor SharePoint zijn geïnstalleerd, installeert u 
 1.  Klik met de rechtermuisknop op PowerShell en selecteer **Als administrator uitvoeren**.  
 2.  Ga naar de map waar SharePoint is uitgepakt.  
 3.  Typ de opdracht `.\setup.exe`.  
-4.  Selecteer het type voor de **volledige server**.  
+4.  Selecteer het **volledige server** type.  
 5.  Voer de wizard uit nadat de installatie is voltooid.  
 
 ### <a name="configure-sharepoint"></a>SharePoint configureren
 
 Voer de wizard Configuratie van SharePoint-producten uit.
 
-1.  Schakel op het tabblad Verbinding met een serverfarm over naar **Een nieuwe serverfarm maken**.  
+1.  Wijzig op het tabblad verbinding maken met een server farm om **een nieuwe server farm te maken**.  
 2.  Geef **PAMSRV** op als de databaseserver voor de configuratiedatabase en **PRIV\SharePoint** als het account voor databasetoegang dat voor SharePoint moet worden gebruikt.  
 3.  Geef een wachtwoord op als wachtwoordzin voor beveiliging van de farm (wordt verder niet gebruikt in dit overzicht).  
 4.  Accepteer voorlopig de overige standaardinstellingen van de configuratiewizard van SharePoint om een farm met één server te maken.    
@@ -216,5 +216,5 @@ Gebruik **Services** (in Systeembeheer) om de **SharePoint-beheerservice** te st
 In step 4 begint u met het installeren van de MIM-onderdelen op de PAM-server.
 
 > [!div class="step-by-step"]
-> [« Stap 2](step-2-prepare-priv-domain-controller.md)
-> [Stap 4 »](step-4-install-mim-components-on-pam-server.md)
+> [«Stap 2](step-2-prepare-priv-domain-controller.md)
+> [stap 4»](step-4-install-mim-components-on-pam-server.md)

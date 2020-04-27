@@ -12,17 +12,17 @@ ms.assetid: bfc7cb64-60c7-4e35-b36a-bbe73b99444b
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: 3b99bd6d8f10c993d65e026bab23deeb65c547e9
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79043950"
 ---
 # <a name="planning-a-bastion-environment"></a>Een bastionomgeving plannen
 
 Door het toevoegen van een bastionomgeving met een specifiek beheerforest aan Active Directory kunnen organisaties gemakkelijk beheerdersaccounts, werkstations en groepen beheren in een omgeving die sterkere beveiligingsmechanismen heeft dan hun bestaande productieomgeving.
 
-Deze architectuur maakt een aantal besturingselementen mogelijk die in een architectuur met één forest niet mogelijk zijn of niet eenvoudig kunnen worden geconfigureerd. Dit omvat het inrichten van accounts als standaardgebruiker zonder beheerdersmogelijkheden in het beheerforest, die in de productieomgeving over uitgebreide beheerdersmogelijkheden beschikken. Hierdoor is betere technische afdwinging van governance mogelijk. Deze architectuur maakt het ook mogelijk de functie selectieve verificatie van een vertrouwensrelatie te gebruiken om aanmeldingen (en referentieblootstelling) te beperken tot alleen geautoriseerde hosts. In situaties waarin een hoger niveau van controle is gewenst voor het productieforest zonder de extra kosten en complexiteit van een volledig nieuwe installatie, kan een beheerforest een omgeving bieden waarin de controle van de productieomgeving wordt verhoogd.
+Deze architectuur maakt een aantal besturingselementen mogelijk die in een architectuur met één forest niet mogelijk zijn of niet eenvoudig kunnen worden geconfigureerd. Dit omvat het inrichten van accounts als standaardgebruiker zonder beheerdersmogelijkheden in het beheerforest, die in de productieomgeving over uitgebreide beheerdersmogelijkheden beschikken. Hierdoor is betere technische afdwinging van governance mogelijk. Deze architectuur biedt ook de mogelijkheid van het gebruik van de functie Selectieve verificatie van een vertrouwensrelatie als een manier om aanmeldingen (en referentieblootstelling) te beperken tot alleen geautoriseerde hosts. In situaties waarin een hoger assurantieniveau voor het productieforest is vereist zonder de kosten en complexiteit van het bouwen van een geheel nieuwe architectuur, kan een beheerforest voorzien in een omgeving die het assurantieniveau van de productieomgeving verhoogt.
 
 Naast het toegewezen beheerforest kunnen aanvullende technieken worden gebruikt. Hieronder vallen het beperken van blootstelling van beheerdersreferenties, hete beperken van rolbevoegdheden van gebruikers in die forest en het waarborgen dat administratieve taken niet worden uitgevoerd op hosts die worden gebruikt voor standaard gebruikersactiviteiten (bijvoorbeeld e-mailen en surfen op internet).
 
@@ -40,9 +40,9 @@ Volgens het [lagenmodel](tier-model-for-partitioning-administrative-privileges.m
 
 ### <a name="restricted-trust"></a>Beperkt vertrouwen
 
-Het productieforest *CORP* moet het beheerforest *PRIV* vertrouwen, maar niet andersom. Dit kan een domeinvertrouwen of een forestvertrouwensrelatie zijn. Het beheersforestdomein hoeft de beheerde domeinen en forests niet te vertrouwen om de Active Directory te beheren. Voor aanvullende toepassingen is mogelijk wel een wederzijdse vertrouwensrelatie, beveiligingsvalidatie en test vereist.
+Het productieforest *CORP* moet het beheerforest *PRIV* vertrouwen, maar niet andersom. Dit kan een domeinvertrouwen of een forestvertrouwen zijn. Het beheersforestdomein hoeft de beheerde domeinen en forests niet te vertrouwen om de Active Directory te beheren. Voor aanvullende toepassingen is mogelijk wel een wederzijdse vertrouwensrelatie, beveiligingsvalidatie en test vereist.
 
-Selectieve verificatie moet worden gebruikt om ervoor te zorgen dat accounts in het beheerforest alleen de juiste productiehosts gebruiken. Voor het onderhoud van domeincontrollers en het delegeren van rechten in Active Directory, is doorgaans het toekennen van het recht 'Allowed to logon' (Aanmelden toegestaan) vereist voor domeincontrollers in aangewezen beheerdersaccounts in laag 0 van het beheerforest. Zie [Configuring Selective Authentication Settings](https://technet.microsoft.com/library/cc816580.aspx) (Selectieve verificatie-instellingen configureren) voor meer informatie.
+Selectieve verificatie moet worden gebruikt om ervoor te zorgen dat accounts in het beheerforest alleen de juiste productiehosts gebruiken. Voor het onderhoud van domeincontrollers en het delegeren van rechten in Active Directory, is doorgaans het toekennen van het recht 'Allowed to logon' (Aanmelden toegestaan) vereist voor domeincontrollers in aangewezen beheerdersaccounts in laag 0 van het beheerforest. Zie [instellingen voor selectieve verificatie configureren](https://technet.microsoft.com/library/cc816580.aspx) voor meer informatie.
 
 ## <a name="maintain-logical-separation"></a>Logische scheiding behouden
 
@@ -76,11 +76,11 @@ Houd er tijdens de overgang van het beheer van toepassingen naar de bastionomgev
 
 Het beheerforest moet zijn geconfigureerd voor de minimale bevoegdheden op basis van de vereisten voor Active Directory-beheer.
 
-- Aan accounts in het beheerforest die worden gebruikt voor het beheer van de productieomgeving, mogen geen beheerdersbevoegdheden worden verleend voor de beheerforest, of voor domeinen of werkstations in dit forest.
+- Accounts in het beheerforest die worden gebruikt voor het beheer van de productieomgeving mogen geen administratorbevoegdheden krijgen voor het beheerforest of voor de domeinen of werkstations in het forest.
 
-- Beheerdersbevoegdheden voor het beheerforest moeten strikt worden beheerd door een offlineproces om de mogelijkheid te reduceren van een aanval of het wissen van controlelogboeken door een kwaadwillende insider. Zo voorkomt u ook dat personeel met beheerdersaccounts op productieniveau de beperkingen voor hun account kunnen versoepelen en het risico voor de organisatie verhogen.
+- Beheerdersbevoegdheden voor het beheerforest moeten strikt worden beheerd door een offlineproces om de mogelijkheid te reduceren van een aanval of het wissen van controlelogboeken door een kwaadwillende insider. Dit zorgt er ook voor dat werknemers met administratoraccounts in de productieomgeving de beperkingen voor hun account niet kunnen verminderen en zo het risico voor de organisatie verhogen.
 
-- Het beheerforest moet voldoen aan de Microsoft Security Compliance Manager-configuraties voor het domein, met inbegrip van sterke configuraties voor de verificatieprotocollen.
+- Het beheerforest moet de SCM-configuraties (Microsoft Security Compliance Manager) voor het domein volgen, waaronder sterke configuraties voor verificatieprotocollen.
 
 Bij het maken van de bastionomgeving, en voordat u Microsoft Identity Manager installeert, identificeert en maakt u de accounts die worden gebruikt voor beheer in deze omgeving. Dit omvat:
 
@@ -96,7 +96,7 @@ Op alle hosts, waaronder domeincontrollers, servers en werkstations die zijn gek
 
 - De toepassingen die zijn vereist voor het uitvoeren van beheer moeten vooraf worden geïnstalleerd op werkstations, zodat de accounts waarmee ze worden zich niet in de lokale beheerdersgroep hoeven te bevinden om deze toepassingen te installeren. Onderhoud aan de Domain Controller kan doorgaans worden uitgevoerd met RDP en externe-serverbeheerprogramma's.
 
-- Hosts voor beheerforest moeten automatisch worden bijgewerkt met beveiligingsupdates. Hierdoor ontstaat weliswaar het risico dat de domeincontroller wordt onderbroken door onderhoudsbewerkingen, maar het biedt een belangrijke beperking van beveiligingsrisico’s door niet-verholpen beveiligingsproblemen.
+- Hosts in beheerforests moeten automatisch worden bijgewerkt met beveiligingsupdates. Hoewel dit betekent dat onderhoudsbewerkingen voor domaincontrollers kunnen worden onderbroken, biedt het ook een belangrijke beperking van beveiligingsrisico's door niet-opgeloste beveiligingsproblemen.
 
 ### <a name="identify-administrative-hosts"></a>Hosts met een beheerderrol identificeren
 
@@ -118,23 +118,23 @@ Afzonderlijk beveiligde werkstations die zijn toegewezen aan gebruikers met invl
 
 - **Controleer of alle media in de build schoon is** om het risico te beperken dat schadelijke software is geïnstalleerd in een master-installatiekopie of is opgenomen in een installatiebestand tijdens downloaden of opslag.
 
-- **Beveiligingsbasislijnen** moeten worden gebruikt als basisconfiguratie. Microsoft Security naleving Manager (SCM) kan helpen de basislijnen op hosts met een beheerderrol te configureren.
+- **Beveiligings basislijnen** moeten worden gebruikt als start configuraties. Microsoft Security naleving Manager (SCM) kan helpen de basislijnen op hosts met een beheerderrol te configureren.
 
-- **Beveiligd opstarten** om het risico van aanvallers of het laden van schadelijke software tijdens het opstartproces te beperken.
+- **Beveiligd opstarten** om te voor komen dat aanvallers of schadelijke software niet-ondertekende code in het opstart proces probeert te laden.
 
 - **Softwarebeperking** om ervoor te zorgen dat alleen geautoriseerde beheersoftware wordt uitgevoerd op de hosts met een beheerderrol. Klanten kunnen voor deze taak AppLocker gebruiken met een whitelist geautoriseerde toepassingen, om te voorkomen dat schadelijke software en niet-ondersteunde toepassingen wordt uitgevoerd.
 
-- **Volledige codering** om het risico van fysieke verlies van computers te beperken, zoals laptops met een beheerderrol die op afstand worden gebruikt.
+- **Volledige volume versleuteling** voor het beperken van het fysieke verlies van computers, zoals het extern gebruiken van beheerders.
 
 - **USB-beperkingen** als bescherming tegen fysieke infectie.
 
-- **Netwerkisolatie** als bescherming tegen netwerkaanvallen en onbedoeld beheerhandelingen. Hostfirewalls moeten alle binnenkomende verbindingen blokkeren, behalve de verbindingen die expliciet zijn vereist, en moeten alle overbodige uitgaande toegang tot internet blokkeren.
+- **Netwerk isolatie** om te beschermen tegen netwerk aanvallen en onbedoelde beheer acties. Hostfirewalls moeten alle binnenkomende verbindingen blokkeren, behalve de verbindingen die expliciet zijn vereist, en moeten alle overbodige uitgaande toegang tot internet blokkeren.
 
-- **Antimalware** als bescherming tegen bekende dreigingen en schadelijke software.
+- **Antimalware** beveiligen tegen bekende bedreigingen en malware.
 
 - **Oplossingen gebruiken** om het risico van onbekende bedreigingen en aanvallen te beperken, met inbegrip van de Enhanced Mitigation Experience Toolkit (EMET).
 
-- **Kwetsbaarheid analyseren** om de introductie van nieuwe aanvalsvectoren tegen Windows tijdens de installatie van nieuwe software te voorkomen. Hulpprogramma's zoals de Attack Surface Analyzer (ASA) helpen configuratie-instellingen op een host te beoordelen en identificeren aanvalsvectoren die worden geïntroduceerd door software- of configuratiewijzigingen.
+- Kwets baarheid voor **aanvallen** om te voor komen dat nieuwe aanvals vectoren in Windows worden geïntroduceerd tijdens de installatie van nieuwe software. Hulpprogramma's zoals de Attack Surface Analyzer (ASA) helpen configuratie-instellingen op een host te beoordelen en identificeren aanvalsvectoren die worden geïntroduceerd door software- of configuratiewijzigingen.
 
 - **Beheerdersbevoegdheden** mogen niet worden toegekend aan gebruikers op hun lokale computer.
 
@@ -164,7 +164,7 @@ Er zijn zeven vereisten voor het inschakelen van beheer voor een bestaand domein
 
 ### <a name="1-a-security-group-on-the-local-domain"></a>1. een beveiligings groep in het lokale domein
 
-In het bestaande domein moet een groep bestaan waarvan de naam de NetBIOS-domeinnaam is, gevolgd door drie dollartekens, bijvoorbeeld *CONTOSO$$$* . Het groepsbereik moet *domeingebonden* zijn en het groepstype *Beveiliging*. Dit is nodig om groepen te kunnen maken in het toegewezen beheerforest met dezelfde beveiligings-id als groepen in dit domein. Meld u op een werkstation dat lid is van het bestaande domein aan als beheerder van het bestaande domein en maak deze groep met de volgende PowerShell-opdracht:
+In het bestaande domein moet een groep bestaan waarvan de naam de NetBIOS-domeinnaam is, gevolgd door drie dollartekens, bijvoorbeeld *CONTOSO$$$*. Het groepsbereik moet *domeingebonden* zijn en het groepstype *Beveiliging*. Dit is nodig om groepen te kunnen maken in het toegewezen beheerforest met dezelfde beveiligings-id als groepen in dit domein. Meld u op een werkstation dat lid is van het bestaande domein aan als beheerder van het bestaande domein en maak deze groep met de volgende PowerShell-opdracht:
 
 ```PowerShell
 New-ADGroup -name 'CONTOSO$$$' -GroupCategory Security -GroupScope DomainLocal -SamAccountName 'CONTOSO$$$'
@@ -174,15 +174,15 @@ New-ADGroup -name 'CONTOSO$$$' -GroupCategory Security -GroupScope DomainLocal -
 
 De instellingen voor groepsbeleid op de domeincontroller voor controle moet geslaagde en mislukte controle voor toegang tot Accountbeheer controleren en Active directory-service controleren omvatten. U doet dit met de console Groepsbeleidbeheer op een werkstation dat lid is van het bestaande domein en aangemeld als beheerder van het bestaande domein:
 
-3. Ga naar **Start** > **Systeembeheer** > **Groepsbeleidsbeheer**.
+3. Ga naar **Start** > **systeem beheer** > **Groepsbeleid beheer**.
 
-4. Navigeer naar **Forest: priv.contoso.local** > **Domeinen** > **priv.contoso.local** > **Domeincontrollers** > **Standaardbeleid voor domeincontrollers**. Een informatief bericht wordt weergegeven.
+4. Navigeer naar **forest: contoso. local** > **domeinen** > **contoso.** > Local**domein controllers** > **standaard beleid voor domein controllers**. Een informatief bericht wordt weergegeven.
 
     ![Schermopname van het venster Standaardbeleid voor domeincontrollers](media/pam-group-policy-management.jpg)
 
 5. Klik met de rechtermuisknop op **Standaardbeleid voor domeincontrollers** en selecteer **Bewerken**. Er wordt een nieuw venster weergegeven.
 
-6. Navigeer in het venster Groepsbeleidsbeheer-editor, onder de structuur Standaardbeleid voor domeincontrollers naar **Computerconfiguratie** > **Beleidsregels** > **Windows-instellingen** > **Beveiligingsinstellingen** > **Lokale beleidsregels** > **Controlebeleid**.
+6. Navigeer in het venster Groepsbeleidsbeheer-editor, onder de standaard beleids structuur van domein controllers, **naar computer configuratie** > **beleid** > **Windows-instellingen** > **beveiligings instellingen** > **lokaal beleid** > **controle beleid**.
 
     ![Schermopname van het venster Groepsbeleidsbeheer-editor](media/pam-group-policy-management-editor.jpg)
 
@@ -228,7 +228,7 @@ Met de volgende stappen schakelt u leestoegang in voor de gebruiker *PRIV\Admini
 
 3. Klik met de rechtermuisknop op het domein **contoso.local** en selecteer **Beheer delegeren**.
 
-4. Klik op het tabblad Geselecteerde gebruikers en groepen op **Toevoegen**.
+4. Klik op het tabblad geselecteerde gebruikers en groepen op **toevoegen**.
 
 5. Klik op de pop-up Gebruikers, computers of groepen selecteren op **Locaties** en wijzig de locatie in *priv.contoso.local*. Typ op de objectnaam *Domeinbeheerders* en klik op **Namen controleren**. Wanneer een pop-up wordt weergegeven, typt u voor de gebruikersnaam *priv\administrator* en typt u vervolgens het wachtwoord.
 

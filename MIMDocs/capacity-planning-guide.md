@@ -12,10 +12,10 @@ ms.assetid: 3ac5b990-1678-4996-996d-cbd84b8426b4
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: 15eb35d01ed5c5c6e125c45f238bb2f7a7c564d7
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79042114"
 ---
 # <a name="capacity-planning-guide"></a>Handleiding voor capaciteitsplanning
@@ -42,8 +42,8 @@ De belangrijkste factoren die van invloed zijn op de capaciteit en prestaties va
 | Topologie | De distributie van de MIM-services op de computers in het netwerk. |
 | Hardware | De fysieke hardware (fysiek of virtueel) voor elk MIM-onderdeel, inclusief CPU, geheugen, netwerk adapter en configuratie van harde schijven. |
 | MIM-beleidsconfiguratieobjecten | Het aantal en type MIM-beleidsconfiguratieobjecten, inclusief sets, beheerbeleidsregels (MPR's) en werkstromen. |
-| Schaal | De gebruikers, groepen, berekende groepen en aangepaste object typen die worden beheerd door MIM 2016. Houd tevens rekening met de complexiteit van dynamische groepen en het nesten van groepen. |
-| Werklast | De frequentie van gebruik. Bewerkingen, zoals het maken van nieuwe groepen of gebruikers, het opnieuw instellen van wacht woorden of portal bezoeken per minuut of uur. Houd er rekening mee dat de belasting in de loop van een uur, dag, week of jaar kan verschillen. Afhankelijk van het onderdeel kunt u kiezen voor een ontwerp voor piekbelasting of gemiddelde belasting. |
+| Schalen | De gebruikers, groepen, berekende groepen en aangepaste object typen die worden beheerd door MIM 2016. Houd tevens rekening met de complexiteit van dynamische groepen en het nesten van groepen. |
+| Belasting | De frequentie van gebruik. Bewerkingen, zoals het maken van nieuwe groepen of gebruikers, het opnieuw instellen van wacht woorden of portal bezoeken per minuut of uur. Houd er rekening mee dat de belasting in de loop van een uur, dag, week of jaar kan verschillen. Afhankelijk van het onderdeel kunt u kiezen voor een ontwerp voor piekbelasting of gemiddelde belasting. |
 
 ## <a name="hosting-microsoft-identity-manager-components"></a>Microsoft Identity Manager-onderdelen hosten
 

@@ -12,10 +12,10 @@ ms.assetid: 03e521cd-cbf0-49f8-9797-dbc284c63018
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: 67ce70e6bc0603a991731cf1e5fb95751f5016c6
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79043967"
 ---
 # <a name="high-availability-and-disaster-recovery-considerations-for-the-bastion-environment"></a>Overwegingen voor hoge beschikbaarheid en herstel na noodgevallen voor de bastionomgeving
@@ -39,7 +39,7 @@ Het bereik van deze overwegingen heeft impact op de totale kosten voor implement
 | Een vertrouwensrelatie tot stand brengen         | Laag | Wachten totdat de bastionomgeving is hersteld |
 | Beperking van gebruikers en groepen   | Laag | Wachten totdat de bastionomgeving is hersteld |
 | MIM-beheer          | Laag | Wachten totdat de bastionomgeving is hersteld |
-| Activering van bevoorrechte rollen  | Gemiddeld | Toegewezen smartcardaccounts om handmatig gebruikers toe te voegen aan beheergroepen |
+| Activering van bevoorrechte rollen  | Middelgroot | Toegewezen smartcardaccounts om handmatig gebruikers toe te voegen aan beheergroepen |
 | Resourcebeheer         | Hoog | Toegewezen smartcardaccounts om handmatig gebruikers toe te voegen aan beheergroepen |
 | Bewaking van gebruikers en groepen in een bestaand forest | Laag | Wachten totdat de bastionomgeving is hersteld |
 
@@ -81,7 +81,7 @@ MIM bevat ook een PAM-controleservice die regelmatig de gebruikers en groepen in
 
 Voor bewaking moeten de bestaande forestdomeincontrollers online zijn, evenals de MIM- en AD-onderdelen van de bastionomgeving.  
 
-## <a name="deployment-options"></a>Implementatie-opties
+## <a name="deployment-options"></a>Implementatieopties
 
 Het [overzicht van de omgeving](environment-overview.md) laat een basistopologie zien die geschikt is voor het leren van de technologie en die niet is bedoeld voor maximale beschikbaarheid. In deze sectie wordt beschreven hoe u die topologie kunt uitbreiden voor hoge beschikbaarheid, voor organisaties met één site evenals met meerdere bestaande sites.
 

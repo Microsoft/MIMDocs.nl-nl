@@ -12,10 +12,10 @@ ms.assetid: 50345fda-56d7-4b6e-a861-f49ff90a8376
 ms.reviewer: markwahl-msft
 ms.suite: ems
 ms.openlocfilehash: 32b346dd9cf99b617edfaca953389cba30d6681c
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79043508"
 ---
 # <a name="configure-a-domain-for-group-managed-service-accounts-gmsa-scenario"></a>Een domein configureren voor een gMSA-scenario (Group managed service accounts)
@@ -49,11 +49,11 @@ De volgende MIM-onderdelen ondersteunen geen uitvoeren als gMSA-accounts:
 
 
 Meer informatie over gMSA vindt u in de volgende artikelen:
--   [Overzicht van door groepen beheerde service accounts](https://docs.microsoft.com/windows-server/security/group-managed-service-accounts/group-managed-service-accounts-overview)
+-   [Overzicht van door een groep beheerde serviceaccounts](https://docs.microsoft.com/windows-server/security/group-managed-service-accounts/group-managed-service-accounts-overview)
 
 -   [New-ADServiceAccount](https://docs.microsoft.com/powershell/module/addsadministration/new-adserviceaccount?view=win10-ps)
 
--   [De KDS-hoofd sleutel voor Key Distribution Services maken](https://technet.microsoft.com/library/jj128430(v=ws.11).aspx)
+-   [De KDS-hoofdsleutel voor Key Distribution Services maken](https://technet.microsoft.com/library/jj128430(v=ws.11).aspx)
 
 ## <a name="create-user-accounts-and-groups"></a>Maak gebruikersaccounts en groepen
 
@@ -67,7 +67,7 @@ Alle onderdelen van uw MIM-implementatie hebben een eigen identiteit in het dome
 > - Naam van de MIM-service Server- **mimservice**
 > - Naam MIM-synchronisatie server- **mimsync**
 > - SQL Server naam- **SQL**
-> - Wachtwoord - <strong>Pass@word1</strong>
+> - Wacht woord<strong>Pass@word1</strong>
 
 1. Meld u als domeinbeheerder (*bijvoorbeeld Contoso\Administrator*) aan bij de domeincontroller.
 
@@ -129,7 +129,7 @@ Als er al een hoofd sleutel voor het domein is (gebruik **Get-KdsRootKey** om te
     ```PowerShell
     Add-KDSRootKey –EffectiveImmediately
     ```
-    *-EffectiveImmediately* kan een vertraging van maxi maal \~tien uur vereisen, omdat deze moet worden gerepliceerd naar alle domein controllers. Deze vertraging was ongeveer 1 uur voor twee domein controllers.
+    *-EffectiveImmediately* kan een vertraging van Maxi maal \~10 uur vereisen, omdat deze naar alle domein controllers moet worden gerepliceerd. Deze vertraging was ongeveer 1 uur voor twee domein controllers.
 
     ![](media/7fbdf01a847ea0e330feeaf062e30668.png)
 
@@ -144,7 +144,7 @@ Als er al een hoofd sleutel voor het domein is (gebruik **Get-KdsRootKey** om te
 Zorg ervoor dat alle computer accounts voor computers waarop MIM-software wordt geïnstalleerd, al lid zijn van het domein.  Voer vervolgens deze stappen uit in Power shell als een domein beheerder.
 
 7.  Maak een groep *MIMSync_Servers* en voeg alle MIM-synchronisatie servers toe aan deze groep.
-    Typ het volgende om een nieuwe AD-groep voor MIM-synchronisatie servers te maken. Vervolgens voegt u de MIM-synchronisatie Server Active Directory computer accounts, bijvoorbeeld *beheeragentaccount $* , toe aan deze groep.
+    Typ het volgende om een nieuwe AD-groep voor MIM-synchronisatie servers te maken. Vervolgens voegt u de MIM-synchronisatie Server Active Directory computer accounts, bijvoorbeeld *beheeragentaccount $*, toe aan deze groep.
 
     ```PowerShell
     New-ADGroup –name MIMSync_Servers –GroupCategory Security –GroupScope Global –SamAccountName MIMSync_Servers
@@ -175,7 +175,7 @@ Zorg ervoor dat alle computer accounts voor computers waarop MIM-software wordt 
 
 - Het beheerde service account van de MIM-synchronisatie service-groep gebruiken en geen afzonderlijk account maken
 
-    U kunt het maken van het service account van de MIM-Service beheer agent overs Laan. Gebruik in dit geval de MIM-synchronisatie service gMSA naam, bijvoorbeeld *contoso\MIMSyncGMSAsvc $* , in plaats van het MIM ma-account bij de installatie van de MIM-service. Verderop in de configuratie van de MIM-Service beheer agent schakelt u de optie *MIMSync account gebruiken* in.
+    U kunt het maken van het service account van de MIM-Service beheer agent overs Laan. Gebruik in dit geval de MIM-synchronisatie service gMSA naam, bijvoorbeeld *contoso\MIMSyncGMSAsvc $*, in plaats van het MIM ma-account bij de installatie van de MIM-service. Verderop in de configuratie van de MIM-Service beheer agent schakelt u de optie *MIMSync account gebruiken* in.
 
     Schakel aanmelden op het netwerk weigeren voor de MIM-synchronisatie service gMSA niet in als MIM MA-account vereist toestemming voor netwerk aanmelding toestaan.
 
@@ -197,7 +197,7 @@ Zorg ervoor dat alle computer accounts voor computers waarop MIM-software wordt 
 
 Ga door met het gebruik van Power shell als een domein beheerder.
    
-12. Maak een groep *MIMService_Servers* en voeg alle MIM-Service servers toe aan deze groep.  Typ de volgende Power shell om een nieuwe AD-groep voor de MIM-Service servers te maken en de MIM-service Server toe te voegen Active Directory computer account, bijvoorbeeld *contoso\MIMPortal $* , in deze groep.
+12. Maak een groep *MIMService_Servers* en voeg alle MIM-Service servers toe aan deze groep.  Typ de volgende Power shell om een nieuwe AD-groep voor de MIM-Service servers te maken en de MIM-service Server toe te voegen Active Directory computer account, bijvoorbeeld *contoso\MIMPortal $*, in deze groep.
 
     ```PowerShell
     New-ADGroup –name MIMService_Servers –GroupCategory Security –GroupScope Global –SamAccountName MIMService_Servers
@@ -240,7 +240,7 @@ Als u de MIM PAM configureert, volgt u dezelfde richt lijnen als hierboven besch
 
 ## <a name="specifying-a-gmsa-when-installing-mim"></a>Een gMSA opgeven tijdens de installatie van MIM
 
-Als algemene regel moet u in de meeste gevallen, wanneer u een MIM-installatie programma gebruikt, opgeven dat u een gMSA wilt gebruiken in plaats van een gewoon account, een dollar teken toevoegen aan de gMSA-naam, bijvoorbeeld **contoso\MIMSyncGMSAsvc $** , en het veld wacht woord leeg laten. Een uitzonde ring is het hulp programma *miisactivate. exe* dat gMSA naam accepteert zonder het dollar teken.
+Als algemene regel moet u in de meeste gevallen, wanneer u een MIM-installatie programma gebruikt, opgeven dat u een gMSA wilt gebruiken in plaats van een gewoon account, een dollar teken toevoegen aan de gMSA-naam, bijvoorbeeld **contoso\MIMSyncGMSAsvc $**, en het veld wacht woord leeg laten. Een uitzonde ring is het hulp programma *miisactivate. exe* dat gMSA naam accepteert zonder het dollar teken.
 <br/>
 
 > [!div class="step-by-step"]

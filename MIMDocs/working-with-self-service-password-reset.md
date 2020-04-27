@@ -10,15 +10,15 @@ ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
 ms.openlocfilehash: 41aba931111d6ef46e60dfed173362e59c411dfe
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79044273"
 ---
 # <a name="self-service-password-reset-deployment-options"></a>Implementatie opties voor de selfservice voor wachtwoord herstel
 
-Voor nieuwe klanten die [een licentie voor Azure Active Directory Premium](https://docs.microsoft.com/azure/active-directory/authentication/concept-sspr-licensing)hebben, kunt u het beste [Azure AD self-service voor wachtwoord herstel](/azure/active-directory/authentication/concept-sspr-howitworks) gebruiken om de gebruikers ervaring te bieden.  De self-service voor wachtwoord herstel van Azure AD biedt zowel een webgebaseerde als Windows-geïntegreerde ervaring voor een gebruiker om hun eigen wacht woord opnieuw in te stellen, en biedt ondersteuning voor veel van de mogelijkheden van MIM, inclusief alternatieve e-mail en Q & een Gates.  Wanneer u de selfservice voor wachtwoord herstel van Azure AD implementeert, ondersteunt Azure AD Connect [het schrijven van de nieuwe wacht woorden naar AD DS](/azure/active-directory/authentication/concept-sspr-writeback)en de MIM- [meldings service voor wachtwoord wijzigingen](deploying-mim-password-change-notification-service-on-domain-controller.md) kan worden gebruikt om de wacht woorden door te sturen naar andere systemen, zoals de Directory server van een andere leverancier.  Voor het implementeren van MIM voor [wachtwoord beheer](infrastructure/mim2016-password-management.md) is het niet vereist dat de MIM-service of de MIM self-service voor wachtwoord herstel of registratie portals worden geïmplementeerd.  In plaats daarvan kunt u deze stappen volgen:
+Voor nieuwe klanten die [een licentie voor Azure Active Directory Premium](https://docs.microsoft.com/azure/active-directory/authentication/concept-sspr-licensing)hebben, kunt u het beste [Azure AD self-service voor wachtwoord herstel](/azure/active-directory/authentication/concept-sspr-howitworks) gebruiken om de gebruikers ervaring te bieden.  De self-service voor wachtwoord herstel van Azure AD biedt zowel een webgebaseerde als Windows-geïntegreerde ervaring voor een gebruiker om hun eigen wacht woord opnieuw in te stellen, en biedt ondersteuning voor veel van de mogelijkheden van MIM, inclusief alternatieve e-mail en Q&een Gates.  Wanneer u de selfservice voor wachtwoord herstel van Azure AD implementeert, ondersteunt Azure AD Connect [het schrijven van de nieuwe wacht woorden naar AD DS](/azure/active-directory/authentication/concept-sspr-writeback)en de MIM- [meldings service voor wachtwoord wijzigingen](deploying-mim-password-change-notification-service-on-domain-controller.md) kan worden gebruikt om de wacht woorden door te sturen naar andere systemen, zoals de Directory server van een andere leverancier.  Voor het implementeren van MIM voor [wachtwoord beheer](infrastructure/mim2016-password-management.md) is het niet vereist dat de MIM-service of de MIM self-service voor wachtwoord herstel of registratie portals worden geïmplementeerd.  In plaats daarvan kunt u deze stappen volgen:
 
 - Als u eerst wacht woorden wilt verzenden naar andere mappen dan Azure AD en AD DS, implementeert u MIM sync with Connect oren to Active Directory Domain Services en eventuele extra doel systemen, configureert u MIM voor [wachtwoord beheer](infrastructure/mim2016-password-management.md) en implementeert u de [meldings service voor wachtwoord wijzigingen](deploying-mim-password-change-notification-service-on-domain-controller.md).
 - Als u vervolgens wacht woorden moet verzenden naar andere mappen dan Azure AD, configureert u Azure AD Connect voor [het terugschrijven van de nieuwe wacht woorden naar AD DS](/azure/active-directory/authentication/concept-sspr-writeback).
@@ -81,7 +81,7 @@ In de volgende sectie stelt u de Azure MFA-provider in Microsoft Azure Active Di
 
 1.  Maak een [MFA-provider](/azure/multi-factor-authentication/multi-factor-authentication-get-started-auth-provider).
 
-2. Open een ondersteunings aanvraag en vraag de directe SDK voor C#ASP.net 2,0. De SDK wordt alleen aan de huidige gebruikers van MIM met MFA door gegeven omdat de direct SDK is afgeschaft. Nieuwe klanten moeten de volgende versie van MIM aannemen die wordt geïntegreerd met MFA server.
+2. Open een ondersteunings aanvraag en vraag de direct SDK voor ASP.net 2,0 C# aan. De SDK wordt alleen aan de huidige gebruikers van MIM met MFA door gegeven omdat de direct SDK is afgeschaft. Nieuwe klanten moeten de volgende versie van MIM aannemen die wordt geïntegreerd met MFA server.
 
 3. Kopieer het betreffende ZIP-bestand naar elk systeem waarop de MIM-service is geïnstalleerd.  Houd er rekening mee dat het ZIP-bestand sleutelmateriaal bevat dat wordt gebruikt bij de verificatie voor de Azure MFA-service.
 
@@ -123,7 +123,7 @@ In de volgende sectie stelt u de Azure MFA-provider in Microsoft Azure Active Di
 
 3.  Klik op het tabblad **Activiteiten** en schuif vervolgens omlaag naar **Activiteit toevoegen**.
 
-4.  Selecteer **Telefoonpoort** of **SMS-gate voor OTP (eenmalig wachtwoord)** , klik op **Selecteren** en vervolgens op **OK**.
+4.  Selecteer **Telefoonpoort** of **SMS-gate voor OTP (eenmalig wachtwoord)**, klik op **Selecteren** en vervolgens op **OK**.
 
 Opmerking: als u een Azure MFA-server gebruikt, of een andere provider die het eenmalige wacht woord zelf genereert, moet u ervoor zorgen dat het veld lengte dat hierboven is geconfigureerd dezelfde lengte heeft als de waarde die is gegenereerd door de MFA-provider.  Deze lengte moet 6 zijn voor de Azure MFA-server.  Azure MFA-server genereert ook een eigen bericht tekst, zodat het SMS-bericht wordt genegeerd.
 
@@ -150,7 +150,7 @@ Wanneer de MIM-invoegtoepassingen en -uitbreidingen worden geïnstalleerd op een
 
 #### <a name="windows-desktop-login-integrated-password-reset"></a>Geïntegreerde functie voor het opnieuw instellen van het wachtwoord bij de aanmelding bij het Windows-bureaublad
 
-1.  Als de gebruiker meerdere keren het verkeerde wachtwoord in het scherm invoert, kan deze op **Problemen bij het aanmelden?** klikken voor meer informatie over het plannen van software-updates.
+1.  Als de gebruiker meerdere keren het verkeerde wachtwoord in het scherm invoert, kan deze op **Problemen bij het aanmelden?** klikken .
 
     ![Afbeelding van het aanmeldingsscherm](media/MIM-SSPR-problemsloggingin.JPG)
 

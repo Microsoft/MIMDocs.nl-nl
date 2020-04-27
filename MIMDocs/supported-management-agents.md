@@ -17,10 +17,10 @@ ms.author: esergeev
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: f6e43abea8b58ccff7fa376b266a91cb138f5aa9
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79044379"
 ---
 # <a name="connect-to-your-directories"></a>Verbinding maken met uw adreslijsten
@@ -46,17 +46,17 @@ Dit artikel heeft betrekking op de connectors die zijn opgenomen & worden onders
 | Oracle Database | Oracle Database 10g of 11g; 64-bit client |
 | Microsoft SQL Server | SQL Server 2012-2017 |
 | Oracle (eerder Sun en Netscape) Directory Servers | Sun Directory Server 6.x, 7.x en Oracle 11 |
-| [Windows Power shell-connector](https://msdn.microsoft.com/library/dn640417.aspx) | Windows PowerShell 2.0 of hoger |
+| [Windows PowerShell-connector](https://msdn.microsoft.com/library/dn640417.aspx) | Windows PowerShell 2.0 of hoger |
 | [Microsoft Azure Active Directory-connector](https://msdn.microsoft.com/library/dn511001.aspx) | Microsoft Azure Active Directory (niet aanbevolen voor nieuwe implementaties) |
-| [Algemene LDAP-connector](https://msdn.microsoft.com/library/dn510997.aspx) | [LDAP v3-server (RFC 4510-compatibel)](reference/microsoft-identity-manager-2016-connector-genericldap.md#overview-of-the-generic-ldap-connector) |
+| [Algemene LDAP-connector](https://msdn.microsoft.com/library/dn510997.aspx) | [LDAP v3-server (compatibel met RFC 4510)](reference/microsoft-identity-manager-2016-connector-genericldap.md#overview-of-the-generic-ldap-connector) |
 | [Algemene SQL-connector](reference/microsoft-identity-manager-2016-connector-genericsql.md) | [De connector wordt ondersteund met alle 64-bits ODBC-stuur Programma's](reference/microsoft-identity-manager-2016-connector-genericsql.md#overview-of-the-generic-sql-connector) |
 | [Connector voor Lotus Domino](https://msdn.microsoft.com/library/hh859750.aspx) | Lotus Notes Release v 8.5. x, v 9.0. x |
 | [UPA share Point services-connector](https://msdn.microsoft.com/library/dn511003.aspx) | Share Point server 2013-2019 met Service toepassing voor gebruikers profielen (UPA) |
 | [Connector voor Web Services](https://www.microsoft.com/en-us/download/details.aspx?id=51495) | [SAP ECC 5,0 of 6,0; Oracle People Soft 9,1; Oracle eBusiness 12,1 en andere SOAP-en REST-Api's](https://docs.microsoft.com/microsoft-identity-manager/reference/microsoft-identity-manager-2016-ma-ws) |
-| [Kenmerk-waardepaar tekst bestand](https://technet.microsoft.com/library/cc708644(v=ws.10).aspx) | Kenmerk-waardepaar tekstbestanden |
-| [Tekst bestand met scheidings tekens](https://technet.microsoft.com/library/cc720612(v=ws.10).aspx) | Tekstbestanden met scheidingstekens |
+| [Kenmerk-waardepaar tekstbestand](https://technet.microsoft.com/library/cc708644(v=ws.10).aspx) | Kenmerk-waardepaar tekstbestanden |
+| [Tekstbestand met scheidingstekens](https://technet.microsoft.com/library/cc720612(v=ws.10).aspx) | Tekstbestanden met scheidingstekens |
 | [DSML (Directory Services Mark-up Language)](https://technet.microsoft.com/library/cc720660(v=ws.10).aspx) | Directory Services Markup Language (DSML) 2.0 |
-| [Tekst bestand met vaste breedte](https://technet.microsoft.com/library/cc720633(v=ws.10).aspx) | Tekstbestanden met vast breedte |
+| [Tekstbestand met vast breedte](https://technet.microsoft.com/library/cc720633(v=ws.10).aspx) | Tekstbestanden met vast breedte |
 | [LDAP Data Interchange Format (LDIF)](https://technet.microsoft.com/library/cc708662(v=ws.10).aspx) | LDAP Data Interchange Format (LDIF) |
 | [Microsoft Graph-connector](microsoft-identity-manager-2016-connector-graph.md) | Microsoft Graph |
 

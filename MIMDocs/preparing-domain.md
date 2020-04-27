@@ -12,10 +12,10 @@ ms.assetid: 50345fda-56d7-4b6e-a861-f49ff90a8376
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: 70ac40d38af06e6be98e00caf1dc73630b62334e
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79043474"
 ---
 # <a name="set-up-a-domain"></a>Stel een domein in
@@ -38,7 +38,7 @@ Alle onderdelen van uw MIM-implementatie hebben een eigen identiteit in het dome
 > - Naam van de MIM-service Server- **corpservice**
 > - Naam MIM-synchronisatie server- **corpsync**
 > - SQL Server naam- **corpsql**
-> - Wachtwoord - <strong>Pass@word1</strong>
+> - Wacht woord<strong>Pass@word1</strong>
 
 1. Meld u als domeinbeheerder (*bijvoorbeeld Contoso\Administrator*) aan bij de domeincontroller.
 

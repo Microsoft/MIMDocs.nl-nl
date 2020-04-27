@@ -12,17 +12,17 @@ ms.assetid: eef248c4-b3b6-4b28-9dd0-ae2f0b552425
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: 0cf952c93c0a7b95fd41939efc767e9e8c20be5e
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79043644"
 ---
 # <a name="step-5--establish-trust-between-priv-and-corp-forests"></a>Stap 5 –Een vertrouwensrelatie tussen het PRIV- en CORP-forest instellen
 
 > [!div class="step-by-step"]
-> [« Stap 4](step-4-install-mim-components-on-pam-server.md)
-> [Stap 6 »](step-6-transition-group-to-pam.md)
+> [«Stap 4](step-4-install-mim-components-on-pam-server.md)
+> [stap 6»](step-6-transition-group-to-pam.md)
 
 Voor elk CORP-domein, zoals contoso.local, moet voor de PRIV- en CONTOSO-domeincontrollers een vertrouwensrelatie zijn ingesteld. Hiermee hebben gebruikers in het PRIV-domein toegang tot resources op het CORP-domein.
 
@@ -40,7 +40,7 @@ Voordat een vertrouwensrelatie tot stand kan worden gebracht, moet elke domeinco
     ```
     Controleer of de uitvoer een naamserverrecord voor het PRIV-domein met de juiste IP-adres bevat.
 
-3.  Als er met de domeincontroller niet kan worden omgeleid naar het PRIV-domein, gebruikt u **DNS-beheer** (in **Start** > **Hulpprogramma's voor apps** > **DNS**) om voor het PRIV-domein het doorsturen van DNS-namen in te stellen op het IP-adres van PRIVDC. Als het domein een bovenliggend domein is (bijvoorbeeld contoso.local), vouwt u de knooppunten voor deze domeincontroller en het bijbehorende domein uit, zoals **CORPDC** > **Zones voor forward lookup** > **contoso.local**, en controleert u of een sleutel met de naam **priv** aanwezig is als type voor de naamserver (NS).
+3.  Als er met de domeincontroller niet kan worden omgeleid naar het PRIV-domein, gebruikt u **DNS-beheer** (in **Start** > **Hulpprogramma's voor apps** > **DNS**) om voor het PRIV-domein het doorsturen van DNS-namen in te stellen op het IP-adres van PRIVDC. Als het een bovenliggend domein is (bijvoorbeeld contoso. local), vouwt u de knoop punten voor deze domein controller en het bijbehorende domein uit, zoals **CORPDC** > **Forward lookup zone** > **contoso. local**en zorgt u ervoor dat er een sleutel met de naam **priv** aanwezig is als naam server type (NS).
 
     ![bestandsstructuur voor priv-sleutel - schermafbeelding](./media/PAM_GS_DNS_Manager.png)
 
@@ -105,5 +105,5 @@ Voor elk bestaand forest moet u voor PRIV-beheerders en de controleservice leest
 In de volgende stap gaat u een groep naar PAM verplaatsen.
 
 > [!div class="step-by-step"]
-> [« Stap 4](step-4-install-mim-components-on-pam-server.md)
-> [Stap 6 »](step-6-transition-group-to-pam.md)
+> [«Stap 4](step-4-install-mim-components-on-pam-server.md)
+> [stap 6»](step-6-transition-group-to-pam.md)

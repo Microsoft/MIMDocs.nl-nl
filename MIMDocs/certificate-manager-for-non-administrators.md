@@ -12,10 +12,10 @@ ms.assetid: bfabc562-a2f0-4cff-ac31-36927f41e102
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: 91409b0272c0b21cac90dbc4c162e5bf4d9f8464
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79042131"
 ---
 # <a name="enroll-smart-cards-for-non-administrators"></a>Smartcards voor niet-beheerders registreren
@@ -49,7 +49,7 @@ Gebruikers die geen lokale beheerder zijn van hun computer, kunnen standaard gee
 
     4.  Bewerk het bestand met de naam AppxManifest.xml
 
-    5.  Wijzig in het element &lt;identiteit&gt; de waarde van het kenmerk uitgever in het onderwerp van het handtekening certificaat, bijvoorbeeld "CN = ABCD"
+    5.  Wijzig in &lt;het&gt; element identiteit de waarde van het kenmerk uitgever in het onderwerp van het handtekening certificaat, bijvoorbeeld "CN = ABCD"
 
         Het onderwerp moet gelijk zijn aan het onderwerp in het handtekeningcertificaat dat u gebruikt om de app te ondertekenen.
 
@@ -69,7 +69,7 @@ Gebruikers die geen lokale beheerder zijn van hun computer, kunnen standaard gee
 
     1.  Meld u bij de CM-portal aan als gebruiker met beheerdersbevoegdheden.
 
-    2.  Ga naar **beheer** &gt; **Profiel sjablonen beheren** en zorg ervoor dat het selectie vakje is ingeschakeld naast de profiel sjabloon die u hebt gemaakt en klik vervolgens op een geselecteerde profiel sjabloon kopiëren.
+    2.  Ga naar **Beheer** &gt; **Profielsjablonen beheren**. Controleer of het selectievakje is ingeschakeld naast de profielsjabloon die u zojuist hebt gemaakt en klik op Een geselecteerde profielsjabloon kopiëren.
 
     3.  Typ de naam van de profielsjabloon, voeg nonAdmin toe en klik op **OK**.
 

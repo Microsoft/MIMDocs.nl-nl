@@ -12,17 +12,17 @@ ms.assetid: c01487f2-3de6-4fc4-8c3a-7d62f7c2496c
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: 6597a7b364c1b7fa023e78bef917163ea2c19dac
-ms.sourcegitcommit: 87f94edf26fdb7f2c65c06c22cd0bc80d2f20450
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/28/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80374296"
 ---
 # <a name="set-up-an-identity-management-server-sharepoint"></a>Een server voor identiteitsbeheer instellen: SharePoint
 
 > [!div class="step-by-step"]
 > [«SQL Server](prepare-server-sql2016.md)
-> [Exchange Server»](prepare-server-exchange.md)
+> [Exchange-Server»](prepare-server-exchange.md)
 > 
 
 > [!NOTE]
@@ -35,7 +35,7 @@ ms.locfileid: "80374296"
 > - Naam van de MIM-service Server- **corpservice**
 > - Naam MIM-synchronisatie server- **corpsync**
 > - SQL Server naam- **corpsql**
-> - Wachtwoord - <strong>Pass@word1</strong>
+> - Wacht woord<strong>Pass@word1</strong>
 
 
 ## <a name="install-sharepoint-2016"></a>**Share point 2016** installeren
@@ -49,7 +49,7 @@ Volg deze stappen om share point 2016 te installeren. Wanneer u de installatie h
 
     -   Ga naar de map waar SharePoint is uitgepakt.
 
-    -   Typ de volgende opdracht:
+    -   Typ de volgende opdracht.
     ```
     .\prerequisiteinstaller.exe
     ```
@@ -132,9 +132,9 @@ Voer de stappen uit die in de **wizard Configuratie van SharePoint-producten** w
    Get-SPTimerJob hourly-all-sptimerservice-health-analysis-job | disable-SPTimerJob
    ```
 
-4. Open op uw server voor identiteits beheer een nieuw tabblad in de webbrowser, navigeer naar `http://mim.contoso.com/` en meld u aan als *contoso\miminstall*.  Er wordt een lege SharePoint-site met de naam *MIM-portal* weergegeven.
+4. Open een nieuw browser tabblad op de server voor identiteits beheer, ga naar `http://mim.contoso.com/` en meld u aan als *contoso\miminstall*.  Er wordt een lege SharePoint-site met de naam *MIM-portal* weergegeven.
 
-    ![MIM-Portal op http://mim.contoso.com/-installatie kopie](media/prepare-server-sharepoint/MIM_DeploySP1new.png)
+    ![MIM-Portal http://mim.contoso.com/ op installatie kopie](media/prepare-server-sharepoint/MIM_DeploySP1new.png)
 
 5. Kopieer de URL en ga vervolgens in Internet Explorer naar **Internetopties**, open het tabblad **Beveiliging**, selecteer **Lokaal intranet** en klik op **Sites**.
 
@@ -146,4 +146,4 @@ Voer de stappen uit die in de **wizard Configuratie van SharePoint-producten** w
 
 > [!div class="step-by-step"]  
 > [«SQL Server](prepare-server-sql2016.md)
-> [Exchange Server»](prepare-server-exchange.md)
+> [Exchange-Server»](prepare-server-exchange.md)

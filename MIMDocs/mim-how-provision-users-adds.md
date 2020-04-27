@@ -10,10 +10,10 @@ ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
 ms.openlocfilehash: 149339a6e1029f01378a518a98029c1d588de6f9
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79044171"
 ---
 # <a name="how-do-i-provision-users-to-ad-ds"></a>Hoe kan ik gebruikers inrichten voor AD DS?
@@ -59,7 +59,7 @@ Het kost 90 tot 120 minuten om de procedures in dit document te voltooien.
 
 Bij deze schatting wordt ervan uitgegaan dat de testomgeving reeds is geconfigureerd en opgesteld.
 
-### <a name="getting-support"></a>Ondersteuning
+### <a name="getting-support"></a>Ondersteuning zoeken
 
 
 Als u vragen hebt over de inhoud van dit document, of als u algemene feedback wilt geven en bespreken, kunt u een bericht sturen naar het [Forefront Identity Manager 2010 forum](https://go.microsoft.com/FWLink/p/?LinkId=189654) (forum van Forefront Identity Manager 2010).
@@ -167,7 +167,7 @@ Als u een wachtwoord instelt voor AD DS-accounts, moet u ook een account maken a
 
 In de volgende tabel worden de belangrijkste scenariospecifieke instellingen vermeld die u moet configureren.
 
-| Ontwerppagina voor beheeragenten                          | Configuration                                                  |
+| Ontwerppagina voor beheeragenten                          | Configuratie                                                  |
 |---------------------------------------------------------|----------------------------------------------------------------|
 | Beheeragent maken                                 | 1. **beheer agent voor:** AD DS  <br/> 2. **naam:** fabrikam ADMA |
 | Verbinding maken met een Active Directory-forest                      | 1. **Selecteer Directory partities:** DC = FABRIKAM, DC = com   <br/>   2. Klik op **containers** om het dialoog venster **containers selecteren** te openen en zorg ervoor dat **MIMObjects** de enige organisatie-eenheid is die is geselecteerd.        |
@@ -191,10 +191,10 @@ Gebruik een normaal gebruikersaccount. Het account moet hetzelfde zijn als het a
 
 In de volgende tabel worden de belangrijkste scenariospecifieke instellingen vermeld die u moet configureren. Maak de beheeragent op basis van de informatie in de onderstaande tabel.  
 
-| Ontwerppagina voor beheeragenten | Configuration |
+| Ontwerppagina voor beheeragenten | Configuratie |
 |------------|------------------------------------|
 | Beheeragent maken | 1. **beheer agent voor:** FIM-Service beheer agent <br/> 2. **naam** fabrikam FIMMA |
-| Verbinding maken met database     | Gebruik de volgende instellingen: <br/> &#183; **Server:** localhost <br/> &#183; **Database:** FIMService <br/> &#183;**Basis adres van FIM-service:** http://localhost:5725 <br/> <br/> Geef de informatie op over het account dat u voor deze beheeragent hebt gemaakt. |
+| Verbinding maken met database     | Gebruik de volgende instellingen: <br/> &#183; **Server:** localhost <br/> &#183; **Database:** FIMService <br/> **Basis adres van &#183; FIM-service:**http://localhost:5725 <br/> <br/> Geef de informatie op over het account dat u voor deze beheeragent hebt gemaakt. |
 | Objecttypen selecteren                                     | Naast de reeds geselecteerde objecttypen selecteert u **Persoon.**   |
 | Objecttypetoewijzingen configureren                          | Voeg naast de al bestaande objecttypetoewijzingen een toewijzing toe voor het **Gegevensbronobjecttype** Persoon in het **Metaverseobjecttype** Persoon. |
 | Kenmerkstroom configureren                                | Voeg naast de al bestaande kenmerkstroomtoewijzingen de volgende kenmerkstroomtoewijzingen toe: <br/><br/> ![Kenmerkstroom](media/how-provision-users-adds/image018.jpg) |
@@ -231,7 +231,7 @@ Maak aan de hand van de vorige tabel uitvoerprofielen voor elke beheeragent.
 > 
 > 
 > [!Important]
->  Controleer of het inrichten in uw omgeving is ingeschakeld. U kunt dit doen door het script uit te voeren met Windows Power shell om inrichting (https://go.microsoft.com/FWLink/p/?LinkId=189660)in te scha kelen.
+>  Controleer of het inrichten in uw omgeving is ingeschakeld. U kunt dit doen door het script uit te voeren met Windows Power shell om inrichting inhttps://go.microsoft.com/FWLink/p/?LinkId=189660)te scha kelen (.
 
 
 ## <a name="configuring-the-fim-service"></a>De FIM-service configureren
@@ -243,7 +243,7 @@ Voor het scenario in deze handleiding moet u een inrichtingsbeleid voor inrichte
 
 Het doel van dit inrichtingsbeleid is om groepen binnen het bereik te brengen van de regel voor uitgaande synchronisatie van Active Directory-gebruikers. Als u de resource binnen het bereik van de synchronisatieregel hebt gebracht, schakelt u de synchronisatie-engine in om uw resource volgens uw configuratie in te richten voor AD DS.
 
-Als u de FIM-service wilt configureren, navigeert u in Windows Internet Explorer® naar http://localhost/identitymanagement. Als u het inrichtingsbeleid wilt maken, gaat u op de pagina van de MIM-portal naar de gerelateerde pagina's van de sectie Beheer. Verifieer de configuratie door het script uit te voeren in [Using Windows PowerShell to document your provisioning policy configuration](https://go.microsoft.com/FWLink/p/?LinkId=189661) (Windows PowerShell gebruiken om de configuratie voor het inrichtingsbeleid te documenteren).
+Als u de FIM-service wilt configureren, navigeert u in http://localhost/identitymanagementWindows Internet Explorer® naar. Als u het inrichtingsbeleid wilt maken, gaat u op de pagina van de MIM-portal naar de gerelateerde pagina's van de sectie Beheer. Verifieer de configuratie door het script uit te voeren in [Using Windows PowerShell to document your provisioning policy configuration](https://go.microsoft.com/FWLink/p/?LinkId=189661) (Windows PowerShell gebruiken om de configuratie voor het inrichtingsbeleid te documenteren).
 
 ### <a name="step-6-create-the-synchronization-rule"></a>Stap 6: de synchronisatieregel maken
 
@@ -278,18 +278,18 @@ In de volgende tabellen wordt de configuratie getoond van de vereiste inrichting
 
 | Initiële uitgaande kenmerkstromen        | |                                                             |
 |-------------------|---------------------- |---------------|
-| Null-waarden toestaan                 | Bestemming                                                                 | Bron                                                    |
-| onjuist                       | dn                                                                          | \+("CN=",displayName,",OU=MIMObjects,DC=fabrikam,DC=com") |
-| onjuist                       | userAccountControl                                                          | **Constant:** 512                                         |
-| onjuist                                                                     | unicodePwd                    | Constant: P\@\$\$W0rd                                    |
+| Null-waarden toestaan                 | Doel                                                                 | Bron                                                    |
+| false                       | dn                                                                          | \+("CN=",displayName,",OU=MIMObjects,DC=fabrikam,DC=com") |
+| false                       | userAccountControl                                                          | **Constant:** 512                                         |
+| false                                                                     | unicodePwd                    | Constant: P\@\$\$W0rd                                    |
 
 | Permanente uitgaande kenmerkstromen  |                                                                     |                                                           |
 |--------------------------------------|---------------------------------------------------------------------|-----------------------------------------------------------|
-| Null-waarden toestaan                                                                                                | Bestemming                                                                 | Bron                                                    |
-| onjuist                                                                                                      | sAMAccountName                                                              | accountName                                               |
-| onjuist                                                                                                      | displayName                                                                 | displayName                                               |
-| onjuist                                                                                                      | givenName                                                                   | firstName                                                 |
-| onjuist                                                                                                      | sn                                                                          | lastName                                                  |
+| Null-waarden toestaan                                                                                                | Doel                                                                 | Bron                                                    |
+| false                                                                                                      | sAMAccountName                                                              | accountName                                               |
+| false                                                                                                      | displayName                                                                 | displayName                                               |
+| false                                                                                                      | givenName                                                                   | voornaam                                                 |
+| false                                                                                                      | sn                                                                          | achternaam                                                  |
 
 
 
@@ -304,13 +304,13 @@ Het doel van de AD-inrichtingswerkstroom is om de inrichtingssynchronisatieregel
 |--------------------------------------|-----------------------------------------------------------------|
 | Naam                                 | Inrichtingswerkstroom van Active Directory-gebruiker                     |
 | Beschrijving                          |                                                                 |
-| Werkstroomtype                        | Actie                                                          |
+| Werkstroomtype                        | Bewerking                                                          |
 | Uitvoeren bij beleidsupdates                 | False                                                           |
 
 | Synchronisatieregel                 |                                                                 |
 |--------------------------------------|-----------------------------------------------------------------|
 | Naam                                 | Regel voor uitgaande synchronisatie van Active Directory-gebruiker             |
-| Actie                               | Toevoegen                                                             |
+| Bewerking                               | Toevoegen                                                             |
 
 
 
@@ -334,7 +334,7 @@ De vereiste MPR is van het type Setovergang en wordt getriggerd wanneer een reso
 
 | Beleidswerkstromen                     |                                                             |
 |--------------------------------------|-------------------------------------------------------------|
-| Type                                 | Actie                                                      |
+| Type                                 | Bewerking                                                      |
 | Weergavenaam                         | Inrichtingswerkstroom van Active Directory-gebruiker                 |
 
 
@@ -353,7 +353,7 @@ De doelstelling van de initialisatiefase is als volgt:
 
 In de volgende tabellen worden de uitvoerprofielen vermeld die onderdeel zijn van de initialisatiefase.  Voer de uitvoerprofielen uit aan de hand van de onderstaande tabel.
 
-| Uitvoeren                                                                                                           | Beheeragent                                      | Uitvoerprofiel          |
+| Voer                                                                                                           | Beheeragent                                      | Uitvoerprofiel          |
 |---------------------------------------------------------------------------------------------------------------|-------------------------------------------------------|----------------------|
 | 1                                                                                                             | Fabrikam FIMMA                                        | Volledig importbewerking          |
 | 2                                                                                                             |                                                       | Volledige synchronisatie |
@@ -390,10 +390,10 @@ In de volgende tabel worden de eigenschappen van de voorbeeldgebruiker vermeld. 
 |----------------------------------------|----------------------------------------------------------------|
 | Voornaam                             | Julia                                                         |
 | Achternaam                              | Steen                                                          |
-| Weergavenaam                           | Julia Steen                                                   |
+| Weergavenaam                           | Britta Simon                                                   |
 | Accountnaam                           | JSteen                                                         |
-| Domein                                 | Fabrikam                                                       |
-| Werknemerstype                          | Contractant                                                     |
+| Domain                                 | Fabrikam                                                       |
+| Werknemerstype                          | Aannemer                                                     |
 
 
 

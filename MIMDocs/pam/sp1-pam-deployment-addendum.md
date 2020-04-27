@@ -12,10 +12,10 @@ ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: ''
 ms.suite: ems
 ms.openlocfilehash: 34a4fbc2ada0c54cabb128af5ca90e2e89e06517
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79043865"
 ---
 # <a name="pam-deployment-scripts-addendum"></a>Bijlage PAM-implementatiescripts:
@@ -26,7 +26,7 @@ Nadat het gecomprimeerde bestand in de map $env:SYSTEMDRIVE\PAM is uitgepakt, be
 
 1. Meld u aan bij het PRIV-domein als administrator
 2. Voer PowerShell uit als Administrator
-3. cd $env: SYSTEMDRIVE\PAM
+3. cd $env:SYSTEMDRIVE\PAM
 4. import-module .\PAMDeployment.ps1
 5. Selecteer menuoptie 9 (Priv Forest setup)
 
@@ -44,7 +44,7 @@ Als u net aan de slag gaat met PAM en een testomgeving wilt opstarten, kunt u me
 
 1. Meld u aan bij het CORP-domein als administrator
 2. Voer PowerShell uit als Administrator
-3. cd $env: SYSTEMDRIVE\PAM
+3. cd $env:SYSTEMDRIVE\PAM
 4. import-module .\PAMDeployment.ps1
 5. Selecteer menuoptie 10 (CORP forest setup)
 
@@ -55,14 +55,14 @@ De domeincontroller wordt automatisch opnieuw opgestart nadat deze is voltooid
 De ClientBinaryLocation in het configuratiebestand moet verwijzen naar de locatie waarin setup.exe zich bevindt.
 Meld u aan bij de client als een lokale administrator en voer de volgende opdrachten uit in PowerShell-venster met verhoogde bevoegdheid:
 
-1. cd $env: SYSTEMDRIVE\PAM
+1. cd $env:SYSTEMDRIVE\PAM
 2. Import-module .\PAMDeployment.ps1
 3. Selecteer menuoptie 7 (MIM PAM Client Setup)
 
 
 Als de machine niet verbonden met het verbonden domein, worden de referentie van het CORP-domein opgevraagd om de verbinding met het domein uit te voeren. De computer moet opnieuw worden opgestart na het verbinden met het domein. Meld u aan bij de client als lokale administrator en de volgende opdrachten uit in een PowerShell-venster met verhoogde bevoegdheid:
 
-1. cd $env: SYSTEMDRIVE\PAM
+1. cd $env:SYSTEMDRIVE\PAM
 2. Import-module .\PAMDeployment.ps1
 3. Selecteer menuoptie 7 (MIM PAM Client Setup)
 
@@ -70,4 +70,4 @@ Ga verder met stap 8 hierboven.
 
 ## <a name="addendum-4-if-something-goes-wrong"></a>Bijlage 4 als er iets verkeerd gaat
 
-Alle scriptlogboeken worden opgeslagen in %AppData%\MIMPAMInstall. Comprimeer de map in een zipbestand en verstuur het via e-mail naar [mim2016@microsoft.com](mailto:mim2016@microsoft.com), samen met details van de uitvoering en de fout.
+Alle scriptlogboeken worden opgeslagen in %AppData%\MIMPAMInstall. Comprimeer de map in een zip-bestand en stuur een e-mail [mim2016@microsoft.com](mailto:mim2016@microsoft.com) naar samen met details van de bewerking en de fout.

@@ -12,16 +12,16 @@ ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: c21228dad923d80ab63c255c1184b7de04a0ff3d
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79043729"
 ---
 # <a name="step-1---prepare-the-host-and-the-corp-domain"></a>Stap 1: de host en het domein CORP voorbereiden
 
 > [!div class="step-by-step"]
-> [Stap 2 »](step-2-prepare-priv-domain-controller.md)
+> [Stap 2»](step-2-prepare-priv-domain-controller.md)
 
 In deze stap bereidt u het hosten van de bastionomgeving voor. Indien nodig, maakt u ook een domeincontroller en een lidwerkstation in een nieuw domein en forest (het *CORP*forest) met identiteiten die worden beheerd door de bastionomgeving. Dit CORP-forest komt overeen met een bestaand forest dat resources heeft om te worden beheerd. Dit document bevat een voorbeeldresource die moet worden beveiligd; een bestandsshare.
 
@@ -35,11 +35,11 @@ In dit gedeelte wordt beschreven hoe u een domeincontroller voor een CORP-domein
 
 Installeer Windows Server 2012 R2 of Windows Server 2016 Technical Preview 4 of hoger op een virtuele machine om een computer te maken met de naam *CORPDC*.
 
-1. Kies **Windows Server 2012 R2 Standard (server met een GUI) x64** of **Windows Server 2016 Technical Preview (server met bureaubladbelevenis)** .
+1. Kies **Windows Server 2012 R2 Standard (server met een GUI) x64** of **Windows Server 2016 Technical Preview (server met bureaubladbelevenis)**.
 
 2. Lees en accepteer de licentievoorwaarden.
 
-3. Omdat de schijf leeg is, selecteert u **Aangepast: alleen Windows installeren** en gebruikt u de niet-geïnitialiseerde schijfruimte.
+3. Omdat de schijf leeg is, selecteert u **aangepast: alleen Windows installeren** en de niet-geïnitialiseerde schijf ruimte gebruiken.
 
 4. Meld u als beheerder aan bij deze nieuwe computer. Ga naar Configuratiescherm. Stel de naam van de computer in op *CORPDC*, en wijs hieraan een statisch IP-adres op het virtuele netwerk toe. Start de server opnieuw op.
 
@@ -72,7 +72,7 @@ In dit gedeelte voegt u de functies Active Directory Domain Services (AD DS), DN
 
 ### <a name="create-a-group"></a>Een groep maken
 
-Een groep maken voor controledoeleinden door Active Directory, als deze groep nog niet bestaat. De naam van de groep moet de NetBIOS-domeinnaam zijn, gevolgd door drie dollartekens, bijvoorbeeld *CONTOSO$$$* .
+Een groep maken voor controledoeleinden door Active Directory, als deze groep nog niet bestaat. De naam van de groep moet de NetBIOS-domeinnaam zijn, gevolgd door drie dollartekens, bijvoorbeeld *CONTOSO$$$*.
 
 Meld u bij elk domein aan bij een domeincontroller als een domeinbeheerder en voer de volgende stappen uit:
 
@@ -123,13 +123,13 @@ U moet controle van bestaande forests inschakelen om de PAM-configuratie op die 
 
 Meld u bij elk domein aan bij een domeincontroller als een domeinbeheerder en voer de volgende stappen uit:
 
-1. Ga naar **Start** > **Systeembeheer** (of op Windows Server 2016 **Windows Systeembeheer**), en start **Groepsbeleidsbeheer**.
+1. Ga naar **Start** > **systeem beheer** (of, op Windows Server 2016, **Windows-beheer Programma's**) en start **Groepsbeleid-beheer**.
 
-2. Navigeer naar het beleid voor domeincontrollers voor dit domein.  Als u een nieuw domein hebt gemaakt voor contoso.local, navigeert u naar **Forest: priv.contoso.local** > **Domeinen** > **priv.contoso.local** > **Domeincontrollers** > **Standaardbeleid voor domeincontrollers**. Een informatief bericht wordt weergegeven.
+2. Navigeer naar het beleid voor domeincontrollers voor dit domein.  Als u een nieuw domein voor contoso. local hebt gemaakt, gaat u naar **forest: contoso. local** > **domeinen** > **contoso. local** > **domein controllers** > **standaard beleid voor domein controllers**. Een informatief bericht wordt weergegeven.
 
 3. Klik met de rechtermuisknop op **Standaardbeleid voor domeincontrollers** en selecteer **Bewerken**. Een nieuw venster wordt weergegeven.
 
-4. Navigeer in het venster Groepsbeleidsbeheer-editor, onder de structuur Standaardbeleid voor domeincontrollers naar **Computerconfiguratie** > **Beleidsregels** > **Windows-instellingen** > **Beveiligingsinstellingen** > **Lokale beleidsregels** > **Controlebeleid**.
+4. Navigeer in het venster Groepsbeleidsbeheer-editor, onder de standaard beleids structuur van domein controllers, **naar computer configuratie** > **beleid** > **Windows-instellingen** > **beveiligings instellingen** > **lokaal beleid** > **controle beleid**.
 
 5. Klik in het detailvenster met de rechtermuisknop op **Accountbeheer controleren** en selecteer **Eigenschappen**. Selecteer **Deze beleidsinstellingen vastleggen**, schakel achtereenvolgens de selectievakjes **Geslaagd** en **Mislukt** in, klik op **Toepassen** en tenslotte op **OK**.
 
@@ -209,4 +209,4 @@ U hebt een resource nodig om het toegangsbeheer op basis van een beveiligingsgro
 In de volgende stap bereidt de PRIV-domeincontroller voor.
 
 > [!div class="step-by-step"]
-> [Stap 2 »](step-2-prepare-priv-domain-controller.md)
+> [Stap 2»](step-2-prepare-priv-domain-controller.md)

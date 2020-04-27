@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.assetid: ''
 ms.prod: microsoft-identity-manager
 ms.openlocfilehash: f120709e517d82d4f94e72f4d0a44361f5552a1c
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79042301"
 ---
 # <a name="microsoft-bhold-suite-concepts-guide"></a>Hand leiding micro soft BHOLD Suite-concepten
@@ -33,13 +33,13 @@ Deze hand leiding helpt u te begrijpen hoe BHOLD Suite werkt met MIM en bevat de
 
 ## <a name="role-based-access-control"></a>Op rollen gebaseerd toegangsbeheer
 
-De meest voorkomende methode voor het beheren van gebruikers toegang tot gegevens en toepassingen is via DAC (Discretionary Access Control). In de meeste voorkomende implementaties heeft elk significant object een geïdentificeerde eigenaar. De eigenaar heeft de mogelijkheid om toegang tot het object toe te kennen of te weigeren aan anderen op basis van individuele identiteit of groepslid maatschap. In de praktijk resulteert DAC doorgaans in een verdwaald van beveiligings groepen, wat een organisatie structuur weerspiegelt, anderen die functionele groeperingen vertegenwoordigen (zoals taak typen of project toewijzingen), en andere die bestaan uit makeshift-verzamelingen van gebruikers en apparaten die zijn gekoppeld voor meer tijdelijke doel einden. Naarmate organisaties groeien, is lidmaatschap van deze groepen steeds moeilijker te beheren. Als een werk nemer bijvoorbeeld van het ene naar het andere project wordt overgezet, moeten de groepen die worden gebruikt om de toegang tot de project activa te beheren, hand matig worden bijgewerkt. In dergelijke gevallen is het niet ongebruikelijk dat fouten optreden, fouten die de project beveiliging of productiviteit kunnen belemmeren.
+De meest voorkomende methode voor het beheren van gebruikers toegang tot gegevens en toepassingen is via DAC (Discretionary Access Control). In de meeste voorkomende implementaties heeft elk significant object een geïdentificeerde eigenaar. De eigenaar heeft de mogelijkheid om toegang tot het object toe te kennen of te weigeren aan anderen op basis van individuele identiteit of groepslid maatschap. In de praktijk resulteert DAC doorgaans in een verdwaald van beveiligings groepen, wat een organisatie structuur weerspiegelt, andere die functionele groeperingen vertegenwoordigen (zoals taak typen of project toewijzingen), en andere die bestaan uit makeshift verzamelingen van gebruikers en apparaten die zijn gekoppeld voor meer tijdelijke doelen. Naarmate organisaties groeien, is lidmaatschap van deze groepen steeds moeilijker te beheren. Als een werk nemer bijvoorbeeld van het ene naar het andere project wordt overgezet, moeten de groepen die worden gebruikt om de toegang tot de project activa te beheren, hand matig worden bijgewerkt. In dergelijke gevallen is het niet ongebruikelijk dat fouten optreden, fouten die de project beveiliging of productiviteit kunnen belemmeren.
 
 MIM bevat functies waarmee u dit probleem kunt verhelpen door automatische controle te bieden over het lidmaatschap van groepen en distributie lijsten. Dit biedt echter geen oplossing voor de intrinsieke complexiteit van groepen die niet noodzakelijkerwijs aan elkaar zijn gerelateerd op een gestructureerde manier.
 
 Eén manier om deze toename aanzienlijk te reduceren is door op rollen gebaseerd toegangs beheer (RBAC) te implementeren. Met RBAC wordt DAC niet overgeplaatst.  RBAC bouwt voort op DAC door een Framework te bieden voor het classificeren van gebruikers en IT-resources. Zo kunt u de relatie en de toegangs rechten die van toepassing zijn op basis van die classificatie, expliciet maken. Als u bijvoorbeeld toewijst aan een gebruikers kenmerk waarmee de gebruikers titel en project toewijzingen van de gebruiker worden opgegeven, kan gebruikers toegang krijgen tot de hulpprogram ma's die nodig zijn voor de taak en gegevens van de gebruiker die de gebruiker aan een bepaald project moet bijdragen. Wanneer de gebruiker een andere taak en verschillende Project toewijzingen aanneemt, wordt de toegang tot de resources die nodig zijn voor de vorige positie van de gebruikers automatisch geblokkeerd door de kenmerken die de functie van de gebruiker en de projecten opgeven.
 
-Omdat rollen op een hiërarchische manier kunnen worden opgenomen in rollen, (bijvoorbeeld de rollen van verkoop Manager en vertegenwoordiger kunnen worden opgenomen in de algemenere rol van verkoop), is het eenvoudig om de juiste rechten toe te wijzen aan specifieke rollen en nog steeds te bieden de juiste rechten voor iedereen die de uitgebreidere rol delen. In een zieken huis kan alle medische mede werkers bijvoorbeeld het recht krijgen om een patiënten-record weer te geven, maar alleen artsen (een subrol van de medische rol) kunnen het recht krijgen om voor schriften voor de patiënt in te voeren. Op dezelfde manier kunnen gebruikers die deel uitmaken van de rol van de betrokkene, toegang krijgen tot patiënten-records, met uitzonde ring van facturerings medewerkers (een subrol van de rol van patiënten), die toegang kunnen krijgen tot die delen van een patiënt records die vereist zijn voor de betaling van de patiënt voor services van het zieken huis.
+Omdat rollen op een hiërarchische manier kunnen worden opgenomen in rollen, (bijvoorbeeld de rollen van verkoop Manager en vertegenwoordiger kunnen worden opgenomen in de algemenere rol van verkoop), is het eenvoudig om de juiste rechten toe te wijzen aan specifieke rollen en nog steeds de juiste rechten te bieden aan iedereen die ook de meer uitgebreide rol deelt. In een zieken huis kan alle medische mede werkers bijvoorbeeld het recht krijgen om een patiënten-record weer te geven, maar alleen artsen (een subrol van de medische rol) kunnen het recht krijgen om voor schriften voor de patiënt in te voeren. Op dezelfde manier kunnen gebruikers die deel uitmaken van de rol van de betrokkene, toegang krijgen tot patiënten-records, met uitzonde ring van facturerings medewerkers (een subrol van de rol van patiënten), die toegang kunnen krijgen tot die delen van een patiënt records die nodig zijn om de patiënt te betalen voor services die worden geleverd door het zieken huis.
 
 Een extra voor deel van RBAC is de mogelijkheid om schei ding van taken (SoD) te definiëren en af te dwingen. Hiermee kan een organisatie combi Naties definiëren van rollen die machtigingen verlenen die niet door dezelfde gebruiker mogen worden bewaard, zodat aan een bepaalde gebruiker geen rollen kunnen worden toegewezen waarmee de gebruiker een betaling kan initiëren en bijvoorbeeld een betaling kan autoriseren. RBAC biedt de mogelijkheid om dergelijk beleid automatisch af te dwingen in plaats van de daad werkelijke implementatie van het beleid te evalueren op basis van per gebruiker.
 
@@ -64,7 +64,7 @@ Hoewel dit niet vereist is, zijn de organisatie-eenheden in de meeste gevallen g
 
 ![](media/bhold-concepts-guide/org-chart.png)
 
-In dit voor beeld zou het Role model de eenheid organizationalganizatinal voor het bedrijf als geheel (vertegenwoordigd door de president, omdat de president geen deel uitmaakt van een mororganizationalganizatinal-eenheid) of de organisatie-eenheid BHOLD root (die altijd exists) kan hiervoor worden gebruikt. OrgUnits die de bedrijfs divisies van de vice-presidenten vertegenwoordigen, worden in de organisatie-eenheid van het bedrijf geplaatst. Vervolgens worden organisatie-eenheden die overeenkomen met de marketing-en verkoop directeur toegevoegd aan de organisatie-eenheden marketing en verkoop, en organisatie-eenheden die de regionale verkoop managers vertegenwoordigen, worden in de organisatie-eenheid geplaatst voor de verkoop Manager Oost-regio. Verkoop Associates, die geen andere gebruikers beheren, zouden lid zijn van de organisatie-eenheid van de regio West verkoop Manager. Houd er rekening mee dat gebruikers lid kunnen zijn van een organisatie-eenheid op elk niveau. Zo is een administratief mede werker, die geen Manager is en rapporten rechtstreeks aan een vice-president, een lid is van de organisatie-eenheid van de vice-president.
+In dit voor beeld zou het Role model de eenheid organizationalganizatinal voor het bedrijf als geheel (vertegenwoordigd door de president, omdat de president geen deel uitmaakt van een mororganizationalganizatinal-eenheid), of de organisatie-eenheid BHOLD root (die altijd bestaat) kan worden gebruikt voor dat doel. OrgUnits die de bedrijfs divisies van de vice-presidenten vertegenwoordigen, worden in de organisatie-eenheid van het bedrijf geplaatst. Vervolgens worden organisatie-eenheden die overeenkomen met de marketing-en verkoop directeur toegevoegd aan de organisatie-eenheden marketing en verkoop, en organisatie-eenheden die de regionale verkoop managers vertegenwoordigen, worden opgenomen in de organisatie-eenheid voor de regio verkoop Manager Oost. Verkoop Associates, die geen andere gebruikers beheren, zouden lid zijn van de organisatie-eenheid van de regio West verkoop Manager. Houd er rekening mee dat gebruikers lid kunnen zijn van een organisatie-eenheid op elk niveau. Zo is een administratief mede werker, die geen Manager is en rapporten rechtstreeks aan een vice-president, een lid is van de organisatie-eenheid van de vice-president.
 
 Naast de organisatie structuur kunnen organisatie-eenheden ook worden gebruikt om gebruikers en andere organisatie-eenheden te groeperen op basis van functionele criteria, zoals voor projecten of specialisatie. In het volgende diagram ziet u hoe organisatie-eenheden worden gebruikt om de verkoop Associates te groeperen op basis van klant type:
 
@@ -80,7 +80,7 @@ Zoals hierboven vermeld, moet elke gebruiker tot ten minste één organisatie-ee
 
 Wanneer een gebruiker in de organisatie niet actief is (bijvoorbeeld als er geen medische verlof is), kan de gebruiker worden onderbroken, waardoor alle machtigingen van de gebruiker worden ingetrokken zonder dat de gebruiker uit het functie model wordt verwijderd. Wanneer de gebruiker terugkeert naar het recht, kan deze opnieuw worden geactiveerd. Hiermee worden alle machtigingen hersteld die door de rollen van de gebruiker worden verleend.
 
-Objecten voor gebruikers kunnen afzonderlijk worden gemaakt in BHOLD via de BHOLD-basis-webportal, of ze kunnen bulksgewijs worden geïmporteerd met behulp van BHOLD model generator, of via de Access Management-connector met de FIM-synchronisatie service om gebruikers gegevens te importeren uit dergelijke bronnen als Active Directory Domain Services of human resources-toepassingen.
+Objecten voor gebruikers kunnen afzonderlijk worden gemaakt in BHOLD via de BHOLD-basis-webportal, of ze kunnen bulksgewijs worden geïmporteerd met behulp van BHOLD model generator, of met behulp van de toegangs beheer connector met de FIM-synchronisatie service om gebruikers gegevens uit dergelijke bronnen te importeren als Active Directory Domain Services of human resources-toepassingen.
 
 Gebruikers kunnen rechtstreeks in BHOLD worden gemaakt zonder de FIM-synchronisatie service te gebruiken. Dit kan handig zijn bij het model leren van rollen in een preproductie of test omgeving. U kunt ook externe gebruikers (zoals werk nemers van een toeleverancier) in staat stellen rollen toe te wijzen en zodoende toegang te krijgen tot IT-resources zonder dat ze worden toegevoegd aan de data base van de werk nemer. deze gebruikers kunnen echter de BHOLD self-service functies niet gebruiken.
 
@@ -168,11 +168,11 @@ U kunt een gebruiker configureren om het volgende te beperken:
 
 Schei ding van taken (SoD) is een bedrijfs principe waarmee wordt voor komen dat personen de mogelijkheid krijgen om acties uit te voeren die niet voor één persoon beschikbaar moeten zijn. Een werk nemer kan bijvoorbeeld geen betaling aanvragen en de betaling autoriseren. Het principe van SoD stelt organisaties in staat om een systeem van controles en saldo's te implementeren om de bloot stelling van werknemers fouten of een ernstige storing te minimaliseren.
 
-BHOLD implementeert SoD door u incompatibele machtigingen te definiëren. Wanneer deze machtigingen zijn gedefinieerd, BHOLD afdwingt SoD door het maken van functies die zijn gekoppeld aan niet-compatibele machtigingen te voor komen, ongeacht of deze rechtstreeks of via overname zijn gekoppeld, en door te voor komen dat gebruikers meerdere rollen kunnen toewijzen, wanneer gecombineerd, worden incompatibele machtigingen verleend, opnieuw per directe toewijzing of via overname. Conflicten kunnen eventueel worden overschreven.
+BHOLD implementeert SoD door u incompatibele machtigingen te definiëren. Wanneer deze machtigingen zijn gedefinieerd, BHOLD afdwingt SoD door het maken van functies die zijn gekoppeld aan niet-compatibele machtigingen te voor komen, ongeacht of ze rechtstreeks of via overname zijn gekoppeld, en door te voor komen dat gebruikers meerdere functies kunnen toewijzen die, indien gecombineerd, niet-compatibele machtigingen verlenen, opnieuw door middel van een directe toewijzing of via overname. Conflicten kunnen eventueel worden overschreven.
 
 #### <a name="context-adaptable-permissions"></a>Context aanpas bare machtigingen
 
-Door machtigingen te maken die automatisch kunnen worden gewijzigd op basis van een object kenmerk, kunt u het totale aantal machtigingen beperken dat u wilt beheren. Met context aanpas bare machtigingen (Cap's) kunt u een formule definiëren als een machtigings kenmerk dat wijzigt hoe de machtiging wordt toegepast door de toepassing die is gekoppeld aan de machtiging. U kunt bijvoorbeeld een formule maken die de toegangs machtiging wijzigt in een bestandsmap (via een beveiligings groep die is gekoppeld aan de toegangs beheer lijst van de map), op basis van het feit of een gebruiker lid is van een organisatie-eenheid (organisatie-eenheid) die fulltime-of contract werk nemers. Als de gebruiker van de ene organisatie-eenheid naar de andere wordt verplaatst, wordt de nieuwe machtiging automatisch toegepast en wordt de oude machtiging gedeactiveerd. 
+Door machtigingen te maken die automatisch kunnen worden gewijzigd op basis van een object kenmerk, kunt u het totale aantal machtigingen beperken dat u wilt beheren. Met context aanpas bare machtigingen (Cap's) kunt u een formule definiëren als een machtigings kenmerk dat wijzigt hoe de machtiging wordt toegepast door de toepassing die is gekoppeld aan de machtiging. U kunt bijvoorbeeld een formule maken die de toegangs machtiging wijzigt in een bestandsmap (via een beveiligings groep die is gekoppeld aan de toegangs beheer lijst van de map), op basis van het feit of een gebruiker deel uitmaakt van een organisatie-eenheid (organisatie-eenheid) die voltijds werk nemers bevat. Als de gebruiker van de ene organisatie-eenheid naar de andere wordt verplaatst, wordt de nieuwe machtiging automatisch toegepast en wordt de oude machtiging gedeactiveerd. 
 
 De CAP-formule kan een query uitvoeren op de waarden van kenmerken die zijn toegepast op toepassingen, machtigingen, organisatie-eenheden en gebruikers.
 
@@ -190,13 +190,13 @@ Het systeem met kenmerken in BHOLD is zeer uitbreidbaar. U kunt nieuwe kenmerk t
 
 De BHOLD Suite bevat hulpprogram ma's die u kunt gebruiken om te controleren of afzonderlijke gebruikers de juiste machtigingen hebben gekregen om hun bedrijfs taken uit te voeren. De beheerder kan de portal van de BHOLD Attestation-module gebruiken om een beheer van het Attestation-proces te ontwerpen.
 
-Het Attestation-proces wordt uitgevoerd door middel van campagnes waarbij campagne-BHOLD de mogelijkheid krijgen om te controleren of de gebruikers voor wie ze verantwoordelijk zijn, de juiste toegang hebben tot door beheerde toepassingen en de juiste machtigingen binnen deze toepassingen. Een campagne-eigenaar is aangewezen om de campagne te controleren en ervoor te zorgen dat de campagne correct wordt uitgevoerd. Een campagne kan worden gemaakt om één keer of op een terugkerende basis te worden uitgevoerd.
+Het Attestation-proces wordt uitgevoerd door middel van campagnes waarbij campagne-middelen de mogelijkheid krijgen en om te controleren of de gebruikers voor wie ze verantwoordelijk zijn, de juiste toegang hebben tot BHOLD-beheerde toepassingen en de juiste machtigingen binnen deze toepassingen hebben. Een campagne-eigenaar is aangewezen om de campagne te controleren en ervoor te zorgen dat de campagne correct wordt uitgevoerd. Een campagne kan worden gemaakt om één keer of op een terugkerende basis te worden uitgevoerd.
 
 Normaal gesp roken is het voor een campagne een manager waarmee de toegangs rechten worden verklaard van gebruikers die deel uitmaken van een of meer organisatie-eenheden waarvoor de manager verantwoordelijk is. Er kunnen automatisch een module worden geselecteerd voor de gebruikers die worden verklaard in een campagne op basis van gebruikers kenmerken, of de-consoles voor een campagne kunnen worden gedefinieerd door ze in een bestand te vermelden, waarbij elke gebruiker wordt toegewezen aan een.
 
 Wanneer een campagne begint, stuurt BHOLD een e-mail meldings bericht naar de campagne-en-eigenaar en verzendt deze vervolgens periodieke herinneringen om hen te helpen bij het onderhouden van de voortgang in de campagne. Er worden in een campagne Portal een lijst weer geven met de gebruikers waarvoor ze verantwoordelijk zijn en de rollen die aan deze gebruikers zijn toegewezen. U kunt vervolgens bevestigen of ze verantwoordelijk zijn voor elk van de vermelde gebruikers en de toegangs rechten van elk van de vermelde gebruikers goed keuren of weigeren.
 
-De portal campagne eigenaren ook gebruiken om de voortgang van de campagne te controleren en campagneactiviteiten worden vastgelegd zodat eigenaars van de campagne de acties die zijn uitgevoerd in de loop van de campagne kunnen analyseren.
+Campagne-eigen aren maken ook gebruik van de portal om de voortgang van de campagne te controleren en campagne activiteiten worden vastgelegd, zodat de eigen aren van de campagne de acties kunnen analyseren die in de loop van de campagne zijn genomen.
 
 ## <a name="analytics"></a>Analyse
 
@@ -232,7 +232,7 @@ Elk filter bestaat uit een type, een operator (die van type is afhankelijk), een
 
 |   |   |   |   |   |
 |---|---|---|---|---|
-|**Type:**   | Aantal   |
+|**Voert**   | Aantal   |
 | **Prestatie**  | Gebruikers  |
 | **And**  | >  |
 | **Waarde:** | 10 |
@@ -307,13 +307,13 @@ U gebruikt de BHOLD-rapportage module meestal om rapporten te maken die zijn geb
 
 De volgende categorieën zijn opgenomen in de ingebouwde rapporten:
 
-- Administration
+- Beheer
 - Attestation
-- Elementen
+- Besturingselementen
 - Access Control naar binnen
 - Logboekregistratie
 - Model
-- autoriteiten
+- statistieken
 - Werkstroom
 
 U kunt rapporten maken en toevoegen aan deze categorieën, maar u kunt ook uw eigen categorieën definiëren waarin u aangepaste en ingebouwde rapporten kunt plaatsen.

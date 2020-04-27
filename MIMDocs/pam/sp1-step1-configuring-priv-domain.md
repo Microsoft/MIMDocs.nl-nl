@@ -12,21 +12,21 @@ ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: ''
 ms.suite: ems
 ms.openlocfilehash: 4e24ac1b3f3f3d46aa5f67175dc4c4b8778bdb21
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79043848"
 ---
 # <a name="step-1-configuring-the-priv-domain"></a>Stap 1 Het privédomein configureren
 
 > [!div class="step-by-step"]
-> [Stap 2 »](sp1-step2-configuring-corp-domain.md)
+> [Stap 2»](sp1-step2-configuring-corp-domain.md)
 
 1. Meld u aan bij PRIVC als administrator
    * Als dit een PRIV-omgeving is, meldt u zich aan bij de CORPDC
 2. Voer PowerShell uit als Administrator
-3. cd $env: SYSTEMDRIVE\PAM
+3. cd $env:SYSTEMDRIVE\PAM
 4. .\PAMDeployment.ps1
 5. Selecteer menuoptie 1 (PRIV Forest Configuration)
 
@@ -42,4 +42,4 @@ Kopieer de SIDs.txt die wordt gegenereerd in $env: SYSTEMDRIVE\PAM naar de verge
 Nadat het script is voltooid, wordt u gevraagd om de computer opnieuw op te starten om de wijzigingen van kracht te laten worden.
 
 > [!div class="step-by-step"]
-> [Stap 2 »](sp1-step2-configuring-corp-domain.md)
+> [Stap 2»](sp1-step2-configuring-corp-domain.md)

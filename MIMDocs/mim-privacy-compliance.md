@@ -11,10 +11,10 @@ ms.prod: microsoft-identity-manager
 ms.assetid: b0b39631-66df-4c5f-80c9-a1774346f816
 ms.suite: ems
 ms.openlocfilehash: e95cf26b62e582eaa3c07c40e551bc5930d3b1b0
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79044103"
 ---
 # <a name="microsoft-identity-manager-data-handling"></a>Verwerking van Microsoft Identity Manager gegevens 
@@ -34,7 +34,7 @@ Hieronder volgen enkele scenario's die klanten moeten overwegen en de volgende v
 Om u te helpen inzicht te krijgen in een huidige MIM-omgeving, kunt u het volgende hulp programma gebruiken om uw MIM-omgeving te documenteren of uw ontwerp documenten voor de implementatie uit te stellen.
 - [MIM-document functie: Hiermee staat u de huidige configuratie toe](https://github.com/Microsoft/MIMConfigDocumenter)
 
-## <a name="searching-for-and-identifying-personal-data"></a>Zoeken naar en identificeren van persoons gegevens
+## <a name="searching-for-and-identifying-personal-data"></a>Persoonsgegevens zoeken en identificeren
 Het zoeken van gegevens binnen MIM is afhankelijk van de configuratie en de installatie. De meeste omgevingen hebben een onderlinge verbinding, maar voor de duidelijkheid zijn deze op hoog niveau afgebroken.
 
 ### <a name="synchronization-service"></a>Synchronisatieservice
@@ -47,7 +47,7 @@ Als u niet zeker weet dat u deze gebruiker kunt volgen vanuit de MIM Synchroniza
     - De client voor de synchronisatie service openen
         - U kunt met behulp van de functie voor inverse-invoer kenmerk stroom importeren en prioriteiten weer geven.
 ![MIM-privacy-compliance_1. PNG](media/mim-privacy-compliance/mim-privacy-compliance_1.PNG)
-        - Met behulp van de omgekeerde zoek opdracht kunt u zoeken naar een wille keurig object en kenmerk in de data base ![MIM-privacy-compliance_2. PNG](media/mim-privacy-compliance/mim-privacy-compliance_2.PNG)
+        - Met de omgekeerde zoek functie kunt u zoeken naar een object en elk kenmerk in de data ![base MIM-privacy-COMPLIANCE_2. png](media/mim-privacy-compliance/mim-privacy-compliance_2.PNG)
  
 Nadat u het object hebt gevonden, wordt de pagina gebruikers profiel geopend wanneer u op het object klikt. De object Details bieden u de uitgebreide details over het object, de kenmerken, het laatst gewijzigde en de bron van de instantie en gerelateerde verbonden gegevens bron afgeleid van de beheer agent configuratie voor beeld hieronder.
 
@@ -82,7 +82,7 @@ Zoek opdracht van de certificaat beheer service is ingebouwd in de gebruikers in
 
 ![cm zoeken](media/mim-privacy-compliance/mim-privacy-compliance-cm.PNG)
 
-## <a name="exporting-personal-data"></a>Exporteren van persoonlijke gegevens
+## <a name="exporting-personal-data"></a>Persoonlijke gegevens exporteren
 Omdat de gegevens met betrekking tot entiteiten in MIM worden afgeleid van meerdere bronnen, worden de meeste gegevens opgeslagen in de data base van de synchronisatie service. Daarom moet u aan object gerelateerde gegevens van MIM Sync exporteren of kunt u de eigenaar van deze gegevens bepalen.
 
 ### <a name="synchronization-service"></a>Synchronisatieservice
@@ -102,7 +102,7 @@ Bhold gegevens kunnen worden geëxporteerd met behulp van de Bhold-rapportage mo
 ### <a name="certificate-management"></a>Certificaatbeheer
 Certificaat beheer gegevens met betrekking tot persoonlijke gegevens zijn verbonden met Active Directory. Een beheerder kan deze gegevens exporteren met behulp van Active Directory Power shell.
 
-## <a name="updating-personal-data"></a>Het bijwerken van persoonlijke gegevens
+## <a name="updating-personal-data"></a>Persoonlijke gegevens bijwerken
 
 Persoonlijke gegevens over gebruikers of objecten in MIM-oplossingen worden doorgaans afgeleid van het object van de gebruiker in de verbonden gegevens bronnen van uw organisatie. Omdat wijzigingen in het gebruikers profiel in de HR-bron of een ander gezaghebbend systeem van record, zoals AD, vervolgens worden weer gegeven in de MIM-synchronisatie service.
 
@@ -129,10 +129,10 @@ Gebruikers kunnen rechtstreeks worden bijgewerkt met de BHOLD-kern gebruikers in
 
 Gebruikers in de certificaat beheer service zijn allemaal een reflectie van Active Directory. Gebruik Active Directory om de object gegevens te wijzigen.
 
-## <a name="deleting-personal-data"></a>Het verwijderen van persoonlijke gegevens
+## <a name="deleting-personal-data"></a>Persoonlijke gegevens verwijderen
 
 >[!Note] 
-> Dit artikel bevat richt lijnen voor het verwijderen van persoonlijke gegevens uit Microsoft Identity Manager en kan worden gebruikt ter ondersteuning van uw verplichtingen onder het AVG. Zie de [AVG-sectie van Service Trust Portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted) voor algemene informatie over de AVG.
+> Dit artikel bevat richt lijnen voor het verwijderen van persoonlijke gegevens uit Microsoft Identity Manager en kan worden gebruikt ter ondersteuning van uw verplichtingen onder het AVG. Zie het [gedeelte AVG van de Service Trust Portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted) als u op zoek bent naar algemene informatie over de AVG.
 
 Gegevens in MIM worden gesynchroniseerd en worden altijd bijgewerkt vanuit de gekoppelde gegevens bron. Wanneer een object in het doel wordt verwijderd, kunnen de gegevens van het object in MIM worden onderhouden voor beveiligings onderzoek. Het verwijderen van objecten is geconfigureerd per verbonden gegevens bron regels of regel extensie (code) en/of verwijderings regels voor objecten.
 
@@ -155,7 +155,7 @@ Het wordt aanbevolen voor de service & Portal dat u de standaard configuratie vo
 Bhold als de meeste systemen die zijn verbonden met de synchronisatie service, kunnen worden geconfigureerd om te verwijderen zodra het bron object, zoals HR, wordt verwijderd. Dit wordt geconfigureerd in de beheer agent. en worden beheerd door de regels voor het verwijderen van objecten zoals beschreven onder de functies synchronisaties service.
 
 Een andere mogelijkheid is om het gebruikers object rechtstreeks te verwijderen uit de BHOLD core-gebruikers interface. Afhankelijk van de installatie kan dit goed werken, maar Opmerking inrichten logica kan deze gebruiker opnieuw maken als deze niet wordt verwijderd uit de bron.
-![MIM-privacy-naleving-bholdr. PNG-](media/mim-privacy-compliance/mim-privacy-compliance-bholdr.PNG)
+![MIM-privacy-naleving-bholdr. PNG](media/mim-privacy-compliance/mim-privacy-compliance-bholdr.PNG)
 
 
 ### <a name="certificate-management"></a>Certificaatbeheer

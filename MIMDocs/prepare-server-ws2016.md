@@ -12,10 +12,10 @@ ms.assetid: 51507d0a-2aeb-4cfd-a642-7c71e666d6cd
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: cf8261c4e6f6529fd82760206b62b689a75d0acb
-ms.sourcegitcommit: c214bb0b1373b65b1c9c215379fd820ab0c13f0f
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/14/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79382311"
 ---
 # <a name="set-up-an-identity-management-server-windows-server-2016-or-2019"></a>Een server voor identiteits beheer instellen: Windows Server 2016 of 2019
@@ -36,7 +36,7 @@ ms.locfileid: "79382311"
 > - Naam van de MIM-service Server- **corpservice**
 > - Naam MIM-synchronisatie server- **corpsync**
 > - SQL Server naam- **corpsql**
-> - Wachtwoord - <strong>Pass@word1</strong>
+> - Wacht woord<strong>Pass@word1</strong>
 
 ## <a name="join-windows-server-2016-to-your-domain"></a>Windows Server 2016 toevoegen aan uw domein
 
@@ -84,21 +84,21 @@ Stel het beveiligingsbeleid van de server zo in dat de zojuist gemaakte accounts
 
     ![Afbeelding voor Lokaal beveiligingsbeleid](media/MIM-DeployWS3.png)
 
-4. Klik op **gebruiker of groep toevoegen**, en typ in het tekstvak volgende op basis van rol `contoso\MIMSync; contoso\MIMMA; contoso\MIMService; contoso\SharePoint; contoso\SqlServer; contoso\MIMSSPR`, klik op **Namen controleren**en klik vervolgens op **OK**.
+4. Klik op **gebruiker of groep toevoegen**, en typ in het tekstvak volgende op basis van `contoso\MIMSync; contoso\MIMMA; contoso\MIMService; contoso\SharePoint; contoso\SqlServer; contoso\MIMSSPR`rol, klik op **Namen controleren**en klik vervolgens op **OK**.
 
-5. Klik op **OK** om het venster **Aanmelden als service > Eigenschappen** te sluiten.
+5. Klik op **OK** om het venster **Aanmelden als service &gt; Eigenschappen** te sluiten.
 
 6.  Klik in het detail venster met de rechter muisknop op **toegang tot deze computer vanaf het netwerk weigeren**en selecteer **Eigenschappen**. >
 
 7. Klik op **Gebruiker of groep toevoegen**, typ `contoso\MIMSync; contoso\MIMService` in het tekstvak en klik op **OK**.
 
-8. Klik op **OK** om het venster **Toegang tot deze computer vanaf het netwerk weigeren > Eigenschappen** te sluiten.
+8. Klik op **OK** om het venster **Toegang tot deze computer vanaf het netwerk weigeren &gt; Eigenschappen** te sluiten.
 
 9. Klik in het detail venster met de rechter muisknop op **lokaal aanmelden weigeren**en selecteer **Eigenschappen**.
 
 10. Klik op **Gebruiker of groep toevoegen**, typ `contoso\MIMSync; contoso\MIMService` in het tekstvak en klik op **OK**.
 
-11. Klik op **OK** om het venster **Lokaal aanmelden weigeren > Eigenschappen** te sluiten.
+11. Klik op **OK** om het venster **Lokaal aanmelden weigeren &gt; Eigenschappen** te sluiten.
 
 12. Sluit het venster Lokaal beveiligingsbeleid.
 
@@ -106,7 +106,7 @@ Stel het beveiligingsbeleid van de server zo in dat de zojuist gemaakte accounts
 
 Voordat u MIM 2016 SP2-onderdelen installeert, moet u alle software vereisten installeren:
 
-13. Installeer [Visual C++ 2013 Redistributable packages](https://www.microsoft.com/download/details.aspx?id=40784).
+13. Installeer de [herdistribueerbare Visual C++ 2013-pakketten](https://www.microsoft.com/download/details.aspx?id=40784).
 
 14. Installeer .NET Framework 4,6.
 

@@ -8,10 +8,10 @@ ms.date: 03/10/2020
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.openlocfilehash: 4586b9998a9526a867ffe7ace9489fe56fff146c
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79044205"
 ---
 # <a name="convert-microsoft-identity-manager-specific-services-to-use-group-managed-service-accounts"></a>Microsoft Identity Manager-specifieke services converteren voor het gebruik van door groepen beheerde service accounts
@@ -47,8 +47,8 @@ Dit artikel is een hand leiding voor het configureren van ondersteunde Microsoft
 
     - Hoofd sleutels worden gebruikt door de KDS-service (Key Distribution Services) voor het genereren van wacht woorden en andere informatie op domein controllers.
     - Maak eenmaal per domein een basis sleutel, indien nodig.  
-    - `Add-KDSRootKey –EffectiveImmediately`toevoegen. "– EffectiveImmediately" betekent dat het Maxi maal 10 uur kan duren om de basis sleutel naar alle domein controllers te repliceren. Het kan ongeveer één uur duren voordat er naar twee domein controllers wordt gerepliceerd. 
-    ![de teken reeks "– EffectiveImmediately"](media/7fbdf01a847ea0e330feeaf062e30668.png)
+    - Include `Add-KDSRootKey –EffectiveImmediately`. "– EffectiveImmediately" betekent dat het Maxi maal 10 uur kan duren om de basis sleutel naar alle domein controllers te repliceren. Het kan ongeveer één uur duren voordat er naar twee domein controllers wordt gerepliceerd. 
+    ![De teken reeks "– EffectiveImmediately"](media/7fbdf01a847ea0e330feeaf062e30668.png)
 
 ## <a name="actions-to-run-on-the-active-directory-domain-controller"></a>Acties die moeten worden uitgevoerd op de Active Directory-domein controller
 
@@ -74,9 +74,9 @@ Dit artikel is een hand leiding voor het configureren van ondersteunde Microsoft
 
 1. Maak een back-up van de versleutelings sleutel in Synchronization Service Manager. Er wordt gevraagd om de installatie van de wijzigings modus. Ga als volgt te werk:
 
-    a. Op de server waarop Synchronization Service Manager is geïnstalleerd, zoekt u naar het hulp programma voor sleutel beheer van de synchronisatie service. Het **sleutel instellen** is standaard al geselecteerd.
+    a. Op de server waarop Synchronization Service Manager is geïnstalleerd, zoekt u naar het hulp programma voor sleutel beheer van de synchronisatie service. De **sleutelset voor exporteren** is standaard al geselecteerd.
 
-    b. Selecteer **Volgende**. 
+    b. Selecteer **Next**. 
     
     c. Voer de gegevens van het Microsoft Identity Manager of het Forefront Identity Manager (FIM)-synchronisatie service account bij de prompt in en controleer deze:
 
@@ -84,7 +84,7 @@ Dit artikel is een hand leiding voor het configureren van ondersteunde Microsoft
     -   **Wacht woord**: het wacht woord van het synchronisatie service account.  
     -   **Domein**: het domein waarvan het synchronisatie service account deel uitmaakt.
 
-    d. Selecteer **Volgende**.
+    d. Selecteer **Next**.
 
     Als u de account gegevens hebt ingevoerd, hebt u de mogelijkheid om de bestemming of de locatie van het export bestand van de back-versleutelings sleutel te wijzigen. Standaard is de locatie van het export bestand *C:\Windows\system32\miiskeys-1.bin*.
 
@@ -102,7 +102,7 @@ Dit artikel is een hand leiding voor het configureren van ondersteunde Microsoft
 
    ![Het venster onderhouds opties](media/dc98c011bec13a33b229a0e792b78404.png)
 
-   d. In het venster **Microsoft Identity Manager synchronisatie service configureren wist u** de standaard waarde in het vak **Service account** en voert u vervolgens **MIMSyncGMSA $** . Zorg ervoor dat u het symbool voor het dollar teken ($) opneemt, zoals wordt weer gegeven in de volgende afbeelding. Laat het vak **wacht woord** leeg.
+   d. In het venster **Microsoft Identity Manager synchronisatie service configureren wist u** de standaard waarde in het vak **Service account** en voert u vervolgens **MIMSyncGMSA $**. Zorg ervoor dat u het symbool voor het dollar teken ($) opneemt, zoals wordt weer gegeven in de volgende afbeelding. Laat het vak **wacht woord** leeg.
 
    ![Het venster Microsoft Identity Manager synchronisatie service configureren](media/38df9369bf13e1c3066a49ed20e09041.png)
 

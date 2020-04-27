@@ -11,10 +11,10 @@ ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 5134a112-f73f-41d0-a5a5-a89f285e1f73
 ms.openlocfilehash: 512a1887329f9ec5c93fd69f0ce0b22495ba009c
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79043542"
 ---
 # <a name="using-azure-mfa-for-activation"></a>Azure MFA gebruiken voor activering
@@ -44,7 +44,7 @@ Als u Azure MFA met MIM wilt gebruiken, hebt u het volgende nodig:
 
 ## <a name="creating-an-azure-mfa-provider"></a>Een Azure MFA-provider maken
 
-In deze sectie stelt u de Azure MFA-provider in Microsoft Azure Active Directory.  Als u Azure MFA al gebruikt, hetzij zelfstandig als geconfigureerd met Azure Active Directory Premium, gaat u verder met de volgende sectie.
+In deze sectie stelt u de Azure MFA-provider in Microsoft Azure Active Directory.Als u Azure MFA al gebruikt, als zelfstandige functie of geconfigureerd met Azure Active Directory Premium, gaat u door naar de volgende sectie.
 
 1.  Open een webbrowser en maak verbinding met de [klassieke Azure Portal](https://manage.windowsazure.com) als een Azure-abonnementsbeheerder.
 
@@ -68,11 +68,11 @@ Voorheen zou u een bestand genereren dat het verificatie materiaal voor PAM beva
 
 3.  Klik op de Azure MFA-provider die u gaat gebruiken voor PAM en klik vervolgens op **Beheren**.
 
-4.  Klik in het nieuwe venster in het linkerdeelvenster onder **Configureren** op **Instellingen**.
+4.  Klik in het nieuwe venster in het linkerdeel venster onder **configureren**op **instellingen**.
 
 5.  Klik in het venster **Azure Multi-Factor Authentication** op **SDK** bij **Downloads**.
 
-6.  Klik op de koppeling **Downloaden** in de kolom met ZIP-bestanden voor het bestand met de programmeertaal **SDK voor ASP.net 2.0 C\#** .
+6.  Klik op de koppeling **downloaden** in de kolom zip voor het bestand met de taal **SDK voor ASP.net\#2,0 C**.
 
 ![Multi-Factor Authentication SDK downloaden - schermafbeelding](media/PAM-Azure-MFA-Activation-Image-1.png)
 
@@ -87,11 +87,11 @@ Voorheen zou u een bestand genereren dat het verificatie materiaal voor PAM beva
 
 2.  Maak een nieuwe map in de map waar de MIM-service is geïnstalleerd, bijvoorbeeld ```C:\Program Files\Microsoft Forefront Identity Manager\2010\Service\MfaCerts```.
 
-3.  Navigeer in Windows Verkenner naar de map ```pf\certs``` van het ZIP-bestand dat u in de vorige sectie hebt gedownload. Kopieer het bestand ```cert\_key.p12``` naar de nieuwe map.
+3.  Navigeer in Windows Verkenner naar de ```pf\certs``` map van het zip-bestand dat u in de vorige sectie hebt gedownload. Kopieer het bestand ```cert\_key.p12``` naar de nieuwe map.
 
-4.  Navigeer in Windows Verkenner naar de map ```pf``` van de ZIP en open het bestand ```pf\_auth.cs``` in een tekst editor zoals WordPad.
+4.  Navigeer in Windows Verkenner naar de ```pf``` map van de zip en open het bestand ```pf\_auth.cs``` in een tekst editor zoals WordPad.
 
-5. Deze drie para meters zoeken: ```LICENSE\_KEY```, ```GROUP\_KEY``````CERT\_PASSWORD```.
+5. Deze drie para meters ```LICENSE\_KEY```zoeken ```GROUP\_KEY```: ```CERT\_PASSWORD```,,.
 
 ![Waarden kopiëren uit het bestand pf\_auth.cs - schermafbeelding](media/PAM-Azure-MFA-Activation-Image-2.png)
 
@@ -99,11 +99,11 @@ Voorheen zou u een bestand genereren dat het verificatie materiaal voor PAM beva
 
 7. Kopieer de waarden van de parameters LICENSE\_KEY, GROUP\_KEY en CERT\_PASSWORD in het bestand pf\_auth.cs file naar de overeenkomstige XML-elementen in het bestand MfaSettings.xml.
 
-8. Geef in het XML-element **<CertFilePath>** de volledige padnaam op van het bestand cert\_key.p12 dat u eerder hebt uitgepakt.
+8. Geef in **<CertFilePath>** het XML-element de volledige padnaam op van het certificaat\_sleutel. P12-bestand dat eerder is geëxtraheerd.
 
-9. Voer in het element **<username>** een gebruikersnaam in.
+9. Voer in **<username>** het element een gebruikers naam in.
 
-10. Voer in het element **<DefaultCountryCode>** de landcode in voor het bellen van uw gebruikers, zoals 1 voor de Verenigde Staten en Canada. Deze waarde wordt gebruikt als gebruikers zijn geregistreerd met telefoonnummers zonder landcode. Als het telefoonnummer van de gebruiker een internationale landcode heeft die verschilt van de landcode die is geconfigureerd voor de organisatie, moet die landcode worden opgenomen in het telefoonnummer dat wordt geregistreerd.
+10. Voer in **<DefaultCountryCode>** het element de land code in voor het kiezen van uw gebruikers, zoals 1 voor de Verenigde Staten en Canada. Deze waarde wordt gebruikt als gebruikers zijn geregistreerd met telefoonnummers zonder landcode. Als het telefoonnummer van de gebruiker een internationale landcode heeft die verschilt van de landcode die is geconfigureerd voor de organisatie, moet die landcode worden opgenomen in het telefoonnummer dat wordt geregistreerd.
 
 11. Sla het bestand **MfaSettings.xml** in de map ```C:\Program Files\Microsoft Forefront Identity Manager\2010\\Service``` van de MIM-service op om het bestand te overschrijven.
 
@@ -132,11 +132,11 @@ Set-PAMRole (Get-PAMRole -DisplayName "R") -MFAEnabled 1
 
 U kunt Azure MFA uitschakelen voor een rol door de parameter -MFAEnabled 0 op te geven in de opdracht `Set-PAMRole`.
 
-## <a name="troubleshooting"></a>Probleemoplossing
+## <a name="troubleshooting"></a>Problemen oplossen
 
 De volgende gebeurtenissen vindt u in het gebeurtenislogboek voor Privileged Access Management:
 
-| Id  | Ernst | Gegenereerd door | Beschrijving |
+| Id  | Severity | Gegenereerd door | Beschrijving |
 |-----|----------|--------------|-------------|
 | 101 | Fout       | MIM-service            | De gebruiker heeft Azure MFA niet voltooid (heeft bijvoorbeeld de telefoonoproep niet beantwoord) |
 | 103 | Informatie | MIM-service            | De gebruiker heeft Azure MFA voltooid tijdens de activering                       |

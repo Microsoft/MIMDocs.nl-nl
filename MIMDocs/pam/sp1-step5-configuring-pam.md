@@ -12,21 +12,21 @@ ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: ''
 ms.suite: ems
 ms.openlocfilehash: 58a70336af4f79d87d6175aa99dc79fc81aa62dd
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79043780"
 ---
 # <a name="step-5-installingconfiguring-pam"></a>Stap 5 PAM installeren/configureren
 
 > [!div class="step-by-step"]
-> [« Stap 4](sp1-step4-configuring-sharepoint.md)
-> [Stap 6 »](sp1-step6-setup-pam-trust.md)
+> [«Stap 4](sp1-step4-configuring-sharepoint.md)
+> [stap 6»](sp1-step6-setup-pam-trust.md)
 
 Voor een PAM-server die lid is van een domein meldt u zich aan als MIMAdmin. Anders meldt u zich aan als een lokale administrator.
 1. Voer PowerShell uit als Administrator
-2. cd $env: SYSTEMDRIVE\PAM
+2. cd $env:SYSTEMDRIVE\PAM
 3. .\PAMDeploymnet.ps1
 4. Selecteer menuoptie 5 (MIM PAM Setup)
 
@@ -36,7 +36,7 @@ Voor een PAM-server die lid is van een domein meldt u zich aan als MIMAdmin. And
 Nadat de PAMServer opnieuw is opgestart, meldt u zich weer aan bij de computer met het MIMAdmin-account.
 
 1. Voer PowerShell uit als Administrator
-2. cd $env: SYSTEMDRIVE\PAM
+2. cd $env:SYSTEMDRIVE\PAM
 3. .\PAMDeployment.ps1
 4. Selecteer menuoptie 5 (MIM PAM Setup)
 
@@ -44,5 +44,5 @@ Nadat de PAMServer opnieuw is opgestart, meldt u zich weer aan bij de computer m
    Nadat de installatie is voltooid, wordt de machine wordt opnieuw opgestart.
 
 > [!div class="step-by-step"]
-> [« Stap 4](sp1-step4-configuring-sharepoint.md)
-> [Stap 6 »](sp1-step6-setup-pam-trust.md)
+> [«Stap 4](sp1-step4-configuring-sharepoint.md)
+> [stap 6»](sp1-step6-setup-pam-trust.md)

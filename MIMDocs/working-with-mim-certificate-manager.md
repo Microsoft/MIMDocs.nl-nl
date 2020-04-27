@@ -12,10 +12,10 @@ ms.assetid: 66060045-d0be-4874-914b-5926fd924ede
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: 2adf1152aaf874d0ff0d93079fb4bfbfcf731b60
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79044290"
 ---
 # <a name="mim-certificate-manager-windows-store-application-deployment"></a>Implementatie van de Windows Store-app voor MIM Certificate Manager
@@ -38,9 +38,9 @@ U maakt een certificaatsjabloon voor de CM-app op dezelfde manier als u normaal 
 
 2. Open MMC.
 
-3. Klik op **bestand &gt; module toevoegen/verwijderen**.
+3. Klik **op &gt; bestand module toevoegen/verwijderen**.
 
-4. Klik in de lijst met beschikbare modules op **Certificaatsjablonen** en vervolgens op **Toevoegen**.
+4. Klik in de lijst beschik bare modules op **certificaat sjablonen** en klik vervolgens op **toevoegen**.
 
 5. In MMC wordt nu **Certificaatsjablonen** weergegeven onder **Consolebasis**. Dubbelklik erop om alle beschikbare certificaatsjablonen weer te geven.
 
@@ -115,8 +115,8 @@ Wanneer u een profielsjabloon maakt, moet u deze instellen op Virtuele smartcard
 
    |                     |                                                                                                                                                                                                          |
    |---------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-   |      URL van MIMCM      |                                              De FQDN van de portal die u hebt gebruikt voor het configureren van CM. bijvoorbeeld https://mimcmServerAddress/certificatemanagement                                              |
-   |      URL van ADFS       | Als u AD FS gebruikt, voert u de URL van AD FS in. bijvoorbeeld <https://adfsServerSame/adfs> </br> Als ADFS niet wordt gebruikt, configureert u deze instelling met een lege teken reeks.  Bijvoorbeeld ```<ADFS URL=""/>``` |
+   |      URL van MIMCM      |                                              De FQDN van de portal die u hebt gebruikt voor het configureren van CM. Bijvoorbeeld: https://mimcmServerAddress/certificatemanagement                                              |
+   |      URL van ADFS       | Als u AD FS gebruikt, voert u de URL van AD FS in. Bijvoorbeeld: <https://adfsServerSame/adfs> </br> Als ADFS niet wordt gebruikt, configureert u deze instelling met een lege teken reeks.  Bijvoorbeeld:```<ADFS URL=""/>``` |
    |     PrivacyUrl      |                                         U kunt een URL naar een webpagina opnemen waarop wordt uitgelegd wat u doet met de gebruikersgegevens die worden verzameld voor de certificaatinschrijving.                                          |
    |     SupportMail     |                                                                           U kunt een e-mailadres opnemen voor ondersteuningsproblemen.                                                                           |
    | LobComplianceEnable |                                                                     U kunt dit instellen op Waar of Onwaar. Deze waarde is standaard ingesteld op Waar.                                                                      |

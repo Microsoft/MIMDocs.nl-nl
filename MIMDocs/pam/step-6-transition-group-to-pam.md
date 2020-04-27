@@ -12,17 +12,17 @@ ms.assetid: 7b689eff-3a10-4f51-97b2-cb1b4827b63c
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: e88407ceb1c7ac99f1746f453b7e4a7a5d296e5a
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79043627"
 ---
 # <a name="step-6--transition-a-group-to-privileged-access-management"></a>Stap 6 – Een groep overzetten naar Privileged Access Management
 
 > [!div class="step-by-step"]
-> [«Stap 5 ](step-5-establish-trust-between-priv-corp-forests.md)
-> [stap 7 »](step-7-elevate-user-access.md)
+> [«Stap 5 ](step-5-establish-trust-between-priv-corp-forests.md) 
+>  [stap 7»](step-7-elevate-user-access.md)
 
 U moet PowerShell-cmdlets gebruiken om bevoorrechte accounts in het PRIV-forest te maken. Met deze cmdlets worden de volgende functies uitgevoerd:
 
@@ -84,5 +84,5 @@ De cmdlets moet eenmaal voor elke groep worden uitgevoerd en eenmaal voor elk li
 Als u wilt demonstreren dat forest-overschrijdende toegangsrechten geldig zijn voor het beheerdersaccount van de gebruiker, gaat u door met de volgende stap.
 
 > [!div class="step-by-step"]
-> [«Stap 5 ](step-5-establish-trust-between-priv-corp-forests.md)
-> [stap 7 »](step-7-elevate-user-access.md)
+> [«Stap 5 ](step-5-establish-trust-between-priv-corp-forests.md) 
+>  [stap 7»](step-7-elevate-user-access.md)

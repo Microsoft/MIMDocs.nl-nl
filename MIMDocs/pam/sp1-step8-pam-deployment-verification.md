@@ -12,17 +12,17 @@ ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: ''
 ms.suite: ems
 ms.openlocfilehash: 41c1ff575bafb4c892d0657234554387680b75f1
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79043746"
 ---
 # <a name="step-8-pam-deployment-verification"></a>Stap 8 Verificatie van PAM-implementatie
 
 > [!div class="step-by-step"]
-> [« Stap 7](sp1-step7-setup-sidhistory-sidfiltering.md)
-> [Bijlage »](sp1-pam-deployment-addendum.md)
+> [«Stap 7](sp1-step7-setup-sidhistory-sidfiltering.md)
+> [addendum»](sp1-pam-deployment-addendum.md)
 
 Het implementatiepakket wordt geleverd met verificatiescripts die een PAM-scenario kunnen uitvoeren om te controleren of de PAM-implementatie naar behoren werkt.
 Om deze controlestap te kunnen gebruiken, wijzigt u in PAMDeploymentConfig.xml de sectie <PamValidation/>.
@@ -37,7 +37,7 @@ Stap 1:
 
 1. Meld u aan bij de CORPDC als een CORP-domeinadministrator
 2. Voer PowerShell uit als Administrator
-3. cd $env: SYSTEMDRIVE\PAM
+3. cd $env:SYSTEMDRIVE\PAM
 4. Import-module .\PAMValidation.psm1
 5. Create-PAMValidationonCORPDCConfig
 
@@ -47,7 +47,7 @@ Stap 2:
 
 1. Meld u aan bij de PAM-Server als MIMAdmin
 2. Voer PowerShell uit als Administrator
-3. cd $env: SYSTEMDRIVE\PAM
+3. cd $env:SYSTEMDRIVE\PAM
 4. import-module .\PAMValidation.psm1
 5. move-PAMVAlidationUsersToPAM
 
@@ -57,17 +57,17 @@ Stap 3:
 
 1. Meld u aan bij de client CORP als lokale administrator
 2. Voer PowerShell uit als Administrator
-3. cd $env: SYSTEMDRIVE\PAM
+3. cd $env:SYSTEMDRIVE\PAM
 4. import-module .\PAMValidation.psm1
 5. Enable-PAMUsersCORPClientRemote
 
 
 In deze stap moet u uw CORPAdmin-referenties opgeven. Zodra u deze hebt opgegeven, worden de juiste gebruikers toegevoegd aan de groepen Extern bureaubladgebruikers en Extern beheer-gebruikers.
 Gebruik op de CORP-client de volgende opdracht om PowerShell als de PRIV-gebruiker te openen die u valideert. </br></br>
-**Runas/u:<PRIV domain>\Priv.pamrequestor-gebruiker Power shell. exe**  </br></br>
+**Runas/u:<PRIV domain>\priv.pamrequestor-gebruiker Power shell. exe**  </br></br>
 Typ in het PowerShell-venster het volgende:
 
-1. cd $env: SYSTEMDRIVE\PAM
+1. cd $env:SYSTEMDRIVE\PAM
 2. import-module .\PAMValidation.psm1
 3. test-PAMValidationScenarioNoApprovalRequest
 
@@ -77,5 +77,5 @@ Typ in het PowerShell-venster het volgende:
   Voor het script geldt de standaardduur (11 minuten) voordat de aanvraag verloopt.
 
 > [!div class="step-by-step"]
-> [« Stap 7](sp1-step7-setup-sidhistory-sidfiltering.md)
-> [Bijlage »](sp1-pam-deployment-addendum.md)
+> [«Stap 7](sp1-step7-setup-sidhistory-sidfiltering.md)
+> [addendum»](sp1-pam-deployment-addendum.md)

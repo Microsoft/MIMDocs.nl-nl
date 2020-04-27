@@ -12,10 +12,10 @@ ms.assetid: fed5ada9-d80f-4825-aad7-4172ac5d71d3
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: b8a1b55ed836f46c184941ccf6ec25ef63ad4c30
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79042097"
 ---
 # <a name="create-software-certificates-with-certificate-manager"></a>Softwarecertificaten maken met de certificaatbeheerder
@@ -65,7 +65,7 @@ U hoeft geen beheerder te zijn of over een virtuele smartcard te beschikken om s
 
     7.  Selecteer **Bestand**, klik vervolgens op **Module toevoegen/verwijderen** om de module Certificeringsinstantie toe te voegen aan de MMC-console. Wanneer u wordt gevraagd welke computer u wilt beheren, selecteert u **Lokale computer**.
 
-    8.  Vouw in het linkerdeelvenster van MMC **Certificeringsinstantie (lokaal)** uit en vouw vervolgens uw certificeringsinstantie in de lijst met certificeringsinstanties uit.
+    8.  Vouw in het linkerdeel venster van de MMC **certificerings instantie (lokaal)** uit en vouw vervolgens uw CA uit in de lijst certificerings instantie.
 
     9. Klik met de rechtermuisknop op **Certificaatsjablonen**, klik op **Nieuw** en klik vervolgens op **Te verlenen certificaatsjablonen**.
 

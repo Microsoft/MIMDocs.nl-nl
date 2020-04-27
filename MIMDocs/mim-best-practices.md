@@ -10,10 +10,10 @@ ms.topic: reference
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
 ms.openlocfilehash: 72b77034d5591d0bc2ab420f185acee719fe8324
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79042998"
 ---
 # <a name="microsoft-identity-manager-2016-best-practices"></a>Aanbevolen procedures voor Microsoft Identity Manager 2016
@@ -30,7 +30,7 @@ Configuratie van de SQL-server (Structured Query Language) is essentieel voor op
 
 -   [Tempdb-prestaties optimaliseren](http://go.microsoft.com/fwlink/?LinkID=188267)
 
--   [Aanbevolen procedures voor SQL-servers](http://go.microsoft.com/fwlink/?LinkID=188268)
+-   [SQL Server Best Practices Article (Engelstalig)](http://go.microsoft.com/fwlink/?LinkID=188268)
 
 -   [Indexen opnieuw indelen en opbouwen](http://go.microsoft.com/fwlink/?LinkID=188269)
 
@@ -362,7 +362,7 @@ SSL implementeren:
 
 31. Klik op Start, klik op Uitvoeren, typ iisreset en klik vervolgens op OK.
 
-## <a name="performance"></a>Prestatie
+## <a name="performance"></a>Prestaties
 
 Voor het configureren van optimale prestaties:
 
@@ -494,11 +494,11 @@ Negatieve voorwaarden zijn de lidmaatschapsvoorwaarden waarbij gebruik wordt gem
 
 Het gebruik van voorwaarden op basis van verwijzingskenmerken met meerdere waarden moet worden geminimaliseerd omdat een groot aantal van deze sets invloed kan hebben op de snelheid van de bewerkingen op het kenmerk dat in de lidmaatschapsvoorwaarde wordt gebruikt.
 
-### <a name="password-reset"></a>Wachtwoordherstel
+### <a name="password-reset"></a>Wachtwoord opnieuw instellen
 
 #### <a name="kiosk-like-computers-that-are-used-for-password-reset-should-set-local-security-to-clear-the-virtual-memory-pagefile"></a>Op computers bedoeld als kiosk die worden gebruikt voor wachtwoordherstel, moet de lokale beveiliging zijn ingesteld op het wissen van het wisselbestand voor virtueel geheugen
 
-Wanneer u de MIM-wachtwoord herstel implementeert op een werk station dat bedoeld is als kiosk, raden we u aan de instelling afsluiten: wissel bestand voor virtueel geheugen wissen in te scha kelen om ervoor te zorgen dat gevoelige informatie uit het proces geheugen niet beschikbaar is voor niet-geautoriseerde gebruikers.
+Wanneer u de MIM-wachtwoord herstel implementeert op een werk station dat bedoeld is als kiosk, raden we u aan de instelling afsluiten: wissel bestand voor virtueel geheugen wissen in te scha kelen om ervoor te zorgen dat gevoelige informatie uit het proces geheugen niet beschikbaar is voor onbevoegde gebruikers.
 
 #### <a name="users-should-always-register-for-a-password-reset-on-a-computer-that-they-are-logged-on-to"></a>Gebruikers moeten zich altijd registreren voor wachtwoordherstel op een computer waarop ze zijn aangemeld
 
@@ -558,7 +558,7 @@ Er zijn 13 kernkenmerken aan alle resourcetypen toegewezen. U mag de relatie van
 
 -   ExpirationTime
 
--   Landinstellingen
+-   Landinstelling
 
 -   MVObjectID
 

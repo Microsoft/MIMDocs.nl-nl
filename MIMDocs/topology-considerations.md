@@ -12,10 +12,10 @@ ms.assetid: 735dc357-dfba-4f68-a5b3-d66d6c018803
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: 7f2d78b487e3c20fbd656aad37b67a6382b67df0
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79044324"
 ---
 # <a name="topology-considerations"></a>Aandachtspunten voor topologie
@@ -39,10 +39,10 @@ De volgende tabel bevat de opties voor het hosten van elk van de MIM-onderdelen.
 
 | | MIM-portal | MIM-service | MIM-synchronisatieservice | SQL Server |
 | --- | --- | --- | --- | --- |
-| Dezelfde computer | Yes | Yes | Yes | Yes |
-| Afzonderlijke server | Yes | Yes | Yes | Yes |
-| Netwerktaakverdelingscluster | Yes | Yes | | |
-| Servercluster | | | | Yes |
+| Dezelfde computer | Ja | Ja | Ja | Ja |
+| Afzonderlijke server | Ja | Ja | Ja | Ja |
+| Netwerktaakverdelingscluster | Ja | Ja | | |
+| Servercluster | | | | Ja |
 
 
 ## <a name="multitier-topology"></a>Topologie met meerdere lagen
@@ -64,6 +64,6 @@ Net zoals bij de standaardtopologie met meerdere lagen, kunt u de prestaties van
 
 De computers met SQL Server die als host fungeren voor de MIM-synchronisatieservice en de MIM-servicedatabase zullen de algehele prestaties van uw MIM-implementatie aanzienlijk beïnvloeden. Volg daarom de aanbevelingen in de SQL Server-documentatie voor het optimaliseren van databaseprestaties. Zie de volgende documenten voor meer informatie:
 
-## <a name="see-also"></a>Zie tevens
+## <a name="see-also"></a>Zie ook
 
 - De Download bare [hand leiding voor de capaciteits planning van Forefront Identity Manager (FIM) 2010](https://www.microsoft.com/en-us/download/details.aspx?id=7437) gaat meer details over een test resultaat en prestatie test resultaten.

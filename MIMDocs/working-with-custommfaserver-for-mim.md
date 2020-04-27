@@ -10,10 +10,10 @@ ms.date: 09/04/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.openlocfilehash: b157b2a8716d20ce3b472d5655d393e64f2baa6b
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79044358"
 ---
 # <a name="use-a-custom-multi-factor-authentication-provider-via-an-api-during-pam-role-activation-or-in-sspr"></a>Een aangepaste Multi-Factor Authentication provider gebruiken via een API tijdens de activering van de PAM-rol of in SSPR
@@ -45,13 +45,13 @@ Down load en installeer de MIM-hotfix [4.5.202.0](https://www.microsoft.com/down
 
 Het DLL-bestand moet een klasse bevatten die drie methoden implementeert:
 
-- `InitiateCall`: de MIM-service roept deze methode aan. Met de service worden het telefoon nummer en de aanvraag-ID als para meters door gegeven.  De-methode moet een `PhoneCallStatus` waarde van `Pending`, `Success` of `Failed`retour neren.
-- `GetCallStatus`: als een eerdere aanroep naar `initiateCall` geretourneerd `Pending`, wordt deze methode door de MIM-service aangeroepen. Deze methode retourneert ook `PhoneCallStatus` waarde van `Pending`, `Success` of `Failed`.
-- `GetFailureMessage`: als er een eerdere aanroep van `InitiateCall` of `GetCallStatus` retourneert `Failed`, wordt deze methode door de MIM-service aangeroepen. Met deze methode wordt een diagnostisch bericht geretourneerd.
+- `InitiateCall`: De MIM-service roept deze methode aan. Met de service worden het telefoon nummer en de aanvraag-ID als para meters door gegeven.  De methode `PhoneCallStatus` moet een waarde van `Pending`of `Success` `Failed`hebben als resultaat.
+- `GetCallStatus`: Als een eerdere aanroep van `initiateCall` wordt `Pending`geretourneerd, roept de MIM-service deze methode aan. Deze methode retourneert `PhoneCallStatus` ook de waarde `Pending` `Success` of `Failed`.
+- `GetFailureMessage`: Als een eerdere aanroep van `InitiateCall` of `GetCallStatus` is geretourneerd `Failed`, roept de MIM-service deze methode aan. Met deze methode wordt een diagnostisch bericht geretourneerd.
 
-De implementaties van deze methoden moeten thread-safe zijn en daarnaast moet de implementatie van de `GetCallStatus` en `GetFailureMessage` niet aannemen dat ze worden aangeroepen door dezelfde thread als een eerdere aanroep van `InitiateCall`.
+De implementaties van deze methoden moeten thread-safe zijn en daarnaast moet de implementatie van `GetCallStatus` de `GetFailureMessage` en niet aannemen dat ze worden aangeroepen door dezelfde thread als een eerdere aanroep naar `InitiateCall`.
 
-Sla het DLL-bestand op in de `C:\Program Files\Microsoft Forefront Identity Manager\2010\Service\` Directory.
+Sla het DLL-bestand `C:\Program Files\Microsoft Forefront Identity Manager\2010\Service\` op in de map.
 
 Voorbeeld code, die kan worden gecompileerd met Visual Studio 2010 of hoger.
 
@@ -156,6 +156,6 @@ Nadat de service opnieuw is opgestart, gebruikt u SSPR en/of PAM om de functiona
 
 ## <a name="next-steps"></a>Volgende stappen
 
-- [Aan de slag met Azure Multi-Factor Authentication-server](https://docs.microsoft.com/azure/active-directory/authentication/howto-mfaserver-deploy)
+- [Aan de slag met de Azure Multi-Factor Authentication-server](https://docs.microsoft.com/azure/active-directory/authentication/howto-mfaserver-deploy)
 - [Wat is Azure Multi-Factor Authentication](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication)
 - [Release geschiedenis van MIM-versie](./reference/version-history.md)

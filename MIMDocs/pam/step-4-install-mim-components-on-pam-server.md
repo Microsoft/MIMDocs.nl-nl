@@ -13,17 +13,17 @@ ROBOTS: noindex,nofollow
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: 0456f463357aea69913804b8d15241737932ff4d
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79043678"
 ---
 # <a name="step-4--install-mim-components-on-pam-server-and-workstation"></a>Stap 4: MIM-onderdelen installeren op een PAM-server en -werkstation
 
 > [!div class="step-by-step"]
-> [« Stap 3](step-3-prepare-pam-server.md)
-> [Stap 5 »](step-5-establish-trust-between-priv-corp-forests.md)
+> [«Stap 3](step-3-prepare-pam-server.md)
+> [stap 5»](step-5-establish-trust-between-priv-corp-forests.md)
 
 Meld u op PAMSRV aan als PRIV\Administrator om de MIM-service en -portal en de voorbeeldwebtoepassing van de portal te installeren.
 
@@ -51,15 +51,15 @@ Volg de richtlijnen van het installatieprogramma en voltooi de installatie.
 
 5. Stel de volgende accountreferenties in:
    - Naam van serviceaccount: *MIMService*  
-   - Wachtwoord van serviceaccount: <em>Pass@word1</em> (of het wachtwoord dat u hebt gemaakt in stap 2)  
+   - Wacht woord van service <em>Pass@word1</em> account: (of het wacht woord dat u hebt gemaakt in stap 2)  
    - Domein van serviceaccount: *PRIV*  
-   - E-mailadres van serviceaccount: <em>MIMService@priv.contoso.local</em>  
+   - E-mail account van de service:<em>MIMService@priv.contoso.local</em>  
 
 6. Accepteer de standaardwaarden voor de hostnaam van de synchronisatieserver en geef *PRIV\MIMMA* op als het MIM-beheeragentaccount. Er wordt een waarschuwing weergegeven dat de MIM-synchronisatieservice niet bestaat. Dit is geen probleem omdat de MIM-synchronisatieservice niet wordt gebruikt in dit scenario.
 
 7. Stel *PAMSRV* in als het serveradres van de MIM-service.
 
-8. *http://pamsrv.priv.contoso.local:82* instellen als de URL van de share point-site verzameling.
+8. Instellen *http://pamsrv.priv.contoso.local:82* als de URL van de share point-site verzameling.
 
 9. Laat de URL voor de registratieportal leeg.
 
@@ -71,23 +71,23 @@ Volg de richtlijnen van het installatieprogramma en voltooi de installatie.
 
 12. Configureer het account voor de MIM PAM REST API voor het gebruik van hetzelfde account als SharePoint (omdat de MIM-portal ook op deze server is geplaatst):
     - Naam van account voor groep van toepassingen: *SharePoint*  
-    - Wachtwoord van account voor groep van toepassingen: <em>Pass@word1</em> (of het wachtwoord dat u hebt gemaakt in stap 2)  
+    - Wacht woord voor de groep <em>Pass@word1</em> van toepassingen: (of het wacht woord dat u hebt gemaakt in stap 2)  
     - Naam van account voor groep van toepassingen: *PRIV*  
 
     ![Referentie van account voor groep van toepassingen - schermafbeelding](./media/PAM_GS_Configure_Component_Service.png)
 
-    Er kan een waarschuwing worden weergegeven dat het serviceaccount niet is beveiligd in de huidige configuratie. Dit is geen probleem.
+    Er kan een waarschuwing worden weergegeven dat het serviceaccount niet is beveiligd in de huidige configuratie. Dat is niet erg.
 
 13. De MIM-service voor het PAM-onderdeel configureren:
     - Naam van serviceaccount: *MIMComponent*
-    - Wachtwoord van serviceaccount: <em>Pass@word1</em> (of het wachtwoord dat u hebt gemaakt in stap 2)  
+    - Wacht woord van service <em>Pass@word1</em> account: (of het wacht woord dat u hebt gemaakt in stap 2)  
     - Domein van serviceaccount: *PRIV*
 
     ![Referenties van het serviceaccount voor het PAM-onderdeel - schermafbeelding](./media/PAM_GS_Configure_MIM_PAM_component_service.png)
 
 14. De service voor PAM-controle configureren:
     - Naam van serviceaccount: *MIMMonitor*  
-    - Wachtwoord van serviceaccount: <em>Pass@word1</em> (of het wachtwoord dat u hebt gemaakt in stap 2)  
+    - Wacht woord van service <em>Pass@word1</em> account: (of het wacht woord dat u hebt gemaakt in stap 2)  
     - Domein van serviceaccount: *PRIV*  
 
     ![Referenties van het serviceaccount voor PAM-controle - schermafbeelding](./media/PAM_GS_Configur_PAM_Monitoring_service.png)
@@ -100,11 +100,11 @@ Nadat de installatie is voltooid, wordt de server opnieuw opgestart. Controleer 
 
 1. Nadat PAMSRV opnieuw is opgestart, meldt u zich aan als PRIV\Administrator.
 
-2. Start Internet Explorer en maak verbinding met de MIM-Portal op http://pamsrv.priv.contoso.local:82/identitymanagement. Er is mogelijk een korte vertraging wanneer voor de eerste keer naar deze pagina wordt gezocht.
+2. Start Internet Explorer en maak verbinding met de MIM- http://pamsrv.priv.contoso.local:82/identitymanagementPortal op. Er is mogelijk een korte vertraging wanneer voor de eerste keer naar deze pagina wordt gezocht.
 
 3. Meld u zo nodig aan als PRIV\Administrator voor Internet Explorer.
 
-4. Ga in Internet Explorer naar **Internetopties**, open het tabblad **Beveiliging** en voeg de site toe aan de zone **Lokaal intranet** als de site hier nog niet wordt weergegeven. Sluit het dialoogvenster Internetopties.
+4. Open in Internet Explorer de **Internet opties**, ga naar het tabblad **beveiliging** en voeg de site toe aan de **zone Lokaal intranet** als deze nog niet aanwezig is. Sluit het dialoogvenster Internetopties.
 
 5. Geef in Internet Explorer de MIM-portal weer en klik op **Beheerbeleidsregels**.
 
@@ -121,7 +121,7 @@ De firewall moet binnenkomende verbindingen voor TCP-poort 5725, 5726, 8086 en 8
 3.  Controleer of deze twee regels worden weergegeven:  
     - Forefront Identity Manager-service (STS)
     - Forefront Identity Manager-service (webservice)  
-4.  Klik op **Nieuwe regel** > **Poort** > **TCP** en geef de specifieke lokale poorten *8086* en *8090* op. Klik door de wizard en accepteer de standaardwaarden, geef een naam op voor de regel en klik op **Voltooien**.  
+4.  Klik op **nieuwe regel** > **poort** > **TCP**en typ de specifieke lokale poorten *8086* en *8090*. Klik door de wizard en accepteer de standaardwaarden, geef een naam op voor de regel en klik op **Voltooien**.  
 5.  Sluit de toepassing Windows Firewall nadat u de wizard hebt voltooid.
 
 6.  Start **Configuratiescherm**.  
@@ -143,7 +143,7 @@ In deze sectie gaat u de voorbeeldwebtoepassing voor de MIM PAM REST API install
    New-WebSite -Name "MIM Privileged Access Management Example Portal" -Port 8090   -PhysicalPath "C:\Program Files\Microsoft Forefront Identity Manager\2010\Privileged Access Management Portal\"
    ```
 
-4. Stel de voorbeeldwebtoepassing zo in dat gebruikers worden omgeleid naar de MIM PAM REST API. Bewerk het bestand **C:\Program Files\Microsoft Forefront Identity Manager\2010\Privileged Access Management rest API\web.config**in een tekst editor, zoals Klad blok. Voeg in de sectie **< System. webserver >** de volgende regels toe:
+4. Stel de voorbeeldwebtoepassing zo in dat gebruikers worden omgeleid naar de MIM PAM REST API. Bewerk het bestand **C:\Program Files\Microsoft Forefront Identity Manager\2010\Privileged Access Management rest API\web.config**in een tekst editor, zoals Klad blok. Voeg in de sectie **<System. webserver>** de volgende regels toe:
 
    ```XML
    <httpProtocol>
@@ -155,7 +155,7 @@ In deze sectie gaat u de voorbeeldwebtoepassing voor de MIM PAM REST API install
    </httpProtocol>
    ```
 
-5. Configureer de voorbeeldwebtoepassing. Bewerk het bestand **C:\Program Files\Microsoft Forefront Identity Manager\2010\Privileged Access Management Portal\js\utils.js** met een teksteditor zoals Kladblok. Stel de waarde van **pamrespapiurl in** in op *http://pamsrv.priv.contoso.local:8086/api/pamresources/* .
+5. Configureer de voorbeeldwebtoepassing. Bewerk het bestand **C:\Program Files\Microsoft Forefront Identity Manager\2010\Privileged Access Management Portal\js\utils.js** met een teksteditor zoals Kladblok. Stel de waarde van **pamrespapiurl in** in *http://pamsrv.priv.contoso.local:8086/api/pamresources/* op.
 
 6. Start IIS opnieuw met de volgende opdracht om deze wijzigingen door te voeren.
 
@@ -163,7 +163,7 @@ In deze sectie gaat u de voorbeeldwebtoepassing voor de MIM PAM REST API install
    iisreset
    ```
 
-7. (Optioneel) Controleer of de gebruiker bij de REST API kan worden geverifieerd. Open een webbrowser als de beheerder op PAMSRV.  Ga naar de website-URL http://pamsrv.priv.contoso.local:8086/api/pamresources/pamroles/, verifieer indien nodig en zorg ervoor dat er een down load wordt uitgevoerd.
+7. (Optioneel) Controleer of de gebruiker bij de REST API kan worden geverifieerd. Open een webbrowser als de beheerder op PAMSRV.  Ga naar de website-URL http://pamsrv.priv.contoso.local:8086/api/pamresources/pamroles/, verifieer indien nodig, en zorg ervoor dat er een down load wordt uitgevoerd.
 
 ## <a name="install-the-mim-pam-requestor-cmdlets"></a>De aanvrager-cmdlets van MIM PAM installeren
 
@@ -186,5 +186,5 @@ Start nadat de installatie is voltooid CORPWKSTN opnieuw op om de registratie va
 In de volgende stap gaat u de vertrouwensrelatie tussen het PRIV- en CORP forest instellen.
 
 > [!div class="step-by-step"]
-> [« Stap 3](step-3-prepare-pam-server.md)
-> [Stap 5 »](step-5-establish-trust-between-priv-corp-forests.md)
+> [«Stap 3](step-3-prepare-pam-server.md)
+> [stap 5»](step-5-establish-trust-between-priv-corp-forests.md)

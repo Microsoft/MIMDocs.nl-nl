@@ -11,10 +11,10 @@ ms.prod: microsoft-identity-manager
 ms.assetid: 7320f014-8b60-4866-92de-cfbd3e6edc48
 ms.suite: ems
 ms.openlocfilehash: 6f4f2aea998fc5682d1fb21d77e4d4f1c582d770
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79042148"
 ---
 # <a name="hybrid-identity-management-audit-reporting-in-azure-active-directory"></a>Controle rapportage voor Hybrid Identity Management in Azure Active Directory
@@ -29,7 +29,7 @@ Hybrid audit Reporting helpt IT-professionals bij het oplossen van veelvoorkomen
 
 * De **rapportage systeem infrastructuur kosten te verlagen**. Met hybride rapportage in de cloud kunt u de kosten verwijderen die zijn gekoppeld aan uw on-premises, Data Warehouse-infra structuur.
 
-## <a name="how-does-it-work"></a>Hoe werkt dit?
+## <a name="how-does-it-work"></a>Hoe werkt het?
 
 Als u de on-premises gegevens wilt verzamelen, moet u eerst een rapportageagent installeren op uw Identity Manager 2016-server. [Down load de Microsoft Identity Manager Hybrid Reporting agent](https://www.microsoft.com/download/details.aspx?id=55112).
 
@@ -43,7 +43,7 @@ Hybride rapportage ondergaat het volgende proces:
 ## <a name="next-steps"></a>Volgende stappen
 Meer informatie over:
 - [Werken met hybride rapportage van Identity Manager](working-with-identity-manager-hybrid-reporting.md)
-- [Rapporten van activiteiten controleren in de Azure Active Directory Portal](https://docs.microsoft.com/azure/active-directory/active-directory-reporting-activity-audit-logs)
+- [Controleactiviteitenrapporten in Azure Active Directory Portal](https://docs.microsoft.com/azure/active-directory/active-directory-reporting-activity-audit-logs)
 - [Bewaar beleid voor rapporten](https://docs.microsoft.com/azure/active-directory/active-directory-reporting-retention)
 - [Microsoft Azure-logboek integratie (SIEM)](https://docs.microsoft.com/azure/security/security-azure-log-integration-overview)
 - [Rapportage-API Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-reporting-api-getting-started)

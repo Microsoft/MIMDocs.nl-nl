@@ -10,10 +10,10 @@ ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
 ms.openlocfilehash: c4dfb4184292ba1b5da8c4e3e176d53e6a885ed8
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79042267"
 ---
 # <a name="bhold-core-installation"></a>BHOLD Core-installatie
@@ -30,10 +30,10 @@ De BHOLD-kern module vormt de basis van micro soft BHOLD Suite. U moet de BHOLD-
 
 |          |        |          |
 |----------|--------|----------|
-|**Component** |**Maal** | **Aanbevelingen** |
+|**Component** |**Minimum** | **Aanbevelingen** |
 |Processor | 64-bits processor | Multicore 64-bits processor |
 | Geheugen |3 GB | 6 GB of meer |
-|Volgende| 30 GB beschikbaar |Is afhankelijk van de implementatie grootte |
+|Storage| 30 GB beschikbaar |Is afhankelijk van de implementatie grootte |
 |Netwerk adapter| 100 Mbps-verbinding met SQL en Forefront Identity Manager (FIM)-server | 1 Gbps-verbinding met SQL-en FIM-server|
 
 Deze aanbevelingen zijn gebaseerd op typische implementaties en nemen geen rekening met andere toepassingen die op de server worden uitgevoerd. Mogelijk moet u op basis van uw specifieke omgeving hogere onderdelen gebruiken.
@@ -70,7 +70,7 @@ De BHOLD-kern module moet kunnen worden aangemeld bij het domein met een gebruik
 
 3.  Typ in het dialoog venster **Nieuw object – groep** , in **groeps naam**, de naam van de groep (BHOLD standaard: BHOLDApplicationGroup) en klik vervolgens op **OK**.
 
-4.  Klik met de rechtermuisknop op **Gebruikers**, wijs **Nieuw** aan en klik op **Gebruiker**.
+4.  Klik met de rechter muisknop op **gebruikers**, wijs **Nieuw**aan en klik vervolgens op **gebruiker**.
 
 5.  Typ bij **volledige naam**een naam die u helpt bij het identificeren van het account, bijvoorbeeld BHOLD Core-Service account.
 
@@ -96,8 +96,8 @@ Voordat u begint met het installeren van de BHOLD-kern module, moet u voor berei
 
 | **Item**                                    | **Beschrijving**                                                                                                                                                                                                                                                                                             | **Waarde**                                                                                                                                                          |
 |---------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Beveiligings provider op domein/computer gebruiken** | Hiermee geeft u op dat Active Directory Domain Services beveiliging de toegang tot BHOLD core beheert.                                                                                                                                                                                                  | Schakel het selectie vakje in. **Belang rijk:** Als dit selectie vakje niet is ingeschakeld, mislukt de installatie.                                                                 |
-| **Domein**                                  | Hiermee geeft u het domein op dat de BHOLD-server, het service account en de toepassings groep bevat. **Belang rijk:** Geef de domein naam op met behulp van de NetBIOS (korte) naam, niet de Fully Qualified Domain Name (FQDN). Als de FQDN van het domein bijvoorbeeld fabrikam.com is, geeft u de domein naam op als CONTOSO. | Schrijf hier de domein naam:                                                                                                                                        |
+| **Beveiligings provider op domein/computer gebruiken** | Hiermee geeft u op dat Active Directory Domain Services beveiliging de toegang tot BHOLD core beheert.                                                                                                                                                                                                  | Schakel het selectievakje in. **Belang rijk:** Als dit selectie vakje niet is ingeschakeld, mislukt de installatie.                                                                 |
+| **Domain**                                  | Hiermee geeft u het domein op dat de BHOLD-server, het service account en de toepassings groep bevat. **Belang rijk:** Geef de domein naam op met behulp van de NetBIOS (korte) naam, niet de Fully Qualified Domain Name (FQDN). Als de FQDN van het domein bijvoorbeeld fabrikam.com is, geeft u de domein naam op als CONTOSO. | Schrijf hier de domein naam:                                                                                                                                        |
 | **Toepassings groep**                       | Hiermee geeft u de naam van de beveiligings groep die u eerder hebt gemaakt in de [vereiste gebruiker en groep](https://technet.microsoft.com/library/jj134095(v=ws.10).aspx#rug).                                                                                                                                  | Schrijf hier de groeps naam:                                                                                                                                         |
 | **Service gebruiker**                            | Hiermee geeft u de aanmeldings naam op van het Service gebruikers account dat u eerder hebt gemaakt in de [vereiste gebruiker en groep](https://technet.microsoft.com/library/jj134095(v=ws.10).aspx#rug).                                                                                                                      | Schrijf hier de naam van het gebruikers account:                                                                                                                                  |
 | **Wachtwoord**                                | Hiermee geeft u het wacht woord van het gebruikers account van de BHOLD-basis service.                                                                                                                                                                                                                                              | Schrijf hier het wacht woord: **belang rijk:** zorg ervoor dat u dit wacht woord op een verborgen, veilige locatie blijft.                                                                |
@@ -109,7 +109,7 @@ Voordat u begint met het installeren van de BHOLD-kern module, moet u voor berei
 |------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Geïntegreerde beveiliging gebruiken**                    | Hiermee geeft u op dat Windows-verificatie wordt gebruikt voor toegang tot de data base.                                                                                                                                                                                                     | Schakel het selectie vakje in als Windows-verificatie wordt gebruikt om verbinding te maken met de SQL Server. Schakel het selectie vakje uit als SQL Server verificatie wordt gebruikt. De data base moet zijn gemaakt voordat u de BHOLD-installatie uitvoert als SQL Server verificatie wordt gebruikt. **Opmerking:** Als Windows-verificatie wordt gebruikt, moet u zijn aangemeld met een account dat beschikt over de serverrol sysadmin op de database server. |
 | **Database gebruiker** en **database wachtwoord** | Hiermee geeft u de gebruikers naam en het wacht woord van een gebruiker met de serverrol sysadmin op de database server. Deze waarden worden alleen opgegeven als SQL Server verificatie wordt gebruikt.                                                                                               | Schrijf hier de SQL Server gebruikers naam: Schrijf hier het SQL Server gebruikers wachtwoord: **Opmerking:** zorg ervoor dat u dit wacht woord op een verborgen, veilige locatie bewaart.                                                                                                                                                                                                                                                  |
-| **Database server** -en **database naam**   | Hiermee geeft u de NetBIOS-naam van de database server en de naam van de data base (standaard: B1) op die door de BHOLD Core-installatie wordt gemaakt. Als u geen gebruik maakt van het standaard exemplaar van de database server, geeft u het Database Server exemplaar op in het formulier *\<server\>* \\ *\<-exemplaar\>* . | Schrijf hier de naam van de server (of de server en het exemplaar): Schrijf hier de database naam:                                                                                                                                                                                                                                                                                                                   |
+| **Database server** -en **database naam**   | Hiermee geeft u de NetBIOS-naam van de database server en de naam van de data base (standaard: B1) op die door de BHOLD Core-installatie wordt gemaakt. Als u geen gebruik maakt van het standaard exemplaar van de database server, geeft u het Database Server exemplaar op in het formulier * \<server\>*\\*\<exemplaar\>*. | Schrijf hier de naam van de server (of de server en het exemplaar): Schrijf hier de database naam:                                                                                                                                                                                                                                                                                                                   |
 | **Beperkingen voor de database gebruiker maken**    | Verouderd.                                                                                                                                                                                                                                                                 | De standaard waarde niet wijzigen                                                                                                                                                                                                                                                                                                                                                                       |
 |                                                |                                                                                                                                                                                                                                                                           |                                                                                                                                                                                                                                                                                                                                                                                                       |
 |                                                |                                                                                                                                                                                                                                                                           |                                                                                                                                                                                                                                                                                                                                                                                                       |
@@ -118,9 +118,9 @@ Voordat u begint met het installeren van de BHOLD-kern module, moet u voor berei
 
 Als u de BHOLD core-module wilt installeren, meldt u zich aan als lid van de groep domein Administrators, downloadt u het volgende bestand en voert u het uit als beheerder op de server waarop u de BHOLD-kern module wilt installeren: 
 
-- BholdCore *\<versie\>* \_release. msi
+- Release. msi van BholdCore\_ * \<-versie\>*
 
-Vervang *\<versie\>* door het versie nummer van de BHOLD core-versie die u installeert.
+Vervang * \<versie\> * door het versie nummer van de BHOLD core-release die u installeert.
 
 Als u het programma bestand als beheerder wilt uitvoeren, klikt u met de rechter muisknop op het bestand en klikt u vervolgens op **als administrator uitvoeren**.
 
@@ -171,17 +171,17 @@ Als de netwerk naam die wordt gebruikt om verbinding te maken met de BHOLD-websi
 > [!IMPORTANT]
 > Als de BHOLD-kern module is geïnstalleerd op dezelfde computer als de FIM-Portal, moet u DNS-bron records (CNAME of A) met verschillende hostnamen maken voor de servers met BHOLD core en de server waarop de FIM-Portal wordt uitgevoerd. Er kan slechts één SPN tot stand worden gebracht voor een bepaald service-type/server-alias paar, waardoor BHOLD core en de FIM-Portal afzonderlijke Spn's vereisen, omdat deze doorgaans onder verschillende accounts worden uitgevoerd. De opdracht setspn meldt een fout melding als er al een SPN is ingesteld onder een ander account.
 
-Lidmaatschap van **Domeinadministrators**, of gelijkwaardig is vereist als u deze procedure wilt uitvoeren.
+Lidmaatschap van **Domeinadministrators**, of gelijkwaardig, is de minimale vereiste om deze procedure te voltooien.
 
 #### <a name="to-establish-the-spn-of-the-bhold-website"></a>De SPN van de BHOLD-website maken
 
 1.  Klik op de Active Directory Domain Services domein controller op **Start**, klik op **alle Program ma's**, klik op **accessoires**, klik met de rechter muisknop op **opdracht prompt**en klik vervolgens op **als administrator uitvoeren**.
 
-2.  Typ de volgende opdracht bij de opdracht prompt en druk vervolgens op ENTER: Setspn-S HTTP/ *\<networkalias\> \<domein\>* \\ *\<accountnaam\>* waar:
+2.  Typ bij de opdracht prompt de volgende opdracht en druk vervolgens op ENTER: Setspn-S http/ * \<networkalias\> \<\> Domain* \\ * \<\> accountnaam* waarbij:
 
-    -   *\<networkalias\>* is het adres dat clients gebruiken om contact op te nemen met de BHOLD-website
+    -   networkalias is het adres dat clients gebruiken om contact op te nemen met de BHOLD-website * \<\> *
 
-    -   *\<domein\>* \\ *\<AccountName\>* de domein-en gebruikers naam van het BHOLD-kern service account dat u hebt gemaakt toen u BHOLD core installeerde.
+    -   *\<het\>domein*\\*accountnaam\> is de domein-en gebruikers naam van het BHOLD Core-Service account dat u hebt gemaakt tijdens de installatie van BHOLD\<* core.
 
 3.  Herhaal de vorige stap voor alle andere namen die clients gebruiken om contact op te nemen met de BHOLD-website, bijvoorbeeld CNAME-aliassen, namen met een Fully Qualified Domain Name of namen met een NetBIOS (Short)-domein naam.
 
@@ -189,14 +189,14 @@ Lidmaatschap van **Domeinadministrators**, of gelijkwaardig is vereist als u dez
 
 Als u wilt controleren of de installatie van de BHOLD-kern module is voltooid, opent u de BHOLD-kern Portal en bekijkt u de systeem kenmerken. Daarnaast kunt u, om ervoor te zorgen dat de BHOLD-kern module goed werkt in uw omgeving, de volgende BHOLD-systeem kenmerken wijzigen, indien van toepassing:
 
-| **Geschreven**                | **Beschrijving**                                                                                                                                                                                                                                                                                                      |
+| **Kenmerk**                | **Beschrijving**                                                                                                                                                                                                                                                                                                      |
 |------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Geen geschiedenis**                | Ingesteld op Y als de BHOLD-website wordt uitgevoerd op een geclusterde webservice om ervoor te zorgen dat recent weer gegeven items goed werken. Ingesteld op N als de BHOLD-website wordt uitgevoerd op een zelfstandige IIS-server.                                                                                                                      |
 | **MoveorgunitToSameorgtype** | Ingesteld op Y om ervoor te zorgen dat organisatie-eenheden (orgunits) alleen kunnen worden verplaatst naar orgunits met hetzelfde organisatie type als de bovenliggende orgunit. Zo voor komt u dat een project orgunit wordt verplaatst naar een afdeling orgunit. Ingesteld op N zodat een orgunit in een orgunit van een ander type kan worden geplaatst. |
 | **Dagen tussen ABA-uitvoering**     | Stel in op een geheel getal van twee cijfers om het interval (in dagen) op te geven tussen twee op kenmerken gebaseerde autorisatie (ABA) wordt uitgevoerd. Als u bijvoorbeeld wilt opgeven dat ABA-uitvoeringen worden gescheiden door twee dagen, typt u 02.                                                                                                                     |
 | **Begin uur van ABA-uitvoering**    | Stel in op een geheel getal van twee cijfers om het uur van de dag op te geven wanneer een op kenmerken gebaseerde autorisatie wordt uitgevoerd. Als u bijvoorbeeld wilt opgeven dat de ABA wordt uitgevoerd om 11:00 uur (23:00), Type 23.                                                                                                             |
 | **Systeem kardinaliteit**       | Stel in op N als u geen systeem kardinaliteit wilt controleren in BHOLD. De standaard waarde is Y.                                                                                                                                                                                                                             |
-| **Userenv**                  | Stel in op N als u niet wilt dat wijzigingen worden vastgelegd. De standaard waarde is Y.                                                                                                                                                                                                                                            |
+| **Logboekregistratie**                  | Stel in op N als u niet wilt dat wijzigingen worden vastgelegd. De standaard waarde is Y.                                                                                                                                                                                                                                            |
 | **SystemQueue-verwerking**   | Stel in op N als u niet wilt dat de systeem wachtrij wordt verwerkt. Wijzig deze waarde alleen als dit wordt gedaan door de product ondersteuning.                                                                                                                                                                                           |
 
 U moet zijn aangemeld als lid van de groep domein Administrators om deze procedure te kunnen uitvoeren.
@@ -205,7 +205,7 @@ U moet zijn aangemeld als lid van de groep domein Administrators om deze procedu
 
 1.  Klik op **Start**, klik op **alle Program ma's**en klik vervolgens op **Internet Explorer**.
 
-2.  Typ in het vak adres, waarbij *\<server\>* de naam is van de BHOLD-website server en *\<poort\>* het poort nummer is dat is gebonden aan de website.
+2.  In het vak adres typt u, waarbij * \<server\> * de naam is van de BHOLD-website server * \<en\> de poort* het poort nummer is dat is gebonden aan de website.
 
 3.  Klik op **Start**, klik op **waarden**en klik vervolgens op **wijzigen**.
 

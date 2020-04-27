@@ -9,16 +9,16 @@ ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 5325fce2-ae35-45b0-9c1a-ad8b592fcd07
 ms.openlocfilehash: 05e05966bf90700885e67ba16f10ab0d7864cf10
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79043610"
 ---
 # <a name="step-7--elevate-a-users-access"></a>Stap 7 – De toegangsrechten van een gebruiker uitbreiden
 
 > [!div class="step-by-step"]
-> [« Stap 6 ](step-6-transition-group-to-pam.md)
+> [«Stap 6](step-6-transition-group-to-pam.md)
 
 
 In deze stap wordt gedemonstreerd dat een gebruiker via MIM toegang tot een functie kan aanvragen.
@@ -40,7 +40,7 @@ Zonder verhoogde bevoegdheden heeft Jen geen toegang tot de bevoorrechte resourc
 
 1. Meld u op PRIVWKSTN aan als PRIV\priv.jen.
 2. Klik op **Start**, **Voer uit**en voer **Power shell. exe**in.
-3. Typ de volgende opdracht:
+3. Typ de volgende opdracht.
 
     ```cmd
     runas /user:Priv.Jen@priv.contoso.local powershell
@@ -91,8 +91,8 @@ U kunt de activering uitvoeren door bevoorrechte toegang aan te vragen via de PA
 
 3. Typ het wachtwoord voor het account PRIV.Jen als u hierom wordt gevraagd. Er wordt een nieuw browservenster weergegeven.
 4. Ga naar http://pamsrv.priv.contoso.local:8090 en controleer of een webpagina van de voorbeeld Portal zichtbaar is.
-5. Selecteer in Internet Explorer **Extra** > **Internetopties** en klik op het tabblad **Beveiliging**.
-6. Klik op **Lokale intranetzone** > **Sites** > **Geavanceerd** en voeg vervolgens de website toe aan de zone.
+5. Selecteer in Internet Explorer **extra** > **Internet opties** en klik op het tabblad **beveiliging** .
+6. Klik op de **lokale intranet zone** > **sites** > **Geavanceerd** en voeg vervolgens de website toe aan de zone.
 7. Sluit de dialoogvensters van **Internetopties**.
 8. Klik op het linkertabblad op **Activeren**. Selecteer de **PAM-rol** en klik vervolgens op **Activeren**.
 
@@ -104,4 +104,4 @@ U kunt de activering uitvoeren door bevoorrechte toegang aan te vragen via de PA
 Nadat u de stappen in dit overzicht hebt voltooid, hebt u een scenario voor Privileged Access Management gedemonstreerd waarin gebruikersbevoegdheden tijdelijk worden uitgebreid zodat de gebruiker toegang heeft tot beveiligde resources met een afzonderlijk bevoorrecht account. Zodra de sessie voor uitbreiding van de toegangsrechten is verlopen, is de beveiligde resource niet meer toegankelijk met het bevoorrechte account. De beslissing over welke beveiligingsgroepen de bevoorrechte rollen vertegenwoordigen, wordt gecoördineerd door de PAM-beheerder. Nadat de toegangsrechten zijn gemigreerd naar het Privileged Access Management-systeem, kan er geen toegang meer worden verkregen met het oorspronkelijke gebruikersaccount, maar moeten gebruikers zich aanmelden met een speciaal bevoorrecht account dat alleen op aanvraag beschikbaar wordt gesteld. Als gevolg hiervan zijn groepslidmaatschappen voor maximaal bevoorrechte accounts slechts tijdelijk van kracht.
 
 > [!div class="step-by-step"]
-> [« Stap 6 ](step-6-transition-group-to-pam.md)
+> [«Stap 6](step-6-transition-group-to-pam.md)

@@ -10,10 +10,10 @@ ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
 ms.openlocfilehash: fb3cf6e5b00c1bd0c01d86aff474dc2ff28c2815
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79042250"
 ---
 # <a name="microsoft-bhold-suite-sp1-60-installation-guide"></a>Installatie handleiding voor micro soft BHOLD Suite SP1 (6,0)
@@ -93,13 +93,13 @@ Zie [Top 10 best practices](https://www.microsoft.com/technet/prodtechnol/sql/be
 ### <a name="trusted-certificates-list-update"></a>Lijst met vertrouwde certificaten bijwerken
 
 Windows kan worden geconfigureerd voor het valideren van certificaat ketens voordat een service wordt gestart. Op dergelijke systemen kan een service niet worden gestart als de uitvoer bare code van de service is ondertekend met een certificaat dat niet voor komt in de lijst met vertrouwde certificaten (TCL) van de server. De micro soft BHOLD Suite SP1-software is code die is ondertekend met een certificaat keten voor ondertekening van programma code die afkomstig is van het certificaat van de micro soft-basis certificerings instantie 2010.
-Windows kan worden geconfigureerd om basis certificaten van micro soft op te halen via een Internet verbinding. Windows Server bevat op een niet-verbonden systeem echter alleen de certificaten die in het hoofd programma zijn opgenomen op het moment dat Windows werd uitgegeven. In versies van Windows Server ouder dan Windows Server 2010, bevatten deze certificaten niet het basis certificaat dat nodig is voor het valideren van de certificaat keten voor BHOLD Suite SP1-code ondertekening. Als u van plan bent een of meer micro soft BHOLD Suite SP1-modules te installeren op een systeem dat mogelijk geen actuele TCL heeft, moet u het root-update pakket downloaden en installeren, of groepsbeleid gebruiken om het root-update pakket te installeren voordat u een BHOLD Suite SP1 installeert programma. Zie [Windows Root Certificate Program-leden](https://support.microsoft.com/kb/931125)(Engelstalig) voor meer informatie.
+Windows kan worden geconfigureerd om basis certificaten van micro soft op te halen via een Internet verbinding. Windows Server bevat op een niet-verbonden systeem echter alleen de certificaten die in het hoofd programma zijn opgenomen op het moment dat Windows werd uitgegeven. In versies van Windows Server ouder dan Windows Server 2010, bevatten deze certificaten niet het basis certificaat dat nodig is voor het valideren van de certificaat keten voor BHOLD Suite SP1-code ondertekening. Als u van plan bent een of meer micro soft BHOLD Suite SP1-modules te installeren op een systeem dat mogelijk geen up-to-date TCL heeft, moet u het root-update pakket downloaden en installeren, of groepsbeleid gebruiken om het root-update pakket te installeren voordat u een BHOLD Suite SP1-module installeert. Zie [Windows Root Certificate Program-leden](https://support.microsoft.com/kb/931125)(Engelstalig) voor meer informatie.
 
 ### <a name="installing-bhold-suite-sp1-on-windows-server-20122016-required-step"></a>BHOLD Suite SP1 installeren op Windows Server 2012/2016-stap vereist 
 
 ![IIS-installatie BHOLD](media/bhold-installation-guide/iis-install-bhold.png)
 
-Als u BHOLD Suite SP1 installeert op Windows Server 2012 of 2016, zijn de webpagina's van BHOLD niet beschikbaar totdat u het bestand applicationHost. config wijzigt dat zich bevindt in ```C:\Windows\System32\inetsrv\config```. Voeg in de sectie ```<globalModules>``` ```preCondition="bitness64``` toe aan de vermelding die begint ```<add name="SPNativeRequestModule"```, zodat deze als volgt wordt gelezen:
+Als u BHOLD Suite SP1 installeert op Windows Server 2012 of 2016, zijn de webpagina's van BHOLD niet beschikbaar totdat u het bestand applicationHost. config hebt gewijzigd in ```C:\Windows\System32\inetsrv\config```. Voeg in ```<globalModules>``` de sectie toe ```preCondition="bitness64``` aan de vermelding die begint ```<add name="SPNativeRequestModule"``` , zodat deze als volgt wordt gelezen:
 
 ```<add name="SPNativeRequestModule" image="C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\isapi\spnativerequestmodule.dll" preCondition="bitness64"/>```
 

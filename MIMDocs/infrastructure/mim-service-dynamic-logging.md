@@ -8,10 +8,10 @@ ms.date: 10/29/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.openlocfilehash: 69ebe774ddea0176fb26ef74b8f4352e4bb5d039
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79042165"
 ---
 # <a name="mim-sp1-4414360--service-dynamic-logging"></a>MIM SP1 (4.4.1436.0)-service dynamische logboekregistratie
@@ -54,10 +54,10 @@ Als u de tracering wilt bekijken, kunt u het [hulp programma Service Trace Viewe
 In Build 4.5. x. x hebben we de functie logboek registratie voor het opgeven van het standaard logboek registratie niveau **' waarschuwing '** aangepast. De service schrijft berichten in twee bestanden ("00" en "01" indexen worden toegevoegd vóór extensie). De bestanden bevinden zich in de map C:\Program Files\Microsoft Forefront Identity Manager\2010\Service. Wanneer het bestand de maximale grootte overschrijdt, wordt de service in een ander bestand geschreven. Als er een ander bestand bestaat, wordt dit overschreven. De standaard maximale grootte van het bestand is 1 GB. Als u de standaard maximale grootte wilt wijzigen, moet u de para meter **' maxOutputFileSizeKB '** toevoegen met de waarde Max file size in kB in de listener (Zie het onderstaande voor beeld) en de MIM-service opnieuw starten. Wanneer de service wordt gestart, voegt het Logboeken toe aan het meest recente bestand (als de limiet van de ruimte wordt overschreden, wordt het oudste bestand overschreven). 
 
 > [!NOTE] 
-> De grootte van het bestand kan groter zijn dan de maximale grootte van een bericht, omdat de bestands grootte van de service wordt gecontroleerd voordat het bericht wordt geschreven. de logboek grootte kan standaard ongeveer 6 GB (drie > listeners met twee bestanden zijn voor een grootte van 1 GB).
+> De grootte van het bestand kan groter zijn dan de maximale grootte van een bericht, omdat de bestands grootte van de service wordt gecontroleerd voordat het bericht wordt geschreven. de logboek grootte kan standaard ongeveer 6 GB (drie >listeners met twee bestanden zijn voor een grootte van 1 GB).
 
 > [!NOTE] 
-> Het service account moet gemachtigd zijn om te schrijven in > "C:\Program Files\Microsoft Forefront Identity Manager\2010\Service" > map. Als het service account deze rechten niet heeft, worden de > bestanden niet gemaakt.
+> Het service account moet gemachtigd zijn om te schrijven in > "C:\Program Files\Microsoft Forefront Identity Manager\2010\Service" >map. Als het service account deze rechten niet heeft, worden de >bestanden niet gemaakt.
 
 Voor beeld hoe u de maximale bestands grootte instelt op 200 MB (200 * 1024 KB) voor svclog-bestanden en 100 MB * (100 * 1024 KB) voor txt-bestanden
 
