@@ -9,12 +9,12 @@ manager: daveba
 ms.date: 09/04/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.openlocfilehash: b157b2a8716d20ce3b472d5655d393e64f2baa6b
-ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
+ms.openlocfilehash: 284345d79cda8d60d055a642d047e28e63ea20cb
+ms.sourcegitcommit: 80507a128d2bc28ff3f1b96377c61fa97a4e7529
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79044358"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83279943"
 ---
 # <a name="use-a-custom-multi-factor-authentication-provider-via-an-api-during-pam-role-activation-or-in-sspr"></a>Een aangepaste Multi-Factor Authentication provider gebruiken via een API tijdens de activering van de PAM-rol of in SSPR
 
@@ -39,19 +39,19 @@ Als u een aangepaste provider-API voor Multi-Factor Authentication met MIM wilt 
 
 ### <a name="step-1-ensure-mim-service-is-at-version-452020-or-later"></a>Stap 1: Zorg ervoor dat de MIM-service de versie 4.5.202.0 of hoger heeft
 
-Down load en installeer de MIM-hotfix [4.5.202.0](https://www.microsoft.com/download/details.aspx?id=57278) of een latere versie.
+Down load en installeer de MIM-hotfix [4.5.202.0](https://support.microsoft.com/help/4346632/hotfix-rollup-package-build-4-5-202-0-is-available-for-microsoft) of een latere versie.
 
 ### <a name="step-2-create-a-dll-which-implements-the-iphoneserviceprovider-interface"></a>Stap 2: Maak een DLL-bestand dat de IPhoneServiceProvider-interface implementeert
 
 Het DLL-bestand moet een klasse bevatten die drie methoden implementeert:
 
-- `InitiateCall`: De MIM-service roept deze methode aan. Met de service worden het telefoon nummer en de aanvraag-ID als para meters door gegeven.  De methode `PhoneCallStatus` moet een waarde van `Pending`of `Success` `Failed`hebben als resultaat.
-- `GetCallStatus`: Als een eerdere aanroep van `initiateCall` wordt `Pending`geretourneerd, roept de MIM-service deze methode aan. Deze methode retourneert `PhoneCallStatus` ook de waarde `Pending` `Success` of `Failed`.
-- `GetFailureMessage`: Als een eerdere aanroep van `InitiateCall` of `GetCallStatus` is geretourneerd `Failed`, roept de MIM-service deze methode aan. Met deze methode wordt een diagnostisch bericht geretourneerd.
+- `InitiateCall`: De MIM-service roept deze methode aan. Met de service worden het telefoon nummer en de aanvraag-ID als para meters door gegeven.  De methode moet een `PhoneCallStatus` waarde van of hebben als resultaat `Pending` `Success` `Failed` .
+- `GetCallStatus`: Als een eerdere aanroep van wordt `initiateCall` geretourneerd `Pending` , roept de MIM-service deze methode aan. Deze methode retourneert ook de `PhoneCallStatus` waarde `Pending` `Success` of `Failed` .
+- `GetFailureMessage`: Als een eerdere aanroep van `InitiateCall` of is `GetCallStatus` geretourneerd `Failed` , roept de MIM-service deze methode aan. Met deze methode wordt een diagnostisch bericht geretourneerd.
 
-De implementaties van deze methoden moeten thread-safe zijn en daarnaast moet de implementatie van `GetCallStatus` de `GetFailureMessage` en niet aannemen dat ze worden aangeroepen door dezelfde thread als een eerdere aanroep naar `InitiateCall`.
+De implementaties van deze methoden moeten thread-safe zijn en daarnaast moet de implementatie van de `GetCallStatus` en `GetFailureMessage` niet aannemen dat ze worden aangeroepen door dezelfde thread als een eerdere aanroep naar `InitiateCall` .
 
-Sla het DLL-bestand `C:\Program Files\Microsoft Forefront Identity Manager\2010\Service\` op in de map.
+Sla het DLL-bestand op in de `C:\Program Files\Microsoft Forefront Identity Manager\2010\Service\` map.
 
 Voorbeeld code, die kan worden gecompileerd met Visual Studio 2010 of hoger.
 

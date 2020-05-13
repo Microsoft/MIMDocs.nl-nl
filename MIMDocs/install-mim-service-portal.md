@@ -11,18 +11,18 @@ ms.prod: microsoft-identity-manager
 ms.assetid: b0b39631-66df-4c5f-80c9-a1774346f816
 ms.reviewer: markwahl-msft
 ms.suite: ems
-ms.openlocfilehash: e381bb418ce8215dafc369bf33782483a6e4de3e
-ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
+ms.openlocfilehash: a85a8eeaf999c193a3e2bbd3f2cdf75cef65e574
+ms.sourcegitcommit: 80507a128d2bc28ff3f1b96377c61fa97a4e7529
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79042437"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83279994"
 ---
 # <a name="install-mim-2016-mim-service-and-portal"></a>MIM 2016 installeren: de MIM-service en -portal
 
 > [!div class="step-by-step"]
-> [«MIM-synchronisatie service](install-mim-sync.md)
-> [data bases synchroniseren»](install-mim-sync-ad-service.md)
+> [«MIM-synchronisatie service](install-mim-sync.md) 
+>  [Data bases synchroniseren»](install-mim-sync-ad-service.md)
  
 > [!NOTE]
 > In deze stapsgewijze instructies wordt gebruikgemaakt van voorbeeldnamen en -waarden van een bedrijf met de naam Contoso. Vervang deze door uw eigen namen en waarden. Bijvoorbeeld:
@@ -99,7 +99,7 @@ Als u in de laatste stap geen MIM-installatiepakket hebt ingesteld, gaat u terug
 
 ## <a name="configure-mim-password-reset-portal"></a>Het MIM-portal voor het opnieuw instellen van het wachtwoord configureren
 
-1. Stel de service accountnaam voor SSPR-registratie in op *Contoso\MIMSSPR* en het <em>Pass@word1</em>bijbehorende wacht woord in.
+1. Stel de service accountnaam voor SSPR-registratie in op *Contoso\MIMSSPR* en het bijbehorende wacht woord in <em>Pass@word1</em> .
 
 2. Geef *PasswordReset.contoso.com* op als de HOSTNAAM voor MIM-portal voor wachtwoord herstel en stel de poort in op **80**. Schakel de optie **Poort in de firewall openen** in.
 
@@ -115,7 +115,7 @@ Wanneer alle definities voorafgaand aan de installatie gereed zijn, klikt u op *
 
 Nadat de installatie is voltooid, controleert u of de MIM-portal actief is.
 
-1. Start Internet Explorer en maak verbinding met de MIM- *http://mim.contoso.com/identitymanagement*Portal op. Houd er rekening mee dat er een korte vertraging kan optreden op het eerste bezoek aan deze pagina.
+1. Start Internet Explorer en maak verbinding met de MIM-Portal op `http://mim.contoso.com/identitymanagement` . Houd er rekening mee dat er een korte vertraging kan optreden op het eerste bezoek aan deze pagina.
     - Als dat nodig is, kunt u als *contoso\miminstall* verifiëren bij Internet Explorer.
 
 2. Ga in Internet Explorer naar **Internetopties**, open het tabblad **Beveiliging** en voeg de site toe aan de zone **Lokaal intranet** als de site hier nog niet wordt weergegeven.  Sluit het dialoogvenster **Internetopties**.
@@ -153,5 +153,5 @@ Nadat de installatie is voltooid, controleert u of de MIM-portal actief is.
 > Optioneel: op dit moment kunt u MIM-invoegtoepassingen en -uitbreidingen installeren.
  
 > [!div class="step-by-step"]  
-> [«MIM-synchronisatie service](install-mim-sync.md)
-> [data bases synchroniseren»](install-mim-sync-ad-service.md)
+> [«MIM-synchronisatie service](install-mim-sync.md) 
+>  [Data bases synchroniseren»](install-mim-sync-ad-service.md)

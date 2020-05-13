@@ -12,18 +12,18 @@ ms.assetid: 68ec2145-6faa-485e-b79f-2b0c4ce9eff7
 ROBOTS: noindex,nofollow
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 7a0a0437e767f793150d875bcaf31213a7fdf627
-ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
+ms.openlocfilehash: 3098816d07603384a28db47c0bc60ac92a340e8f
+ms.sourcegitcommit: 80507a128d2bc28ff3f1b96377c61fa97a4e7529
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79043661"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83279977"
 ---
 # <a name="step-3--prepare-a-pam-server"></a>Stap 3 – Een PAM-server voorbereiden
 
 > [!div class="step-by-step"]
-> [«Stap 2](step-2-prepare-priv-domain-controller.md)
-> [stap 4»](step-4-install-mim-components-on-pam-server.md)
+> [«Stap 2](step-2-prepare-priv-domain-controller.md) 
+>  [Stap 4»](step-4-install-mim-components-on-pam-server.md)
 
 ## <a name="install-windows-server-2012-r2"></a>Windows Server 2012 R2 installeren
 
@@ -67,7 +67,7 @@ Voeg de functies van de webserver (IIS) en de toepassingsserver, de onderdelen v
 Configureer het beveiligingsbeleid van de server zodanig dat de zojuist gemaakte accounts als services kunnen worden uitgevoerd.
 
 1.  Start het programma **lokaal beveiligings beleid** .   
-2.  Navigeer naar **lokaal beleid** > **toewijzing van gebruikers rechten**.  
+2.  Navigeer naar **lokaal beleid**  >  **toewijzing van gebruikers rechten**.  
 3.  Klik in het detailvenster met de rechtermuisknop op **Aanmelden als service** en selecteer **Eigenschappen**.  
 4.  Klik op **Gebruiker of groep toevoegen** en voer bij Gebruiker en groepsnamen *priv\mimmonitor; priv\MIMService; priv\SharePoint; priv\mimcomponent; priv\SqlServer* in. Klik op **Namen controleren** en vervolgens op **OK**.  
 
@@ -186,7 +186,7 @@ Vervolgens moet u een SharePoint-siteverzameling maken die is gekoppeld aan deze
 
     Controleer of de variabele **CompatibilityLevel** is ingesteld op *14*. Als de waarde *15* wordt geretourneerd, is de siteverzameling niet gemaakt voor de 2010-ervaringsversie en moet u de siteverzameling verwijderen en opnieuw maken.
 
-2.  Voer de volgende PowerShell-opdrachten uit in de **SharePoint 2013-beheershell**. Hiermee worden de weergavestatus op de SharePoint-server en de SharePoint-taak **Statusanalysetaak (Elk uur, Microsoft SharePoint Foundation-timer, Alle servers)** uitgeschakeld.
+2.  Voer de volgende PowerShell-opdrachten uit in de **SharePoint 2013-beheershell**. Hiermee wordt de weergave status van de share Point-server en de taak status analyse van share point-taak **(elk uur, micro soft share point Foundation-timer, alle servers)** uitgeschakeld.
 
     ```PowerShell
     $contentService = [Microsoft.SharePoint.Administration.SPWebService]::ContentService;
@@ -204,7 +204,7 @@ Vervolgens moet u een SharePoint-siteverzameling maken die is gekoppeld aan deze
 ## <a name="set-the-website-as-the-local-intranet"></a>De website instellen als het lokale intranet
 
 1. Start Internet Explorer en open een nieuw tabblad in de webbrowser.
-2. Ga naar http://pamsrv.priv.contoso.local:82/ en meld u aan als PRIV\MIMAdmin.  Er wordt een lege SharePoint-site met de naam MIM-portal weergegeven.  
+2. Ga naar `http://pamsrv.priv.contoso.local:82/` en meld u aan als PRIV\MIMAdmin.  Er wordt een lege SharePoint-site met de naam MIM-portal weergegeven.  
 3. Open in Internet Explorer het gedeelte **Internetopties**, ga naar het tabblad **Beveiliging**, selecteer **Lokaal intranet** en voeg de URL `http://pamsrv.priv.contoso.local:82/` toe.
 
 Als het aanmelden mislukt, moeten de Kerberos-SPN-namen die eerder zijn gemaakt in [stap 2](step-2-prepare-priv-domain-controller.md), mogelijk worden bijgewerkt.
@@ -216,5 +216,5 @@ Gebruik **Services** (in Systeembeheer) om de **SharePoint-beheerservice** te st
 In step 4 begint u met het installeren van de MIM-onderdelen op de PAM-server.
 
 > [!div class="step-by-step"]
-> [«Stap 2](step-2-prepare-priv-domain-controller.md)
-> [stap 4»](step-4-install-mim-components-on-pam-server.md)
+> [«Stap 2](step-2-prepare-priv-domain-controller.md) 
+>  [Stap 4»](step-4-install-mim-components-on-pam-server.md)

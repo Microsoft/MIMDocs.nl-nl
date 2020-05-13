@@ -11,12 +11,12 @@ ms.prod: microsoft-identity-manager
 ms.assetid: 03e521cd-cbf0-49f8-9797-dbc284c63018
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 67ce70e6bc0603a991731cf1e5fb95751f5016c6
-ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
+ms.openlocfilehash: 2153fdb0559a78bcc82ca6901ee7cb0cabc01f23
+ms.sourcegitcommit: 80507a128d2bc28ff3f1b96377c61fa97a4e7529
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79043967"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83280096"
 ---
 # <a name="high-availability-and-disaster-recovery-considerations-for-the-bastion-environment"></a>Overwegingen voor hoge beschikbaarheid en herstel na noodgevallen voor de bastionomgeving
 
@@ -53,7 +53,7 @@ Voor het tot stand brengen van een vertrouwensrelatie moeten de bestaande forest
 
 ### <a name="user-and-group-migration"></a>Migratie van gebruikers en groepen
 
-Zodra een vertrouwensrelatie tot stand is gebracht, kunnen schaduwgroepen worden gemaakt in de bastionomgeving, evenals gebruikersaccounts voor leden van deze groepen en fiatteurs. Hierdoor kunnen die gebruikers bevoorrechte rollen activeren en opnieuw effectieve groepslidmaatschappen krijgen.
+Zodra een vertrouwensrelatie tot stand is gebracht, kunnen schaduwgroepen worden gemaakt in de bastionomgeving, evenals gebruikersaccounts voor leden van deze groepen en fiatteurs. Op deze manier kunnen gebruikers geprivilegieerde rollen activeren en effectief groepslid maatschappen herstellen.
 
 Voor gebruikers- en groepsmigratie moeten de bestaande forestdomeincontrollers online zijn, evenals de MIM- en AD-onderdelen van de bastionomgeving.   Als de bestaande forestdomeincontrollers niet bereikbaar zijn, kunnen er geen extra gebruikers en groepen worden toegevoegd aan de bastionomgeving, maar bestaande gebruikers en groepen worden niet beïnvloed. Als er een storing optreedt van een van deze onderdelen tijdens de migratie, kan de beheerder het opnieuw proberen zodra de storing is opgelost.
 
@@ -77,7 +77,7 @@ Voor resourcebeheer is vereist dat een domeincontroller voor het resourcedomein 
 
 ### <a name="monitoring-of-users-and-groups-in-the-existing-forest"></a>Bewaking van gebruikers en groepen in het bestaande forest
 
-MIM bevat ook een PAM-controleservice die regelmatig de gebruikers en groepen in de bestaande domeinen controleert en de MIM-database en AD dienovereenkomstig bijwerkt.  Deze service hoeft niet online te zijn voor rolactivering of tijdens resourcebeheer.
+MIM bevat ook een service voor PAM-bewaking, waarmee regel matig de gebruikers en groepen in de bestaande domeinen worden gecontroleerd en de MIM-data base en AD dienovereenkomstig worden bijgewerkt.  Deze service hoeft niet online te zijn voor rolactivering of tijdens resourcebeheer.
 
 Voor bewaking moeten de bestaande forestdomeincontrollers online zijn, evenals de MIM- en AD-onderdelen van de bastionomgeving.  
 
@@ -95,7 +95,7 @@ De computers waarop Active Directory Domain Services worden gehost en de compute
 - gebruikers activering kunnen aanvragen
 - gebruikers Kerberos-tickets kunnen ontvangen voor resources in een bestaand forest
 - de bestaande forestdomeinen kunnen worden gecontroleerd met MIM
-- e-mailberichten van MIM via mailservers in het bestaande forest kunnen worden verzonden.
+- MIM e-mail verzenden via e-mail servers die zich in het bestaande forest bevinden.
 
 ### <a name="minimal-high-availability-topologies"></a>Minimale topologieën voor hoge beschikbaarheid
 
@@ -182,7 +182,7 @@ De procedure voor het toevoegen van een extra domeincontroller kan worden gevond
 
 Zorg er na een storing voor dat er ten minste één domeincontroller beschikbaar is in de bastionomgeving voordat u de andere servers opnieuw start.
 
-Binnen een domein worden met Active Directory de FSMO-rollen (Flexible Single Master Operation) gedistribueerd tussen domeincontrollers, zoals beschreven in [De werking van Operations-masters](https://technet.microsoft.com/library/cc780487.aspx).  Als er een storing optreedt in een domeincontroller, moet u misschien een of meer van de [domeincontrollerrollen](https://technet.microsoft.com/library/cc786438.aspx) overzetten die aan dat domein zijn toegewezen.
+Binnen een domein worden met Active Directory de FSMO-rollen (Flexible Single Master Operation) gedistribueerd tussen domeincontrollers, zoals beschreven in [De werking van Operations-masters](https://technet.microsoft.com/library/cc780487.aspx).  Als een domein controller is mislukt, kan het nodig zijn om een of meer van de [domein controller rollen die aan die domein controller zijn toegewezen, over te dragen.
 
 Nadat u hebt vastgesteld dat een domeincontroller niet meer kan worden ingezet voor productie, moet u controleren of er rollen zijn toegewezen aan die domeincontroller en deze zo nodig opnieuw toewijzen. Zie [View the Current Operations Master Role Holders](https://technet.microsoft.com/library/cc816893.aspx) (De huidige Operations Master-roleigenaren weergeven) en verwante artikelen voor instructies.
 
@@ -214,7 +214,7 @@ De MIM-Service is vereist voor het verwerken van activeringsaanvragen.  Een comp
 
 #### <a name="preparation"></a>Voorbereiding
 U kunt het beste de MIM-service op meerdere servers implementeren die zijn toegevoegd aan het PRIV-domein.
-Raadpleeg de documentatie van Windows Server voor [Hardwarevereisten en opslagmoeilijkheden voor failoverclustering](https://technet.microsoft.com/library/jj612869.aspx) en [Failoverclusters maken in Windows Server 2012](https://blogs.msdn.com/b/clustering/archive/2012/05/01/10299698.aspx) voor hoge beschikbaarheid.
+Raadpleeg de documentatie van Windows Server voor [Hardwarevereisten en opslagmoeilijkheden voor failoverclustering](https://technet.microsoft.com/library/jj612869.aspx) en [Failoverclusters maken in Windows Server 2012](https://techcommunity.microsoft.com/t5/failover-clustering/creating-a-windows-server-2012-failover-cluster/ba-p/371763) voor hoge beschikbaarheid.
 
 Voor de productie-implementatie op meerdere servers kunt u netwerktaakverdeling gebruiken om de verwerkingsbelasting te verdelen.  U moet ook beschikken over één alias (bijvoorbeeld: A of CNAME-records) zodat de gebruiker een algemene naam te zien krijgt.
 

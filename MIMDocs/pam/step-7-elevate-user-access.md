@@ -8,12 +8,12 @@ ms.date: 01/17/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 5325fce2-ae35-45b0-9c1a-ad8b592fcd07
-ms.openlocfilehash: 05e05966bf90700885e67ba16f10ab0d7864cf10
-ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
+ms.openlocfilehash: bdb02eed8e22b373c6cfa5028153cad6aee9a536
+ms.sourcegitcommit: 80507a128d2bc28ff3f1b96377c61fa97a4e7529
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79043610"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83279960"
 ---
 # <a name="step-7--elevate-a-users-access"></a>Stap 7 – De toegangsrechten van een gebruiker uitbreiden
 
@@ -90,9 +90,9 @@ U kunt de activering uitvoeren door bevoorrechte toegang aan te vragen via de PA
     ```
 
 3. Typ het wachtwoord voor het account PRIV.Jen als u hierom wordt gevraagd. Er wordt een nieuw browservenster weergegeven.
-4. Ga naar http://pamsrv.priv.contoso.local:8090 en controleer of een webpagina van de voorbeeld Portal zichtbaar is.
-5. Selecteer in Internet Explorer **extra** > **Internet opties** en klik op het tabblad **beveiliging** .
-6. Klik op de **lokale intranet zone** > **sites** > **Geavanceerd** en voeg vervolgens de website toe aan de zone.
+4. Ga naar `http://pamsrv.priv.contoso.local:8090` en controleer of een webpagina van de voorbeeld Portal zichtbaar is.
+5. Selecteer in Internet Explorer **extra**  >  **Internet opties** en klik op het tabblad **beveiliging** .
+6. Klik op de **lokale intranet zone**  >  **sites**  >  **Geavanceerd** en voeg vervolgens de website toe aan de zone.
 7. Sluit de dialoogvensters van **Internetopties**.
 8. Klik op het linkertabblad op **Activeren**. Selecteer de **PAM-rol** en klik vervolgens op **Activeren**.
 
