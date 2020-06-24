@@ -8,12 +8,12 @@ manager: daveba
 ms.date: 10/18/2019
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.openlocfilehash: b2b63f4490b5f53f5a2d683d5130b3ac1e74dc04
-ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
+ms.openlocfilehash: 01d5427c3672354ff6c2dc4259c1f2e43e380a8c
+ms.sourcegitcommit: c9f5f960fd39745bf5b57161a2fd0238c88d035a
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79044086"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85133546"
 ---
 # <a name="microsoft-identity-manager-2016-news-and-updates"></a>Microsoft Identity Manager 2016 nieuws en updates
 
@@ -32,6 +32,9 @@ Micro soft levert regel matig updates aan MIM, inclusief verbeteringen voor klan
 ## <a name="updates-in-mim-2016-sp2"></a>Updates in MIM 2016 SP2
 
 MIM 2016 Service Pack 2 is een samen telling van bestaande hotfixes sinds MIM 2016 SP1. Ook wordt de optie geïntroduceerd voor het configureren van het gebruik van door groepen beheerde service accounts voor de MIM-synchronisatie service en de MIM-service, waardoor MIM kan worden geïmplementeerd met andere bijgewerkte platform software. Meer informatie vindt u in de [release geschiedenis van de MIM 2016-versie](./reference/version-history.md)
+
+### <a name="support-update-for-azure-active-directory-premium-customers"></a>Ondersteuning voor Azure Active Directory Premium klanten
+Voor Azure AD Premium klanten is de standaard ondersteuning vanaf juni 2020 tot en met na januari 2021 beschikbaar. Zie het [Azure AD-ondersteunings proces](support-update-for-azure-active-directory-premium-customers.md)voor meer informatie.
 
 ### <a name="major-new-and-updated-scenarios"></a>Belang rijke nieuwe en bijgewerkte scenario's
 
