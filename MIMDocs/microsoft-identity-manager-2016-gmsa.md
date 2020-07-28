@@ -7,12 +7,12 @@ manager: daveba
 ms.date: 03/10/2020
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.openlocfilehash: 4586b9998a9526a867ffe7ace9489fe56fff146c
-ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
+ms.openlocfilehash: 5985ded45a53a804728572404fb0db43e988ac1d
+ms.sourcegitcommit: f87be3d09cee6a8880b3a6babf32e0d064fde36b
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79044205"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87176758"
 ---
 # <a name="convert-microsoft-identity-manager-specific-services-to-use-group-managed-service-accounts"></a>Microsoft Identity Manager-specifieke services converteren voor het gebruik van door groepen beheerde service accounts
 
@@ -47,7 +47,7 @@ Dit artikel is een hand leiding voor het configureren van ondersteunde Microsoft
 
     - Hoofd sleutels worden gebruikt door de KDS-service (Key Distribution Services) voor het genereren van wacht woorden en andere informatie op domein controllers.
     - Maak eenmaal per domein een basis sleutel, indien nodig.  
-    - Include `Add-KDSRootKey –EffectiveImmediately`. "– EffectiveImmediately" betekent dat het Maxi maal 10 uur kan duren om de basis sleutel naar alle domein controllers te repliceren. Het kan ongeveer één uur duren voordat er naar twee domein controllers wordt gerepliceerd. 
+    - Include `Add-KDSRootKey –EffectiveImmediately` . "– EffectiveImmediately" betekent dat het Maxi maal 10 uur kan duren om de basis sleutel naar alle domein controllers te repliceren. Het kan ongeveer één uur duren voordat er naar twee domein controllers wordt gerepliceerd. 
     ![De teken reeks "– EffectiveImmediately"](media/7fbdf01a847ea0e330feeaf062e30668.png)
 
 ## <a name="actions-to-run-on-the-active-directory-domain-controller"></a>Acties die moeten worden uitgevoerd op de Active Directory-domein controller
@@ -74,7 +74,7 @@ Dit artikel is een hand leiding voor het configureren van ondersteunde Microsoft
 
 1. Maak een back-up van de versleutelings sleutel in Synchronization Service Manager. Er wordt gevraagd om de installatie van de wijzigings modus. Ga als volgt te werk:
 
-    a. Op de server waarop Synchronization Service Manager is geïnstalleerd, zoekt u naar het hulp programma voor sleutel beheer van de synchronisatie service. De **sleutelset voor exporteren** is standaard al geselecteerd.
+    a. Op de server waarop Synchronization Service Manager is geïnstalleerd, zoekt u naar het hulp programma voor sleutel beheer van de synchronisatie service. De **sleutelset voor exporteren**   is standaard al geselecteerd.
 
     b. Selecteer **Next**. 
     
@@ -96,8 +96,8 @@ Dit artikel is een hand leiding voor het configureren van ondersteunde Microsoft
 
 1. Nadat de patch is geïnstalleerd, stopt u de FIM-synchronisatie service door het volgende te doen:
 
-   a. Selecteer in het configuratie scherm de optie **Program ma's en onderdelen** > **Microsoft Identity Manager**.  
-   b. Selecteer op de pagina **synchronisatie service** de optie **wijzigen** > **volgende**.  
+   a. Selecteer in het configuratie scherm de optie **Program ma's en onderdelen**  >  **Microsoft Identity Manager**.  
+   b. Selecteer op de pagina **synchronisatie service** de optie **wijzigen**  >  **volgende**.  
    c. Selecteer **configureren**in het venster **onderhouds opties** .
 
    ![Het venster onderhouds opties](media/dc98c011bec13a33b229a0e792b78404.png)
@@ -106,7 +106,7 @@ Dit artikel is een hand leiding voor het configureren van ondersteunde Microsoft
 
    ![Het venster Microsoft Identity Manager synchronisatie service configureren](media/38df9369bf13e1c3066a49ed20e09041.png)
 
-   e. Selecteer **volgende** > **volgende** > **installatie**.  
+   e. Selecteer **volgende**  >  **volgende**  >  **installatie**.  
    f. Herstel de sleutelset uit het *miiskeys. bin* -bestand dat u eerder hebt opgeslagen.
 
    ![Optie om de sleutelset te herstellen](media/44cd474323584feb6d8b48b80cfceb9b.png)
@@ -141,7 +141,7 @@ Dit artikel is een hand leiding voor het configureren van ondersteunde Microsoft
     ![Het venster gebruikers en computers Active Directory](media/0201f0281325c80eb70f91cbf0ac4d5b.jpg)
 
     > [!NOTE]  
-    > Een bekend probleem in Windows Server 2012 R2 is dat services die gebruikmaken van een beheerd account, vastlopen nadat de server opnieuw is opgestart, omdat micro soft Key Distribution-service niet is gestart nadat Windows opnieuw is opgestart. De tijdelijke oplossing voor dit probleem is om de volgende opdracht uit te voeren: 
+    > Een bekend probleem in Windows Server 2012 R2 is dat services die gebruikmaken van een beheerd account niet meer reageren nadat de server opnieuw is opgestart, omdat micro soft Key Distribution-service niet is gestart nadat Windows opnieuw is opgestart. De tijdelijke oplossing voor dit probleem is om de volgende opdracht uit te voeren: 
     >
     > `sc triggerinfo kdssvc start/networkon`
     >
