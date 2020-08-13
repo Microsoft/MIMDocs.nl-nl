@@ -1,20 +1,20 @@
 ---
 title: De Microsoft Identity Manager-connector voor Microsoft Graph | Microsoft Docs
-author: fimguy
 description: Met Microsoft Identity Manager connector voor Microsoft Graph kunt u beheer van de externe gebruiker AD-account levenscyclus. In dit scenario heeft een organisatie uitgenodigd voor gasten in hun Azure AD-adres lijst en hen hen toegang te geven tot on-premises Windows-geïntegreerde verificatie of op Kerberos gebaseerde toepassingen
 keywords: ''
+author: billmath
 ms.author: billmath
 manager: daveba
 ms.date: 10/02/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
-ms.openlocfilehash: 462b649ca02519e5af5c3b1243506a74efa7052a
-ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
+ms.openlocfilehash: 63ebdbc229c7d2dabbbb5a06f7dbbd5f3d367796
+ms.sourcegitcommit: cd503e8e9933d39d6fbf894c7d27bf9566301ac8
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79044256"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88168351"
 ---
 # <a name="microsoft-identity-manager-connector-for-microsoft-graph"></a>Microsoft Identity Manager connector voor Microsoft Graph
 
@@ -22,7 +22,7 @@ ms.locfileid: "79044256"
 ## <a name="summary"></a>Samenvatting 
 
 
-De [Microsoft Identity Manager connector voor Microsoft Graph](http://go.microsoft.com/fwlink/?LinkId=717495) biedt extra integratie scenario's voor Azure AD Premium klanten.  Het Opper vlak van de MIM-Sync-mailverse extra objecten die zijn verkregen van de [Microsoft Graph-API](https://developer.microsoft.com/en-us/graph/) v1 en Beta.
+De [Microsoft Identity Manager connector voor Microsoft Graph](https://go.microsoft.com/fwlink/?LinkId=717495) biedt extra integratie scenario's voor Azure AD Premium klanten.  Het Opper vlak van de MIM-Sync-mailverse extra objecten die zijn verkregen van de [Microsoft Graph-API](https://developer.microsoft.com/en-us/graph/)   v1 en Beta.
 
 ## <a name="scenarios-covered"></a>Scenario's die worden behandeld
 
@@ -37,7 +37,7 @@ Als u wilt weten hoe u de MIM-synchronisatie kunt configureren om automatisch AD
 ### <a name="other-identity-management-scenarios"></a>Andere scenario's voor identiteits beheer
 
 
-De connector kan worden gebruikt voor andere specifieke scenario's voor identiteits beheer met betrekking tot het maken, lezen, bijwerken en verwijderen van gebruikers-, groeps-en contact objecten in azure AD, buiten gebruikers-en groeps synchronisatie met Azure AD. Houd rekening met het volgende wanneer u mogelijke scenario's evalueert: deze connector kan niet worden gebruikt in een scenario, wat zou leiden tot een overlap ping van een gegevens stroom, een werkelijke of mogelijke synchronisatie conflict met een Azure AD Connect-implementatie.  [Azure AD Connect](https://www.microsoft.com/en-us/download/details.aspx?id=47594) is de aanbevolen aanpak voor het integreren van on-premises directory's met Azure AD, door gebruikers en groepen van on-premises directory's te synchroniseren met Azure AD.  Azure AD Connect heeft veel meer synchronisatie functies en maakt scenario's mogelijk, zoals het terugschrijven van wacht woorden en apparaten, die niet mogelijk zijn voor objecten die zijn gemaakt door MIM. Als de gegevens in AD DS worden gebracht, moet u er bijvoorbeeld voor zorgen dat deze worden uitgesloten van Azure AD Connect een poging om deze objecten te koppelen aan de Azure AD-adres lijst.  Deze connector kan ook worden gebruikt om wijzigingen aan te brengen in azure AD-objecten, die zijn gemaakt door Azure AD Connect.
+De connector kan worden gebruikt voor andere specifieke scenario's voor identiteits beheer met betrekking tot het maken, lezen, bijwerken en verwijderen van gebruikers-, groeps-en contact objecten in azure AD, buiten gebruikers-en groeps synchronisatie met Azure AD. Houd rekening met het volgende wanneer u mogelijke scenario's evalueert: deze connector kan niet worden gebruikt in een scenario, wat zou leiden tot een overlap ping van een gegevens stroom, een werkelijke of mogelijke synchronisatie conflict met een Azure AD Connect-implementatie.  [Azure AD Connect](https://www.microsoft.com/en-us/download/details.aspx?id=47594)   is de aanbevolen aanpak voor het integreren van on-premises directory's met Azure AD, door gebruikers en groepen van on-premises directory's te synchroniseren met Azure AD.  Azure AD Connect heeft veel meer synchronisatie functies en maakt scenario's mogelijk, zoals het terugschrijven van wacht woorden en apparaten, die niet mogelijk zijn voor objecten die zijn gemaakt door MIM. Als de gegevens in AD DS worden gebracht, moet u er bijvoorbeeld voor zorgen dat deze worden uitgesloten van Azure AD Connect een poging om deze objecten te koppelen aan de Azure AD-adres lijst.  Deze connector kan ook worden gebruikt om wijzigingen aan te brengen in azure AD-objecten, die zijn gemaakt door Azure AD Connect.
 
 
 
@@ -58,7 +58,7 @@ Afbeelding 1. Nieuwe toepassing registreren
 
 Afbeelding 2. Toepassings-id
 
-3.  Genereer een nieuw client geheim door alle instellingen\> -sleutels te openen. Stel een bepaalde sleutel beschrijving in en selecteer duur vereist. Sla de wijzigingen op. Een geheime waarde is niet beschikbaar na het verlaten van de pagina.
+3.  Genereer een nieuw client geheim door alle instellingen-sleutels te openen \> . Stel een bepaalde sleutel beschrijving in en selecteer duur vereist. Sla de wijzigingen op. Een geheime waarde is niet beschikbaar na het verlaten van de pagina.
 
 ![](media/microsoft-identity-manager-2016-ma-graph/fdbae443f9e6ccb650a0cb73c9e1a56f.png)
 
@@ -98,8 +98,8 @@ Meer informatie over de vereiste machtigingen vindt u [hier](https://developer.m
 
 
 
-9.  Selecteer in de Synchronization Service Manager-gebruikers interface de optie **connectors** en **maken**.
-Selecteer **Graph (micro soft)** , maak een connector en geef deze een beschrijvende naam.
+9.  Selecteer in de Synchronization Service Manager-gebruikers interface de optie **connectors**   en **maken**.
+Selecteer **Graph (micro soft)**   , maak een connector en geef deze een beschrijvende naam.
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/d95c6b2cc7951b607388cbd25920d7d0.png)
 
@@ -159,7 +159,7 @@ De lijst met kenmerk typen die worden ondersteund:
 
 Kenmerken met meerdere waarden (verzameling) worden ook ondersteund voor een van de typen in de bovenstaande lijst.
 
-De connector gebruikt het kenmerk`id`' ' voor het anker en de DN voor alle objecten.  De naam kan daarom niet worden gewijzigd, omdat in Graph API niet is toegestaan dat een object het id-kenmerk wijzigt.
+De connector gebruikt het `id` kenmerk ' ' voor het anker en de DN voor alle objecten.  De naam kan daarom niet worden gewijzigd, omdat in Graph API niet is toegestaan dat een object het id-kenmerk wijzigt.
 
 
 ## <a name="access-token-lifetime"></a>Levens duur van toegangs token
@@ -180,7 +180,7 @@ Tijdens het exporteren wordt een nieuw toegangs token aangevraagd voor elk objec
 
 **Logboeken inschakelen**
 
-Als er problemen zijn in Graph, kunnen de logboeken worden gebruikt om het probleem te lokaliseren. Traceringen kunnen dus op [dezelfde manier worden ingeschakeld als voor algemene connectors](https://social.technet.microsoft.com/wiki/contents/articles/21086.fim-2010-r2-troubleshooting-how-to-enable-etw-tracing-for-connectors.aspx). Of alleen door het volgende toe te `miiserver.exe.config` voegen `system.diagnostics/sources` aan (in de sectie):
+Als er problemen zijn in Graph, kunnen de logboeken worden gebruikt om het probleem te lokaliseren. Traceringen kunnen dus op [dezelfde manier worden ingeschakeld als voor algemene connectors](https://social.technet.microsoft.com/wiki/contents/articles/21086.fim-2010-r2-troubleshooting-how-to-enable-etw-tracing-for-connectors.aspx). Of alleen door het volgende toe te voegen aan `miiserver.exe.config` (in de `system.diagnostics/sources` sectie):
 
 ```
 \<source name="ConnectorsLog" switchValue="Verbose"\>
@@ -200,7 +200,7 @@ DateTime, Timestamp, Call stack" /\>
 \</source\>
 ```
 >[!NOTE]
->Als ' deze beheer agent in een afzonderlijk proces uitvoeren ' is ingeschakeld, moet `dllhost.exe.config` u in plaats van `miiserver.exe.config`gebruiken.
+>Als ' deze beheer agent in een afzonderlijk proces uitvoeren ' is ingeschakeld, `dllhost.exe.config` moet u in plaats van gebruiken `miiserver.exe.config` .
 
 **Fout met het toegangs token is verlopen**
 
@@ -216,11 +216,11 @@ Voor beeld van het gebruik van de [open bare preview-versie van Azure AD Power s
 
 ![](media/microsoft-identity-manager-2016-ma-graph/a26ded518f94b9b557064b73615c71f6.png)
 
-New-AzureADPolicy-definition \@({"TokenLifetimePolicy": {"versie": 1, **"AccessTokenLifetime": "5:00:00"**}} ")-DisplayName" OrganizationDefaultPolicyScenario "-IsOrganizationDefault \$True-Type" TokenLifetimePolicy "
+New-AzureADPolicy-definition \@ ({"TokenLifetimePolicy": {"versie": 1, **"AccessTokenLifetime": "5:00:00"**}} ")-DisplayName" OrganizationDefaultPolicyScenario "-IsOrganizationDefault \$ True-Type" TokenLifetimePolicy "
 
 ## <a name="next-steps"></a>Volgende stappen
 
 - [Graph Explorer, geweldig voor het oplossen van problemen met HTTP-aanroepen]( https://developer.microsoft.com/en-us/graph/graph-explorer)
 - [Versie beheer, ondersteuning en het verbreken van beleid voor het wijzigen van Microsoft Graph](https://developer.microsoft.com/en-us/graph/docs/concepts/versioning_and_support)
-- [Microsoft Identity Manager connector voor Microsoft Graph](http://go.microsoft.com/fwlink/?LinkId=717495)
-[MIM B2B-end-to]( ~/microsoft-identity-manager-2016-graph-b2b-scenario.md) -end-implementatie downloaden
+- [Microsoft Identity Manager connector voor Microsoft Graph downloaden](https://go.microsoft.com/fwlink/?LinkId=717495) 
+ [Implementatie van MIM B2B-end-to-end]( ~/microsoft-identity-manager-2016-graph-b2b-scenario.md)
