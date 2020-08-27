@@ -11,12 +11,12 @@ ms.prod: microsoft-identity-manager
 ms.assetid: ''
 ms.reviewer: billmath
 ms.suite: ems
-ms.openlocfilehash: 62a6b936dc30b8593c8758a6158244d0f6dbbc4f
-ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
+ms.openlocfilehash: b7b0dd73e5a87f338dc8cd91e61ee6a19c84068a
+ms.sourcegitcommit: d6178a67014d66d37056c13d10328ae03e3cd781
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79043015"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88970359"
 ---
 # <a name="microsoft-identity-manager-2016-licensing-and-downloads"></a>Microsoft Identity Manager 2016-licenties en-down loads
 
@@ -30,7 +30,7 @@ Microsoft Identity Manager 2016 wordt per gebruiker in licentie gegeven.  De det
 
 Microsoft Identity Manager 2016 is opgenomen in Azure Active Directory Premium (P1 en P2), die deel uitmaakt van Enterprise Mobility + Security.
 
-Azure AD Premium is beschikbaar via een [micro soft-Enterprise Agreement](https://www.microsoft.com/licensing/licensing-programs/enterprise.aspx), het [Open Volume License-programma](https://www.microsoft.com/licensing/licensing-programs/open-license.aspx)en het programma [Cloud Solution Providers](https://go.microsoft.com/fwlink/?LinkId=614968&clcid=0x409) . Abonnees van Azure en Office 365 kunnen Azure Active Directory Premium P1 en P2 ook online aanschaffen.  Meer informatie over [Azure Active Directory prijzen](https://azure.microsoft.com/pricing/details/active-directory/).
+Azure AD Premium is beschikbaar via een [micro soft-Enterprise Agreement](https://www.microsoft.com/licensing/licensing-programs/enterprise.aspx), het [Open Volume License-programma](https://www.microsoft.com/licensing/licensing-programs/open-license.aspx)en het programma [Cloud Solution Providers](https://go.microsoft.com/fwlink/?LinkId=614968&clcid=0x409) . Azure-en Microsoft 365-abonnees kunnen Azure Active Directory Premium P1 en P2 ook online kopen.  Meer informatie over [Azure Active Directory prijzen](https://azure.microsoft.com/pricing/details/active-directory/).
 
 ### <a name="mim-cals"></a>MIM-Cal's
 
@@ -103,7 +103,7 @@ De volgende down loads kunnen ook relevant zijn:
 
 - [MIM Hybrid Reporting agent](https://www.microsoft.com/download/details.aspx?id=55112)
 
-- [Algemene LDAP-connector, algemene SQL-connector, Graph connector, Lotus Domino-connector, Power shell-connector, Web Services-connector](http://go.microsoft.com/fwlink/?LinkId=717495)
+- [Algemene LDAP-connector, algemene SQL-connector, Graph connector, Lotus Domino-connector, Power shell-connector, Web Services-connector](https://go.microsoft.com/fwlink/?LinkId=717495)
 
 - [Connector voor share point-gebruikers profiel archief](https://www.microsoft.com/download/details.aspx?id=41164)
 

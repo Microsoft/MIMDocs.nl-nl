@@ -8,19 +8,19 @@ manager: daveba
 ms.date: 10/18/2019
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.openlocfilehash: 01d5427c3672354ff6c2dc4259c1f2e43e380a8c
-ms.sourcegitcommit: c9f5f960fd39745bf5b57161a2fd0238c88d035a
+ms.openlocfilehash: 66cb97afa69decfde8df9f3c78f15c48abd7982b
+ms.sourcegitcommit: d6178a67014d66d37056c13d10328ae03e3cd781
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/22/2020
-ms.locfileid: "85133546"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88970376"
 ---
 # <a name="microsoft-identity-manager-2016-news-and-updates"></a>Microsoft Identity Manager 2016 nieuws en updates
 
 Microsoft Identity Manager (MIM) 2016 bouwt voort op de mogelijkheden voor identiteits-en toegangs beheer van Forefront Identity Manager. Net als bij de voorganger kunt u met MIM de gebruikers, de referenties, het beleid en de toegang in uw organisatie beheren.  Daarnaast voegt MIM 2016 hieraan een hybride-ervaring, beheermogelijkheden voor bevoegde toegang en ondersteuning voor nieuwe platformen toe.
 
 
-Met MIM kan een organisatie het beheer van de identiteits levenscyclus vereenvoudigen met geautomatiseerde werk stromen, bedrijfs regels en eenvoudige integratie met heterogene platforms in het Data Center. Met MIM kan de organisatie beschikken over de juiste gebruikers-en toegangs rechten voor Active Directory voor on-premises apps en Azure AD Connect vervolgens beschikbaar maken in azure AD voor Office 365 en in de Cloud gehoste apps. Algemene MIM-scenario's zijn onder andere:
+Met MIM kan een organisatie het beheer van de identiteits levenscyclus vereenvoudigen met geautomatiseerde werk stromen, bedrijfs regels en eenvoudige integratie met heterogene platforms in het Data Center. Met MIM kan de organisatie beschikken over de juiste gebruikers-en toegangs rechten voor Active Directory voor on-premises apps en kan Azure AD Connect vervolgens beschikbaar maken in azure AD voor Microsoft 365 en Cloud-gehoste apps. Algemene MIM-scenario's zijn onder andere:
  - Automatische identiteit en groep inrichten op basis van bedrijfs beleid en het inrichten van werk stromen
  - Integratie van de inhoud van directory's met HR-systemen en andere bron instanties
  - Identiteiten synchroniseren tussen directory's, data bases en on-premises toepassingen via algemene Api's en protocollen, door micro soft geleverde connectors en door partners geleverde connectors

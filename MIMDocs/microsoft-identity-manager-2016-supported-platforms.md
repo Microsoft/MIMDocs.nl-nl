@@ -12,12 +12,12 @@ ms.assetid: 4978f60d-044d-4e84-8d93-65801fce1144
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: mim
-ms.openlocfilehash: 04e96f3c8eb71041dccb173f2a1dc7dbba46ef01
-ms.sourcegitcommit: cd503e8e9933d39d6fbf894c7d27bf9566301ac8
+ms.openlocfilehash: 4ef6c5aa5ba3814ab20dff445729da4acf96ecf7
+ms.sourcegitcommit: d6178a67014d66d37056c13d10328ae03e3cd781
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88168334"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88970393"
 ---
 # <a name="supported-platforms-for-mim-2016"></a>Ondersteunde platformen voor MIM 2016
 
@@ -46,7 +46,7 @@ In deze tabel worden de ondersteunde platformen en versies voor elk onderdeel va
 | **MIM-portals voor wachtwoord opnieuw instellen en wachtwoordregistratie** | Windows Server | Windows Server 2008 R2 SP1 (NR.)<br/>Windows Server 2012 (NR.)<br/>Windows Server 2012 R2 <br/> Windows Server 2016 *<br/> Windows Server 2019 * * |
 | | Webbrowser | Alle hoofd browsers die worden ondersteund |
 | **MIM-invoegtoepassingen en -extensies** | Windows | Windows 7<br/>Windows 8<br/>Windows 8.1<br/>Windows 10 |
-| | Outlook-integratie (optioneel) | Outlook 2010 (in Windows, met uitzonde ring van klik-en-klaar)<br/>Outlook 2013 (in Windows, met uitzonde ring van klik-en-klaar) <br/> Outlook 2016 (in Windows 10, behalve klik-en-klaar) *<br/>Office 365 Outlook (in Windows 10, inclusief klik-en-klaar) * * |
+| | Outlook-integratie (optioneel) | Outlook 2010 (in Windows, met uitzonde ring van klik-en-klaar)<br/>Outlook 2013 (in Windows, met uitzonde ring van klik-en-klaar) <br/> Outlook 2016 (in Windows 10, behalve klik-en-klaar) *<br/>Outlook voor Microsoft 365 (in Windows 10, inclusief klik-en-klaar) * * |
 | | PAM PowerShell-aanvrager-cmdlets (optioneel) | Windows 8.1<br/>Windows 10 |
 | **MIM Certificate Management** (server- en CA-integratie) | Windows-server | Windows Server 2008 R2 SP1 (NR.)<br/>Windows Server 2012 R2 <br/> Windows Server 2016 *<br/> Windows Server 2019 * * |
 | | Certificeringsinstantie | Windows Server 2008 R2 SP1 (NR.)<br/>Windows Server 2012<br/>Windows Server 2012 R2 <br/> Windows Server 2016 *<br/> Windows Server 2019 * * |
