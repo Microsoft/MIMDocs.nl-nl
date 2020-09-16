@@ -9,12 +9,12 @@ ms.date: 10/02/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
-ms.openlocfilehash: 63ebdbc229c7d2dabbbb5a06f7dbbd5f3d367796
-ms.sourcegitcommit: cd503e8e9933d39d6fbf894c7d27bf9566301ac8
+ms.openlocfilehash: c426dff583ca51ca77bcb18fe024bf38698e3530
+ms.sourcegitcommit: 3ff309115a0f3de114e3dff4eb3927dd7b01df4d
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88168351"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90570771"
 ---
 # <a name="microsoft-identity-manager-connector-for-microsoft-graph"></a>Microsoft Identity Manager connector voor Microsoft Graph
 
@@ -22,7 +22,7 @@ ms.locfileid: "88168351"
 ## <a name="summary"></a>Samenvatting 
 
 
-De [Microsoft Identity Manager connector voor Microsoft Graph](https://go.microsoft.com/fwlink/?LinkId=717495) biedt extra integratie scenario's voor Azure AD Premium klanten.  Het Opper vlak van de MIM-Sync-mailverse extra objecten die zijn verkregen van de [Microsoft Graph-API](https://developer.microsoft.com/en-us/graph/)   v1 en Beta.
+De [Microsoft Identity Manager connector voor Microsoft Graph](https://go.microsoft.com/fwlink/?LinkId=717495) biedt extra integratie scenario's voor Azure AD Premium klanten.  Het Opper vlak van de MIM-Sync-mailverse extra objecten die zijn verkregen van de [Microsoft Graph-API](https://developer.microsoft.com/en-us/graph/) v1 en Beta.
 
 ## <a name="scenarios-covered"></a>Scenario's die worden behandeld
 
@@ -37,7 +37,7 @@ Als u wilt weten hoe u de MIM-synchronisatie kunt configureren om automatisch AD
 ### <a name="other-identity-management-scenarios"></a>Andere scenario's voor identiteits beheer
 
 
-De connector kan worden gebruikt voor andere specifieke scenario's voor identiteits beheer met betrekking tot het maken, lezen, bijwerken en verwijderen van gebruikers-, groeps-en contact objecten in azure AD, buiten gebruikers-en groeps synchronisatie met Azure AD. Houd rekening met het volgende wanneer u mogelijke scenario's evalueert: deze connector kan niet worden gebruikt in een scenario, wat zou leiden tot een overlap ping van een gegevens stroom, een werkelijke of mogelijke synchronisatie conflict met een Azure AD Connect-implementatie.  [Azure AD Connect](https://www.microsoft.com/en-us/download/details.aspx?id=47594)   is de aanbevolen aanpak voor het integreren van on-premises directory's met Azure AD, door gebruikers en groepen van on-premises directory's te synchroniseren met Azure AD.  Azure AD Connect heeft veel meer synchronisatie functies en maakt scenario's mogelijk, zoals het terugschrijven van wacht woorden en apparaten, die niet mogelijk zijn voor objecten die zijn gemaakt door MIM. Als de gegevens in AD DS worden gebracht, moet u er bijvoorbeeld voor zorgen dat deze worden uitgesloten van Azure AD Connect een poging om deze objecten te koppelen aan de Azure AD-adres lijst.  Deze connector kan ook worden gebruikt om wijzigingen aan te brengen in azure AD-objecten, die zijn gemaakt door Azure AD Connect.
+De connector kan worden gebruikt voor andere specifieke scenario's voor identiteits beheer met betrekking tot het maken, lezen, bijwerken en verwijderen van gebruikers-, groeps-en contact objecten in azure AD, buiten gebruikers-en groeps synchronisatie met Azure AD. Houd rekening met het volgende wanneer u mogelijke scenario's evalueert: deze connector kan niet worden gebruikt in een scenario, wat zou leiden tot een overlap ping van een gegevens stroom, een werkelijke of mogelijke synchronisatie conflict met een Azure AD Connect-implementatie.  [Azure AD Connect](https://www.microsoft.com/en-us/download/details.aspx?id=47594) is de aanbevolen aanpak voor het integreren van on-premises Directory's met Azure AD, door gebruikers en groepen van on-premises directory's te synchroniseren met Azure AD.  Azure AD Connect heeft veel meer synchronisatie functies en maakt scenario's mogelijk, zoals het terugschrijven van wacht woorden en apparaten, die niet mogelijk zijn voor objecten die zijn gemaakt door MIM. Als de gegevens in AD DS worden gebracht, moet u er bijvoorbeeld voor zorgen dat deze worden uitgesloten van Azure AD Connect een poging om deze objecten te koppelen aan de Azure AD-adres lijst.  Deze connector kan ook worden gebruikt om wijzigingen aan te brengen in azure AD-objecten, die zijn gemaakt door Azure AD Connect.
 
 
 
@@ -75,7 +75,7 @@ De volgende machtiging moet worden toegevoegd aan de toepassing zodat deze de Mi
 | Bewerking met object | Machtiging vereist                                                                  | Machtigings type |
 |-----------------------|--------------------------------------------------------------------------------------|-----------------|
 | Groep importeren          | `Group.Read.All` of `Group.ReadWrite.All`                                                | Toepassing     |
-| Gebruiker importeren           | `User.Read.All`, `User.ReadWrite.All` `Directory.Read.All` of`Directory.ReadWrite.All` | Toepassing     |
+| Gebruiker importeren           | `User.Read.All`, `User.ReadWrite.All` `Directory.Read.All` of `Directory.ReadWrite.All` | Toepassing     |
 
 Meer informatie over de vereiste machtigingen vindt u [hier](https://developer.microsoft.com/en-us/graph/docs/concepts/permissions_reference).
 
@@ -98,8 +98,8 @@ Meer informatie over de vereiste machtigingen vindt u [hier](https://developer.m
 
 
 
-9.  Selecteer in de Synchronization Service Manager-gebruikers interface de optie **connectors**   en **maken**.
-Selecteer **Graph (micro soft)**   , maak een connector en geef deze een beschrijvende naam.
+9.  Selecteer in de Synchronization Service Manager-gebruikers interface de optie **connectors** en **maken**.
+Selecteer **Graph (micro soft)**, maak een connector en geef deze een beschrijvende naam.
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/d95c6b2cc7951b607388cbd25920d7d0.png)
 
@@ -151,9 +151,9 @@ De lijst met kenmerk typen die worden ondersteund:
 
 -   `Edm.String`
 
--   `Edm.DateTimeOffset`(teken reeks in connector ruimte)
+-   `Edm.DateTimeOffset` (teken reeks in connector ruimte)
 
--   `microsoft.graph.directoryObject`(verwijzing in een connector ruimte naar een van de ondersteunde objecten)
+-   `microsoft.graph.directoryObject` (verwijzing in een connector ruimte naar een van de ondersteunde objecten)
 
 -   `microsoft.graph.contact`
 
