@@ -16,12 +16,12 @@ ms.date: 01/23/2019
 ms.author: esergeev
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: f6e43abea8b58ccff7fa376b266a91cb138f5aa9
-ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
+ms.openlocfilehash: 157fd8d2a6b4296899f90c661e12ba6e19743d0f
+ms.sourcegitcommit: 22fa4dac943a0c6b0815b711bd1996f77a390e7c
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79044379"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92174528"
 ---
 # <a name="connect-to-your-directories"></a>Verbinding maken met uw adreslijsten
 
@@ -33,19 +33,19 @@ Dit artikel heeft betrekking op de connectors die zijn opgenomen & worden onders
 
 ## <a name="supported-connectors-in-mim-2016-sp1"></a>Ondersteunde connectors in MIM 2016 SP1
 
-| Naam | Ondersteunde versies van de verbonden gegevens bron & technische koppelingen |
+| Naam van connector | Ondersteunde versies van de verbonden gegevens bron & technische koppelingen |
 | ---- | ----------------------------------------------- |
 | Active Directory Domain Services | Active Directory in Windows Server 2012-2019 |
 | Active Directory Lightweight Directory Services (ADLDS) | Active Directory Lightweight Directory Services (ADLDS) |
-| Active Directory Global Address List (GAL) | Active Directory globale adres lijst (GAL): Exchange 2013-2019 |
+| Active Directory Global Address List (GAL) | Active Directory globale adres lijst (GAL) in Exchange 2013-2019 |
 | Extensible Connectivity 2.0 | Een willekeurige gegevensbron op basis van oproep of op basis van bestanden |
 | FIM-service | MIM-service. Houd er rekening mee dat de MIM-synchronisatie service en de MIM-service dezelfde versie moeten zijn. |
-| IBM DB2 Universal Database | IBM DB2-versie 9,5 of 9,7; IBM DB2 OLEDB v 9.5 FP5 of v 9.7 FP1 |
-| IBM Directory Server | IBM Tivoli Directory Server 6.x |
-| Novell eDirectory | Novell eDirectory versie 8.7.3, 8.8.5 en 8.8.6 |
-| Oracle Database | Oracle Database 10g of 11g; 64-bit client |
-| Microsoft SQL Server | SQL Server 2012-2017 |
-| Oracle (eerder Sun en Netscape) Directory Servers | Sun Directory Server 6.x, 7.x en Oracle 11 |
+| IBM DB2 Universal Database | IBM DB2-versie 9,5 of 9,7; IBM DB2 OLEDB v 9.5 FP5 of v 9.7 FP1 <br/> Algemene SQL-connector gebruiken voor latere versies|
+| IBM Directory Server | IBM Tivoli Directory Server 6.x <br/> Algemene LDAP-connector gebruiken voor latere versies|
+| Novell eDirectory | Novell eDirectory versie 8.7.3, 8.8.5 en 8.8.6 <br/> Algemene LDAP-connector gebruiken voor latere versies|
+| Oracle Database | Oracle Database 10g of 11g; 64-bit client <br/> Algemene SQL-connector gebruiken voor latere versies|
+| Microsoft SQL Server | SQL Server 2012-2017 <br/> Algemene SQL-connector gebruiken voor nieuwere versies of SQL Azure|
+| Oracle (eerder Sun en Netscape) Directory Servers | Sun Directory Server 6.x, 7.x en Oracle 11<br/> Algemene LDAP-connector gebruiken voor latere versies |
 | [Windows PowerShell-connector](https://msdn.microsoft.com/library/dn640417.aspx) | Windows PowerShell 2.0 of hoger |
 | [Microsoft Azure Active Directory-connector](https://msdn.microsoft.com/library/dn511001.aspx) | Microsoft Azure Active Directory (niet aanbevolen voor nieuwe implementaties) |
 | [Algemene LDAP-connector](https://msdn.microsoft.com/library/dn510997.aspx) | [LDAP v3-server (compatibel met RFC 4510)](reference/microsoft-identity-manager-2016-connector-genericldap.md#overview-of-the-generic-ldap-connector) |
