@@ -16,13 +16,13 @@ ms.prod: microsoft-identity-manager
 ms.date: 06/26/2018
 ms.author: billmath
 ms.openlocfilehash: bb6460ebf4106aa8c9295be0db3ce9da426b0778
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: c214bb0b1373b65b1c9c215379fd820ab0c13f0f
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "79044380"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "92759004"
 ---
-# <a name="generic-ldap-connector-technical-reference"></a>Algemene technische Naslag informatie over LDAP-connectors
+# <a name="generic-ldap-connector-technical-reference"></a>Technische documentatie voor algemene LDAP-connector
 In dit artikel wordt de algemene LDAP-connector beschreven. Het artikel is van toepassing op de volgende producten:
 
 * Microsoft Identity Manager 2016 (MIM2016)
@@ -32,7 +32,7 @@ In dit artikel wordt de algemene LDAP-connector beschreven. Het artikel is van t
 Voor MIM2016 en FIM2010R2 is de connector beschikbaar als down load vanuit het [micro soft Download centrum](http://go.microsoft.com/fwlink/?LinkId=717495).
 
 Als u verwijst naar IETF Rfc's, gebruikt dit document de indeling (RFC [RFC number]/[sectie in RFC-document]), bijvoorbeeld (RFC 4512/4.3).
-U kunt meer informatie vinden op [https://tools.ietf.org/](https://tools.ietf.org/). Voer in het linkerdeel venster een RFC-nummer in het dialoog venster **documenten ophalen** in en test het om te controleren of dit geldig is.
+U vindt meer informatie op [https://tools.ietf.org/](https://tools.ietf.org/) . Voer in het linkerdeel venster een RFC-nummer in het dialoog venster **documenten ophalen** in en test het om te controleren of dit geldig is.
 
 ## <a name="overview-of-the-generic-ldap-connector"></a>Overzicht van de algemene LDAP-connector
 Met de algemene LDAP-connector kunt u de synchronisatie service integreren met een LDAP v3-server.
@@ -43,11 +43,11 @@ Om verbinding te maken met de directory's, testen we met het account root/admin.
 
 Van een perspectief op hoog niveau worden de volgende functies ondersteund door de huidige versie van de connector:
 
-| Onderdeel | Support |
+| Functie | Ondersteuning |
 | --- | --- |
-| Verbonden gegevens bron |De connector wordt ondersteund met alle LDAP v3-servers (RFC 4510-compatibel). Het is getest met het volgende: <li>Micro soft Active Directory Lightweight Directory Services (AD LDS)</li><li>Micro soft Active Directory Global Catalog (AD GC)</li><li>389-adreslijst server</li><li>Apache-adreslijst server</li><li>IBM Tivoli DS</li><li>Isode Directory</li><li>NetIQ eDirectory</li><li>Novell eDirectory</li><li>Open DJ</li><li>Open DS</li><li>Open LDAP (openldap.org)</li><li>Oracle (voorheen Sun) Directory server Enter prise Edition</li><li>RadiantOne Virtual Directory server (VDS)</li><li>Sun One-Directory server</li><li>Micro soft Active Directory Domain Services (AD DS)</li><ul><li>Voor de meeste scenario's moet u de ingebouwde Active Directory connector gebruiken in plaats van dat sommige functies niet werken</li></ul>**Bekende mappen of functies die niet worden ondersteund:**<li>Micro soft Active Directory Domain Services (AD DS)<ul><li>Meldings service voor wachtwoord wijzigingen (PCNS)</li><li>Exchange-inrichting</li><li>Verwijdering van actieve synchronisatie apparaten</li><li>Ondersteuning voor nTDescurityDescriptor</li></ul></li><li>Oracle Internet Directory (OID)</li> |
-| Scenario's |<li>Beheer van object levenscyclus</li><li>Groeps beheer</li><li>Wachtwoord beheer</li> |
-| Operationele activiteiten |De volgende bewerkingen worden ondersteund op alle LDAP-directory's: <li>Volledig importbewerking</li><li>Exporteren</li>De volgende bewerkingen worden alleen ondersteund in de opgegeven directory's:<li>Delta-import</li><li>Wacht woord instellen, wacht woord wijzigen</li> |
+| Verbonden gegevens bron |De connector wordt ondersteund met alle LDAP v3-servers (RFC 4510-compatibel). Het is getest met het volgende: <li>Micro soft Active Directory Lightweight Directory Services (AD LDS)</li><li>Micro soft Active Directory Global Catalog (AD GC)</li><li>389-adreslijst server</li><li>Apache-adreslijst server</li><li>IBM Tivoli DS</li><li>Isode Directory</li><li>NetIQ eDirectory</li><li>Novell eDirectory</li><li>DJ openen</li><li>Open Active Directory</li><li>Open LDAP (openldap.org)</li><li>Oracle (voorheen Sun) Directory server Enter prise Edition</li><li>RadiantOne Virtual Directory server (VDS)</li><li>Sun One-Directory server</li><li>Micro soft Active Directory Domain Services (AD DS)</li><ul><li>Voor de meeste scenario's moet u de ingebouwde Active Directory connector gebruiken in plaats van dat sommige functies niet werken</li></ul>**Bekende mappen of functies die niet worden ondersteund:**<li>Micro soft Active Directory Domain Services (AD DS)<ul><li>Meldings service voor wachtwoord wijzigingen (PCNS)</li><li>Exchange-inrichting</li><li>Verwijdering van actieve synchronisatie apparaten</li><li>Ondersteuning voor nTDescurityDescriptor</li></ul></li><li>Oracle Internet Directory (OID)</li> |
+| Scenario's |<li>Beheer van object levenscyclus</li><li>Groepsbeheer</li><li>Wachtwoordbeheer</li> |
+| Bewerkingen |De volgende bewerkingen worden ondersteund op alle LDAP-directory's: <li>Volledig importbewerking</li><li>Exporteren</li>De volgende bewerkingen worden alleen ondersteund in de opgegeven directory's:<li>Delta-import</li><li>Wacht woord instellen, wacht woord wijzigen</li> |
 | Schema |<li>Het schema wordt gedetecteerd vanuit het LDAP-schema (RFC3673 en RFC4512/4.2)</li><li>Ondersteunt structurele klassen, aux-klassen en extensibleObject-object klasse (RFC4512/4.3)</li> |
 
 ### <a name="delta-import-and-password-management-support"></a>Ondersteuning voor Delta-import en wachtwoord beheer
@@ -75,10 +75,10 @@ Ondersteunde mappen voor Delta-import-en wachtwoord beheer:
   * Ondersteunt add-, update-en Rename-bewerkingen voor Delta-import
   * Biedt geen ondersteuning voor het verwijderen van een Delta-import bewerking
   * Ondersteunt wacht woord instellen en wacht woord wijzigen
-* Open DJ
+* DJ openen
   * Ondersteunt alle bewerkingen voor het importeren van verschillen
   * Ondersteunt wacht woord instellen en wacht woord wijzigen
-* Open DS
+* Open Active Directory
   * Ondersteunt alle bewerkingen voor het importeren van verschillen
   * Ondersteunt wacht woord instellen en wacht woord wijzigen
 * Open LDAP (openldap.org)
@@ -114,12 +114,12 @@ Voor LDAPS moet u SSL 3,0 of TLS gebruiken. SSL 2,0 wordt niet ondersteund en ka
 
 ### <a name="required-controls-and-features"></a>Vereiste besturings elementen en functies
 De volgende LDAP-besturings elementen/-functies moeten beschikbaar zijn op de LDAP-server om de connector goed te laten werken:  
-`1.3.6.1.4.1.4203.1.5.3` waar/onwaar-filters
+`1.3.6.1.4.1.4203.1.5.3` True/False-filters
 
-Het filter waar/onwaar wordt vaak niet gerapporteerd als ondersteund door LDAP-directory's en kan worden weer gegeven op de **pagina Global** onder **verplichte functies die niet zijn gevonden**. Het wordt gebruikt voor het maken **of** filteren van LDAP-query's, bijvoorbeeld bij het importeren van meerdere object typen. Als u meer dan één object type kunt importeren, ondersteunt uw LDAP-server deze functie.
+Het filter waar/onwaar wordt vaak niet gerapporteerd als ondersteund door LDAP-directory's en kan worden weer gegeven op de **pagina Global** onder **verplichte functies die niet zijn gevonden** . Het wordt gebruikt voor het maken **of** filteren van LDAP-query's, bijvoorbeeld bij het importeren van meerdere object typen. Als u meer dan één object type kunt importeren, ondersteunt uw LDAP-server deze functie.
 
 Als u een map gebruikt waarin een unieke id het anker is, moet u ook de volgende gegevens beschikbaar hebben (Zie de sectie [ankers configureren](#configure-anchors) voor meer informatie):  
-`1.3.6.1.4.1.4203.1.5.1` alle operationele kenmerken
+`1.3.6.1.4.1.4203.1.5.1` Alle operationele kenmerken
 
 Als de Directory meer objecten bevat dan kan worden aangepast aan de ene aanroep naar de Directory, is het raadzaam om paging te gebruiken. Voor een goede werking van paging moet u een van de volgende opties:
 
@@ -141,10 +141,10 @@ De connector probeert de opties te detecteren die aanwezig zijn op de server. Al
 ### <a name="delta-import"></a>Delta-import
 Delta-import is alleen beschikbaar als er een ondersteunings Directory is gedetecteerd. De volgende methoden worden momenteel gebruikt:
 
-* LDAP-accesslog. Zie [http://www.openldap.org/doc/admin24/overlays.html#Access logboek registratie](http://www.openldap.org/doc/admin24/overlays.html#Access%20Logging)
+* LDAP-accesslog. Zie [ http://www.openldap.org/doc/admin24/overlays.html#Access logboek registratie](http://www.openldap.org/doc/admin24/overlays.html#Access%20Logging)
 * LDAP-wijzigingen logboek. Zie [http://tools.ietf.org/html/draft-good-ldap-changelog-04](http://tools.ietf.org/html/draft-good-ldap-changelog-04)
 * Neem. Voor Novell/NetIQ eDirectory gebruikt de connector de laatste datum en tijd voor het ophalen en bijwerken van objecten. Novell/NetIQ eDirectory biedt geen gelijkwaardige manier om verwijderde objecten op te halen. Deze optie kan ook worden gebruikt als er geen andere import methode voor verschillen actief is op de LDAP-server. Met deze optie kunnen verwijderde objecten niet worden geïmporteerd.
-* USNChanged. Zie: [https://msdn.microsoft.com/library/ms677627.aspx](https://msdn.microsoft.com/library/ms677627.aspx)
+* USNChanged. Kijken [https://msdn.microsoft.com/library/ms677627.aspx](https://msdn.microsoft.com/library/ms677627.aspx)
 
 ### <a name="not-supported"></a>Niet ondersteund
 De volgende LDAP-functies worden niet ondersteund:
@@ -152,7 +152,7 @@ De volgende LDAP-functies worden niet ondersteund:
 * LDAP-verwijzingen tussen servers (RFC 4511/4.1.10)
 
 ## <a name="create-a-new-connector"></a>Een nieuwe connector maken
-Als u een algemene LDAP-connector wilt maken, selecteert u in de **synchronisatie service** **beheer agent** selecteren en **maakt**u deze. Selecteer de **algemene LDAP-connector (micro soft)** .
+Als u een algemene LDAP-connector wilt maken, selecteert u in de **synchronisatie service** **beheer agent** selecteren en **maakt** u deze. Selecteer de **algemene LDAP-connector (micro soft)** .
 
 ![CreateConnector](./media/microsoft-identity-manager-2016-connector-genericldap/createconnector.png)
 
@@ -178,7 +178,7 @@ Schakel het selectie vakje **operationele kenmerken in schema toevoegen in** als
 
 Selecteer **uitbreid bare kenmerken insluiten in schema** als uitbreid bare objecten (RFC4512/4.3) worden gebruikt en als u deze optie inschakelt, kan elk kenmerk worden gebruikt voor alle objecten. Als u deze optie selecteert, maakt u het schema erg groot, tenzij de verbonden Directory deze functie gebruikt, is de optie selectief laten staan.
 
-### <a name="global-parameters"></a>Algemene para meters
+### <a name="global-parameters"></a>Globale parameters
 Op de pagina globale para meters configureert u de DN-namen voor het Delta wijzigings logboek en extra LDAP-functies. De pagina is vooraf ingevuld met de informatie die door de LDAP-server wordt verstrekt.
 
 ![Connectiviteit](./media/microsoft-identity-manager-2016-connector-genericldap/globalparameters.png)
@@ -193,7 +193,7 @@ Het selectie vakje **ondersteunde besturings elementen** bepalen het gedrag voor
 * Als alle drie de opties (pagedResultsControl, VLVControl en SortControl) zijn uitgeschakeld, wordt in de connector alle objecten in één bewerking geïmporteerd. Dit kan mislukken als het een grote map is.
 * ShowDeletedControl wordt alleen gebruikt wanneer de Delta-import methode USNChanged is.
 
-Het wijzigings logboek DN is de naamgevings context die wordt gebruikt door het Delta wijzigings logboek, bijvoorbeeld **CN = wijzigingen logboek**. Deze waarde moet worden opgegeven om Delta-import te kunnen uitvoeren.
+Het wijzigings logboek DN is de naamgevings context die wordt gebruikt door het Delta wijzigings logboek, bijvoorbeeld **CN = wijzigingen logboek** . Deze waarde moet worden opgegeven om Delta-import te kunnen uitvoeren.
 
 Hier volgt een lijst met standaard-DNs-wijzigingen logboeken:
 
@@ -221,7 +221,7 @@ Deze pagina wordt gebruikt om het DN-onderdeel, bijvoorbeeld OE, toe te wijzen a
 
 ![Inrichtings hiërarchie](./media/microsoft-identity-manager-2016-connector-genericldap/provisioninghierarchy.png)
 
-Als u de inrichtings hiërarchie configureert, kunt u de connector zo configureren dat deze automatisch een structuur maakt wanneer dat nodig is. Als er bijvoorbeeld een naam ruimte DC = contoso, DC = com en een nieuw object CN = Joe, ou = Seattle, c = US, DC = contoso, DC = com is ingericht, kan de connector een object van het type land maken voor US en een organizationalUnit voor Seattle als die nog niet aanwezig zijn in de map.
+Als u de inrichtings hiërarchie configureert, kunt u de connector zo configureren dat deze automatisch een structuur maakt wanneer dat nodig is. Als er bijvoorbeeld een naam ruimte DC = contoso, DC = com en een nieuw object CN = Joe, ou = Seattle, c = US, DC = contoso, DC = com is ingericht, kan de connector een object van het type land voor US en een organizationalUnit voor Seattle maken als deze nog niet aanwezig zijn in de Directory.
 
 ### <a name="configure-partitions-and-hierarchies"></a>Partities en hiërarchieën configureren
 Selecteer op de pagina partities en hiërarchieën alle naam ruimten met objecten die u wilt importeren en exporteren.
@@ -249,7 +249,7 @@ Hier volgt een lijst met LDAP-servers en het gebruikte anker:
 
 | Directory | Anker kenmerk |
 | --- | --- |
-| Micro soft AD LDS en AD GC |objectGUID |
+| Micro soft AD LDS en AD GC |GUID |
 | 389-adreslijst server |dn |
 | Apache-map |dn |
 | IBM Tivoli DS |dn |
@@ -271,5 +271,5 @@ Voor de Novell-eDirectory wordt door de Delta-import geen object verwijderingen 
 
 Voor directory's met een Delta wijzigings logboek dat is gebaseerd op de datum/tijd, wordt het ten zeerste aanbevolen een volledige import uit te voeren op periodieke tijdstippen. Met dit proces kan de synchronisatie-engine zoeken naar en verschillen tussen de LDAP-server en wat zich op dit moment in de connector ruimte bevindt.
 
-## <a name="troubleshooting"></a>Probleemoplossing
+## <a name="troubleshooting"></a>Problemen oplossen
 * Zie voor meer informatie over het inschakelen van logboek registratie voor het oplossen van problemen met de connector, het [inschakelen van etw-tracering voor connectors](http://go.microsoft.com/fwlink/?LinkId=335731).
