@@ -5,23 +5,23 @@ keywords: ''
 author: billmath
 ms.author: billmath
 manager: daveba
-ms.date: 10/19/2019
+ms.date: 11/2/2020
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 4978f60d-044d-4e84-8d93-65801fce1144
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: mim
-ms.openlocfilehash: f1f8fb9f443bcafb720b1fd0e9880c93a9772c22
-ms.sourcegitcommit: 22fa4dac943a0c6b0815b711bd1996f77a390e7c
+ms.openlocfilehash: b4737be2036e40f431b26d522678f135aa267d22
+ms.sourcegitcommit: 78c2d7e5ba4bec276d5a9bf8860bc126d9bd9c33
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92174548"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94492375"
 ---
 # <a name="supported-platforms-for-mim-2016"></a>Ondersteunde platformen voor MIM 2016
 
-In deze tabel worden de ondersteunde platformen en versies voor elk onderdeel van Microsoft Identity Manager 2016 beschreven. De versies die zijn gemarkeerd met een * worden alleen ondersteund in MIM 2016 Service Pack 1. De versies die zijn gemarkeerd met * * worden alleen ondersteund in MIM 2016 Service Pack 2 of een latere hotfix. De versies die zijn gemarkeerd met ' NR ', worden niet aanbevolen, worden wel ondersteund, maar worden niet aanbevolen als een nieuwe implementatie van dat platform voor MIM wordt gestart.
+In deze tabel worden de ondersteunde platformen en versies voor elk onderdeel van Microsoft Identity Manager 2016 beschreven. De versies die zijn gemarkeerd met een * worden alleen ondersteund in MIM 2016 Service Pack 1, Service Pack 2 of een latere hotfix. De versies die zijn gemarkeerd met * * worden alleen ondersteund in MIM 2016 Service Pack 2 of een latere hotfix. De versies die zijn gemarkeerd met ' NR ', worden niet aanbevolen, worden wel ondersteund, maar worden niet aanbevolen als een nieuwe implementatie van dat platform voor MIM wordt gestart.
 
 
 | **MIM-onderdeel** | **Platform** | **Versie** |

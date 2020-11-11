@@ -13,11 +13,11 @@ audience: developer
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: 9a2dd84e121217772a8831653b2e4790436c32ec
-ms.sourcegitcommit: c214bb0b1373b65b1c9c215379fd820ab0c13f0f
+ms.sourcegitcommit: 78c2d7e5ba4bec276d5a9bf8860bc126d9bd9c33
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "92758998"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94492443"
 ---
 # <a name="certificate-management-rest-api-service-details"></a>Details van de REST API-service voor certificaat beheer
 In de volgende secties worden de details van het Microsoft Identity Manager (MIM) Certificate Management-REST API (CM) beschreven.
@@ -42,7 +42,7 @@ MIM CM REST API-aanroepen worden verwerkt door-controllers. In de volgende tabel
 ## <a name="http-request-and-response-headers"></a>HTTP-aanvraag-en reactie headers
 HTTP-aanvragen die worden verzonden naar de API moeten de volgende headers bevatten (deze lijst is niet limitatief):
 
-Koptekst | Beschrijving
+Header | Beschrijving
 -------|------------
 Autorisatie | Vereist. De inhoud is afhankelijk van de verificatie methode. De methode kan worden geconfigureerd en kan worden gebaseerd op WIA (Windows Integrated Authentication) of Active Directory Federation Services (ADFS).
 Content-Type | Vereist als de aanvraag een hoofd tekst heeft. Moet zijn `application/json` .
@@ -52,7 +52,7 @@ Cookies | De sessie cookie. Is mogelijk vereist, afhankelijk van de verificatie 
 
 HTTP-antwoorden bevatten de volgende headers (deze lijst is niet limitatief):
 
-Koptekst | Beschrijving
+Header | Beschrijving
 -------|------------
 Content-Type | De API retourneert altijd `application/json` .
 Content-Length | De lengte van de aanvraag tekst, indien aanwezig, in bytes.

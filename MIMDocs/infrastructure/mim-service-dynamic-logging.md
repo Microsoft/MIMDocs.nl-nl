@@ -7,14 +7,14 @@ manager: daveba
 ms.date: 10/29/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.openlocfilehash: 69ebe774ddea0176fb26ef74b8f4352e4bb5d039
-ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
+ms.openlocfilehash: 6cf0914b196673bb2e99d6d679fad46833c58b00
+ms.sourcegitcommit: 78c2d7e5ba4bec276d5a9bf8860bc126d9bd9c33
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79042165"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94492256"
 ---
-# <a name="mim-sp1-4414360--service-dynamic-logging"></a>MIM SP1 (4.4.1436.0)-service dynamische logboekregistratie
+# <a name="mim-2016-sp1-4414360--service-dynamic-logging"></a>MIM 2016 SP1 (4.4.1436.0) service Dynamic logging
 
 In 4.4.1436.0 hebben we een nieuwe mogelijkheid voor logboekregistratie geïntroduceerd. Hiermee kunnen beheerders en ondersteuningstechnici logboekregistratie inschakelen zonder de beheerservice opnieuw te hoeven starten.
 
@@ -31,7 +31,7 @@ De dynamische logboekregistratieniveaus kunt u [hier](https://msdn.microsoft.com
 - Critical = standaardniveau waarbij service alleen kritieke gebeurtenissen schrijft
 - Werk regel 8 (dynamicLogging mode="true" loggingLevel="Critical") bij met de voorkeurswaarde voor logboekregistratie
 
-Configuratie van Dynamic logging bevindt zich op regel 266: micro soft. ResourceManagement. service. exe. config
+Configuratie van Dynamic logging bevindt zich op regel 266: Microsoft.ResourceManagement.Service.exe.config
 
 ![In de gemarkeerde secties worden de regels met de verschillende gebieden voor logboekregistratie weergegeven](media/mim-service-dynamic-logging/screen02.png)
 

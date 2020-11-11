@@ -12,26 +12,26 @@ ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.tgt_pltfrm: na
 ms.workload: identity
-ms.date: 01/23/2019
+ms.date: 11/2/2020
 ms.author: esergeev
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 157fd8d2a6b4296899f90c661e12ba6e19743d0f
-ms.sourcegitcommit: 22fa4dac943a0c6b0815b711bd1996f77a390e7c
+ms.openlocfilehash: b691fb5dd324a4202ab3f0f02344c5b43102c63a
+ms.sourcegitcommit: 78c2d7e5ba4bec276d5a9bf8860bc126d9bd9c33
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92174528"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94492477"
 ---
 # <a name="connect-to-your-directories"></a>Verbinding maken met uw adreslijsten
 
-Connectors koppelen specifieke verbonden gegevens bronnen aan Microsoft Identity Manager SP1 (MIM). Met een connector worden gegevens van een verbonden gegevensbron naar MIM verplaatst. Wanneer gegevens in MIM worden gewijzigd, kunnen met de connector de gegevens ook worden geëxporteerd naar de gekoppelde gegevensbron om deze te synchroniseren met MIM. Over het algemeen is er ten minste één connector beschikbaar voor elke gekoppelde adreslijst.
+Connectors koppelen specifieke verbonden gegevensbronnen aan Microsoft Identity Manager (MIM). Met een connector worden gegevens van een verbonden gegevensbron naar MIM verplaatst. Wanneer gegevens in MIM worden gewijzigd, kunnen met de connector de gegevens ook worden geëxporteerd naar de gekoppelde gegevensbron om deze te synchroniseren met MIM. Over het algemeen is er ten minste één connector beschikbaar voor elke gekoppelde adreslijst.
 
 In Forefront Identity Manager heetten connectors beheeragents. Deze term wordt nog steeds in sommige artikelen of delen van het product gebruikt, maar beide termen verwijzen naar hetzelfde concept.
 
 Dit artikel heeft betrekking op de connectors die zijn opgenomen & worden ondersteund in MIM, maar de connector voor de uitbreid bare connectiviteit 2,0 maakt het mogelijk om verbinding te maken met nog meer gegevens bronnen. Sommige partners hebben hun eigen connectors op deze manier gemaakt. Een volledige lijst is beschikbaar in de wiki [FIM 2010: Management Agents from Partners](https://social.technet.microsoft.com/wiki/contents/articles/1589.fim-2010-management-agents-from-partners.aspx) (FIM 2010: beheeragents van partners).
 
-## <a name="supported-connectors-in-mim-2016-sp1"></a>Ondersteunde connectors in MIM 2016 SP1
+## <a name="supported-connectors-in-mim-2016-sp2"></a>Ondersteunde connectors in MIM 2016 SP2
 
 | Naam van connector | Ondersteunde versies van de verbonden gegevens bron & technische koppelingen |
 | ---- | ----------------------------------------------- |
@@ -47,9 +47,9 @@ Dit artikel heeft betrekking op de connectors die zijn opgenomen & worden onders
 | Microsoft SQL Server | SQL Server 2012-2017 <br/> Algemene SQL-connector gebruiken voor nieuwere versies of SQL Azure|
 | Oracle (eerder Sun en Netscape) Directory Servers | Sun Directory Server 6.x, 7.x en Oracle 11<br/> Algemene LDAP-connector gebruiken voor latere versies |
 | [Windows PowerShell-connector](https://msdn.microsoft.com/library/dn640417.aspx) | Windows PowerShell 2.0 of hoger |
-| [Microsoft Azure Active Directory-connector](https://msdn.microsoft.com/library/dn511001.aspx) | Microsoft Azure Active Directory (niet aanbevolen voor nieuwe implementaties) |
-| [Algemene LDAP-connector](https://msdn.microsoft.com/library/dn510997.aspx) | [LDAP v3-server (compatibel met RFC 4510)](reference/microsoft-identity-manager-2016-connector-genericldap.md#overview-of-the-generic-ldap-connector) |
-| [Algemene SQL-connector](reference/microsoft-identity-manager-2016-connector-genericsql.md) | [De connector wordt ondersteund met alle 64-bits ODBC-stuur Programma's](reference/microsoft-identity-manager-2016-connector-genericsql.md#overview-of-the-generic-sql-connector) |
+| [Microsoft Azure Active Directory-connector](https://msdn.microsoft.com/library/dn511001.aspx) | Microsoft Azure Active Directory (niet aanbevolen voor nieuwe implementaties, gebruik dan Azure AD Connect Sync, Azure AD Connect Cloud inrichting of graph connector in plaats daarvan) |
+| [Algemene LDAP-connector](https://msdn.microsoft.com/library/dn510997.aspx) | [LDAP v3-server (RFC 4510-compatibel)](reference/microsoft-identity-manager-2016-connector-genericldap.md#overview-of-the-generic-ldap-connector), waaronder 389 Directory server, Apache Directory server, IBM Tivoli DS, Isode Directory, NetIQ EDirectory, Novell EDirectory, open DJ, Open Active Directory, open LDAP, Oracle Directory server Enter prise Edition, RadiantOne Virtual Directory server, Sun One Directory server |
+| [Algemene SQL-connector](reference/microsoft-identity-manager-2016-connector-genericsql.md) | [De connector wordt ondersteund met alle 64-bits ODBC-stuur Programma's](reference/microsoft-identity-manager-2016-connector-genericsql.md#overview-of-the-generic-sql-connector) , waaronder Microsoft SQL Server & SQL Azure, IBM DB2 10. x, IBM DB2 9. x, Oracle 10 & 11G, Oracle 12c & 18C, MySQL 5. x|
 | [Connector voor Lotus Domino](https://msdn.microsoft.com/library/hh859750.aspx) | Lotus Notes Release v 8.5. x, v 9.0. x |
 | [UPA share Point services-connector](https://msdn.microsoft.com/library/dn511003.aspx) | Share Point server 2013-2019 met Service toepassing voor gebruikers profielen (UPA) |
 | [Connector voor Web Services](https://www.microsoft.com/en-us/download/details.aspx?id=51495) | [SAP ECC 5,0 of 6,0; Oracle People Soft 9,1; Oracle eBusiness 12,1 en andere SOAP-en REST-Api's](https://docs.microsoft.com/microsoft-identity-manager/reference/microsoft-identity-manager-2016-ma-ws) |

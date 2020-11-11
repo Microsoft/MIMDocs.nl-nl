@@ -11,16 +11,16 @@ ms.prod: microsoft-identity-manager
 ms.assetid: b0b39631-66df-4c5f-80c9-a1774346f816
 ms.reviewer: fimguy
 ms.suite: ems
-ms.openlocfilehash: afe167cdcd6ca548ef34e802f5606bee6ba5b31e
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.openlocfilehash: 6e6af5be6c091be74c7162ef9c960c89a3302ba2
+ms.sourcegitcommit: 78c2d7e5ba4bec276d5a9bf8860bc126d9bd9c33
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "92758947"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94492562"
 ---
 # <a name="microsoft-identity-manager-2016-sp1-terminology"></a>Microsoft Identity Manager 2016 SP1 terminologie
 
-Dit document bevat een uitgebreide lijst met termen waarnaar wordt verwezen in Microsoft Identity Manager 2016 SP1.
+Dit document bevat een uitgebreide lijst met termen waarnaar wordt verwezen in Microsoft Identity Manager 2016 SP1 en hoger.
 
 ## <a name="a"></a>A
 
@@ -189,11 +189,11 @@ vlag voor het maken van een **externe systeem bron** : een para meter van een sy
 
 **vergrendelings poort** : een werk stroom activiteit in de verificatie fase van aanvraag verwerking voor het vergren delen van een gebruiker die niet kan worden geverifieerd. Zie ook de vermelding voor ' vergren delen ' en ' QA-poort '.
 
-**drempel waarde voor vergren deling** : dit is een besturings element integer waarmee het aantal keren wordt aangegeven dat een gebruiker de verificatie werk stroom niet kan volt ooien voordat ze worden vergrendeld voor de vergrendelings duur.De standaard instelling voor deze waarde is 3. De ondergrens is 0 en de maximum limiet is 99.
+**drempel waarde voor vergren deling** : dit is een besturings element integer waarmee het aantal keren wordt aangegeven dat een gebruiker de verificatie werk stroom niet kan volt ooien voordat ze worden vergrendeld voor de vergrendelings duur. De standaard instelling voor deze waarde is 3. De ondergrens is 0 en de maximum limiet is 99.
 
-**vergrendelings duur** : dit is een besturings element integer waarmee de duur in minuten van de gebruiker wordt vergrendeld na het aanduiden van de vergrendelings drempel.De standaard instelling voor dit is 15 minuten.De ondergrens voor deze instelling is 1 en de maximum limiet is 9999.De bovengrens stelt de beheerder in staat de bovengrens in te stellen op een waarde van meer dan één dag.
+**vergrendelings duur** : dit is een besturings element integer waarmee de duur in minuten van de gebruiker wordt vergrendeld na het aanduiden van de vergrendelings drempel.  De standaard instelling voor dit is 15 minuten.  De ondergrens voor deze instelling is 1 en de maximum limiet is 9999. De bovengrens stelt de beheerder in staat de bovengrens in te stellen op een waarde van meer dan één dag.
 
-**aantal vergrendelings drempels vóór permanente vergren deling** : dit is een besturings element integer waarmee de beheerder een numerieke waarde kan configureren voor het aantal keren dat een gebruiker de vergrendelings drempel kan aanraken voordat deze permanent wordt vergrendeld.  Permanente vergren deling impliceert dat de gebruiker moet worden ontgrendeld door de systeem beheerder. Deze waarde is standaard ingesteld op 3.Het bereik voor deze instelling ligt tussen 1 en 99.
+**aantal vergrendelings drempels vóór permanente vergren deling** : dit is een besturings element integer waarmee de beheerder een numerieke waarde kan configureren voor het aantal keren dat een gebruiker de vergrendelings drempel kan aanraken voordat deze permanent wordt vergrendeld.  Permanente vergren deling impliceert dat de gebruiker moet worden ontgrendeld door de systeem beheerder. Deze waarde is standaard ingesteld op 3. Het bereik voor deze instelling ligt tussen 1 en 99.
 <br/>
 
 ## <a name="m"></a>M
@@ -499,7 +499,7 @@ Meta- **tekst** : het centrale gegevens archief dat door MIM wordt gebruikt om d
 
 **Ontgrendelde groep** : een groep waarin het lidmaatschap van de groep kan worden gewijzigd door andere gebruikers dan de eigenaar van de groep.
 
-**universele groep** : een groep met een universeel bereik is een Active Directory groep die leden van een bepaald forest kan bevatten. Aan een universele groep kunnen machtigingen worden toegewezen in elk domein of forest. Distributie lijsten hebben doorgaans een universeel bereik.Een beveiligings groep met een universeel bereik kan bronnen in hetzelfde forest beveiligen.
+**universele groep** : een groep met een universeel bereik is een Active Directory groep die leden van een bepaald forest kan bevatten. Aan een universele groep kunnen machtigingen worden toegewezen in elk domein of forest. Distributie lijsten hebben doorgaans een universeel bereik.  Een beveiligings groep met een universeel bereik kan bronnen in hetzelfde forest beveiligen.
 
 **update aanvraag** : een aanvraag om de kenmerken van een resource te wijzigen.
 

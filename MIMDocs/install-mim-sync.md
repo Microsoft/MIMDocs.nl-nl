@@ -11,18 +11,18 @@ ms.prod: microsoft-identity-manager
 ms.assetid: 2585e9c5-ce34-46c7-bdcf-8c08773901dc
 ms.reviewer: markwahl-msft
 ms.suite: ems
-ms.openlocfilehash: 8e4371c8d3caac06f7200d8439b30b7aa978a336
-ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
+ms.openlocfilehash: ae291712f33b0a28d3d0f3f5a451c9ac9b8a76b2
+ms.sourcegitcommit: 78c2d7e5ba4bec276d5a9bf8860bc126d9bd9c33
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79042454"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94492307"
 ---
 # <a name="install-mim-2016-mim-synchronization-service"></a>MIM 2016: MIM-synchronisatieservice installeren
 
 > [!div class="step-by-step"]
-> [«Exchange Server](prepare-server-exchange.md)
-> [MIM-service en-Portal»](install-mim-service-portal.md)
+> [«Exchange Server](prepare-server-exchange.md) 
+>  [MIM-service en-Portal»](install-mim-service-portal.md)
  
 > [!NOTE]
 > In deze stapsgewijze instructies wordt gebruikgemaakt van voorbeeldnamen en -waarden van een bedrijf met de naam Contoso. Vervang deze door uw eigen namen en waarden. Bijvoorbeeld:
@@ -31,7 +31,7 @@ ms.locfileid: "79042454"
 > - Naam van de MIM-service Server- **corpservice**
 > - Naam MIM-synchronisatie server- **corpsync**
 > - SQL Server naam- **corpsql**
-> - Wacht woord<strong>Pass@word1</strong>
+> - Wacht woord <strong>Pass@word1</strong>
 
 Stel eerst het installatiepakket in voordat u de Microsoft Identity Manager 2016-onderdelen installeert.
 
@@ -39,7 +39,7 @@ Stel eerst het installatiepakket in voordat u de Microsoft Identity Manager 2016
 
 2. Pak het MIM-installatiepakket uit of plaats de dvd met de MIM-installatiekopie.  Als u deze DVD niet hebt, raadpleegt u [Microsoft Identity Manager licenties en down loads](microsoft-identity-manager-licensing.md).
 
-## <a name="install-mim-2016-sp1-synchronization-service"></a>MIM 2016 SP1-synchronisatie service installeren
+## <a name="install-mim-2016-sp1-or-later-synchronization-service"></a>MIM 2016 SP1 of een latere synchronisatie service installeren
 
 1. Navigeer in de uitgepakte MIM-installatiemap naar de map **Synchronisatieservice**.
 
@@ -63,18 +63,18 @@ Stel eerst het installatiepakket in voordat u de Microsoft Identity Manager 2016
 
    ![Afbeelding voor de databaseverbinding](media/install-mim-sync/MIM_Install3.png)
 
-    3. *Mim 2016 SP2 en hoger*: de naam van de MIM-synchronisatie service-data base configureren
+    3. *Mim 2016 SP2 en hoger* : de naam van de MIM-synchronisatie service-data base configureren
 
 7. Configureer het synchronisatieserviceaccount volgens het account dat u eerder hebt gemaakt:
 
    1. Serviceaccount: *MIMSync*
 
-   2. Wacht woord<em>Pass@word1</em>
+   2. Wacht woord <em>Pass@word1</em>
 
    3. Serviceaccountdomein of naam van de lokale computer: *contoso*
 
     >[!NOTE]
-    >MIM 2016 SP2 en hoger: voor beheerde service accounts voor groepen, controleert **$** u of het teken aan het einde van de naam van het service account is, bijvoorbeeld MIMSync $, en laat u het veld wacht woord leeg.
+    >MIM 2016 SP2 en hoger: voor beheerde service accounts voor groepen, controleert u of het **$** teken aan het einde van de naam van het service account is, bijvoorbeeld MIMSync $, en laat u het veld wacht woord leeg.
 
     ![Afbeelding voor het serviceaccount](media/install-mim-sync/MIM_Install4.png)
 
@@ -100,7 +100,7 @@ Stel eerst het installatiepakket in voordat u de Microsoft Identity Manager 2016
 
     2. MIM Sync-service wordt geïnstalleerd.
 
-    3. Er wordt een bericht weergegeven over het maken van een back-up voor de versleutelingssleutel: klik op **OK**, selecteer vervolgens een map waarin de back-up voor de versleutelingssleutel moet worden opgeslagen.
+    3. Er wordt een bericht weergegeven over het maken van een back-up voor de versleutelingssleutel: klik op **OK** , selecteer vervolgens een map waarin de back-up voor de versleutelingssleutel moet worden opgeslagen.
 
     ![Afbeelding voor het bericht over de back-up voor de versleutelingssleutel voor MIM Sync](media/MIM-Install7.png)
 
@@ -109,5 +109,5 @@ Stel eerst het installatiepakket in voordat u de Microsoft Identity Manager 2016
     5. U moet zich afmelden en weer aanmelden om de wijzigingen voor een groepslidmaatschap door te voeren. Klik op **Ja** om u af te melden.
 
 > [!div class="step-by-step"]  
-> [«Exchange Server](prepare-server-exchange.md)
-> [MIM-service en-Portal»](install-mim-service-portal.md)
+> [«Exchange Server](prepare-server-exchange.md) 
+>  [MIM-service en-Portal»](install-mim-service-portal.md)

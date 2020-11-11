@@ -9,12 +9,12 @@ ms.date: 10/18/2019
 ms.topic: reference
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
-ms.openlocfilehash: fa4e5ade14c1a3df94b868d149472c1b42d1c59c
-ms.sourcegitcommit: d6178a67014d66d37056c13d10328ae03e3cd781
+ms.openlocfilehash: 530229a3e5217955e974021ba42870f415e66033
+ms.sourcegitcommit: 78c2d7e5ba4bec276d5a9bf8860bc126d9bd9c33
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "92759016"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94492511"
 ---
 # <a name="identity-manager-version-release-history"></a>Release geschiedenis van de versie van Identity Manager
 
@@ -26,6 +26,14 @@ Het Microsoft Identity Manager team brengt regel matig updates uit. Dit artikel 
 >De versie geschiedenis voor onderdelen van micro soft BHOLD Suite vindt u in de [versie geschiedenis](version-bhold-history.md)van de BHOLD-modules.
 >
 >De versie geschiedenis voor de algemene LDAP-, algemene SQL-, Web Services-, Power shell-, Graph-en Lotus Domino-connectors vindt u in de [release geschiedenis van de connector versie](microsoft-identity-manager-2016-connector-version-history.md).  
+
+## <a name="mim-version-463550"></a>MIM-versie 4.6.355.0
+- Status: 6 november 2020
+- [Hotfix downloaden](https://www.microsoft.com/download/details.aspx?id=102301)
+- [KB-artikel 4585922](https://support.microsoft.com/help/4585922)
+
+Deze hotfix bevat updates voor de MIM-synchronisatie beheerder, de MIM-service en MIM-Portal onderdelen en bevat ook cumulatieve updates voor MIM-onderdelen uit de vorige hotfixes voor MIM 2016 SP2.
+
 
 ## <a name="mim-version-462630"></a>MIM-versie 4.6.263.0
 - Status: 7 augustus 2020
@@ -241,7 +249,7 @@ De volgende problemen zijn opgelost in MIM versie 4.4.1749.0.
 - Het kenmerk msidmPhoneGatePhoneNumber zonder land code gebruikt niet de waarde DefaultCountryCode in MFASettings.xml.
 - Stel lidmaatschappen kunnen dynamisch worden bijgewerkt zonder dat ze afhankelijk zijn van de FIM_TemporalEventsJob.
 - Synchronisatie regels bieden geen ondersteuning voor het maken van kenmerk stroom regels voor kenmerken waarvan de namen het hekje (#) bevatten.
-  
+  
 #### <a name="privilege-access-management"></a>Toegangs beheer met bevoegdheden 
 
 - New-PAMDomainConfiguration Power shell-cmdlet een onjuiste waarde instellen voor de configuratie van de domein vertrouwensrelatie als gevolg van een fout (deze onbekende aanvraag parameter kan niet worden verwerkt).
@@ -249,9 +257,9 @@ De volgende problemen zijn opgelost in MIM versie 4.4.1749.0.
 #### <a name="microsoft-identity-portal"></a>Micro soft Identity Portal
 
 - Er wordt een uitzonde ring weer gegeven in het hoofd scherm van de identiteits Beheerportal en er wordt ook een sluit knop weer gegeven.
-- Knoppen worden onjuist weer gegeven in het venster item verwijderen.Dit probleem is opgetreden in Internet Explorer, Firefox en Chrome. 
-- De zoek knop overlapt de knop Resource kiezer in een venster goedkeurings activiteit in de werk stroom autorisatie. Dit probleem is opgetreden in Internet Explorer, Firefox en Chrome. 
-- In het pop-upvenster met groeps eigenschappen overlapt het knop gebied de besturings elementen van de List View-navigatie in het besturings element leden verwijderen.Dit probleem is opgetreden in Internet Explorer, Firefox en Chrome.
+- Knoppen worden onjuist weer gegeven in het venster item verwijderen.  Dit probleem is opgetreden in Internet Explorer, Firefox en Chrome. 
+- De zoek knop overlapt de knop Resource kiezer in een venster goedkeurings activiteit in de werk stroom autorisatie. Dit probleem is opgetreden in Internet Explorer, Firefox en Chrome. 
+- In het pop-upvenster met groeps eigenschappen overlapt het knop gebied de besturings elementen van de List View-navigatie in het besturings element leden verwijderen.  Dit probleem is opgetreden in Internet Explorer, Firefox en Chrome.
 - Meerdere elementen van de gebruikers interface worden niet correct weer gegeven. De volgende elementen zijn opgelost:
 
     - Pijl omhoog en omlaag in sommige eigenschappen Vensters.
@@ -263,21 +271,21 @@ De volgende problemen zijn opgelost in MIM versie 4.4.1749.0.
 - In een scherm voor object beheer (zoals distributie groepen), als er meerdere objecten zijn geselecteerd door het selectie vakje in te gebruiken en de objecten lange weergave namen hebben. De grootte van het dialoog venster is nu verticaal, zodat het besturings element niet meer wordt weer gegeven na het einde van het browser scherm.
 - In een object beheer-of lijst scherm (zoals distributie groepen) is het mogelijk dat het besturings element voor geselecteerde items direct onder het laatste object wordt weer gegeven in de tabel lijsten.
 - De filter functie voor filters (zoals Geavanceerd zoeken) in de Safari-browser is niet functioneel.
-- Portal dialoog vensters waarin kenmerk waarden worden weer gegeven, de kortere woorden worden gedistribueerd in de hele cel met veel witruimte in plaats van links uitgelijnd. 
+- Portal dialoog vensters waarin kenmerk waarden worden weer gegeven, de kortere woorden worden gedistribueerd in de hele cel met veel witruimte in plaats van links uitgelijnd. 
 - In sommige browser versies worden de geselecteerde items niet bijgewerkt wanneer de selectie van het item wordt gewijzigd.
-- Dialoog tabbladen en kopiëren naar klem bord markeren wanneer u navigeert naar met behulp van de tab-toets.  
-- Wanneer u in Internet Explorer 10 een weer gave van een object Raster weergeeft (zoals distributie groepen), wordt het deel venster ' Zoek de distributie groepen die u wilt gebruiken met de bovenstaande zoek opdracht ' het span doek van het lint.  
+- Dialoog tabbladen en kopiëren naar klem bord markeren wanneer u navigeert naar met behulp van de tab-toets.  
+- Wanneer u in Internet Explorer 10 een weer gave van een object Raster weergeeft (zoals distributie groepen), wordt het deel venster ' Zoek de distributie groepen die u wilt gebruiken met de bovenstaande zoek opdracht ' het span doek van het lint.  
 - Na de installatie van een update voor de MIM-Portal, mislukt de weer gave van de portal in Internet Explorer.
-- Wanneer u de geavanceerde zoek opdracht in de Firefox-browser gebruikt, wordt er een fout geretourneerd als u op de Enter-toets drukt op een kenmerk waarde.  
+- Wanneer u de geavanceerde zoek opdracht in de Firefox-browser gebruikt, wordt er een fout geretourneerd als u op de Enter-toets drukt op een kenmerk waarde.  
 
 #### <a name="certificate-management"></a>Certificaatbeheer
 
 - Een aanvrager van een aanvraag (certificaat beheerder) kan geen aanvraag afbreken die is gedupliceerd of is verg eten door een gebruiker die over uitvoerings machtigingen beschikt.
 - Wanneer u probeert TPM virtuele Smart Card te vernieuwen vanuit de moderne app, wordt een verboden uitzonde ring geretourneerd.
-- Tijdens sommige smartcard activiteiten blijven bestaande verbindingen met de CertificateManagement-data base onverwacht open.  
+- Tijdens sommige smartcard activiteiten blijven bestaande verbindingen met de CertificateManagement-data base onverwacht open.  
 - Als er een installatie van een update van MIM Certificate Management (CM) wordt uitgevoerd voordat de wizard MIM CM configuratie wordt gestart, mislukt de update met een uitzonde ring die niet aan het probleem is gerelateerd.
-- De gegevens van de product versie worden onjuist weer gegeven in de wizard MIM CM configuratie en het logo wordt niet correct weer gegeven.  
-- De geëxporteerde gegevens voor een MIM Certificate Management-rapport verschillen van de rapport gegevens.De kolom gegevens komen niet altijd overeen met de kolom koppen.
+- De gegevens van de product versie worden onjuist weer gegeven in de wizard MIM CM configuratie en het logo wordt niet correct weer gegeven.  
+- De geëxporteerde gegevens voor een MIM Certificate Management-rapport verschillen van de rapport gegevens.  De kolom gegevens komen niet altijd overeen met de kolom koppen.
 
 ## <a name="version-4416420"></a>Versie 4.4.1642.0
 
@@ -323,7 +331,7 @@ De volgende problemen zijn opgelost in MIM versie 4.4.1642.0.
 
 - MIM self service-wachtwoord portals.
 
-#### <a name="reporting"></a>Rapporten
+#### <a name="reporting"></a>Rapportage
 
 - Import-FIMReportingSchemaDefinition-cmdlet voor rapportage mislukt met fout.
 

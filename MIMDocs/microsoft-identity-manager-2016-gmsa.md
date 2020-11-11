@@ -7,12 +7,12 @@ manager: daveba
 ms.date: 03/10/2020
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.openlocfilehash: 5985ded45a53a804728572404fb0db43e988ac1d
-ms.sourcegitcommit: f87be3d09cee6a8880b3a6babf32e0d064fde36b
+ms.openlocfilehash: 50e5da9c7e3ed7df8edb8dbc315708df5ac5250a
+ms.sourcegitcommit: 78c2d7e5ba4bec276d5a9bf8860bc126d9bd9c33
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87176758"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94492539"
 ---
 # <a name="convert-microsoft-identity-manager-specific-services-to-use-group-managed-service-accounts"></a>Microsoft Identity Manager-specifieke services converteren voor het gebruik van door groepen beheerde service accounts
 
@@ -52,7 +52,7 @@ Dit artikel is een hand leiding voor het configureren van ondersteunde Microsoft
 
 ## <a name="actions-to-run-on-the-active-directory-domain-controller"></a>Acties die moeten worden uitgevoerd op de Active Directory-domein controller
 
-1.  Maak een groep met de naam *MIMSync_Servers*en voeg hieraan alle synchronisatie servers toe.
+1.  Maak een groep met de naam *MIMSync_Servers* en voeg hieraan alle synchronisatie servers toe.
 
     ![Een MIMSync_Servers groep maken](media/a4dc3f6c0cb1f715ba690744f54dce5c.png)
 
@@ -74,21 +74,21 @@ Dit artikel is een hand leiding voor het configureren van ondersteunde Microsoft
 
 1. Maak een back-up van de versleutelings sleutel in Synchronization Service Manager. Er wordt gevraagd om de installatie van de wijzigings modus. Ga als volgt te werk:
 
-    a. Op de server waarop Synchronization Service Manager is geïnstalleerd, zoekt u naar het hulp programma voor sleutel beheer van de synchronisatie service. De **sleutelset voor exporteren**   is standaard al geselecteerd.
+    a. Op de server waarop Synchronization Service Manager is geïnstalleerd, zoekt u naar het hulp programma voor sleutel beheer van de synchronisatie service. De **sleutelset voor exporteren** is standaard al geselecteerd.
 
     b. Selecteer **Next**. 
     
     c. Voer de gegevens van het Microsoft Identity Manager of het Forefront Identity Manager (FIM)-synchronisatie service account bij de prompt in en controleer deze:
 
-    -   **Account naam**: de naam van het synchronisatie service account dat wordt gebruikt tijdens de eerste installatie.  
-    -   **Wacht woord**: het wacht woord van het synchronisatie service account.  
-    -   **Domein**: het domein waarvan het synchronisatie service account deel uitmaakt.
+    -   **Account naam** : de naam van het synchronisatie service account dat wordt gebruikt tijdens de eerste installatie.  
+    -   **Wacht woord** : het wacht woord van het synchronisatie service account.  
+    -   **Domein** : het domein waarvan het synchronisatie service account deel uitmaakt.
 
     d. Selecteer **Next**.
 
-    Als u de account gegevens hebt ingevoerd, hebt u de mogelijkheid om de bestemming of de locatie van het export bestand van de back-versleutelings sleutel te wijzigen. Standaard is de locatie van het export bestand *C:\Windows\system32\miiskeys-1.bin*.
+    Als u de account gegevens hebt ingevoerd, hebt u de mogelijkheid om de bestemming of de locatie van het export bestand van de back-versleutelings sleutel te wijzigen. Standaard is de locatie van het export bestand *C:\Windows\system32\miiskeys-1.bin*.
 
-1. Installeer Microsoft Identity Manager SP1, dat u kunt vinden op het Volume Licensing service center of de MSDN down loads-site. Sla de sleutelset *miiskeys. bin*nadat u de installatie hebt voltooid.
+1. Installeer Microsoft Identity Manager 2016 SP1 of hoger, die u kunt vinden op het Volume Licensing service center of de MSDN down loads-site. Sla de sleutelset *miiskeys. bin* nadat u de installatie hebt voltooid.
 
    ![Het venster voortgang van de installatie van de Microsoft Identity Manager-synchronisatie service](media/ef5f16085ec1b2b1637fa3d577a95dbf.png)
 
@@ -98,7 +98,7 @@ Dit artikel is een hand leiding voor het configureren van ondersteunde Microsoft
 
    a. Selecteer in het configuratie scherm de optie **Program ma's en onderdelen**  >  **Microsoft Identity Manager**.  
    b. Selecteer op de pagina **synchronisatie service** de optie **wijzigen**  >  **volgende**.  
-   c. Selecteer **configureren**in het venster **onderhouds opties** .
+   c. Selecteer **configureren** in het venster **onderhouds opties** .
 
    ![Het venster onderhouds opties](media/dc98c011bec13a33b229a0e792b78404.png)
 
@@ -141,7 +141,7 @@ Dit artikel is een hand leiding voor het configureren van ondersteunde Microsoft
     ![Het venster gebruikers en computers Active Directory](media/0201f0281325c80eb70f91cbf0ac4d5b.jpg)
 
     > [!NOTE]  
-    > Een bekend probleem in Windows Server 2012 R2 is dat services die gebruikmaken van een beheerd account niet meer reageren nadat de server opnieuw is opgestart, omdat micro soft Key Distribution-service niet is gestart nadat Windows opnieuw is opgestart. De tijdelijke oplossing voor dit probleem is om de volgende opdracht uit te voeren: 
+    > Een bekend probleem in Windows Server 2012 R2 is dat services die gebruikmaken van een beheerd account niet meer reageren nadat de server opnieuw is opgestart, omdat micro soft Key Distribution-service niet is gestart nadat Windows opnieuw is opgestart. De tijdelijke oplossing voor dit probleem is om de volgende opdracht uit te voeren: 
     >
     > `sc triggerinfo kdssvc start/networkon`
     >
@@ -191,7 +191,7 @@ Dit artikel is een hand leiding voor het configureren van ondersteunde Microsoft
 1.  Voltooi de installatie.
 
     > [!NOTE]
-    > Tijdens de installatie worden er twee nieuwe sleutels gemaakt in het registerpad **HKEY_LOCAL_MACHINE \Software\microsoft\forefront Identity Manager\2010\Service** voor het opslaan van het versleutelde Exchange-wacht woord. Eén vermelding is voor *ExchangeOnline*en de andere voor *ExchangeOnPremise*. Voor een van de vermeldingen moet de waarde in de kolom **gegevens** leeg zijn.
+    > Tijdens de installatie worden er twee nieuwe sleutels gemaakt in het registerpad **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Forefront Identity Manager\2010\Service** voor het opslaan van het versleutelde Exchange-wacht woord. Eén vermelding is voor *ExchangeOnline* en de andere voor *ExchangeOnPremise*. Voor een van de vermeldingen moet de waarde in de kolom **gegevens** leeg zijn.
 
     > ![De REGI ster-editor](media/73e2b8a3c149a4ec6bacb4db2c749946.jpg)
 

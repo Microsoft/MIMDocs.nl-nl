@@ -13,11 +13,11 @@ audience: developer
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: 00a2f4d9c44747d50139655d368e42b11fbd388c
-ms.sourcegitcommit: c214bb0b1373b65b1c9c215379fd820ab0c13f0f
+ms.sourcegitcommit: 78c2d7e5ba4bec276d5a9bf8860bc126d9bd9c33
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "92758992"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94492426"
 ---
 # <a name="pam-rest-api-service-details"></a>Details van PAM-REST API-service
 In de volgende secties worden de details van de Microsoft Identity Manager (MIM) Privileged Access Management (PAM) REST API beschreven.
@@ -26,7 +26,7 @@ In de volgende secties worden de details van de Microsoft Identity Manager (MIM)
 
 HTTP-aanvragen die worden verzonden naar de API moeten de volgende headers bevatten (deze lijst is niet limitatief):
 
-Koptekst | Beschrijving
+Header | Beschrijving
 -------|------------
 Autorisatie | Vereist. De inhoud is afhankelijk van de verificatie methode, die kan worden geconfigureerd en kan worden gebaseerd op WIA (Windows Integrated Authentication) of ADFS.
 Content-Type | Vereist als de aanvraag een hoofd tekst heeft. Moet worden ingesteld op `application/json`.
@@ -37,7 +37,7 @@ Cookies | De sessie cookie. Is mogelijk vereist, afhankelijk van de verificatie 
 
 HTTP-antwoorden moeten de volgende headers bevatten (deze lijst is niet limitatief):
 
-Koptekst | Beschrijving
+Header | Beschrijving
 -------|------------
 Content-Type | De API retourneert altijd `application/json` .
 Content-Length | De lengte van de aanvraag tekst, indien aanwezig, in bytes.
@@ -89,7 +89,7 @@ PAM-REST API aanvragen kunnen filters bevatten om de eigenschappen op te geven d
 
 Filters kunnen een van de eigenschappen van PAM-aanvragen opgeven, PAM-rollen. of PAM-aanvragen in behandeling. Bijvoorbeeld: *ExpirationTime* , *DisplayName* of een andere geldige eigenschap van een PAM-aanvraag, Pam-rol of aanvraag in behandeling.
 
-De API ondersteunt de volgende Opera tors in filter expressies: *en* , *EQUAL* , *NotEqual* , *GreaterThan* , *LessThan* , *GreaterThenOrEqueal* en *LessThanOrEqual* . 
+De API ondersteunt de volgende Opera tors in filter expressies: *en* , *EQUAL* , *NotEqual* , *GreaterThan* , *LessThan* , *GreaterThenOrEqueal* en *LessThanOrEqual*. 
 
 De volgende voorbeeld aanvragen bevatten filters:
 

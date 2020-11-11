@@ -16,11 +16,11 @@ ms.prod: microsoft-identity-manager
 ms.date: 06/26/2018
 ms.author: billmath
 ms.openlocfilehash: bb6460ebf4106aa8c9295be0db3ce9da426b0778
-ms.sourcegitcommit: c214bb0b1373b65b1c9c215379fd820ab0c13f0f
+ms.sourcegitcommit: 78c2d7e5ba4bec276d5a9bf8860bc126d9bd9c33
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "92759004"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94492494"
 ---
 # <a name="generic-ldap-connector-technical-reference"></a>Technische documentatie voor algemene LDAP-connector
 In dit artikel wordt de algemene LDAP-connector beschreven. Het artikel is van toepassing op de volgende producten:
@@ -116,7 +116,7 @@ Voor LDAPS moet u SSL 3,0 of TLS gebruiken. SSL 2,0 wordt niet ondersteund en ka
 De volgende LDAP-besturings elementen/-functies moeten beschikbaar zijn op de LDAP-server om de connector goed te laten werken:  
 `1.3.6.1.4.1.4203.1.5.3` True/False-filters
 
-Het filter waar/onwaar wordt vaak niet gerapporteerd als ondersteund door LDAP-directory's en kan worden weer gegeven op de **pagina Global** onder **verplichte functies die niet zijn gevonden** . Het wordt gebruikt voor het maken **of** filteren van LDAP-query's, bijvoorbeeld bij het importeren van meerdere object typen. Als u meer dan één object type kunt importeren, ondersteunt uw LDAP-server deze functie.
+Het filter waar/onwaar wordt vaak niet gerapporteerd als ondersteund door LDAP-directory's en kan worden weer gegeven op de **pagina Global** onder **verplichte functies die niet zijn gevonden**. Het wordt gebruikt voor het maken **of** filteren van LDAP-query's, bijvoorbeeld bij het importeren van meerdere object typen. Als u meer dan één object type kunt importeren, ondersteunt uw LDAP-server deze functie.
 
 Als u een map gebruikt waarin een unieke id het anker is, moet u ook de volgende gegevens beschikbaar hebben (Zie de sectie [ankers configureren](#configure-anchors) voor meer informatie):  
 `1.3.6.1.4.1.4203.1.5.1` Alle operationele kenmerken
@@ -193,7 +193,7 @@ Het selectie vakje **ondersteunde besturings elementen** bepalen het gedrag voor
 * Als alle drie de opties (pagedResultsControl, VLVControl en SortControl) zijn uitgeschakeld, wordt in de connector alle objecten in één bewerking geïmporteerd. Dit kan mislukken als het een grote map is.
 * ShowDeletedControl wordt alleen gebruikt wanneer de Delta-import methode USNChanged is.
 
-Het wijzigings logboek DN is de naamgevings context die wordt gebruikt door het Delta wijzigings logboek, bijvoorbeeld **CN = wijzigingen logboek** . Deze waarde moet worden opgegeven om Delta-import te kunnen uitvoeren.
+Het wijzigings logboek DN is de naamgevings context die wordt gebruikt door het Delta wijzigings logboek, bijvoorbeeld **CN = wijzigingen logboek**. Deze waarde moet worden opgegeven om Delta-import te kunnen uitvoeren.
 
 Hier volgt een lijst met standaard-DNs-wijzigingen logboeken:
 

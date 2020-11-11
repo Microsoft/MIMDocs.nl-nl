@@ -9,12 +9,12 @@ ms.date: 09/11/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
-ms.openlocfilehash: fb3cf6e5b00c1bd0c01d86aff474dc2ff28c2815
-ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
+ms.openlocfilehash: 848bdbb793de97eb9512de93febd939bb45a52d3
+ms.sourcegitcommit: 78c2d7e5ba4bec276d5a9bf8860bc126d9bd9c33
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79042250"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94492290"
 ---
 # <a name="microsoft-bhold-suite-sp1-60-installation-guide"></a>Installatie handleiding voor micro soft BHOLD Suite SP1 (6,0)
 
@@ -30,7 +30,7 @@ Micro soft® BHOLD Suite Service Pack 1 (SP1) is een verzameling toepassingen di
 
 
 > [!NOTE]
-> **Van toepassing op**: Microsoft Identity Manager 2016 SP1
+> **Van toepassing op** : Microsoft Identity Manager 2016 SP1 of hoger
 
 ## <a name="what-this-document-covers"></a>Wat in dit document wordt behandeld
 
@@ -38,7 +38,7 @@ In dit document wordt uitgelegd hoe u uw BHOLD-implementatie plant om te voldoen
 
 ## <a name="pre-requisite-knowledge"></a>Vereiste kennis
 
-In dit document wordt ervan uitgegaan dat u een basis memorandum hebt van het installeren van software op Server computers. Ook wordt ervan uitgegaan dat u basis kennis hebt van Active Directory® Domain Services, Microsoft Identity Manager SP1 (FIM) en Microsoft SQL Server 2012-database software. Een beschrijving van het instellen en configureren van afhankelijke technologieën, zoals AD DS en FIM valt buiten het bereik van deze documentatie. Voor informatie over de functies die door de micro soft BHOLD-modules worden uitgevoerd, raadpleegt u [de hand leiding micro soft BHOLD Suite-concepten](https://technet.microsoft.com/library/jj134102(v=ws.10).aspx).
+In dit document wordt ervan uitgegaan dat u een basis memorandum hebt van het installeren van software op Server computers. Ook wordt ervan uitgegaan dat u basis kennis hebt van Active Directory® Domain Services, Forefront of Microsoft Identity Manager (FIM) en Microsoft SQL Server 2012-database software. Een beschrijving van het instellen en configureren van afhankelijke technologieën, zoals AD DS en FIM valt buiten het bereik van deze documentatie. Voor informatie over de functies die door de micro soft BHOLD-modules worden uitgevoerd, raadpleegt u [de hand leiding micro soft BHOLD Suite-concepten](https://technet.microsoft.com/library/jj134102(v=ws.10).aspx).
 
 ## <a name="audience"></a>Doelgroep
 
@@ -99,7 +99,7 @@ Windows kan worden geconfigureerd om basis certificaten van micro soft op te hal
 
 ![IIS-installatie BHOLD](media/bhold-installation-guide/iis-install-bhold.png)
 
-Als u BHOLD Suite SP1 installeert op Windows Server 2012 of 2016, zijn de webpagina's van BHOLD niet beschikbaar totdat u het bestand applicationHost. config hebt gewijzigd in ```C:\Windows\System32\inetsrv\config```. Voeg in ```<globalModules>``` de sectie toe ```preCondition="bitness64``` aan de vermelding die begint ```<add name="SPNativeRequestModule"``` , zodat deze als volgt wordt gelezen:
+Als u BHOLD Suite SP1 installeert op Windows Server 2012 of 2016, zijn de webpagina's van BHOLD niet beschikbaar totdat u het applicationHost.config bestand in hebt gewijzigd ```C:\Windows\System32\inetsrv\config``` . Voeg in de ```<globalModules>``` sectie toe ```preCondition="bitness64``` aan de vermelding die begint ```<add name="SPNativeRequestModule"``` , zodat deze als volgt wordt gelezen:
 
 ```<add name="SPNativeRequestModule" image="C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\isapi\spnativerequestmodule.dll" preCondition="bitness64"/>```
 
