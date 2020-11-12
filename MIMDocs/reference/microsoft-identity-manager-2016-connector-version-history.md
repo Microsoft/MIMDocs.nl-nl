@@ -4,7 +4,7 @@ description: In dit onderwerp vindt u alle versies van de connectors voor Forefr
 services: active-directory
 documentationcenter: ''
 author: EugeneSergeev
-manager: daveba
+manager: aashiman
 editor: ''
 reviewer: markwahl-msft
 ms.assetid: 6a0c66ab-55df-4669-a0c7-1fe1a091a7f9
@@ -13,16 +13,16 @@ ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.tgt_pltfrm: na
 ms.workload: identity
-ms.date: 01/23/2019
+ms.date: 11/11/2020
 ms.author: esergeev
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 3062058bc53a75c66959803ebb5b33849c11868b
-ms.sourcegitcommit: babd0299472aa7e8c8d9af1b464bf4e91318aed8
+ms.openlocfilehash: ba69b18f3712384da79095d625eb9008a07b741e
+ms.sourcegitcommit: dae61d97c9db5402d35e2757a1ce844d16236032
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "92759028"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94532117"
 ---
 # <a name="connector-version-release-history"></a>Releasegeschiedenis van connectorversie
 
@@ -35,7 +35,7 @@ Connectors koppelen specifieke verbonden gegevens bronnen aan Microsoft Identity
 In dit onderwerp vindt u een lijst met alle versies van het pakket algemene connectors die los van MIM zijn vrijgegeven.  Zie [ondersteunde connectors in MIM 2016 SP1](../supported-management-agents.md)voor een lijst met connectors die worden ondersteund met mim.  Sommige partners hebben op deze manier hun eigen connectors gemaakt en een volledige lijst is beschikbaar in de wiki [FIM 2010 en MIM 2016: beheer agenten van partners](https://social.technet.microsoft.com/wiki/contents/articles/1589.fim-2010-mim-2016-management-agents-from-partners.aspx).
 
 
-Gerelateerde koppelingen:
+Gerelateerde links:
 
 * [Nieuwste connectors downloaden](https://go.microsoft.com/fwlink/?LinkId=717495)
 * Naslag documentatie voor [algemene LDAP-connectors](microsoft-identity-manager-2016-connector-genericldap.md)
@@ -44,6 +44,17 @@ Gerelateerde koppelingen:
 * Naslag documentatie voor [Power shell-connector](microsoft-identity-manager-2016-connector-powershell.md)
 * Referentie documentatie voor [Lotus Domino-connector](microsoft-identity-manager-2016-connector-domino.md)
 * Naslag documentatie voor [share point-gebruikers profiel archief-connector](https://go.microsoft.com/fwlink/?LinkID=331344)
+
+## <a name="1113460-november-2020"></a>1.1.1346.0 (november 2020)
+### <a name="fixed-issues"></a>Opgeloste problemen
+- Graph-connector
+  - Er is een probleem opgelost met een beschadiging van de lokale connector cache waardoor uitvoer fouten van Delta-import worden veroorzaakt
+  - Er is een probleem opgelost met dubbele vermeldingen die zijn gerapporteerd door de connector tijdens de volledige import uitvoering, waardoor detectie fouten optreden
+  - Er is een probleem opgelost met een onjuiste import van complexe gegevens typen, bijvoorbeeld *employeeOrgData*
+- Algemene SQL-connector
+  - Er is een probleem opgelost met een SQL Native verificatie fout vanwege een DSN-connection string eigenschap *TrustedConnection* ingesteld op *False* 
+- Algemene LDAP-connector
+  - Er is een probleem opgelost met het verwerken van *OpenLDAP* *accessLog* -vermeldingen bij het importeren van verschillen waardoor onjuiste groepslid maatschappen worden gewijzigd en andere fouten
 
 ## <a name="1113020-september-2020"></a>1.1.1302.0 (september 2020)
 ### <a name="fixed-issues"></a>Opgeloste problemen
@@ -68,7 +79,7 @@ Gerelateerde koppelingen:
   > Als u de uitnodiging voor het maken van een gast in Build 1.1.1170.0 van de connector hebt gebruikt, moet u de synchronisatie regels bijwerken met de volgende logica:
 
   - Uitgaande stromen
-    - Er wordt een gebruiker uitgenodigd bij het exporteren van de gebruiker en de export bevat een *mail-* kenmerk, maar geen *userPrincipalName-kenmerk* .  Als de *userPrincipalName* is opgegeven, wordt er een gebruiker gemaakt in plaats van uitgenodigd
+    - Er wordt een gebruiker uitgenodigd bij het exporteren van de gebruiker en de export bevat een *mail-* kenmerk, maar geen *userPrincipalName-kenmerk*.  Als de *userPrincipalName* is opgegeven, wordt er een gebruiker gemaakt in plaats van uitgenodigd
     - Het kenmerk *User type* definieert alleen of een gebruiker een *lid* wordt of een *gast* (de standaard instelling is een *lid* als dit niet is ingesteld)
   - Binnenkomende stromen
     - *UserPrincipalName* kenmerk waarden van externe gebruikers worden weer gegeven als is
@@ -311,7 +322,7 @@ Uitgebracht: 2017 maart
 ### <a name="enhancements"></a>Verbeteringen 
 
 * Algemene SQL:</br>
-  **Scenario symptomen:**   Het is een bekende beperking met de SQL-connector waarbij alleen een verwijzing naar een object type is toegestaan en kruis verwijzingen met leden zijn vereist. </br>
+  **Scenario symptomen:**  Het is een bekende beperking met de SQL-connector waarbij alleen een verwijzing naar een object type is toegestaan en kruis verwijzingen met leden zijn vereist. </br>
   **Beschrijving van oplossing:** In de optie verwerkings stap voor verwijzingen zijn ' * ' geselecteerd, worden alle combi Naties van object typen teruggestuurd naar de synchronisatie-engine.
 
 > [!Important]
