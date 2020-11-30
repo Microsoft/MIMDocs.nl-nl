@@ -15,12 +15,12 @@ ms.author: esergeev
 ms.reviewer: mwahl
 ms.suite: ems
 ms.topic: reference
-ms.openlocfilehash: 424381cca56223e80403bad9f858c33362bb819d
-ms.sourcegitcommit: dae61d97c9db5402d35e2757a1ce844d16236032
+ms.openlocfilehash: 59a853c03cd24d89ffa2e89550de51d372c6391d
+ms.sourcegitcommit: 7d7fdb47352282c2d98bf09274707a18fd1a22dc
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94532134"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96321978"
 ---
 # <a name="identity-manager-version-release-history"></a>Release geschiedenis van de versie van Identity Manager
 
@@ -33,12 +33,18 @@ Het Microsoft Identity Manager team brengt regel matig updates uit. Dit artikel 
 >
 >De versie geschiedenis voor de algemene LDAP-, algemene SQL-, Web Services-, Power shell-, Graph-en Lotus Domino-connectors vindt u in de [release geschiedenis van de connector versie](microsoft-identity-manager-2016-connector-version-history.md).  
 
-## <a name="mim-version-463550"></a>MIM-versie 4.6.355.0
-- Status: 6 november 2020
+## <a name="mim-version-463590"></a>MIM-versie 4.6.359.0
+- Status: 29 november 2020
 - [Hotfix downloaden](https://www.microsoft.com/download/details.aspx?id=102301)
 - [KB-artikel 4585922](https://support.microsoft.com/help/4585922)
 
 Deze hotfix bevat updates voor de MIM-synchronisatie beheerder, de MIM-service en MIM-Portal onderdelen en bevat ook cumulatieve updates voor MIM-onderdelen uit de vorige hotfixes voor MIM 2016 SP2.
+Vervangt build 4.6.355.0 om problemen met de prestaties van MIM-Services op te lossen.
+
+## <a name="mim-version-463550"></a>MIM-versie 4.6.355.0
+- Status: 6 november 2020
+
+Vervangen door 4.6.359.0
 
 
 ## <a name="mim-version-462630"></a>MIM-versie 4.6.263.0
