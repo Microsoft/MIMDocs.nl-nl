@@ -11,12 +11,12 @@ ms.prod: microsoft-identity-manager
 ms.assetid: bfc7cb64-60c7-4e35-b36a-bbe73b99444b
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 3b99bd6d8f10c993d65e026bab23deeb65c547e9
-ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
+ms.openlocfilehash: d6cd6c88992dc3c7dc80cd93d21907319ece0136
+ms.sourcegitcommit: 2bbb6815b7dfae877eec966c1dc40ea8da847d62
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79043950"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96522146"
 ---
 # <a name="planning-a-bastion-environment"></a>Een bastionomgeving plannen
 
@@ -122,7 +122,7 @@ Afzonderlijk beveiligde werkstations die zijn toegewezen aan gebruikers met invl
 
 - **Beveiligd opstarten** om te voor komen dat aanvallers of schadelijke software niet-ondertekende code in het opstart proces probeert te laden.
 
-- **Softwarebeperking** om ervoor te zorgen dat alleen geautoriseerde beheersoftware wordt uitgevoerd op de hosts met een beheerderrol. Klanten kunnen voor deze taak AppLocker gebruiken met een whitelist geautoriseerde toepassingen, om te voorkomen dat schadelijke software en niet-ondersteunde toepassingen wordt uitgevoerd.
+- **Softwarebeperking** om ervoor te zorgen dat alleen geautoriseerde beheersoftware wordt uitgevoerd op de hosts met een beheerderrol. Klanten kunnen AppLocker voor deze taak gebruiken met een goedgekeurde lijst van geautoriseerde toepassingen, om te voor komen dat schadelijke software en niet-ondersteunde toepassingen worden uitgevoerd.
 
 - **Volledige volume versleuteling** voor het beperken van het fysieke verlies van computers, zoals het extern gebruiken van beheerders.
 
@@ -174,15 +174,15 @@ New-ADGroup -name 'CONTOSO$$$' -GroupCategory Security -GroupScope DomainLocal -
 
 De instellingen voor groepsbeleid op de domeincontroller voor controle moet geslaagde en mislukte controle voor toegang tot Accountbeheer controleren en Active directory-service controleren omvatten. U doet dit met de console Groepsbeleidbeheer op een werkstation dat lid is van het bestaande domein en aangemeld als beheerder van het bestaande domein:
 
-3. Ga naar **Start** > **systeem beheer** > **Groepsbeleid beheer**.
+3. Ga naar **Start**  >  **systeem beheer**  >  **Groepsbeleid beheer**.
 
-4. Navigeer naar **forest: contoso. local** > **domeinen** > **contoso.** > Local**domein controllers** > **standaard beleid voor domein controllers**. Een informatief bericht wordt weergegeven.
+4. Navigeer naar **forest: contoso. local**  >  **domeinen**  >  **contoso.** Local  >  **domein controllers**  >  **standaard beleid voor domein controllers**. Een informatief bericht wordt weergegeven.
 
     ![Schermopname van het venster Standaardbeleid voor domeincontrollers](media/pam-group-policy-management.jpg)
 
 5. Klik met de rechtermuisknop op **Standaardbeleid voor domeincontrollers** en selecteer **Bewerken**. Er wordt een nieuw venster weergegeven.
 
-6. Navigeer in het venster Groepsbeleidsbeheer-editor, onder de standaard beleids structuur van domein controllers, **naar computer configuratie** > **beleid** > **Windows-instellingen** > **beveiligings instellingen** > **lokaal beleid** > **controle beleid**.
+6. Navigeer in het venster Groepsbeleidsbeheer-editor, onder de standaard beleids structuur van domein controllers, naar **computer configuratie**  >  **beleid**  >  **Windows-instellingen**  >  **beveiligings instellingen**  >  **lokaal beleid**  >  **controle beleid**.
 
     ![Schermopname van het venster Groepsbeleidsbeheer-editor](media/pam-group-policy-management-editor.jpg)
 
@@ -240,7 +240,7 @@ Met de volgende stappen schakelt u leestoegang in voor de gebruiker *PRIV\Admini
 
 ### <a name="6-a-break-glass-account"></a>6. een account voor een afbreek glazen
 
-Als het Privileged Access Management-project als doel heeft het verminderen van het aantal accounts met domeinbeheerdersbevoegdheden die permanent zijn toegewezen aan het domein, moet het domein een *nood*account bevatten, voor het geval er later een probleem ontstaat met de vertrouwensrelatie. In elk domein moeten accounts voor noodtoegang tot het productieforest bestaan. Deze accounts moeten alleen kunnen aanmelden op domeincontrollers. Voor organisaties met meerdere sites zijn mogelijk extra accounts vereist voor redundantie.
+Als het Privileged Access Management-project als doel heeft het verminderen van het aantal accounts met domeinbeheerdersbevoegdheden die permanent zijn toegewezen aan het domein, moet het domein een *nood* account bevatten, voor het geval er later een probleem ontstaat met de vertrouwensrelatie. In elk domein moeten accounts voor noodtoegang tot het productieforest bestaan. Deze accounts moeten alleen kunnen aanmelden op domeincontrollers. Voor organisaties met meerdere sites zijn mogelijk extra accounts vereist voor redundantie.
 
 ### <a name="7-update-permissions-in-the-bastion-environment"></a>7. de machtigingen bijwerken in de Bastion omgeving
 
