@@ -13,16 +13,16 @@ ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.tgt_pltfrm: na
 ms.workload: identity
-ms.date: 11/11/2020
+ms.date: 12/31/2020
 ms.author: esergeev
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: ba69b18f3712384da79095d625eb9008a07b741e
-ms.sourcegitcommit: dae61d97c9db5402d35e2757a1ce844d16236032
+ms.openlocfilehash: 84eae9e65a2ea65c210e026ccafa58d95c434539
+ms.sourcegitcommit: 36752980300a51a0b30442ea23b9934eb8b5c752
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94532117"
+ms.lasthandoff: 12/31/2020
+ms.locfileid: "97835309"
 ---
 # <a name="connector-version-release-history"></a>Releasegeschiedenis van connectorversie
 
@@ -44,6 +44,11 @@ Gerelateerde links:
 * Naslag documentatie voor [Power shell-connector](microsoft-identity-manager-2016-connector-powershell.md)
 * Referentie documentatie voor [Lotus Domino-connector](microsoft-identity-manager-2016-connector-domino.md)
 * Naslag documentatie voor [share point-gebruikers profiel archief-connector](https://go.microsoft.com/fwlink/?LinkID=331344)
+
+## <a name="1113470-december-2020"></a>1.1.1347.0 (december 2020)
+### <a name="fixed-issues"></a>Opgeloste problemen
+- Graph-connector
+  - Er is een probleem opgelost met een connector die onjuiste B2B-uitnodigingen verzendt bij het maken van een e-mail groep of contact persoon
 
 ## <a name="1113460-november-2020"></a>1.1.1346.0 (november 2020)
 ### <a name="fixed-issues"></a>Opgeloste problemen
@@ -91,7 +96,7 @@ Gerelateerde links:
 - Lotus Notes-Connector
    - Groepen uit secundaire Notes-adres boeken worden niet langer verwijderd door het *AdminP* -proces. De bewerking direct verwijderen wordt nu gebruikt
 - Algemene LDAP-connector
-   - Er is een fout opgelost met kenmerken van LDAP-Directory bewerkingen, bijvoorbeeld *pwdUpdateTime* , niet zichtbaar in schema
+   - Er is een fout opgelost met kenmerken van LDAP-Directory bewerkingen, bijvoorbeeld *pwdUpdateTime*, niet zichtbaar in schema
 ### <a name="enhancements"></a>Verbeteringen 
 - Graph-connector   
    - Upn's van externe gast gebruikers worden niet meer weer gegeven als-is. in plaats daarvan worden ze weer gegeven in connector ruimte om te zien als e-mail berichten
@@ -101,10 +106,10 @@ Gerelateerde links:
    - Machtigingen verlenen om gasten uit te nodigen voor uw Azure AD-toepassing die is gekoppeld aan Graph connector
    - De sectie connector configuratie volt ooien voor het uitnodigen van externe gebruikers: Stel de omleidings-URL voor uitnodigen (verplicht) in en kies of u e-mail berichten wilt verzenden
    - Stel de verplichte kenmerken in uw regel voor uitgaande synchronisatie in:
-     - ' Gast ' => *User type* (alleen eerste stroom)
-     - extern e-mail adres => *userPrincipalName*
-     - CustomExpression ("CN =" + csObjectID + ", OBJECT = User") => *DN* (alleen eerste stroom)
-     - csObjectID => *id* (alleen eerste stroom)
+     - ' Gast ' =>*User type* (alleen eerste stroom)
+     - extern e-mail adres =>*userPrincipalName*
+     - CustomExpression ("CN =" + csObjectID + ", OBJECT = User") =>*DN* (alleen eerste stroom)
+     - csObjectID =>*id* (alleen eerste stroom)
 
 ## <a name="1111300-february-2020"></a>1.1.1130.0 (februari 2020)
 ### <a name="fixed-issues"></a>Opgeloste problemen
@@ -218,7 +223,7 @@ Gerelateerde links:
 ### <a name="enhancements"></a>Opties
 * Lotus Notes: * de mogelijkheid toevoegen om de time-out te verhogen via de gebruikers interface
 * Graph connector (open bare preview) * het wachtwoord kenmerk wordt gefilterd bij het importeren om te voor komen dat de export niet opnieuw is geïmporteerd.
-    * Voeg ondersteuning toe van $filter query parameter: beperkt tot bewerkingen met alle filters die in de Delta query werken, werkt ook in de connector * is bijgewerkt om nextLink direct te gebruiken in plaats van Skip token te [here](https://developer.microsoft.com/en-us/graph/docs/concepts/paging) extra heren voor paginerings gegevens
+    * Voeg ondersteuning toe van $filter query parameter: beperkt tot bewerkingen met alle filters die in de Delta query werken, werkt ook in de connector * is bijgewerkt om nextLink direct te gebruiken in plaats van Skip token te [](https://developer.microsoft.com/en-us/graph/docs/concepts/paging) extra heren voor paginerings gegevens
 
 ## <a name="118300"></a>1.1.830.0
 
@@ -433,7 +438,7 @@ Vóór 2016 maart zijn de connectors uitgebracht als ondersteunings onderwerpen.
 > [!NOTE]
 > Bij het bijwerken van Microsoft Identity Manager-of AADConnect met gebruik van een van de ECMA2-connectors. 
 
-U moet de connector definitie vernieuwen bij een upgrade naar Match of u ontvangt de volgende fout melding in het gebeurtenis logboek van de toepassing start to Report Warning ID 6947: "assembly-versie in AAD connector Configuration (" X.X.XXX. X ') is vroeger dan de werkelijke versie (' X.X.XXX. X ') van ' C:\Program Files\Microsoft Azure AD Sync\Extensions\Microsoft.IAM.Connector.GenericLdap.dll '.
+U moet de connector definitie vernieuwen bij een upgrade naar Match of u ontvangt de volgende fout melding in het gebeurtenis logboek van de toepassing start to Report Warning log ID 6947: "assembly-versie in AAD connector Configuration (" X. X. XXX. X ") is vroeger dan de werkelijke versie (X. X. XXX. X") van "C:\Program Files\Microsoft Azure AD Sync\Extensions\Microsoft.IAM.Connector.GenericLdap.dll".
 
 De definitie vernieuwen:
 * De eigenschappen voor de connector instantie openen
