@@ -5,15 +5,15 @@ keywords: ''
 author: billmath
 ms.author: billmath
 manager: daveba
-ms.date: 10/18/2019
+ms.date: 1/5/2021
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.openlocfilehash: 66cb97afa69decfde8df9f3c78f15c48abd7982b
-ms.sourcegitcommit: d6178a67014d66d37056c13d10328ae03e3cd781
+ms.openlocfilehash: 280a0c63aa10c2d8c5a805d97486d95471702831
+ms.sourcegitcommit: 8f81767ec92e1b80658aaebb9463aa4d62396d43
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88970376"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97927656"
 ---
 # <a name="microsoft-identity-manager-2016-news-and-updates"></a>Microsoft Identity Manager 2016 nieuws en updates
 
@@ -25,13 +25,13 @@ Met MIM kan een organisatie het beheer van de identiteits levenscyclus vereenvou
  - Integratie van de inhoud van directory's met HR-systemen en andere bron instanties
  - Identiteiten synchroniseren tussen directory's, data bases en on-premises toepassingen via algemene Api's en protocollen, door micro soft geleverde connectors en door partners geleverde connectors
 
-De huidige releases onder algemene ondersteuning zijn MIM 2016 Service Pack 1 en Service Pack 2 (SP2).  Klanten die FIM of MIM-versies voorafgaand aan MIM 2016 SP1 uitvoeren, moeten een upgrade uitvoeren naar MIM 2016 SP2 of een latere hotfix.
+De huidige MIM-releases die worden ondersteund onder vast en ondersteunings beleid voor Azure, zijn MIM 2016 Service Pack 2 (SP2) en latere hotfixes.  Klanten die FIM of MIM-versies voorafgaand aan MIM 2016 SP2 uitvoeren, moeten een upgrade uitvoeren naar MIM 2016 SP2 of een latere hotfix.
 
-Micro soft levert regel matig updates aan MIM, inclusief verbeteringen voor klant aanvragen en probleem oplossingen, op een doorlopende versie cyclus.
+Micro soft levert regel matig updates aan MIM, waaronder verbeteringen voor klant aanvragen en probleem oplossingen, in een doorlopende versie cyclus via hotfixes en service packs. Raadpleeg de [versie geschiedenis](./reference/version-history.md) voor koppelingen naar de meest recente.
 
 ## <a name="updates-in-mim-2016-sp2"></a>Updates in MIM 2016 SP2
 
-MIM 2016 Service Pack 2 is een samen telling van bestaande hotfixes sinds MIM 2016 SP1. Ook wordt de optie geïntroduceerd voor het configureren van het gebruik van door groepen beheerde service accounts voor de MIM-synchronisatie service en de MIM-service, waardoor MIM kan worden geïmplementeerd met andere bijgewerkte platform software. Meer informatie vindt u in de [release geschiedenis van de MIM 2016-versie](./reference/version-history.md)
+MIM 2016 Service Pack 2 is een samen telling van bestaande hotfixes sinds MIM 2016 SP1. Ook wordt de optie geïntroduceerd voor het configureren van het gebruik van door groepen beheerde service accounts voor de MIM-synchronisatie service en de MIM-service, waardoor MIM kan worden geïmplementeerd met andere bijgewerkte platform software. Meer informatie vindt u in de [release geschiedenis van de MIM 2016-versie](./reference/version-history.md).
 
 ### <a name="support-update-for-azure-active-directory-premium-customers"></a>Ondersteuning voor Azure Active Directory Premium klanten
 Voor Azure AD Premium klanten is de standaard ondersteuning vanaf juni 2020 tot en met na januari 2021 beschikbaar. Zie het [Azure AD-ondersteunings proces](support-update-for-azure-active-directory-premium-customers.md)voor meer informatie.
@@ -44,11 +44,9 @@ Voor Azure AD Premium klanten is de standaard ondersteuning vanaf juni 2020 tot 
 
 ### <a name="recent-software-releases"></a>Recente software releases
 
-- [Release van MIM-connector](./reference/microsoft-identity-manager-2016-connector-version-history.md), laatst bijgewerkt: juli 2019
-- [MIM-synchronisatie, service, portal, cm, invoeg toepassingen en client releases](./reference/version-history.md) laatst bijgewerkt: oktober 2019
+- [Release van MIM-connector](./reference/microsoft-identity-manager-2016-connector-version-history.md), laatst bijgewerkt: december 2020
+- [MIM Sync, service, portal, cm, invoeg toepassingen en client releases](./reference/version-history.md) laatst bijgewerkt: november 2020
 - [MIM BHOLD modules-releases](./reference/version-bhold-history.md) laatst bijgewerkt op oktober 2018
-
-
 
 
 ## <a name="related-topics"></a>Verwante onderwerpen

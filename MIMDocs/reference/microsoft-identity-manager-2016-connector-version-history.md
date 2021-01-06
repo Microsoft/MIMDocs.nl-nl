@@ -17,12 +17,12 @@ ms.date: 12/31/2020
 ms.author: esergeev
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 84eae9e65a2ea65c210e026ccafa58d95c434539
-ms.sourcegitcommit: 36752980300a51a0b30442ea23b9934eb8b5c752
+ms.openlocfilehash: f0b61059f9010523fa4f7b6a6ced987e5ab2dc49
+ms.sourcegitcommit: 8f81767ec92e1b80658aaebb9463aa4d62396d43
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 12/31/2020
-ms.locfileid: "97835309"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97927690"
 ---
 # <a name="connector-version-release-history"></a>Releasegeschiedenis van connectorversie
 
@@ -32,7 +32,7 @@ Connectors koppelen specifieke verbonden gegevens bronnen aan Microsoft Identity
 > Dit onderwerp is voornamelijk op FIM-en MIM-connectors. Tenzij hieronder uitdrukkelijk wordt genoemd, worden deze connectors niet ondersteund voor installatie op Azure AD Connect. Uitgegeven connectors zijn vooraf geïnstalleerd op Azure AD Connect bij het upgraden naar de opgegeven build.
 
 
-In dit onderwerp vindt u een lijst met alle versies van het pakket algemene connectors die los van MIM zijn vrijgegeven.  Zie [ondersteunde connectors in MIM 2016 SP1](../supported-management-agents.md)voor een lijst met connectors die worden ondersteund met mim.  Sommige partners hebben op deze manier hun eigen connectors gemaakt en een volledige lijst is beschikbaar in de wiki [FIM 2010 en MIM 2016: beheer agenten van partners](https://social.technet.microsoft.com/wiki/contents/articles/1589.fim-2010-mim-2016-management-agents-from-partners.aspx).
+In dit onderwerp vindt u een lijst met alle versies van het pakket generic connectors dat afzonderlijk van MIM is vrijgegeven.  Zie [ondersteunde connectors in MIM 2016 SP2](../supported-management-agents.md)voor een lijst met connectors die worden ondersteund met mim.  Sommige partners hebben op deze manier hun eigen connectors gemaakt en een volledige lijst is beschikbaar in de wiki [FIM 2010 en MIM 2016: beheer agenten van partners](https://social.technet.microsoft.com/wiki/contents/articles/1589.fim-2010-mim-2016-management-agents-from-partners.aspx).
 
 
 Gerelateerde links:
@@ -464,4 +464,8 @@ De Azure AD-connector voor FIM was een vroege technologie voor het synchronisere
 
 ## <a name="next-steps"></a>Volgende stappen
 
-Meer informatie over de [algemene documentatie over LDAP-connectors](microsoft-identity-manager-2016-connector-genericldap.md) vindt u meer informatie over de naslag documentatie over[algemene SQL-connectors](microsoft-identity-manager-2016-connector-genericsql.md) meer informatie over de naslag documentatie voor [Web Services-connectors](microsoft-identity-manager-2016-ma-ws.md) meer informatie over de referentie documentatie voor de [Power shell](microsoft-identity-manager-2016-connector-powershell.md) -connector voor meer informatie over de naslag documentatie over de [Lotus Domino-connector](microsoft-identity-manager-2016-connector-domino.md)
+Meer informatie over de naslag documentatie over de [algemene LDAP-connector](microsoft-identity-manager-2016-connector-genericldap.md) .
+Meer informatie over de naslag documentatie over de[algemene SQL-connector](microsoft-identity-manager-2016-connector-genericsql.md) .
+Meer informatie over de naslag documentatie voor [webservices-connectors](microsoft-identity-manager-2016-ma-ws.md) .
+Meer informatie over de naslag documentatie voor [Power shell-connectors](microsoft-identity-manager-2016-connector-powershell.md) .
+Meer informatie over de referentie documentatie voor de [Lotus Domino-connector](microsoft-identity-manager-2016-connector-domino.md) .
