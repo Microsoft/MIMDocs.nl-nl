@@ -1,6 +1,6 @@
 ---
 title: PAM implementeren - Stap 1 - CORP-domein | Microsoft Docs
-description: Het CORP-domein voorbereiden met bestaande of nieuwe identiteiten die worden beheerd door Privileged Identity Manager
+description: Het CORP-domein voorbereiden met bestaande of nieuwe identiteiten die worden beheerd door Microsoft Identity Manager
 keywords: ''
 author: billmath
 ms.author: billmath
@@ -11,19 +11,19 @@ ms.prod: microsoft-identity-manager
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: c21228dad923d80ab63c255c1184b7de04a0ff3d
-ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
+ms.openlocfilehash: 4c9c5736d0215d0423eb989dc5a194a0a00c3c50
+ms.sourcegitcommit: 89511939730501458295fc8499490b2b378ce637
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79043729"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98010421"
 ---
 # <a name="step-1---prepare-the-host-and-the-corp-domain"></a>Stap 1: de host en het domein CORP voorbereiden
 
 > [!div class="step-by-step"]
 > [Stap 2»](step-2-prepare-priv-domain-controller.md)
 
-In deze stap bereidt u het hosten van de bastionomgeving voor. Indien nodig, maakt u ook een domeincontroller en een lidwerkstation in een nieuw domein en forest (het *CORP*forest) met identiteiten die worden beheerd door de bastionomgeving. Dit CORP-forest komt overeen met een bestaand forest dat resources heeft om te worden beheerd. Dit document bevat een voorbeeldresource die moet worden beveiligd; een bestandsshare.
+In deze stap bereidt u het hosten van de bastionomgeving voor. Indien nodig, maakt u ook een domeincontroller en een lidwerkstation in een nieuw domein en forest (het *CORP* forest) met identiteiten die worden beheerd door de bastionomgeving. Dit CORP-forest komt overeen met een bestaand forest dat resources heeft om te worden beheerd. Dit document bevat een voorbeeldresource die moet worden beveiligd; een bestandsshare.
 
 Als u al een bestaand Active Directory-domein (AD) met een domeincontroller met Windows Server 2012 R2 of hoger hebt waarvan u een domeinbeheerder bent, kunt u dat domein gebruiken.  
 
@@ -33,17 +33,17 @@ In dit gedeelte wordt beschreven hoe u een domeincontroller voor een CORP-domein
 
 ### <a name="install-windows-server"></a>Windows Server installeren
 
-Installeer Windows Server 2012 R2 of Windows Server 2016 Technical Preview 4 of hoger op een virtuele machine om een computer te maken met de naam *CORPDC*.
+Installeer Windows Server 2012 R2 of later op een virtuele machine om een computer te maken met de naam *CORPDC*.
 
-1. Kies **Windows Server 2012 R2 Standard (server met een GUI) x64** of **Windows Server 2016 Technical Preview (server met bureaubladbelevenis)**.
+1. Kies **Windows Server 2012 R2 Standard (server met een GUI) x64** of **Windows Server 2016 (server met bureaublad ervaring)**.
 
 2. Lees en accepteer de licentievoorwaarden.
 
 3. Omdat de schijf leeg is, selecteert u **aangepast: alleen Windows installeren** en de niet-geïnitialiseerde schijf ruimte gebruiken.
 
-4. Meld u als beheerder aan bij deze nieuwe computer. Ga naar Configuratiescherm. Stel de naam van de computer in op *CORPDC*, en wijs hieraan een statisch IP-adres op het virtuele netwerk toe. Start de server opnieuw op.
+4. Meld u als beheerder aan bij deze nieuwe computer. Ga naar Configuratiescherm. Stel de naam van de computer in op *CORPDC*, en wijs hieraan een statisch IP-adres op het virtuele netwerk toe. Start de server opnieuw.
 
-5. Nadat de server opnieuw is opgestart, moet u zich aanmelden als een beheerder. Ga naar Configuratiescherm. Configureer de computer om te controleren op updates en installeer alle vereiste updates. Start de server opnieuw op.
+5. Nadat de server opnieuw is opgestart, moet u zich aanmelden als een beheerder. Ga naar Configuratiescherm. Configureer de computer om te controleren op updates en installeer alle vereiste updates. Start de server opnieuw.
 
 ### <a name="add-roles-to-establish-a-domain-controller"></a>Functies toevoegen voor het maken van een domeincontroller
 
@@ -117,19 +117,19 @@ Maak een beveiligingsgroep met de naam *CorpAdmins* en een gebruiker met de naam
    Set-ADUser –identity Jen –Enabled 1 -DisplayName "Jen"
    ```
 
-### <a name="configure-auditing"></a>Controle configureren
+### <a name="configure-auditing"></a>Controles configureren
 
 U moet controle van bestaande forests inschakelen om de PAM-configuratie op die forests tot stand te brengen.  
 
 Meld u bij elk domein aan bij een domeincontroller als een domeinbeheerder en voer de volgende stappen uit:
 
-1. Ga naar **Start** > **systeem beheer** (of, op Windows Server 2016, **Windows-beheer Programma's**) en start **Groepsbeleid-beheer**.
+1. Ga naar **Start**  >  **systeem beheer** (of, op Windows Server 2016, **Windows-beheer Programma's**) en start **Groepsbeleid-beheer**.
 
-2. Navigeer naar het beleid voor domeincontrollers voor dit domein.  Als u een nieuw domein voor contoso. local hebt gemaakt, gaat u naar **forest: contoso. local** > **domeinen** > **contoso. local** > **domein controllers** > **standaard beleid voor domein controllers**. Een informatief bericht wordt weergegeven.
+2. Navigeer naar het beleid voor domeincontrollers voor dit domein.  Als u een nieuw domein voor contoso. local hebt gemaakt, gaat u naar **forest: contoso. local**  >  **domeinen**  >  **contoso. local**  >  **domein controllers**  >  **standaard beleid voor domein controllers**. Een informatief bericht wordt weergegeven.
 
 3. Klik met de rechtermuisknop op **Standaardbeleid voor domeincontrollers** en selecteer **Bewerken**. Een nieuw venster wordt weergegeven.
 
-4. Navigeer in het venster Groepsbeleidsbeheer-editor, onder de standaard beleids structuur van domein controllers, **naar computer configuratie** > **beleid** > **Windows-instellingen** > **beveiligings instellingen** > **lokaal beleid** > **controle beleid**.
+4. Navigeer in het venster Groepsbeleidsbeheer-editor, onder de standaard beleids structuur van domein controllers, naar **computer configuratie**  >  **beleid**  >  **Windows-instellingen**  >  **beveiligings instellingen**  >  **lokaal beleid**  >  **controle beleid**.
 
 5. Klik in het detailvenster met de rechtermuisknop op **Accountbeheer controleren** en selecteer **Eigenschappen**. Selecteer **Deze beleidsinstellingen vastleggen**, schakel achtereenvolgens de selectievakjes **Geslaagd** en **Mislukt** in, klik op **Toepassen** en tenslotte op **OK**.
 

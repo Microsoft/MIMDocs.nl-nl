@@ -11,24 +11,24 @@ ms.prod: microsoft-identity-manager
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: 34a4fbc2ada0c54cabb128af5ca90e2e89e06517
-ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
+ms.openlocfilehash: 79b3547564fd5dd7874ffc53a7df50cb50ad3d49
+ms.sourcegitcommit: 89511939730501458295fc8499490b2b378ce637
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79043865"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98010673"
 ---
 # <a name="pam-deployment-scripts-addendum"></a>Bijlage PAM-implementatiescripts:
 
 ## <a name="addendum-1-setting-up-the-priv-domain"></a>Bijlage 1 instellen van het PRIV-domein
 
-Nadat het gecomprimeerde bestand in de map $env:SYSTEMDRIVE\PAM is uitgepakt, bewerkt u het bestand MDeploymentConfig.xm, zodat details over het PRIV-forest worden weergegeven. Werk de DNS-naam, de NetBIOS-naam, de DC-naam en het Database/logboekpad & Sysvol-pad bij. Ook het domein & ForestMode bijwerken. Als u Windows Server Technical Preview 5 test, stel de DomainMode & ForestMode in op WinThreshold.
+Nadat het gecomprimeerde bestand in de map $env:SYSTEMDRIVE\PAM is uitgepakt, bewerkt u het bestand MDeploymentConfig.xm, zodat details over het PRIV-forest worden weergegeven. Werk de DNSName, de NetBIOS-naam, de domein controller, de data base/het logboekpad & pad naar de map SYSVOL. Ook het domein & ForestMode bijwerken. Als u Windows Server 2016 of hoger gebruikt, stelt u de domain mode-& ForestMode in op Windows Server 2016 (WinThreshold).
 
-1. Meld u aan bij het PRIV-domein als administrator
+1. Meld u als Administrator aan bij het PRIV-domein.
 2. Voer PowerShell uit als Administrator
 3. cd $env:SYSTEMDRIVE\PAM
 4. import-module .\PAMDeployment.ps1
-5. Selecteer menuoptie 9 (Priv Forest setup)
+5. Selecteer menu optie 9 (PRIV-forest-installatie)
 
 
 De domeincontroller wordt automatisch opnieuw opgestart na de voltooiing. Het administratorwachtwoord van Directory Services Restore Mode (DSRM) moet voldoen aan de volgende criteria:
@@ -40,9 +40,9 @@ De domeincontroller wordt automatisch opnieuw opgestart na de voltooiing. Het ad
 
 ## <a name="addendum-2-setting-up-the-corp-domain"></a>Bijlage 2 Het CORP-domein instellen
 
-Als u net aan de slag gaat met PAM en een testomgeving wilt opstarten, kunt u met dit script ook de configuratie van een CORP-domein uitvoeren. Nadat het gecomprimeerde bestand in de map $env:SYSTEMDRIVE\PAM is uitgepakt, bewerkt u het bestand AMDeploymentConfig.xm, zodat details over het PRIV-forest worden weergegeven. Werk de DNS-naam, NetBIOS-naam, DC-naam/pad naar logboek en pad voor Sysvol bij. Het functionele niveau moet minstens Windows Server 2012 R2 zijn.
+Als u net gewoon met de PAM-out gaat en een test omgeving wilt instellen, kunt u met het script ook de configuratie van een CORP-domein. Nadat het gecomprimeerde bestand in de map $env:SYSTEMDRIVE\PAM is uitgepakt, bewerkt u het bestand AMDeploymentConfig.xm, zodat details over het PRIV-forest worden weergegeven. Werk de DNSName, de naam van het pad, de data base/het logboekpad en het pad van de SYSVOL-map bij. Het functionele niveau moet minstens Windows Server 2012 R2 zijn.
 
-1. Meld u aan bij het CORP-domein als administrator
+1. Meld u als beheerder aan bij het CORP-domein DC
 2. Voer PowerShell uit als Administrator
 3. cd $env:SYSTEMDRIVE\PAM
 4. import-module .\PAMDeployment.ps1
@@ -53,14 +53,14 @@ De domeincontroller wordt automatisch opnieuw opgestart nadat deze is voltooid
 ## <a name="addendum-3-setting-up-a-corp-client-to-do-the-validation"></a>Bijlage 3 Een CORP-client instellen voor de validatie
 
 De ClientBinaryLocation in het configuratiebestand moet verwijzen naar de locatie waarin setup.exe zich bevindt.
-Meld u aan bij de client als een lokale administrator en voer de volgende opdrachten uit in PowerShell-venster met verhoogde bevoegdheid:
+Meld u aan bij de client als lokale beheerder en voer de volgende opdrachten uit in een Power shell-venster met verhoogde bevoegdheden:
 
 1. cd $env:SYSTEMDRIVE\PAM
 2. Import-module .\PAMDeployment.ps1
 3. Selecteer menuoptie 7 (MIM PAM Client Setup)
 
 
-Als de machine niet verbonden met het verbonden domein, worden de referentie van het CORP-domein opgevraagd om de verbinding met het domein uit te voeren. De computer moet opnieuw worden opgestart na het verbinden met het domein. Meld u aan bij de client als lokale administrator en de volgende opdrachten uit in een PowerShell-venster met verhoogde bevoegdheid:
+Als de machine niet verbonden met het verbonden domein, worden de referentie van het CORP-domein opgevraagd om de verbinding met het domein uit te voeren. De computer moet opnieuw worden opgestart na het verbinden met het domein. Meld u opnieuw aan bij de client als lokale beheerder en voer de volgende opdrachten uit vanuit een Power shell-venster met verhoogde bevoegdheid:
 
 1. cd $env:SYSTEMDRIVE\PAM
 2. Import-module .\PAMDeployment.ps1
@@ -70,4 +70,4 @@ Ga verder met stap 8 hierboven.
 
 ## <a name="addendum-4-if-something-goes-wrong"></a>Bijlage 4 als er iets verkeerd gaat
 
-Alle scriptlogboeken worden opgeslagen in %AppData%\MIMPAMInstall. Comprimeer de map in een zip-bestand en stuur een e-mail [mim2016@microsoft.com](mailto:mim2016@microsoft.com) naar samen met details van de bewerking en de fout.
+Alle scriptlogboeken worden opgeslagen in %AppData%\MIMPAMInstall. Als dit nodig is voor ondersteuning, comprimeert u de map in een zip-bestand, samen met details van de bewerking en de fout.

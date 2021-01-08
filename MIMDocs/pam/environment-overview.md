@@ -5,21 +5,22 @@ keywords: ''
 author: billmath
 ms.author: billmath
 manager: daveba
-ms.date: 08/31/2017
+ms.date: 01/05/2021
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 479db14c-1bfb-4d7c-a344-cd718a01f328
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: c758bd924c6f7272a44567c2e9dc919215cdd273
-ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
+ms.openlocfilehash: ca306e7521bbdc2200663889becd91b1ae952d5a
+ms.sourcegitcommit: 89511939730501458295fc8499490b2b378ce637
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79044001"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98010656"
 ---
-# <a name="environment-overview"></a>Overzicht van de omgeving
+# <a name="mim-pam-test-lab-environment-overview"></a>Overzicht van de test omgeving voor MIM PAM
 
+Als u een testlab van MIM PAM wilt instellen, kunt u de software installeren op virtuele machines.
 Privileged Access Management (PAM) werkt met virtuele machines (VM's) met aparte stations die via een gedeeld netwerk met elkaar zijn verbonden. Deze virtuele machines kunnen worden gehost met Windows 8.1, Windows Server 2012 R2 of andere besturingssystemen.
 
 ![PAM-servers: relaties en ondersteunde platformen - diagram](media/pam-test-lab-architecture.png)

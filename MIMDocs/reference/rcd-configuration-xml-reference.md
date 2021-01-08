@@ -9,16 +9,16 @@ ms.date: 09/26/2017
 ms.topic: reference
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
-ms.openlocfilehash: e0912d09a0fd180be784b3eeefc17d5fd0449a3a
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.openlocfilehash: 0eedee975a785bd20ee37c85262a0c5f678b09b5
+ms.sourcegitcommit: 89511939730501458295fc8499490b2b378ce637
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "92758956"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98010707"
 ---
 # <a name="resource-control-display-configuration-xml-reference"></a>XML-referentie voor weergave configuratie voor bron besturings elementen
 
-Resource control display Configuration (RCDC) resources zijn door de gebruiker gedefinieerde resources die u kunt gebruiken om te bepalen hoe andere resources in het gegevens archief van de Microsoft Identity Manager 2016 SP1 (MIM) in de gebruikers interface (UI) worden weer gegeven voor de eind gebruiker. Elke RCDC-resource bevat een XML-configuratie bestand dat u kunt wijzigen om UI-tekst en UI-besturings elementen toe te voegen, te wijzigen of te verwijderen. Hoewel MIM 2016 SP1 verschillende standaard RCDC-resources biedt, kunt u ook aangepaste RCDC-resources maken voor aangepaste resources. Zie [Inleiding tot het configureren en aanpassen van de FIM-Portal](http://go.microsoft.com/fwlink/?LinkID=165848) in de FIM-documentatie voor meer informatie over het gebruik van de RCDC-gebruikers interface in de FIM-Portal.
+Resource control display Configuration (RCDC) resources zijn door de gebruiker gedefinieerde resources die u kunt gebruiken om te bepalen hoe andere resources in het gegevens archief van de Microsoft Identity Manager 2016 SP1 (MIM) in de gebruikers interface (UI) worden weer gegeven voor de eind gebruiker. Elke RCDC-resource bevat een XML-configuratie bestand dat u kunt wijzigen om UI-tekst en UI-besturings elementen toe te voegen, te wijzigen of te verwijderen. Hoewel MIM 2016 SP1 verschillende standaard RCDC-resources biedt, kunt u ook aangepaste RCDC-resources maken voor aangepaste resources. Zie [Inleiding tot het configureren en aanpassen van de FIM-Portal](/previous-versions/mim/ee534913(v=ws.10)) in de FIM-documentatie voor meer informatie over het gebruik van de RCDC-gebruikers interface in de FIM-Portal.
 
 
 ## <a name="known-issues"></a>Bekende problemen
@@ -53,17 +53,17 @@ Hier volgt het XSD-schema voor het element **ObjectControlConfiguration** :
 
 Het **ObjectControlConfiguration** -element bevat de volgende elementen:
 
-- **ObjectDataSource** : in dit element wordt de TypeName opgegeven van een gegevens bron klasse die door het resource control (RC) wordt gebruikt. Zie de sectie over de volgende gegevens bronnen in dit document voor een beschrijving en de schema definitie. Een **ObjectControlConfiguration** -element kan maxi maal 32 knoop punten van het element **ObjectDataSource** bevatten.
+- **ObjectDataSource**: in dit element wordt de TypeName opgegeven van een gegevens bron klasse die door het resource control (RC) wordt gebruikt. Zie de sectie over de volgende gegevens bronnen in dit document voor een beschrijving en de schema definitie. Een **ObjectControlConfiguration** -element kan maxi maal 32 knoop punten van het element **ObjectDataSource** bevatten.
 
-- **XmlDataSource** : dit is een eenvoudige gegevens bron die meestal wordt gebruikt om het ontwerp van een overzichts pagina op te geven. Zie de sectie over de volgende gegevens bronnen in dit document voor een beschrijving en de schema definitie. Een **ObjectControlConfiguration** :-element kan maxi maal 32 knoop punten van het **XmlDataSource** -element bevatten.
+- **XmlDataSource**: dit is een eenvoudige gegevens bron die meestal wordt gebruikt om het ontwerp van een overzichts pagina op te geven. Zie de sectie over de volgende gegevens bronnen in dit document voor een beschrijving en de schema definitie. Een **ObjectControlConfiguration**:-element kan maxi maal 32 knoop punten van het **XmlDataSource** -element bevatten.
 
-- **Paneel** : de beheerder kan de lay-out van de RCDC pagina aanpassen door elementen in de deel venster elementen te wijzigen. Zie de sectie van het deel venster verderop in dit document voor meer informatie. Een **ObjectControlConfiguration** -element mag slechts één panel element hebben.
+- **Paneel**: de beheerder kan de lay-out van de RCDC pagina aanpassen door elementen in de deel venster elementen te wijzigen. Zie de sectie van het deel venster verderop in dit document voor meer informatie. Een **ObjectControlConfiguration** -element mag slechts één panel element hebben.
 
-- **Gebeurtenissen** : beheerders kunnen geen aangepaste code opgeven achter deze functie is beperkt. Dit is de gebeurtenis die een paneel of een besturings element kan verzenden, op basis van een status wijziging. Zie de sectie gebeurtenissen verderop in dit document voor meer informatie. Een **ObjectControlConfiguration** -element kan optioneel één **gebeurtenis** element bevatten. In het algemeen wordt het gebruik van aangepaste **gebeurtenissen** niet ondersteund, tenzij specifiek is ontwikkeld in latere verbeteringen.
+- **Gebeurtenissen**: beheerders kunnen geen aangepaste code opgeven achter deze functie is beperkt. Dit is de gebeurtenis die een paneel of een besturings element kan verzenden, op basis van een status wijziging. Zie de sectie gebeurtenissen verderop in dit document voor meer informatie. Een **ObjectControlConfiguration** -element kan optioneel één **gebeurtenis** element bevatten. In het algemeen wordt het gebruik van aangepaste **gebeurtenissen** niet ondersteund, tenzij specifiek is ontwikkeld in latere verbeteringen.
 
 ## <a name="data-sources"></a>Gegevensbronnen
 
-Microsoft Identity Manager gebruikt gegevens bronnen als een manier om gegevens te binden aan UI-onderdelen. Dit helpt de schei ding van de gegevens van de presentatielaag te vereenvoudigen. Er zijn twee soorten gegevens bronnen in de configuratie gegevens van de RCDC-Bron: **ObjectDataSource** en **XmlDataSource** .
+Microsoft Identity Manager gebruikt gegevens bronnen als een manier om gegevens te binden aan UI-onderdelen. Dit helpt de schei ding van de gegevens van de presentatielaag te vereenvoudigen. Er zijn twee soorten gegevens bronnen in de configuratie gegevens van de RCDC-Bron: **ObjectDataSource** en **XmlDataSource**.
 
 -   **ObjectDataSources** geef een Microsoft .net klasse op die de gegevens aan de RC levert. Er is een vaste set beschik bare soorten ObjectDataSources die de beheerder kan kiezen om te gebruiken bij het ontwerpen van RCDCs.
 
@@ -110,7 +110,7 @@ U kunt met behulp van een **XMLDataSource** -element aangepaste gegevens opgeven
 |---|---|---|---|
 | **XMLDataSource**            | De gegevens bron bevat XML-gegevens. De gegevens kunnen in XSL-of Inge sloten XSL-indeling zijn:<ul><li>XSL-indeling in Microsoft.IdentityManagement.WebUI.Controls.dll:<br/>```<my:XmlDataSource my:Name="summaryTransformXsl" my:Parameters="Microsoft.IdentityManagement. WebUI.Controls.Resources.DefaultSummary.xsl"> </my:XmlDataSource>```</li><li>Inge sloten XSL-indeling:<br/>```<my:XmlDataSource my:Name="RequestStatusTransformXsl"><xsl:stylesheet version="1.0" xmlns:xsl=http://www.w3.org/1999/XSL/Transform xmlns:msxsl="urn:schemas-microsoft-com:xslt"></xsl:stylesheet></my:XmlDataSource>```</li></ul>  | Nee | `Xpath[;namespaces]`waar `Xpath` is een geldig XML-XPath om de vereiste notitie te selecteren, meestal '/' (root). `namespaces` is een optionele lijst met voor voegsel = URI-teken reeksen. De teken reeks wordt gescheiden door punt komma's als vereist om het XPath te laten werken aan de naam ruimte-XML. |
 | **ReferenceDeltaDataSource** | De gegevens bron vertegenwoordigt Deltas van verwijzings kenmerken met meerdere waarden. Het wordt alleen gebruikt voor de groep en het instellen van RCDC. <br/> Hoewel de gegevens bron niet beperkt is tot groepen of sets, is het vereist dat code wijzigingen in de RCDC-host deze verschillen indienen. Op dit moment zijn groep en set de enige hosts die deze gegevens bron herkennen.  | Ja | `[AttributeName].Add` waar `[AttributeName]` staat voor een referentie kenmerk en de geretourneerde gegevens zijn de Delta toevoegingen.<ul><li>Voorbeeld: `[ReferenceAttribute].Add`</li><li>Voorbeeld: `<my:Property my:Name="Value" my:Value="{Binding Source=delta, Path=ExplicitMember.Add, Mode=TwoWay}"/>`</li></ul>`[AttributeName].Remove` waar `[AttributeName]` staat voor een verwijzings kenmerk en de geretourneerde gegevens zijn de Delta-verwijderingen. <br/> DeltaXml <!-- Is bold formatting needed for DeltaXml? --> |
-|**RequestDetailsDataSource**| De gegevens bron vertegenwoordigt het RequestParameter-kenmerk van aanvraag objecten. Met de para meter wordt het maximum aantal kenmerk waarden ingesteld dat per kenmerk met meerdere waarden wordt weer gegeven, dat alleen in RCDC wordt gebruikt voor de aanvraag. `<my:ObjectDataSource my:TypeName="RequestDetailsDataSource" my:Name="requestDetails" my:Parameters="1000" />`| Nee | DeltaXml |
+|**RequestDetailsDataSource**| De gegevens bron vertegenwoordigt het RequestParameter-kenmerk van aanvraag objecten. Met de para meter stelt u het maximum aantal kenmerk waarden in dat moet worden weer gegeven per kenmerk met meerdere waarden. Het wordt alleen gebruikt in RCDC voor request. `<my:ObjectDataSource my:TypeName="RequestDetailsDataSource" my:Name="requestDetails" my:Parameters="1000" />`| Nee | DeltaXml |
 |**RequestStatusDataSource**| De gegevens bron vertegenwoordigt het **RequestStatusDetails** -kenmerk van aanvraag objecten. Het wordt alleen gebruikt in RCDC voor request. | Nee | DeltaXml |
 
 Als u een aangepaste XML-gegevens bron wilt definiëren, gebruikt u de volgende XML:
@@ -202,9 +202,9 @@ Hier volgt het XSD-schema voor het gebeurtenis element:
 
 Een **gebeurtenis** is een leeg element en heeft de volgende kenmerken:
 
-- **Naam** : dit is de unieke naam van een gebeurtenis. De enige ondersteunde gebeurtenis in **ObjectControlConfiguration** is de gebeurtenis Load. Deze gebeurtenis wordt geactiveerd wanneer de pagina voor het eerst wordt geladen.
+- **Naam**: dit is de unieke naam van een gebeurtenis. De enige ondersteunde gebeurtenis in **ObjectControlConfiguration** is de gebeurtenis Load. Deze gebeurtenis wordt geactiveerd wanneer de pagina voor het eerst wordt geladen.
 
-- **Handler** : dit is de unieke naam van een handler. Wanneer de gebeurtenis wordt geactiveerd, wordt meestal een programma methode aangeroepen om de wijziging van de status van het besturings element te verwerken. De volgende gevallen worden niet ondersteund:
+- **Handler**: dit is de unieke naam van een handler. Wanneer de gebeurtenis wordt geactiveerd, wordt meestal een programma methode aangeroepen om de wijziging van de status van het besturings element te verwerken. De volgende gevallen worden niet ondersteund:
 
    - Een bestaande handler verwijderen uit een bestaand besturings element.
    - Er wordt een nieuwe handler gemaakt.
@@ -235,17 +235,17 @@ Het **deel venster** element is het kern element in een RCDC-indeling. Hier volg
 </xsd:element>
 ```
 
-Het **deel venster** element bevat een terugkerend element, **groeperen** . Zie de sectie groepering in dit document voor meer informatie.
+Het **deel venster** element bevat een terugkerend element, **groeperen**. Zie de sectie groepering in dit document voor meer informatie.
 
 Het element panel heeft de volgende kenmerken:
 
-- **Name** : de naam van het paneel. Dit is een vereist kenmerk van het type teken reeks.
+- **Name**: de naam van het paneel. Dit is een vereist kenmerk van het type teken reeks.
 
-- **DisplayAsWizard** : dit kenmerk is momenteel afgeschaft. Het bijbehorende VerbContext-kenmerk in de RCDC bepaalt of de resource-indeling zich in de wizard modus of de tabblad modus bevindt. Als deze is ingesteld op 0 (aanmaak modus), is het ook in de modus Wizard. Anders is het de modus voor het tabblad. Zie Inleiding tot het configureren en aanpassen van de FIM-Portal in de documentatie voor meer informatie.
+- **DisplayAsWizard**: dit kenmerk is momenteel afgeschaft. Het bijbehorende VerbContext-kenmerk in de RCDC bepaalt of de resource-indeling zich in de wizard modus of de tabblad modus bevindt. Als deze is ingesteld op 0 (aanmaak modus), is het ook in de modus Wizard. Anders is het de modus voor het tabblad. Zie Inleiding tot het configureren en aanpassen van de FIM-Portal in de documentatie voor meer informatie.
 
-- **Bijschrift** : dit kenmerk is momenteel afgeschaft. De gebruiker kan bijschriften opgeven voor een pagina door een groep op te nemen die alleen koptekst informatie bevat. Zie de sectie groepering in dit document voor meer informatie.
+- **Bijschrift**: dit kenmerk is momenteel afgeschaft. De gebruiker kan bijschriften opgeven voor een pagina door een groep op te nemen die alleen koptekst informatie bevat. Zie de sectie groepering in dit document voor meer informatie.
 
-- **Autovalidate** : dit is een optioneel Booleaans kenmerk. Wanneer deze eigenschap is ingesteld op True, wordt de validatie geactiveerd voor elk besturings element op het huidige tabblad. Als het kenmerk ontbreekt, wordt het standaard ingesteld op True. Deze kan worden gebruikt in combi natie met de eigenschap RegularExpression. Zie ' RegularExpression ' in een latere sectie van dit document voor meer informatie.
+- **Autovalidate**: dit is een optioneel Booleaans kenmerk. Wanneer deze eigenschap is ingesteld op True, wordt de validatie geactiveerd voor elk besturings element op het huidige tabblad. Als het kenmerk ontbreekt, wordt het standaard ingesteld op True. Deze kan worden gebruikt in combi natie met de eigenschap RegularExpression. Zie ' RegularExpression ' in een latere sectie van dit document voor meer informatie.
 
 ## <a name="grouping-element"></a>Groepeer element
 Het **Groepeer** element definieert de algemene indeling van een paneel. Het fungeert als een container waarmee afzonderlijke besturings elementen worden gegroepeerd in verschillende secties en tabbladen. Hier volgt het XSD-schema voor het Groepeer element:
@@ -271,49 +271,49 @@ Het **Groepeer** element definieert de algemene indeling van een paneel. Het fun
 
 Er zijn drie typen **Groepeer** element:
 
-- **Groeperen in koptekst** : een header groepering is optioneel. Er kan slechts één header-groepering in een **deel venster** zijn. Een koptekst groepering wordt weer gegeven boven op een deel venster als bijschrift. Er kan slechts één UocCaptionControl worden gebruikt in deze groepering. Zie de sectie voor beeld voor een voor beeld van het groeperen van een header.
+- **Groeperen in koptekst**: een header groepering is optioneel. Er kan slechts één header-groepering in een **deel venster** zijn. Een koptekst groepering wordt weer gegeven boven op een deel venster als bijschrift. Er kan slechts één UocCaptionControl worden gebruikt in deze groepering. Zie de sectie voor beeld voor een voor beeld van het groeperen van een header.
 
-- **Inhouds groepering** : er is ten minste één inhouds groepering vereist. Er kunnen meerdere inhouds groepen in een paneel zijn. Een inhouds groepering wordt weer gegeven als de hoofd inhoud van een RCDC-pagina. Elke inhouds groepering wordt weer gegeven als een tabblad in hetzelfde deel venster en kan 1 tot 256 besturings elementen bevatten. Zie de sectie voor beelden voor een voor beeld van het **groeperen van inhoud** .
+- **Inhouds groepering**: er is ten minste één inhouds groepering vereist. Er kunnen meerdere inhouds groepen in een paneel zijn. Een inhouds groepering wordt weer gegeven als de hoofd inhoud van een RCDC-pagina. Elke inhouds groepering wordt weer gegeven als een tabblad in hetzelfde deel venster en kan 1 tot 256 besturings elementen bevatten. Zie de sectie voor beelden voor een voor beeld van het **groeperen van inhoud**.
 
-- **Samen vatting groeperen** : een overzichts groepering is optioneel. Er kan slechts één samen vatting worden gegroepeerd in een deel venster. Een overzichts groepering wordt weer gegeven als het laatste tabblad van een deel venster. Er kan slechts één **UocHtmlSummary** -besturings element worden gebruikt in een overzichts groepering om de wijzigingen weer te geven die de gebruiker heeft aangebracht voordat een aanvraag wordt ingediend. Zie de sectie voor beelden voor een voor beeld van het groeperen van een samen vatting.
+- **Samen vatting groeperen**: een overzichts groepering is optioneel. Er kan slechts één samen vatting worden gegroepeerd in een deel venster. Een overzichts groepering wordt weer gegeven als het laatste tabblad van een deel venster. Er kan slechts één **UocHtmlSummary** -besturings element worden gebruikt in een overzichts groepering om de wijzigingen weer te geven die de gebruiker heeft aangebracht voordat een aanvraag wordt ingediend. Zie de sectie voor beelden voor een voor beeld van het groeperen van een samen vatting.
 
 Elk groeperings type bevat de volgende elementen:
 
-- **Help** : dit element biedt Help-tekst op een tabblad. U kunt dit ook gebruiken om een koppeling toe te voegen aan een Help-bestand voor het tabblad.
+- **Help**: dit element biedt Help-tekst op een tabblad. U kunt dit ook gebruiken om een koppeling toe te voegen aan een Help-bestand voor het tabblad.
 
-- **Besturings elementen** : Zie de sectie besturings element in dit document voor meer informatie over dit element. Elke groepering moet 1 tot 256 besturings elementen omvatten, afhankelijk van het type groepering.
+- **Besturings elementen**: Zie de sectie besturings element in dit document voor meer informatie over dit element. Elke groepering moet 1 tot 256 besturings elementen omvatten, afhankelijk van het type groepering.
 
-- **Gebeurtenissen** : Zie de sectie gebeurtenissen in dit document voor meer informatie over dit element. Elke groepering kan als optie één gebeurtenis hebben. De gebeurtenissen die in een groepeer element worden ondersteund, zijn als volgt:
+- **Gebeurtenissen**: Zie de sectie gebeurtenissen in dit document voor meer informatie over dit element. Elke groepering kan als optie één gebeurtenis hebben. De gebeurtenissen die in een groepeer element worden ondersteund, zijn als volgt:
 
-    - **BeforeLeave** : deze gebeurtenis wordt geactiveerd wanneer de gebruiker klaar is om een tabblad in een inhouds groepering te verlaten.
-    - **AfterEnter** : deze gebeurtenis wordt geactiveerd wanneer de gebruiker klaar is om een tabblad in een inhouds groepering in te voeren.
+    - **BeforeLeave**: deze gebeurtenis wordt geactiveerd wanneer de gebruiker klaar is om een tabblad in een inhouds groepering te verlaten.
+    - **AfterEnter**: deze gebeurtenis wordt geactiveerd wanneer de gebruiker klaar is om een tabblad in een inhouds groepering in te voeren.
 
 Een groepering kan de volgende zeven kenmerken bevatten:
 
-- **Naam** : dit is de vereiste naam van de groepering. De **naam** moet uniek zijn binnen het **paneel** .
+- **Naam**: dit is de vereiste naam van de groepering. De **naam** moet uniek zijn binnen het **paneel**.
 
-- **Bijschrift** : het **Bijschrift** wordt weer gegeven als koptekst bijschrift in een koptekst groepering. Deze wordt weer gegeven als het bijschrift van een inhoud of samen vatting van een groepering.
+- **Bijschrift**: het **Bijschrift** wordt weer gegeven als koptekst bijschrift in een koptekst groepering. Deze wordt weer gegeven als het bijschrift van een inhoud of samen vatting van een groepering.
 
-- **Beschrijving** : een optioneel teken reeks kenmerk, **Beschrijving** is alleen functioneel wanneer het wordt gebruikt in een inhouds groepering. Gebruik dit element om de eind gebruiker enige details over de informatie op hetzelfde tabblad te geven.
-
-    >[!NOTE]
-    >Als dit kenmerk wordt gebruikt in een overzichts groepering, wordt de XML als ongeldig beschouwd. Als dit kenmerk wordt gebruikt in een koptekst groepering, wordt de XML beschouwd als geldig, maar genegeerd.
-    >
-
-- **Ingeschakeld** : een optioneel Booleaans kenmerk, dat is ingeschakeld, wordt ingesteld op waar als dit ontbreekt. Als ingeschakeld is ingesteld op ONWAAR, ziet de eind gebruiker een uitgeschakeld tabblad. Dit kenmerk werkt alleen in een groepering van inhoud.
+- **Beschrijving**: een optioneel teken reeks kenmerk, **Beschrijving** is alleen functioneel wanneer het wordt gebruikt in een inhouds groepering. Gebruik dit element om de eind gebruiker enige details over de informatie op hetzelfde tabblad te geven.
 
     >[!NOTE]
     >Als dit kenmerk wordt gebruikt in een overzichts groepering, wordt de XML als ongeldig beschouwd. Als dit kenmerk wordt gebruikt in een koptekst groepering, wordt de XML beschouwd als geldig, maar genegeerd.
     >
 
-- **Zichtbaar** : u kunt een RCDC-pagina of een kop verbergen door dit kenmerk op ONWAAR in te stellen. Standaard is dit optioneel, het kenmerk Boolean-type ingesteld op True. Dit kenmerk werkt alleen voor het groeperen van inhoud.
+- **Ingeschakeld**: een optioneel Booleaans kenmerk, dat is ingeschakeld, wordt ingesteld op waar als dit ontbreekt. Als ingeschakeld is ingesteld op ONWAAR, ziet de eind gebruiker een uitgeschakeld tabblad. Dit kenmerk werkt alleen in een groepering van inhoud.
+
+    >[!NOTE]
+    >Als dit kenmerk wordt gebruikt in een overzichts groepering, wordt de XML als ongeldig beschouwd. Als dit kenmerk wordt gebruikt in een koptekst groepering, wordt de XML beschouwd als geldig, maar genegeerd.
+    >
+
+- **Zichtbaar**: u kunt een RCDC-pagina of een kop verbergen door dit kenmerk op ONWAAR in te stellen. Standaard is dit optioneel, het kenmerk Boolean-type ingesteld op True. Dit kenmerk werkt alleen voor het groeperen van inhoud.
 
     >[!NOTE]
     >Als er slechts één inhouds groepering in een deel venster is, werkt deze functie niet. Wanneer er meer dan één inhouds groepering in een paneel is, gedraagt het zich zoals eerder is beschreven.
 
-- **IsHeader** : dit kenmerk is een optioneel, Booleaans kenmerk dat bepaalt of de groepering een koptekst groepering is. Als dit kenmerk niet is opgegeven, wordt het ingesteld op ONWAAR.
+- **IsHeader**: dit kenmerk is een optioneel, Booleaans kenmerk dat bepaalt of de groepering een koptekst groepering is. Als dit kenmerk niet is opgegeven, wordt het ingesteld op ONWAAR.
 
-- **IsSummary** : dit is een optioneel, Booleaans kenmerk dat bepaalt of de groepering een overzichts groepering is. Als dit kenmerk niet is opgegeven, wordt het ingesteld op ONWAAR.
+- **IsSummary**: dit is een optioneel, Booleaans kenmerk dat bepaalt of de groepering een overzichts groepering is. Als dit kenmerk niet is opgegeven, wordt het ingesteld op ONWAAR.
 
 ### <a name="examples-for-types-of-grouping-elements"></a>Voor beelden voor typen Groepeer elementen
 Deze sectie bevat voor beelden voor het element groups.
@@ -429,25 +429,25 @@ Een groepeer element bevat een of meer **besturings** elementen. Besturings elem
 
 Een Control-element bevat de volgende elementen:
 
-- **Help** : dit element wordt genegeerd. De functie werkt alleen in groeperingen.
+- **Help**: dit element wordt genegeerd. De functie werkt alleen in groeperingen.
 
-- **CustomProperties** : dit element wordt niet ondersteund.
+- **CustomProperties**: dit element wordt niet ondersteund.
 
-- **Opties** : dit element wordt alleen gebruikt in combi natie met de besturings elementen **UocDropDownList** of **UocRadioButtonList** . Deze functie werkt niet met andere besturings elementen. Zie de sectie opties in dit document voor de structuur van dit element. Zie de sectie afzonderlijke besturings elementen van dit document voor meer informatie over de opties die door een besturings element worden gebruikt.
+- **Opties**: dit element wordt alleen gebruikt in combi natie met de besturings elementen **UocDropDownList** of **UocRadioButtonList** . Deze functie werkt niet met andere besturings elementen. Zie de sectie opties in dit document voor de structuur van dit element. Zie de sectie afzonderlijke besturings elementen van dit document voor meer informatie over de opties die door een besturings element worden gebruikt.
 
-- **Knoppen** : dit element wordt alleen gebruikt in combi natie met het besturings element **UocListView** . Deze functie werkt niet voor andere besturings elementen. Zie de sectie UocListView in dit document voor meer informatie.
+- **Knoppen**: dit element wordt alleen gebruikt in combi natie met het besturings element **UocListView** . Deze functie werkt niet voor andere besturings elementen. Zie de sectie UocListView in dit document voor meer informatie.
 
-- **Eigenschappen** : dit element wordt in alle besturings elementen gebruikt om extra gedrag van een besturings element op te geven. Zie de sectie eigenschappen in dit document voor meer informatie over dit element.
+- **Eigenschappen**: dit element wordt in alle besturings elementen gebruikt om extra gedrag van een besturings element op te geven. Zie de sectie eigenschappen in dit document voor meer informatie over dit element.
 
-- **Gebeurtenissen** : Zie de sectie evenementen eerder in dit document voor de structuur van dit element. Zie de sectie afzonderlijke besturings elementen van dit document voor een overzicht van de gebeurtenissen die in een besturings element worden gebruikt.
+- **Gebeurtenissen**: Zie de sectie evenementen eerder in dit document voor de structuur van dit element. Zie de sectie afzonderlijke besturings elementen van dit document voor een overzicht van de gebeurtenissen die in een besturings element worden gebruikt.
 
 Een Control-element kan de volgende 10 kenmerken bevatten:
 
-- **Naam** : dit is de naam van het besturings element. De naam van een besturings element moet uniek zijn binnen elk paneel. Dit is een vereist kenmerk van het type teken reeks.
+- **Naam**: dit is de naam van het besturings element. De naam van een besturings element moet uniek zijn binnen elk paneel. Dit is een vereist kenmerk van het type teken reeks.
 
-- **TypeName** : dit kenmerk geeft aan welk type besturings element het is. Dit is een vereist kenmerk van het type teken reeks. Zie de sectie afzonderlijke besturings elementen in dit document voor elke naam van het besturings element.
+- **TypeName**: dit kenmerk geeft aan welk type besturings element het is. Dit is een vereist kenmerk van het type teken reeks. Zie de sectie afzonderlijke besturings elementen in dit document voor elke naam van het besturings element.
 
-- **Bijschrift** : u kunt dit kenmerk gebruiken voor het toevoegen van een bijschrift voor het besturings element. Het bijschrift is doorgaans de weergave naam van de gegevens die door het besturings element worden weer gegeven of in het bedrijf worden geplaatst. U kunt expliciet een waarde voor het bijschrift opgeven of deze binden met informatie over de weergave naam van het schema kenmerk. Het bijschrift wordt weer gegeven aan de linkerkant van een besturings element met een normale grootte. Als een besturings element het volledige scherm beslaat, wordt het bijschrift over het besturings element weer gegeven. Dit is een optioneel kenmerk van het type teken reeks. Zie de sectie Properties (eigenschappen) voor meer informatie over het binden van een gegevens bron met een kenmerk of een eigenschaps waarde.
+- **Bijschrift**: u kunt dit kenmerk gebruiken voor het toevoegen van een bijschrift voor het besturings element. Het bijschrift is doorgaans de weergave naam van de gegevens die door het besturings element worden weer gegeven of in het bedrijf worden geplaatst. U kunt expliciet een waarde voor het bijschrift opgeven of deze binden met informatie over de weergave naam van het schema kenmerk. Het bijschrift wordt weer gegeven aan de linkerkant van een besturings element met een normale grootte. Als een besturings element het volledige scherm beslaat, wordt het bijschrift over het besturings element weer gegeven. Dit is een optioneel kenmerk van het type teken reeks. Zie de sectie Properties (eigenschappen) voor meer informatie over het binden van een gegevens bron met een kenmerk of een eigenschaps waarde.
 
     In het volgende voor beeld ziet u hoe een bijschrift expliciet kan worden gebruikt:
 
@@ -461,11 +461,11 @@ Een Control-element kan de volgende 10 kenmerken bevatten:
     <my:Control my:Name="DynamicAlias" my:TypeName="UocTextBox" my:Caption="{Binding Source=schema, Path=Alias.DisplayName, Mode=OneWay}">…<my:Control/>
     ```
 
-- **Ingeschakeld** : dit is een optioneel, Booleaans type-kenmerk. Door deze kenmerk waarde op ONWAAR in te stellen, kan de gebruiker een besturings element uitschakelen. De standaard waarde is ingesteld op True.
+- **Ingeschakeld**: dit is een optioneel, Booleaans type-kenmerk. Door deze kenmerk waarde op ONWAAR in te stellen, kan de gebruiker een besturings element uitschakelen. De standaard waarde is ingesteld op True.
 
-- **Visible** : dit is een optioneel, Booleaans type-kenmerk. U kunt dit kenmerk gebruiken om het hele besturings element te verbergen. De standaard waarde is ingesteld op True.
+- **Visible**: dit is een optioneel, Booleaans type-kenmerk. U kunt dit kenmerk gebruiken om het hele besturings element te verbergen. De standaard waarde is ingesteld op True.
 
-- **Beschrijving** : gebruik dit optionele kenmerk voor het type teken reeks om een beschrijving op te nemen om de eind gebruiker te helpen begrijpen wat ze in het besturings element moeten plaatsen of wat het besturings element doet. U kunt expliciet een waarde opgeven voor de beschrijving of deze binden met de informatie over de beschrijving van het schema kenmerk.
+- **Beschrijving**: gebruik dit optionele kenmerk voor het type teken reeks om een beschrijving op te nemen om de eind gebruiker te helpen begrijpen wat ze in het besturings element moeten plaatsen of wat het besturings element doet. U kunt expliciet een waarde opgeven voor de beschrijving of deze binden met de informatie over de beschrijving van het schema kenmerk.
 
     De beschrijving wordt weer gegeven aan de linkerkant van een besturings element met een normale grootte onder het bijschrift. Als een besturings element het volledige scherm beslaat, wordt de beschrijving boven aan het besturings element onder het bijschrift weer gegeven. Zie de sectie eigenschappen in dit document voor informatie over het binden van een gegevens bron met een kenmerk of een eigenschaps waarde.
 
@@ -475,23 +475,23 @@ Een Control-element kan de volgende 10 kenmerken bevatten:
     <my:Control my:Name="ExplicitAlias" my:TypeName="UocTextBox" my:Caption="Explicit Alias" my:Description="This is explicit description.">…<my:Control/>
     ```
 
-    In dit voor beeld ziet u hoe een beschrijving kan worden gebruikt met een gegevens bron. Als u de sjabloon hebt gebruikt voor een gegevens bron die eerder in dit document is weer gegeven, is de gegevens bron **schema** . We raden aan dat u de **Beschrijving** van het kenmerk verbindt met een beschrijvings kenmerk.
+    In dit voor beeld ziet u hoe een beschrijving kan worden gebruikt met een gegevens bron. Als u de sjabloon hebt gebruikt voor een gegevens bron die eerder in dit document is weer gegeven, is de gegevens bron **schema**. We raden aan dat u de **Beschrijving** van het kenmerk verbindt met een beschrijvings kenmerk.
 
     ```XML
     <my:Control my:Name="DynamicAlias" my:TypeName="UocTextBox" my:Caption="{Binding Source=schema, Path=Alias.DisplayName, Mode=OneWay}" my:Description="{Binding Source=schema, Path=Alias.Description, Mode=OneWay}">…<my:Control/>
     ```
 
-- **ExpandArea** : dit kenmerk geeft aan of het besturings element het volledige scherm omspant. Dit is een optioneel, Booleaans type kenmerk. De standaard waarde is ingesteld op ONWAAR.
+- **ExpandArea**: dit kenmerk geeft aan of het besturings element het volledige scherm omspant. Dit is een optioneel, Booleaans type kenmerk. De standaard waarde is ingesteld op ONWAAR.
 
     >[!NOTE]
     >De kenmerken bijschrift en beschrijving zijn uitgeschakeld wanneer dit kenmerk is ingesteld op True. Gebruik het besturings element UocLabel om een bijschrift voor een uitgebreid besturings element op te geven.
     >
 
-- **Hint** : dit is een optioneel kenmerk van het type teken reeks. De tekst in het Hint kenmerk helpt de eind gebruiker te bepalen wat een geldige invoer is voor het besturings element. De hint wordt onder het besturings element weer gegeven.
+- **Hint**: dit is een optioneel kenmerk van het type teken reeks. De tekst in het Hint kenmerk helpt de eind gebruiker te bepalen wat een geldige invoer is voor het besturings element. De hint wordt onder het besturings element weer gegeven.
 
-- **Auto post back** : dit is een optioneel, Booleaans type-kenmerk. De standaardwaarde is false. Als de waarde is ingesteld op ONWAAR, wordt het besturings element mogelijk niet vernieuwd als u de pagina vernieuwt. Zoek voor meer informatie over auto posting naar de micro soft ASP.NET UI Control-eigenschap met dezelfde naam.
+- **Auto post back**: dit is een optioneel, Booleaans type-kenmerk. De standaardwaarde is false. Als de waarde is ingesteld op ONWAAR, wordt het besturings element mogelijk niet vernieuwd als u de pagina vernieuwt. Zoek voor meer informatie over auto posting naar de micro soft ASP.NET UI Control-eigenschap met dezelfde naam.
 
-- **RightsLevel** : dit is een optioneel kenmerk van het type String. U kunt dit kenmerk alleen binden met inline-rechten met een gegevens bron. Het besturings element wordt dynamisch ingeschakeld of uitgeschakeld, op basis van de rechten van de gebruiker. Zie de sectie eigenschappen in dit document voor informatie over het binden van gegevens bronnen met een kenmerk of een eigenschaps waarde.
+- **RightsLevel**: dit is een optioneel kenmerk van het type String. U kunt dit kenmerk alleen binden met inline-rechten met een gegevens bron. Het besturings element wordt dynamisch ingeschakeld of uitgeschakeld, op basis van de rechten van de gebruiker. Zie de sectie eigenschappen in dit document voor informatie over het binden van gegevens bronnen met een kenmerk of een eigenschaps waarde.
 
     In dit voor beeld ziet u hoe een **RightsLevel** -kenmerk kan worden gebruikt met een gegevens bron. Als u de sjabloon hebt gebruikt voor een gegevens bron die eerder in dit document is weer gegeven, hebt u de **toegang** tot de gegevens bron. Gebruik de naam van het kenmerk als het pad.
     <!--- no example provided -->
@@ -521,9 +521,9 @@ U kunt een **eigenschaps** element gebruiken om het gedrag van elk besturings el
 
 Elke eigenschap heeft de volgende twee vereiste kenmerken:
 
-- **Naam** : dit kenmerk van het type teken reeks is de unieke naam van de eigenschap. Verschillende besturings elementen hebben andere eigenschappen. Er zijn enkele algemene eigenschappen die kunnen worden gebruikt door alle besturings elementen. Zie de secties algemene eigenschappen en afzonderlijke besturings elementen van dit document voor meer informatie over welke namen beschikbaar zijn voor een bepaald besturings element.
+- **Naam**: dit kenmerk van het type teken reeks is de unieke naam van de eigenschap. Verschillende besturings elementen hebben andere eigenschappen. Er zijn enkele algemene eigenschappen die kunnen worden gebruikt door alle besturings elementen. Zie de secties algemene eigenschappen en afzonderlijke besturings elementen van dit document voor meer informatie over welke namen beschikbaar zijn voor een bepaald besturings element.
 
-- **Waarde** : dit is de waarde van de eigenschap. Het gegevens type van de waarde is afhankelijk van de eigenschap waaraan deze is toegewezen. Raadpleeg de volgende sectie voor de indeling toegestane waarde voor specifieke eigenschappen.
+- **Waarde**: dit is de waarde van de eigenschap. Het gegevens type van de waarde is afhankelijk van de eigenschap waaraan deze is toegewezen. Raadpleeg de volgende sectie voor de indeling toegestane waarde voor specifieke eigenschappen.
 
 
 #### <a name="bind-property-with-data-source-content"></a>Eigenschap binden met gegevens bron inhoud
@@ -561,7 +561,7 @@ In het volgende XML-bestand ziet u hoe u een gegevens bron verbindt met een **ei
 
 Alle RCDC-besturings elementen die in dit document zijn opgegeven, kunnen de algemene eigenschappen hebben die in deze sectie worden beschreven. U kunt deze eigenschappen gebruiken samen met andere eigenschappen die specifiek zijn voor verschillende besturings elementen.
 
-- **Vereist** : deze eigenschap geeft aan dat het veld een verplicht veld of een optioneel veld is. Een vereist veld moet worden gevuld met een waarde. Een lege waarde wordt niet ondersteund voor teken reeks invoer. Een optioneel veld kan leeg blijven. Als dit veld een verplicht veld is waarin geen waarde is ingevuld, wordt een fout bericht weer gegeven boven op het besturings element voor invoer. U kunt expliciet opgeven of een veld vereist of optioneel is. U kunt het veld ook binden met de schema gegevens van een bepaalde binding tussen een kenmerk en een resource type. Als deze eigenschap ontbreekt, betekent dit dat het besturings element een optioneel invoer besturings element is.
+- **Vereist**: deze eigenschap geeft aan dat het veld een verplicht veld of een optioneel veld is. Een vereist veld moet worden gevuld met een waarde. Een lege waarde wordt niet ondersteund voor teken reeks invoer. Een optioneel veld kan leeg blijven. Als dit veld een verplicht veld is waarin geen waarde is ingevuld, wordt een fout bericht weer gegeven boven op het besturings element voor invoer. U kunt expliciet opgeven of een veld vereist of optioneel is. U kunt het veld ook binden met de schema gegevens van een bepaalde binding tussen een kenmerk en een resource type. Als deze eigenschap ontbreekt, betekent dit dat het besturings element een optioneel invoer besturings element is.
 
     In het volgende voor beeld wordt een expliciete waarde voor deze eigenschap gebruikt:
 
@@ -575,9 +575,9 @@ Alle RCDC-besturings elementen die in dit document zijn opgegeven, kunnen de alg
     <my:Property my:Name="Required" my:Value="{Binding Source=schema, Path=DisplayName.Required}"/>
     ```
 
-- **ReadOnly** : door deze eigenschap in te stellen op waar, heeft de eind gebruiker het besturings element in een alleen-lezen modus. Dit is een optioneel, Booleaans type kenmerk. De standaard waarde is ingesteld op ONWAAR. Soms wordt het gedrag van deze eigenschap echter overschreven door het type rechten dat een persoon heeft op de gegevens binding met het besturings element. Als een gebruiker bijvoorbeeld geen rechten heeft om een veld bij te werken en het veld is gebonden aan inline-rechten, ziet de gebruiker de gegevens in een alleen-lezen modus, zelfs als deze eigenschap is ingesteld op false.
+- **ReadOnly**: door deze eigenschap in te stellen op waar, heeft de eind gebruiker het besturings element in een alleen-lezen modus. Dit is een optioneel, Booleaans type kenmerk. De standaard waarde is ingesteld op ONWAAR. Soms wordt het gedrag van deze eigenschap echter overschreven door het type rechten dat een persoon heeft op de gegevens binding met het besturings element. Als een gebruiker bijvoorbeeld geen rechten heeft om een veld bij te werken en het veld is gebonden aan inline-rechten, ziet de gebruiker de gegevens in een alleen-lezen modus, zelfs als deze eigenschap is ingesteld op false.
 
-- **RegularExpression** : met deze eigenschap worden de beperkingen opgegeven die worden opgelegd voor de waarde in het besturings element. De notaties van deze eigenschaps waarde zijn de indelingen die worden ondersteund in de .NET StringRegex-standaard. Zie [.NET Framework reguliere expressies](http://go.microsoft.com/fwlink/?LinkId=165361)voor meer informatie. Als het besturings element wordt gebruikt om een waarde in te voeren, wordt de waarde gecontroleerd op basis van de beperking die is opgegeven in deze eigenschap wanneer de gebruiker de huidige pagina probeert te verlaten. Het fout bericht wordt weer gegeven boven op het besturings element met ongeldige invoer. De gebruiker kan expliciet een teken reeks reguliere expressie opgeven. De gebruiker kan deze ook binden met schema-informatie van een bepaald kenmerk. Als deze eigenschap ontbreekt, betekent dit dat het besturings element niet controleert op eventuele beperkingen van invoer teken reeksen.
+- **RegularExpression**: met deze eigenschap worden de beperkingen opgegeven die worden opgelegd voor de waarde in het besturings element. De notaties van deze eigenschaps waarde zijn de indelingen die worden ondersteund in de .NET StringRegex-standaard. Zie [.NET Framework reguliere expressies](https://go.microsoft.com/fwlink/?LinkId=165361)voor meer informatie. Als het besturings element wordt gebruikt om een waarde in te voeren, wordt de waarde gecontroleerd op basis van de beperking die is opgegeven in deze eigenschap wanneer de gebruiker de huidige pagina probeert te verlaten. Het fout bericht wordt weer gegeven boven op het besturings element met ongeldige invoer. De gebruiker kan expliciet een teken reeks reguliere expressie opgeven. De gebruiker kan deze ook binden met schema-informatie van een bepaald kenmerk. Als deze eigenschap ontbreekt, betekent dit dat het besturings element niet controleert op eventuele beperkingen van invoer teken reeksen.
 
     In het volgende voor beeld wordt een expliciete waarde voor deze eigenschap gebruikt:
 
@@ -591,7 +591,7 @@ Alle RCDC-besturings elementen die in dit document zijn opgegeven, kunnen de alg
     <my:Property my:Name="RegularExpression" my:Value="{Binding Source=schema, Path=Alias.StringRegex, Mode=OneWay}"/>
     ```
 
-- **Visible** : dit is een optioneel, Booleaans type-kenmerk. U kunt dit kenmerk gebruiken om het hele besturings element te verbergen. De standaard waarde is ingesteld op True.
+- **Visible**: dit is een optioneel, Booleaans type-kenmerk. U kunt dit kenmerk gebruiken om het hele besturings element te verbergen. De standaard waarde is ingesteld op True.
 
 
 <h3 id="options-element">Opties-element</h3>
@@ -623,11 +623,11 @@ Het volgende XSD-schema is voor het element Options:
 
 Het element **Options** heeft de volgende kenmerken:
 
-- **Waarde** : dit is een vereist kenmerk van het teken reeks type. Het kenmerk value moet uniek zijn binnen hetzelfde besturings element. Alleen A t/m Z, hoofdletter gevoelige tekens kunnen worden gebruikt.
+- **Waarde**: dit is een vereist kenmerk van het teken reeks type. Het kenmerk value moet uniek zijn binnen hetzelfde besturings element. Alleen A t/m Z, hoofdletter gevoelige tekens kunnen worden gebruikt.
 
-- **Bijschrift** : dit vereiste kenmerk is de weergave naam van elke optie.
+- **Bijschrift**: dit vereiste kenmerk is de weergave naam van elke optie.
 
-- **Hint** : dit is een optioneel kenmerk. Gebruik dit kenmerk om meer informatie en hints voor de eind gebruiker op te geven.
+- **Hint**: dit is een optioneel kenmerk. Gebruik dit kenmerk om meer informatie en hints voor de eind gebruiker op te geven.
 
 
 ## <a name="environment-variables"></a>Omgevingsvariabelen
@@ -646,7 +646,7 @@ De volgende omgevings variabelen kunnen worden gebruikt in elke RCDC-configurati
 
 ## <a name="debug-xml-configuration-files"></a>Fouten opsporen in XML-configuratie bestanden
 
-Wanneer u XML-configuratie bestanden ontwikkelt of wijzigt voor een RCDC, kunt u fouten verminderen door de XML te valideren op XSD-bestanden met behulp van een editor zoals micro soft Visual Studio. Zie voor meer informatie [een inleiding tot de XML-Hulpprogram ma's in Visual Studio 2005](http://go.microsoft.com/fwlink/?LinkID=74512).
+Wanneer u XML-configuratie bestanden ontwikkelt of wijzigt voor een RCDC, kunt u fouten verminderen door de XML te valideren op XSD-bestanden met behulp van een editor zoals micro soft Visual Studio. Zie voor meer informatie [een inleiding tot de XML-Hulpprogram ma's in Visual Studio 2005](https://go.microsoft.com/fwlink/?LinkID=74512).
 
 
 ## <a name="customize-help-files"></a>Help-bestanden aanpassen
@@ -657,14 +657,14 @@ Als u nieuwe resources en kenmerken maakt, wilt u mogelijk de bestaande Help-bes
 >Informatie over de basis principes van het format teren of bewerken van HTML is niet opgenomen in dit artikel. Gebruikers worden verwacht hoe ze HTML-bestanden kunnen bewerken.
 
 ### <a name="location-of-help-files"></a>Locatie van Help-bestanden
-Alle Help-bestanden voor de micro soft Identity Management 2016 SP1-Portal bevinden zich in de map `<ProgramFiles>\Common Files\Microsoft Shared\Web Server Extensions\12\Template\Layouts\MSILM2\Help\1033\html` op de server van de MIM-service.
+Alle Help-bestanden voor de Microsoft Identity Manager 2016 SP1-Portal bevinden zich in de map `<ProgramFiles>\Common Files\Microsoft Shared\Web Server Extensions\12\Template\Layouts\MSILM2\Help\1033\html` op de server van de MIM-service.
 
 ### <a name="locate-a-specific-help-file"></a>Een specifiek Help-bestand zoeken
 Alle Help-bestanden voor de FIM-Portal hebben de naam een Globally Unique Identifier (GUID). Het juiste bestand voor uw aangepaste resource zoeken:
 
 1. Open in de FIM-Portal het Help-bestand op de portal pagina die u wilt aanpassen.
 
-2. Klik met de rechter muisknop op het Help-bestand en selecteer **Eigenschappen** .
+2. Klik met de rechter muisknop op het Help-bestand en selecteer **Eigenschappen**.
 
 3. Markeer en kopieer het `<GUID\>.htm` bestand in het **URL-adres** veld.
 
@@ -779,21 +779,21 @@ In deze sectie worden de afzonderlijke besturings elementen gedocumenteerd die w
 
 ### <a name="uocbutton"></a>UocButton
 
-**Naam** : UocButton
+**Naam**: UocButton
 
-**Beschrijving** : dit is een eenvoudig besturings element voor knoppen dat u kunt gebruiken om bepaalde acties te activeren. Omdat u echter geen eigen handler kunt opgeven, is het gebruik van dit besturings element beperkt.
+**Beschrijving**: dit is een eenvoudig besturings element voor knoppen dat u kunt gebruiken om bepaalde acties te activeren. Omdat u echter geen eigen handler kunt opgeven, is het gebruik van dit besturings element beperkt.
 
-**Eigenschappen** :
+**Eigenschappen**:
 
 - Alle algemene eigenschappen: Zie <a href="#common-properties">algemene eigenschappen</a>voor meer informatie over deze eigenschappen.
 
-- **Tekst** : met deze eigenschap geeft u de tekst op die op de knop wordt weer gegeven. Dit is een optioneel kenmerk van het type teken reeks. De tekst neemt een expliciete teken reeks waarde.
+- **Tekst**: met deze eigenschap geeft u de tekst op die op de knop wordt weer gegeven. Dit is een optioneel kenmerk van het type teken reeks. De tekst neemt een expliciete teken reeks waarde.
 
-**Gebeurtenissen** :
+**Gebeurtenissen**:
 
-- **OnButtonClicked** : de gebeurtenis wordt verzonden wanneer op de knop wordt geklikt.
+- **OnButtonClicked**: de gebeurtenis wordt verzonden wanneer op de knop wordt geklikt.
 
-**Voor beeld** :
+**Voorbeeld**:
 
 ![Besturings element UocButton](media/rcd-configuration-xml-reference/image017.png)
 
@@ -814,23 +814,23 @@ my:Hint="Click the button">
 
 ### <a name="uoccaptioncontrol"></a>UocCaptionControl
 
-**Naam** : UocCaptionControl
+**Naam**: UocCaptionControl
 
-**Beschrijving** : dit besturings element wordt gebruikt om het bijschrift van een RCDC-pagina weer te geven. Dit besturings element is ontworpen om alleen te worden gebruikt als één besturings element in een koptekst groepering. Het gebruik ervan in een andere context kan weergave problemen of portal fouten veroorzaken.
+**Beschrijving**: dit besturings element wordt gebruikt om het bijschrift van een RCDC-pagina weer te geven. Dit besturings element is ontworpen om alleen te worden gebruikt als één besturings element in een koptekst groepering. Het gebruik ervan in een andere context kan weergave problemen of portal fouten veroorzaken.
 
-**Modus** : alleen-lezen (ONEway)
+**Modus**: alleen-lezen (ONEway)
 
-**Eigenschappen** :
+**Eigenschappen**:
 
 - Alle algemene eigenschappen: Zie <a href="#common-properties">algemene eigenschappen</a>voor meer informatie over deze eigenschappen.
 
 - **MaxHeight:** Met deze eigenschap geeft u de maximum hoogte van het pictogram op in de sectie bijschrift. Deze eigenschap is optioneel. Deze eigenschap neemt een geheel getal in pixels. De standaard waarde is 32 pixels.
 
-**Gebeurtenissen** :
+**Gebeurtenissen**:
 
 - Er zijn geen gebeurtenissen voor dit besturings element.
 
-**Voor beeld** :
+**Voorbeeld**:
 
 ![Besturings element UocCaptionControl](media/rcd-configuration-xml-reference/image020.jpg)
 
@@ -870,30 +870,30 @@ Het volgende code segment genereert een dynamisch bijschrift voor een **weergave
 
 ### <a name="uoccheckbox"></a>UocCheckBox
 
-**Naam** : UocCheckBox
+**Naam**: UocCheckBox
 
-**Beschrijving** : dit is een eenvoudig besturings element voor selectie vakjes. We raden aan dat de gebruiker dit besturings element verbindt met gegevens van het type Booleaans. Dit besturings element kan worden gebruikt als een alleen-lezen besturings element of een besturings element dat kan worden bijgewerkt op basis van de gegevens waaraan het is gekoppeld.
+**Beschrijving**: dit is een eenvoudig besturings element voor selectie vakjes. We raden aan dat de gebruiker dit besturings element verbindt met gegevens van het type Booleaans. Dit besturings element kan worden gebruikt als een alleen-lezen besturings element of een besturings element dat kan worden bijgewerkt op basis van de gegevens waaraan het is gekoppeld.
 
 >[!NOTE]
->Als in deze release het besturings element selectie vakje in de bewerkings modus wordt gebruikt om een Boole-kenmerk weer te geven als aan het kenmerk geen waarde is toegewezen, wordt de waarde **False** aan het kenmerk toegevoegd wanneer u op **OK** klikt in de bewerkings modus. De tijdelijke oplossing is om altijd een Boole-kenmerk te maken dat ervan uitgaat dat niet-bestaan hetzelfde is als **Onwaar** , of gebruik andere besturings elementen, zoals een keuze rondje voor Booleaanse kenmerken.
+>Als in deze release het besturings element selectie vakje in de bewerkings modus wordt gebruikt om een Boole-kenmerk weer te geven als aan het kenmerk geen waarde is toegewezen, wordt de waarde **False** aan het kenmerk toegevoegd wanneer u op **OK** klikt in de bewerkings modus. De tijdelijke oplossing is om altijd een Boole-kenmerk te maken dat ervan uitgaat dat niet-bestaan hetzelfde is als **Onwaar**, of gebruik andere besturings elementen, zoals een keuze rondje voor Booleaanse kenmerken.
 
-**Eigenschappen** :
+**Eigenschappen**:
 
 - Alle algemene eigenschappen: Zie <a href="#common-properties">algemene eigenschappen</a>voor meer informatie over deze eigenschappen.
 
-- **DefaultValue** : dit is een optionele, Booleaanse-type eigenschap. De standaard waarde is ingesteld op ONWAAR. In dit veld wordt het standaard gedrag van een selectie vakje opgegeven. Dit kan expliciet worden opgegeven.
+- **DefaultValue**: dit is een optionele, Booleaanse-type eigenschap. De standaard waarde is ingesteld op ONWAAR. In dit veld wordt het standaard gedrag van een selectie vakje opgegeven. Dit kan expliciet worden opgegeven.
 
-- **Gecontroleerd** : dit is een optionele, Booleaanse-type eigenschap. De standaard waarde is ingesteld op ONWAAR. Deze waarde overschrijft de eigenschap DefaultValue wanneer deze wordt weer gegeven, samen met DefaultValue. In dit veld wordt het gedrag van een selectie vakje opgegeven. Dit kan net als DefaultValue expliciet worden opgegeven of gebonden zijn aan de gegevens van de server.
+- **Gecontroleerd**: dit is een optionele, Booleaanse-type eigenschap. De standaard waarde is ingesteld op ONWAAR. Deze waarde overschrijft de eigenschap DefaultValue wanneer deze wordt weer gegeven, samen met DefaultValue. In dit veld wordt het gedrag van een selectie vakje opgegeven. Dit kan net als DefaultValue expliciet worden opgegeven of gebonden zijn aan de gegevens van de server.
 
-- **Tekst** : dit is een optioneel kenmerk van het type teken reeks. De tekst wordt aan de rechter kant van het selectie vakje weer gegeven. U kunt deze eigenschap gebruiken om tekst op te geven die meer informatie geeft aan de eind gebruiker.
+- **Tekst**: dit is een optioneel kenmerk van het type teken reeks. De tekst wordt aan de rechter kant van het selectie vakje weer gegeven. U kunt deze eigenschap gebruiken om tekst op te geven die meer informatie geeft aan de eind gebruiker.
 
-**Gebeurtenissen** :
+**Gebeurtenissen**:
 
-- **CheckedChanged** : wanneer het selectie vakje de status wijzigt, wordt deze gebeurtenis verzonden.
+- **CheckedChanged**: wanneer het selectie vakje de status wijzigt, wordt deze gebeurtenis verzonden.
 
-**Voor beeld** :
+**Voorbeeld**:
 
-In het volgende voor beeld wordt een aangepaste binding gemaakt tussen het aangepaste resource type en het kenmerk **IsConfigurationType** . Het XML-bestand wordt gebruikt in de RCDC van een aangepast resource type.
+In het volgende voor beeld wordt een aangepaste binding gemaakt tussen het aangepaste resource type en het kenmerk **IsConfigurationType**. Het XML-bestand wordt gebruikt in de RCDC van een aangepast resource type.
 
 ![Besturings element UocCheckBox](media/rcd-configuration-xml-reference/image022.png)
 
@@ -913,25 +913,25 @@ Het volgende code segment produceert een **dynamisch selectie** vakje, zoals in 
 
 ### <a name="uoccommonmultivaluecontrol"></a>UocCommonMultiValueControl
 
-**Naam** : UocCommonMultiValueControl
+**Naam**: UocCommonMultiValueControl
 
-**Beschrijving** : dit is een besturings element voor tekst vakken met meerdere regels dat speciale teken reeks opmaak ondersteunt. Elke waarde tussen de vermeldingen met meerdere waarden wordt van elkaar gescheiden door een punt komma (;) of een regel afbreek teken in het tekstvak. U kunt dit besturings element het beste binden met gegevens van de typen met meerdere waarden, korte teken reeksen en gehele getallen. Dit besturings element ondersteunt zowel de modus alleen-lezen als de bij te werken modus.
+**Beschrijving**: dit is een besturings element voor tekst vakken met meerdere regels dat speciale teken reeks opmaak ondersteunt. Elke waarde tussen de vermeldingen met meerdere waarden wordt van elkaar gescheiden door een punt komma (;) of een regel afbreek teken in het tekstvak. U kunt dit besturings element het beste binden met gegevens van de typen met meerdere waarden, korte teken reeksen en gehele getallen. Dit besturings element ondersteunt zowel de modus alleen-lezen als de bij te werken modus.
 
-**Eigenschappen** :
+**Eigenschappen**:
 
 - Alle algemene eigenschappen: Zie <a href="#common-properties">algemene eigenschappen</a>voor meer informatie over deze eigenschappen.
 
-- **Data type** : dit is een vereist kenmerk van het type String. U kunt deze waarde opgeven als een **teken reeks, een geheel getal** of een **DateTime** -type. U kunt het kenmerk ook binden met de eigenschap **Data type** van het schema kenmerk. Een verwijzing naar meerdere waarden moet worden afgehandeld door **UOCListView** of **UOCIdentityPicker** . Een Booleaanse waarde met meerdere waarden is geen ondersteund gegevens type.
+- **Data type**: dit is een vereist kenmerk van het type String. U kunt deze waarde opgeven als een **teken reeks, een geheel getal** of een **DateTime** -type. U kunt het kenmerk ook binden met de eigenschap **Data type** van het schema kenmerk. Een verwijzing naar meerdere waarden moet worden afgehandeld door **UOCListView** of **UOCIdentityPicker**. Een Booleaanse waarde met meerdere waarden is geen ondersteund gegevens type.
 
-- **Rows** : dit is een optioneel, geheel getal-type kenmerk. U kunt de hoogte van het vak definiëren in het aantal tekens. De standaard waarde is ingesteld op 1.
+- **Rows**: dit is een optioneel, geheel getal-type kenmerk. U kunt de hoogte van het vak definiëren in het aantal tekens. De standaard waarde is ingesteld op 1.
 
-- **Columns** : dit is een optioneel kenmerk van het type integer. U kunt definiëren hoeveel breed het vak is in het aantal tekens. De standaard waarde is ingesteld op 20.
+- **Columns**: dit is een optioneel kenmerk van het type integer. U kunt definiëren hoeveel breed het vak is in het aantal tekens. De standaard waarde is ingesteld op 20.
 
-- **Waarde** : dit is een optioneel kenmerk van het type teken reeks. U kunt dit kenmerk alleen binden met de gegevens bron.
+- **Waarde**: dit is een optioneel kenmerk van het type teken reeks. U kunt dit kenmerk alleen binden met de gegevens bron.
 
-**Gebeurtenissen** :
+**Gebeurtenissen**:
 
-- **ValueListChanged** : deze gebeurtenis wordt geactiveerd wanneer de huidige waarde in het besturings element wordt gewijzigd.
+- **ValueListChanged**: deze gebeurtenis wordt geactiveerd wanneer de huidige waarde in het besturings element wordt gewijzigd.
 
 **Voorbeeld:**
 
@@ -958,30 +958,30 @@ Met het volgende code segment wordt een **UocCommonMultiValueControl** -besturin
 
 ### <a name="uocdatetimecontrol"></a>UocDateTimeControl
 
-**Naam** : UocDateTimeControl
+**Naam**: UocDateTimeControl
 
-**Beschrijving** : dit is vergelijkbaar met een besturings element voor een tekstvak, maar de **Beschrijving** accepteert alleen een bepaalde indeling. In de modus alleen-lezen wordt het weer gegeven als een label. Zie de eigenschap **date time format** in deze sectie voor de indeling van de invoer teken reeks die wordt ondersteund.
+**Beschrijving**: dit is vergelijkbaar met een besturings element voor een tekstvak, maar de **Beschrijving** accepteert alleen een bepaalde indeling. In de modus alleen-lezen wordt het weer gegeven als een label. Zie de eigenschap **date time format** in deze sectie voor de indeling van de invoer teken reeks die wordt ondersteund.
 
-**Eigenschappen** :
+**Eigenschappen**:
 
 - Alle algemene eigenschappen: Zie <a href="#common-properties">algemene eigenschappen</a>voor meer informatie over deze eigenschappen.
 
-- **Date time format** : dit is een optioneel kenmerk van het type String. De ondersteunde indelingen zijn **DateTime** en **DateOnly** . De standaard waarde is ingesteld op de **datum/tijd** -indeling.
+- **Date time format**: dit is een optioneel kenmerk van het type String. De ondersteunde indelingen zijn **DateTime** en **DateOnly**. De standaard waarde is ingesteld op de **datum/tijd** -indeling.
 
-  - **Datum tijd** : het kenmerk is opgemaakt als mm/dd/jjjj uu: mm: SS am.
-  - **DateOnly** : het kenmerk wordt opgemaakt als mm/dd/jjjj.
+  - **Datum tijd**: het kenmerk is opgemaakt als mm/dd/jjjj uu: mm: SS am.
+  - **DateOnly**: het kenmerk wordt opgemaakt als mm/dd/jjjj.
 
     >[!NOTE]
     >De notaties **DateTime** en **DateOnly** worden ondersteund, ongeacht de gebruiker die het verschil opgeeft.
     >
 
-- **Waarde** : dit is een optioneel kenmerk van het type teken reeks. U koppelt dit kenmerk aan een bron gegevens bron. De waarde van dit kenmerk moet voldoen aan de juiste datum/tijd notatie.
+- **Waarde**: dit is een optioneel kenmerk van het type teken reeks. U koppelt dit kenmerk aan een bron gegevens bron. De waarde van dit kenmerk moet voldoen aan de juiste datum/tijd notatie.
 
-**Gebeurtenissen** :
+**Gebeurtenissen**:
 
-- **DateTimeChanged** : de gebeurtenis treedt op wanneer de waarde voor datum/tijd wordt gewijzigd.
+- **DateTimeChanged**: de gebeurtenis treedt op wanneer de waarde voor datum/tijd wordt gewijzigd.
 
-**Voor beeld** :
+**Voorbeeld**:
 
 ![Besturings element UocDateTimeControl](media/rcd-configuration-xml-reference/image027.jpg)
 
@@ -1014,39 +1014,39 @@ Het volgende code segment produceert het tweede **DateTime** -besturings element
 
 ### <a name="uocdropdownlist"></a>UocDropDownList
 
-**Naam** : UocDropDownList
+**Naam**: UocDropDownList
 
-**Beschrijving** : dit is een eenvoudig vervolg keuzelijst besturings element. Dit besturings element wordt gebruikt om opties uit een gedefinieerde set opties te selecteren. Gegevens typen van string, integer, DateTime en Boolean zijn goede kandidaten voor dit besturings element.
+**Beschrijving**: dit is een eenvoudig vervolg keuzelijst besturings element. Dit besturings element wordt gebruikt om opties uit een gedefinieerde set opties te selecteren. Gegevens typen van string, integer, DateTime en Boolean zijn goede kandidaten voor dit besturings element.
 
-**Eigenschappen** :
+**Eigenschappen**:
 
 - Alle algemene eigenschappen: Zie <a href="#common-properties">algemene eigenschappen</a>voor meer informatie over deze eigenschappen.
 
-- **ValuePath** : de eigenschap voor het ophalen van het kenmerk value van item source instelt. Wanneer item source instelt is opgegeven als aangepast, wordt het pad naar de waarde ingesteld op waarde. Het wordt gebonden aan het veld waarde van het element Option, zoals beschreven in deze sectie.
+- **ValuePath**: de eigenschap voor het ophalen van het kenmerk value van item source instelt. Wanneer item source instelt is opgegeven als aangepast, wordt het pad naar de waarde ingesteld op waarde. Het wordt gebonden aan het veld waarde van het element Option, zoals beschreven in deze sectie.
 
-- **CaptionPath** : de eigenschap voor het ophalen van het kenmerk value van item source instelt. Wanneer item source instelt is opgegeven als aangepast, wordt het pad naar de waarde ingesteld op Caption. Het wordt gebonden aan het bijschrift veld van het optie-element, zoals beschreven in deze sectie.
+- **CaptionPath**: de eigenschap voor het ophalen van het kenmerk value van item source instelt. Wanneer item source instelt is opgegeven als aangepast, wordt het pad naar de waarde ingesteld op Caption. Het wordt gebonden aan het bijschrift veld van het optie-element, zoals beschreven in deze sectie.
 
-- **HintPath** : de eigenschap voor het ophalen van het kenmerk value van item source instelt. Wanneer item source instelt is opgegeven als aangepast, wordt het pad naar de waarde ingesteld op Hint. Het wordt gebonden aan het Hint veld van het optie-element, zoals beschreven in deze sectie.
+- **HintPath**: de eigenschap voor het ophalen van het kenmerk value van item source instelt. Wanneer item source instelt is opgegeven als aangepast, wordt het pad naar de waarde ingesteld op Hint. Het wordt gebonden aan het Hint veld van het optie-element, zoals beschreven in deze sectie.
 
-- **Item source instelt** : een verzameling ListControlItems die de keuzen in de lijst definieert. De gebruiker kan dit expliciet instellen op aangepast en het optie-element gebruiken, zoals beschreven in deze sectie, om de teken reeks waarde op te geven.
+- **Item source instelt**: een verzameling ListControlItems die de keuzen in de lijst definieert. De gebruiker kan dit expliciet instellen op aangepast en het optie-element gebruiken, zoals beschreven in deze sectie, om de teken reeks waarde op te geven.
 
-- **SelectedValue** : de waarde die momenteel is geselecteerd. Dit is een vereiste eigenschap van het type String. Deze eigenschap is gebonden aan teken reeks gegevens uit de gegevens bron.
+- **SelectedValue**: de waarde die momenteel is geselecteerd. Dit is een vereiste eigenschap van het type String. Deze eigenschap is gebonden aan teken reeks gegevens uit de gegevens bron.
 
-**Gebeurtenissen** :
+**Gebeurtenissen**:
 
-- **SelectedIndexChanged** : de gebeurtenis treedt op wanneer de selectie in de vervolg keuzelijst verandert.
+- **SelectedIndexChanged**: de gebeurtenis treedt op wanneer de selectie in de vervolg keuzelijst verandert.
 
-**Opties** :
+**Opties**:
 
 Zie <a href="#options-element">Opties element</a>voor de structuur van een **Options** -element.
 
-- **Waarde** : de waarde van één element Options kan worden ingesteld op een wille keurige teken reeks die de geldige invoer is van de gegevens bron waaraan het besturings element is gekoppeld.
+- **Waarde**: de waarde van één element Options kan worden ingesteld op een wille keurige teken reeks die de geldige invoer is van de gegevens bron waaraan het besturings element is gekoppeld.
 
-- **Bijschrift** : bijschrift kan een wille keurige teken reeks waarde zijn.
+- **Bijschrift**: bijschrift kan een wille keurige teken reeks waarde zijn.
 
-- **Hint** : hint kan een wille keurige teken reeks waarde zijn.
+- **Hint**: hint kan een wille keurige teken reeks waarde zijn.
 
-**Voor beeld** :
+**Voorbeeld**:
 
 ![Besturings element UocDropDownList](media/rcd-configuration-xml-reference/image030.jpg)
 
@@ -1082,33 +1082,33 @@ Met het volgende code segment wordt een vervolg keuzelijst gegenereerd:
 
 ### <a name="uocfiledownload"></a>UocFileDownload
 
-**Naam** : UocFileDownload
+**Naam**: UocFileDownload
 
-**Beschrijving** : dit besturings element bevat een Hyper link. Wanneer op de Hyper link wordt geklikt, wordt de pagina Windows-bestand opslaan weer gegeven. De gebruiker kan het bestand opslaan op de lokale schijf. De optie openen wordt ook ondersteund als Internet Explorer de bestands indeling kan weer geven. De aanbevolen gegevens typen voor het gebruik van dit besturings element met zijn opgemaakte teken reeks (XML) en binaire typen.
+**Beschrijving**: dit besturings element bevat een Hyper link. Wanneer op de Hyper link wordt geklikt, wordt de pagina Windows-bestand opslaan weer gegeven. De gebruiker kan het bestand opslaan op de lokale schijf. De optie openen wordt ook ondersteund als Internet Explorer de bestands indeling kan weer geven. De aanbevolen gegevens typen voor het gebruik van dit besturings element met zijn opgemaakte teken reeks (XML) en binaire typen.
 
 >[!NOTE]
 >In deze versie van Microsoft Identity Manager 2016 SP1 moet de gebruiker het Internet Explorer-venster sluiten waarin het bestand is geopend en de pagina vervolgens vernieuwen. Nadat het venster van Internet Explorer is vernieuwd, kan de gebruiker de down load starten om het bestand opnieuw op te slaan of te openen in het oorspronkelijke venster.
 
-**Eigenschappen** :
+**Eigenschappen**:
 
 - Alle algemene eigenschappen: Zie <a href="#common-properties">algemene eigenschappen</a>voor meer informatie over deze eigenschappen.
 
-- **Tekst** : dit is een optioneel kenmerk van het type teken reeks waarmee de hyperlink tekst wordt gedefinieerd. De gebruiker kan een expliciete teken reeks opgeven voor deze eigenschap.
+- **Tekst**: dit is een optioneel kenmerk van het type teken reeks waarmee de hyperlink tekst wordt gedefinieerd. De gebruiker kan een expliciete teken reeks opgeven voor deze eigenschap.
 
-- **Waarde** : dit is een vereist kenmerk. Hiermee geeft u de kenmerk binding op de server waarvan de inhoud moet worden gedownload.
+- **Waarde**: dit is een vereist kenmerk. Hiermee geeft u de kenmerk binding op de server waarvan de inhoud moet worden gedownload.
 
-- **PromptedFileName** : dit is een optioneel kenmerk van het type String. Dit is de bestands naam die voor de gebruiker wordt voorgesteld wanneer het gedownloade bestand wordt opgeslagen.
+- **PromptedFileName**: dit is een optioneel kenmerk van het type String. Dit is de bestands naam die voor de gebruiker wordt voorgesteld wanneer het gedownloade bestand wordt opgeslagen.
 
-- **Content type** : dit is een vereist kenmerk van het type String. Dit is het bestands type waarin de gegevens worden opgeslagen. Tekst of binair zijn de twee ondersteunde teken reeks opties. Als het tekst is, wordt de geretourneerde waarde beschouwd als een lange teken reeks. Anders wordt de geretourneerde waarde voor binair beschouwd als byte []. Als tekst is geselecteerd, kan de gebruiker, als optie, een achtervoegsel toevoegen om het type indeling op te geven waarin de tekst zich bevindt. Zo is tekst/XML geldig.
+- **Content type**: dit is een vereist kenmerk van het type String. Dit is het bestands type waarin de gegevens worden opgeslagen. Tekst of binair zijn de twee ondersteunde teken reeks opties. Als het tekst is, wordt de geretourneerde waarde beschouwd als een lange teken reeks. Anders wordt de geretourneerde waarde voor binair beschouwd als byte []. Als tekst is geselecteerd, kan de gebruiker, als optie, een achtervoegsel toevoegen om het type indeling op te geven waarin de tekst zich bevindt. Zo is tekst/XML geldig.
 
 >[!NOTE]
 >Wanneer de waarde die aan dit besturings element is gekoppeld, leeg is, ontbreekt het besturings element de Hyper link die moet worden gebruikt om de download actie te activeren. Dit komt doordat er niets kan worden gedownload.
 
-**Gebeurtenissen** :
+**Gebeurtenissen**:
 
 - Er zijn geen gebeurtenissen voor dit besturings element.
 
-**Voor beeld** :
+**Voorbeeld**:
 
 ![Besturings element UocFileDownload](media/rcd-configuration-xml-reference/image035.png)
 
@@ -1133,30 +1133,30 @@ Het volgende code segment genereert een besturings element voor het downloaden v
 
 ### <a name="uocfileupload"></a>UocFileUpload
 
-**Naam** : UocFileUpload
+**Naam**: UocFileUpload
 
-**Beschrijving** : dit besturings element bevat een tekstvak waarin de locatie wordt weer gegeven van het lokale bestand dat moet worden geüpload, een knop voor een Blader bestand en een knop uploaden. Wanneer de eind gebruiker op een knop Bladeren klikt, wordt het venster Windows geopend. De eind gebruiker kan één bestand op het lokale station selecteren dat u wilt uploaden. Wanneer het bestand is geselecteerd, wordt de locatie van het bestand weer gegeven in het tekstvak. Wanneer u op de knop Uploaden klikt, wordt het bestand geüpload naar de lokale gegevens bron aan de client zijde. De bestands inhoud is nog niet verzonden naar de server. De aanbevolen gegevens typen voor het gebruik van dit besturings element met zijn de volgende: opgemaakte teken reeks (XML) of binaire typen.
+**Beschrijving**: dit besturings element bevat een tekstvak waarin de locatie wordt weer gegeven van het lokale bestand dat moet worden geüpload, een knop voor een Blader bestand en een knop uploaden. Wanneer de eind gebruiker op een knop Bladeren klikt, wordt het venster Windows geopend. De eind gebruiker kan één bestand op het lokale station selecteren dat u wilt uploaden. Wanneer het bestand is geselecteerd, wordt de locatie van het bestand weer gegeven in het tekstvak. Wanneer u op de knop Uploaden klikt, wordt het bestand geüpload naar de lokale gegevens bron aan de client zijde. De bestands inhoud is nog niet verzonden naar de server. De aanbevolen gegevens typen voor het gebruik van dit besturings element met zijn de volgende: opgemaakte teken reeks (XML) of binaire typen.
 
 >[!NOTE]
 >Er is geen indicatie van de voortgang of status van het uploaden. Wanneer het bestand wordt geüpload naar de lokale gegevens bron, wordt het tekstvak gewist.
 
-**Eigenschappen** :
+**Eigenschappen**:
 
 - Alle algemene eigenschappen: Zie <a href="#common-properties">algemene eigenschappen</a>voor meer informatie over deze eigenschappen.
 
-- **Waarde** : dit is een vereist kenmerk. Hiermee wordt het schema kenmerk binding opgegeven op de server waarnaar de gegevens worden geüpload.
+- **Waarde**: dit is een vereist kenmerk. Hiermee wordt het schema kenmerk binding opgegeven op de server waarnaar de gegevens worden geüpload.
 
-- **Content type** : dit is een optioneel kenmerk van het type teken reeks. Dit is het gegevens type waarop het bestand is opgeslagen op de server. Dit kan worden ingesteld op text of binary. Wanneer de eigenschap ontbreekt, is de standaard waarde binair.
+- **Content type**: dit is een optioneel kenmerk van het type teken reeks. Dit is het gegevens type waarop het bestand is opgeslagen op de server. Dit kan worden ingesteld op text of binary. Wanneer de eigenschap ontbreekt, is de standaard waarde binair.
 
-- **MaxFileSize** : dit is een optioneel kenmerk van het type teken reeks. MaxFileSize definieert hoe groot de geüploade bestands grootte kan zijn. Als de eigenschap ontbreekt, is de maximale grootte standaard 1 Mega byte (MB).
+- **MaxFileSize**: dit is een optioneel kenmerk van het type teken reeks. MaxFileSize definieert hoe groot de geüploade bestands grootte kan zijn. Als de eigenschap ontbreekt, is de maximale grootte standaard 1 Mega byte (MB).
 
-- **PromptedForNoValue** : dit is een optioneel kenmerk van het type String. Hiermee wordt de tekst gedefinieerd die wordt weer gegeven aan de gebruiker wanneer er geen bestand wordt geüpload.
+- **PromptedForNoValue**: dit is een optioneel kenmerk van het type String. Hiermee wordt de tekst gedefinieerd die wordt weer gegeven aan de gebruiker wanneer er geen bestand wordt geüpload.
 
-**Gebeurtenissen** :
+**Gebeurtenissen**:
 
-- **Fileupload** : deze gebeurtenis wordt verzonden wanneer het bestand is geüpload.
+- **Fileupload**: deze gebeurtenis wordt verzonden wanneer het bestand is geüpload.
 
-**Voor beeld** :
+**Voorbeeld**:
 
 ![Besturings element UocFileUpload](media/rcd-configuration-xml-reference/image040.png)
 
@@ -1179,29 +1179,29 @@ Het volgende code segment genereert een upload besturings element:
 
 ### <a name="uocfilterbuilder"></a>UocFilterBuilder
 
-**Naam** : UocFilterBuilder
+**Naam**: UocFilterBuilder
 
-**Beschrijving** : dit is een complex besturings element waarmee de gebruiker een MIM 2016 XPath-expressie kan weer geven. Sommige XPath-expressies worden niet ondersteund. Zie de Help voor de filter functie voor meer informatie over het gebruik van de opbouw functie voor filters.
+**Beschrijving**: dit is een complex besturings element waarmee de gebruiker een MIM 2016 XPath-expressie kan weer geven. Sommige XPath-expressies worden niet ondersteund. Zie de Help voor de filter functie voor meer informatie over het gebruik van de opbouw functie voor filters.
 
-**Eigenschappen** :
+**Eigenschappen**:
 
 - Alle algemene eigenschappen: Zie <a href="#common-properties">algemene eigenschappen</a>voor meer informatie over deze eigenschappen.
 
-- **PermittedObjectTypes** : Hiermee definieert u een lijst met resource typen die moeten worden weer gegeven in de instructie SELECT van een filter Builder. Zie de Help van filter Builder voor meer informatie over het gebruik van de filter functie voor filters. De teken reeks heeft de indeling ResourceTypeA, ResourceTypeB, waarbij elk resource type wordt gescheiden door een komma ', '.
+- **PermittedObjectTypes**: Hiermee definieert u een lijst met resource typen die moeten worden weer gegeven in de instructie SELECT van een filter Builder. Zie de Help van filter Builder voor meer informatie over het gebruik van de filter functie voor filters. De teken reeks heeft de indeling ResourceTypeA, ResourceTypeB, waarbij elk resource type wordt gescheiden door een komma ', '.
 
-- **Waarde** : dit is de waarde waarmee de filter functie wordt gerenderd. Alleen een binding met gegevens van het type teken reeks die een XPath-expressie bevat, wordt ondersteund. Het filter kenmerk is een aanbevolen kenmerk voor het binden van dit besturings element.
+- **Waarde**: dit is de waarde waarmee de filter functie wordt gerenderd. Alleen een binding met gegevens van het type teken reeks die een XPath-expressie bevat, wordt ondersteund. Het filter kenmerk is een aanbevolen kenmerk voor het binden van dit besturings element.
 
-- **PreviewButtonVisible** : dit is een optionele, Booleaanse-type eigenschap. Wanneer deze eigenschap is ingesteld op False, ziet de gebruiker geen knop Preview. De standaard waarde is ingesteld op True. Deze knop kan worden gebruikt in combi natie met een besturings element lijst-weer gave om de resultaten van een XPath-expressie te bekijken.
+- **PreviewButtonVisible**: dit is een optionele, Booleaanse-type eigenschap. Wanneer deze eigenschap is ingesteld op False, ziet de gebruiker geen knop Preview. De standaard waarde is ingesteld op True. Deze knop kan worden gebruikt in combi natie met een besturings element lijst-weer gave om de resultaten van een XPath-expressie te bekijken.
 
-- **ExcludeGroupMembership** : dit is een Booleaanse eigenschap. Als deze eigenschap is ingesteld op True, kunt u geen filter maken dat een \< verwijzings kenmerk gebruikt \> (bijvoorbeeld ResourceID) lid is van het \< groeps object \> . Met andere woorden, wanneer deze eigenschap is ingesteld op True, kunt u geen filter maken dat de map groepslid maatschap gebruikt.
+- **ExcludeGroupMembership**: dit is een Booleaanse eigenschap. Als deze eigenschap is ingesteld op True, kunt u geen filter maken dat gebruikmaakt \<Reference Attribute\> van (bijvoorbeeld ResourceID) is lid van \<Group object\> . Met andere woorden, wanneer deze eigenschap is ingesteld op True, kunt u geen filter maken dat de map groepslid maatschap gebruikt.
 
-- **PreviewButtonCaption** : dit is een optionele teken reeks. Wanneer PreviewButtonVisible is ingesteld op True, kunt u deze eigenschap gebruiken om de knop een aangepaste tekst te geven. De tekst wordt weer gegeven op de knop Preview.
+- **PreviewButtonCaption**: dit is een optionele teken reeks. Wanneer PreviewButtonVisible is ingesteld op True, kunt u deze eigenschap gebruiken om de knop een aangepaste tekst te geven. De tekst wordt weer gegeven op de knop Preview.
 
-**Gebeurtenissen** :
+**Gebeurtenissen**:
 
-- **OnFilterChanged** : deze gebeurtenis wordt geactiveerd wanneer de inhoud van de filter Builder wordt gewijzigd.
+- **OnFilterChanged**: deze gebeurtenis wordt geactiveerd wanneer de inhoud van de filter Builder wordt gewijzigd.
 
-**Voor beeld** :
+**Voorbeeld**:
 
 ![Besturings element UocFilterBuilder](media/rcd-configuration-xml-reference/image044.png)
 
@@ -1245,51 +1245,51 @@ De volgende voorbeeld code bevat een UOCLabel-besturings element, een eenvoudige
 
 ### <a name="uochtmlsummary"></a>UocHtmlSummary
 
-**Naam** : UocHtmlSummary
+**Naam**: UocHtmlSummary
 
-**Beschrijving** : u kunt dit besturings element gebruiken om een overzichts pagina te definiëren in een RCDC-pagina. Deze overzichts pagina wordt weer gegeven nadat de eind gebruiker een aanvraag indient. Dit besturings element kan alleen worden gebruikt in een groepering samen vatting en het moet het enige besturings element zijn. We raden u ten zeerste aan de voorbeeld code te gebruiken die wordt vermeld.
+**Beschrijving**: u kunt dit besturings element gebruiken om een overzichts pagina te definiëren in een RCDC-pagina. Deze overzichts pagina wordt weer gegeven nadat de eind gebruiker een aanvraag indient. Dit besturings element kan alleen worden gebruikt in een groepering samen vatting en het moet het enige besturings element zijn. We raden u ten zeerste aan de voorbeeld code te gebruiken die wordt vermeld.
 
 >[!NOTE]
 >Dit besturings element is niet uitgebreid getest.
 
-**Eigenschappen** :
+**Eigenschappen**:
 
 - Alle algemene eigenschappen: Zie <a href="#common-properties">algemene eigenschappen</a>voor meer informatie over deze eigenschappen.
 
-- **ModificationsXml** : deze eigenschap moet zijn opgemaakt als {binding source = Delta, Path = DeltaXml}, waarbij Delta is gedefinieerd in de configuratie header ObjectDataSource.
+- **ModificationsXml**: deze eigenschap moet zijn opgemaakt als {binding source = Delta, Path = DeltaXml}, waarbij Delta is gedefinieerd in de configuratie header ObjectDataSource.
 
-- **TransformXsl** : deze eigenschap is ingedeeld als {binding source = SummaryTransformXsl, Path =/}, waarbij summaryTransformXsl is gedefinieerd in de configuratie header XmlDataSource.
+- **TransformXsl**: deze eigenschap is ingedeeld als {binding source = SummaryTransformXsl, Path =/}, waarbij summaryTransformXsl is gedefinieerd in de configuratie header XmlDataSource.
 
-**Gebeurtenissen** :
+**Gebeurtenissen**:
 
 - Er zijn geen gebeurtenissen voor dit besturings element.
 
-**Voor beeld** :
+**Voorbeeld**:
 
 Voor een voor beeld van dit besturings element, zie het voor beeld voor een samen vatting van groepen in de sectie Groepeer element van dit document.
 
 
 ### <a name="uochyperlink"></a>UocHyperLink
 
-**Naam** : UocHyperLink
+**Naam**: UocHyperLink
 
-**Beschrijving** : dit is een eenvoudig besturings element voor Hyper links. U kunt dit besturings element gebruiken om informatie weer te geven als een Hyper link.
+**Beschrijving**: dit is een eenvoudig besturings element voor Hyper links. U kunt dit besturings element gebruiken om informatie weer te geven als een Hyper link.
 
-**Eigenschappen** :
+**Eigenschappen**:
 
 - Alle algemene eigenschappen: Zie <a href="#common-properties">algemene eigenschappen</a>voor meer informatie over deze eigenschappen.
 
-- **ObjectReference** : dit is een optionele eigenschap van het type verwijzing. Als naar een geldige resource wordt verwezen door de GUID die is gedefinieerd in deze eigenschap, biedt de Hyper Link de eind gebruiker een manier om toegang te krijgen tot de resource. Deze sluiten elkaar wederzijds uit met de eigenschap NavigateUrl.
+- **ObjectReference**: dit is een optionele eigenschap van het type verwijzing. Als naar een geldige resource wordt verwezen door de GUID die is gedefinieerd in deze eigenschap, biedt de Hyper Link de eind gebruiker een manier om toegang te krijgen tot de resource. Deze sluiten elkaar wederzijds uit met de eigenschap NavigateUrl.
 
-- **Tekst** : dit is een optionele eigenschap van het type teken reeks. U kunt deze eigenschap gebruiken om de tekst te definiëren die wordt weer gegeven als de Hyper link.
+- **Tekst**: dit is een optionele eigenschap van het type teken reeks. U kunt deze eigenschap gebruiken om de tekst te definiëren die wordt weer gegeven als de Hyper link.
 
-- **NavigateUrl** : dit is een optionele eigenschap van het type teken reeks. Met deze eigenschap kunt u de URL voor het volledige pad definiëren waarnaar de Hyper link verwijst. Dit is wederzijds exclusief met de eigenschap ObjectReference.
+- **NavigateUrl**: dit is een optionele eigenschap van het type teken reeks. Met deze eigenschap kunt u de URL voor het volledige pad definiëren waarnaar de Hyper link verwijst. Dit is wederzijds exclusief met de eigenschap ObjectReference.
 
-**Gebeurtenissen** :
+**Gebeurtenissen**:
 
 - Er zijn geen gebeurtenissen voor dit besturings element.
 
-**Voor beeld** :
+**Voorbeeld**:
 
 ![Besturings element UocHyperLink](media/rcd-configuration-xml-reference/image049.jpg)
 
@@ -1325,43 +1325,43 @@ Het volgende code segment genereert een Hyper link die verwijst naar een resourc
 
 ### <a name="uocidentitypicker"></a>UocIdentityPicker
 
-**Naam** : UocIdentityPicker
+**Naam**: UocIdentityPicker
 
-**Beschrijving** : dit besturings element bestaat uit een optioneel vak voor omzetten en een Blader venster. Het optionele vak voor de oplossing bestaat uit een optioneel tekstvak voor het invoeren van de identiteit, een knop voor het oplossen van de identiteit en een Blader knop om een pop-upvenster te openen. In het venster bladeren kunnen gebruikers identiteiten selecteren via een besturings element lijst-weer gave. De geselecteerde identiteit uit het venster Bladeren wordt weer gegeven in het vak oplossen.
+**Beschrijving**: dit besturings element bestaat uit een optioneel vak voor omzetten en een Blader venster. Het optionele vak voor de oplossing bestaat uit een optioneel tekstvak voor het invoeren van de identiteit, een knop voor het oplossen van de identiteit en een Blader knop om een pop-upvenster te openen. In het venster bladeren kunnen gebruikers identiteiten selecteren via een besturings element lijst-weer gave. De geselecteerde identiteit uit het venster Bladeren wordt weer gegeven in het vak oplossen.
 
-**Eigenschappen** :
+**Eigenschappen**:
 
 - Alle algemene eigenschappen: Zie <a href="#common-properties">algemene eigenschappen</a>voor meer informatie over deze eigenschappen.
 
-- **UsageKeywords** : dit is een optionele teken reeks eigenschap. U kunt een lijst met zoekbereiken definiëren die moeten worden gebruikt in de resource kiezer door een lijst op te geven met de gebruiks trefwoorden die worden ondersteund door de SearchScopeConfiguration-structuur, waarbij elk sleutel woord wordt gescheiden door een apostrof (').
+- **UsageKeywords**: dit is een optionele teken reeks eigenschap. U kunt een lijst met zoekbereiken definiëren die moeten worden gebruikt in de resource kiezer door een lijst op te geven met de gebruiks trefwoorden die worden ondersteund door de SearchScopeConfiguration-structuur, waarbij elk sleutel woord wordt gescheiden door een apostrof (').
 
-- **Filter** : dit is een optionele teken reeks eigenschap. De gebruiker geeft een XPath-expressie om de resource kiezer te bereiken om alleen de items weer te geven die binnen een gedefinieerd bereik passen. Deze eigenschap is wederzijds exclusief met de eigenschap UsageKeywords. Wanneer het zoek bereik wordt toegepast, heeft deze eigenschap geen effect.
+- **Filter**: dit is een optionele teken reeks eigenschap. De gebruiker geeft een XPath-expressie om de resource kiezer te bereiken om alleen de items weer te geven die binnen een gedefinieerd bereik passen. Deze eigenschap is wederzijds exclusief met de eigenschap UsageKeywords. Wanneer het zoek bereik wordt toegepast, heeft deze eigenschap geen effect.
 
-- **ResultObjectType** : dit is een optionele teken reeks eigenschap. Het bron type wordt gebruikt om resources weer te geven in de lijst met pop-updialoogvensters. Dit wordt gebruikt in combi natie met het filter om te helpen bij het identificeren van de identiteits kiezer welk resource type wordt geretourneerd door het filter en de gegevens dienovereenkomstig te renderen. Deze eigenschap is wederzijds exclusief met de eigenschap UsageKeywords. Wanneer het zoek bereik wordt toegepast, heeft dit geen effect. De teken reeks die voor deze eigenschap wordt geaccepteerd, is een wille keurige, geldige resource-type naam, bijvoorbeeld persoon. Wanneer het filter naar verwachting meerdere resource typen retourneert, wordt de resource gebruikt.
+- **ResultObjectType**: dit is een optionele teken reeks eigenschap. Het bron type wordt gebruikt om resources weer te geven in de lijst met pop-updialoogvensters. Dit wordt gebruikt in combi natie met het filter om te helpen bij het identificeren van de identiteits kiezer welk resource type wordt geretourneerd door het filter en de gegevens dienovereenkomstig te renderen. Deze eigenschap is wederzijds exclusief met de eigenschap UsageKeywords. Wanneer het zoek bereik wordt toegepast, heeft dit geen effect. De teken reeks die voor deze eigenschap wordt geaccepteerd, is een wille keurige, geldige resource-type naam, bijvoorbeeld persoon. Wanneer het filter naar verwachting meerdere resource typen retourneert, wordt de resource gebruikt.
 
-- **PreviewTitle** : dit is de preview-titel die wordt gebruikt in een lijst weergave. Zie de sectie UocListView voor meer informatie over deze eigenschap.
+- **PreviewTitle**: dit is de preview-titel die wordt gebruikt in een lijst weergave. Zie de sectie UocListView voor meer informatie over deze eigenschap.
 
-- **ListViewTitle** : dit is een optionele teken reeks eigenschap. U kunt deze eigenschap gebruiken om de tekst die boven op de lijst weergave wordt weer gegeven als titel te definiëren.
+- **ListViewTitle**: dit is een optionele teken reeks eigenschap. U kunt deze eigenschap gebruiken om de tekst die boven op de lijst weergave wordt weer gegeven als titel te definiëren.
 
-- **Waarde** : dit is een optionele teken reeks eigenschap. U kunt dit het beste binden met een schema kenmerk om de waarde te verbinden met een gegevens bron.
+- **Waarde**: dit is een optionele teken reeks eigenschap. U kunt dit het beste binden met een schema kenmerk om de waarde te verbinden met een gegevens bron.
 
-- **Modus** : dit is een optionele teken reeks eigenschap. U gebruikt deze eigenschap om te definiëren of een waarde kan worden geselecteerd door de identiteits kiezer of meerdere identiteiten kan worden geselecteerd. SingleResult en MultipleResult zijn de toegestane waarden. Standaard is deze ingesteld op SingleResult.
+- **Modus**: dit is een optionele teken reeks eigenschap. U gebruikt deze eigenschap om te definiëren of een waarde kan worden geselecteerd door de identiteits kiezer of meerdere identiteiten kan worden geselecteerd. SingleResult en MultipleResult zijn de toegestane waarden. Standaard is deze ingesteld op SingleResult.
 
 - **Object** typen: dit is een optionele eigenschap van het type teken reeks. U kunt een lijst met resource typen definiëren waarmee de eind gebruiker vermeldingen kan oplossen in het vak identiteits kiezer oplossen. De lijst bevat een lijst met resource-type namen gescheiden door een komma ' ', '.
 
-- **AttributesToSearch** : dit is een optionele eigenschap van het type String. U kunt een lijst met kenmerken definiëren die moeten worden gebruikt voor het omzetten van het item in de identiteits kiezer, waarbij de lijst een lijst is met schema kenmerken, gescheiden door een komma ', '. Als AttributesToSearch bijvoorbeeld is ingesteld op `DisplayName, Alias` , kan de gebruiker de items zoeken met `DisplayName = \<search value\>` of `Alias=\<search value\>` . Kenmerk namen die hier worden ingevoerd, moeten geldige kenmerken zijn voor doel resource typen van de gegevens bron die is opgegeven in de eigenschap Value. De doel resource typen vindt u in het veld object type. Alle kenmerken moeten geldig zijn voor de resource typen die worden vermeld in het veld object types.
+- **AttributesToSearch**: dit is een optionele eigenschap van het type String. U kunt een lijst met kenmerken definiëren die moeten worden gebruikt voor het omzetten van het item in de identiteits kiezer, waarbij de lijst een lijst is met schema kenmerken, gescheiden door een komma ', '. Als AttributesToSearch bijvoorbeeld is ingesteld op `DisplayName, Alias` , kan de gebruiker de items zoeken met `DisplayName = \<search value\>` of `Alias=\<search value\>` . Kenmerk namen die hier worden ingevoerd, moeten geldige kenmerken zijn voor doel resource typen van de gegevens bron die is opgegeven in de eigenschap Value. De doel resource typen vindt u in het veld object type. Alle kenmerken moeten geldig zijn voor de resource typen die worden vermeld in het veld object types.
 
-- **ColumnsToDisplay** : dit is een optionele eigenschap van het type String. De gebruiker geeft een lijst met namen van schema kenmerken, gescheiden door een komma ', '. De kenmerken die hier worden gedefinieerd, vormen de kolom van de lijst weergave in de identiteits kiezer.
+- **ColumnsToDisplay**: dit is een optionele eigenschap van het type String. De gebruiker geeft een lijst met namen van schema kenmerken, gescheiden door een komma ', '. De kenmerken die hier worden gedefinieerd, vormen de kolom van de lijst weergave in de identiteits kiezer.
 
-- **Rows** : dit is een optionele, integer-eigenschap. Het werkt alleen als de modus is ingesteld op MultipleResult. Gebruik deze eigenschap om de hoogte van het tekstvak voor omzetten in te stellen op een bepaalde grootte in teken eenheden.
+- **Rows**: dit is een optionele, integer-eigenschap. Het werkt alleen als de modus is ingesteld op MultipleResult. Gebruik deze eigenschap om de hoogte van het tekstvak voor omzetten in te stellen op een bepaalde grootte in teken eenheden.
 
-- **MainSearchScreenText** : dit is een optionele eigenschap van het type String. Dit is de aangepaste tekst die wordt weer gegeven terwijl de zoek opdracht wordt uitgevoerd in het venster Bladeren.
+- **MainSearchScreenText**: dit is een optionele eigenschap van het type String. Dit is de aangepaste tekst die wordt weer gegeven terwijl de zoek opdracht wordt uitgevoerd in het venster Bladeren.
 
-**Gebeurtenissen** :
+**Gebeurtenissen**:
 
-- **SelectedObjectChanged** : deze gebeurtenis wordt verzonden wanneer de gebruiker de geselecteerde resources wijzigt.
+- **SelectedObjectChanged**: deze gebeurtenis wordt verzonden wanneer de gebruiker de geselecteerde resources wijzigt.
 
-**Voor beeld** :
+**Voorbeeld**:
 
 ![UocIdentityPicker-besturings element in SingleResult-modus](media/rcd-configuration-xml-reference/image052.png)
 
@@ -1428,77 +1428,77 @@ Met het volgende code segment wordt een identiteits kiezer gemaakt in de Multipl
 
 ### <a name="uoclabel"></a>UocLabel
 
-**Naam** : UocLabel
+**Naam**: UocLabel
 
-**Beschrijving** : dit is een eenvoudig, alleen-lezen besturings element voor tekst label. U wordt aangeraden dit besturings element te gebruiken om alleen-lezen gegevens weer te geven.
+**Beschrijving**: dit is een eenvoudig, alleen-lezen besturings element voor tekst label. U wordt aangeraden dit besturings element te gebruiken om alleen-lezen gegevens weer te geven.
 
-**Eigenschappen** :
+**Eigenschappen**:
 
 - Alle algemene eigenschappen: Zie <a href="#common-properties">algemene eigenschappen</a>voor meer informatie over deze eigenschappen.
 
-- **Tekst** : dit is een kenmerk van het type String. U definieert deze eigenschap door een expliciete teken reeks waarde op te geven of door deze te binden aan een gegevens bron. Een voor beeld-binding waarmee de waarde van deze eigenschap wordt toegewezen, is {binding source = object, Path = \< geldige kenmerk naam \> .
+- **Tekst**: dit is een kenmerk van het type String. U definieert deze eigenschap door een expliciete teken reeks waarde op te geven of door deze te binden aan een gegevens bron. Een voor beeld-binding waarmee de waarde van deze eigenschap wordt toegewezen, is {binding source = object, Path = \<valid attribute name\> .
 
 Zie voor een voor beeld van het besturings element UocLabel eenvoudige controle in de sectie voor beelden van eenvoudige besturings elementen.
 
 
 ### <a name="uoclistview"></a>UocListView
 
-**Naam** : UocListView
+**Naam**: UocListView
 
-**Beschrijving** : dit is een geavanceerd lijst-Weergave besturings element. Het bestaat uit een eenvoudige lijst weergave, een optionele eenvoudige zoek opdracht, een optioneel Geavanceerd zoek element, een optioneel selectie vakje voor selecties en een actie knop balk. De optionele eenvoudige zoek opdracht bestaat uit een zoek bereik en een eenvoudig zoek tekstvak. Het besturings element Geavanceerd zoeken is een filter functie voor filters. In de lijst weergave ziet u een voor beeld van een lijst met resources. Het kan ook Zoek resultaten weer geven die afkomstig zijn uit de zoek besturings elementen in dit besturings element. De actie knop balk definieert welke actie kan worden uitgevoerd op basis van de selectie in de lijst weergave. In het vak selectie voorbeeld ziet u welke items zijn geselecteerd in de lijst weergave.
+**Beschrijving**: dit is een geavanceerd lijst-Weergave besturings element. Het bestaat uit een eenvoudige lijst weergave, een optionele eenvoudige zoek opdracht, een optioneel Geavanceerd zoek element, een optioneel selectie vakje voor selecties en een actie knop balk. De optionele eenvoudige zoek opdracht bestaat uit een zoek bereik en een eenvoudig zoek tekstvak. Het besturings element Geavanceerd zoeken is een filter functie voor filters. In de lijst weergave ziet u een voor beeld van een lijst met resources. Het kan ook Zoek resultaten weer geven die afkomstig zijn uit de zoek besturings elementen in dit besturings element. De actie knop balk definieert welke actie kan worden uitgevoerd op basis van de selectie in de lijst weergave. In het vak selectie voorbeeld ziet u welke items zijn geselecteerd in de lijst weergave.
 
 >[!IMPORTANT]
 >UocListView werkt niet met referentie kenmerken met één waarde. Deze kan alleen worden gebruikt met referentie kenmerken met meerdere waarden. Zie UocIdentityPicker in dit document voor referentie kenmerken met één waarde.
 
-**Eigenschappen** :
+**Eigenschappen**:
 
 - Alle algemene eigenschappen: Zie <a href="#common-properties">algemene eigenschappen</a>voor meer informatie over deze eigenschappen.
 
-- **SelectedValue** : dit is een optionele eigenschap van het type teken reeks die is gekoppeld aan een verwijzings kenmerk met meerdere waarden en die een lijst met door de GUID geformatteerde teken reeksen accepteert.
+- **SelectedValue**: dit is een optionele eigenschap van het type teken reeks die is gekoppeld aan een verwijzings kenmerk met meerdere waarden en die een lijst met door de GUID geformatteerde teken reeksen accepteert.
 
-- **PageSize** : dit is een optionele integer-eigenschap. De gebruiker kan opgeven hoeveel items op één pagina in een besturings element lijst weergave passen. De standaard waarde is 10 vermeldingen. Een positief geheel getal is geldig.
+- **PageSize**: dit is een optionele integer-eigenschap. De gebruiker kan opgeven hoeveel items op één pagina in een besturings element lijst weergave passen. De standaard waarde is 10 vermeldingen. Een positief geheel getal is geldig.
 
-- **UsageKeyword** : dit is een optionele eigenschap van het type String. De gebruiker kan een lijst met tref woorden opgeven die definiëren welk zoek bereik wordt gebruikt in het besturings element voor het zoeken in de lijst. Er zijn zoek bereik bronnen in de FIM 2010-server. Het kenmerk in een SearchScopeConfiguration-structuur, genaamd UsageKeyword, wordt gebruikt om een set zoek bereik te groeperen. De lijst weergave gebruikt de lijst met tref woorden. Elk tref woord wordt gescheiden door een komma (,). Dit is het sleutel woord Usage dat wordt gebruikt voor het bijbehorende zoek bereik dat u wilt weer geven in deze lijst weergave. Dit is alleen van toepassing wanneer de eigenschap ShowSearchControl is ingesteld op True.
+- **UsageKeyword**: dit is een optionele eigenschap van het type String. De gebruiker kan een lijst met tref woorden opgeven die definiëren welk zoek bereik wordt gebruikt in het besturings element voor het zoeken in de lijst. Er zijn zoek bereik bronnen in de FIM 2010-server. Het kenmerk in een SearchScopeConfiguration-structuur, genaamd UsageKeyword, wordt gebruikt om een set zoek bereik te groeperen. De lijst weergave gebruikt de lijst met tref woorden. Elk tref woord wordt gescheiden door een komma (,). Dit is het sleutel woord Usage dat wordt gebruikt voor het bijbehorende zoek bereik dat u wilt weer geven in deze lijst weergave. Dit is alleen van toepassing wanneer de eigenschap ShowSearchControl is ingesteld op True.
 
-- **SearchControlAutoPostback** : dit is een optionele Booleaanse eigenschap. Stel de waarde van deze eigenschap in op True als u auto post back wilt uitvoeren wanneer een zoek opdracht wordt geactiveerd. SearchControlAutoPostback is standaard ingesteld op false.
+- **SearchControlAutoPostback**: dit is een optionele Booleaanse eigenschap. Stel de waarde van deze eigenschap in op True als u auto post back wilt uitvoeren wanneer een zoek opdracht wordt geactiveerd. SearchControlAutoPostback is standaard ingesteld op false.
 
-- **EmptyResultText** : dit is een optionele eigenschap van het type String. Standaard is deze ingesteld op geen items, maar dit kan worden ingesteld op een wille keurige teken reeks waarde. Deze tekst wordt weer gegeven wanneer een Zoek resultaat leeg is.
+- **EmptyResultText**: dit is een optionele eigenschap van het type String. Standaard is deze ingesteld op geen items, maar dit kan worden ingesteld op een wille keurige teken reeks waarde. Deze tekst wordt weer gegeven wanneer een Zoek resultaat leeg is.
 
-- **ButtonHeight** : dit is een optionele eigenschap van het type integer. Stel de waarde van deze eigenschap in op een wille keurige positieve integerwaarde. Met deze eigenschap wordt de hoogte van knoppen in de actie balk in pixels gedefinieerd. De standaard waarde is 32 pixels.
+- **ButtonHeight**: dit is een optionele eigenschap van het type integer. Stel de waarde van deze eigenschap in op een wille keurige positieve integerwaarde. Met deze eigenschap wordt de hoogte van knoppen in de actie balk in pixels gedefinieerd. De standaard waarde is 32 pixels.
 
-- **ButtonWidth** : dit is een optionele eigenschap van het type integer. Stel de waarde van deze eigenschap in op een wille keurige positieve integerwaarde. Met deze eigenschap wordt de breedte van knoppen in de actie balk in pixels gedefinieerd. De standaard waarde is 32 pixels.
+- **ButtonWidth**: dit is een optionele eigenschap van het type integer. Stel de waarde van deze eigenschap in op een wille keurige positieve integerwaarde. Met deze eigenschap wordt de breedte van knoppen in de actie balk in pixels gedefinieerd. De standaard waarde is 32 pixels.
 
-- **CaptionImageMaxHeight** : dit is een optionele eigenschap van het type integer. Stel de waarde van deze eigenschap in op een wille keurig positief geheel getal. Met deze eigenschap wordt de maximum hoogte van het tijdelijke bijschrift gedefinieerd. De standaard waarde is 32 pixels.
+- **CaptionImageMaxHeight**: dit is een optionele eigenschap van het type integer. Stel de waarde van deze eigenschap in op een wille keurig positief geheel getal. Met deze eigenschap wordt de maximum hoogte van het tijdelijke bijschrift gedefinieerd. De standaard waarde is 32 pixels.
 
-- **CaptionImageMaxWidth** : dit is een optionele eigenschap van het type integer. Stel de waarde van deze eigenschap in op een wille keurig positief geheel getal. Met deze eigenschap wordt de maximale pictogram breedte van een bijschrift gedefinieerd. De standaard waarde is 32 pixels.
+- **CaptionImageMaxWidth**: dit is een optionele eigenschap van het type integer. Stel de waarde van deze eigenschap in op een wille keurig positief geheel getal. Met deze eigenschap wordt de maximale pictogram breedte van een bijschrift gedefinieerd. De standaard waarde is 32 pixels.
 
-- **CaptionImageUrl** : dit is een optionele eigenschap van het type String. Deze eigenschap definieert een URL die is gekoppeld aan een afbeelding die wordt weer gegeven als de titel afbeelding.
+- **CaptionImageUrl**: dit is een optionele eigenschap van het type String. Deze eigenschap definieert een URL die is gekoppeld aan een afbeelding die wordt weer gegeven als de titel afbeelding.
 
-- **PreviewTitle** : dit is een optionele eigenschap van het type String. U kunt deze eigenschap gebruiken om de tekst te definiëren die boven op het selectie voorbeeld venster wordt weer gegeven.
+- **PreviewTitle**: dit is een optionele eigenschap van het type String. U kunt deze eigenschap gebruiken om de tekst te definiëren die boven op het selectie voorbeeld venster wordt weer gegeven.
 
-- **EnableSelection** : dit is een optionele, Booleaanse-type eigenschap. U gebruikt deze eigenschap om te definiëren of een lijst weergave in de selectie modus is. Als een lijst weergave in de selectie modus is, wordt een kolom met selectie vakjes weer gegeven in de kolom uiterst links van de lijst weergave en wordt er onder in de lijst een selectie voorbeeld venster weer gegeven. De standaard waarde van deze eigenschap is ingesteld op True.
+- **EnableSelection**: dit is een optionele, Booleaanse-type eigenschap. U gebruikt deze eigenschap om te definiëren of een lijst weergave in de selectie modus is. Als een lijst weergave in de selectie modus is, wordt een kolom met selectie vakjes weer gegeven in de kolom uiterst links van de lijst weergave en wordt er onder in de lijst een selectie voorbeeld venster weer gegeven. De standaard waarde van deze eigenschap is ingesteld op True.
 
-- **SingleSelection** : dit is een optionele, Booleaanse-type eigenschap. Als de selectie modus is ingeschakeld voor de lijst weergave en u deze waarde instelt op True, wordt de eind gebruiker beperkt om slechts één item uit de lijst te selecteren. De waarde van deze eigenschap is standaard ingesteld op ONWAAR. Dit betekent dat de eind gebruiker in de lijst standaard meerdere items kan selecteren.
+- **SingleSelection**: dit is een optionele, Booleaanse-type eigenschap. Als de selectie modus is ingeschakeld voor de lijst weergave en u deze waarde instelt op True, wordt de eind gebruiker beperkt om slechts één item uit de lijst te selecteren. De waarde van deze eigenschap is standaard ingesteld op ONWAAR. Dit betekent dat de eind gebruiker in de lijst standaard meerdere items kan selecteren.
 
-- **RedirectUrl** : dit is een optionele eigenschap van het type String. Gebruik deze eigenschap om een pagina op te geven waarnaar moet worden omgeleid wanneer een item in de lijst met Hyper links wordt geklikt. Deze URL kan tijdelijke aanduidingen bevatten die worden vervangen door de werkelijke waarde tijdens runtime. De tijdelijke aanduidingen zijn als volgt:
+- **RedirectUrl**: dit is een optionele eigenschap van het type String. Gebruik deze eigenschap om een pagina op te geven waarnaar moet worden omgeleid wanneer een item in de lijst met Hyper links wordt geklikt. Deze URL kan tijdelijke aanduidingen bevatten die worden vervangen door de werkelijke waarde tijdens runtime. De tijdelijke aanduidingen zijn als volgt:
 
     - {0} Later
     - {1} Id
     - {2} displayName
 
-- **ShowTitleBar** : dit is een optionele, Booleaanse-type eigenschap. Gebruik deze eigenschap om op te geven of de titel balk zichtbaar moet zijn. De standaard waarde van deze eigenschap is onwaar.
+- **ShowTitleBar**: dit is een optionele, Booleaanse-type eigenschap. Gebruik deze eigenschap om op te geven of de titel balk zichtbaar moet zijn. De standaard waarde van deze eigenschap is onwaar.
 
-- **ShowActionBar** : dit is een optionele, Booleaanse-type eigenschap. Gebruik deze eigenschap om op te geven of het actie balk gebied zichtbaar moet zijn. De standaard waarde van deze eigenschap is waar.
+- **ShowActionBar**: dit is een optionele, Booleaanse-type eigenschap. Gebruik deze eigenschap om op te geven of het actie balk gebied zichtbaar moet zijn. De standaard waarde van deze eigenschap is waar.
 
-- **ShowPreview** : dit is een optionele, Booleaanse-type eigenschap. Gebruik deze eigenschap om op te geven of het voorvertonings gebied zichtbaar moet zijn. De standaard waarde van deze eigenschap is waar.
+- **ShowPreview**: dit is een optionele, Booleaanse-type eigenschap. Gebruik deze eigenschap om op te geven of het voorvertonings gebied zichtbaar moet zijn. De standaard waarde van deze eigenschap is waar.
 
-- **ShowSearchControl** : dit is een optionele, Booleaanse-type eigenschap. Met deze eigenschap geeft u op of het besturings element voor zoeken moet worden weer gegeven. De standaard waarde van deze eigenschap is waar.
+- **ShowSearchControl**: dit is een optionele, Booleaanse-type eigenschap. Met deze eigenschap geeft u op of het besturings element voor zoeken moet worden weer gegeven. De standaard waarde van deze eigenschap is waar.
 
-- **ResultObjectType** : dit is een optionele eigenschap van het type String. Gebruik deze eigenschap om het verwachte object type van de zoek resultaten op te geven. De standaard waarde van deze eigenschap is resource. Als het Zoek resultaat meerdere bron typen bevat, moet deze waarde als resource worden opgegeven.
+- **ResultObjectType**: dit is een optionele eigenschap van het type String. Gebruik deze eigenschap om het verwachte object type van de zoek resultaten op te geven. De standaard waarde van deze eigenschap is resource. Als het Zoek resultaat meerdere bron typen bevat, moet deze waarde als resource worden opgegeven.
 
-- **ColumnsToDisplay** : dit is een optionele eigenschap. Gebruik deze eigenschap om op te geven welke kenmerken u wilt weer geven in de lijst weergave als kolommen. De standaard waarde van deze eigenschap is DisplayName, resource type. Elke kolom wordt vertegenwoordigd door de systeem naam van een kenmerk. Elke kolom wordt gescheiden door een komma ', '. U hoeft geen waarde op te geven voor deze eigenschap wanneer de lijst weergave wordt gebruikt in de selectie modus. In de selectie modus is de kolom instelling afkomstig van het kenmerk SearchScopeColumn van het zoek bereik dat momenteel is geselecteerd.
+- **ColumnsToDisplay**: dit is een optionele eigenschap. Gebruik deze eigenschap om op te geven welke kenmerken u wilt weer geven in de lijst weergave als kolommen. De standaard waarde van deze eigenschap is DisplayName, resource type. Elke kolom wordt vertegenwoordigd door de systeem naam van een kenmerk. Elke kolom wordt gescheiden door een komma ', '. U hoeft geen waarde op te geven voor deze eigenschap wanneer de lijst weergave wordt gebruikt in de selectie modus. In de selectie modus is de kolom instelling afkomstig van het kenmerk SearchScopeColumn van het zoek bereik dat momenteel is geselecteerd.
 
-- **ListFilter** : dit is een optionele eigenschap van het type String. Dit is het XPath dat wordt gebruikt om de lijst weergave weer te geven. Dit is alleen van toepassing wanneer de eigenschap ShowSearchControl is ingesteld op false. Wanneer deze waarde is opgegeven, gebruikt de lijst weergave deze eigenschaps waarde voor query's en de lijst weergave niet in de selectie modus. Het filter kan worden gebonden aan een teken reeks kenmerk van de resource:
+- **ListFilter**: dit is een optionele eigenschap van het type String. Dit is het XPath dat wordt gebruikt om de lijst weergave weer te geven. Dit is alleen van toepassing wanneer de eigenschap ShowSearchControl is ingesteld op false. Wanneer deze waarde is opgegeven, gebruikt de lijst weergave deze eigenschaps waarde voor query's en de lijst weergave niet in de selectie modus. Het filter kan worden gebonden aan een teken reeks kenmerk van de resource:
 
     `<my:Property my:Name="ListFilter" my:Value="{Binding Source=object, Path=Filter}"/>`
 
@@ -1506,7 +1506,7 @@ Zie voor een voor beeld van het besturings element UocLabel eenvoudige controle 
 
     `<my:Property my:Name="ListFilter" my:Value="/Approval[Request=''%ObjectID%'']"/>`
 
-- **TargetAttribute** : dit is een verouderde eigenschap. De waarde moet de systeem naam zijn van een kenmerk met meerdere waarden waarnaar wordt verwezen. U wordt aangeraden deze eigenschap niet meer te gebruiken. In groeps beheer in plaats van:
+- **TargetAttribute**: dit is een verouderde eigenschap. De waarde moet de systeem naam zijn van een kenmerk met meerdere waarden waarnaar wordt verwezen. U wordt aangeraden deze eigenschap niet meer te gebruiken. In groeps beheer in plaats van:
 
     `<my:Property my:Name="TargetAttribute" my:Value="ExplicitMember"/>`
 
@@ -1514,46 +1514,46 @@ Zie voor een voor beeld van het besturings element UocLabel eenvoudige controle 
 
     `<my:Property my:Name=”ListFilter” my:Value=”/Group[ObjectID=’%ObjectID%’]/ExplicitMember”/>`
 
-- **ItemClickBehavior** : dit is een optionele eigenschap van het type String. Met deze eigenschap geeft u op of u wilt dat het item klikken op een lijst weergave een server terugzet of een detail weergave van het item weergeeft. Er worden twee optie waarden ondersteund: ModelessDialog en server. De standaard waarde is ModelessDialog.
+- **ItemClickBehavior**: dit is een optionele eigenschap van het type String. Met deze eigenschap geeft u op of u wilt dat het item klikken op een lijst weergave een server terugzet of een detail weergave van het item weergeeft. Er worden twee optie waarden ondersteund: ModelessDialog en server. De standaard waarde is ModelessDialog.
 
-- **SearchOnLoad** : dit is een optionele, Booleaanse-type eigenschap die aangeeft of het besturings element van de lijst moet worden doorzocht op belasting. Deze eigenschap is alleen van toepassing als de lijst weergave de selectie modus heeft. De standaard waarde voor deze eigenschap is waar. U kunt deze uitschakelen als u verwacht dat de gebruiker meestal tekst in de zoek opdracht typt om een zinvol resultaat te krijgen. In dit geval toont de lijst weergave eerst een bericht om de gebruiker te laten weten hoe een zoek opdracht moet worden uitgevoerd. De tekst kan worden aangepast door de volgende eigenschappen:
+- **SearchOnLoad**: dit is een optionele, Booleaanse-type eigenschap die aangeeft of het besturings element van de lijst moet worden doorzocht op belasting. Deze eigenschap is alleen van toepassing als de lijst weergave de selectie modus heeft. De standaard waarde voor deze eigenschap is waar. U kunt deze uitschakelen als u verwacht dat de gebruiker meestal tekst in de zoek opdracht typt om een zinvol resultaat te krijgen. In dit geval toont de lijst weergave eerst een bericht om de gebruiker te laten weten hoe een zoek opdracht moet worden uitgevoerd. De tekst kan worden aangepast door de volgende eigenschappen:
 
-- **MainSearchScreenText** : deze optionele, String-type-eigenschap is alleen van toepassing als SearchOnload is ingesteld op True. Deze eigenschap kan worden gebruikt om tekst aan te passen die in het midden van de lijst weergave wordt weer gegeven wanneer de lijst weergave niet automatisch wordt doorzocht. De standaard waarde voor deze eigenschap is het vinden van de bronnen met behulp van de zoek opdracht, zoals eerder is beschreven. U kunt een waarde opgeven om de tekst relevanter te maken voor uw scenario.
+- **MainSearchScreenText**: deze optionele, String-type-eigenschap is alleen van toepassing als SearchOnload is ingesteld op True. Deze eigenschap kan worden gebruikt om tekst aan te passen die in het midden van de lijst weergave wordt weer gegeven wanneer de lijst weergave niet automatisch wordt doorzocht. De standaard waarde voor deze eigenschap is het vinden van de bronnen met behulp van de zoek opdracht, zoals eerder is beschreven. U kunt een waarde opgeven om de tekst relevanter te maken voor uw scenario.
 
-- **SubSearchScreenText** : deze optionele, String-type-eigenschap wordt gebruikt voor het aanpassen van de tekst die wordt weer gegeven na de eigenschap **MainSearchScreenText** . Normaal gesp roken hoeft u geen waarde op te geven voor deze eigenschap, tenzij u een extra instructie wilt toevoegen over het gebruik van de lijst weergave.
+- **SubSearchScreenText**: deze optionele, String-type-eigenschap wordt gebruikt voor het aanpassen van de tekst die wordt weer gegeven na de eigenschap **MainSearchScreenText** . Normaal gesp roken hoeft u geen waarde op te geven voor deze eigenschap, tenzij u een extra instructie wilt toevoegen over het gebruik van de lijst weergave.
 
-**Gebeurtenissen** :
+**Gebeurtenissen**:
 
 - Er zijn geen gebeurtenissen voor dit besturings element.
 
-**Voor beeld** :
+**Voorbeeld**:
 
 Zie voor voor beelden van het gebruik van de lijst weergave samen met het besturings element UocFilterBuilder als een preview-lijst de UocFilterBuilder-voor beelden eerder in dit document. De UocListView kan ook worden gebruikt zonder de filter functie Builder.
 
 
 ### <a name="uocnumericbox"></a>UocNumericBox
 
-**Naam** : UocNumericBox
+**Naam**: UocNumericBox
 
-**Beschrijving** : dit is een eenvoudig tekstvak waarin alleen gehele waarden worden gebruikt. Dit besturings element ondersteunt zowel de modus alleen-lezen als de bij te werken modus.
+**Beschrijving**: dit is een eenvoudig tekstvak waarin alleen gehele waarden worden gebruikt. Dit besturings element ondersteunt zowel de modus alleen-lezen als de bij te werken modus.
 
-**Eigenschappen** :
+**Eigenschappen**:
 
 - Alle algemene eigenschappen: Zie <a href="#common-properties">algemene eigenschappen</a>voor meer informatie over deze eigenschappen.
 
-- **MaxValue** : dit is een optionele, integer-type-eigenschap. Gebruik deze eigenschap om een validatie aan de client zijde voor het besturings element te definiëren. De waarde die de eind gebruiker invoert, mag deze waarde niet overschrijden. U kunt een expliciet geheel getal invoeren of dit binden met gehele gegevens uit een gegevens bron met behulp van {binding source = schema, Path = IntegerMaximum}.
+- **MaxValue**: dit is een optionele, integer-type-eigenschap. Gebruik deze eigenschap om een validatie aan de client zijde voor het besturings element te definiëren. De waarde die de eind gebruiker invoert, mag deze waarde niet overschrijden. U kunt een expliciet geheel getal invoeren of dit binden met gehele gegevens uit een gegevens bron met behulp van {binding source = schema, Path = IntegerMaximum}.
 
-- **MinValue** : dit is een optionele, integer-type-eigenschap. Gebruik deze eigenschap om een validatie aan de client zijde voor het besturings element te definiëren. De waarde die de eind gebruiker invoert, mag niet lager zijn dan deze waarde. U kunt een expliciet geheel getal invoeren of dit binden met gehele gegevens uit een gegevens bron met behulp van {binding source = schema, Path = IntegerMinimum}.
+- **MinValue**: dit is een optionele, integer-type-eigenschap. Gebruik deze eigenschap om een validatie aan de client zijde voor het besturings element te definiëren. De waarde die de eind gebruiker invoert, mag niet lager zijn dan deze waarde. U kunt een expliciet geheel getal invoeren of dit binden met gehele gegevens uit een gegevens bron met behulp van {binding source = schema, Path = IntegerMinimum}.
 
-- **DefaultValue** : dit is een optionele, integer-type-eigenschap. Gebruik deze eigenschap om een standaard waarde voor het besturings element te definiëren als het besturings element wordt gebruikt om nieuwe gegevens te maken. Deze waarde kan alleen expliciet worden ingesteld op een statisch geheel getal.
+- **DefaultValue**: dit is een optionele, integer-type-eigenschap. Gebruik deze eigenschap om een standaard waarde voor het besturings element te definiëren als het besturings element wordt gebruikt om nieuwe gegevens te maken. Deze waarde kan alleen expliciet worden ingesteld op een statisch geheel getal.
 
-- **Waarde** : dit is een optionele eigenschap van het type integer. Wanneer u dit koppelt aan een gegevens bron met een geheel getal, wordt de waarde van dat kenmerk weer gegeven wanneer de pagina wordt geladen en vervolgens wordt deze opgeslagen in de gegevens bron nadat deze is verzonden.
+- **Waarde**: dit is een optionele eigenschap van het type integer. Wanneer u dit koppelt aan een gegevens bron met een geheel getal, wordt de waarde van dat kenmerk weer gegeven wanneer de pagina wordt geladen en vervolgens wordt deze opgeslagen in de gegevens bron nadat deze is verzonden.
 
-**Gebeurtenissen** :
+**Gebeurtenissen**:
 
-- **TextChanged** : deze gebeurtenis wordt verzonden als de huidige waarde in het besturings element wordt gewijzigd.
+- **TextChanged**: deze gebeurtenis wordt verzonden als de huidige waarde in het besturings element wordt gewijzigd.
 
-**Voor beeld** :
+**Voorbeeld**:
 
 ![Besturings element UocNumericBox](media/rcd-configuration-xml-reference/image061.jpg)
 
@@ -1594,31 +1594,31 @@ Met de volgende voorbeeld code wordt het tweede numerieke vak gegenereerd.
 
 ### <a name="uocpicturebox"></a>UocPictureBox
 
-**Naam** : UocPictureBox
+**Naam**: UocPictureBox
 
-**Beschrijving** : dit besturings element wordt gebruikt voor het weer geven van de gegevens van een binair type. U wordt aangeraden dit besturings element te gebruiken met gegevens van een binair type. De afbeelding kan worden weer gegeven op basis van een afbeeldings-URL, gegevens van een binair type of de kenmerk bron met gegevens van het type afbeelding.
+**Beschrijving**: dit besturings element wordt gebruikt voor het weer geven van de gegevens van een binair type. U wordt aangeraden dit besturings element te gebruiken met gegevens van een binair type. De afbeelding kan worden weer gegeven op basis van een afbeeldings-URL, gegevens van een binair type of de kenmerk bron met gegevens van het type afbeelding.
 
-**Eigenschappen** :
+**Eigenschappen**:
 
 - Alle algemene eigenschappen: Zie <a href="#common-properties">algemene eigenschappen</a>voor meer informatie over deze eigenschappen.
 
-- **ImageUrl** : dit is een optionele eigenschap van het type teken reeks. Voer de URL van de doel afbeelding in.
+- **ImageUrl**: dit is een optionele eigenschap van het type teken reeks. Voer de URL van de doel afbeelding in.
 
-- **MaxHeight** : dit is een optioneel type teken reeks-eigenschap. Hiermee wordt de maximale hoogte van de afbeelding gedefinieerd die in pixels moet worden weer gegeven.
+- **MaxHeight**: dit is een optioneel type teken reeks-eigenschap. Hiermee wordt de maximale hoogte van de afbeelding gedefinieerd die in pixels moet worden weer gegeven.
 
-- **MaxWidth** : dit is een optionele eigenschap van het type String. Hiermee wordt de maximale breedte van de afbeelding gedefinieerd die in pixels moet worden weer gegeven.
+- **MaxWidth**: dit is een optionele eigenschap van het type String. Hiermee wordt de maximale breedte van de afbeelding gedefinieerd die in pixels moet worden weer gegeven.
 
-- **ImageData** : dit is een binaire eigenschap van het type. Gebruik deze eigenschap om een gegevens bron te binden aan de weer gegeven afbeelding. De gebonden gegevens bron moet van het binaire bestand zijn. U kunt dit veld ook gebruiken om een afbeelding expliciet in te stellen door gegevens op te geven in de indeling byte [].
+- **ImageData**: dit is een binaire eigenschap van het type. Gebruik deze eigenschap om een gegevens bron te binden aan de weer gegeven afbeelding. De gebonden gegevens bron moet van het binaire bestand zijn. U kunt dit veld ook gebruiken om een afbeelding expliciet in te stellen door gegevens op te geven in de indeling byte [].
 
-- **ImageResource** : dit is een optionele eigenschap van het type binary.
+- **ImageResource**: dit is een optionele eigenschap van het type binary.
 
-- **AlternativeText** : dit is een optionele eigenschap van het type String. Deze eigenschap wordt weer gegeven als alternatieve tekst wanneer de afbeelding niet kan worden weer gegeven.
+- **AlternativeText**: dit is een optionele eigenschap van het type String. Deze eigenschap wordt weer gegeven als alternatieve tekst wanneer de afbeelding niet kan worden weer gegeven.
 
-**Gebeurtenissen** :
+**Gebeurtenissen**:
 
 - Er zijn geen gebeurtenissen voor dit besturings element.
 
-**Voor beeld** :
+**Voorbeeld**:
 
 >[!NOTE]
 >Als u dit voor beeld wilt gebruiken, moet u een bestaande afbeeldings gegevens binden met het besturings element.
@@ -1654,39 +1654,39 @@ In het volgende code segment wordt een besturings element voor een afbeeldings v
 
 ### <a name="uocradiobuttonlist"></a>UocRadioButtonList
 
-**Naam** : UocRadioButtonList
+**Naam**: UocRadioButtonList
 
-**Beschrijving** : dit is een eenvoudige lijst met keuze rondjes. De opties sluiten elkaar wederzijds uit in deze lijst. Dit besturings element wordt aanbevolen wanneer gebruikers vijf of minder opties kunnen kiezen. Anders wordt UOCListView aanbevolen.
+**Beschrijving**: dit is een eenvoudige lijst met keuze rondjes. De opties sluiten elkaar wederzijds uit in deze lijst. Dit besturings element wordt aanbevolen wanneer gebruikers vijf of minder opties kunnen kiezen. Anders wordt UOCListView aanbevolen.
 
-**Eigenschappen** :
+**Eigenschappen**:
 
 - Alle algemene eigenschappen: Zie <a href="#common-properties">algemene eigenschappen</a>voor meer informatie over deze eigenschappen.
 
-- **ValuePath** : de waarde Path is ingesteld op value. Het wordt gebonden aan het veld waarde van het element Option, zoals beschreven in deze sectie.
+- **ValuePath**: de waarde Path is ingesteld op value. Het wordt gebonden aan het veld waarde van het element Option, zoals beschreven in deze sectie.
 
-- **CaptionPath** : het pad naar de waarde is ingesteld op Caption. Het wordt gebonden aan het bijschrift veld van het optie-element, zoals beschreven in deze sectie.
+- **CaptionPath**: het pad naar de waarde is ingesteld op Caption. Het wordt gebonden aan het bijschrift veld van het optie-element, zoals beschreven in deze sectie.
 
-- **HintPath** : het pad naar de waarde is ingesteld op Hint. Het wordt gebonden aan het Hint veld van het optie-element, zoals beschreven in deze sectie.
+- **HintPath**: het pad naar de waarde is ingesteld op Hint. Het wordt gebonden aan het Hint veld van het optie-element, zoals beschreven in deze sectie.
 
-- **SelectedValue** : de waarde die momenteel is geselecteerd. Dit is een vereiste eigenschap van het type String. Deze eigenschap is gebonden aan de teken reeks gegevens uit de gegevens bron.
+- **SelectedValue**: de waarde die momenteel is geselecteerd. Dit is een vereiste eigenschap van het type String. Deze eigenschap is gebonden aan de teken reeks gegevens uit de gegevens bron.
 
-**Gebeurtenissen** :
+**Gebeurtenissen**:
 
-- **SelectedIndexChanged** : de gebeurtenis treedt op wanneer het geselecteerde keuze rondje wordt gewijzigd.
+- **SelectedIndexChanged**: de gebeurtenis treedt op wanneer het geselecteerde keuze rondje wordt gewijzigd.
 
-- **CheckedChanged** : wanneer de status van het keuze rondje wordt gewijzigd, wordt deze gebeurtenis verzonden.
+- **CheckedChanged**: wanneer de status van het keuze rondje wordt gewijzigd, wordt deze gebeurtenis verzonden.
 
-**Opties** :
+**Opties**:
 
 Er kunnen slechts twee **Opties** worden elementen als opties voor dit besturings element. Zie <a href="#options-element">Opties element</a>voor de structuur van een **Options** -element.
 
-- **Waarde** : het waardeveld moet worden ingesteld op True of False (waar).
+- **Waarde**: het waardeveld moet worden ingesteld op True of False (waar).
 
-- **Bijschrift** : dit kan een wille keurige teken reeks waarde zijn.
+- **Bijschrift**: dit kan een wille keurige teken reeks waarde zijn.
 
-- **Hint** : dit kan een wille keurige teken reeks waarde zijn.
+- **Hint**: dit kan een wille keurige teken reeks waarde zijn.
 
-**Voor beeld** :
+**Voorbeeld**:
 
 ![Besturings element UocRadioButtonList](media/rcd-configuration-xml-reference/image063.jpg)
 
@@ -1716,25 +1716,25 @@ In het volgende code segment wordt een lijst met keuze rondjes gemaakt:
 
 ### <a name="uocsimpleradiobutton"></a>UocSimpleRadioButton
 
-**Naam** : UocSimpleRadioButton
+**Naam**: UocSimpleRadioButton
 
-**Beschrijving** : dit is een eenvoudig besturings element, keuze rondje. Het gebruik van dit besturings element is vergelijkbaar met een eenvoudig selectie vakje. Er zijn twee keuze rondjes, met naast de tekst labelen. Het is raadzaam om het besturings element te binden aan gegevens van het type Booleaans.
+**Beschrijving**: dit is een eenvoudig besturings element, keuze rondje. Het gebruik van dit besturings element is vergelijkbaar met een eenvoudig selectie vakje. Er zijn twee keuze rondjes, met naast de tekst labelen. Het is raadzaam om het besturings element te binden aan gegevens van het type Booleaans.
 
-**Eigenschappen** :
+**Eigenschappen**:
 
 - Alle algemene eigenschappen: Zie <a href="#common-properties">algemene eigenschappen</a>voor meer informatie over deze eigenschappen.
 
-- **True** : dit is een optionele eigenschap van het type String. Dit is de tekst die wordt weer gegeven wanneer het keuze rondje is geselecteerd.
+- **True**: dit is een optionele eigenschap van het type String. Dit is de tekst die wordt weer gegeven wanneer het keuze rondje is geselecteerd.
 
-- **Falsetekst** : dit is een optionele eigenschap van het type String. Dit is de tekst die wordt weer gegeven wanneer het keuze rondje niet is geselecteerd.
+- **Falsetekst**: dit is een optionele eigenschap van het type String. Dit is de tekst die wordt weer gegeven wanneer het keuze rondje niet is geselecteerd.
 
-- **SelectedItem** : dit is een optionele, Booleaanse-type eigenschap. Deze waarde geeft aan dat het keuze rondje is geselecteerd. Dit kan worden gebonden aan gegevens van het type Booleaans van een gegevens bron. De standaard waarde is ingesteld op ONWAAR.
+- **SelectedItem**: dit is een optionele, Booleaanse-type eigenschap. Deze waarde geeft aan dat het keuze rondje is geselecteerd. Dit kan worden gebonden aan gegevens van het type Booleaans van een gegevens bron. De standaard waarde is ingesteld op ONWAAR.
 
-**Gebeurtenissen** :
+**Gebeurtenissen**:
 
-- **CheckedChanged** : wanneer het keuze rondje de status gewijzigd van geselecteerd in niet-geselecteerd of tegenovergestelde heeft, wordt dit signaal verzonden.
+- **CheckedChanged**: wanneer het keuze rondje de status gewijzigd van geselecteerd in niet-geselecteerd of tegenovergestelde heeft, wordt dit signaal verzonden.
 
-**Voor beeld** :
+**Voorbeeld**:
 
 ![Besturings element UocSimpleRadioButton](media/rcd-configuration-xml-reference/image066.png)
 
@@ -1759,33 +1759,33 @@ In het volgende code segment wordt een keuze rondje gegenereerd:
 
 ### <a name="uoctextbox"></a>UocTextBox
 
-**Naam** : UocTextBox
+**Naam**: UocTextBox
 
-**Beschrijving** : dit is een eenvoudig tekstvak dat invoer van het teken reeks type ondersteunt. U wordt aangeraden dit besturings element te gebruiken om te binden met gegevens van het type teken reeks.
+**Beschrijving**: dit is een eenvoudig tekstvak dat invoer van het teken reeks type ondersteunt. U wordt aangeraden dit besturings element te gebruiken om te binden met gegevens van het type teken reeks.
 
-**Eigenschappen** :
+**Eigenschappen**:
 
 - Alle algemene eigenschappen: Zie <a href="#common-properties">algemene eigenschappen</a>voor meer informatie over deze eigenschappen.
 
-- **MaxLength** : dit is een optioneel, geheel getal-type kenmerk. Met deze eigenschap geeft u de maximale lengte op voor een teken reeks invoer. De standaard waarde voor deze eigenschap is 128 tekens.
+- **MaxLength**: dit is een optioneel, geheel getal-type kenmerk. Met deze eigenschap geeft u de maximale lengte op voor een teken reeks invoer. De standaard waarde voor deze eigenschap is 128 tekens.
 
-- **Tekst** : dit is een optionele eigenschap van het type teken reeks. Dit is de tekst die wordt weer gegeven in het tekstvak. U kunt een expliciete teken reeks definiëren die wordt weer gegeven in het tekstvak tijdens het initiële laden van het besturings element of het binden aan een schema kenmerk van een teken reeks type.
+- **Tekst**: dit is een optionele eigenschap van het type teken reeks. Dit is de tekst die wordt weer gegeven in het tekstvak. U kunt een expliciete teken reeks definiëren die wordt weer gegeven in het tekstvak tijdens het initiële laden van het besturings element of het binden aan een schema kenmerk van een teken reeks type.
 
-- **Rows** : dit is een optionele eigenschap van het type integer. Met deze eigenschap wordt de hoogte van het tekstvak in teken eenheden gedefinieerd. De standaard waarde is één teken.
+- **Rows**: dit is een optionele eigenschap van het type integer. Met deze eigenschap wordt de hoogte van het tekstvak in teken eenheden gedefinieerd. De standaard waarde is één teken.
 
-- **Columns** : dit is een optionele, integer-type-eigenschap. Met deze eigenschap wordt de breedte van het tekstvak in teken eenheden gedefinieerd. De standaard waarde is 20 tekens.
+- **Columns**: dit is een optionele, integer-type-eigenschap. Met deze eigenschap wordt de breedte van het tekstvak in teken eenheden gedefinieerd. De standaard waarde is 20 tekens.
 
-- **Terugloop** : dit is een optionele, Booleaanse-type eigenschap. Door de waarde van deze eigenschap in te stellen op waar, wordt de functie Tekst terugloop in het tekstvak ingeschakeld. De standaard waarde van deze eigenschap is ingesteld op True.
+- **Terugloop**: dit is een optionele, Booleaanse-type eigenschap. Door de waarde van deze eigenschap in te stellen op waar, wordt de functie Tekst terugloop in het tekstvak ingeschakeld. De standaard waarde van deze eigenschap is ingesteld op True.
 
-- **UniquenessValidationXPath** : dit is een optionele eigenschap van het type String. Er wordt een geldige FIM XPath-filter expressie gebruikt en er wordt voor gezorgd dat de waarde invoer door de gebruiker uniek is binnen de resources die binnen het bereik van het filter vallen. Bijvoorbeeld, om ervoor te zorgen dat de door de gebruiker gevraagde weergave naam uniek is binnen alle beveiligings groepen met e-mail functionaliteit in de data base van de FIM-service, gebruikt u het XPath `/Group[DisplayName=’%VALUE%’ and Type=’MailEnabledSecurity’` . De validatie actie wordt uitgevoerd wanneer de gebruiker de pagina verlaat. Deze eigenschap wordt alleen ondersteund in de RCDC voor het maken van een resource.
+- **UniquenessValidationXPath**: dit is een optionele eigenschap van het type String. Er wordt een geldige FIM XPath-filter expressie gebruikt en er wordt voor gezorgd dat de waarde invoer door de gebruiker uniek is binnen de resources die binnen het bereik van het filter vallen. Bijvoorbeeld, om ervoor te zorgen dat de door de gebruiker gevraagde weergave naam uniek is binnen alle beveiligings groepen met e-mail functionaliteit in de data base van de FIM-service, gebruikt u het XPath `/Group[DisplayName=’%VALUE%’ and Type=’MailEnabledSecurity’` . De validatie actie wordt uitgevoerd wanneer de gebruiker de pagina verlaat. Deze eigenschap wordt alleen ondersteund in de RCDC voor het maken van een resource.
 
-- **UniquenessErrorMessage** : dit is een optionele eigenschap van het type String. Deze teken reeks wordt gebruikt om een fout bericht weer te geven als de UniquenessValidationXPath-validatie is mislukt, en kan een expliciete tekst of een teken reeks bron variabele zijn. Als deze eigenschap niet is opgegeven, is het standaardfout bericht voor een mislukte validatie% VALUE% al aanwezig. Probeer een ander account. "
+- **UniquenessErrorMessage**: dit is een optionele eigenschap van het type String. Deze teken reeks wordt gebruikt om een fout bericht weer te geven als de UniquenessValidationXPath-validatie is mislukt, en kan een expliciete tekst of een teken reeks bron variabele zijn. Als deze eigenschap niet is opgegeven, is het standaardfout bericht voor een mislukte validatie% VALUE% al aanwezig. Probeer een ander account. "
 
-**Gebeurtenissen** :
+**Gebeurtenissen**:
 
-- **TextChanged** : deze gebeurtenis wordt verzonden als de tekst in het tekstvak wordt gewijzigd.
+- **TextChanged**: deze gebeurtenis wordt verzonden als de tekst in het tekstvak wordt gewijzigd.
 
-**Voor beeld** :
+**Voorbeeld**:
 
 Zie de sectie voor beelden van eenvoudige besturings elementen voor een volledig voor beeld van dit besturings element.
 

@@ -9,28 +9,25 @@ ms.date: 08/18/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
-ms.openlocfilehash: 521b96c3ef9cae5a5f9151ddf125cfb534ae0332
-ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
+ms.openlocfilehash: c02904d7acb5c56e8b1e7f7a267b8d54c0a58d7a
+ms.sourcegitcommit: 89511939730501458295fc8499490b2b378ce637
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79044018"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98010554"
 ---
 # <a name="deploy-mim-pam-with-windows-server-2016"></a>MIM PAM implementeren met Windows Server 2016
 
 
-Met dit scenario kunt u met MIM 2016 SP1 functies van Windows Server 2016 gebruiken als domeincontroller voor het PRIV-forest. Als dit scenario is geconfigureerd, wordt voor een Kerberos-ticket van een gebruiker een tijdslimiet ingesteld voor de resterende tijd van de activeringen van de rol. 
-
-> [!Note]
-> Eerdere technische preview-versies van Windows Server 2016 voor Technical Preview 5 kunnen niet met deze MIM-versie worden gebruikt.
+Dit scenario maakt MIM 2016 SP2 mogelijk voor het PAM-scenario met behulp van de functies van Windows Server 2016 of hoger als de domein controller voor het "PRIV"-forest.  Als dit scenario is geconfigureerd, wordt voor een Kerberos-ticket van een gebruiker een tijdslimiet ingesteld voor de resterende tijd van de activeringen van de rol.
 
 ## <a name="preparation"></a>Voorbereiding
 
 Er zijn minimaal twee virtuele machines nodig voor de testomgeving:
 
--   Eén virtuele machine met Windows Server 2016 die fungeert als host voor de PRIV-domeincontroller
+-   VM fungeert als host voor de PRIV-domein controller, waarop Windows Server 2016 of hoger wordt uitgevoerd.
 
--   Eén virtuele machine met Windows Server 2016 (aanbevolen) of Windows Server 2012 R2 die fungeert als host voor de MIM-service
+-   VM fungeert als host van de MIM-service, met Windows Server 2016 of hoger (aanbevolen) of Windows Server 2012 R2
 
 > [!NOTE]
 > Als u nog geen CORP-domein in uw testomgeving hebt, is een extra domeincontroller voor dit domein vereist. U kunt voor de CORP-domeincontroller met Windows Server 2016 of Windows Server 2012 R2 gebruiken.
@@ -75,7 +72,7 @@ Voer de installatie uit, zoals beschreven in de [introductiehandleiding](privile
 
   - Na de configuratie van de delegatie en voordat de server opnieuw wordt opgestart, moet u de MIM-beheerders en het MIM-serviceaccount toestaan om schaduwprincipals te maken en bij te werken.
 
-    a. Start een PowerShell-venster en typ ADSIEdit.
+    a. Start een Power shell-venster en typ ADSIEdit.
 
     b. Klik in het menu Acties op Verbinding maken met. Wijzig bij de instelling voor het verbindingspunt de naamgevingscontext van Standaardnaamgevingscontext in Configuratie en klik op OK.
 
@@ -87,7 +84,7 @@ Voer de installatie uit, zoals beschreven in de [introductiehandleiding](privile
 
     f. Ga naar Geavanceerde beveiligingsinstellingen. Klik op de regel voor toegang tot de MIM-service op Bewerken. Wijzig de instelling 'Is van toepassing op' in 'Voor dit object en alle onderliggende objecten'. Werk deze machtigingsinstelling bij en sluit het dialoogvenster Beveiliging.
 
-    g. Sluit ADSI bewerken.
+    bijvoorbeeld Sluit ADSI bewerken.
 
   - Na de configuratie van de delegatie en voordat de server opnieuw wordt opgestart, moet u de MIM-beheerders toestaan om verificatiebeleid te maken en bij te werken.
 
@@ -125,7 +122,7 @@ Voer de installatie uit, zoals beschreven in de [introductiehandleiding](privile
 
 - Volg de instructies in [Stap 5: een vertrouwensrelatie instellen](step-5-establish-trust-between-priv-corp-forests.md) met de volgende aanpassingen:
 
-  - Bij het instellen van een eenzijdige vertrouwensrelatie, moet u alleen de eerste twee PowerShell-opdrachten uitvoeren (get-credential en New-PAMTrust). **Voer de opdracht New-PAMDomainConfiguration niet uit**.
+  - Bij het tot stand brengen van een eenrichtings vertrouwensrelatie voert u alleen de eerste twee Power shell-opdrachten uit (Get-Credential en New-PAMTrust), voert **u de opdracht New-PAMDomainConfiguration niet uit**.
 
   - Nadat u de vertrouwensrelatie hebt ingesteld, meldt u zich aan bij PRIVDC als PRIV\\-beheerder, start u PowerShell en typt u de volgende opdrachten:
     ```

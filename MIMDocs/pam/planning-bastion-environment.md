@@ -5,24 +5,27 @@ keywords: ''
 author: billmath
 ms.author: billmath
 manager: daveba
-ms.date: 09/13/2017
+ms.date: 01/05/2021
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: bfc7cb64-60c7-4e35-b36a-bbe73b99444b
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: d6cd6c88992dc3c7dc80cd93d21907319ece0136
-ms.sourcegitcommit: 2bbb6815b7dfae877eec966c1dc40ea8da847d62
+ms.openlocfilehash: aeaf82e6875739cb6ff8ee7b7d96ced55e07adab
+ms.sourcegitcommit: 89511939730501458295fc8499490b2b378ce637
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96522146"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98010741"
 ---
 # <a name="planning-a-bastion-environment"></a>Een bastionomgeving plannen
 
-Door het toevoegen van een bastionomgeving met een specifiek beheerforest aan Active Directory kunnen organisaties gemakkelijk beheerdersaccounts, werkstations en groepen beheren in een omgeving die sterkere beveiligingsmechanismen heeft dan hun bestaande productieomgeving.
+Als u een bastion-omgeving met een toegewezen beheer forest aan een Active Directory toevoegt, kunnen organisaties beheerders accounts, werk stations en groepen beheren in een omgeving met betere beveiligings controles dan de bestaande productie omgeving.
 
-Deze architectuur maakt een aantal besturingselementen mogelijk die in een architectuur met één forest niet mogelijk zijn of niet eenvoudig kunnen worden geconfigureerd. Dit omvat het inrichten van accounts als standaardgebruiker zonder beheerdersmogelijkheden in het beheerforest, die in de productieomgeving over uitgebreide beheerdersmogelijkheden beschikken. Hierdoor is betere technische afdwinging van governance mogelijk. Deze architectuur biedt ook de mogelijkheid van het gebruik van de functie Selectieve verificatie van een vertrouwensrelatie als een manier om aanmeldingen (en referentieblootstelling) te beperken tot alleen geautoriseerde hosts. In situaties waarin een hoger assurantieniveau voor het productieforest is vereist zonder de kosten en complexiteit van het bouwen van een geheel nieuwe architectuur, kan een beheerforest voorzien in een omgeving die het assurantieniveau van de productieomgeving verhoogt.
+> [!NOTE]
+> De PAM-benadering met een bastion-omgeving van MIM is bedoeld om te worden gebruikt in een aangepaste architectuur voor geïsoleerde omgevingen waar geen toegang tot internet beschikbaar is, waarbij deze configuratie vereist is voor de voor Schriften of in een zeer veel impact van geïsoleerde omgevingen zoals offline onderzoek laboratoria en niet-verbonden operationele technologie of omgevingen voor gegevens verzameling. Als uw Active Directory deel uitmaakt van een omgeving met Internet verbinding, raadpleegt u [privileged Access beveiligen](/security/compass/overview) voor meer informatie over waar u moet beginnen.
+
+Deze architectuur maakt het mogelijk om besturings elementen in te kunnen of eenvoudig te configureren in een architectuur met één forest. Dit omvat het inrichten van accounts als standaardgebruiker zonder beheerdersmogelijkheden in het beheerforest, die in de productieomgeving over uitgebreide beheerdersmogelijkheden beschikken. Hierdoor is betere technische afdwinging van governance mogelijk. Deze architectuur biedt ook de mogelijkheid van het gebruik van de functie Selectieve verificatie van een vertrouwensrelatie als een manier om aanmeldingen (en referentieblootstelling) te beperken tot alleen geautoriseerde hosts. In situaties waarin een hoger assurantieniveau voor het productieforest is vereist zonder de kosten en complexiteit van het bouwen van een geheel nieuwe architectuur, kan een beheerforest voorzien in een omgeving die het assurantieniveau van de productieomgeving verhoogt.
 
 Naast het toegewezen beheerforest kunnen aanvullende technieken worden gebruikt. Hieronder vallen het beperken van blootstelling van beheerdersreferenties, hete beperken van rolbevoegdheden van gebruikers in die forest en het waarborgen dat administratieve taken niet worden uitgevoerd op hosts die worden gebruikt voor standaard gebruikersactiviteiten (bijvoorbeeld e-mailen en surfen op internet).
 
@@ -40,7 +43,7 @@ Volgens het [lagenmodel](tier-model-for-partitioning-administrative-privileges.m
 
 ### <a name="restricted-trust"></a>Beperkt vertrouwen
 
-Het productieforest *CORP* moet het beheerforest *PRIV* vertrouwen, maar niet andersom. Dit kan een domeinvertrouwen of een forestvertrouwen zijn. Het beheersforestdomein hoeft de beheerde domeinen en forests niet te vertrouwen om de Active Directory te beheren. Voor aanvullende toepassingen is mogelijk wel een wederzijdse vertrouwensrelatie, beveiligingsvalidatie en test vereist.
+Het productieforest *CORP* moet het beheerforest *PRIV* vertrouwen, maar niet andersom. Deze vertrouwens relatie kan een domein vertrouwen of een forestvertrouwensrelatie zijn. Het beheersforestdomein hoeft de beheerde domeinen en forests niet te vertrouwen om de Active Directory te beheren. Voor aanvullende toepassingen is mogelijk wel een wederzijdse vertrouwensrelatie, beveiligingsvalidatie en test vereist.
 
 Selectieve verificatie moet worden gebruikt om ervoor te zorgen dat accounts in het beheerforest alleen de juiste productiehosts gebruiken. Voor het onderhoud van domeincontrollers en het delegeren van rechten in Active Directory, is doorgaans het toekennen van het recht 'Allowed to logon' (Aanmelden toegestaan) vereist voor domeincontrollers in aangewezen beheerdersaccounts in laag 0 van het beheerforest. Zie [instellingen voor selectieve verificatie configureren](https://technet.microsoft.com/library/cc816580.aspx) voor meer informatie.
 
@@ -66,7 +69,7 @@ Houd er tijdens de overgang van het beheer van toepassingen naar de bastionomgev
 
 - Implementeer Active Directory Domain Services op meerdere computers in de bastionomgeving. Er zijn er ten minste twee nodig om ervoor te zorgen dat verificatie altijd mogelijk is, zelfs als een server opnieuw wordt gestart voor gepland onderhoud. Mogelijk zijn extra computers nodig voor hogere belasting of voor het beheren van resources en beheerders die zich in meerdere geografische regio's bevinden.
 
-- Bereid voor noodgevallen in het bestaande forest en het toegewezen beheerforest noodaccounts voor.
+- Stel afbreek glazen accounts in het bestaande forest en het exclusieve beheerders forest op voor nood gevallen.
 
 - Implementeer SQL Server en MIM-service op meerdere computers in de bastionomgeving.
 
@@ -86,7 +89,7 @@ Bij het maken van de bastionomgeving, en voordat u Microsoft Identity Manager in
 
 - **Noodaccounts** mogen alleen kunnen aanmelden op de domeincontrollers in de bastionomgeving.
 
-- **'Rodekaartbeheerders'** richten andere accounts in en voeren niet-gepland onderhoud uit. Aan deze accounts wordt geen toegang verleend tot de bestaande forests of systemen buiten de bastionomgeving. De referenties, zoals een smartcard, moeten fysiek worden beveiligd en het gebruik van deze account moet worden vastgelegd.
+- **'Rodekaartbeheerders'** richten andere accounts in en voeren niet-gepland onderhoud uit. Aan deze accounts wordt geen toegang verleend tot de bestaande forests of systemen buiten de bastionomgeving. De referenties, zoals een Smart Card, moeten fysiek worden beveiligd en het gebruik van deze accounts moet worden vastgelegd.
 
 - **Serviceaccounts** zijn nodig voor Microsoft Identity Manager, SQL Server en andere software.
 
@@ -128,7 +131,7 @@ Afzonderlijk beveiligde werkstations die zijn toegewezen aan gebruikers met invl
 
 - **USB-beperkingen** als bescherming tegen fysieke infectie.
 
-- **Netwerk isolatie** om te beschermen tegen netwerk aanvallen en onbedoelde beheer acties. Hostfirewalls moeten alle binnenkomende verbindingen blokkeren, behalve de verbindingen die expliciet zijn vereist, en moeten alle overbodige uitgaande toegang tot internet blokkeren.
+- **Netwerk isolatie** om te beschermen tegen netwerk aanvallen en onbedoelde beheer acties. Host-firewalls moeten alle binnenkomende verbindingen blok keren, behalve de verbindingen die expliciet vereist zijn, en alle overbodige uitgaande internet toegang blok keren.
 
 - **Antimalware** beveiligen tegen bekende bedreigingen en malware.
 
@@ -164,7 +167,7 @@ Er zijn zeven vereisten voor het inschakelen van beheer voor een bestaand domein
 
 ### <a name="1-a-security-group-on-the-local-domain"></a>1. een beveiligings groep in het lokale domein
 
-In het bestaande domein moet een groep bestaan waarvan de naam de NetBIOS-domeinnaam is, gevolgd door drie dollartekens, bijvoorbeeld *CONTOSO$$$*. Het groepsbereik moet *domeingebonden* zijn en het groepstype *Beveiliging*. Dit is nodig om groepen te kunnen maken in het toegewezen beheerforest met dezelfde beveiligings-id als groepen in dit domein. Meld u op een werkstation dat lid is van het bestaande domein aan als beheerder van het bestaande domein en maak deze groep met de volgende PowerShell-opdracht:
+In het bestaande domein moet een groep bestaan waarvan de naam de NetBIOS-domeinnaam is, gevolgd door drie dollartekens, bijvoorbeeld *CONTOSO$$$*. Het groepsbereik moet *domeingebonden* zijn en het groepstype *Beveiliging*. Dit is nodig om groepen te kunnen maken in het toegewezen beheerforest met dezelfde beveiligings-id als groepen in dit domein. Maak deze groep met de volgende Power shell-opdracht, uitgevoerd door een beheerder van het bestaande domein en uit te voeren op een werk station dat is gekoppeld aan het bestaande domein:
 
 ```PowerShell
 New-ADGroup -name 'CONTOSO$$$' -GroupCategory Security -GroupScope DomainLocal -SamAccountName 'CONTOSO$$$'
@@ -248,4 +251,4 @@ Controleer de machtigingen op het object *AdminSDHolder* in de systeemcontainer 
 
 ## <a name="select-users-and-groups-for-inclusion"></a>Gebruikers en groepen selecteren voor insluiting
 
-De volgende stap is het definiëren van de PAM-rollen. Hierdoor koppelt u de gebruikers en groepen waartoe ze toegang moeten hebben. Dit is doorgaans een subset van de gebruikers en groepen voor de laag die waarvan in de bastionomgeving wordt aangegeven dat deze wordt beheerd. Zie [Rollen voor Privileged Access Management definiëren](defining-roles-for-pam.md) voor meer informatie.
+De volgende stap is het definiëren van de PAM-rollen. Hierdoor koppelt u de gebruikers en groepen waartoe ze toegang moeten hebben. Deze gebruikers en groepen zijn doorgaans een subset van de gebruikers en groepen voor de laag die wordt aangeduid als beheerd in de Bastion omgeving. Zie [Rollen voor Privileged Access Management definiëren](defining-roles-for-pam.md) voor meer informatie.
