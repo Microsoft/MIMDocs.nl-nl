@@ -11,16 +11,20 @@ ms.prod: microsoft-identity-manager
 ms.assetid: 1a368e8e-68e1-4f40-a279-916e605581bc
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: f05769a7d1db38ecde200e18e45c6ca29a75b756
-ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
+ms.openlocfilehash: 11ac22be4425ef0b0a67f64c092d1e848ff7ad72
+ms.sourcegitcommit: 41d399b16dc64c43da3cc3b2d77529082fe1d23a
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79044035"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98104085"
 ---
 # <a name="define-roles-for-privileged-access-management"></a>Rollen voor Privileged Access Management definiëren
 
 Met Privileged Access Management kunt u gebruikers toewijzen aan bevoorrechte rollen die ze naar behoefte kunnen activeren voor Just-In-Time-toegang. Deze rollen worden handmatig gedefinieerd en ingesteld n de bastionomgeving. In dit artikel wordt uitgelegd hoe u kunt beslissen welke rollen u wilt beheren via PAM en hoe u deze met de juiste machtigingen en beperkingen kunt definiëren.
+
+> [!IMPORTANT]
+> Het model in dit artikel is uitsluitend bedoeld voor geïsoleerde Active Directory omgevingen met behulp van MIM PAM.  Zie in plaats daarvan de richt lijnen in het [model voor bedrijfs toegang](/security/compass/privileged-access-access-model)voor hybride omgevingen.
+
 
 Een eenvoudige benadering voor het definiëren van rollen voor Privileged Access Management is door alle informatie in een werkblad te verzamelen. Vermeld de rollen in de rollen en gebruik de kolommen om beheervereisten en -machtigingen te identificeren.
 
@@ -42,7 +46,7 @@ Begin met het vaststellen van de rollen die u wilt beheren met PAM. Op het werkb
 
 Bekijk elke toepassing die mogelijk wordt gebruikt voor beheer om de juiste rollen te vinden:
 
-- Is de toepassing op laag [0, laag 1 of laag 2](https://docs.microsoft.com/windows-server/identity/securing-privileged-access/securing-privileged-access-reference-material)?
+- Bevindt de toepassing zich op niveau tier 0, tier 1 of tier 2?
 - Wat zijn de machtigingen die van invloed zijn op de vertrouwelijkheid, integriteit of beschikbaarheid van de toepassing?
 - Heeft de toepassing afhankelijkheden van andere onderdelen van het systeem? Zijn er bijvoorbeeld afhankelijkheden voor data bases, netwerken, beveiligings infrastructuur, virtualisatie of hosting platform?
 
@@ -96,8 +100,6 @@ In sommige gevallen kan een gebruiker permanent worden toegewezen aan een rol. I
 
 - Een gebruikersaccount in het beheerforest met een smartcard of virtuele smartcard (bijvoorbeeld, een account met een offlinesmartcard, die nodig is voor zeldzame onderhoudstaken)
 
-Voor organisaties die zich zorgen maken over de mogelijkheid van diefstal of misbruik van referenties bevat de handleiding [Azure MFA gebruiken voor activering](use-azure-mfa-for-activation.md) instructies voor het configureren van MIM om een extra buiten-bandcontrole te vereisen op het moment dat de rol wordt geactiveerd.
-
 ## <a name="delegate-active-directory-permissions"></a>Machtigingen voor Active Directory delegeren
 
 Er worden met Windows Server automatisch standaardgroepen gemaakt zoals Domeinbeheerders wanneer nieuwe domeinen worden gemaakt. Dankzij deze groepen kunt u snel aan de slag en deze zijn mogelijk geschikt voor kleinere organisaties. Grotere organisaties of gebruikers die meer isolatie van beheerders bevoegdheden vereisen, moeten deze groepen legen en vervangen door groepen die verfijnde machtigingen bieden.
@@ -110,7 +112,7 @@ Een beperking van de groep Domeinbeheerders is dat deze geen leden van een exter
 
 Maak in plaats van standaard groepen als domein Administrators nieuwe beveiligings groepen die alleen de benodigde machtigingen bieden. Vervolgens moet u MIM gebruiken om beheerders accounts dynamisch te voorzien van de groepslid maatschappen.
 
-### <a name="service-management-permissions"></a>Machtigingen voor servicebeheer
+### <a name="service-management-permissions"></a>Service beheer machtigingen
 
 In de volgende tabel worden voorbeelden gegeven van machtigingen die geschikt zijn voor opname in rollen voor het beheer van AD.
 
@@ -144,7 +146,7 @@ De volgende tabel bevat voor beelden van machtigingen die relevant zijn voor de 
 
 ## <a name="example-role-definitions"></a>Voorbeeldroldefinities
 
-De keuze van functie definities is afhankelijk van de laag van de servers die worden beheerd. Dit is ook afhankelijk van de keuze van de toepassingen die worden beheerd. Toepassingen als bedrijfs producten van Exchange of derden, zoals SAP, nemen vaak hun eigen aanvullende roldefinities voor gedelegeerd beheer.
+De keuze van roldefinities is afhankelijk van de laag van de servers die worden beheerd. Dit is ook afhankelijk van de keuze van de toepassingen die worden beheerd. Toepassingen als bedrijfs producten van Exchange of derden, zoals SAP, nemen vaak hun eigen aanvullende roldefinities voor gedelegeerd beheer.
 
 De volgende secties bevatten voorbeelden voor typisch zakelijke scenario's.
 
@@ -170,7 +172,7 @@ Rollen die geschikt zijn voor het beheren van productieforestaccounts en resourc
 - Opslagbeheerders
 - Antimalwarebeheerder voor servers op het niveau van tier 0
 - SCCM-beheerders voor SCCM op het niveau van tier 0
-- SCOM-beheerders voor SCOM op het niveau van tier 0
+- System Center Operations Manager beheerders voor laag 0 Operations Manager
 - Back-upbeheerders voor servers op het niveau van tier 0
 - Gebruikers van buiten-band- en baseboardbeheercontrollers (voor KVM of LOM) gekoppeld aan hosts op het niveau van tier 0
 
@@ -183,7 +185,7 @@ Rollen voor het beheer en de back-up van servers op het niveau van tier 1 zijn o
 - Beveiligingsscanneraccount
 - Antimalwarebeheerder voor servers op het niveau van tier 1
 - SCCM-beheerders voor SCCM op het niveau van tier 1
-- SCOM-beheerders voor SCOM op het niveau van tier 1
+- System Center Operations Manager beheerders voor Tier 1 Operations Manager
 - Back-upbeheerders voor servers op het niveau van tier 1
 - Gebruikers van buiten-band- en baseboardbeheercontrollers (voor KVM of LOM) gekoppeld aan hosts op het niveau van tier 1
 
@@ -207,5 +209,5 @@ Rollen voor het beheer van niet-administratieve gebruikers en computerbeheer zij
 
 ## <a name="next-steps"></a>Volgende stappen
 
-- [Naslaginformatie over het beveiligen van bevoegde toegang](https://docs.microsoft.com/windows-server/identity/securing-privileged-access/securing-privileged-access-reference-material)
-- [Azure MFA gebruiken voor activering](use-azure-mfa-for-activation.md)
+- [model voor bedrijfs toegang](/security/compass/privileged-access-access-model)
+

@@ -10,16 +10,16 @@ ms.date: 07/06/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 5134a112-f73f-41d0-a5a5-a89f285e1f73
-ms.openlocfilehash: 512a1887329f9ec5c93fd69f0ce0b22495ba009c
-ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
+ms.openlocfilehash: 1c26147dc1e192804011ee104989a508acb25974
+ms.sourcegitcommit: 41d399b16dc64c43da3cc3b2d77529082fe1d23a
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79043542"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98104051"
 ---
-# <a name="using-azure-mfa-for-activation"></a>Azure MFA gebruiken voor activering
+# <a name="using-azure-mfa-for-activation-in-mim-pam"></a>Azure MFA gebruiken voor activering in MIM PAM
 > [!IMPORTANT]
-> Vanwege de aankondiging van de afschaffing van Azure Multi-Factor Authentication Software Development Kit, wordt de Azure MFA SDK ondersteund voor bestaande klanten tot de datum van uittreding van 14 november 2018. Nieuwe klanten en huidige klanten kunnen Azure MFA SDK niet meer downloaden via de klassieke Azure-Portal. Zie voor meer informatie over het gebruik van Azure MFA server [Azure MFA server gebruiken in pam of SSPR](../working-with-mfaserver-for-mim.md).
+> In eerdere versies van MIM werd de Software Development Kit (SDK) voor Azure Multi-Factor Authentication (MFA) gebruikt om te integreren met Azure MFA.  Vanwege de afschaffing van de Azure MFA SDK kunnen bestaande en nieuwe MIM-klanten de Azure MFA SDK niet meer downloaden. Voor informatie over het gebruik van Azure MFA-server in plaats van de Azure MFA SDK raadpleegt [u Azure MFA server gebruiken in pam of SSPR](../working-with-mfaserver-for-mim.md).
 
 
 
@@ -33,53 +33,23 @@ Als geen van beide opties is ingeschakeld, worden kandidaatgebruikers automatisc
 
 Microsoft Azure Multi-Factor Authentication (MFA) is een verificatieservice waarbij gebruikers zich bij het aanmelden moeten verifiëren via een mobiele app, telefonische oproep of een tekstbericht. De service is beschikbaar voor gebruik met Microsoft Azure Active Directory en kan worden ingezet als service voor bedrijfstoepassingen in de cloud en on-premises. Voor het PAM-scenario biedt Azure MFA een extra verificatie methode. Azure MFA kan worden gebruikt voor autorisatie, ongeacht hoe een gebruiker wordt geverifieerd op het Windows PRIV-domein.
 
+> [!NOTE]
+> De PAM-benadering met een bastion-omgeving van MIM is bedoeld om te worden gebruikt in een aangepaste architectuur voor geïsoleerde omgevingen waar geen toegang tot internet beschikbaar is, waarbij deze configuratie vereist is voor de voor Schriften of in een zeer veel impact van geïsoleerde omgevingen zoals offline onderzoek laboratoria en niet-verbonden operationele technologie of omgevingen voor gegevens verzameling.  Omdat Azure MFA een Internet service is, wordt deze richt lijn uitsluitend verstrekt voor bestaande MIM PAM-klanten of in omgevingen waarin deze configuratie is vereist voor de regelgeving. Als uw Active Directory deel uitmaakt van een omgeving met Internet verbinding, raadpleegt u [privileged Access beveiligen](/security/compass/overview) voor meer informatie over waar u moet beginnen.
+
 ## <a name="prerequisites"></a>Vereisten
 
-Als u Azure MFA met MIM wilt gebruiken, hebt u het volgende nodig:
+Als u Azure MFA met MIM PAM wilt gebruiken, hebt u het volgende nodig:
 
 - Internettoegang voor elke MIM-service waarmee PAM wordt geleverd voor de communicatie met Azure MFA
 - Een Azure-abonnement
-- Azure Active Directory Premium-licenties voor kandidaatgebruikers of een alternatieve methode voor Azure MFA-licentieverlening
+- Azure MFA
+- Azure Active Directory Premium licenties voor kandidaten gebruikers
 - Telefoonnummers voor alle kandidaatgebruikers
-
-## <a name="creating-an-azure-mfa-provider"></a>Een Azure MFA-provider maken
-
-In deze sectie stelt u de Azure MFA-provider in Microsoft Azure Active Directory.Als u Azure MFA al gebruikt, als zelfstandige functie of geconfigureerd met Azure Active Directory Premium, gaat u door naar de volgende sectie.
-
-1.  Open een webbrowser en maak verbinding met de [klassieke Azure Portal](https://manage.windowsazure.com) als een Azure-abonnementsbeheerder.
-
-2.  Klik in de hoek linksonder op **Nieuw**.
-
-3.  Klik op **App-services > Active Directory > Provider voor Multi-Factor Authentication > Snelle invoer**.
-
-4.  Voer in het veld **Naam** de waarde **PAM** in en selecteer in het veld voor gebruiksmodel de waarde Per ingeschakelde gebruiker. Als u al een Azure AD-adreslijst hebt, selecteert u deze. Klik tot slot op **Maken**.
 
 ## <a name="downloading-the-azure-mfa-service-credentials"></a>De referenties voor de Azure MFA-service downloaden
 
-> [!IMPORTANT]
-> De Azure MFA SDK is niet meer beschikbaar. Zie voor meer informatie over het gebruik van Azure MFA-server [Azure MFA server gebruiken in pam of SSPR](../working-with-mfaserver-for-mim.md) in plaats daarvan.
+Voorheen downloadt u een ZIP-bestand van de Azure MFA SDK die het verificatie materiaal voor MIM heeft opgenomen om contact op te nemen met Azure MFA. Als de Azure MFA SDK echter niet meer beschikbaar is, raadpleegt [u de Azure MFA-server gebruiken in pam of SSPR](../working-with-mfaserver-for-mim.md) voor informatie over het gebruik van de Azure MFA-server.
 
-
-Voorheen zou u een bestand genereren dat het verificatie materiaal voor PAM bevat om contact op te nemen met Azure MFA.
-
-1. Open een webbrowser en maak verbinding met de [klassieke Azure Portal](https://manage.windowsazure.com) als een Azure-abonnementsbeheerder.
-
-2.  Klik op **Active Directory** in het menu van Azure Portal en klik vervolgens op het tabblad **Providers voor Multi-Factor Authentication**.
-
-3.  Klik op de Azure MFA-provider die u gaat gebruiken voor PAM en klik vervolgens op **Beheren**.
-
-4.  Klik in het nieuwe venster in het linkerdeel venster onder **configureren**op **instellingen**.
-
-5.  Klik in het venster **Azure Multi-Factor Authentication** op **SDK** bij **Downloads**.
-
-6.  Klik op de koppeling **downloaden** in de kolom zip voor het bestand met de taal **SDK voor ASP.net\#2,0 C**.
-
-![Multi-Factor Authentication SDK downloaden - schermafbeelding](media/PAM-Azure-MFA-Activation-Image-1.png)
-
-7.  Kopieer het betreffende ZIP-bestand naar elk systeem waarop de MIM-service is geïnstalleerd. 
-
->[!NOTE]
-> Het ZIP-bestand bevat sleutelmateriaal dat wordt gebruikt bij de verificatie voor de Azure MFA-service.
 
 ## <a name="configuring-the-mim-service-for-azure-mfa"></a>De MIM-service voor Azure MFA configureren
 
@@ -89,9 +59,9 @@ Voorheen zou u een bestand genereren dat het verificatie materiaal voor PAM beva
 
 3.  Navigeer in Windows Verkenner naar de ```pf\certs``` map van het zip-bestand dat u in de vorige sectie hebt gedownload. Kopieer het bestand ```cert\_key.p12``` naar de nieuwe map.
 
-4.  Navigeer in Windows Verkenner naar de ```pf``` map van de zip en open het bestand ```pf\_auth.cs``` in een tekst editor zoals WordPad.
+4.  Navigeer in Windows Verkenner naar de ```pf``` map van de zip en open het bestand ```pf\_auth.cs``` in een tekst editor zoals Klad blok.
 
-5. Deze drie para meters ```LICENSE\_KEY```zoeken ```GROUP\_KEY```: ```CERT\_PASSWORD```,,.
+5. Deze drie para meters zoeken: ```LICENSE\_KEY``` , ```GROUP\_KEY``` , ```CERT\_PASSWORD``` .
 
 ![Waarden kopiëren uit het bestand pf\_auth.cs - schermafbeelding](media/PAM-Azure-MFA-Activation-Image-2.png)
 
@@ -99,11 +69,11 @@ Voorheen zou u een bestand genereren dat het verificatie materiaal voor PAM beva
 
 7. Kopieer de waarden van de parameters LICENSE\_KEY, GROUP\_KEY en CERT\_PASSWORD in het bestand pf\_auth.cs file naar de overeenkomstige XML-elementen in het bestand MfaSettings.xml.
 
-8. Geef in **<CertFilePath>** het XML-element de volledige padnaam op van het certificaat\_sleutel. P12-bestand dat eerder is geëxtraheerd.
+8. Geef in het **<CertFilePath>** XML-element de volledige padnaam op van het certificaat \_ sleutel. P12-bestand dat eerder is geëxtraheerd.
 
-9. Voer in **<username>** het element een gebruikers naam in.
+9. Voer in het **<username>** element een gebruikers naam in.
 
-10. Voer in **<DefaultCountryCode>** het element de land code in voor het kiezen van uw gebruikers, zoals 1 voor de Verenigde Staten en Canada. Deze waarde wordt gebruikt als gebruikers zijn geregistreerd met telefoonnummers zonder landcode. Als het telefoonnummer van de gebruiker een internationale landcode heeft die verschilt van de landcode die is geconfigureerd voor de organisatie, moet die landcode worden opgenomen in het telefoonnummer dat wordt geregistreerd.
+10. Voer in het **<DefaultCountryCode>** element de land code in voor het kiezen van uw gebruikers, zoals 1 voor de Verenigde Staten en Canada. Deze waarde wordt gebruikt als gebruikers zijn geregistreerd met telefoonnummers zonder landcode. Als het telefoonnummer van de gebruiker een internationale landcode heeft die verschilt van de landcode die is geconfigureerd voor de organisatie, moet die landcode worden opgenomen in het telefoonnummer dat wordt geregistreerd.
 
 11. Sla het bestand **MfaSettings.xml** in de map ```C:\Program Files\Microsoft Forefront Identity Manager\2010\\Service``` van de MIM-service op om het bestand te overschrijven.
 
@@ -142,21 +112,6 @@ De volgende gebeurtenissen vindt u in het gebeurtenislogboek voor Privileged Acc
 | 103 | Informatie | MIM-service            | De gebruiker heeft Azure MFA voltooid tijdens de activering                       |
 | 825 | Waarschuwing     | Service voor PAM-controle | Het telefoonnummer is gewijzigd                                |
 
-U kunt ook een rapport van Azure MFA weergeven of downloaden voor meer informatie over mislukte telefoonoproepen (gebeurtenis 101).
-
-1.  Open een webbrowser en maak verbinding met de [klassieke Azure Portal](https://manage.windowsazure.com) als een globale beheerder van Azure AD.
-
-2.  Selecteer **Active Directory** in het menu van Azure Portal en selecteer vervolgens het tabblad **Providers voor Multi-Factor Authentication**.
-
-3.  Selecteer de Azure MFA-provider die u gaat gebruiken voor PAM en klik vervolgens op **Beheren**.
-
-4.  Klik in het nieuwe venster op **Gebruik** en vervolgens op **Gebruikersdetails**.
-
-5.  Selecteer het tijdsbereik en schakel het selectievakje in naast **Naam** in de extra rapportkolom. Klik op **Exporteren naar CSV**.
-
-6.  Nadat het rapport is gegenereerd, kunt u het weergeven in de portal of als een CSV-bestand downloaden wanneer het een uitgebreid MFA-rapport is. De waarde voor **SDK** in de kolom **AUTH TYPE** geven de rijen aan die relevant zijn als PAM-activeringsaanvragen: dit zijn de gebeurtenissen die afkomstig zijn uit MIM of andere on-premises software. Het veld **USERNAME** bevat de GUID van het gebruikersobject in de database van de MIM-service. Als een aanroep is mislukt, bevat de kolom **AUTHD** de waarde **No** en worden in de kolom **CALL RESULT** de details van de fout weergegeven.
-
 ## <a name="next-steps"></a>Volgende stappen
 
 - [Wat is Azure Multi-Factor Authentication](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication)
-- [Maak vandaag nog uw gratis Azure-account](https://azure.microsoft.com/free/)
