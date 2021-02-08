@@ -12,12 +12,12 @@ ms.assetid: 81f4b7cd-e4d9-4b11-b125-78cc9f183cf0
 audience: developer
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 0666a17abe63b0efbccd59aa0b9e0bb5daf80fe5
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.openlocfilehash: 605dfe1359b5706b27682a086f039f53a5ddaa05
+ms.sourcegitcommit: 78f3f18f0b7afb44fcf7444e446a4edffb1f8f12
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "92758809"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99835685"
 ---
 # <a name="get-smart-card-profiles"></a>Smart Card-profielen ophalen
 Hiermee haalt u een lijst met smartcard profielen voor een gebruiker op. De lijst bevat de mogelijke bewerkingen die kunnen worden uitgevoerd door de huidige gebruiker. Een aanvraag kan vervolgens worden gestart voor elk van de opgegeven bewerkingen.
@@ -36,13 +36,13 @@ GET     |/CertificateManagement/api/v1.0/smartcards <br/> /CertificateManagement
 
 Eigenschap| Beschrijving
 ---------|--------
-smartcarduuid | Optioneel. De UUID van de Smart Card zoals aangegeven door Microsoft Identity Manager (MIM) Certificate Management (CM). De waarde komt overeen met het veld ' uuid ' in het object [micro soft. clm. Shared. Smart Cards. Smart Card](http://msdn.microsoft.com/library/microsoft.clm.shared.smartcards.smartcard.aspx) .
+smartcarduuid | Optioneel. De UUID van de Smart Card zoals aangegeven door Microsoft Identity Manager (MIM) Certificate Management (CM). De waarde komt overeen met het veld ' uuid ' in het object [micro soft. clm. Shared. Smart Cards. Smart Card](https://msdn.microsoft.com/library/microsoft.clm.shared.smartcards.smartcard.aspx) .
 
 ### <a name="query-parameters"></a>Queryparameters
 
 Eigenschap| Beschrijving
 ---------|--------
-cardid | Optioneel. De UUID van de Smart Card zoals aangegeven door MIM CM. De waarde komt overeen met het veld ' uuid ' in het object [micro soft. clm. Shared. Smart Cards. Smart Card](http://msdn.microsoft.com/library/microsoft.clm.shared.smartcards.smartcard.aspx) .
+cardid | Optioneel. De UUID van de Smart Card zoals aangegeven door MIM CM. De waarde komt overeen met het veld ' uuid ' in het object [micro soft. clm. Shared. Smart Cards. Smart Card](https://msdn.microsoft.com/library/microsoft.clm.shared.smartcards.smartcard.aspx) .
 
 ### <a name="request-headers"></a>Aanvraagheaders
 Zie [HTTP-aanvraag-en reactie headers](certificate-management-rest-api-service-details.md#http-request-and-response-headers) in *cm rest API service Details* voor algemene aanvraag headers.
@@ -55,7 +55,7 @@ In deze sectie wordt het antwoord beschreven.
 
 ### <a name="response-codes"></a>Antwoord codes
 
-Code  |Beschrijving  
+Code  |Description  
 ---------|---------
 200 | OK
 204 | Geen inhoud
@@ -66,7 +66,7 @@ Code  |Beschrijving
 Zie [HTTP-aanvraag-en reactie headers](certificate-management-rest-api-service-details.md#http-request-and-response-headers) in *cm rest API service Details* voor algemene antwoord headers.
 
 ### <a name="response-body"></a>Hoofdtekst van de reactie
-Als dit is gelukt, wordt een JSON-Serialized [micro soft. clm. Shared. Smart Cards. Smart Card](http://msdn.microsoft.com/library/microsoft.clm.shared.smartcards.smartcard.aspx) -object met de volgende eigenschappen geretourneerd:
+Als dit is gelukt, wordt een JSON-Serialized [micro soft. clm. Shared. Smart Cards. Smart Card](https://msdn.microsoft.com/library/microsoft.clm.shared.smartcards.smartcard.aspx) -object met de volgende eigenschappen geretourneerd:
 
 Naam | Beschrijving
 -----|-----------

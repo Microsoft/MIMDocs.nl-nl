@@ -11,24 +11,24 @@ ms.prod: microsoft-identity-manager
 ms.assetid: 34a8c16e-3bed-4e16-939b-b9fe17dd834b
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 07b1bdfc3bf11817a113791ace556d8a32faedc0
-ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
+ms.openlocfilehash: 1ae8fe4718b81d67ac56adbb87789d6e2142298d
+ms.sourcegitcommit: 78f3f18f0b7afb44fcf7444e446a4edffb1f8f12
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79043576"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99835640"
 ---
 # <a name="set-up-an-identity-management-server-exchange"></a>Een server voor identiteitsbeheer instellen: Exchange
 
 > [!div class="step-by-step"]
-> [«Share point MIM-](prepare-server-sharepoint.md)
-> [synchronisatie service»](install-mim-sync.md)
+> [«Share point](prepare-server-sharepoint.md) 
+>  [MIM-synchronisatie service»](install-mim-sync.md)
 
 ## <a name="deploy-microsoft-exchange-server"></a>Microsoft Exchange Server implementeren
 Als u MIM wilt configureren voor het verzenden en ontvangen van e-mailberichten of het inrichten van postvakken, moet Exchange aanwezig zijn in de omgeving. Als u Exchange nog niet hebt geïmplementeerd, kunt u een evaluatieversie voor evaluatiedoeleinden installeren:
 
-* Download en installeer de [evaluatieversie voor 180 dagen van MS Exchange Server 2013](http://www.microsoft.com/evalcenter/evaluate-exchange-server-2013)
+* Download en installeer de [evaluatieversie voor 180 dagen van MS Exchange Server 2013](https://www.microsoft.com/evalcenter/evaluate-exchange-server-2013)
 
 > [!div class="step-by-step"]  
-> [«Share point MIM-](prepare-server-sharepoint.md)
-> [synchronisatie service»](install-mim-sync.md)
+> [«Share point](prepare-server-sharepoint.md) 
+>  [MIM-synchronisatie service»](install-mim-sync.md)

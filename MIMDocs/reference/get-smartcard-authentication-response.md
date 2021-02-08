@@ -12,12 +12,12 @@ ms.assetid: e05ec898-06cd-4c17-a4f4-8f3545af0f14
 audience: developer
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: ab320457c5d676cc381306e83f685fe288dc7ef9
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.openlocfilehash: 62811bd5d225f981ded6a6439584c2b7730251c1
+ms.sourcegitcommit: 78f3f18f0b7afb44fcf7444e446a4edffb1f8f12
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "92758701"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99835588"
 ---
 # <a name="get-smart-card-authentication-response"></a>Smart card-verificatie reactie ophalen
 Hiermee wordt de reactie van een basis verificatie vraag naar een CSP (Cryptographic Service Provider) opgehaald.
@@ -36,7 +36,7 @@ GET     |/CertificateManagement/api/v1.0/requests/{reqid}/smartcards/{scid}/auth
 Parameter | Beschrijving
 ---------|------------
 reqid | Vereist. De aanvraag-id die specifiek is voor Microsoft Identity Manager (MIM) Certificate Management (CM).
-scid | Vereist. De Smart Card-ID die specifiek is voor MIM CM. De scid wordt opgehaald uit het object [micro soft. clm. Shared. Smart Cards. Smart Card](http://msdn.microsoft.com/library/microsoft.clm.shared.smartcards.smartcard.aspx) .
+scid | Vereist. De Smart Card-ID die specifiek is voor MIM CM. De scid wordt opgehaald uit het object [micro soft. clm. Shared. Smart Cards. Smart Card](https://msdn.microsoft.com/library/microsoft.clm.shared.smartcards.smartcard.aspx) .
 
 ### <a name="query-parameters"></a>Queryparameters
 
@@ -58,7 +58,7 @@ In deze sectie wordt het antwoord beschreven.
 
 ### <a name="response-codes"></a>Antwoord codes
 
-Code  |Beschrijving  
+Code  |Description  
 ---------|---------
 200 | OK
 204 | Geen inhoud

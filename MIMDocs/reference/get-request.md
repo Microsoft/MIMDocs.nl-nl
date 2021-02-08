@@ -12,12 +12,12 @@ ms.assetid: dcacf36c-0670-44d7-9f40-388667235271
 audience: developer
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: ad660c562b457890ea75d33325ada8d0f63feb8f
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.openlocfilehash: 1bc42eb0fb1e54a3425586350ae5ad20495534c5
+ms.sourcegitcommit: 78f3f18f0b7afb44fcf7444e446a4edffb1f8f12
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "92758818"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99835702"
 ---
 # <a name="get-request"></a>Aanvraag ophalen
 Hiermee haalt u een of meer opgegeven Microsoft Identity Manager (MIM) Certificate Management (CM)-aanvragen.
@@ -41,7 +41,7 @@ id| Optioneel. De GUID van een aanvraag die moet worden opgehaald.
 
 Eigenschap| Beschrijving
 ---------|--------
-target User| Optioneel. De doel gebruiker van de aanvraag. Als er geen doel is opgegeven, worden alle aanvragen, ongeacht de doel gebruiker, weer gegeven. <br/><br/>**Opmerking** : alleen de waarde huidig wordt momenteel ondersteund.
+target User| Optioneel. De doel gebruiker van de aanvraag. Als er geen doel is opgegeven, worden alle aanvragen, ongeacht de doel gebruiker, weer gegeven. <br/><br/>**Opmerking**: alleen de waarde huidig wordt momenteel ondersteund.
 status| Optioneel. Hiermee wordt de status van de aanvraag aangegeven die moet worden opgehaald. De mogelijke status typen zijn ' goedgekeurd ', geannuleerd, ' voltooid ', ' geweigerd ', ' wordt uitgevoerd ', ' mislukt ', ' geen ' en ' in behandeling '. <br/>Als er geen status is opgegeven, worden alle aanvragen, ongeacht de status, worden geretourneerd.
 
 ### <a name="request-headers"></a>Aanvraagheaders
@@ -55,7 +55,7 @@ In deze sectie wordt het antwoord beschreven.
 
 ### <a name="response-codes"></a>Antwoord codes
 
-Code  |Beschrijving  
+Code  |Description  
 ---------|---------
 200 | OK
 204 | Geen inhoud
@@ -176,6 +176,6 @@ HTTP/1.1 200 OK
 
 ## <a name="see-also"></a>Zie ook
 
-- [Methode micro soft. clm. Provision. FindOperations. FindRequest](http://msdn.microsoft.com/library/windows/desktop/microsoft.clm.provision.findoperations.findrequests.aspx)
-- [Inventarisatie van micro soft. clm. Shared. RequestPermission](http://msdn.microsoft.com/library/windows/desktop/microsoft.clm.shared.requestpermission.aspx)
+- [Methode micro soft. clm. Provision. FindOperations. FindRequest](https://msdn.microsoft.com/library/windows/desktop/microsoft.clm.provision.findoperations.findrequests.aspx)
+- [Inventarisatie van micro soft. clm. Shared. RequestPermission](https://msdn.microsoft.com/library/windows/desktop/microsoft.clm.shared.requestpermission.aspx)
 - [De klasse micro soft. clm. Shared. aanvragen. Request](https://msdn.microsoft.com/library/windows/desktop/microsoft.clm.shared.requests.request.aspx)

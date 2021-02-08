@@ -11,12 +11,12 @@ ms.prod: microsoft-identity-manager
 ms.assetid: bfabc562-a2f0-4cff-ac31-36927f41e102
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 91409b0272c0b21cac90dbc4c162e5bf4d9f8464
-ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
+ms.openlocfilehash: c6e4e03524983944ee25343c24fa8247d770af27
+ms.sourcegitcommit: 78f3f18f0b7afb44fcf7444e446a4edffb1f8f12
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79042131"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99835657"
 ---
 # <a name="enroll-smart-cards-for-non-administrators"></a>Smartcards voor niet-beheerders registreren
 Gebruikers die geen lokale beheerder zijn van hun computer, kunnen standaard geen smartcard registreren op hun eigen computer. Dit probleem kunt u met de volgende procedure omzeilen.
@@ -25,7 +25,7 @@ Gebruikers die geen lokale beheerder zijn van hun computer, kunnen standaard gee
 
 1.  **Pak het APPX-bestand uit**
 
-    Haal een handtekeningcertificaat op. Volg de stappen voor het [aanmelden bij Windows 8-programma’s met behulp van een interne PKI](http://blogs.technet.com/b/deploymentguys/archive/2013/06/14/signing-windows-8-applications-using-an-internal-pki.aspx). Stop als u 'Het programma ondertekenen' bereikt. Geef het geëxporteerde PFX-bestand een naam. Exporteer dit tevens naar een CER-bestand en importeer dit in de client, waarbij u het CER-bestand van het nieuwe handtekeningcertificaat gebruikt.
+    Haal een handtekeningcertificaat op. Volg de stappen voor het [aanmelden bij Windows 8-programma’s met behulp van een interne PKI](https://blogs.technet.com/b/deploymentguys/archive/2013/06/14/signing-windows-8-applications-using-an-internal-pki.aspx). Stop als u 'Het programma ondertekenen' bereikt. Geef het geëxporteerde PFX-bestand een naam. Exporteer dit tevens naar een CER-bestand en importeer dit in de client, waarbij u het CER-bestand van het nieuwe handtekeningcertificaat gebruikt.
 
     Voer de volgende opdracht uit om het APPX-bestand uit te pakken:
 
@@ -49,7 +49,7 @@ Gebruikers die geen lokale beheerder zijn van hun computer, kunnen standaard gee
 
     4.  Bewerk het bestand met de naam AppxManifest.xml
 
-    5.  Wijzig in &lt;het&gt; element identiteit de waarde van het kenmerk uitgever in het onderwerp van het handtekening certificaat, bijvoorbeeld "CN = ABCD"
+    5.  Wijzig in &lt; het &gt; element identiteit de waarde van het kenmerk uitgever in het onderwerp van het handtekening certificaat, bijvoorbeeld "CN = ABCD"
 
         Het onderwerp moet gelijk zijn aan het onderwerp in het handtekeningcertificaat dat u gebruikt om de app te ondertekenen.
 
