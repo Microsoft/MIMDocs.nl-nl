@@ -9,12 +9,12 @@ ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
-ms.openlocfilehash: e0c00972983d964a489d7c76e06e271bdf91b79e
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.openlocfilehash: 9b1a65d6604f434d3619ad7964caa8ce202092a0
+ms.sourcegitcommit: 78f3f18f0b7afb44fcf7444e446a4edffb1f8f12
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "92758920"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99835951"
 ---
 # <a name="web-service-connector-workflow-guide-for-a-rest-api-sample"></a>Werk stroom gids voor webservice-connectors voor een REST API-voor beeld
 
@@ -54,12 +54,12 @@ De volgende stappen laten zien hoe u een nieuw project voor uw gegevens bron maa
 
    ![Hulp programma voor configuratie van webservices](media/microsoft-identity-manager-2016-ma-ws-restgeneric/web-service-configuration-tool.png)
 
-2. Selecteer **bestand**  >  **Nieuw**  >  **rest-project** .
+2. Selecteer **bestand**  >  **Nieuw**  >  **rest-project**.
 
    ![Een nieuw REST-project maken](media/microsoft-identity-manager-2016-ma-ws-restgeneric/new-project.png)
    <!-- Image shows SOAP project selected, not REST project -->
 
-3. Selecteer aan de linkerkant **rest-project** en selecteer vervolgens **toevoegen** .
+3. Selecteer aan de linkerkant **rest-project** en selecteer vervolgens **toevoegen**.
 
    ![Het REST-project selecteren](media/microsoft-identity-manager-2016-ma-ws-restgeneric/rest-project.png)
 
@@ -76,9 +76,9 @@ De volgende stappen laten zien hoe u een nieuw project voor uw gegevens bron maa
     
    ![Voorbeeld waarden voor de REST-service](media/microsoft-identity-manager-2016-ma-ws-restgeneric/restsample.png)
 
-   Stel de **beveiligings modus** in op _geen_ . Stel het **adres** in op de voor beeld-JSON-server die wordt gehost in Azure.
+   Stel de **beveiligings modus** in op _geen_. Stel het **adres** in op de voor beeld-JSON-server die wordt gehost in Azure.
 
-5. Selecteer **OK** . Het REST-project dat wordt vermeld in het hulp programma voor configuratie van webservices.
+5. Selecteer **OK**. Het REST-project dat wordt vermeld in het hulp programma voor configuratie van webservices.
 
    ![REST-project in het hulp programma voor configuratie van webservices](media/microsoft-identity-manager-2016-ma-ws-restgeneric/rest-discovery.png)
 
@@ -86,13 +86,13 @@ De volgende stappen laten zien hoe u een nieuw project voor uw gegevens bron maa
 
    1. Vouw het **rest-project** uit en selecteer de _RESTSAMPLE_ -service.
 
-   2. Selecteer **Toevoegen** . U wordt gevraagd twee waarden toe te voegen:
+   2. Selecteer **Toevoegen**. U wordt gevraagd twee waarden toe te voegen:
    
       ![Voer waarden in voor de REST-service](media/microsoft-identity-manager-2016-ma-ws-restgeneric/rest-service-highlights.png)
       
       1. Voer de **naam** in. Deze stap wordt aangeduid als 3 in de scherm opname.
       2. Voer het **adres** in. Deze stap wordt aangeduid als 4 in de scherm opname.
-      3. Selecteer **OK** . Een REST-resource wordt toegevoegd aan de beschrijving voor de _RESTSAMPLE_ -service.
+      3. Selecteer **OK**. Een REST-resource wordt toegevoegd aan de beschrijving voor de _RESTSAMPLE_ -service.
 
 7. Selecteer in het vak **resources** de rest-resource die u zojuist hebt toegevoegd. Voeg de volgende methode toe:
 
@@ -105,7 +105,7 @@ De volgende stappen laten zien hoe u een nieuw project voor uw gegevens bron maa
 
    ![](media/microsoft-identity-manager-2016-ma-ws-restgeneric/rest-samples.png)
 
-10. Selecteer **Opslaan** . Sla het project op naar `C:\Program Files\Microsoft Forefront Identity Manager\2010\Synchronization Service\Extensions` . 
+10. Selecteer **Opslaan**. Sla het project op naar `C:\Program Files\Microsoft Forefront Identity Manager\2010\Synchronization Service\Extensions` . 
 
 >[!NOTE]
 >Nadat het project is opgeslagen, wordt het WsConfig-bestand gegenereerd. Het configuratie bestand bevat meerdere bestanden die eerder in het overzicht van de webservice zijn gedefinieerd.
@@ -114,7 +114,7 @@ De volgende stappen laten zien hoe u een nieuw project voor uw gegevens bron maa
 ## <a name="configure-object-types-in-the-web-service-configuration-tool"></a>Object typen configureren in het hulp programma voor configuratie van webservices
 De volgende stappen laten zien hoe u object typen voor uw gegevens bron configureert in het hulp programma voor configuratie van webservices.
 
-1. De volgende stap is het definiëren van het verbindings ruimte-schema. Dit wordt bereikt door het object type te maken en hun object typen te definiëren. Klik op **object typen** in het linkerdeel venster en klik op de knop **toevoegen** . Hiermee opent u het scherm. Voeg een nieuw object type toe en geef een naam op. Klik op de knop **OK** .
+1. De volgende stap is het definiëren van het verbindings ruimte-schema. Dit wordt bereikt door het object type te maken en hun object typen te definiëren. Klik op **object typen** in het linkerdeel venster en klik op de knop **toevoegen** . Hiermee opent u het scherm. Voeg een nieuw object type toe en geef een naam op. Klik op de knop **OK**.
 
    ![](media/microsoft-identity-manager-2016-ma-ws-restgeneric/object-types.png)
 
@@ -158,7 +158,7 @@ De volgende stap is het configureren van de werk stromen voor het object type. W
 - Verbinding testen: Configureer een werk stroom om te controleren of de verbinding met de gegevens bron server tot stand is gebracht.
 
 >[!NOTE]
->U kunt deze werk stromen configureren voor het project of het standaard project downloaden van het [micro soft Download centrum](http://www.microsoft.com/download/details.aspx?id=29944).
+>U kunt deze werk stromen configureren voor het project of het standaard project downloaden van het [micro soft Download centrum](https://www.microsoft.com/download/details.aspx?id=29944).
 
 
 ### <a name="workflow-designer"></a>Workflow Designer
@@ -168,33 +168,33 @@ De Workflow Designer opent het werk gebied om de werk stroom te configureren vol
 
 De Workflow Designer bestaat uit de volgende elementen van de gebruikers interface:
 
-   - **Knoop punten in linkerdeel venster** : met deze informatie kunt u selecteren welke werk stroom u wilt ontwerpen.
+   - **Knoop punten in linkerdeel venster**: met deze informatie kunt u selecteren welke werk stroom u wilt ontwerpen.
 
-   - **Centrale Workflow Designer** : hier kunt u de activiteiten voor het configureren van de werk stromen verwijderen. Voor het uitvoeren van verschillende MIM-bewerkingen (exporteren, importeren, wachtwoord beheer) kunt u de standaard-en aangepaste werk stroom activiteiten van .NET workflow Framework 4 gebruiken. Het hulp programma voor configuratie van webservices maakt gebruik van standaard-en aangepaste werk stroom activiteiten. Zie [activiteiten ontwerpen gebruiken](http://msdn.microsoft.com/library/ee829528.aspx)voor meer informatie over standaard activiteiten.
+   - **Centrale Workflow Designer**: hier kunt u de activiteiten voor het configureren van de werk stromen verwijderen. Voor het uitvoeren van verschillende MIM-bewerkingen (exporteren, importeren, wachtwoord beheer) kunt u de standaard-en aangepaste werk stroom activiteiten van .NET workflow Framework 4 gebruiken. Het hulp programma voor configuratie van webservices maakt gebruik van standaard-en aangepaste werk stroom activiteiten. Zie [activiteiten ontwerpen gebruiken](https://msdn.microsoft.com/library/ee829528.aspx)voor meer informatie over standaard activiteiten.
 
       - In de centrale Workflow Designer geeft een rode cirkel met een uitroep teken naast elke activiteit aan dat de bewerking is verwijderd en niet correct en volledig is gedefinieerd. Beweeg de muis aanwijzer over de rode cirkel om de exacte fout te achterhalen. Nadat de activiteit op de juiste wijze is gedefinieerd, verandert de rode cirkel in het geleende gegevens merk.
       
       - In de centrale Workflow Designer geeft een geel drie hoekje op een wille keurige activiteit aan dat de activiteit is gedefinieerd, maar dat u wel meer kunt doen om de activiteit te volt ooien. Beweeg de muis aanwijzer over de gele drie hoek om meer informatie weer te geven.
 
-   - **Werkset** : verpakt alle hulpprogram ma's, waaronder systeem-en aangepaste activiteiten en vooraf gedefinieerde instructies om de werk stroom te ontwerpen. Zie [Toolbox](http://msdn.microsoft.com/library/aa480213.aspx)voor meer informatie.
+   - **Werkset**: verpakt alle hulpprogram ma's, waaronder systeem-en aangepaste activiteiten en vooraf gedefinieerde instructies om de werk stroom te ontwerpen. Zie [Toolbox](https://msdn.microsoft.com/library/aa480213.aspx)voor meer informatie.
    
    - **Secties** in de werkset: de werkset bevat de volgende secties en Categorieën:
    
-      - **Beschrijving** : de koptekst van de werkset. Met één tabblad krijgt u toegang tot de werkset en de eigenschappen van de geselecteerde werk stroom activiteit. 
+      - **Beschrijving**: de koptekst van de werkset. Met één tabblad krijgt u toegang tot de werkset en de eigenschappen van de geselecteerde werk stroom activiteit. 
 
-      - **Importeer werk stroom** : aangepaste activiteiten voor het configureren van import werk stromen.
+      - **Importeer werk stroom**: aangepaste activiteiten voor het configureren van import werk stromen.
       
-      - **Werk stroom exporteren** : aangepaste activiteiten voor het configureren van export werk stromen.
+      - **Werk stroom exporteren**: aangepaste activiteiten voor het configureren van export werk stromen.
       
-      - **Algemeen** : aangepaste activiteiten voor het configureren van elke werk stroom.
+      - **Algemeen**: aangepaste activiteiten voor het configureren van elke werk stroom.
       
-      - **Debug** : systeem werk stroom activiteiten voor fout opsporing gedefinieerd in werk stroom 4. Deze activiteiten bieden het bijhouden van problemen voor een werk stroom.
+      - **Debug**: systeem werk stroom activiteiten voor fout opsporing gedefinieerd in werk stroom 4. Deze activiteiten bieden het bijhouden van problemen voor een werk stroom.
       
-      - **Instructies** : systeem werk stroom activiteiten gedefinieerd in werk stroom 4. Zie [using activity designers](http://msdn.microsoft.com/library/ee829528.aspx)(Engelstalig) voor meer informatie.
+      - **Instructies**: systeem werk stroom activiteiten gedefinieerd in werk stroom 4. Zie [using activity designers](https://msdn.microsoft.com/library/ee829528.aspx)(Engelstalig) voor meer informatie.
 
-   - **Eigenschappen** : op het tabblad Eigenschappen worden de eigenschappen weer gegeven van een bepaalde werk stroom activiteit die is verwijderd uit het ontwerp gebied en geselecteerd. In de afbeelding aan de linkerkant worden de eigenschappen van **Assign** -activiteit weer gegeven. Voor elke activiteit verschillen de eigenschappen en worden ze gebruikt bij het configureren van de aangepaste werk stroom. Op dit tabblad kunt u de kenmerken definiëren van het geselecteerde hulp programma dat is verwijderd uit de centrale werk stroom ontwerper. Zie [Eigenschappen](http://msdn.microsoft.com/library/ee342461.aspx)voor meer informatie.
+   - **Eigenschappen**: op het tabblad Eigenschappen worden de eigenschappen weer gegeven van een bepaalde werk stroom activiteit die is verwijderd uit het ontwerp gebied en geselecteerd. In de afbeelding aan de linkerkant worden de eigenschappen van **Assign** -activiteit weer gegeven. Voor elke activiteit verschillen de eigenschappen en worden ze gebruikt bij het configureren van de aangepaste werk stroom. Op dit tabblad kunt u de kenmerken definiëren van het geselecteerde hulp programma dat is verwijderd uit de centrale werk stroom ontwerper. Zie [Eigenschappen](https://msdn.microsoft.com/library/ee342461.aspx)voor meer informatie.
 
-   - **Taak balk:** De taak balk bevat drie elementen: **variabelen** , **argumenten** en **Imports** . Deze elementen worden samen met werk stroom activiteiten gebruikt. Zie [de inleiding tot Windows Workflow Foundation (WF) van een ontwikkelaar in .net 4](http://msdn.microsoft.com/library/ee342461.aspx)voor meer informatie.
+   - **Taak balk:** De taak balk bevat drie elementen: **variabelen**, **argumenten** en **Imports**. Deze elementen worden samen met werk stroom activiteiten gebruikt. Zie [de inleiding tot Windows Workflow Foundation (WF) van een ontwikkelaar in .net 4](https://msdn.microsoft.com/library/ee342461.aspx)voor meer informatie.
 
 
 
@@ -216,7 +216,7 @@ De volgende stappen laten zien hoe u de volledige import werk stromen voor de RE
    
     ![Sequentie activiteit](media/microsoft-identity-manager-2016-ma-ws-restgeneric/imports.png)
 
-3. Als u een variabele wilt toevoegen, zoekt u **variabele maken** . Typ _wsResponse_ voor de **naam** , selecteer de vervolg keuzelijst **type variabele** en selecteer vervolgens **Bladeren voor typen** . Er wordt een dialoog venster weer gegeven. Selecteer een **gegenereerd**  >  **GETALL** -  >  **antwoord** . Behoud de selectie van het **bereik** en de **standaard** waarden. U kunt deze waarden ook instellen met behulp van de weer gave **Eigenschappen** .
+3. Als u een variabele wilt toevoegen, zoekt u **variabele maken**. Typ _wsResponse_ voor de **naam**, selecteer de vervolg keuzelijst **type variabele** en selecteer vervolgens **Bladeren voor typen**. Er wordt een dialoog venster weer gegeven. Selecteer een **gegenereerd**  >  **GETALL**-  >  **antwoord**. Behoud de selectie van het **bereik** en de **standaard** waarden. U kunt deze waarden ook instellen met behulp van de weer gave **Eigenschappen** .
 
    ![Standaard antwoord](media/microsoft-identity-manager-2016-ma-ws-restgeneric/employee-list.png)
 
@@ -228,15 +228,15 @@ De volgende stappen laten zien hoe u de volledige import werk stromen voor de RE
 
    Als u de bewerking voor de webservice wilt gebruiken, stelt u de volgende eigenschappen in:
    
-      - **Service naam** : Voer een naam in voor de webservice.
-      - **Eindpunt naam** : Geef een eindpunt naam op voor de geselecteerde service.
-      - **Bewerkings naam** : Geef de betreffende bewerking voor de service op.
-      - **Argument** : Select- **argumenten** . Wijs in het volgende dialoog venster de argument waarden toe, zoals wordt weer gegeven in de volgende afbeelding:
+      - **Service naam**: Voer een naam in voor de webservice.
+      - **Eindpunt naam**: Geef een eindpunt naam op voor de geselecteerde service.
+      - **Bewerkings naam**: Geef de betreffende bewerking voor de service op.
+      - **Argument**: Select- **argumenten**. Wijs in het volgende dialoog venster de argument waarden toe, zoals wordt weer gegeven in de volgende afbeelding:
       
          ![Argumenten toewijzen](media/microsoft-identity-manager-2016-ma-ws-restgeneric/get-all.png)
 
          >[!IMPORTANT]
-         >Wijzig de **naam** , **richting** of het **type** voor een argument niet met behulp van dit dialoog venster. Als een van deze waarden is gewijzigd, wordt de activiteit ongeldig. Stel alleen de **waarde** voor het argument in. Zoals in deze afbeelding wordt weer gegeven, wordt de waarde *wsResponse* ingesteld.
+         >Wijzig de **naam**, **richting** of het **type** voor een argument niet met behulp van dit dialoog venster. Als een van deze waarden is gewijzigd, wordt de activiteit ongeldig. Stel alleen de **waarde** voor het argument in. Zoals in deze afbeelding wordt weer gegeven, wordt de waarde *wsResponse* ingesteld.
 
 6. Voeg een **foreach** -activiteit toe, net onder **WebServiceCallActivity.** Deze activiteit wordt gebruikt om alle kenmerken (zowel ankers als niet-ankers) van het object type te herhalen. Wanneer u deze activiteit naar uw Workflow Designer-Opper vlak sleept, worden automatisch alle kenmerk namen voor uw object opgesomd. Stel de vereiste waarden in volgens het volgende scherm:
 
@@ -250,7 +250,7 @@ De volgende stappen laten zien hoe u de volledige import werk stromen voor de RE
 
     ![Code van werknemers lijst](media/microsoft-identity-manager-2016-ma-ws-restgeneric/employee-list-code.png)
 
-    Voeg vervolgens deze keer toe aan de werk stroom **foreach** :
+    Voeg vervolgens deze keer toe aan de werk stroom **foreach**:
 
     ![Werknemers lijst toevoegen aan ForEach-werk stroom](media/microsoft-identity-manager-2016-ma-ws-restgeneric/foreach-employee-list.png)
 

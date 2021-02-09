@@ -9,12 +9,12 @@ ms.date: 11/30/2017
 ms.topic: conceptual
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
-ms.openlocfilehash: 54f9eb08ce8c400aac5c66467a797bcd3cb097a0
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.openlocfilehash: 455988722b3aeb9e29b00696342e1800e9ad82c7
+ms.sourcegitcommit: 78f3f18f0b7afb44fcf7444e446a4edffb1f8f12
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "92758923"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99835968"
 ---
 # <a name="web-service-connector-workflow-guide-for-soap"></a>Werk stroom gids voor webservice-connector voor SOAP
 
@@ -24,18 +24,18 @@ In dit artikel wordt beschreven hoe u een nieuw project maakt voor uw gegevens b
 
     ![Hulp programma voor configuratie van webservices](media/microsoft-identity-manager-2016-ma-ws-soap/web-service-configuration-tool-01.png)
 
-2.  Selecteer **SOAP-project** en selecteer vervolgens **toevoegen** .
+2.  Selecteer **SOAP-project** en selecteer vervolgens **toevoegen**.
 
     ![SOAP-project](media/microsoft-identity-manager-2016-ma-ws-soap/web-service-configuration-tool-02.png)
 
-3.  Geef op de volgende pagina de volgende informatie op en selecteer **volgende** :
+3.  Geef op de volgende pagina de volgende informatie op en selecteer **volgende**:
 
     - De nieuwe naam van de webservice
     - Adres (WSDL-pad) voor het ophalen van de weer gegeven Services, eind punten en bewerkingen
     - Naamruimte
     - Beveiligings modus (verificatie type)
   
-4.  In dit voor beeld wordt de pagina **referenties** weer gegeven met de vereisten voor de *Basic* -beveiligings modus (de modus die is geselecteerd in de vorige stap). Als ' geen ' is opgegeven voor de beveiligings modus, zou er geen referentie pagina kunnen worden weer gegeven. Selecteer **Next** .
+4.  In dit voor beeld wordt de pagina **referenties** weer gegeven met de vereisten voor de *Basic* -beveiligings modus (de modus die is geselecteerd in de vorige stap). Als ' geen ' is opgegeven voor de beveiligings modus, zou er geen referentie pagina kunnen worden weer gegeven. Selecteer **Next**.
 
     ![Scherm van de SOAP-service met gebruikers naam en wacht woord](media/microsoft-identity-manager-2016-ma-ws-soap/soap-service.png)
 
@@ -43,7 +43,7 @@ In dit artikel wordt beschreven hoe u een nieuw project maakt voor uw gegevens b
 
     ![voortgangs scherm voor het downloaden van webservices](media/microsoft-identity-manager-2016-ma-ws-soap/web-service-progress.png)
 
-6.  Zodra de detectie is uitgevoerd, worden het eind punt en de gedetecteerde bewerkingen weer gegeven. Selecteer **Finish** .
+6.  Zodra de detectie is uitgevoerd, worden het eind punt en de gedetecteerde bewerkingen weer gegeven. Selecteer **Finish**.
 
     ![De SOAP-service-eind punten en-bewerkingen zijn gedetecteerd](media/microsoft-identity-manager-2016-ma-ws-soap/soap-service-endpoints.png)
 
@@ -59,7 +59,7 @@ In dit artikel wordt beschreven hoe u een nieuw project maakt voor uw gegevens b
 
     ![Uitgebreide eind punten](media/microsoft-identity-manager-2016-ma-ws-soap/get-employee-byid.png)
 
-10. De volgende stap is het definiëren van het verbindings ruimte-schema, dat wordt bereikt door het object type te maken en hun object typen te definiëren. Selecteer **object typen** en selecteer vervolgens **toevoegen** . Voeg in het nieuwe venster een nieuw object type toe en geef een naam op. Selecteer **OK** .
+10. De volgende stap is het definiëren van het verbindings ruimte-schema, dat wordt bereikt door het object type te maken en hun object typen te definiëren. Selecteer **object typen** en selecteer vervolgens **toevoegen**. Voeg in het nieuwe venster een nieuw object type toe en geef een naam op. Selecteer **OK**.
 
     ![Object type definiëren](media/microsoft-identity-manager-2016-ma-ws-soap/object-types.png)
 
@@ -67,7 +67,7 @@ In dit artikel wordt beschreven hoe u een nieuw project maakt voor uw gegevens b
 
     ![nieuw gemaakt object type weer geven](media/microsoft-identity-manager-2016-ma-ws-soap/object-type-employee.png)
 
-12. In het rechterdeel venster dat overeenkomt met object type, kunt u de kenmerken en hun eigenschappen voor het geselecteerde object type onderhouden. Selecteer **Toevoegen** . Er wordt een nieuw venster geopend om kenmerken toe te voegen:
+12. In het rechterdeel venster dat overeenkomt met object type, kunt u de kenmerken en hun eigenschappen voor het geselecteerde object type onderhouden. Selecteer **Toevoegen**. Er wordt een nieuw venster geopend om kenmerken toe te voegen:
 
     ![Kenmerk en gegevens type](media/microsoft-identity-manager-2016-ma-ws-soap/object-type-firstname.png)
 
@@ -105,7 +105,7 @@ De volgende stap is het configureren van de werk stromen voor het object type. W
 - Verbinding testen: Configureer een werk stroom om te controleren of de verbinding met de gegevens bron server tot stand is gebracht.
 
 >[!NOTE]
->U kunt deze werk stromen configureren voor het project of het standaard project downloaden van het [micro soft Download centrum](http://www.microsoft.com/download/details.aspx?id=29944).
+>U kunt deze werk stromen configureren voor het project of het standaard project downloaden van het [micro soft Download centrum](https://www.microsoft.com/download/details.aspx?id=29944).
 
 
 ### <a name="workflow-designer"></a>Workflow Designer
@@ -115,33 +115,33 @@ De Workflow Designer opent het werk gebied om de werk stroom te configureren vol
 
 De Workflow Designer bestaat uit de volgende elementen van de gebruikers interface:
 
-   - **Knoop punten in linkerdeel venster** : met deze informatie kunt u selecteren welke werk stroom u wilt ontwerpen.
+   - **Knoop punten in linkerdeel venster**: met deze informatie kunt u selecteren welke werk stroom u wilt ontwerpen.
 
-   - **Centrale Workflow Designer** : hier kunt u de activiteiten voor het configureren van de werk stromen verwijderen. Voor het uitvoeren van verschillende MIM-bewerkingen (exporteren, importeren, wachtwoord beheer) kunt u de standaard-en aangepaste werk stroom activiteiten van .NET workflow Framework 4 gebruiken. Het hulp programma voor configuratie van webservices maakt gebruik van standaard-en aangepaste werk stroom activiteiten. Zie [activiteiten ontwerpen gebruiken](http://msdn.microsoft.com/library/ee829528.aspx)voor meer informatie over standaard activiteiten.
+   - **Centrale Workflow Designer**: hier kunt u de activiteiten voor het configureren van de werk stromen verwijderen. Voor het uitvoeren van verschillende MIM-bewerkingen (exporteren, importeren, wachtwoord beheer) kunt u de standaard-en aangepaste werk stroom activiteiten van .NET workflow Framework 4 gebruiken. Het hulp programma voor configuratie van webservices maakt gebruik van standaard-en aangepaste werk stroom activiteiten. Zie [activiteiten ontwerpen gebruiken](https://msdn.microsoft.com/library/ee829528.aspx)voor meer informatie over standaard activiteiten.
 
       - In de centrale Workflow Designer geeft een rode cirkel met een uitroep teken naast elke activiteit aan dat de bewerking is verwijderd en niet correct en volledig is gedefinieerd. Beweeg de muis aanwijzer over de rode cirkel om de exacte fout te achterhalen. Nadat de activiteit op de juiste wijze is gedefinieerd, verandert de rode cirkel in het geleende gegevens merk.
       
       - In de centrale Workflow Designer geeft een geel drie hoekje op een wille keurige activiteit aan dat de activiteit is gedefinieerd, maar dat u wel meer kunt doen om de activiteit te volt ooien. Beweeg de muis aanwijzer over de gele drie hoek om meer informatie weer te geven.
 
-   - **Werkset** : verpakt alle hulpprogram ma's, waaronder systeem-en aangepaste activiteiten en vooraf gedefinieerde instructies om de werk stroom te ontwerpen. Zie [Toolbox](http://msdn.microsoft.com/library/aa480213.aspx)voor meer informatie.
+   - **Werkset**: verpakt alle hulpprogram ma's, waaronder systeem-en aangepaste activiteiten en vooraf gedefinieerde instructies om de werk stroom te ontwerpen. Zie [Toolbox](https://msdn.microsoft.com/library/aa480213.aspx)voor meer informatie.
    
    - **Secties** in de werkset: de werkset bevat de volgende secties en Categorieën:
    
-      - **Beschrijving** : de koptekst van de werkset. Met één tabblad krijgt u toegang tot de werkset en de eigenschappen van de geselecteerde werk stroom activiteit. 
+      - **Beschrijving**: de koptekst van de werkset. Met één tabblad krijgt u toegang tot de werkset en de eigenschappen van de geselecteerde werk stroom activiteit. 
 
-      - **Importeer werk stroom** : aangepaste activiteiten voor het configureren van import werk stromen.
+      - **Importeer werk stroom**: aangepaste activiteiten voor het configureren van import werk stromen.
       
-      - **Werk stroom exporteren** : aangepaste activiteiten voor het configureren van export werk stromen.
+      - **Werk stroom exporteren**: aangepaste activiteiten voor het configureren van export werk stromen.
       
-      - **Algemeen** : aangepaste activiteiten voor het configureren van elke werk stroom.
+      - **Algemeen**: aangepaste activiteiten voor het configureren van elke werk stroom.
       
-      - **Debug** : systeem werk stroom activiteiten voor fout opsporing gedefinieerd in werk stroom 4. Deze activiteiten bieden het bijhouden van problemen voor een werk stroom.
+      - **Debug**: systeem werk stroom activiteiten voor fout opsporing gedefinieerd in werk stroom 4. Deze activiteiten bieden het bijhouden van problemen voor een werk stroom.
       
-      - **Instructies** : systeem werk stroom activiteiten gedefinieerd in werk stroom 4. Zie [using activity designers](http://msdn.microsoft.com/library/ee829528.aspx)(Engelstalig) voor meer informatie.            
+      - **Instructies**: systeem werk stroom activiteiten gedefinieerd in werk stroom 4. Zie [using activity designers](https://msdn.microsoft.com/library/ee829528.aspx)(Engelstalig) voor meer informatie.            
 
-   - **Eigenschappen** : op het tabblad Eigenschappen worden de eigenschappen weer gegeven van een bepaalde werk stroom activiteit die is verwijderd uit het ontwerp gebied en geselecteerd. In de afbeelding aan de linkerkant worden de eigenschappen van **Assign** -activiteit weer gegeven. Voor elke activiteit verschillen de eigenschappen en worden ze gebruikt bij het configureren van de aangepaste werk stroom. Op dit tabblad kunt u de kenmerken definiëren van het geselecteerde hulp programma dat is verwijderd uit de centrale werk stroom ontwerper. Zie [Eigenschappen](http://msdn.microsoft.com/library/ee342461.aspx)voor meer informatie.
+   - **Eigenschappen**: op het tabblad Eigenschappen worden de eigenschappen weer gegeven van een bepaalde werk stroom activiteit die is verwijderd uit het ontwerp gebied en geselecteerd. In de afbeelding aan de linkerkant worden de eigenschappen van **Assign** -activiteit weer gegeven. Voor elke activiteit verschillen de eigenschappen en worden ze gebruikt bij het configureren van de aangepaste werk stroom. Op dit tabblad kunt u de kenmerken definiëren van het geselecteerde hulp programma dat is verwijderd uit de centrale werk stroom ontwerper. Zie [Eigenschappen](https://msdn.microsoft.com/library/ee342461.aspx)voor meer informatie.
 
-   - **Taak balk:** De taak balk bevat drie elementen: **variabelen** , **argumenten** en **Imports** . Deze elementen worden samen met werk stroom activiteiten gebruikt. Zie [de inleiding tot Windows Workflow Foundation (WF) van een ontwikkelaar in .net 4](http://msdn.microsoft.com/library/ee342461.aspx)voor meer informatie.
+   - **Taak balk:** De taak balk bevat drie elementen: **variabelen**, **argumenten** en **Imports**. Deze elementen worden samen met werk stroom activiteiten gebruikt. Zie [de inleiding tot Windows Workflow Foundation (WF) van een ontwikkelaar in .net 4](https://msdn.microsoft.com/library/ee342461.aspx)voor meer informatie.
 
 
 <h2 id="full-import-workflows">Een volledige import werk stroom configureren in het hulp programma voor configuratie van webservices</h2>
@@ -162,7 +162,7 @@ De volgende stappen laten zien hoe u de volledige import werk stromen voor SOAP 
    
     ![Sequentie activiteit](media/microsoft-identity-manager-2016-ma-ws-soap/full-import-sequence.png)
 
-3. Als u een variabele wilt toevoegen, zoekt u **variabele maken** . Typ _wsResponse_ voor de **naam** , selecteer de vervolg keuzelijst **type variabele** en selecteer vervolgens **Bladeren voor typen** . Er wordt een dialoog venster weer gegeven. Selecteer **gegenereerd**  >  **standaard**  >  **antwoord** . Behoud de selectie van het **bereik** en de **standaard** waarden. U kunt deze waarden ook instellen met behulp van de weer gave **Eigenschappen** .
+3. Als u een variabele wilt toevoegen, zoekt u **variabele maken**. Typ _wsResponse_ voor de **naam**, selecteer de vervolg keuzelijst **type variabele** en selecteer vervolgens **Bladeren voor typen**. Er wordt een dialoog venster weer gegeven. Selecteer **gegenereerd**  >  **standaard**  >  **antwoord**. Behoud de selectie van het **bereik** en de **standaard** waarden. U kunt deze waarden ook instellen met behulp van de weer gave **Eigenschappen** .
 
    ![Standaard antwoord](media/microsoft-identity-manager-2016-ma-ws-soap/default-response.png)
 
@@ -180,15 +180,15 @@ De volgende stappen laten zien hoe u de volledige import werk stromen voor SOAP 
 
    Als u de bewerking voor de webservice wilt gebruiken, stelt u de volgende eigenschappen in:
    
-      - **Service naam** : Voer een naam in voor de webservice.
-      - **Eindpunt naam** : Geef een eindpunt naam op voor de geselecteerde service.
-      - **Bewerkings naam** : Geef de betreffende bewerking voor de service op.
-      - **Argument** : Select- **argumenten** . Wijs in het volgende dialoog venster de argument waarden toe, zoals wordt weer gegeven in de volgende afbeelding:
+      - **Service naam**: Voer een naam in voor de webservice.
+      - **Eindpunt naam**: Geef een eindpunt naam op voor de geselecteerde service.
+      - **Bewerkings naam**: Geef de betreffende bewerking voor de service op.
+      - **Argument**: Select- **argumenten**. Wijs in het volgende dialoog venster de argument waarden toe, zoals wordt weer gegeven in de volgende afbeelding:
       
          ![Argumenten toewijzen](media/microsoft-identity-manager-2016-ma-ws-soap/get-employeebyid.png)
 
          >[!IMPORTANT]
-         >Wijzig de **naam** , **richting** of het **type** voor een argument niet met behulp van dit dialoog venster. Als een van deze waarden is gewijzigd, wordt de activiteit ongeldig. Stel alleen de **waarde** voor het argument in. Zoals in deze afbeelding wordt weer gegeven, wordt de waarde *wsResponse* ingesteld.
+         >Wijzig de **naam**, **richting** of het **type** voor een argument niet met behulp van dit dialoog venster. Als een van deze waarden is gewijzigd, wordt de activiteit ongeldig. Stel alleen de **waarde** voor het argument in. Zoals in deze afbeelding wordt weer gegeven, wordt de waarde *wsResponse* ingesteld.
 
 7. Voeg een **foreach** -activiteit toe, net onder **WebServiceCallActivity.** Deze activiteit wordt gebruikt om alle kenmerken (zowel ankers als niet-ankers) van het object type te herhalen. Wanneer u deze activiteit naar uw Workflow Designer-Opper vlak sleept, worden automatisch alle kenmerk namen voor uw object opgesomd. Stel de vereiste waarden in volgens het volgende scherm:
 
@@ -198,7 +198,7 @@ De volgende stappen laten zien hoe u de volledige import werk stromen voor SOAP 
 
     ![De activiteit voor het wijzigen van het bereik van CS maken](media/microsoft-identity-manager-2016-ma-ws-soap/createcsentrychangescope.png)
 
-9.  Stel de waarde van de DN-expressie in als `‘string.Concat ("Employee",item.EmployeeID)’` . Stel de **AnchorValue** voor de werk _nemer_ -werkset in op **' Convert. toString (item. EmployeeID) '** . Stel de **object typenaam** in als _werk nemer_ . Nadat u deze wijzigingen hebt aangebracht, ziet u het volgende scherm:
+9.  Stel de waarde van de DN-expressie in als `‘string.Concat ("Employee",item.EmployeeID)’` . Stel de **AnchorValue** voor de werk _nemer_ -werkset in op **' Convert. toString (item. EmployeeID) '**. Stel de **object typenaam** in als _werk nemer_. Nadat u deze wijzigingen hebt aangebracht, ziet u het volgende scherm:
 
     ![De werk nemer-ID ophalen](media/microsoft-identity-manager-2016-ma-ws-soap/get-employeebyid.png)
 
@@ -245,11 +245,11 @@ In de volgende secties ziet u hoe u uw werk stromen kunt exporteren met behulp v
 <h3 id="attribute-change-anchor">Werk stromen toevoegen</h3>
 Voer de volgende stappen uit in het hulp programma voor configuratie van webservices om export werk stromen toe te voegen.
 
-1. Selecteer de werk stroom die u wilt configureren. Selecteer onder **exporteren** de optie **toevoegen** . De **argumenten** en **import bewerkingen** zijn al gedefinieerd en zijn specifiek voor de activiteiten. Raadpleeg de volgende schermen voor naslag informatie.
+1. Selecteer de werk stroom die u wilt configureren. Selecteer onder **exporteren** de optie **toevoegen**. De **argumenten** en **import bewerkingen** zijn al gedefinieerd en zijn specifiek voor de activiteiten. Raadpleeg de volgende schermen voor naslag informatie.
 
     ![Toevoegen](media/microsoft-identity-manager-2016-ma-ws-soap/add.png)
 
-2. Voeg een **reeks** activiteit toe. Sleep de ontwerp functie voor **sequentie** activiteiten vanuit de **werkset** en zet deze neer op het Windows Workflow Designer-Opper vlak. De [reeks](https://msdn.microsoft.com/library/system.activities.statements.sequence.aspx) activiteit bevat een geordende verzameling onderliggende activiteiten die in volg orde worden uitgevoerd. Selecteer **variabele maken** . Wijs de waarden toe aan de variabelen die u voor uw logica gaat gebruiken.
+2. Voeg een **reeks** activiteit toe. Sleep de ontwerp functie voor **sequentie** activiteiten vanuit de **werkset** en zet deze neer op het Windows Workflow Designer-Opper vlak. De [reeks](https://msdn.microsoft.com/library/system.activities.statements.sequence.aspx) activiteit bevat een geordende verzameling onderliggende activiteiten die in volg orde worden uitgevoerd. Selecteer **variabele maken**. Wijs de waarden toe aan de variabelen die u voor uw logica gaat gebruiken.
 
     ![Exporteren](media/microsoft-identity-manager-2016-ma-ws-soap/export-add.png)
 
@@ -262,7 +262,7 @@ Voer de volgende stappen uit in het hulp programma voor configuratie van webserv
 
     ![De eigenschappen voor de ForEach-activiteit instellen](media/microsoft-identity-manager-2016-ma-ws-soap/foreach-sequence.png)
 
-5. **DisplayName** instellen als **foreach \< - \> AnchorAttribute**
+5. **DisplayName** instellen als **foreach \<AnchorAttribute\>**
 
    ![De weergave naam instellen](media/microsoft-identity-manager-2016-ma-ws-soap/add-sequence.png)
 
@@ -270,7 +270,7 @@ Voer de volgende stappen uit in het hulp programma voor configuratie van webserv
 
    ![Het argument type instellen](media/microsoft-identity-manager-2016-ma-ws-soap/foreach-anchor.png)
 
-7. Voeg een **Switch** activiteit toe binnen de **foreach** -hoofd tekst van de **AnchorAttribute** .
+7. Voeg een **Switch** activiteit toe binnen de **foreach** -hoofd tekst van de **AnchorAttribute**.
 
    ![Een switch activiteit toevoegen](media/microsoft-identity-manager-2016-ma-ws-soap/select-net-types.png)
 
@@ -278,7 +278,7 @@ Voer de volgende stappen uit in het hulp programma voor configuratie van webserv
 
    ![Een expressie toevoegen](media/microsoft-identity-manager-2016-ma-ws-soap/foreach-switch.png)
 
-9. Selecteer **een nieuwe case toevoegen** en voer een waarde in voor de werk **nemer** -aanvraag. Sleep een **sequentie** -activiteit en voeg deze toe aan een **Assign** -activiteit toevoegen.
+9. Selecteer **een nieuwe case toevoegen** en voer een waarde in voor de werk **nemer**-aanvraag. Sleep een **sequentie** -activiteit en voeg deze toe aan een **Assign** -activiteit toevoegen.
 
     ![Een nieuwe case toevoegen en toewijzen aan de reeks](media/microsoft-identity-manager-2016-ma-ws-soap/foreach-employeeid.png)
 
@@ -298,20 +298,20 @@ Voer de volgende stappen uit in het hulp programma voor configuratie van webserv
 
     ![Een expressie voor de switch activiteit toevoegen](media/microsoft-identity-manager-2016-ma-ws-soap/foreach-expression.png)
 
-14. Selecteer **een nieuwe case toevoegen** en voer een waarde in voor de voor **naam** . Sleep een **sequentie** -activiteit en voeg deze toe aan een **Assign** -activiteit toevoegen. Wijs de eigenschappen **aan** en **waarde** voor de **Assign** -activiteit toe.
+14. Selecteer **een nieuwe case toevoegen** en voer een waarde in voor de voor **naam**. Sleep een **sequentie** -activiteit en voeg deze toe aan een **Assign** -activiteit toevoegen. Wijs de eigenschappen **aan** en **waarde** voor de **Assign** -activiteit toe.
 
     ![Een nieuwe case voor de reeks toevoegen](media/microsoft-identity-manager-2016-ma-ws-soap/switch-firstname.png)
 
-15. Voeg waarden toe voor de vereiste kenmerken, zoals **LastName** , **email** , enzovoort. 
+15. Voeg waarden toe voor de vereiste kenmerken, zoals **LastName**, **email**, enzovoort. 
 
     ![Waarden voor vereiste kenmerken toevoegen](media/microsoft-identity-manager-2016-ma-ws-soap/foreach-switch-anchor.png)
 
-16. Sleep onder **Algemeen** een **WebServiceCallActivity** en stel **waarden** in voor de **argumenten** .
+16. Sleep onder **Algemeen** een **WebServiceCallActivity** en stel **waarden** in voor de **argumenten**.
 
     ![Een activiteit voor het aanroepen van een webservice toevoegen en de waarden instellen](media/microsoft-identity-manager-2016-ma-ws-soap/add-employee-attribute.png)
 
     >[!IMPORTANT]
-    >Wijzig de **naam** , **richting** of het **type** voor een argument niet met behulp van dit dialoog venster. Als een van deze waarden is gewijzigd, wordt de activiteit ongeldig. Stel alleen de **waarde** voor het argument in. Zoals in deze afbeelding wordt weer gegeven, wordt de waarde *wsResponse* ingesteld.
+    >Wijzig de **naam**, **richting** of het **type** voor een argument niet met behulp van dit dialoog venster. Als een van deze waarden is gewijzigd, wordt de activiteit ongeldig. Stel alleen de **waarde** voor het argument in. Zoals in deze afbeelding wordt weer gegeven, wordt de waarde *wsResponse* ingesteld.
 
 17.  Voeg ten slotte een **if** -activiteit toe om de antwoorden te controleren die worden geretourneerd door de bewerking van de webservice.
 
@@ -325,11 +325,11 @@ Sla dit project op de locatie op `%FIM_INSTALL_FOLDER%\Synchronization Service\E
 ### <a name="delete-workflows"></a>Werk stromen verwijderen
 Verwijder werk stromen voor exporteren door de volgende stappen te volgen in het hulp programma voor configuratie van webservices.
 
-1. Selecteer de werk stroom die u wilt configureren. Selecteer onder **exporteren** de optie **verwijderen** . De **argumenten** en **import bewerkingen** zijn al gedefinieerd en zijn specifiek voor de activiteiten. Raadpleeg de volgende schermen voor naslag informatie.
+1. Selecteer de werk stroom die u wilt configureren. Selecteer onder **exporteren** de optie **verwijderen**. De **argumenten** en **import bewerkingen** zijn al gedefinieerd en zijn specifiek voor de activiteiten. Raadpleeg de volgende schermen voor naslag informatie.
 
    ![Werk stromen voor verwijderen exporteren](media/microsoft-identity-manager-2016-ma-ws-soap/export-delete.png)
 
-2. Voeg een **reeks** activiteit toe. Selecteer **variabele maken** . Wijs de waarden toe aan de variabelen die u voor uw logica gaat gebruiken.
+2. Voeg een **reeks** activiteit toe. Selecteer **variabele maken**. Wijs de waarden toe aan de variabelen die u voor uw logica gaat gebruiken.
 
    ![Een reeks activiteit toevoegen](media/microsoft-identity-manager-2016-ma-ws-soap/sequence-variables.png)
 
@@ -350,7 +350,7 @@ Verwijder werk stromen voor exporteren door de volgende stappen te volgen in het
 
    ![Het argument type instellen](media/microsoft-identity-manager-2016-ma-ws-soap/foreach-type-argument.png)
 
-7. Voeg een **Switch** activiteit toe binnen de **foreach** -hoofd tekst van de **AnchorAttribute** .
+7. Voeg een **Switch** activiteit toe binnen de **foreach** -hoofd tekst van de **AnchorAttribute**.
 
    ![Een switch activiteit toevoegen](media/microsoft-identity-manager-2016-ma-ws-soap/select-net-type.png)
 
@@ -358,7 +358,7 @@ Verwijder werk stromen voor exporteren door de volgende stappen te volgen in het
 
    ![Een expressie toevoegen](media/microsoft-identity-manager-2016-ma-ws-soap/foreach-switch.png)
 
-9. Selecteer **een nieuwe case toevoegen** en voer een waarde in voor de werk **nemer** -aanvraag. Sleep een **sequentie** -activiteit en voeg deze toe aan een **Assign** -activiteit toevoegen.
+9. Selecteer **een nieuwe case toevoegen** en voer een waarde in voor de werk **nemer**-aanvraag. Sleep een **sequentie** -activiteit en voeg deze toe aan een **Assign** -activiteit toevoegen.
 
    ![Een nieuwe case toevoegen en toewijzen aan de reeks](media/microsoft-identity-manager-2016-ma-ws-soap/foreach-default.png)
 
@@ -366,12 +366,12 @@ Verwijder werk stromen voor exporteren door de volgende stappen te volgen in het
 
     ![Eigenschappen voor aan en waarde toewijzen](media/microsoft-identity-manager-2016-ma-ws-soap/foreach-attribute-flow.png)
 
-11. Sleep onder **Algemeen** een **WebServiceCallActivity** en stel **waarden** in voor de **argumenten** .
+11. Sleep onder **Algemeen** een **WebServiceCallActivity** en stel **waarden** in voor de **argumenten**.
 
     ![Een activiteit voor het aanroepen van een webservice toevoegen en de waarden instellen](media/microsoft-identity-manager-2016-ma-ws-soap/delete-employee.png)
 
     >[!IMPORTANT]
-    >Wijzig de **naam** , **richting** of het **type** voor een argument niet met behulp van dit dialoog venster. Als een van deze waarden is gewijzigd, wordt de activiteit ongeldig. Stel alleen de **waarde** voor het argument in. Zoals in deze afbeelding wordt weer gegeven, is de waarde *employeeID* ingesteld.
+    >Wijzig de **naam**, **richting** of het **type** voor een argument niet met behulp van dit dialoog venster. Als een van deze waarden is gewijzigd, wordt de activiteit ongeldig. Stel alleen de **waarde** voor het argument in. Zoals in deze afbeelding wordt weer gegeven, is de waarde *employeeID* ingesteld.
 
 12. Voeg ten slotte een **if** -activiteit toe om de antwoorden te controleren die worden geretourneerd door de bewerking van de webservice.
 
@@ -387,26 +387,26 @@ Sla dit project op de locatie op `%FIM_INSTALL_FOLDER%\Synchronization Service\E
 ### <a name="replace-workflows"></a>Werk stromen vervangen
 Vervang werk stromen exporteren door de volgende stappen te volgen in het hulp programma voor configuratie van webservices.
 
-1. Selecteer de werk stroom die u wilt configureren. Selecteer onder **exporteren** de optie **vervangen** . De **argumenten** en **import bewerkingen** zijn al gedefinieerd en zijn specifiek voor de activiteiten. Zie het onderstaande scherm voor referentie.
+1. Selecteer de werk stroom die u wilt configureren. Selecteer onder **exporteren** de optie **vervangen**. De **argumenten** en **import bewerkingen** zijn al gedefinieerd en zijn specifiek voor de activiteiten. Zie het onderstaande scherm voor referentie.
 
    ![Een werk stroom vervangen](media/microsoft-identity-manager-2016-ma-ws-soap/replace.png)
 
 2. Voeg een **reeks** activiteit toe.
 
-3. Sleep een **foreach** -activiteit voor de **\< AnchorAttribute->.**
+3. Sleep een **foreach** -activiteit voor de **\<AnchorAttribute> .**
 
-4. Voeg nog een **foreach \< AttributeChange>** -activiteit toe om niet-anker waarden toe te wijzen.
+4. Voeg nog **een \<AttributeChange> foreach** -activiteit toe om niet-anker waarden toe te wijzen.
 
 5. Ten slotte ziet het scherm eruit als in de volgende afbeelding. De instructies voor het configureren van deze activiteit vindt u in de sectie voor het <a href="#attribute-change-anchor">toevoegen van export werk stromen</a>.
 
    ![ForEach met een switch-activiteit en anker kenmerk](media/microsoft-identity-manager-2016-ma-ws-soap/foreach-switch-anchor.png)
 
-6. Sleep onder **Algemeen** een **WebServiceCallActivity** en stel **waarden** in voor de **argumenten** .
+6. Sleep onder **Algemeen** een **WebServiceCallActivity** en stel **waarden** in voor de **argumenten**.
 
    ![Een activiteit voor het aanroepen van een webservice toevoegen en de waarden instellen](media/microsoft-identity-manager-2016-ma-ws-soap/wsresponse.png)
 
    >[!IMPORTANT]
-   >Wijzig de **naam** , **richting** of het **type** voor een argument niet met behulp van dit dialoog venster. Als een van deze waarden is gewijzigd, wordt de activiteit ongeldig. Stel alleen de **waarde** voor het argument in. Zoals in deze afbeelding wordt weer gegeven, wordt de waarde *werk nemer* ingesteld.
+   >Wijzig de **naam**, **richting** of het **type** voor een argument niet met behulp van dit dialoog venster. Als een van deze waarden is gewijzigd, wordt de activiteit ongeldig. Stel alleen de **waarde** voor het argument in. Zoals in deze afbeelding wordt weer gegeven, wordt de waarde *werk nemer* ingesteld.
 
 7. Voeg ten slotte een **if** -activiteit toe om de antwoorden te controleren die worden geretourneerd door de bewerking van de webservice.
 
@@ -442,13 +442,13 @@ In het tekstvak schrijft u het bericht dat u wilt weer geven in het schrijf doel
 
 Als u de **WriteLine** -activiteit wilt gebruiken, stelt u de volgende eigenschappen in. De eigenschappen zijn zichtbaar wanneer u de activiteit in Workflow Designer selecteert en de **Eigenschappen** voor de activiteit bekijkt.
 
-- **Logboek niveau** : Hiermee geeft u de hoeveelheid inhoud op die in de logboek waarde moet worden geschreven. De mogelijke waarden zijn:
+- **Logboek niveau**: Hiermee geeft u de hoeveelheid inhoud op die in de logboek waarde moet worden geschreven. De mogelijke waarden zijn:
 
     - Hoog: Schrijf het **LogText** -bericht naar het logboek bestand als de ernst van het logboek is ingesteld op hoog.
     - Uitgebreid: Schrijf het **LogText** -bericht naar het logboek bestand als de ernst van het logboek is ingesteld op uitgebreid.
     - Uitgeschakeld: niet schrijven in het logboek bestand.
-- **LogText** : Hiermee geeft u de tekst inhoud op die in het logboek moet worden geschreven.
-- **Tag** : Hiermee wordt een tag aan de tekst toegevoegd om het type inhoud te identificeren dat in het logboek wordt geschreven. De mogelijke waarden zijn: fout, tracering of waarschuwing.
+- **LogText**: Hiermee geeft u de tekst inhoud op die in het logboek moet worden geschreven.
+- **Tag**: Hiermee wordt een tag aan de tekst toegevoegd om het type inhoud te identificeren dat in het logboek wordt geschreven. De mogelijke waarden zijn: fout, tracering of waarschuwing.
 
 <!-- log severity is not defined in this document -->
 

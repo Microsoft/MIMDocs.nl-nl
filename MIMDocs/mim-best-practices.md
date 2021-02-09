@@ -9,12 +9,12 @@ ms.date: 01/05/2018
 ms.topic: reference
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
-ms.openlocfilehash: 72b77034d5591d0bc2ab420f185acee719fe8324
-ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
+ms.openlocfilehash: 71ac80f10fd01e7c784ec1462a9383295e5f8ddb
+ms.sourcegitcommit: 78f3f18f0b7afb44fcf7444e446a4edffb1f8f12
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79042998"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99835864"
 ---
 # <a name="microsoft-identity-manager-2016-best-practices"></a>Aanbevolen procedures voor Microsoft Identity Manager 2016
 
@@ -26,17 +26,17 @@ In dit onderwerp worden de aanbevolen procedures beschreven voor het implementer
 
 Configuratie van de SQL-server (Structured Query Language) is essentieel voor optimale systeemprestaties. Het bereiken van optimale MIM-prestaties in grootschalige implementaties is afhankelijk van de toepassing van aanbevolen procedures voor een server waarop SQL wordt uitgevoerd. Zie de volgende onderwerpen voor meer informatie over aanbevolen procedures voor SQL:
 
--   [Top 10 van aanbevolen procedures voor opslag](http://go.microsoft.com/fwlink/?LinkID=183663)
+-   [Top 10 van aanbevolen procedures voor opslag](https://go.microsoft.com/fwlink/?LinkID=183663)
 
--   [Tempdb-prestaties optimaliseren](http://go.microsoft.com/fwlink/?LinkID=188267)
+-   [Tempdb-prestaties optimaliseren](https://go.microsoft.com/fwlink/?LinkID=188267)
 
--   [SQL Server Best Practices Article (Engelstalig)](http://go.microsoft.com/fwlink/?LinkID=188268)
+-   [SQL Server Best Practices Article (Engelstalig)](https://go.microsoft.com/fwlink/?LinkID=188268)
 
--   [Indexen opnieuw indelen en opbouwen](http://go.microsoft.com/fwlink/?LinkID=188269)
+-   [Indexen opnieuw indelen en opbouwen](https://go.microsoft.com/fwlink/?LinkID=188269)
 
 ### <a name="presize-data-and-log-files"></a>Vooraf de grootte bepalen van gegevens en logboekbestanden
 
-Vertrouw niet op autogrow. Beheer in plaats daarvan de groei van deze bestanden handmatig. U kunt autogrow uit veiligheidsoverwegingen aan laten staan, maar u moet de groei van de gegevensbestanden proactief beheren. Zie de [FIM Capacity Planning Guide (Handleiding voor FIM-capaciteitsplanning)](http://go.microsoft.com/fwlink/?LinkID=185246) voor voorbeeldgrootten van de MIM-database.
+Vertrouw niet op autogrow. Beheer in plaats daarvan de groei van deze bestanden handmatig. U kunt autogrow uit veiligheidsoverwegingen aan laten staan, maar u moet de groei van de gegevensbestanden proactief beheren. Zie de [FIM Capacity Planning Guide (Handleiding voor FIM-capaciteitsplanning)](https://go.microsoft.com/fwlink/?LinkID=185246) voor voorbeeldgrootten van de MIM-database.
 
 ### <a name="to-presize-sql-data-and-log-files"></a>Vooraf de grootte van SQL-gegevens en -logboekbestanden bepalen
 
@@ -64,7 +64,7 @@ Voor optimale prestaties wordt aangeraden één gegevensbestand per CPU-kern in 
 
 ### <a name="ensure-adequate-space-for-log-files"></a>Zorgen voor voldoende ruimte voor de logboekbestanden
 
-Het is belangrijk dat u de schijfvereisten van uw herstelmodel weet. De modus voor eenvoudig herstel is mogelijk geschikt voor de initiële systeembelasting om het gebruik van schijfruimte te beperken, maar de gegevens die zijn gemaakt na de meest recente back-up worden blootgesteld aan gegevensverlies. Wanneer u de volledig-herstelmodus gebruikt, moet u schijfgebruik beheren via back-ups. Dit houdt onder meer in dat u regelmatig back-ups moet maken van het transactielogboek om intensief gebruik van de schijfruimte te voorkomen. Zie [Recovery Model Overview (Overzicht van herstelmodellen)](http://go.microsoft.com/fwlink/?LinkID=185370) voor meer informatie.
+Het is belangrijk dat u de schijfvereisten van uw herstelmodel weet. De modus voor eenvoudig herstel is mogelijk geschikt voor de initiële systeembelasting om het gebruik van schijfruimte te beperken, maar de gegevens die zijn gemaakt na de meest recente back-up worden blootgesteld aan gegevensverlies. Wanneer u de volledig-herstelmodus gebruikt, moet u schijfgebruik beheren via back-ups. Dit houdt onder meer in dat u regelmatig back-ups moet maken van het transactielogboek om intensief gebruik van de schijfruimte te voorkomen. Zie [Recovery Model Overview (Overzicht van herstelmodellen)](https://go.microsoft.com/fwlink/?LinkID=185370) voor meer informatie.
 
 ### <a name="limit-sql-server-memory"></a>SQL-servergeheugen beperken
 
@@ -74,7 +74,7 @@ Afhankelijk van de hoeveelheid geheugen op de SQL-server en als u de SQL-server 
 
 2. Selecteer Nieuwe query.
 
-3. Voer de volgende query uit:
+3. Voer de volgende query uit.
 
    ```SQL
    USE master
@@ -112,7 +112,7 @@ In het algemeen moet u samen werken met uw database beheerder om een back-up-en 
 - Als er geen incrementele logboekback-ups zijn gepland, moet de database worden ingesteld op de eenvoudige herstelmodus. 
 - Zorg ervoor dat u de implicaties van de verschillende herstel modellen begrijpt voordat u uw back-upstrategie implementeert. Meer informatie over de schijfruimte vereisten voor deze modellen. Voor het volledig-herstelmodel moet u regelmatig back-ups maken om intensief gebruik van de schijfruimte te voorkomen. 
 
-Zie [Recovery Model Overview (Overzicht van herstelmodellen)](http://go.microsoft.com/fwlink/?LinkID=185370) en [FIM 2010 Backup and Restore Guide (Handleiding voor back-up en herstel)](http://go.microsoft.com/fwlink/?LinkID=165864).
+Zie [Recovery Model Overview (Overzicht van herstelmodellen)](https://go.microsoft.com/fwlink/?LinkID=185370) en [FIM 2010 Backup and Restore Guide (Handleiding voor back-up en herstel)](https://go.microsoft.com/fwlink/?LinkID=165864).
 
 ## <a name="create-a-backup-administrator-account-for-the-fim-service-after-installation"></a>Een back-upbeheerders account maken voor de FIM-service na de installatie
 
@@ -135,11 +135,11 @@ Hier volgen de aanbevolen procedures voor het configureren van Microsoft Exchang
 
 3.  Selecteer **Vereisen dat alle afzenders worden geverifieerd**.
 
-Zie [Beperkingen voor de bezorging van e-mail configureren](http://go.microsoft.com/fwlink/?LinkID=183625) voor meer informatie.
+Zie [Beperkingen voor de bezorging van e-mail configureren](https://go.microsoft.com/fwlink/?LinkID=183625) voor meer informatie.
 
--   Configureer het serviceaccount zodanig dat e-mailberichten groter dan 1 MB worden geweigerd. Volg de aanbevolen procedure voor [het configureren van limieten voor de berichtgrootte](http://go.microsoft.com/fwlink/?LinkID=183626) voor een postvak of een openbare map met e-mail.
+-   Configureer het serviceaccount zodanig dat e-mailberichten groter dan 1 MB worden geweigerd. Volg de aanbevolen procedure voor [het configureren van limieten voor de berichtgrootte](https://go.microsoft.com/fwlink/?LinkID=183626) voor een postvak of een openbare map met e-mail.
 
--   Stel een postvakopslaglimiet van 5 GB voor het serviceaccount in. Voor optimale resultaten volgt u de aanbevolen procedures [Opslagquota voor een postvak configureren](http://go.microsoft.com/fwlink/?LinkID=156929).
+-   Stel een postvakopslaglimiet van 5 GB voor het serviceaccount in. Voor optimale resultaten volgt u de aanbevolen procedures [Opslagquota voor een postvak configureren](https://go.microsoft.com/fwlink/?LinkID=156929).
 
 ## <a name="mim-portal"></a>MIM-portal
 
@@ -169,7 +169,7 @@ Het is raadzaam om het indexeren van Microsoft Office SharePoint® uit te schake
 In deze sectie vindt u een reeks stappen voor het verbeteren van de prestaties van de initiële gegevens belasting van een extern systeem naar MIM. Het is belang rijk om te begrijpen dat een aantal van deze stappen alleen tijdens de eerste populatie van het systeem wordt uitgevoerd. Deze moeten opnieuw worden ingesteld wanneer de taak is voltooid. Dit is een eenmalige bewerking en geen continue synchronisatie.
 
 > [!NOTE]
-> Zie [Hoe kan ik gebruikers synchroniseren van Active Directory naar FIM](http://go.microsoft.com/fwlink/?LinkID=188277) in de FIM-documentatie voor meer informatie over het synchroniseren van gebruikers tussen MIM en Active Directory Domain Services (AD DS).
+> Zie [Hoe kan ik gebruikers synchroniseren van Active Directory naar FIM](https://go.microsoft.com/fwlink/?LinkID=188277) in de FIM-documentatie voor meer informatie over het synchroniseren van gebruikers tussen MIM en Active Directory Domain Services (AD DS).
 > 
 > [!IMPORTANT]
 > Zorg ervoor dat u de aanbevolen procedures hebt toegepast die worden beschreven in de sectie SQL Setup van deze handleiding. 
@@ -191,7 +191,7 @@ ALTER FULLTEXT INDEX ON [fim].[ObjectValueXml] SET CHANGE_TRACKING = MANUAL
 ```
 
 > [!IMPORTANT]
-> Het niet implementeren van deze procedures kan leiden tot een intensief gebruik van de schijfruimte, wat kan resulteren in onvoldoende schijfruimte. U vindt aanvullende informatie over dit onderwerp in [Recovery Model Overview (Overzicht van herstelmodellen)](http://go.microsoft.com/fwlink/?LinkID=185370). [De FIM Backup and Restore Guide (Handleiding voor back-up en herstel](http://go.microsoft.com/fwlink/?LinkID=165864) bevat aanvullende informatie.
+> Het niet implementeren van deze procedures kan leiden tot een intensief gebruik van de schijfruimte, wat kan resulteren in onvoldoende schijfruimte. U vindt aanvullende informatie over dit onderwerp in [Recovery Model Overview (Overzicht van herstelmodellen)](https://go.microsoft.com/fwlink/?LinkID=185370). [De FIM Backup and Restore Guide (Handleiding voor back-up en herstel](https://go.microsoft.com/fwlink/?LinkID=165864) bevat aanvullende informatie.
 
 ### <a name="step-2-apply-the-minimum-necessary-mim-configuration-during-the-load-process"></a>Stap 2: De minimaal benodigde MIM-configuratie toepassen tijdens het laadproces
 
@@ -236,7 +236,7 @@ ALTER FULLTEXT INDEX ON [fim].[ObjectValueString] SET CHANGE_TRACKING = AUTO
 ALTER FULLTEXT INDEX ON [fim].[ObjectValueXml] SET CHANGE_TRACKING = AUTO
 ```
 
-Als u naar de eenvoudige herstelmodus moet overschakelen, configureert u uw back-upschema in overeenstemming met het back-upbeleid van uw organisatie. Aanvullende details van FIM-back-upschema's zijn beschikbaar in de [FIM Backup and Restore Guide (Handleiding voor back-up en herstel)](http://go.microsoft.com/fwlink/?LinkID=165864).
+Als u naar de eenvoudige herstelmodus moet overschakelen, configureert u uw back-upschema in overeenstemming met het back-upbeleid van uw organisatie. Aanvullende details van FIM-back-upschema's zijn beschikbaar in de [FIM Backup and Restore Guide (Handleiding voor back-up en herstel)](https://go.microsoft.com/fwlink/?LinkID=165864).
 
 ## <a name="configuration-migration"></a>Configuratie migreren
 
@@ -356,9 +356,9 @@ SSL implementeren:
 
 28. Klik op Bewerkingen en vervolgens op Alternatieve toewijzingen voor toegang.
 
-29. Klik op http://servername.
+29. Klik op https://servername.
 
-30. Wijzig http://servername in https://servernameen klik vervolgens op OK.
+30. Wijzig https://servername in https://servername en klik vervolgens op OK.
 
 31. Klik op Start, klik op Uitvoeren, typ iisreset en klik vervolgens op OK.
 
@@ -394,7 +394,8 @@ MIM biedt twee typen beheerbeleidsregels: aanvraag en setovergang:
   - Wordt toegepast wanneer een resource een bijbehorende set binnengaat of verlaat.
   - Afgestemd op de leden van de set.
 
->[OPMERKING] Zie voor meer informatie [Bedrijfsbeleidsregels ontwerpen](http://go.microsoft.com/fwlink/?LinkID=183691).
+> [!NOTE]
+> Zie [bedrijfs beleids regels ontwerpen](https://go.microsoft.com/fwlink/?LinkID=183691)voor meer informatie.
 
 #### <a name="only-enable-mprs-as-necessary"></a>Beheerbeleidsregels alleen naar wens inschakelen
 
@@ -514,7 +515,7 @@ Als deze registersleutel is ingesteld op Waar, gaat de gebruiker zeer waarschijn
 
 Het is mogelijk leesbare wachtwoorden in het logboek te registreren wanneer diagnostische tracering van het serviceniveau in Windows is ingeschakeld
 
-Communication Foundation (WCF). Deze optie is niet standaard ingeschakeld en het wordt afgeraden om de optie in te schakelen in een productieomgeving. Deze wachtwoorden zijn zichtbaar als leesbare tekstelementen in een versleuteld SOAP-bericht (Simple Object Access Protocol) wanneer gebruikers zich registreren voor wachtwoordherstel. Zie [Configuring Message Logging (Logboekregistratie van berichten configureren)](http://go.microsoft.com/fwlink/?LinkID=168572) voor meer informatie.
+Communication Foundation (WCF). Deze optie is niet standaard ingeschakeld en het wordt afgeraden om de optie in te schakelen in een productieomgeving. Deze wachtwoorden zijn zichtbaar als leesbare tekstelementen in een versleuteld SOAP-bericht (Simple Object Access Protocol) wanneer gebruikers zich registreren voor wachtwoordherstel. Zie [Configuring Message Logging (Logboekregistratie van berichten configureren)](https://go.microsoft.com/fwlink/?LinkID=168572) voor meer informatie.
 
 #### <a name="do-not-map-an-authorization-workflow-to-the-password-reset-process"></a>Een autorisatiewerkstroom niet toewijzen aan het proces voor wachtwoordherstel
 
@@ -532,7 +533,7 @@ Wanneer u autorisatieactiviteiten toevoegt of verwijdert of de volgorde hiervan 
 
 #### <a name="consider-adding-a-privacy-disclaimer-to-the-user-profile-page"></a>Het toevoegen van een privacyvrijwaring aan de gebruikersprofielpagina overwegen
 
-In MIM kunnen standaard sommige gebruikersprofielgegevens worden weergegeven aan andere gebruikers. Als voorziening voor gebruikers zouden beheerders moeten overwegen om aan de pagina Gebruikersprofiel aangepaste tekst toe te voegen die aansluit bij het beleid van hun bedrijf. Zie [Inleiding tot het configureren en aanpassen van de FIM-portal](http://go.microsoft.com/fwlink/?LinkID=165848) voor meer informatie over het toevoegen van aangepaste tekst aan een MIM-portalpagina.
+In MIM kunnen standaard sommige gebruikersprofielgegevens worden weergegeven aan andere gebruikers. Als voorziening voor gebruikers zouden beheerders moeten overwegen om aan de pagina Gebruikersprofiel aangepaste tekst toe te voegen die aansluit bij het beleid van hun bedrijf. Zie [Inleiding tot het configureren en aanpassen van de FIM-portal](https://go.microsoft.com/fwlink/?LinkID=165848) voor meer informatie over het toevoegen van aangepaste tekst aan een MIM-portalpagina.
 
 ### <a name="schema"></a>Schema
 
@@ -550,7 +551,7 @@ Er zijn 13 kernkenmerken aan alle resourcetypen toegewezen. U mag de relatie van
 
 -   DeletedTime
 
--   Beschrijving
+-   Description
 
 -   DetectedRulesList • DisplayName
 
@@ -633,6 +634,6 @@ Het doel van MIM is aanvragen te verwerken die door verschillende MIM-clients, z
 Zie [informatie over FIM-service partities](https://social.technet.microsoft.com/wiki/contents/articles/2363.understanding-fim-service-partitions.aspx)voor meer informatie.
 
 ## <a name="next-steps"></a>Volgende stappen
-- [Hand leiding voor back-up en herstel van FIM](http://go.microsoft.com/fwlink/?LinkID=165864)
-- [Hoe kan ik gebruikers van Active Directory naar FIM synchroniseren](http://go.microsoft.com/fwlink/?LinkID=188277) 
-- [Overzicht van het herstel model](http://go.microsoft.com/fwlink/?LinkID=185370).
+- [Hand leiding voor back-up en herstel van FIM](https://go.microsoft.com/fwlink/?LinkID=165864)
+- [Hoe kan ik gebruikers van Active Directory naar FIM synchroniseren](https://go.microsoft.com/fwlink/?LinkID=188277) 
+- [Overzicht van het herstel model](https://go.microsoft.com/fwlink/?LinkID=185370).

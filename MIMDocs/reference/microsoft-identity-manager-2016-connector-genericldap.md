@@ -15,12 +15,12 @@ ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.date: 06/26/2018
 ms.author: billmath
-ms.openlocfilehash: bb6460ebf4106aa8c9295be0db3ce9da426b0778
-ms.sourcegitcommit: 78c2d7e5ba4bec276d5a9bf8860bc126d9bd9c33
+ms.openlocfilehash: 5b19b4fd9d45797fcc6b02091386a27aec3c0abf
+ms.sourcegitcommit: 78f3f18f0b7afb44fcf7444e446a4edffb1f8f12
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94492494"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99835720"
 ---
 # <a name="generic-ldap-connector-technical-reference"></a>Technische documentatie voor algemene LDAP-connector
 In dit artikel wordt de algemene LDAP-connector beschreven. Het artikel is van toepassing op de volgende producten:
@@ -29,7 +29,7 @@ In dit artikel wordt de algemene LDAP-connector beschreven. Het artikel is van t
 * Forefront Identity Manager 2010 R2 (FIM2010R2)
   * U moet hotfix 4.1.3671.0 of hoger [KB3092178](https://support.microsoft.com/kb/3092178)gebruiken.
 
-Voor MIM2016 en FIM2010R2 is de connector beschikbaar als down load vanuit het [micro soft Download centrum](http://go.microsoft.com/fwlink/?LinkId=717495).
+Voor MIM2016 en FIM2010R2 is de connector beschikbaar als down load vanuit het [micro soft Download centrum](https://go.microsoft.com/fwlink/?LinkId=717495).
 
 Als u verwijst naar IETF Rfc's, gebruikt dit document de indeling (RFC [RFC number]/[sectie in RFC-document]), bijvoorbeeld (RFC 4512/4.3).
 U vindt meer informatie op [https://tools.ietf.org/](https://tools.ietf.org/) . Voer in het linkerdeel venster een RFC-nummer in het dialoog venster **documenten ophalen** in en test het om te controleren of dit geldig is.
@@ -47,7 +47,7 @@ Van een perspectief op hoog niveau worden de volgende functies ondersteund door 
 | --- | --- |
 | Verbonden gegevens bron |De connector wordt ondersteund met alle LDAP v3-servers (RFC 4510-compatibel). Het is getest met het volgende: <li>Micro soft Active Directory Lightweight Directory Services (AD LDS)</li><li>Micro soft Active Directory Global Catalog (AD GC)</li><li>389-adreslijst server</li><li>Apache-adreslijst server</li><li>IBM Tivoli DS</li><li>Isode Directory</li><li>NetIQ eDirectory</li><li>Novell eDirectory</li><li>DJ openen</li><li>Open Active Directory</li><li>Open LDAP (openldap.org)</li><li>Oracle (voorheen Sun) Directory server Enter prise Edition</li><li>RadiantOne Virtual Directory server (VDS)</li><li>Sun One-Directory server</li><li>Micro soft Active Directory Domain Services (AD DS)</li><ul><li>Voor de meeste scenario's moet u de ingebouwde Active Directory connector gebruiken in plaats van dat sommige functies niet werken</li></ul>**Bekende mappen of functies die niet worden ondersteund:**<li>Micro soft Active Directory Domain Services (AD DS)<ul><li>Meldings service voor wachtwoord wijzigingen (PCNS)</li><li>Exchange-inrichting</li><li>Verwijdering van actieve synchronisatie apparaten</li><li>Ondersteuning voor nTDescurityDescriptor</li></ul></li><li>Oracle Internet Directory (OID)</li> |
 | Scenario's |<li>Beheer van object levenscyclus</li><li>Groepsbeheer</li><li>Wachtwoordbeheer</li> |
-| Bewerkingen |De volgende bewerkingen worden ondersteund op alle LDAP-directory's: <li>Volledig importbewerking</li><li>Exporteren</li>De volgende bewerkingen worden alleen ondersteund in de opgegeven directory's:<li>Delta-import</li><li>Wacht woord instellen, wacht woord wijzigen</li> |
+| Operations |De volgende bewerkingen worden ondersteund op alle LDAP-directory's: <li>Volledig importbewerking</li><li>Exporteren</li>De volgende bewerkingen worden alleen ondersteund in de opgegeven directory's:<li>Delta-import</li><li>Wacht woord instellen, wacht woord wijzigen</li> |
 | Schema |<li>Het schema wordt gedetecteerd vanuit het LDAP-schema (RFC3673 en RFC4512/4.2)</li><li>Ondersteunt structurele klassen, aux-klassen en extensibleObject-object klasse (RFC4512/4.3)</li> |
 
 ### <a name="delta-import-and-password-management-support"></a>Ondersteuning voor Delta-import en wachtwoord beheer
@@ -272,4 +272,4 @@ Voor de Novell-eDirectory wordt door de Delta-import geen object verwijderingen 
 Voor directory's met een Delta wijzigings logboek dat is gebaseerd op de datum/tijd, wordt het ten zeerste aanbevolen een volledige import uit te voeren op periodieke tijdstippen. Met dit proces kan de synchronisatie-engine zoeken naar en verschillen tussen de LDAP-server en wat zich op dit moment in de connector ruimte bevindt.
 
 ## <a name="troubleshooting"></a>Problemen oplossen
-* Zie voor meer informatie over het inschakelen van logboek registratie voor het oplossen van problemen met de connector, het [inschakelen van etw-tracering voor connectors](http://go.microsoft.com/fwlink/?LinkId=335731).
+* Zie voor meer informatie over het inschakelen van logboek registratie voor het oplossen van problemen met de connector, het [inschakelen van etw-tracering voor connectors](https://go.microsoft.com/fwlink/?LinkId=335731).
