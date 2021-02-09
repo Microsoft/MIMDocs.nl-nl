@@ -12,12 +12,12 @@ ms.assetid: 68beeec1-8350-4e0e-946f-d94606e1e756
 audience: developer
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 6668ac823607436c2472a076f7c5ea2d9c727b04
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.openlocfilehash: 5e21cd92496fd31ec12044f3b69599bf96bef62a
+ms.sourcegitcommit: 78f3f18f0b7afb44fcf7444e446a4edffb1f8f12
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "92758698"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99835606"
 ---
 # <a name="get-smart-card-diversified-admin-key"></a>Smart Card gediversifieerde beheerders sleutel ophalen
 Hiermee wordt de gediversifieerde beheerder sleutel voor de opgegeven Smart Card opgehaald.
@@ -39,7 +39,7 @@ GET     |/CertificateManagement/api/v1.0/requests/{reqid}/smartcards/{scid}/dive
 Parameter | Beschrijving
 ---------|------------
 reqid | Vereist. De aanvraag-id die specifiek is voor Microsoft Identity Manager (MIM) Certificate Management (CM).
-scid | Vereist. De Smart Card-ID die specifiek is voor MIM CM. De scid wordt opgehaald uit het object [micro soft. clm. Shared. Smart Cards. Smart Card](http://msdn.microsoft.com/library/microsoft.clm.shared.smartcards.smartcard.aspx) .
+scid | Vereist. De Smart Card-ID die specifiek is voor MIM CM. De scid wordt opgehaald uit het object [micro soft. clm. Shared. Smart Cards. Smart Card](https://msdn.microsoft.com/library/microsoft.clm.shared.smartcards.smartcard.aspx) .
 
 ### <a name="query-parameters"></a>Queryparameters
 
@@ -59,7 +59,7 @@ In deze sectie wordt het antwoord beschreven.
 
 ### <a name="response-codes"></a>Antwoord codes
 
-Code  |Beschrijving  
+Code  |Description  
 ---------|---------
 200 | OK
 204 | Geen inhoud

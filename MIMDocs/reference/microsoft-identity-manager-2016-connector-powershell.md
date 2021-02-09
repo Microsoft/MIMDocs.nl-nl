@@ -14,12 +14,12 @@ ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.date: 04/02/2018
 ms.author: billmath
-ms.openlocfilehash: a26d7f0fdc157f3f4dd8d3fedadaf7d63bac89c9
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.openlocfilehash: 0dcba300f70756dbfa7a29011a37839247e6bf8a
+ms.sourcegitcommit: 78f3f18f0b7afb44fcf7444e446a4edffb1f8f12
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "92758776"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99835927"
 ---
 # <a name="windows-powershell-connector-technical-reference"></a>Technische documentatie voor Windows PowerShell-connector
 In dit artikel wordt de Windows Power shell-connector beschreven. Het artikel is van toepassing op de volgende producten:
@@ -28,7 +28,7 @@ In dit artikel wordt de Windows Power shell-connector beschreven. Het artikel is
 * Forefront Identity Manager 2010 R2 (FIM2010R2)
   * U moet hotfix 4.1.3671.0 of hoger [KB3092178](https://support.microsoft.com/kb/3092178)gebruiken.
 
-Voor MIM2016 en FIM2010R2 is de connector beschikbaar als down load vanuit het [micro soft Download centrum](http://go.microsoft.com/fwlink/?LinkId=717495).
+Voor MIM2016 en FIM2010R2 is de connector beschikbaar als down load vanuit het [micro soft Download centrum](https://go.microsoft.com/fwlink/?LinkId=717495).
 
 ## <a name="overview-of-the-powershell-connector"></a>Overzicht van de Power shell-connector
 Met de Power shell-connector kunt u de synchronisatie service integreren met externe systemen die Api's op basis van Windows Power shell bieden. De connector biedt een brug tussen de mogelijkheden van het ECMA2-Framework (Extensible Connectivity Management Agent 2) en Windows Power shell. Zie voor meer informatie over het ECMA-Framework de [referentie voor de Extensible Connectivity 2,2 Management Agent](https://msdn.microsoft.com/library/windows/desktop/hh859557.aspx).
@@ -67,10 +67,10 @@ U kunt de volgende connectiviteits parameters configureren:
 |                Domain                |    <Blank>    |                                                                                                                                                                                    Domein van de referentie die moet worden opgeslagen voor gebruik wanneer de connector wordt uitgevoerd.                                                                                                                                                                                    |
 |                 Gebruiker                 |    <Blank>    |                                                                                                                                                                                   De gebruikers naam van de referentie die moet worden opgeslagen voor gebruik wanneer de connector wordt uitgevoerd.                                                                                                                                                                                   |
 |               Wachtwoord               |    <Blank>    |                                                                                                                                                                                   Wacht woord van de referentie die moet worden opgeslagen voor gebruik wanneer de connector wordt uitgevoerd.                                                                                                                                                                                   |
-|    Connector account imiteren     |     False     | Als deze eigenschap waar is, voert de synchronisatie service de Windows Power shell-scripts uit in de context van de opgegeven referenties. Als dat mogelijk is, wordt aangeraden dat de **$credentials** para meter wordt door gegeven aan elk script wordt gebruikt in plaats van imitatie. Zie [aanvullende configuratie voor imitatie](#additional-configuration-for-impersonation)voor meer informatie over aanvullende machtigingen die nodig zijn voor het gebruik van deze optie. |
-| Gebruikers profiel laden bij imiteren |     False     |                          Hiermee wordt aangegeven dat Windows het gebruikers profiel van de connector referenties tijdens imitatie moet laden. Als de geïmiteerde gebruiker een zwervend profiel heeft, laadt de connector het zwervende profiel niet. Zie [aanvullende configuratie voor imitatie](#additional-configuration-for-impersonation)voor meer informatie over aanvullende machtigingen die nodig zijn voor het gebruik van deze para meter.                           |
+|    Connector account imiteren     |     Niet waar     | Als deze eigenschap waar is, voert de synchronisatie service de Windows Power shell-scripts uit in de context van de opgegeven referenties. Als dat mogelijk is, wordt aangeraden dat de **$credentials** para meter wordt door gegeven aan elk script wordt gebruikt in plaats van imitatie. Zie [aanvullende configuratie voor imitatie](#additional-configuration-for-impersonation)voor meer informatie over aanvullende machtigingen die nodig zijn voor het gebruik van deze optie. |
+| Gebruikers profiel laden bij imiteren |     Niet waar     |                          Hiermee wordt aangegeven dat Windows het gebruikers profiel van de connector referenties tijdens imitatie moet laden. Als de geïmiteerde gebruiker een zwervend profiel heeft, laadt de connector het zwervende profiel niet. Zie [aanvullende configuratie voor imitatie](#additional-configuration-for-impersonation)voor meer informatie over aanvullende machtigingen die nodig zijn voor het gebruik van deze para meter.                           |
 |    Aanmeldings type tijdens het imiteren     |     Geen      |                                                                                                                                                                      Aanmeldings type tijdens imitatie. Zie de [dwLogonType][dw] -documentatie voor meer informatie.                                                                                                                                                                       |
-|         Alleen ondertekende scripts          |     False     |                                                                                                    Indien true, wordt in de Windows Power shell-connector gecontroleerd of elk script een geldige digitale hand tekening heeft. Indien onwaar, moet u ervoor zorgen dat het Windows Power shell-uitvoerings beleid van de synchronisatie service RemoteSigned of onbeperkt is.                                                                                                     |
+|         Alleen ondertekende scripts          |     Niet waar     |                                                                                                    Indien true, wordt in de Windows Power shell-connector gecontroleerd of elk script een geldige digitale hand tekening heeft. Indien onwaar, moet u ervoor zorgen dat het Windows Power shell-uitvoerings beleid van de synchronisatie service RemoteSigned of onbeperkt is.                                                                                                     |
 
 **Algemene module**  
 Met de connector kunt u een gedeelde Windows Power shell-module opslaan in de configuratie. Wanneer de connector een script uitvoert, wordt de Windows Power shell-module uitgepakt naar het bestands systeem zodat deze kan worden geïmporteerd door elk script.
@@ -117,10 +117,10 @@ Als u aangepaste configuratie-instellingen wilt opgeven, moet u de naam van elke
 
 Voor toegang tot aangepaste configuratie-instellingen vanuit een script moet u de naam achtervoegsel met een onderstrepings teken ( \_ ) en het bereik van de para meter (Global, partition of RunStep). Gebruik bijvoorbeeld het volgende code fragment om toegang te krijgen tot de globale FileName-para meter: `$ConfigurationParameters["FileName_Global"].Value`
 
-### <a name="capabilities"></a>Functionaliteit
+### <a name="capabilities"></a>Functies
 Het tabblad mogelijkheden van de beheer agent Designer definieert het gedrag en de functionaliteit van de connector. De selecties die op dit tabblad zijn gemaakt, kunnen niet worden gewijzigd wanneer de connector is gemaakt. Deze tabel bevat een lijst met de instellingen voor de mogelijkheden.
 
-![Functionaliteit](./media/microsoft-identity-manager-2016-connector-powershell/capabilities.png)
+![Functies](./media/microsoft-identity-manager-2016-connector-powershell/capabilities.png)
 
 | Mogelijkheid | Beschrijving |
 | --- | --- |
@@ -273,9 +273,9 @@ Het wachtwoord script ontvangt de volgende para meters van de connector:
 | Referentie |[PSCredential][pscred] |Bevat de referenties die door de beheerder zijn ingevoerd op het tabblad connectiviteit. |
 | Partitie |[Partitie][part] |De mappartitie waarin de CSEntry zich bevindt. |
 | CSEntry |[CSEntry][cse] |Vermelding van connector ruimte voor het object dat is ontvangen van een wacht woord wijzigen of opnieuw instellen. |
-| OperationType |Tekenreeks |Hiermee wordt aangegeven of de bewerking opnieuw instellen ( **SetPassword** ) of een wijziging ( **ChangePassword** ) is. |
+| OperationType |Tekenreeks |Hiermee wordt aangegeven of de bewerking opnieuw instellen (**SetPassword**) of een wijziging (**ChangePassword**) is. |
 | PasswordOptions |[PasswordOptions][pwdopt] |Vlaggen die het beoogde gedrag van het wacht woord opnieuw instellen aangeven. Deze para meter is alleen beschikbaar als OperationType **SetPassword** is. |
-| OldPassword |Tekenreeks |Ingevuld met het oude wacht woord van het object voor wachtwoord wijzigingen. Deze para meter is alleen beschikbaar als OperationType is van **ChangePassword** . |
+| OldPassword |Tekenreeks |Ingevuld met het oude wacht woord van het object voor wachtwoord wijzigingen. Deze para meter is alleen beschikbaar als OperationType is van **ChangePassword**. |
 | NieuwWachtwoord |Tekenreeks |Ingevuld met het nieuwe wacht woord van het object dat door het script moet worden ingesteld. |
 
 Het wachtwoord script wordt niet verwacht om resultaten te retour neren naar de Windows Power shell-pijp lijn. Als er een fout optreedt in het wachtwoord script, moet het script een van de volgende uitzonde ringen genereren om de synchronisatie service op de hoogte te stellen van het probleem:
@@ -312,7 +312,7 @@ Lees toegang tot de volgende bestandssysteem mappen:
 Vervang de naam van de Windows Power shell-connector voor de tijdelijke aanduiding {connector naam}.
 
 ## <a name="troubleshooting"></a>Problemen oplossen
-* Zie voor meer informatie over het inschakelen van logboek registratie voor het oplossen van problemen met de connector, het [inschakelen van etw-tracering voor connectors](http://go.microsoft.com/fwlink/?LinkId=335731).
+* Zie voor meer informatie over het inschakelen van logboek registratie voor het oplossen van problemen met de connector, het [inschakelen van etw-tracering voor connectors](https://go.microsoft.com/fwlink/?LinkId=335731).
 
 <!--Reference style links - using these makes the source content way more readable than using inline links-->
 [cpp]: https://msdn.microsoft.com/library/windows/desktop/microsoft.metadirectoryservices.configparameterpage.aspx
@@ -343,4 +343,4 @@ Vervang de naam van de Windows Power shell-connector voor de tijdelijke aanduidi
 [pwdex1]: https://msdn.microsoft.com/library/windows/desktop/microsoft.metadirectoryservices.passwordpolicyviolationexception.aspx
 [pwdex2]: https://msdn.microsoft.com/library/windows/desktop/microsoft.metadirectoryservices.passwordillformedexception.aspx
 [pwdex3]: https://msdn.microsoft.com/library/windows/desktop/microsoft.metadirectoryservices.passwordextensionexception.aspx
-[samp]: http://go.microsoft.com/fwlink/?LinkId=394291
+[samp]: https://go.microsoft.com/fwlink/?LinkId=394291

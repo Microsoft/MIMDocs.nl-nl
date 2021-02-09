@@ -12,12 +12,12 @@ ms.assetid: 598dace3-c6f2-447a-9301-c0b63ee38276
 audience: developer
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: fe6d59377ef3218fde0df99365506ef9ec143a6f
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.openlocfilehash: 2c49c86fd57d363bec0eb2fd6d1fbe9ee261ee7a
+ms.sourcegitcommit: 78f3f18f0b7afb44fcf7444e446a4edffb1f8f12
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "92758983"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99835907"
 ---
 # <a name="update-smart-card-status"></a>Smart Card-status bijwerken
 Hiermee wordt de status van een Smart Card bijgewerkt.
@@ -36,7 +36,7 @@ GET     |/CertificateManagement/api/v1.0/requests/{reqid}/smartcards/{scid}
 Parameter | Beschrijving
 ---------|------------
 reqid | Vereist. De aanvraag-id die specifiek is voor Microsoft Identity Manager (MIM) Certificate Management (CM).
-scid | Vereist. De Smart Card-ID die specifiek is voor MIM CM. De waarde komt overeen met het veld ' uuid ' in het object [micro soft. clm. Shared. Smart Cards. Smart Card](http://msdn.microsoft.com/library/microsoft.clm.shared.smartcards.smartcard.aspx) .
+scid | Vereist. De Smart Card-ID die specifiek is voor MIM CM. De waarde komt overeen met het veld ' uuid ' in het object [micro soft. clm. Shared. Smart Cards. Smart Card](https://msdn.microsoft.com/library/microsoft.clm.shared.smartcards.smartcard.aspx) .
 
 ### <a name="request-headers"></a>Aanvraagheaders
 Zie [HTTP-aanvraag-en reactie headers](certificate-management-rest-api-service-details.md#http-request-and-response-headers) in *cm rest API service Details* voor algemene aanvraag headers.
@@ -53,7 +53,7 @@ In deze sectie wordt het antwoord beschreven.
 
 ### <a name="response-codes"></a>Antwoord codes
 
-Code  |Beschrijving  
+Code  |Description  
 ---------|---------
 200     | OK
 204 | Geen inhoud
@@ -64,7 +64,7 @@ Code  |Beschrijving
 Zie [HTTP-aanvraag-en reactie headers](certificate-management-rest-api-service-details.md#http-request-and-response-headers) in *cm rest API service Details* voor algemene antwoord headers.
 
 ### <a name="response-body"></a>Hoofdtekst van de reactie
-Als dit is gelukt, wordt een JSON-Serialized [micro soft. clm. Shared. Smart Cards. Smart Card](http://msdn.microsoft.com/library/microsoft.clm.shared.smartcards.smartcard.aspx) -object met de volgende eigenschappen geretourneerd:
+Als dit is gelukt, wordt een JSON-Serialized [micro soft. clm. Shared. Smart Cards. Smart Card](https://msdn.microsoft.com/library/microsoft.clm.shared.smartcards.smartcard.aspx) -object met de volgende eigenschappen geretourneerd:
 
 Naam | Beschrijving
 -----|-----------
