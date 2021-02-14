@@ -5,19 +5,19 @@ keywords: ''
 author: billmath
 ms.author: billmath
 manager: daveba
-ms.date: 09/13/2017
+ms.date: 02/09/2021
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: ef605496-7ed7-40f4-9475-5e4db4857b4f
 ROBOTS: noindex,nofollow
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 070e85177a28c3091834cafd2e61611aa9043ea8
-ms.sourcegitcommit: 80507a128d2bc28ff3f1b96377c61fa97a4e7529
+ms.openlocfilehash: 8f81f592beff9ab952d1a42760e06a4f622316e8
+ms.sourcegitcommit: 0e2b4b47a8050737c78e3b0ad088358e5de7e929
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83280011"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100395466"
 ---
 # <a name="step-4--install-mim-components-on-pam-server-and-workstation"></a>Stap 4: MIM-onderdelen installeren op een PAM-server en -werkstation
 
@@ -53,9 +53,9 @@ Volg de richtlijnen van het installatieprogramma en voltooi de installatie.
    - Naam van serviceaccount: *MIMService*  
    - Wacht woord van service account: <em>Pass@word1</em> (of het wacht woord dat u hebt gemaakt in stap 2)  
    - Domein van serviceaccount: *PRIV*  
-   - E-mail account van de service:<em>MIMService@priv.contoso.local</em>  
+   - E-mail account van de service: <em>MIMService@priv.contoso.local</em>  
 
-6. Accepteer de standaardwaarden voor de hostnaam van de synchronisatieserver en geef *PRIV\MIMMA* op als het MIM-beheeragentaccount. Er wordt een waarschuwing weergegeven dat de MIM-synchronisatieservice niet bestaat. Dit is geen probleem omdat de MIM-synchronisatieservice niet wordt gebruikt in dit scenario.
+6. Accepteer de standaardwaarden voor de hostnaam van de synchronisatieserver en geef *PRIV\MIMMA* op als het MIM-beheeragentaccount. Er wordt een waarschuwing weergegeven dat de MIM-synchronisatieservice niet bestaat. Deze waarschuwing is OK, omdat de MIM-synchronisatie service niet wordt gebruikt in dit scenario.
 
 7. Stel *PAMSRV* in als het serveradres van de MIM-service.
 
@@ -121,29 +121,29 @@ De firewall moet binnenkomende verbindingen voor TCP-poort 5725, 5726, 8086 en 8
 3.  Controleer of deze twee regels worden weergegeven:  
     - Forefront Identity Manager-service (STS)
     - Forefront Identity Manager-service (webservice)  
-4.  Klik op **nieuwe regel**  >  **poort**  >  **TCP**en typ de specifieke lokale poorten *8086* en *8090*. Klik door de wizard en accepteer de standaardwaarden, geef een naam op voor de regel en klik op **Voltooien**.  
+4.  Klik op **nieuwe regel**  >  **poort**  >  **TCP** en typ de specifieke lokale poorten *8086* en *8090*. Klik door de wizard en accepteer de standaardwaarden, geef een naam op voor de regel en klik op **Voltooien**.  
 5.  Sluit de toepassing Windows Firewall nadat u de wizard hebt voltooid.
 
 6.  Start **Configuratiescherm**.  
-7.  Selecteer bij Netwerk en internet de optie **Netwerkstatus en -taken weergeven**.  
-8.  Controleer of er een actief netwerk, dat wordt vermeld priv.contoso.local, en een domeinnetwerk worden weergegeven.  
+7.  Onder netwerk en Internet selecteert u **netwerk status en taken weer geven**.
+8.  Controleer of er een actief netwerk is, dat wordt vermeld als Priv. contoso. local en een domein netwerk.
 9. Sluit **Configuratiescherm**.
 
-## <a name="set-up-the-sample-web-application"></a>De voorbeeldwebtoepassing instellen
+## <a name="optional-set-up-the-sample-web-application"></a>Optioneel: de voor beeld-webtoepassing instellen
 
-In deze sectie gaat u de voorbeeldwebtoepassing voor de MIM PAM REST API installeren en configureren.
+In deze sectie kunt u de voor beeld-webtoepassing voor de MIM PAM-REST API installeren en configureren.  Dit onderdeel is alleen nodig als u wilt weten hoe u de MIM PAM-REST API kunt gebruiken. Als u Power shell wilt gebruiken om toegang aan te vragen en goed te keuren, gaat u verder met de volgende sectie om de MIM PAM-aanvrager-cmdlets te installeren.
 
 1. Download de [ identiteitsbeheervoorbeelden](https://github.com/Azure/identity-management-samples) als een zip-bestand uit het archief van de voorbeeldwebtoepassing.
 
 2. Pak de inhoud van de map **identity-management-samples-master\Privileged-Access-Management-Portal\src** uit in een nieuwe map **C:\Program Files\Microsoft Forefront Identity Manager\2010\Privileged Access Management Portal**.
 
-3. Maak een nieuwe website in IIS. Gebruik hiervoor de sitenaam MIM Privileged Access Management Example Portal, het fysieke pad C:\Program Files\Microsoft Forefront Identity Manager\2010\Privileged Access Management Portal en de poort 8090.  U kunt hiervoor de volgende PowerShell-opdracht gebruiken:
+3. Maak een nieuwe website in IIS. Gebruik hiervoor de sitenaam MIM Privileged Access Management Example Portal, het fysieke pad C:\Program Files\Microsoft Forefront Identity Manager\2010\Privileged Access Management Portal en de poort 8090.  Het maken van deze site kan worden uitgevoerd met behulp van de volgende Power shell-opdracht:
 
    ```PowerShell
    New-WebSite -Name "MIM Privileged Access Management Example Portal" -Port 8090   -PhysicalPath "C:\Program Files\Microsoft Forefront Identity Manager\2010\Privileged Access Management Portal\"
    ```
 
-4. Stel de voorbeeldwebtoepassing zo in dat gebruikers worden omgeleid naar de MIM PAM REST API. Bewerk het bestand **C:\Program Files\Microsoft Forefront Identity Manager\2010\Privileged Access Management rest API\web.config**in een tekst editor, zoals Klad blok. Voeg in de sectie **<System. webserver>** de volgende regels toe:
+4. Stel de voorbeeldwebtoepassing zo in dat gebruikers worden omgeleid naar de MIM PAM REST API. Bewerk het bestand **C:\Program Files\Microsoft Forefront Identity Manager\2010\Privileged Access Management REST API\web.config** met behulp van een tekst editor, zoals Klad blok. Voeg in de sectie **<System. webserver>** de volgende regels toe:
 
    ```XML
    <httpProtocol>

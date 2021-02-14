@@ -5,25 +5,25 @@ keywords: ''
 author: billmath
 ms.author: billmath
 manager: daveba
-ms.date: 09/06/2017
+ms.date: 02/09/2021
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 82a9085c-9667-4b3b-8079-657eab1d1e58
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 417f26b123aec7e8ab1b8cf254e0771f799dcb9d
-ms.sourcegitcommit: 41d399b16dc64c43da3cc3b2d77529082fe1d23a
+ms.openlocfilehash: 8d3c266c78df21c6ddb24f62618621c55820bd6f
+ms.sourcegitcommit: 0e2b4b47a8050737c78e3b0ad088358e5de7e929
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98103966"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100395449"
 ---
 # <a name="hardware-and-software-requirements"></a>Hardware- en softwarevereisten
 
-Privileged Access Management heeft geen hardwarevereisten naast de vereisten van de onderliggende softwareplatforms. Zorg ervoor dat u voldoende geheugen of schijfruimte vrij hebt en beschikt over een netwerkverbinding.
+Privileged Access Management heeft geen hardwarevereisten naast de vereisten van de onderliggende software platforms. Zorg ervoor dat u voldoende geheugen of schijfruimte vrij hebt en beschikt over een netwerkverbinding.
 
 > [!IMPORTANT]
-> In dit artikel worden minimale vereisten vermeld voor een standaardimplementatie. Het is niet bedoeld om prestaties, schaal baarheid of hoge Beschik baarheid te demonstreren. Dit vertegenwoordigt geen aanbevolen implementatie topologie voor grote ondernemingen of productie omgevingen.
+> Dit artikel bevat de minimale vereisten voor een eenvoudige implementatie op een geïsoleerd netwerk. Het is niet bedoeld ter illustratie van de prestaties, schaalbaarheid of hoge beschikbaarheid, en vertegenwoordigt geen aanbevolen implementatietopologie voor grote ondernemingen of productieomgevingen.  Als uw Active Directory deel uitmaakt van een omgeving met Internet verbinding, raadpleegt u in plaats daarvan de [uitgebreide toegangs richtlijnen beveiligen](/security/compass/overview) voor meer informatie over waar u moet beginnen.
 
 ## <a name="installing-from-software-packages"></a>Installeren vanuit softwarepakketten
 
@@ -33,29 +33,15 @@ De volgende software kan worden gedownload van TechNet Evaluation Center of MSDN
   - Service en portal: bevat het installatieprogramma voor de MIM-service, de MIM-portal en het PAM-scenario
   - Invoegtoepassingen en extensies: bevat het installatieprogramma voor de aanvrager van PowerShell-cmdlets
 
-De volgende software kan worden gedownload van GitHub:
+De volgende optionele software kan worden gedownload van GitHub:
 
 - [PAMSamplePortal](https://github.com/Azure/identity-management-samples): bevat een voor beeld-webtoepassing voor de rest API
 
 ## <a name="required-software"></a>Vereiste software
 
-- Windows Server 2012 R2
+- Windows Server 2016
 - Windows 10 Enterprise
 - SQL Server 2012 Service Pack 1 of SQL Server 2014
-
-## <a name="evaluation-software"></a>Evaluatiesoftware
-
-Als u geen licenties hebt voor Windows, SQL Server of Windows Server, kunt u evaluatieversies downloaden.
-
-### <a name="technet-evaluation-center"></a>TechNet Evaluation Center
-
-- Windows Server 2012 R2 of hoger
-- [Windows 10 Enterprise](https://www.microsoft.com/evalcenter/evaluate-windows-10-enterprise)
-
-### <a name="microsoft-download-center"></a>Microsoft Downloadcentrum
-
-- [SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads)  
-- [SharePoint Foundation 2013 SP1 en de vereisten](https://www.microsoft.com/download/details.aspx?id=42039)
 
 ## <a name="hardware-requirements"></a>Hardwarevereisten
 
@@ -71,9 +57,9 @@ Voor CORPWKSTN:
 
 Voor PRIVDC:
 
-- [Windows Server 2012 R2](https://technet.microsoft.com/library/dn303418.aspx)
+- Windows Server 2016
 
 Voor PAMSRV:
 
-- [Windows Server 2012 R2](https://technet.microsoft.com/library/dn303418.aspx)
+- Windows Server 2016
 - [SQL Server 2012](https://msdn.microsoft.com/library/ms143506(sql.110).aspx) of [SQL Server 2014](https://msdn.microsoft.com/library/ms143506(v=sql.120).aspx)
