@@ -13,16 +13,16 @@ ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.tgt_pltfrm: na
 ms.workload: identity
-ms.date: 12/31/2020
+ms.date: 2/15/2021
 ms.author: esergeev
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: f0b61059f9010523fa4f7b6a6ced987e5ab2dc49
-ms.sourcegitcommit: 8f81767ec92e1b80658aaebb9463aa4d62396d43
+ms.openlocfilehash: 1fccc237f77e4d21a372194e87697b100eb60c28
+ms.sourcegitcommit: 07ac1b84829e3ef4f4271d5b50179cbc2120ce05
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97927690"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100530022"
 ---
 # <a name="connector-version-release-history"></a>Releasegeschiedenis van connectorversie
 
@@ -44,6 +44,13 @@ Gerelateerde links:
 * Naslag documentatie voor [Power shell-connector](microsoft-identity-manager-2016-connector-powershell.md)
 * Referentie documentatie voor [Lotus Domino-connector](microsoft-identity-manager-2016-connector-domino.md)
 * Naslag documentatie voor [share point-gebruikers profiel archief-connector](https://go.microsoft.com/fwlink/?LinkID=331344)
+
+## <a name="1113810-february-2021"></a>1.1.1381.0 (februari 2021)
+### <a name="fixed-issues"></a>Opgeloste problemen
+- Graph-connector
+  - Er is een probleem opgelost met teken reeks kenmerken met meerdere waarden die onjuist worden verwerkt bij het verzenden van B2B-uitnodigingen
+- Algemene LDAP-connector
+  - Verbeterde verwerking van Oracle Unified Directory wijzigingen logboek-vermeldingen
 
 ## <a name="1113470-december-2020"></a>1.1.1347.0 (december 2020)
 ### <a name="fixed-issues"></a>Opgeloste problemen
